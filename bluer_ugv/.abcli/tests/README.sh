@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 
-function test_bluer_UGV_README() {
+function test_bluer_ugv_README() {
     local options=$1
 
     bluer_ai_eval ,$options \
-        bluer_UGV build_README
+        bluer_ugv build_README
 }

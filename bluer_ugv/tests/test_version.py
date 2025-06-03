@@ -1,4 +1,4 @@
-from bluer_UGV import VERSION
+from bluer_ugv import VERSION
 
 
 def test_version():

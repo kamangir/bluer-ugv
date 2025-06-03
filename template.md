@@ -1,9 +1,9 @@
-# 🐬 bluer-UGV
+# 🐬 bluer-ugv
 
-🐬 `@UGV` is a [bluer-ai](https://github.com/kamangir/bluer-ai) plugin for [ROS](https://www.ros.org/).
+🐬 `@ugv` is a [bluer-ai](https://github.com/kamangir/bluer-ai) plugin for [ROS](https://www.ros.org/).
 
 ```bash
-pip install bluer_UGV
+pip install bluer_ugv
 ```
 
 --table--
