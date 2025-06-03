@@ -15,11 +15,13 @@ items = README.Items(
         },
         {
             "name": "bluer-fire",
+            "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-fire.png?raw=true",
             "description": "based on a used car.",
             "url": "./bluer_ugv/docs/bluer-fire.md",
         },
         {
             "name": "bluer-light",
+            "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true",
             "description": "based on power wheels.",
             "url": "./bluer_ugv/docs/bluer-light.md",
         },
