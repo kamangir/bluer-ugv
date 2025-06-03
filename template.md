@@ -6,9 +6,13 @@
 pip install bluer_ugv
 ```
 
---table--
+items:::
 
 ---
 
---signature--
+> 🌀 [`blue-rover`](https://github.com/kamangir/blue-rover) for the [Global South](https://github.com/kamangir/bluer-south).
+
+---
+
+signature:::
 
