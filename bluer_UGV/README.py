@@ -15,7 +15,7 @@ items = README.Items(
         },
         {
             "name": "bluer-fire",
-            "description": "based on a sedan.",
+            "description": "based on a used car.",
             "url": "./bluer_UGV/docs/bluer-fire.md",
         },
         {
