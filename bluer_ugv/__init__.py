@@ -1,18 +1,18 @@
-NAME = "bluer_UGV"
+NAME = "bluer_ugv"
 
 ICON = "🐬"
 
 DESCRIPTION = f"{ICON} AI x ROS."
 
-VERSION = "5.6.1"
+VERSION = "6.2.1"
 
-REPO_NAME = "bluer-UGV"
+REPO_NAME = "bluer-ugv"
 
 MARQUEE = (
     "https://github.com/waveshareteam/ugv_rpi/raw/main/media/UGV-Rover-details-23.jpg"
 )
 
-ALIAS = "@UGV"
+ALIAS = "@ugv"
 
 
 def fullname() -> str:

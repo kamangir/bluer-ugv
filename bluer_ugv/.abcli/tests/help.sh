@@ -1,23 +1,23 @@
 #! /usr/bin/env bash
 
-function test_bluer_UGV_help() {
+function test_bluer_ugv_help() {
     local options=$1
 
     local module
     for module in \
-        "@UGV" \
+        "@ugv" \
         \
-        "@UGV pypi" \
-        "@UGV pypi browse" \
-        "@UGV pypi build" \
-        "@UGV pypi install" \
+        "@ugv pypi" \
+        "@ugv pypi browse" \
+        "@ugv pypi build" \
+        "@ugv pypi install" \
         \
-        "@UGV pytest" \
+        "@ugv pytest" \
         \
-        "@UGV test" \
-        "@UGV test list" \
+        "@ugv test" \
+        "@ugv test list" \
         \
-        "bluer_UGV"; do
+        "bluer_ugv"; do
         bluer_ai_eval ,$options \
             bluer_ai_help $module
         [[ $? -ne 0 ]] && return 1

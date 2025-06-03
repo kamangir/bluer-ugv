@@ -1,4 +1,4 @@
-from bluer_UGV.host import signature
+from bluer_ugv.host import signature
 
 
 def test_signature():

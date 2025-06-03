@@ -27,4 +27,4 @@ jobs:
           echo "S3_STORAGE_AWS_ACCESS_KEY_ID: $S3_STORAGE_AWS_ACCESS_KEY_ID"
           echo "S3_STORAGE_AWS_SECRET_ACCESS_KEY: $S3_STORAGE_AWS_SECRET_ACCESS_KEY"
 
-          ./.github/workflows/bashtest.sh bluer_UGV
+          ./.github/workflows/bashtest.sh bluer_ugv

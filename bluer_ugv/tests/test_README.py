@@ -1,4 +1,4 @@
-from bluer_UGV import README
+from bluer_ugv import README
 
 
 def test_build_README():

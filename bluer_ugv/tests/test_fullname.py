@@ -1,4 +1,4 @@
-from bluer_UGV import fullname
+from bluer_ugv import fullname
 
 
 def test_fullname():

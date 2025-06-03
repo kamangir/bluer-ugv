@@ -1,7 +1,7 @@
 from blueness.argparse.generic import main
 
-from bluer_UGV import NAME, VERSION, DESCRIPTION, ICON, README
-from bluer_UGV.logger import logger
+from bluer_ugv import NAME, VERSION, DESCRIPTION, ICON, README
+from bluer_ugv.logger import logger
 
 main(
     ICON=ICON,
