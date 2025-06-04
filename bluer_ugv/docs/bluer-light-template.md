@@ -10,7 +10,7 @@ sources:
 
 - [automation](../../diagrams/bluer-light/automation.svg)
 - [electrical](../../diagrams/bluer-light/electrical.svg)
-- [chassis](../../diagrams/bluer-light/chassis.svg)
+- [chassis](../../diagrams/bluer-light/chassis.stl)
 
 parts:
 
