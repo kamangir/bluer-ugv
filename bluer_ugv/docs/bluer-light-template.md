@@ -1,5 +1,7 @@
 # Bluer Light
 
+![image](../../diagrams/bluer-light/3d-design.png)
+
 based on power wheels.
 
 sources:
@@ -8,9 +10,9 @@ sources:
 
 ## diagram
 
+- [3d-design](../../diagrams/bluer-light/3d-design.stl)
 - [automation](../../diagrams/bluer-light/automation.svg)
 - [electrical](../../diagrams/bluer-light/electrical.svg)
-- [chassis](../../diagrams/bluer-light/chassis.stl)
 
 parts:
 

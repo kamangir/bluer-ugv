@@ -19,5 +19,5 @@ pip install bluer_ugv
 
 [![pylint](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/bluer-ugv.svg)](https://pypi.org/project/bluer-ugv/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/bluer-ugv)](https://pypistats.org/packages/bluer-ugv)
 
-built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-6.15.1`](https://github.com/kamangir/bluer-ugv).
+built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-6.16.1`](https://github.com/kamangir/bluer-ugv).
 
