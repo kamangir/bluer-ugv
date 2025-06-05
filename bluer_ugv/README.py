@@ -20,10 +20,10 @@ items = README.Items(
             "url": "./bluer_ugv/docs/bluer-fire.md",
         },
         {
-            "name": "bluer-light",
-            "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true",
+            "name": "bluer-swallow",
+            "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-swallow.png?raw=true",
             "description": "based on power wheels.",
-            "url": "./bluer_ugv/docs/bluer-light.md",
+            "url": "./bluer_ugv/docs/bluer-swallow.md",
         },
     ]
 )
@@ -46,6 +46,6 @@ def build():
             },
             {"path": "docs/bluer-beast.md"},
             {"path": "docs/bluer-fire.md"},
-            {"path": "docs/bluer-light.md"},
+            {"path": "docs/bluer-swallow.md"},
         ]
     )
