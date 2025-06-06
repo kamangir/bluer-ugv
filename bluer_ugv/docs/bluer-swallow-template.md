@@ -15,7 +15,7 @@ based on power wheels, sources:
 - [electrical](../../diagrams/bluer-swallow/electrical.svg)
 - [automation](../../diagrams/bluer-swallow/automation.svg)
 
-## parts
+## parts 🔥
 
 - DC motors: 12 VDC, 20-45 W, 9000 RPM
 - Battery: 12 V, 7 Ah
