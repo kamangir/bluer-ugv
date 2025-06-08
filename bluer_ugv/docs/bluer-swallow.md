@@ -15,16 +15,15 @@ based on power wheels, sources:
 - [electrical](../../diagrams/bluer-swallow/electrical.svg)
 - [automation](../../diagrams/bluer-swallow/automation.svg)
 
-## parts 🔥
+## parts
 
 - DC motors: 12 VDC, 20-45 W, 9000 RPM
 - Battery: 12 V, 7 Ah
-- DC 12 VDC -Buck Converter-> 5 VDC, 4A, examples: XL4015, UBEC 5V (Bec) ⭐️ 🔥
-- Rear drive: 2 motors 🔥
-- Steering drive: 1 motor 🔥
-- 2x20 header 🔥
-- prototyping wires 🔥 
-- prototype board 🔥 
+- DC 12 VDC -Buck Converter-> 5 VDC, 4A: [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)
+- Rear drive (2 motors) & Steering drive (1 motor): [BTS7960](https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf)
+- male header
+- prototyping wires 
+- prototype board 
 
 | Driver         | Max Current | PWM+2 DIR    | Logic Level             | Best For                  |
 | -------------- | ----------- | ------------ | ----------------------- | ------------------------- |
