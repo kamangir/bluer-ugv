@@ -1,4 +1,4 @@
-# Bluer Swallow: Digital Control
+# [Bluer Swallow](./bluer-swallow.md): Digital Control
 
 [electrical diagram](../../diagrams/bluer-swallow/automation.svg)
 
