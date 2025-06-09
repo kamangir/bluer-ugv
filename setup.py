@@ -11,6 +11,7 @@ setup(
     packages=[
         NAME,
         f"{NAME}.help",
+        f"{NAME}.swallow",
     ],
     include_package_data=True,
     package_data={

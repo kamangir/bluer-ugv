@@ -2,7 +2,9 @@ import os
 
 from bluer_objects import file, README
 
+
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
+from bluer_ugv.swallow.README import items as swallow_items
 
 
 items = README.Items(
@@ -21,7 +23,7 @@ items = README.Items(
         },
         {
             "name": "bluer-swallow",
-            "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-swallow.png?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250608_144453.jpg?raw=true",
             "description": "based on power wheels.",
             "url": "./bluer_ugv/docs/bluer-swallow.md",
         },
@@ -46,6 +48,11 @@ def build():
             },
             {"path": "docs/bluer-beast.md"},
             {"path": "docs/bluer-fire.md"},
-            {"path": "docs/bluer-swallow.md"},
+            {
+                "items": swallow_items,
+                "path": "docs/bluer-swallow.md",
+            },
+            {"path": "docs/bluer-swallow-analog.md"},
+            {"path": "docs/bluer-swallow-digital.md"},
         ]
     )
