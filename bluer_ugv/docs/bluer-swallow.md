@@ -10,12 +10,12 @@ based on power wheels, sources:
 - https://persian-toys.com/
 - https://www.instagram.com/khamooshi_bike
 
-## diagram
+## diagrams
 
-- [electrical](../../diagrams/bluer-swallow/electrical.svg)
-- [automation](../../diagrams/bluer-swallow/automation.svg)
+- [analog](../../diagrams/bluer-swallow/analog.svg)
+- [digital](../../diagrams/bluer-swallow/automation.svg)
 
-## parts
+## digital parts
 
 - DC motors: 12 VDC, 20-45 W, 9000 RPM
 - Battery: 12 V, 7 Ah
@@ -25,7 +25,7 @@ based on power wheels, sources:
 - prototyping wires 
 - prototype board 
 
-## pinout 🔥
+## rpi pinout 🔥
 
 | Motor          | Function      | GPIO Pin     | Notes                |
 | -------------- | ------------- | ------------ | -------------------- |
