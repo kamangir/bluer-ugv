@@ -52,5 +52,7 @@ def build():
                 "items": swallow_items,
                 "path": "docs/bluer-swallow.md",
             },
+            {"path": "docs/bluer-swallow-analog.md"},
+            {"path": "docs/bluer-swallow-digital.md"},
         ]
     )
