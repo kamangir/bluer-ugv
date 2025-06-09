@@ -1,8 +1,6 @@
 # Bluer Light
 
-| | | |
-|-|-|-|
-| ![image](../../diagrams/bluer-swallow/3d-design.png) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250605_180136.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250608_144453.jpg?raw=true) |
+items:::
 
 based on power wheels, sources:
 
@@ -11,7 +9,6 @@ based on power wheels, sources:
 
 ## diagram
 
-- [3d-design](../../diagrams/bluer-swallow/3d-design.stl)
 - [electrical](../../diagrams/bluer-swallow/electrical.svg)
 - [automation](../../diagrams/bluer-swallow/automation.svg)
 
@@ -24,14 +21,6 @@ based on power wheels, sources:
 - male header
 - prototyping wires 
 - prototype board 
-
-| Driver         | Max Current | PWM+2 DIR    | Logic Level             | Best For                  |
-| -------------- | ----------- | ------------ | ----------------------- | ------------------------- |
-| L298N          | 2A          | ✅           | 5V (needs level shift)  | Steering (light load)     |
-| MD10C (Cytron) | 10A         | ✅ (PWM+DIR) | 3.3V native             | Rear motors (in parallel) |
-| Monster Moto   | \~7A        | ✅           | 5V (may work with 3.3V) | Rear or steering          |
-| Pololu G2      | 13–17A+     | ✅           | 3.3V compatible         | Any motor (robust)        |
-
 
 ## pinout 🔥
 

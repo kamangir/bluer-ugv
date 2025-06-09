@@ -2,7 +2,9 @@ import os
 
 from bluer_objects import file, README
 
+
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
+from bluer_ugv.swallow.README import items as swallow_items
 
 
 items = README.Items(
@@ -46,6 +48,9 @@ def build():
             },
             {"path": "docs/bluer-beast.md"},
             {"path": "docs/bluer-fire.md"},
-            {"path": "docs/bluer-swallow.md"},
+            {
+                "items": swallow_items,
+                "path": "docs/bluer-swallow.md",
+            },
         ]
     )
