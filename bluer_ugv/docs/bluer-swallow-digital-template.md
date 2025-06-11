@@ -1,6 +1,6 @@
 # [Bluer Swallow](./bluer-swallow.md): Digital Control
 
-- [electrical diagram](../../diagrams/bluer-swallow/automation.svg)
+- [electrical diagram](../../diagrams/bluer-swallow/digital.svg)
 - [parts](./bluer-swallow-digital-parts.md)
 
 ## terraform
