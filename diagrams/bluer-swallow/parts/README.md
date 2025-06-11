@@ -1,1 +1,3 @@
+- [BTS7960.png](./BTS7960.png): https://thecaferobot.com/store/bts7960-43a-motor-driver-module
+- [rpi3bplus.png](./rpi3bplus.png): https://volumio.com/raspberry-pi-3-b-plus-audio-review/
 - [XL4015.png](./XL4015.png): https://tasnimelec.com/product/5a-xl4015-power-supply-led-lithium/
