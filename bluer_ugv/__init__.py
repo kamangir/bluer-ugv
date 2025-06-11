@@ -4,13 +4,11 @@ ICON = "🐬"
 
 DESCRIPTION = f"{ICON} AI x ROS."
 
-VERSION = "6.41.1"
+VERSION = "6.44.1"
 
 REPO_NAME = "bluer-ugv"
 
-MARQUEE = (
-    "https://github.com/waveshareteam/ugv_rpi/raw/main/media/UGV-Rover-details-23.jpg"
-)
+MARQUEE = "https://raw.githubusercontent.com/kamangir/assets2/refs/heads/main/bluer-swallow/20250608_144453.jpg"
 
 ALIAS = "@ugv"
 
