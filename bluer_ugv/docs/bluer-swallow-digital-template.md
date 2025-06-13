@@ -2,6 +2,7 @@
 
 - [electrical diagram](../../diagrams/bluer-swallow/digital.svg)
 - [parts](./bluer-swallow-digital-parts.md)
+- [rpi pin-out](./bluer-swallow-digital-rpi-pinout.md)
 
 ## terraform
 
