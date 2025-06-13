@@ -1,4 +1,4 @@
-# [Bluer Swallow](./bluer-swallow.md): Raspberry Pi Pin-Out
+# [Bluer Swallow](./bluer-swallow.md): Digital Control: Raspberry Pi Pin-Out
 
 | Responsibility | Function  | Physical Pin | GPIO #  | Notes                                      |
 | -------------- | --------- | ------------ | ------- | ------------------------------------------ |
