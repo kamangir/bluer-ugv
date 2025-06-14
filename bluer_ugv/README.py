@@ -56,5 +56,6 @@ def build():
             {"path": "docs/bluer-swallow-digital.md"},
             {"path": "docs/bluer-swallow-digital-parts.md"},
             {"path": "docs/bluer-swallow-digital-rpi-pinout.md"},
+            {"path": "docs/bluer-swallow-digital-operation.md"},
         ]
     )
