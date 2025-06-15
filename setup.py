@@ -12,8 +12,8 @@ setup(
         NAME,
         f"{NAME}.help",
         f"{NAME}.swallow",
-        f"{NAME}.session",
-        f"{NAME}.session.classical",
+        f"{NAME}.swallow.session",
+        f"{NAME}.swallow.session.classical",
     ],
     include_package_data=True,
     package_data={
