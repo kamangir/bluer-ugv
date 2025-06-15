@@ -5,6 +5,7 @@
     - r: to reboot.
     - s: to shutdown.
     - u: to update.
+    - x: to start.
     - space: to stop.
 - **leds**:
     - green: control loop.
