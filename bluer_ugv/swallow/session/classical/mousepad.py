@@ -1,6 +1,6 @@
 import evdev  # type: ignore
 from evdev import InputDevice, categorize, ecodes, list_devices  # type: ignore
-import time
+import threading
 
 from bluer_ugv.swallow.session.classical.led import ClassicalLeds
 from bluer_ugv.logger import logger
@@ -21,7 +21,14 @@ class ClassicalMousePad:
 
         self.leds = leds
 
-    def update(self) -> bool:
+        self._thread = threading.Thread(
+            target=self.run_,
+            daemon=True,
+        )
+        self._thread.start()
+
+    def run_(self) -> bool:
+        logger.info(f"{self.__class__.__name__}: thread started.")
         for event in self.device.read_loop():
             if event.type == ecodes.EV_REL:
                 if event.code == ecodes.REL_Y:
@@ -47,3 +54,6 @@ class ClassicalMousePad:
                 self.leds.leds["yellow"]["state"] = False
 
         return True
+
+    def get_state(self):
+        return self.speed, self.steering

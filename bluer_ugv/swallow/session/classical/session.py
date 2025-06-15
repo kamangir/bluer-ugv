@@ -40,7 +40,6 @@ class ClassicalSession:
             [
                 self.button.update(),
                 self.keyboard.update(),
-                self.mousepad.update(),
                 self.leds.update(),
             ]
         )
