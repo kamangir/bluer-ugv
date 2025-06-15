@@ -18,7 +18,7 @@ class ClassicalSession:
         self.keyboard = ClassicalKeyboard()
         self.mousepad = ClassicalMousePad(self.leds)
 
-        logger.info("{} created...".format(self.__class__.__name__))
+        logger.info(f"{self.__class__.__name__}: created...")
 
     def initialize(self) -> bool:
         try:
