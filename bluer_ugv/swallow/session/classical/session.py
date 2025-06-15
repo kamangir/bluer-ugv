@@ -13,7 +13,7 @@ class ClassicalSession:
         self.leds = ClassicalLeds()
 
         self.mousepad = ClassicalMousePad(self.leds)
-        self.keyboard = ClassicalKeyboard(self.mousepad)
+        self.keyboard = ClassicalKeyboard(self.leds, self.mousepad)
         self.push_button = ClassicalPushButton(self.leds)
 
         logger.info(f"{self.__class__.__name__}: created...")
