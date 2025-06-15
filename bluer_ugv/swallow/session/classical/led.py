@@ -16,7 +16,7 @@ class ClassicalLeds:
                 self.__class__.__name__,
                 ", ".join(
                     [
-                        "{}: pin#{}".format(
+                        "{}:pin#{}".format(
                             led_name,
                             led_info["pin"],
                         )
