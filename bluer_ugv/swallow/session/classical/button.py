@@ -49,6 +49,8 @@ class ClassicalButton:
                 logger.info("button pressed.")
                 self.press_time = time.time()
 
+            self.leds.leds["yellow"]["state"] = True
+
             self.press_duration = time.time() - self.press_time
             if self.press_duration > BUTTON_PRESS_DURATION_IGNORE:
                 self.leds.leds["red"]["state"] = False
@@ -56,15 +58,16 @@ class ClassicalButton:
                 self.leds.leds["red"]["state"] = True
             elif self.press_duration > BUTTON_PRESS_DURATION_UPDATE:
                 self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
-        else:
-            if self.state:
-                logger.info(
-                    "button released after {}.".format(
-                        string.pretty_duration(
-                            self.press_duration,
-                        )
+        elif self.state:
+            logger.info(
+                "button released after {}.".format(
+                    string.pretty_duration(
+                        self.press_duration,
                     )
                 )
+            )
+
+            self.leds.leds["yellow"]["state"] = False
 
             if self.press_duration < BUTTON_PRESS_DURATION_IGNORE:
                 if self.press_duration > BUTTON_PRESS_DURATION_SHUTDOWN:
@@ -76,8 +79,5 @@ class ClassicalButton:
                     return False
 
         self.state = button_pressed
-
-        if self.state:
-            self.leds.leds["yellow"]["state"] = True
 
         return True
