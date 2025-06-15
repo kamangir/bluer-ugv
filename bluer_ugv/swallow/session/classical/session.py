@@ -5,7 +5,7 @@ from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.swallow.session.classical.button import ClassicalButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
-from bluer_ugv.swallow.session.classical.led import ClassicalLeds
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
 from bluer_ugv.logger import logger
 

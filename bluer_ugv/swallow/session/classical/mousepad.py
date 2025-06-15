@@ -2,7 +2,7 @@ import evdev  # type: ignore
 from evdev import InputDevice, categorize, ecodes, list_devices  # type: ignore
 import threading
 
-from bluer_ugv.swallow.session.classical.led import ClassicalLeds
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.logger import logger
 
 

@@ -4,7 +4,7 @@ import time
 from bluer_options import string
 from bluer_sbc.session.functions import reply_to_bash
 
-from bluer_ugv.swallow.session.classical.led import ClassicalLeds
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.logger import logger
 
 BUTTON_PRESS_DURATION_UPDATE = 5
