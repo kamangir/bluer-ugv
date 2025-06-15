@@ -70,6 +70,7 @@ class ClassicalButton:
 
         self.state = button_pressed
 
-        self.leds.leds["yellow"]["state"] = self.state
+        if self.state:
+            self.leds.leds["yellow"]["state"] = True
 
         return True
