@@ -26,6 +26,7 @@ def start_session() -> bool:
         logger.info("^C received.")
         return False
     finally:
+        logger.info("GPIO.cleanup...")
         GPIO.cleanup()
 
     return True
