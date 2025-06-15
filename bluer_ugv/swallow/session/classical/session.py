@@ -7,6 +7,7 @@ from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.swallow.session.classical.button import ClassicalButton
 from bluer_ugv.swallow.session.classical.led import ClassicalLeds
+from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
 from bluer_ugv.logger import logger
 
 bash_keys = {
@@ -25,6 +26,7 @@ class ClassicalSession:
     def __init__(self):
         self.button = ClassicalButton()
         self.leds = ClassicalLeds()
+        self.mousepad = ClassicalMousePad()
 
         logger.info(
             "{} created: {}".format(

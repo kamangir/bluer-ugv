@@ -15,6 +15,8 @@ def start_session() -> bool:
 
     session = ClassicalSession()
 
+    session.mousepad.check()
+
     if not session.initialize():
         return False
 
