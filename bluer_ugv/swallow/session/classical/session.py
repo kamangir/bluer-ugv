@@ -51,7 +51,7 @@ class ClassicalSession:
 
     def button_command(self) -> bool:
         button_pressed = not GPIO.input(self.button.pin)
-        logger.info(f"debug: button_pressed: {button_pressed}.")
+        logger.info(f"debug: button_pressed: {button_pressed} - {string.timestamp()}.")
         if button_pressed:
             if not self.button.state:
                 logger.info("button pressed.")
