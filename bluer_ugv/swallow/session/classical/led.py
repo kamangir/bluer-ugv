@@ -18,9 +18,9 @@ class ClassicalLeds:
                     [
                         "{}: pin#{}".format(
                             led_name,
-                            self.leds[led_name]["pin"],
+                            led_info["pin"],
                         )
-                        for led_name in self.leds.keys()
+                        for led_name, led_info in self.leds.items()
                     ]
                 ),
             )
