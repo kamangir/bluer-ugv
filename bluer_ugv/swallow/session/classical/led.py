@@ -11,6 +11,21 @@ class ClassicalLeds:
             "green": {"pin": 22, "state": True},
         }
 
+        logger.info(
+            "{}: {}.".format(
+                self.__class__.__name__,
+                ", ".join(
+                    [
+                        "{}: pin#{}".format(
+                            led_name,
+                            self.leds[led_name]["pin"],
+                        )
+                        for led_name in self.leds.keys()
+                    ]
+                ),
+            )
+        )
+
     def initialize(self) -> bool:
         try:
             for led in self.leds.values():

@@ -17,6 +17,13 @@ class ClassicalButton:
         self.pin = 26
         self.state = False
 
+        logger.info(
+            "{}: pin #{}.".format(
+                self.__class__.__name__,
+                self.pin,
+            )
+        )
+
         self.press_time: int = 0
         self.press_duration: int = -1
 
