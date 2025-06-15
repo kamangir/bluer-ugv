@@ -1,6 +1,8 @@
 import evdev  # type: ignore
 from evdev import InputDevice, categorize, ecodes, list_devices  # type: ignore
 
+from bluer_ugv.logger import logger
+
 
 class ClassicalMousePad:
     def check(self) -> bool:
