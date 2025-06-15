@@ -24,7 +24,7 @@ class ClassicalLeds:
 
         return True
 
-    def update(self):
+    def update(self) -> bool:
         self.leds["green"]["state"] = not self.leds["green"]["state"]
 
         for led in self.leds.values():
@@ -32,3 +32,5 @@ class ClassicalLeds:
                 led["pin"],
                 GPIO.HIGH if led["state"] else GPIO.LOW,
             )
+
+        return True

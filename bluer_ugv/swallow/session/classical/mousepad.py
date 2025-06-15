@@ -2,11 +2,12 @@ import evdev  # type: ignore
 from evdev import InputDevice, categorize, ecodes, list_devices  # type: ignore
 import time
 
+from bluer_ugv.swallow.session.classical.led import ClassicalLeds
 from bluer_ugv.logger import logger
 
 
 class ClassicalMousePad:
-    def __init__(self):
+    def __init__(self, leds: ClassicalLeds):
         self.device = InputDevice("/dev/input/event0")
         logger.info(
             "{}: using {}.".format(
@@ -18,7 +19,9 @@ class ClassicalMousePad:
         self.speed = 0
         self.steering = 0
 
-    def update(self):
+        self.leds = leds
+
+    def update(self) -> bool:
         for event in self.device.read_loop():
             if event.type == ecodes.EV_REL:
                 if event.code == ecodes.REL_Y:
@@ -27,6 +30,9 @@ class ClassicalMousePad:
                     self.steering += event.value  # left/right
 
                 logger.info(f"speed: {self.speed}, steering: {self.steering}")
+                self.leds.leds["yellow"]["state"] = not self.leds.leds["yellow"][
+                    "state"
+                ]
 
             # Optional: reset on button release
             elif (
@@ -36,4 +42,8 @@ class ClassicalMousePad:
             ):
                 self.speed = 0
                 self.steering = 0
+
                 logger.info("stopped")
+                self.leds.leds["yellow"]["state"] = False
+
+        return True

@@ -19,9 +19,7 @@ def start_session() -> bool:
         return False
 
     try:
-        while not (session.button_command() or session.key_command()):
-            session.leds.update()
-            session.mousepad.update()
+        while session.update():
             time.sleep(0.05)
     except KeyboardInterrupt:
         logger.info("^C received.")
