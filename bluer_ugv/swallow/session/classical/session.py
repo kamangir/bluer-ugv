@@ -1,8 +1,6 @@
 import time
 from RPi import GPIO  # type: ignore
 
-from bluer_sbc.session.functions import reply_to_bash
-
 from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
@@ -14,8 +12,8 @@ class ClassicalSession:
     def __init__(self):
         self.leds = ClassicalLeds()
 
-        self.keyboard = ClassicalKeyboard()
         self.mousepad = ClassicalMousePad(self.leds)
+        self.keyboard = ClassicalKeyboard(self.mousepad)
         self.push_button = ClassicalPushButton(self.leds)
 
         logger.info(f"{self.__class__.__name__}: created...")
