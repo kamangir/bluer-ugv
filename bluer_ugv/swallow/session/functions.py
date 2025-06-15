@@ -1,5 +1,5 @@
 import time
-import RPi.GPIO as GPIO  # type: ignore
+from RPi import GPIO  # type: ignore
 
 from blueness import module
 
