@@ -35,7 +35,7 @@ class ClassicalMousePad:
                     self.speed -= event.value  # up/down
                     self.speed = min(255, max(-255, self.speed))
                 elif event.code == ecodes.REL_X:
-                    self.steering += event.value  # left/right
+                    self.steering = event.value  # left/right
                     self.steering = min(255, max(-255, self.steering))
 
                 logger.info(f"speed: {self.speed}, steering: {self.steering}")
