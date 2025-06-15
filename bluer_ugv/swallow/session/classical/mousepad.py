@@ -19,6 +19,8 @@ class ClassicalMousePad:
         self.speed = 0
         self.steering = 0
 
+        self.started = False
+
         self.leds = leds
 
         self._thread = threading.Thread(
@@ -32,10 +34,11 @@ class ClassicalMousePad:
         for event in self.device.read_loop():
             if event.type == ecodes.EV_REL:
                 if event.code == ecodes.REL_Y:
-                    self.speed -= event.value  # up/down
-                    self.speed = min(255, max(-255, self.speed))
+                    if self.started:
+                        self.speed -= event.value  # up/down
+                        self.speed = min(255, max(-255, self.speed))
                 elif event.code == ecodes.REL_X:
-                    self.steering += event.value  # left/right
+                    self.steering = event.value  # left/right
                     self.steering = min(255, max(-255, self.steering))
 
                 logger.info(f"speed: {self.speed}, steering: {self.steering}")
@@ -49,13 +52,29 @@ class ClassicalMousePad:
                 and event.code == ecodes.BTN_LEFT
                 and event.value == 0
             ):
-                self.speed = 0
-                self.steering = 0
+                self.stop()
 
-                logger.info("stopped")
-                self.leds.leds["yellow"]["state"] = False
+            if self.started:
+                self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
 
         return True
+
+    def start(self):
+        self.speed = 0
+        self.steering = 0
+        self.started = True
+
+        logger.info("started")
+
+    def stop(self):
+        self.speed = 0
+        self.steering = 0
+        self.started = False
+
+        logger.info("stopped")
+
+        self.leds.leds["red"]["state"] = False
+        self.leds.leds["yellow"]["state"] = False
 
     def get_state(self):
         return self.speed, self.steering

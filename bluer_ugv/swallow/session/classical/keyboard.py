@@ -39,10 +39,9 @@ class ClassicalKeyboard:
                 return False
 
         if keyboard.is_pressed(" "):
-            self.mousepad.speed = 0
-            self.mousepad.steering = 0
+            self.mousepad.stop()
 
-            logger.info("stopped")
-            self.leds.leds["yellow"]["state"] = False
+        if keyboard.is_pressed("x"):
+            self.mousepad.start()
 
         return True
