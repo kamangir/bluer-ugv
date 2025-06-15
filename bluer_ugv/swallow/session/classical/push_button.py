@@ -12,7 +12,7 @@ BUTTON_PRESS_DURATION_SHUTDOWN = 10
 BUTTON_PRESS_DURATION_IGNORE = 15
 
 
-class ClassicalButton:
+class ClassicalPushButton:
     def __init__(self, leds: ClassicalLeds):
         self.pin = 26
         self.state = False
@@ -46,7 +46,7 @@ class ClassicalButton:
         button_pressed = not GPIO.input(self.pin)
         if button_pressed:
             if not self.state:
-                logger.info("button pressed.")
+                logger.info("push button pressed.")
                 self.press_time = time.time()
 
             self.leds.leds["yellow"]["state"] = True
@@ -60,7 +60,7 @@ class ClassicalButton:
                 self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
         elif self.state:
             logger.info(
-                "button released after {}.".format(
+                "push button released after {}.".format(
                     string.pretty_duration(
                         self.press_duration,
                     )

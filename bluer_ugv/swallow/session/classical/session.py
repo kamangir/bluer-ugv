@@ -3,7 +3,7 @@ from RPi import GPIO  # type: ignore
 
 from bluer_sbc.session.functions import reply_to_bash
 
-from bluer_ugv.swallow.session.classical.button import ClassicalButton
+from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
@@ -14,9 +14,9 @@ class ClassicalSession:
     def __init__(self):
         self.leds = ClassicalLeds()
 
-        self.button = ClassicalButton(self.leds)
         self.keyboard = ClassicalKeyboard()
         self.mousepad = ClassicalMousePad(self.leds)
+        self.push_button = ClassicalPushButton(self.leds)
 
         logger.info(f"{self.__class__.__name__}: created...")
 
@@ -27,7 +27,7 @@ class ClassicalSession:
             logger.error(e)
             return False
 
-        if not self.button.initialize():
+        if not self.push_button.initialize():
             return False
 
         if not self.leds.initialize():
@@ -38,8 +38,8 @@ class ClassicalSession:
     def update(self) -> bool:
         return all(
             [
-                self.button.update(),
                 self.keyboard.update(),
+                self.push_button.update(),
                 self.leds.update(),
             ]
         )
