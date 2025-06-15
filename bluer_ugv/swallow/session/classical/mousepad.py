@@ -1,30 +1,39 @@
 import evdev  # type: ignore
 from evdev import InputDevice, categorize, ecodes, list_devices  # type: ignore
+import time
 
 from bluer_ugv.logger import logger
 
 
 class ClassicalMousePad:
-    def check(self) -> bool:
-        # List all input devices
-        devices = [InputDevice(path) for path in list_devices()]
-
-        print("Available input devices:")
-        for device in devices:
-            print(f"  {device.path}: {device.name}")
-            caps = device.capabilities()
-
-            has_abs = ecodes.EV_ABS in caps
-            has_touch = (
-                ecodes.EV_KEY in caps and ecodes.BTN_TOUCH in caps[ecodes.EV_KEY]
+    def __init__(self):
+        self.device = InputDevice("/dev/input/event0")
+        logger.info(
+            "{}: using {}.".format(
+                self.__class__.__name__,
+                self.device.name,
             )
+        )
 
-            abs_info = caps[ecodes.EV_ABS] if has_abs else []
-            abs_axes = [ecodes.ABS[code] for code, *_ in abs_info] if has_abs else []
+        self.speed = 0
+        self.steering = 0
 
-            logger.info(
-                "Has ABS_X/ABS_Y: {}".format(
-                    "ABS_X" in abs_axes and "ABS_Y" in abs_axes
-                )
-            )
-            logger.info(f"Has BTN_TOUCH: {has_touch}")
+    def update(self):
+        for event in self.device.read_loop():
+            if event.type == ecodes.EV_REL:
+                if event.code == ecodes.REL_Y:
+                    self.speed -= event.value  # up/down
+                elif event.code == ecodes.REL_X:
+                    self.steering += event.value  # left/right
+
+                logger.info(f"speed: {self.speed}, steering: {self.steering}")
+
+            # Optional: reset on button release
+            elif (
+                event.type == ecodes.EV_KEY
+                and event.code == ecodes.BTN_LEFT
+                and event.value == 0
+            ):
+                self.speed = 0
+                self.steering = 0
+                logger.info("stopped")

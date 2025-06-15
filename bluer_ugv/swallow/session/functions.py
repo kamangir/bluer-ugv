@@ -15,14 +15,13 @@ def start_session() -> bool:
 
     session = ClassicalSession()
 
-    session.mousepad.check()
-
     if not session.initialize():
         return False
 
     try:
         while not (session.button_command() or session.key_command()):
             session.leds.update()
+            session.mousepad.update()
             time.sleep(0.05)
     except KeyboardInterrupt:
         logger.info("^C received.")
