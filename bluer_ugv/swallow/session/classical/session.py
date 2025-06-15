@@ -18,6 +18,7 @@ bash_keys = {
 
 BUTTON_PRESS_DURATION_UPDATE = 5
 BUTTON_PRESS_DURATION_SHUTDOWN = 10
+BUTTON_PRESS_DURATION_IGNORE = 15
 
 
 class ClassicalSession:
@@ -52,15 +53,14 @@ class ClassicalSession:
     def button_command(self) -> bool:
         button_pressed = not GPIO.input(self.button.pin)
         if button_pressed:
-            logger.info(
-                f"debug: button_pressed: {button_pressed} - {string.timestamp()}."
-            )
             if not self.button.state:
                 logger.info("button pressed.")
                 self.button.press_time = time.time()
 
             self.button.press_duration = time.time() - self.button.press_time
-            if self.button.press_duration > BUTTON_PRESS_DURATION_SHUTDOWN:
+            if self.button.press_duration > BUTTON_PRESS_DURATION_IGNORE:
+                self.leds.leds["red"]["state"] = False
+            elif self.button.press_duration > BUTTON_PRESS_DURATION_SHUTDOWN:
                 self.leds.leds["red"]["state"] = True
             elif self.button.press_duration > BUTTON_PRESS_DURATION_UPDATE:
                 self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
@@ -74,13 +74,14 @@ class ClassicalSession:
                     )
                 )
 
-            if self.button.press_duration > BUTTON_PRESS_DURATION_SHUTDOWN:
-                reply_to_bash("shutdown")
-                return True
+            if self.button.press_duration < BUTTON_PRESS_DURATION_IGNORE:
+                if self.button.press_duration > BUTTON_PRESS_DURATION_SHUTDOWN:
+                    reply_to_bash("shutdown")
+                    return True
 
-            if self.button.press_duration > BUTTON_PRESS_DURATION_UPDATE:
-                reply_to_bash("update")
-                return True
+                if self.button.press_duration > BUTTON_PRESS_DURATION_UPDATE:
+                    reply_to_bash("update")
+                    return True
 
         self.button.state = button_pressed
 
