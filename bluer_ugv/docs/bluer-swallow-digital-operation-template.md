@@ -1,3 +1,23 @@
 # [Bluer Swallow](./bluer-swallow.md): Digital Control: Operation
 
-- press and hold the button for 5 seconds to update and for 10 seconds to shutdown.
+- **keyboard**: press the following keys:
+    - e: to exit.
+    - r: to reboot.
+    - s: to shutdown.
+    - u: to update.
+    - space: to stop.
+- **leds**:
+    - green: control loop.
+    - red:
+       - flashing: release the push button to update.
+       - solid: release the push button to shutdown.
+    - yellow: command received. 
+- **mouse pad**: 
+    - move your finger:
+        - vertically: to adjust speed.
+        - horizontally: to set steering.
+    - double click: to stop.
+- **push button**: press and hold:
+    - for 5 seconds: to update.
+    - for 10 seconds: to shutdown.
+    - for > 15 seconds: to skip.
