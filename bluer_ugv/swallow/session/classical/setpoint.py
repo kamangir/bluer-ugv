@@ -61,7 +61,7 @@ class ClassicalSetPoint:
 
             if what == "started":
                 self.started = bool(value)
-                logger.info(f"started" if value else "stopped")
+                logger.info("started" if value else "stopped")
                 return
 
             if what == "steering":
