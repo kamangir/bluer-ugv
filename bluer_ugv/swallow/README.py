@@ -9,6 +9,7 @@ dict_of_images = {
     "../../diagrams/bluer-swallow/digital.png": "../../diagrams/bluer-swallow/digital.svg",
     "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250614_114954.jpg?raw=true": "",
     "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250615_192339.jpg?raw=true": "",
+    "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250616_134654.jpg?raw=true": "",
 }
 
 items = [
