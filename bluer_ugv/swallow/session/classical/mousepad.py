@@ -8,20 +8,25 @@ from bluer_ugv.logger import logger
 
 class ClassicalMousePad:
     def __init__(self, leds: ClassicalLeds):
-        self.device = InputDevice("/dev/input/event0")
-        logger.info(
-            "{}: using {}.".format(
-                self.__class__.__name__,
-                self.device.name,
-            )
-        )
-
         self.speed = 0
         self.steering = 0
 
         self.started = False
 
         self.leds = leds
+
+        try:
+            self.device = InputDevice("/dev/input/event0")
+            logger.info(
+                "{}: using {}.".format(
+                    self.__class__.__name__,
+                    self.device.name,
+                )
+            )
+        except Exception as e:
+            logger.warning(e)
+            self.device = None
+            return
 
         self._thread = threading.Thread(
             target=self.run_,
