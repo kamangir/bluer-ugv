@@ -14,6 +14,7 @@ setup(
         f"{NAME}.swallow",
         f"{NAME}.swallow.session",
         f"{NAME}.swallow.session.classical",
+        f"{NAME}.swallow.session.classical.motor",
     ],
     include_package_data=True,
     package_data={
