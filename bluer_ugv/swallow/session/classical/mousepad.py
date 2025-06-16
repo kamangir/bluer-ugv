@@ -41,10 +41,10 @@ class ClassicalMousePad:
                 if event.type == ecodes.EV_REL:
                     if event.code == ecodes.REL_Y and self.started:
                         self.speed -= event.value  # up/down
-                        self.speed = min(255, max(-255, self.speed))
+                        self.speed = min(100, max(-100, self.speed))
                     elif event.code == ecodes.REL_X:
                         self.steering = event.value  # left/right
-                        self.steering = min(255, max(-255, self.steering))
+                        self.steering = min(100, max(-100, self.steering))
 
                     logger.info(f"speed: {self.speed}, steering: {self.steering}")
                     self.leds.leds["yellow"]["state"] = not self.leds.leds["yellow"][

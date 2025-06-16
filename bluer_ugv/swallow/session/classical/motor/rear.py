@@ -9,5 +9,7 @@ class RearMotors(GenericMotor):
     ):
         super().__init__(
             role="speed",
+            lpwm_pin=19,
+            rpwm_pin=13,
             mousepad=mousepad,
         )

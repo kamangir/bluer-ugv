@@ -18,7 +18,7 @@ class ClassicalPushButton:
         self.state = False
 
         logger.info(
-            "{}: pin #{}.".format(
+            "{}: GPIO#{}.".format(
                 self.__class__.__name__,
                 self.pin,
             )

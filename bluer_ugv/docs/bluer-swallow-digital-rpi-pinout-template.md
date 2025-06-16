@@ -9,4 +9,4 @@
 | Green LED      | Digital Output | 11           | GPIO 17 |                                            |
 | RED LED        | Digital Output | 13           | GPIO 27 |                                            |
 | Blue LED       | Digital Output | 15           | GPIO 22 |                                            |
-| Switch         | Digital Input  | 37           | GPIO 26 |                                            |
+| Push Button.   | Digital Input  | 37           | GPIO 26 |                                            |

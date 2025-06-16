@@ -9,5 +9,7 @@ class SteeringMotor(GenericMotor):
     ):
         super().__init__(
             role="steering",
+            lpwm_pin=12,
+            rpwm_pin=18,
             mousepad=mousepad,
         )
