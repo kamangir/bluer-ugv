@@ -4,17 +4,20 @@ from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
-from bluer_ugv.swallow.session.classical.motor.rear import RearMotors
-from bluer_ugv.swallow.session.classical.motor.steering import SteeringMotor
+from bluer_ugv.swallow.session.classical.motor.rear import ClassicalRearMotors
+from bluer_ugv.swallow.session.classical.motor.steering import ClassicalSteeringMotor
+from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 
 class ClassicalSession:
     def __init__(self):
         self.leds = ClassicalLeds()
+        self.setpoint = ClassicalSetPoint()
 
         self.mousepad = ClassicalMousePad(
             leds=self.leds,
+            setpoint=self.setpoint,
         )
         self.keyboard = ClassicalKeyboard(
             leds=self.leds,
@@ -24,14 +27,25 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        self.steering = SteeringMotor(
-            mousepad=self.mousepad,
+        self.steering = ClassicalSteeringMotor(
+            setpoint=self.setpoint,
         )
-        self.rear = RearMotors(
-            mousepad=self.mousepad,
+        self.rear = ClassicalRearMotors(
+            setpoint=self.setpoint,
         )
 
         logger.info(f"{self.__class__.__name__}: created...")
+
+    def cleanup(self):
+        for thing in [
+            self.rear,
+            self.steering,
+        ]:
+            thing.cleanup()
+
+        GPIO.cleanup()
+
+        logger.info(f"{self.__class__.__name__}.cleanup")
 
     def initialize(self) -> bool:
         try:
@@ -58,6 +72,7 @@ class ClassicalSession:
                 self.push_button,
                 self.steering,
                 self.rear,
+                self.setpoint,
                 self.leds,
             ]
         )
