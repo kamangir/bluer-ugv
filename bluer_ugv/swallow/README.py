@@ -10,6 +10,7 @@ dict_of_images = {
     "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250614_114954.jpg?raw=true": "",
     "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250615_192339.jpg?raw=true": "",
     "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250616_134654.jpg?raw=true": "",
+    "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250616_145049.jpg?raw=true": "",
 }
 
 items = [
