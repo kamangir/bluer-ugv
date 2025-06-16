@@ -13,7 +13,7 @@ class GenericMotor:
 
         logger.info(
             "{}: {}".format(
-                self.__class__.__name,
+                self.__class__.__name__,
                 role,
             )
         )
