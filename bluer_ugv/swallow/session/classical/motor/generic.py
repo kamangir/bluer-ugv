@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO  # type: ignore
+from RPi import GPIO  # type: ignore
 
 from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
 from bluer_ugv.logger import logger

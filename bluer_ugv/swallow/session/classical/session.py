@@ -40,27 +40,24 @@ class ClassicalSession:
             logger.error(e)
             return False
 
-        for thing in [
-            self.push_button,
-            self.leds,
-            self.steering,
-            self.rear,
-        ]:
-            if not thing.initialize():
-                return False
-
-        return True
+        return all(
+            thing.initialize()
+            for thing in [
+                self.push_button,
+                self.leds,
+                self.steering,
+                self.rear,
+            ]
+        )
 
     def update(self) -> bool:
         return all(
-            [
-                thing.update()
-                for thing in [
-                    self.keyboard,
-                    self.push_button,
-                    self.steering,
-                    self.rear,
-                    self.leds,
-                ]
+            thing.update()
+            for thing in [
+                self.keyboard,
+                self.push_button,
+                self.steering,
+                self.rear,
+                self.leds,
             ]
         )
