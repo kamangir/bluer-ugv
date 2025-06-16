@@ -56,17 +56,32 @@ class ClassicalSetPoint:
 
             if what == "speed":
                 self.speed = min(100, max(-100, int(value)))
-                logger.info(f"speed: {self.speed}")
+                logger.info(
+                    "{}.put: speed={}".format(
+                        self.__class__.__name__,
+                        self.speed,
+                    )
+                )
                 return
 
             if what == "started":
                 self.started = bool(value)
-                logger.info("started" if value else "stopped")
+                logger.info(
+                    "{}.put: {}".format(
+                        self.__class__.__name__,
+                        "started" if value else "stopped",
+                    )
+                )
                 return
 
             if what == "steering":
                 self.steering = min(100, max(-100, int(value)))
-                logger.info(f"steering: {self.steering}")
+                logger.info(
+                    "{}.put: steering={}".format(
+                        self.__class__.__name__,
+                        self.steering,
+                    )
+                )
                 return
 
             logger.error(f"{self.__class__.__name__}.put: {what} not found.")
@@ -80,7 +95,7 @@ class ClassicalSetPoint:
             }
         )
 
-        logger.info("started")
+        logger.info(f"{self.__class__.__name__}.start")
 
     def stop(self):
         self.put(
@@ -91,7 +106,7 @@ class ClassicalSetPoint:
             }
         )
 
-        logger.info("stopped")
+        logger.info(f"{self.__class__.__name__}.stop")
 
         self.leds.leds["red"]["state"] = False
         self.leds.leds["yellow"]["state"] = False
