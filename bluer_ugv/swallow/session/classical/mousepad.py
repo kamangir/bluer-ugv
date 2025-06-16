@@ -84,6 +84,16 @@ class ClassicalMousePad:
         self.leds.leds["red"]["state"] = False
         self.leds.leds["yellow"]["state"] = False
 
-    def get_state(self):
+    def get_state(
+        self,
+        what: str,
+    ) -> int:
         with self._lock:
-            return self.speed, self.steering
+            if what == "speed":
+                return self.speed
+
+            if what == "steering":
+                return self.steering
+
+            logger.error(f"{what} not found.")
+            return 0
