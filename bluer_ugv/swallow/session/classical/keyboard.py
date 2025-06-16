@@ -2,8 +2,7 @@ import keyboard
 
 from bluer_sbc.session.functions import reply_to_bash
 
-from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
-from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
+from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 bash_keys = {
@@ -17,8 +16,7 @@ bash_keys = {
 class ClassicalKeyboard:
     def __init__(
         self,
-        leds: ClassicalLeds,
-        mousepad: ClassicalMousePad,
+        setpoint: ClassicalSetPoint,
     ):
         logger.info(
             "{}: {}".format(
@@ -29,8 +27,7 @@ class ClassicalKeyboard:
             )
         )
 
-        self.leds = leds
-        self.mousepad = mousepad
+        self.setpoint = setpoint
 
     def update(self) -> bool:
         for key, event in bash_keys.items():
@@ -39,9 +36,9 @@ class ClassicalKeyboard:
                 return False
 
         if keyboard.is_pressed(" "):
-            self.mousepad.stop()
+            self.setpoint.stop()
 
         if keyboard.is_pressed("x"):
-            self.mousepad.start()
+            self.setpoint.start()
 
         return True

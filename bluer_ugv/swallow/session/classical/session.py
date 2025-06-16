@@ -13,16 +13,20 @@ from bluer_ugv.logger import logger
 class ClassicalSession:
     def __init__(self):
         self.leds = ClassicalLeds()
-        self.setpoint = ClassicalSetPoint()
+
+        self.setpoint = ClassicalSetPoint(
+            leds=self.leds,
+        )
 
         self.mousepad = ClassicalMousePad(
             leds=self.leds,
             setpoint=self.setpoint,
         )
+
         self.keyboard = ClassicalKeyboard(
-            leds=self.leds,
-            mousepad=self.mousepad,
+            setpoint=self.setpoint,
         )
+
         self.push_button = ClassicalPushButton(
             leds=self.leds,
         )
@@ -30,6 +34,7 @@ class ClassicalSession:
         self.steering = ClassicalSteeringMotor(
             setpoint=self.setpoint,
         )
+
         self.rear = ClassicalRearMotors(
             setpoint=self.setpoint,
         )
