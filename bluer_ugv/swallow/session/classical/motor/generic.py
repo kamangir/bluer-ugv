@@ -1,6 +1,7 @@
 from RPi import GPIO  # type: ignore
 
-from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
+from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 
@@ -10,12 +11,14 @@ class GenericMotor:
         role: str,
         lpwm_pin: int,
         rpwm_pin: int,
-        mousepad: ClassicalMousePad,
+        setpoint: ClassicalSetPoint,
+        leds: ClassicalLeds,
     ):
         self.role = role
         self.lpwm_pin = lpwm_pin
         self.rpwm_pin = rpwm_pin
-        self.mousepad = mousepad
+        self.setpoint = setpoint
+        self.leds = leds
         self.state: int = 0
 
         self.lpwm = None
@@ -26,6 +29,14 @@ class GenericMotor:
         self._last_duty = 0  # Last applied duty cycle
 
         logger.info(f"{self.__class__.__name__}: {role}")
+
+    def cleanup(self):
+        if self.lpwm:
+            self.lpwm.stop()
+        if self.rpwm:
+            self.rpwm.stop()
+
+        logger.info(f"{self.__class__.__name__}.cleanup")
 
     def initialize(self) -> bool:
         GPIO.setup(self.lpwm_pin, GPIO.OUT)
@@ -48,7 +59,7 @@ class GenericMotor:
         return True
 
     def update(self) -> bool:
-        self.state = self.mousepad.get_state(what=self.role)
+        self.state = self.setpoint.get(what=self.role)
 
         value = max(-100, min(100, self.state))  # Clamp
         duty_cycle = abs(value)
@@ -76,11 +87,13 @@ class GenericMotor:
         self._last_duty = duty_cycle
 
         logger.info(
-            "{}.update: {}{}".format(
+            "{}.update: {} {}".format(
                 self.__class__.__name__,
                 "->" if direction == 1 else "<-",
                 duty_cycle,
             )
         )
+
+        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
 
         return True

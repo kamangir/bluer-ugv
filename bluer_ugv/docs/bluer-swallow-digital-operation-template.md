@@ -1,10 +1,14 @@
 # [Bluer Swallow](./bluer-swallow.md): Digital Control: Operation
 
 - **keyboard**: press the following keys:
-    - e: to exit.
-    - r: to reboot.
-    - s: to shutdown.
+    - a: steer left.
+    - d: steer right.
+    - i: to exit.
+    - n: to shutdown.
+    - s: speed backward.
+    - t: to reboot.
     - u: to update.
+    - w: speed forward.
     - x: to start.
     - space: to stop.
 - **leds**:
