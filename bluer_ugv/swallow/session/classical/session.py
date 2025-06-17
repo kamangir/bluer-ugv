@@ -33,10 +33,12 @@ class ClassicalSession:
 
         self.steering = ClassicalSteeringMotor(
             setpoint=self.setpoint,
+            leds=self.leds,
         )
 
         self.rear = ClassicalRearMotors(
             setpoint=self.setpoint,
+            leds=self.leds,
         )
 
         logger.info(f"{self.__class__.__name__}: created...")

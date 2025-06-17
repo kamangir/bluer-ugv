@@ -1,5 +1,6 @@
 from RPi import GPIO  # type: ignore
 
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
@@ -11,11 +12,13 @@ class GenericMotor:
         lpwm_pin: int,
         rpwm_pin: int,
         setpoint: ClassicalSetPoint,
+        leds: ClassicalLeds,
     ):
         self.role = role
         self.lpwm_pin = lpwm_pin
         self.rpwm_pin = rpwm_pin
         self.setpoint = setpoint
+        self.leds = leds
         self.state: int = 0
 
         self.lpwm = None
@@ -90,5 +93,7 @@ class GenericMotor:
                 duty_cycle,
             )
         )
+
+        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
 
         return True
