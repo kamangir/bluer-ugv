@@ -46,6 +46,7 @@ class ClassicalSetPoint:
         self,
         value: Union[int, bool, Dict[str, Union[int, bool]]],
         what: str = "all",
+        log: bool = False,
     ):
         with self._lock:
             if what == "all":
@@ -56,32 +57,35 @@ class ClassicalSetPoint:
 
             if what == "speed":
                 self.speed = min(100, max(-100, int(value)))
-                logger.info(
-                    "{}.put: speed={}".format(
-                        self.__class__.__name__,
-                        self.speed,
+                if log:
+                    logger.info(
+                        "{}.put: speed={}".format(
+                            self.__class__.__name__,
+                            self.speed,
+                        )
                     )
-                )
                 return
 
             if what == "started":
                 self.started = bool(value)
-                logger.info(
-                    "{}.put: {}".format(
-                        self.__class__.__name__,
-                        "started" if value else "stopped",
+                if log:
+                    logger.info(
+                        "{}.put: {}".format(
+                            self.__class__.__name__,
+                            "started" if value else "stopped",
+                        )
                     )
-                )
                 return
 
             if what == "steering":
                 self.steering = min(100, max(-100, int(value)))
-                logger.info(
-                    "{}.put: steering={}".format(
-                        self.__class__.__name__,
-                        self.steering,
+                if log:
+                    logger.info(
+                        "{}.put: steering={}".format(
+                            self.__class__.__name__,
+                            self.steering,
+                        )
                     )
-                )
                 return
 
             logger.error(f"{self.__class__.__name__}.put: {what} not found.")
