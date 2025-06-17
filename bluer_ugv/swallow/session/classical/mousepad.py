@@ -39,7 +39,7 @@ class ClassicalMousePad:
 
         for event in self.device.read_loop():
             if event.type == ecodes.EV_REL:
-                if event.code == ecodes.REL_Y and self.started:
+                if event.code == ecodes.REL_Y and self.setpoint.started:
                     self.setpoint.put(
                         what="speed",
                         value=self.setpoint.get(what="speed") - event.value,
