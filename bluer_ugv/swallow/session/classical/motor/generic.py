@@ -84,7 +84,7 @@ class GenericMotor:
         self._last_duty = duty_cycle
 
         logger.info(
-            "{}.update: {}{}".format(
+            "{}.update: {} {}".format(
                 self.__class__.__name__,
                 "->" if direction == 1 else "<-",
                 duty_cycle,
