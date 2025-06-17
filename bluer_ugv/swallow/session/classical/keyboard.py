@@ -44,12 +44,12 @@ class ClassicalKeyboard:
         if keyboard.is_pressed("a"):
             self.setpoint.put(
                 what="steering",
-                value=-20,
+                value=20,
             )
         elif keyboard.is_pressed("d"):
             self.setpoint.put(
                 what="steering",
-                value=20,
+                value=-20,
             )
         else:
             self.setpoint.put(
