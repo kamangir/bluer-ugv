@@ -1,9 +1,9 @@
 # [Bluer Swallow](./bluer-swallow.md): Digital Control: Operation
 
 - **keyboard**: press the following keys:
-    - e: to exit.
-    - r: to reboot.
-    - s: to shutdown.
+    - i: to exit.
+    - n: to shutdown.
+    - t: to reboot.
     - u: to update.
     - x: to start.
     - space: to stop.

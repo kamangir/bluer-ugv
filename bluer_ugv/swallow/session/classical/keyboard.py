@@ -6,9 +6,9 @@ from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 bash_keys = {
-    "e": "exit",
-    "r": "reboot",
-    "s": "shutdown",
+    "i": "exit",
+    "n": "shutdown",
+    "t": "reboot",
     "u": "update",
 }
 
