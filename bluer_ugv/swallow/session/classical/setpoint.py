@@ -111,7 +111,9 @@ class ClassicalSetPoint:
         self.leds.leds["red"]["state"] = False
         self.leds.leds["yellow"]["state"] = False
 
-    def update(self):
+    def update(self) -> bool:
         with self._lock:
             if self.started:
                 self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+
+        return True
