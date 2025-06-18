@@ -12,7 +12,7 @@ bash_keys = {
     "u": "update",
 }
 
-
+BLUER_UGV_STEERING_SETPOINT = 50
 
 
 class ClassicalKeyboard:
@@ -46,12 +46,12 @@ class ClassicalKeyboard:
         if keyboard.is_pressed("a"):
             self.setpoint.put(
                 what="steering",
-                value=20,
+                value=BLUER_UGV_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed("d"):
             self.setpoint.put(
                 what="steering",
-                value=-20,
+                value=-BLUER_UGV_STEERING_SETPOINT,
             )
         else:
             self.setpoint.put(
