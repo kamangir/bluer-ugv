@@ -7,8 +7,8 @@ from bluer_ugv.logger import logger
 
 bash_keys = {
     "i": "exit",
-    "n": "shutdown",
-    "t": "reboot",
+    "o": "shutdown",
+    "p": "reboot",
     "u": "update",
 }
 

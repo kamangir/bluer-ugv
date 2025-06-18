@@ -4,9 +4,9 @@
     - a: steer left.
     - d: steer right.
     - i: to exit.
-    - n: to shutdown.
+    - o: to shutdown.
     - s: speed backward.
-    - t: to reboot.
+    - p: to reboot.
     - u: to update.
     - w: speed forward.
     - x: to start.
