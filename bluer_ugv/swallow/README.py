@@ -13,6 +13,7 @@ dict_of_images = {
     f"{assets2}/20250615_192339.jpg?raw=true": "",
     f"{assets2}/20250616_134654.jpg?raw=true": "",
     f"{assets2}/20250616_145049.jpg?raw=true": "",
+    f"{assets2}/20250618_122604.jpg?raw=true": "",
 }
 
 items = [
