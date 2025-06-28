@@ -15,6 +15,7 @@ dict_of_images = {
     f"{assets2}/20250616_145049.jpg?raw=true": "",
     f"{assets2}/20250618_122604.jpg?raw=true": "",
     f"{assets2}/20250618_102816~2_1.gif?raw=true": "",
+    "../../diagrams/bluer-swallow/cover.png": "../../diagrams/bluer-swallow/cover.stl",
 }
 
 items = [
