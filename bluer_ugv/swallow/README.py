@@ -18,6 +18,7 @@ dict_of_images = {
     "../../diagrams/bluer-swallow/cover.png": "../../diagrams/bluer-swallow/cover.stl",
     f"{assets2}/20250629_123616.jpg?raw=true": "",
     f"{assets2}/20250630_214923.jpg?raw=true": "",
+    f"{assets2}/20250703_153834.jpg?raw=true": "",
 }
 
 items = [
