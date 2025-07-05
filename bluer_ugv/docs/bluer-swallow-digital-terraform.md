@@ -4,7 +4,7 @@
 
 > ⭐️ preferred.
 
-> ⚠️ camera needs work.
+> ⚠️ camera needs work. 🔥
 
 1. follow [RPi-ROS](https://github.com/kamangir/bluer-ai/blob/main/bluer_ai/docs/install/RPi-ROS.md).
 
