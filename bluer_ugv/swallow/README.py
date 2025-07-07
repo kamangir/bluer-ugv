@@ -21,6 +21,7 @@ dict_of_images = {
     f"{assets2}/20250703_153834.jpg?raw=true": "",
     "../../diagrams/bluer-swallow/steering-over-current.png": "../../diagrams/bluer-swallow/steering-over-current.svg",
     f"{assets2}/20250707_122000.jpg?raw=true": "",
+    f"{assets2}/20250707_182818.jpg?raw=true": "",
 }
 
 items = [
