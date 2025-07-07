@@ -1,6 +1,6 @@
 # [Bluer Swallow](./bluer-swallow.md): Terraform
 
-## Ubuntu
+## Ubuntu 64-bit
 
 > ⭐️ preferred.
 
@@ -13,7 +13,7 @@
 @env dot cp swallow
 ```
 
-## Raspbian
+## Raspbian 32 bit
 
 > ⚠️ opencv, torch, and other modules install with challenges, and likely at lower versions.
 
