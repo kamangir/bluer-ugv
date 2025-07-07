@@ -23,7 +23,7 @@ items = README.Items(
         },
         {
             "name": "bluer-swallow",
-            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250618_102816~2_1.gif?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250701_2206342_1.gif?raw=true",
             "description": "based on power wheels.",
             "url": "./bluer_ugv/docs/bluer-swallow.md",
         },
