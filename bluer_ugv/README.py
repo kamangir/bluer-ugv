@@ -29,7 +29,7 @@ items = README.Items(
         },
         {
             "name": "bluer-cart",
-            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-cart/TBA.png?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-cart/bluer-cart.png?raw=true",
             "description": "a smart shopping cart.",
             "url": "./bluer_ugv/docs/bluer-cart.md",
         },
