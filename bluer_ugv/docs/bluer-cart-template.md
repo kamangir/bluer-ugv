@@ -2,6 +2,14 @@
 
 a smart shopping cart.
 
+## specs
+
+- speed: 20 km/h (max)
+- load: 400 kg (+400 kg vehicle weight)
+- slope: Up to 10%
+- motor: 10 kW peak / 5–7 kW continuous
+- battery: 48V or 72V - 10–15 kWh
+
 ## references
 
 1. https://www.foxtechrobot.com/foxtechrobot-electric-heavy-duty-cargo-100kg-four-wheel-steel-trolley-platform-automatic-human-following-robot.html
