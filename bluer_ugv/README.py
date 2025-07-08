@@ -23,9 +23,15 @@ items = README.Items(
         },
         {
             "name": "bluer-swallow",
-            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250618_102816~2_1.gif?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-swallow/20250701_2206342_1.gif?raw=true",
             "description": "based on power wheels.",
             "url": "./bluer_ugv/docs/bluer-swallow.md",
+        },
+        {
+            "name": "bluer-cart",
+            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-cart/bluer-cart.png?raw=true",
+            "description": "a smart shopping cart.",
+            "url": "./bluer_ugv/docs/bluer-cart.md",
         },
     ]
 )
@@ -36,6 +42,7 @@ def build():
         README.build(
             items=readme.get("items", []),
             path=os.path.join(file.path(__file__), readme["path"]),
+            cols=readme.get("cols", 3),
             ICON=ICON,
             NAME=NAME,
             VERSION=VERSION,
@@ -45,6 +52,7 @@ def build():
             {
                 "items": items,
                 "path": "..",
+                "cols": 4,
             },
             {"path": "docs/bluer-beast.md"},
             {"path": "docs/bluer-fire.md"},
@@ -52,6 +60,7 @@ def build():
                 "items": swallow_items,
                 "path": "docs/bluer-swallow.md",
             },
+            {"path": "docs/bluer-cart.md"},
             {"path": "docs/bluer-swallow-analog.md"},
             {"path": "docs/bluer-swallow-digital.md"},
             {"path": "docs/bluer-swallow-digital-parts.md"},
