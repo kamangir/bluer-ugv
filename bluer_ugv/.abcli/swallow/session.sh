@@ -11,7 +11,7 @@ function bluer_ugv_swallow_session() {
 
     bluer_objects_mlflow_tags_set \
         $abcli_object_name \
-        session,ROS,host=$abcli_hostname,$BLUER_SBC_SESSION_OBJECT_TAGS
+        session,host=$abcli_hostname,$BLUER_SBC_SESSION_OBJECT_TAGS
 
     local sudo_prefix=""
     [[ "$BLUER_AI_SESSION_IS_SUDO" == 1 ]] &&
