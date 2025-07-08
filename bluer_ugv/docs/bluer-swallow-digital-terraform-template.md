@@ -8,7 +8,7 @@
 
 1. follow [RPi](https://github.com/kamangir/bluer-ai/blob/main/bluer_ai/docs/install/RPi.md) (use 64-bit + headless).
 
-2. run `@seed swallow_raspbian clipboard` in another terminal and the seed 🌱 into the ssh window.
+2. run `@seed swallow_raspbian clipboard` in another terminal and paste the seed 🌱 into the ssh window.
 
 3. run, 
 ```bash
