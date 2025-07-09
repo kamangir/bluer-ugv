@@ -49,6 +49,7 @@ class ClassicalSession:
 
         self.camera = ClassicalCamera(
             keyboard=self.keyboard,
+            leds=self.leds,
             object_name=self.object_name,
         )
 

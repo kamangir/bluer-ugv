@@ -32,6 +32,9 @@ class ClassicalKeyboard:
         self.last_key: str = ""
         self.setpoint = setpoint
 
+        self.AI_mode = False
+        self.train_mode = False
+
     def update(self) -> bool:
         self.last_key = ""
 
@@ -76,5 +79,13 @@ class ClassicalKeyboard:
                 what="speed",
                 value=self.setpoint.get(what="speed") + 10,
             )
+
+        if keyboard.is_pressed("t"):
+            self.train_mode = not self.train_mode
+            logger.info("train mode is {}.".format("on" if self.train_mode else "off"))
+
+        if keyboard.is_pressed("y"):
+            self.AI_mode = not self.AI_mode
+            logger.info("AI mode is {}.".format("on" if self.AI_mode else "off"))
 
         return True
