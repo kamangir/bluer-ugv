@@ -36,7 +36,7 @@ class ClassicalCamera:
         # save dataset
 
     def update(self) -> bool:
-        if not any(
+        if any(
             [
                 self.keyboard.train_mode,
                 self.timer.tick(),
