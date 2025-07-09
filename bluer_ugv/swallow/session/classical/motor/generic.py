@@ -31,10 +31,15 @@ class GenericMotor:
         logger.info(f"{self.__class__.__name__}: {role}")
 
     def cleanup(self):
-        if self.lpwm:
-            self.lpwm.stop()
-        if self.rpwm:
-            self.rpwm.stop()
+        try:
+            if self.lpwm:
+                self.lpwm.stop()
+                self.lpwm = None
+            if self.rpwm:
+                self.rpwm.stop()
+                self.rpwm = None
+        except Exception as e:
+            logger.warning(e)
 
         logger.info(f"{self.__class__.__name__}.cleanup")
 
