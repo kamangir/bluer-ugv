@@ -12,7 +12,12 @@ from bluer_ugv.logger import logger
 
 
 class ClassicalSession:
-    def __init__(self):
+    def __init__(
+        self,
+        object_name: str,
+    ):
+        self.object_name = object_name
+
         self.leds = ClassicalLeds()
 
         self.setpoint = ClassicalSetPoint(
@@ -42,9 +47,17 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        self.camera = ClassicalCamera()
+        self.camera = ClassicalCamera(
+            keyboard=self.keyboard,
+            object_name=self.object_name,
+        )
 
-        logger.info(f"{self.__class__.__name__}: created...")
+        logger.info(
+            "{}: created for {}".format(
+                self.__class__.__name__,
+                self.object_name,
+            )
+        )
 
     def cleanup(self):
         for thing in [

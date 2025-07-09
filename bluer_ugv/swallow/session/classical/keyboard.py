@@ -29,9 +29,12 @@ class ClassicalKeyboard:
             )
         )
 
+        self.last_key: str = ""
         self.setpoint = setpoint
 
     def update(self) -> bool:
+        self.last_key = ""
+
         for key, event in bash_keys.items():
             if keyboard.is_pressed(key):
                 reply_to_bash(event)
@@ -44,11 +47,13 @@ class ClassicalKeyboard:
             self.setpoint.start()
 
         if keyboard.is_pressed("a"):
+            self.last_key = "a"
             self.setpoint.put(
                 what="steering",
                 value=BLUER_UGV_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed("d"):
+            self.last_key = "d"
             self.setpoint.put(
                 what="steering",
                 value=-BLUER_UGV_STEERING_SETPOINT,
