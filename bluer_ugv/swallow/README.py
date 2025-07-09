@@ -1,4 +1,5 @@
 assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-swallow"
+assets = "https://github.com/kamangir/assets/raw/main"
 
 dict_of_images = {
     "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true": "",
@@ -24,6 +25,7 @@ dict_of_images = {
     f"{assets2}/20250707_122000.jpg?raw=true": "",
     f"{assets2}/20250707_182818.jpg?raw=true": "",
     f"{assets2}/2025-07-08-13-09-38-so54ao.png?raw=true": "",
+    f"{assets}/2025-07-09-10-26-30-itpbmu/grid.png?raw=true": "",
 }
 
 items = [
