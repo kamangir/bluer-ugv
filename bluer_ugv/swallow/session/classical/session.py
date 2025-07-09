@@ -8,6 +8,7 @@ from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
 from bluer_ugv.swallow.session.classical.motor.rear import ClassicalRearMotors
 from bluer_ugv.swallow.session.classical.motor.steering import ClassicalSteeringMotor
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.env import BLUE_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 
 
@@ -24,10 +25,11 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        self.mousepad = ClassicalMousePad(
-            leds=self.leds,
-            setpoint=self.setpoint,
-        )
+        if BLUE_UGV_MOUSEPAD_ENABLED
+            self.mousepad = ClassicalMousePad(
+                leds=self.leds,
+                setpoint=self.setpoint,
+            )
 
         self.keyboard = ClassicalKeyboard(
             setpoint=self.setpoint,
