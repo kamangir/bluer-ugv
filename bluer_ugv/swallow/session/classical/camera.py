@@ -1,6 +1,8 @@
-from bluer_sbc.imager.camera import instance as camera
 from bluer_options.timer import Timer
 from bluer_options import string
+from bluer_options import host
+from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
+from bluer_sbc.imager.camera import instance as camera
 
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
@@ -25,7 +27,16 @@ class ClassicalCamera:
 
         self.object_name = object_name
 
-        # create the dataset
+        self.dict_of_classes = {
+            0: "no_action",
+            1: "left",
+            2: "right",
+        }
+
+        self.dataset = ImageClassifierDataset(
+            dict_of_classes=self.dict_of_classes,
+            object_name=self.object_name,
+        )
 
         logger.info(
             "{}: period={}".format(
@@ -40,7 +51,12 @@ class ClassicalCamera:
     def cleanup(self):
         camera.close(log=True)
 
-        # save dataset
+        self.dataset.save(
+            metadata={
+                "source": host.get_name(),
+            },
+            log=True,
+        )
 
     def update(self) -> bool:
         if not self.keyboard.train_mode:
@@ -74,7 +90,16 @@ class ClassicalCamera:
 
         logger.info(f"self.keyboard.last_key: {self.keyboard.last_key}")
 
-        # dataset +=
+        if not self.dataset.add(
+            filename=filename,
+            class_index=(
+                0
+                if self.keyboard.last_key == ""
+                else 1 if self.keyboard.last_key == "a" else 2
+            ),
+            log=True,
+        ):
+            return False
 
         self.timer.reset()
 
