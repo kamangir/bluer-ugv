@@ -36,7 +36,12 @@ class ClassicalCamera:
         if not (self.timer.tick() or self.keyboard.last_key != ""):
             return True
 
-        filename = string.pretty_date(as_filename=True, unique=True)
+        filename = "{}.png".format(
+            string.pretty_date(
+                as_filename=True,
+                unique=True,
+            )
+        )
 
         success, _ = camera.capture(
             close_after=False,
