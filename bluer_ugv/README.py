@@ -65,8 +65,9 @@ def build():
             {"path": "docs/bluer-swallow-digital.md"},
             {"path": "docs/bluer-swallow-digital-parts.md"},
             {"path": "docs/bluer-swallow-digital-terraform.md"},
-            {"path": "docs/bluer_swallow-steering-over-current-detection.md"},
+            {"path": "docs/bluer-swallow-steering-over-current-detection.md"},
             {"path": "docs/bluer-swallow-digital-rpi-pinout.md"},
             {"path": "docs/bluer-swallow-digital-operation.md"},
+            {"path": "docs/bluer-swallow-dataset-generation.md"},
         ]
     )
