@@ -25,7 +25,7 @@ dict_of_images = {
     f"{assets2}/20250707_122000.jpg?raw=true": "",
     f"{assets2}/20250707_182818.jpg?raw=true": "",
     f"{assets2}/2025-07-08-13-09-38-so54ao.png?raw=true": "",
-    f"{assets}/2025-07-09-10-26-30-itpbmu/grid.png?raw=true": "",
+    f"{assets}/2025-07-09-10-26-30-itpbmu/grid.png?raw=true": "../docs/bluer-swallow-dataset-generation.md",
 }
 
 items = [
