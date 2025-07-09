@@ -45,7 +45,7 @@ class ClassicalCamera:
     def update(self) -> bool:
         if not self.keyboard.train_mode:
             return True
-        if any(
+        if not any(
             [
                 self.timer.tick(),
                 self.keyboard.last_key != "",
