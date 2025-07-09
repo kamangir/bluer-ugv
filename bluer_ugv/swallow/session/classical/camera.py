@@ -36,9 +36,10 @@ class ClassicalCamera:
         # save dataset
 
     def update(self) -> bool:
+        if self.keyboard.train_mode:
+            return True
         if any(
             [
-                self.keyboard.train_mode,
                 self.timer.tick(),
                 self.keyboard.last_key != "",
             ]
