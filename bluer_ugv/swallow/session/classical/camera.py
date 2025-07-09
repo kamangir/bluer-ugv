@@ -27,6 +27,13 @@ class ClassicalCamera:
 
         # create the dataset
 
+        logger.info(
+            "{}: period={}".format(
+                self.__class__.__name__,
+                string.pretty_duration(env.BLUER_UGV_CAMERA_PERIOD),
+            )
+        )
+
     def initialize(self) -> bool:
         return camera.open(log=True)
 
@@ -64,6 +71,8 @@ class ClassicalCamera:
         )
         if not success:
             return success
+
+        logger.info(f"self.keyboard.last_key: {self.keyboard.last_key}")
 
         # dataset +=
 
