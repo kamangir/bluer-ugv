@@ -1,5 +1,6 @@
 from RPi import GPIO  # type: ignore
 
+from bluer_ugv.swallow.session.classical.camera import ClassicalCamera
 from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
@@ -41,12 +42,15 @@ class ClassicalSession:
             leds=self.leds,
         )
 
+        self.camera = ClassicalCamera()
+
         logger.info(f"{self.__class__.__name__}: created...")
 
     def cleanup(self):
         for thing in [
             self.rear,
             self.steering,
+            self.camera,
         ]:
             thing.cleanup()
 
@@ -68,6 +72,7 @@ class ClassicalSession:
                 self.leds,
                 self.steering,
                 self.rear,
+                self.camera,
             ]
         )
 
@@ -80,6 +85,7 @@ class ClassicalSession:
                 self.steering,
                 self.rear,
                 self.setpoint,
+                self.camera,
                 self.leds,
             ]
         )
