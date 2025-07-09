@@ -81,10 +81,14 @@ class ClassicalKeyboard:
             )
 
         if keyboard.is_pressed("t"):
-            self.train_mode = not self.train_mode
-            logger.info("train mode is {}.".format("on" if self.train_mode else "off"))
+            self.train_mode = False
+            logger.info("train mode is off.")
 
         if keyboard.is_pressed("y"):
+            self.train_mode = True
+            logger.info("train mode is on.")
+
+        if keyboard.is_pressed("g"):
             self.AI_mode = not self.AI_mode
             logger.info("AI mode is {}.".format("on" if self.AI_mode else "off"))
 
