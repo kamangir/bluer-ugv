@@ -1,6 +1,9 @@
+from typing import List
+
 from bluer_options.timer import Timer
 from bluer_options import string
 from bluer_options import host
+from bluer_objects.metadata import post_to_object, get_from_object
 from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
 from bluer_sbc.imager.camera import instance as camera
 
@@ -57,6 +60,22 @@ class ClassicalCamera:
             },
             log=True,
         )
+
+        dataset_list: List[str] = get_from_object(
+            object_name=env.BLUER_UGV_DATASET_LIST,
+            key="dataset-list",
+            default=[],
+            download=True,
+        )
+        dataset_list.append(self.object_name)
+        if not post_to_object(
+            object_name=env.BLUER_UGV_DATASET_LIST,
+            key="dataset-list",
+            value=dataset_list,
+            upload=True,
+            verbose=True,
+        ):
+            logger.error("failed to add object to dataset list.")
 
     def update(self) -> bool:
         if not self.keyboard.train_mode:
