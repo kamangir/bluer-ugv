@@ -43,6 +43,8 @@ class ClassicalCamera:
         ):
             return True
 
+        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+
         filename = "{}.png".format(
             string.pretty_date(
                 as_filename=True,
