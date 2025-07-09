@@ -25,7 +25,7 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        if BLUE_UGV_MOUSEPAD_ENABLED
+        if BLUE_UGV_MOUSEPAD_ENABLED:
             self.mousepad = ClassicalMousePad(
                 leds=self.leds,
                 setpoint=self.setpoint,
