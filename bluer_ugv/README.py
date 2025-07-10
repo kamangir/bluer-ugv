@@ -52,7 +52,6 @@ def build():
             {
                 "items": items,
                 "path": "..",
-                "cols": 4,
             },
             {"path": "docs/bluer-beast.md"},
             {"path": "docs/bluer-fire.md"},

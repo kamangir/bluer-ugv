@@ -5,7 +5,7 @@ function bluer_ugv_swallow_dataset_edit() {
     local do_download=$(bluer_ai_option_int "$options" download 1)
 
     if [[ "$do_download" == 1 ]]; then
-        bluer_ugv_swallow_download
+        bluer_ugv_swallow_dataset_download
         [[ $? -ne 0 ]] && return 1
     fi
 
