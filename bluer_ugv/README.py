@@ -1,9 +1,10 @@
 import os
 
+from bluer_options.help.functions import get_help
 from bluer_objects import file, README
 
-
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
+from bluer_ugv.help.functions import help_functions
 from bluer_ugv.swallow.README import items as swallow_items
 
 
@@ -47,6 +48,11 @@ def build():
             NAME=NAME,
             VERSION=VERSION,
             REPO_NAME=REPO_NAME,
+            help_function=lambda tokens: get_help(
+                tokens,
+                help_functions,
+                mono=True,
+            ),
         )
         for readme in [
             {
