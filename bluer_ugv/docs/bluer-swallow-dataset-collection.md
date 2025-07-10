@@ -1,7 +1,7 @@
 # [Bluer Swallow](./bluer-swallow.md): Dataset Collection
 
 ```bash
-TBA
+@swallow dataset collect
 ```
 
 
