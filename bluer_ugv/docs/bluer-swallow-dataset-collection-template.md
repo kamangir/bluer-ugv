@@ -4,7 +4,7 @@
 TBA
 ```
 
-set:::object_name metadata:::$BLUER_UGV_SWALLOW_DATASET_LIST:::dataset-object
+set:::object_name metadata:::env:::BLUER_UGV_SWALLOW_DATASET_LIST:::dataset-object
 
 assets:::get:::object_name/grid.png
 
