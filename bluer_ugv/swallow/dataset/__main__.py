@@ -43,6 +43,7 @@ if args.task == "collect":
     success = collect(
         object_name=args.object_name,
         count=args.count,
+        download=args.download == 1,
         update_metadata=args.update_metadata == 1,
     )
 else:
