@@ -22,7 +22,7 @@ function bluer_ugv_swallow_dataset_collect() {
         python3 -m bluer_ugv.swallow.dataset \
         collect \
         --count $count \
-        --download $download \
+        --download $do_download \
         --object_name $object_name \
         --update_metadata $update_metadata \
         "${@:3}"
