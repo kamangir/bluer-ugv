@@ -1,7 +1,7 @@
 # [Bluer Swallow](./bluer-swallow.md): Dataset Collection
 
 ```bash
-TBA
+@swallow dataset collect
 ```
 
 set:::object_name metadata:::env:::BLUER_UGV_SWALLOW_DATASET_LIST:::dataset-object

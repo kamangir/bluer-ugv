@@ -12,7 +12,7 @@ based on a used car.
 
 ## references
 
-1. https://github.com/kamangir/private-journal/wiki/bluer%E2%80%90cart
+1. https://www.foxtechrobot.com/mk-robot-custom-multi-modal-80kg-load-automobile-unmanned-vehicle-ugv-chassis-frame-robot-platform.html
 1. https://www.foxtechrobot.com/foxtechrobot-electric-heavy-duty-cargo-100kg-four-wheel-steel-trolley-platform-automatic-human-following-robot.html
 1. https://www.caper.ai/
 1. https://www.stockman.fr/en/motorized-ergonomic-hand-trucks-and-trolleys--18/motorized-platform-trolley--70/--1/powered-platform-trolley-200-and-400-kg--PM-1.aspx
