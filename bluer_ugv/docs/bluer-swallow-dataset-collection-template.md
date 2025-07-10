@@ -4,7 +4,7 @@
 TBA
 ```
 
-set:::object_name 2025-07-09-10-26-30-itpbmu
+set:::object_name metadata:::$BLUER_UGV_SWALLOW_DATASET_LIST:::dataset-object
 
 assets:::get:::object_name/grid.png
 
