@@ -7,3 +7,4 @@
 - [rpi pin-out](./bluer-swallow-digital-rpi-pinout.md)
 - [operation](./bluer-swallow-digital-operation.md)
 - [dataset generation](./bluer-swallow-dataset-generation.md)
+- [dataset collection](./bluer-swallow-dataset-collection.md)

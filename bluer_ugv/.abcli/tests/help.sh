@@ -5,6 +5,12 @@ function test_bluer_ugv_help() {
 
     local module
     for module in \
+        "@swallow" \
+        "@swallow dataset" \
+        "@swallow dataset download" \
+        "@swallow dataset edit" \
+        "@swallow dataset upload" \
+        \
         "@ugv" \
         \
         "@ugv pypi" \
