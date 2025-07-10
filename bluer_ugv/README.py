@@ -17,12 +17,6 @@ items = README.Items(
             "url": "./bluer_ugv/docs/bluer-swallow.md",
         },
         {
-            "name": "bluer-cart",
-            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-cart/bluer-cart.png?raw=true",
-            "description": "a smart shopping cart.",
-            "url": "./bluer_ugv/docs/bluer-cart.md",
-        },
-        {
             "name": "bluer-fire",
             "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-fire.png?raw=true",
             "description": "based on a used car.",
@@ -66,7 +60,6 @@ def build():
                 "items": swallow_items,
                 "path": "docs/bluer-swallow.md",
             },
-            {"path": "docs/bluer-cart.md"},
             {"path": "docs/bluer-swallow-analog.md"},
             {"path": "docs/bluer-swallow-digital.md"},
             {"path": "docs/bluer-swallow-digital-parts.md"},
