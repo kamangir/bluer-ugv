@@ -10,10 +10,10 @@ from bluer_ugv.logger import logger
 NAME = module.name(__file__, NAME)
 
 
-def start_session() -> bool:
+def start_session(object_name: str) -> bool:
     logger.info(f"{NAME}.start_session.")
 
-    session = ClassicalSession()
+    session = ClassicalSession(object_name=object_name)
 
     if not session.initialize():
         return False

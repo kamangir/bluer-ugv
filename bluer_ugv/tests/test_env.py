@@ -11,3 +11,9 @@ def test_required_env():
 
 def test_bluer_ugv_env():
     assert env.BLUER_BEAST_MODEL
+
+    assert isinstance(env.BLUER_UGV_CAMERA_PERIOD, int)
+    assert isinstance(env.BLUER_UGV_MOUSEPAD_ENABLED, int)
+
+    assert isinstance(env.BLUER_UGV_DATASET_LIST, str)
+    assert env.BLUER_UGV_DATASET_LIST

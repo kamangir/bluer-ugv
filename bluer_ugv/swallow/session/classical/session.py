@@ -1,5 +1,6 @@
 from RPi import GPIO  # type: ignore
 
+from bluer_ugv.swallow.session.classical.camera import ClassicalCamera
 from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
@@ -7,21 +8,28 @@ from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
 from bluer_ugv.swallow.session.classical.motor.rear import ClassicalRearMotors
 from bluer_ugv.swallow.session.classical.motor.steering import ClassicalSteeringMotor
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 
 
 class ClassicalSession:
-    def __init__(self):
+    def __init__(
+        self,
+        object_name: str,
+    ):
+        self.object_name = object_name
+
         self.leds = ClassicalLeds()
 
         self.setpoint = ClassicalSetPoint(
             leds=self.leds,
         )
 
-        self.mousepad = ClassicalMousePad(
-            leds=self.leds,
-            setpoint=self.setpoint,
-        )
+        if BLUER_UGV_MOUSEPAD_ENABLED:
+            self.mousepad = ClassicalMousePad(
+                leds=self.leds,
+                setpoint=self.setpoint,
+            )
 
         self.keyboard = ClassicalKeyboard(
             setpoint=self.setpoint,
@@ -41,12 +49,24 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        logger.info(f"{self.__class__.__name__}: created...")
+        self.camera = ClassicalCamera(
+            keyboard=self.keyboard,
+            leds=self.leds,
+            object_name=self.object_name,
+        )
+
+        logger.info(
+            "{}: created for {}".format(
+                self.__class__.__name__,
+                self.object_name,
+            )
+        )
 
     def cleanup(self):
         for thing in [
             self.rear,
             self.steering,
+            self.camera,
         ]:
             thing.cleanup()
 
@@ -68,6 +88,7 @@ class ClassicalSession:
                 self.leds,
                 self.steering,
                 self.rear,
+                self.camera,
             ]
         )
 
@@ -80,6 +101,7 @@ class ClassicalSession:
                 self.steering,
                 self.rear,
                 self.setpoint,
+                self.camera,
                 self.leds,
             ]
         )

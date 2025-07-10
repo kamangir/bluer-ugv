@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="170.1627mm"
+   height="95.162697mm"
+   viewBox="0 0 170.1627 95.162698"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
@@ -29,18 +29,19 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="0.6030902"
-     inkscape:cx="233.79588"
-     inkscape:cy="462.61737"
+     inkscape:cx="124.35951"
+     inkscape:cy="232.13775"
      inkscape:window-width="1352"
      inkscape:window-height="815"
      inkscape:window-x="0"
      inkscape:window-y="35"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"><inkscape:grid
+     inkscape:current-layer="layer1"
+     inkscape:clip-to-page="false"><inkscape:grid
        id="grid1"
        units="mm"
-       originx="0"
-       originy="0"
+       originx="-20.054761"
+       originy="-39.782541"
        spacingx="0.99999998"
        spacingy="1"
        empcolor="#0099e5"
@@ -53,13 +54,14 @@
      id="defs1" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
-       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.854589;stroke-miterlimit:2"
+     id="layer1"
+     transform="translate(-20.054762,-39.782541)"><rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.434917;stroke-miterlimit:2"
        id="rect5"
-       width="209.33948"
-       height="296.53906"
-       x="0"
-       y="1.7304645" /><image
+       width="169.72778"
+       height="94.727783"
+       x="20.272221"
+       y="40" /><image
        preserveAspectRatio="none"
        inkscape:svg-dpi="96"
        width="16.35"
@@ -139,7 +141,7 @@
          style="stroke-width:0.5"
          x="155"
          y="92.699997">Steering motor</tspan></text><path
-       style="fill:none;stroke:#ff0b0b;stroke-width:0.3;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#ff0b0b;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
        d="m 136,56.999996 h -9.15"
        id="path1" /><path
        style="fill:none;stroke:#000000;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
@@ -148,13 +150,13 @@
        style="fill:none;stroke:#ff0b0b;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 136,73.249997 H 109.15"
        id="path1-3" /><path
-       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 136,75.249999 H 111"
        id="path2-5" /><path
-       style="fill:none;stroke:#ff0b0b;stroke-width:0.3;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#ff0b0b;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 136,89.999995 H 111"
        id="path1-3-0" /><path
-       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
        d="M 136,91.999997 H 109"
        id="path2-5-8" /><path
        style="fill:none;stroke:#ff0b0b;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"

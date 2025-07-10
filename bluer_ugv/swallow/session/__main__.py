@@ -2,6 +2,7 @@ import argparse
 
 from blueness import module
 from blueness.argparse.generic import sys_exit
+from bluer_objects.env import abcli_object_name
 
 from bluer_ugv import NAME
 from bluer_ugv.logger import logger
@@ -19,7 +20,9 @@ args = parser.parse_args()
 
 success = False
 if args.task == "start_session":
-    success = start_session()
+    success = start_session(
+        object_name=abcli_object_name,
+    )
 else:
     success = None
 sys_exit(logger, NAME, args.task, success)

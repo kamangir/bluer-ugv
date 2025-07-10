@@ -29,9 +29,15 @@ class ClassicalKeyboard:
             )
         )
 
+        self.last_key: str = ""
         self.setpoint = setpoint
 
+        self.AI_mode = False
+        self.train_mode = False
+
     def update(self) -> bool:
+        self.last_key = ""
+
         for key, event in bash_keys.items():
             if keyboard.is_pressed(key):
                 reply_to_bash(event)
@@ -44,11 +50,13 @@ class ClassicalKeyboard:
             self.setpoint.start()
 
         if keyboard.is_pressed("a"):
+            self.last_key = "a"
             self.setpoint.put(
                 what="steering",
                 value=BLUER_UGV_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed("d"):
+            self.last_key = "d"
             self.setpoint.put(
                 what="steering",
                 value=-BLUER_UGV_STEERING_SETPOINT,
@@ -71,5 +79,17 @@ class ClassicalKeyboard:
                 what="speed",
                 value=self.setpoint.get(what="speed") + 10,
             )
+
+        if keyboard.is_pressed("t"):
+            self.train_mode = False
+            logger.info("train mode is off.")
+
+        if keyboard.is_pressed("y"):
+            self.train_mode = True
+            logger.info("train mode is on.")
+
+        if keyboard.is_pressed("g"):
+            self.AI_mode = not self.AI_mode
+            logger.info("AI mode is {}.".format("on" if self.AI_mode else "off"))
 
         return True
