@@ -5,6 +5,7 @@ from blueness import module
 from bluer_options.logger import log_list
 from bluer_objects import storage
 from bluer_objects.metadata import post_to_object, get_from_object
+from bluer_objects.storage.policies import DownloadPolicy
 
 from bluer_ugv import NAME
 from bluer_ugv import env
@@ -47,7 +48,10 @@ def collect(
 
     for dataset_object_name in tqdm(list_of_datasets):
         logger.info(f"downloading {dataset_object_name} ...")
-        if not storage.download(dataset_object_name):
+        if not storage.download(
+            dataset_object_name,
+            policy=DownloadPolicy.DOESNT_EXIST,
+        ):
             return False
 
     logger.info("🪄")
