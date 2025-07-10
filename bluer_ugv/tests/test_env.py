@@ -15,5 +15,5 @@ def test_bluer_ugv_env():
     assert isinstance(env.BLUER_UGV_CAMERA_PERIOD, int)
     assert isinstance(env.BLUER_UGV_MOUSEPAD_ENABLED, int)
 
-    assert isinstance(env.BLUER_UGV_DATASET_LIST, str)
-    assert env.BLUER_UGV_DATASET_LIST
+    assert isinstance(env.BLUER_UGV_SWALLOW_DATASET_LIST, str)
+    assert env.BLUER_UGV_SWALLOW_DATASET_LIST
