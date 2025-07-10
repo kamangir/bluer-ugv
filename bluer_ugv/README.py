@@ -69,5 +69,7 @@ def build():
             {"path": "docs/bluer-swallow-digital-rpi-pinout.md"},
             {"path": "docs/bluer-swallow-digital-operation.md"},
             {"path": "docs/bluer-swallow-dataset-generation.md"},
+            # aliases
+            {"path": "docs/aliases/swallow.md"},
         ]
     )
