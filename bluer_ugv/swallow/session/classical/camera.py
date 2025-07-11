@@ -141,11 +141,13 @@ class ClassicalCamera:
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
+                log=True,
             )
         elif predicted_class == 2:
             self.setpoint.put(
                 what="steering",
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
+                log=True,
             )
 
         return True
