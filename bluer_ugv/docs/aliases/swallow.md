@@ -5,10 +5,10 @@
 ```bash
 @swallow \
 	dataset \
-	collect \
-	[count=<count>,~download,update_metadata,upload] \
+	combine \
+	[count=<count>,~download,upload] \
 	[-|<object-name>]
- . collect the swallow dataset.
+ . combine swallow datasets.
 @swallow \
 	dataset \
 	download \
