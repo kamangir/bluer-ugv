@@ -28,7 +28,7 @@ dict_of_images = {
     f"{assets}/2025-07-09-10-26-30-itpbmu/grid.png?raw=true": "../docs/bluer-swallow-dataset-generation.md",
     f"{assets2}/lab.png?raw=true": "",
     f"{assets2}/20250709_111955.jpg?raw=true": "",
-    f"{assets2}/2025-07-09-11-20-27-4qf255-000.png?raw=true": "",
+    f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png?raw=true": "",
     f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png?raw=true": "../docs/bluer-swallow-dataset-combination.md",
 }
 
