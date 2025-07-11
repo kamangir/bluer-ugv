@@ -36,6 +36,22 @@ parser.add_argument(
     default=1,
     help="0 | 1",
 )
+parser.add_argument(
+    "--split",
+    type=int,
+    default=1,
+    help="0 | 1",
+)
+parser.add_argument(
+    "--test_ratio",
+    type=float,
+    default=0.1,
+)
+parser.add_argument(
+    "--train_ratio",
+    type=float,
+    default=0.8,
+)
 args = parser.parse_args()
 
 success = False
@@ -45,6 +61,9 @@ if args.task == "combine":
         count=args.count,
         download=args.download == 1,
         recent=args.recent == 1,
+        split=args.split == 1,
+        test_ratio=args.test_ratio,
+        train_ratio=args.train_ratio,
     )
 else:
     success = None

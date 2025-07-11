@@ -7,7 +7,12 @@ def help_combine(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("count=<count>,~download,~recent,upload", mono=mono)
+    options = xtra("count=<count>,~download,~recent,~split,upload", mono=mono)
+
+    args = [
+        "[--test_ratio 0.1]",
+        "[--train_ratio 0.8]",
+    ]
 
     return show_usage(
         [
@@ -16,7 +21,8 @@ def help_combine(
             "combine",
             f"[{options}]",
             "[-|<object-name>]",
-        ],
+        ]
+        + args,
         "combine swallow datasets.",
         mono=mono,
     )

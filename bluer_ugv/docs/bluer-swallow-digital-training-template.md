@@ -4,7 +4,7 @@
 @select swallow-dataset-$(@timestamp)
 
 @swallow dataset combine \
-    count=2,recent .
+    count=2,recent,split .
 
 @upload public,zip .
 @assets publish \
@@ -20,7 +20,7 @@
     extensions=png,push .
 ```
 
-set:::dataset_object_name swallow-dataset-2025-07-11-12-40-10-stfrys
+set:::dataset_object_name TBA
 
 assets:::get:::dataset_object_name/grid.png
 

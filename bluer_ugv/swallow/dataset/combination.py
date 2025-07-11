@@ -22,13 +22,31 @@ def combine(
     log: bool = True,
     verbose: bool = False,
     recent: bool = True,
+    split: bool = True,
+    test_ratio: float = 0.1,
+    train_ratio: float = 0.8,
 ) -> bool:
+    eval_ratio = 1 - train_ratio - test_ratio
+    if eval_ratio <= 0:
+        logger.error(f"eval_ratio = {eval_ratio:.2f} <= 0")
+        return False
+
     logger.info(
-        "{}.combine({}{}{}) -> {}".format(
+        "{}.combine({}{}{}) -{}> {}".format(
             NAME,
             "all" if count == -1 else f"count={count}",
             ",download" if download else "",
             ",recent" if recent else "",
+            ",split" if recent else "",
+            (
+                "train={:.2f}/eval={:.2f}/test={:.2f}-".format(
+                    train_ratio,
+                    eval_ratio,
+                    test_ratio,
+                )
+                if split
+                else ""
+            ),
             object_name,
         )
     )
@@ -73,6 +91,9 @@ def combine(
     success, dataset = ImageClassifierDataset.combine(
         list_of_datasets,
         object_name=object_name,
+        split=split,
+        test_ratio=test_ratio,
+        train_ratio=train_ratio,
     )
     if not success:
         return success
