@@ -1,7 +1,7 @@
 # [Bluer Swallow](./bluer-swallow.md): Dataset Combination
 
 ```bash
-@select swallow-dataset-$(@@timestamp)
+@select swallow-dataset-$(@timestamp)
 
 @swallow dataset combine \
     count=2 .
