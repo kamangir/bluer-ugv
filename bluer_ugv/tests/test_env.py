@@ -18,6 +18,9 @@ def test_bluer_ugv_env():
     assert isinstance(env.BLUER_UGV_CAMERA_PREDICTION_PERIOD, float)
     assert env.BLUER_UGV_CAMERA_PREDICTION_PERIOD > 0
 
+    assert isinstance(env.BLUER_UGV_SWALLOW_STEERING_SETPOINT, int)
+    assert env.BLUER_UGV_SWALLOW_STEERING_SETPOINT > 0
+
     assert isinstance(env.BLUER_UGV_MOUSEPAD_ENABLED, int)
 
     assert isinstance(env.BLUER_UGV_SWALLOW_DATASET_LIST, str)

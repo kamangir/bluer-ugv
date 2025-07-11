@@ -4,6 +4,7 @@ from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv import env
 from bluer_ugv.logger import logger
 
 bash_keys = {
@@ -12,8 +13,6 @@ bash_keys = {
     "p": "reboot",
     "u": "update",
 }
-
-BLUER_UGV_STEERING_SETPOINT = 50
 
 
 class ClassicalKeyboard:
@@ -55,13 +54,13 @@ class ClassicalKeyboard:
             self.last_key = "a"
             self.setpoint.put(
                 what="steering",
-                value=BLUER_UGV_STEERING_SETPOINT,
+                value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed("d"):
             self.last_key = "d"
             self.setpoint.put(
                 what="steering",
-                value=-BLUER_UGV_STEERING_SETPOINT,
+                value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         else:
             self.setpoint.put(
