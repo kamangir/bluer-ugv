@@ -4,11 +4,15 @@ from bluer_options.timer import Timer
 from bluer_options import string
 from bluer_options import host
 from bluer_objects.metadata import post_to_object, get_from_object
+from bluer_objects import storage
 from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
+from bluer_algo.image_classifier.model.predictor import ImageClassifierPredictor
 from bluer_sbc.imager.camera import instance as camera
 
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
+from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv import env
 from bluer_ugv.logger import logger
 
@@ -18,15 +22,21 @@ class ClassicalCamera:
         self,
         keyboard: ClassicalKeyboard,
         leds: ClassicalLeds,
+        setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-        self.timer = Timer(
-            period=env.BLUER_UGV_CAMERA_PERIOD,
-            name=self.__class__.__name__,
+        self.prediction_timer = Timer(
+            period=env.BLUER_UGV_CAMERA_PREDICTION_PERIOD,
+            name="{}.prediction".format(self.__class__.__name__),
+        )
+        self.training_timer = Timer(
+            period=env.BLUER_UGV_CAMERA_TRAINING_PERIOD,
+            name="{}.training".format(self.__class__.__name__),
         )
 
         self.keyboard = keyboard
         self.leds = leds
+        self.setpoint = setpoint
 
         self.object_name = object_name
 
@@ -41,15 +51,27 @@ class ClassicalCamera:
             object_name=self.object_name,
         )
 
+        self.predictor = None
+
         logger.info(
-            "{}: period={}".format(
+            "{}: prediction=1/{}, train=1/{}".format(
                 self.__class__.__name__,
-                string.pretty_duration(env.BLUER_UGV_CAMERA_PERIOD),
+                string.pretty_duration(env.BLUER_UGV_CAMERA_PREDICTION_PERIOD),
+                string.pretty_duration(env.BLUER_UGV_CAMERA_TRAINING_PERIOD),
             )
         )
 
     def initialize(self) -> bool:
-        return camera.open(log=True)
+        if not camera.open(log=True):
+            return False
+
+        if not storage.download(env.BLUER_UGV_SWALLOW_MODEL):
+            return False
+
+        success, self.predictor = ImageClassifierPredictor.load(
+            object_name=env.BLUER_UGV_SWALLOW_MODEL,
+        )
+        return success
 
     def cleanup(self):
         camera.close(log=True)
@@ -78,14 +100,54 @@ class ClassicalCamera:
             logger.error("failed to add object to dataset list.")
 
     def update(self) -> bool:
-        if not self.keyboard.train_mode:
+        if self.setpoint.speed <= 0:
             return True
-        if not any(
-            [
-                self.timer.tick(),
-                self.keyboard.last_key != "",
-            ]
-        ):
+
+        if self.keyboard.mode == OperationMode.PREDICTION:
+            return self.update_prediction()
+
+        if self.keyboard.mode == OperationMode.TRAINING:
+            return self.update_training()
+
+        return True
+
+    def update_prediction(self) -> bool:
+        if not self.prediction_timer.tick():
+            return True
+
+        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+
+        success, image = camera.capture(
+            close_after=False,
+            open_before=False,
+            log=True,
+        )
+        if not success:
+            return success
+
+        success, metadata = self.predictor.predict(
+            image=image,
+            log=True,
+        )
+        if not success:
+            return success
+
+        predicted_class = metadata["predicted_class"]
+        if predicted_class == 1:
+            self.setpoint.put(
+                what="steering",
+                value=env.BLUER_UGV_STEERING_SETPOINT,
+            )
+        elif predicted_class == 2:
+            self.setpoint.put(
+                what="steering",
+                value=-env.BLUER_UGV_STEERING_SETPOINT,
+            )
+
+        return True
+
+    def update_training(self) -> bool:
+        if not (self.training_timer.tick() or self.keyboard.last_key != ""):
             return True
 
         self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
@@ -120,6 +182,6 @@ class ClassicalCamera:
         ):
             return False
 
-        self.timer.reset()
+        self.training_timer.reset()
 
         return True
