@@ -14,6 +14,7 @@ from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.swallow.session.classical.keyboard import BLUER_UGV_STEERING_SETPOINT
 from bluer_ugv import env
 from bluer_ugv.logger import logger
 
@@ -140,12 +141,12 @@ class ClassicalCamera:
         if predicted_class == 1:
             self.setpoint.put(
                 what="steering",
-                value=env.BLUER_UGV_STEERING_SETPOINT,
+                value=BLUER_UGV_STEERING_SETPOINT,
             )
         elif predicted_class == 2:
             self.setpoint.put(
                 what="steering",
-                value=-env.BLUER_UGV_STEERING_SETPOINT,
+                value=-BLUER_UGV_STEERING_SETPOINT,
             )
 
         return True
