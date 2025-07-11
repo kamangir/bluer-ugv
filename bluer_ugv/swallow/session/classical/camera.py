@@ -133,6 +133,7 @@ class ClassicalCamera:
             image=image,
             log=True,
         )
+        logger.info(f"metadata: {metadata}")
         if not success:
             return success
 
