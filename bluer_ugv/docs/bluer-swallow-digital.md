@@ -8,4 +8,4 @@
 - [operation](./bluer-swallow-digital-operation.md)
 - [@swallow](./bluer_ugv/docs/aliases/swallow.md) 
 - [dataset generation](./bluer-swallow-dataset-generation.md)
-- [dataset collection](./bluer-swallow-dataset-collection.md)
+- [dataset combination](./bluer-swallow-dataset-combination.md)

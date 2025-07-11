@@ -3,7 +3,7 @@ from typing import List
 from bluer_options.terminal import show_usage, xtra
 
 
-def help_collect(
+def help_combine(
     tokens: List[str],
     mono: bool,
 ) -> str:
@@ -13,11 +13,11 @@ def help_collect(
         [
             "@swallow",
             "dataset",
-            "collect",
+            "combine",
             f"[{options}]",
             "[-|<object-name>]",
         ],
-        "collect the swallow dataset.",
+        "combine swallow datasets.",
         mono=mono,
     )
 
@@ -77,7 +77,7 @@ def help_upload(
 
 
 help_functions = {
-    "collect": help_collect,
+    "combine": help_combine,
     "download": help_download,
     "edit": help_edit,
     "upload": help_upload,

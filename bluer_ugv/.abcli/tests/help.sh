@@ -7,7 +7,7 @@ function test_bluer_ugv_help() {
     for module in \
         "@swallow" \
         "@swallow dataset" \
-        "@swallow dataset collect" \
+        "@swallow dataset combine" \
         "@swallow dataset download" \
         "@swallow dataset edit" \
         "@swallow dataset upload" \
