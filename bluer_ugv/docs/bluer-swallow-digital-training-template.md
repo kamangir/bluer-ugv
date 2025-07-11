@@ -30,7 +30,7 @@ metadata:::get:::dataset_object_name
 
 ---
 
-set:::model_object_name swallow-model-2025-07-11-13-08-10-0r76xx
+set:::model_object_name swallow-model-2025-07-11-13-17-59-6gw0fa
 
 assets:::get:::model_object_name/loss.png
 
