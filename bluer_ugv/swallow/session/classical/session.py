@@ -99,10 +99,10 @@ class ClassicalSession:
             for thing in [
                 self.keyboard,
                 self.push_button,
+                self.camera,
+                self.setpoint,
                 self.steering,
                 self.rear,
-                self.setpoint,
-                self.camera,
                 self.leds,
             ]
         )
