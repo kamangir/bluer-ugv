@@ -8,7 +8,8 @@
 
 @upload public,zip .
 @assets publish \
-    extensions=png,push .
+    extensions=png,push . \
+    --prefix grid
 
 @select swallow-model-$(@timestamp)
 
@@ -19,7 +20,7 @@
     extensions=png,push .
 ```
 
-set:::dataset_object_name TBA
+set:::dataset_object_name swallow-dataset-2025-07-11-12-40-10-stfrys
 
 assets:::get:::dataset_object_name/grid.png
 
