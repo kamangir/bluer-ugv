@@ -38,7 +38,7 @@ def combine(
         download=download,
     )
     if count != -1:
-        list_of_dataset_object_names = list_of_dataset_object_names[-count:]
+        list_of_dataset_object_names = list_of_dataset_object_names[:count]
     log_list(
         logger,
         "combining",
