@@ -52,6 +52,7 @@ class ClassicalSession:
         self.camera = ClassicalCamera(
             keyboard=self.keyboard,
             leds=self.leds,
+            setpoint=self.setpoint,
             object_name=self.object_name,
         )
 
@@ -98,10 +99,10 @@ class ClassicalSession:
             for thing in [
                 self.keyboard,
                 self.push_button,
+                self.camera,
+                self.setpoint,
                 self.steering,
                 self.rear,
-                self.setpoint,
-                self.camera,
                 self.leds,
             ]
         )

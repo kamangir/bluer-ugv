@@ -13,7 +13,7 @@
 
 @select swallow-model-$(@timestamp)
 
-@image_classifier model train - .. .
+@image_classifier model train upload .. .
 
 @upload public,zip .
 @assets publish \
@@ -50,13 +50,13 @@ dataset:
 ---
 
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-11-13-17-59-6gw0fa/loss.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-11-15-04-03-2glcch/loss.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-11-13-17-59-6gw0fa/evaluation.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-11-15-04-03-2glcch/evaluation.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-11-13-17-59-6gw0fa/confusion_matrix.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-11-15-04-03-2glcch/confusion_matrix.png?raw=true)
 
-[swallow-model-2025-07-11-13-17-59-6gw0fa](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-11-13-17-59-6gw0fa.tar.gz)
+[swallow-model-2025-07-11-15-04-03-2glcch](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-11-15-04-03-2glcch.tar.gz)
 
 ```yaml
 model:
@@ -74,23 +74,23 @@ model:
   evaluation:
     class_accuracy:
       0: 0.0
-      1: 0.8987341772151899
-      2: 0.234375
-    eval_accuracy: 0.5620915032679739
+      1: 0.7341772151898734
+      2: 0.65625
+    eval_accuracy: 0.6535947712418301
   inputs:
     batch_size: 16
     num_epochs: 10
   training:
     loss:
-    - 0.8878281680356797
-    - 0.8739532368224964
-    - 0.8651033347113091
-    - 0.8579061863876065
-    - 0.8534764865471123
-    - 0.8445938190950556
-    - 0.8410894870758057
-    - 0.8506735705653665
-    - 0.8398284189775084
-    - 0.8393932400766494
+    - 0.8941771462861343
+    - 0.8678298002956045
+    - 0.8598417815891838
+    - 0.863602487181845
+    - 0.8459089610740723
+    - 0.8423866080208186
+    - 0.8415681831588951
+    - 0.8320272445035206
+    - 0.8420564680286103
+    - 0.8336275264962643
 
 ```

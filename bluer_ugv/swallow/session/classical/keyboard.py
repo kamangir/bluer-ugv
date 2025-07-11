@@ -3,6 +3,8 @@ import keyboard
 from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv import env
 from bluer_ugv.logger import logger
 
 bash_keys = {
@@ -11,8 +13,6 @@ bash_keys = {
     "p": "reboot",
     "u": "update",
 }
-
-BLUER_UGV_STEERING_SETPOINT = 50
 
 
 class ClassicalKeyboard:
@@ -32,11 +32,12 @@ class ClassicalKeyboard:
         self.last_key: str = ""
         self.setpoint = setpoint
 
-        self.AI_mode = False
-        self.train_mode = False
+        self.mode = OperationMode.NONE
 
     def update(self) -> bool:
         self.last_key = ""
+
+        mode = self.mode
 
         for key, event in bash_keys.items():
             if keyboard.is_pressed(key):
@@ -53,13 +54,13 @@ class ClassicalKeyboard:
             self.last_key = "a"
             self.setpoint.put(
                 what="steering",
-                value=BLUER_UGV_STEERING_SETPOINT,
+                value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed("d"):
             self.last_key = "d"
             self.setpoint.put(
                 what="steering",
-                value=-BLUER_UGV_STEERING_SETPOINT,
+                value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         else:
             self.setpoint.put(
@@ -80,16 +81,16 @@ class ClassicalKeyboard:
                 value=self.setpoint.get(what="speed") + 10,
             )
 
-        if keyboard.is_pressed("t"):
-            self.train_mode = False
-            logger.info("train mode is off.")
-
         if keyboard.is_pressed("y"):
-            self.train_mode = True
-            logger.info("train mode is on.")
+            self.mode = OperationMode.NONE
+
+        if keyboard.is_pressed("t"):
+            self.mode = OperationMode.TRAINING
 
         if keyboard.is_pressed("g"):
-            self.AI_mode = not self.AI_mode
-            logger.info("AI mode is {}.".format("on" if self.AI_mode else "off"))
+            self.mode = OperationMode.PREDICTION
+
+        if mode != self.mode:
+            logger.info("mode: {}.".format(self.mode.name.lower()))
 
         return True

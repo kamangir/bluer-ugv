@@ -13,7 +13,7 @@
 
 @select swallow-model-$(@timestamp)
 
-@image_classifier model train - .. .
+@image_classifier model train upload .. .
 
 @upload public,zip .
 @assets publish \
@@ -30,7 +30,7 @@ metadata:::get:::dataset_object_name
 
 ---
 
-set:::model_object_name swallow-model-2025-07-11-13-17-59-6gw0fa
+set:::model_object_name swallow-model-2025-07-11-15-04-03-2glcch
 
 assets:::get:::model_object_name/loss.png
 
