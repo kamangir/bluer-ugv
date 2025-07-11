@@ -32,7 +32,7 @@ def combine(
         return False
 
     logger.info(
-        "{}.combine({}{}{}) -{}> {}".format(
+        "{}.combine({}{}{}{}) -{}> {}".format(
             NAME,
             "all" if count == -1 else f"count={count}",
             ",download" if download else "",
