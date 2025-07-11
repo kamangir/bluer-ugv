@@ -137,6 +137,9 @@ class ClassicalCamera:
             return success
 
         predicted_class = metadata["predicted_class"]
+        logger.info(
+            f"predicted_class: {predicted_class} @{predicted_class.__class__.__name__}"
+        )
         if predicted_class == 1:
             self.setpoint.put(
                 what="steering",
