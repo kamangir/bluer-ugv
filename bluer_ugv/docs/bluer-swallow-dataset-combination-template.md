@@ -12,11 +12,11 @@
     --prefix grid
 ```
 
-set:::object_name swallow-dataset-2025-07-11-pggr4c
+set:::object_name swallow-dataset-2025-07-11-10-48-45-hknrcf
 
 | | |
 |-|-|
-| assets:::get:::object_name/grid-00.png | assets:::get:::object_name/grid-01.png |
+| assets:::get:::object_name/grid-000.png | assets:::get:::object_name/grid-001.png |
 
 assets:::get:::object_name/grid.png
 
