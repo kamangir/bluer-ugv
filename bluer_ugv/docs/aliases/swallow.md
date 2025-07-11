@@ -6,7 +6,7 @@
 @swallow \
 	dataset \
 	combine \
-	[count=<count>,~download,upload] \
+	[count=<count>,~download,~recent,upload] \
 	[-|<object-name>]
  . combine swallow datasets.
 @swallow \

@@ -7,7 +7,7 @@ def help_combine(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("count=<count>,~download,upload", mono=mono)
+    options = xtra("count=<count>,~download,~recent,upload", mono=mono)
 
     return show_usage(
         [

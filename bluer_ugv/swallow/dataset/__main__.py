@@ -30,6 +30,12 @@ parser.add_argument(
     "--object_name",
     type=str,
 )
+parser.add_argument(
+    "--recent",
+    type=int,
+    default=1,
+    help="0 | 1",
+)
 args = parser.parse_args()
 
 success = False
@@ -38,6 +44,7 @@ if args.task == "combine":
         object_name=args.object_name,
         count=args.count,
         download=args.download == 1,
+        recent=args.recent == 1,
     )
 else:
     success = None

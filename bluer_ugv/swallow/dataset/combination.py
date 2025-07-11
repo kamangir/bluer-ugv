@@ -21,12 +21,14 @@ def combine(
     download: bool = True,
     log: bool = True,
     verbose: bool = False,
+    recent: bool = True,
 ) -> bool:
     logger.info(
-        "{}.combine({}{}) -> {}".format(
+        "{}.combine({}{}{}) -> {}".format(
             NAME,
             "all" if count == -1 else f"count={count}",
             ",download" if download else "",
+            ",recent" if recent else "",
             object_name,
         )
     )
@@ -38,7 +40,11 @@ def combine(
         download=download,
     )
     if count != -1:
-        list_of_dataset_object_names = list_of_dataset_object_names[:count]
+        if recent:
+            list_of_dataset_object_names = list_of_dataset_object_names[-count:]
+        else:
+            list_of_dataset_object_names = list_of_dataset_object_names[:count]
+
     log_list(
         logger,
         "combining",
