@@ -6,6 +6,6 @@ function test_bluer_ugv_swallow_combine() {
     local object_name=test_bluer_ugv_swallow_combine-$(bluer_ai_string_timestamp_short)
 
     bluer_ugv_swallow_dataset_combine \
-        $options,count=2 \
+        $options,count=2,~recent \
         $object_name
 }
