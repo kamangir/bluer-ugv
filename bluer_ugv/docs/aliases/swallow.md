@@ -6,7 +6,7 @@
 @swallow \
 	dataset \
 	collect \
-	[count=<count>,~download,update_metadata,upload] \
+	[count=<count>,~download,upload] \
 	[-|<object-name>]
  . collect the swallow dataset.
 @swallow \

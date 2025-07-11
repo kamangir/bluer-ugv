@@ -30,12 +30,6 @@ parser.add_argument(
     "--object_name",
     type=str,
 )
-parser.add_argument(
-    "--update_metadata",
-    type=int,
-    default=0,
-    help="0 | 1",
-)
 args = parser.parse_args()
 
 success = False
@@ -44,7 +38,6 @@ if args.task == "collect":
         object_name=args.object_name,
         count=args.count,
         download=args.download == 1,
-        update_metadata=args.update_metadata == 1,
     )
 else:
     success = None
