@@ -6,6 +6,6 @@
 - [over-current detection](./bluer-swallow-steering-over-current-detection-template.md)
 - [rpi pin-out](./bluer-swallow-digital-rpi-pinout.md)
 - [operation](./bluer-swallow-digital-operation.md)
-- [@swallow](./bluer_ugv/docs/aliases/swallow.md) 
+- [@swallow](./aliases/swallow.md) 
 - [dataset generation](./bluer-swallow-dataset-generation.md)
 - [dataset combination](./bluer-swallow-dataset-combination.md)
