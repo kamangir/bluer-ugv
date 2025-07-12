@@ -3,21 +3,18 @@
 ```bash
 @select 2025-07-09-10-26-30-itpbmu
 
-@algo dataset review - .
+@algo image_classifier dataset review - .
 
 @upload public,zip .
 @assets publish \
     extensions=png,push . \
     --prefix grid
-@assets publish \
-    extensions=png,push . \
-    --prefix timeline
 ```
 
 
 ![image](https://github.com/kamangir/assets/blob/main/2025-07-09-10-26-30-itpbmu/grid.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/2025-07-09-10-26-30-itpbmu/timeline.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/2025-07-09-10-26-30-itpbmu/grid-timeline.png?raw=true)
 
 [2025-07-09-10-26-30-itpbmu](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-07-09-10-26-30-itpbmu.tar.gz)
 
