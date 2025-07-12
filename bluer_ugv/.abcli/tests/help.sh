@@ -10,7 +10,6 @@ function test_bluer_ugv_help() {
         "@swallow dataset combine" \
         "@swallow dataset download" \
         "@swallow dataset edit" \
-        "@swallow dataset review" \
         "@swallow dataset upload" \
         \
         "@ugv" \
