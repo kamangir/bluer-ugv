@@ -6,10 +6,10 @@ from bluer_options.logger import log_list
 from bluer_objects import storage
 from bluer_objects.metadata import get_from_object
 from bluer_objects.storage.policies import DownloadPolicy
+from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
 
 from bluer_ugv import NAME
 from bluer_ugv import env
-from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)

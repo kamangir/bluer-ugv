@@ -68,6 +68,7 @@ def build():
             {"path": "docs/bluer-swallow-digital-operation.md"},
             {"path": "docs/bluer-swallow-digital-dataset-generation.md"},
             {"path": "docs/bluer-swallow-digital-dataset-combination.md"},
+            {"path": "docs/bluer-swallow-digital-dataset-review.md"},
             {"path": "docs/bluer-swallow-digital-training.md"},
             # aliases
             {"path": "docs/aliases/swallow.md"},
