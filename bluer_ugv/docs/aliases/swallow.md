@@ -23,12 +23,6 @@
  . edit the swallow dataset.
 @swallow \
 	dataset \
-	review \
-	[~download,upload] \
-	[.|<object-name>]
- . review <object-name>.
-@swallow \
-	dataset \
 	upload \
 	[~metadata]
  . upload the swallow dataset.

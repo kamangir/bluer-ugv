@@ -64,25 +64,6 @@ def help_edit(
     )
 
 
-def help_review(
-    tokens: List[str],
-    mono: bool,
-) -> str:
-    options = xtra("~download,upload", mono=mono)
-
-    return show_usage(
-        [
-            "@swallow",
-            "dataset",
-            "review",
-            f"[{options}]",
-            "[.|<object-name>]",
-        ],
-        "review <object-name>.",
-        mono=mono,
-    )
-
-
 def help_upload(
     tokens: List[str],
     mono: bool,
@@ -105,6 +86,5 @@ help_functions = {
     "combine": help_combine,
     "download": help_download,
     "edit": help_edit,
-    "review": help_review,
     "upload": help_upload,
 }
