@@ -5,7 +5,6 @@ from blueness.argparse.generic import sys_exit
 
 from bluer_ugv import NAME
 from bluer_ugv.swallow.dataset.combination import combine
-from bluer_ugv.swallow.dataset.review import review
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
@@ -14,7 +13,7 @@ parser = argparse.ArgumentParser(NAME)
 parser.add_argument(
     "task",
     type=str,
-    help="combine | review",
+    help="combine",
 )
 parser.add_argument(
     "--count",
@@ -66,8 +65,6 @@ if args.task == "combine":
         test_ratio=args.test_ratio,
         train_ratio=args.train_ratio,
     )
-elif args.task == "review":
-    success = review(object_name=args.object_name)
 else:
     success = None
 sys_exit(logger, NAME, args.task, success)
