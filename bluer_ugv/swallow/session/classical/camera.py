@@ -6,7 +6,7 @@ from bluer_options import host
 from bluer_objects.metadata import post_to_object, get_from_object
 from bluer_objects import storage
 from bluer_objects.storage.policies import DownloadPolicy
-from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
+from bluer_ugv.swallow.dataset.dataset import ImageDataset
 from bluer_algo.image_classifier.model.predictor import ImageClassifierPredictor
 from bluer_sbc.imager.camera import instance as camera
 
@@ -47,7 +47,7 @@ class ClassicalCamera:
             2: "right",
         }
 
-        self.dataset = ImageClassifierDataset(
+        self.dataset = ImageDataset(
             dict_of_classes=self.dict_of_classes,
             object_name=self.object_name,
         )
