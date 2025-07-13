@@ -5,6 +5,7 @@ from bluer_objects import file, README
 
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
+from bluer_ugv.sparrow.README import items as sparrow_items
 from bluer_ugv.swallow.README import items as swallow_items
 
 
@@ -21,6 +22,12 @@ items = README.Items(
             "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-fire.png?raw=true",
             "description": "based on a used car.",
             "url": "./bluer_ugv/docs/bluer_fire",
+        },
+        {
+            "name": "bluer_sparrow",
+            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/20250713_172442_1.gif?raw=true",
+            "description": "bluer_swallow's little sister.",
+            "url": "./bluer_ugv/docs/bluer_sparrow",
         },
         {
             "name": "bluer-beast",
@@ -52,12 +59,17 @@ def build():
             {
                 "items": items,
                 "path": "..",
+                "cols": 2,
             },
             {"path": "docs/bluer_beast"},
             {"path": "docs/bluer_fire"},
             {
                 "items": swallow_items,
                 "path": "docs/bluer_swallow",
+            },
+            {
+                "items": sparrow_items,
+                "path": "docs/bluer_sparrow",
             },
             {"path": "docs/bluer_swallow/analog"},
             {"path": "docs/bluer_swallow/digital"},
