@@ -1,4 +1,4 @@
-# [Bluer Swallow](./bluer-swallow.md): Terraform
+# bluer_swallow: Terraform
 
 ## Raspbian 64-bit
 

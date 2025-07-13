@@ -1,4 +1,4 @@
-# [Bluer Swallow](./bluer-swallow.md): Training
+# bluer_swallow: Training
 
 ```bash
 @select swallow-dataset-$(@timestamp)

@@ -1,4 +1,4 @@
-# [Bluer Swallow](./bluer-swallow.md): Mechanical and Analog Control
+# bluer_swallow: Mechanical and Analog Control
 
 - based on power wheels
 - [electrical diagram](../../diagrams/bluer-swallow/analog.svg)

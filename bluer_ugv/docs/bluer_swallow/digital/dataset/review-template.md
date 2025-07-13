@@ -1,4 +1,4 @@
-# [Bluer Swallow](./bluer-swallow.md): Dataset Review
+# bluer_swallow: Dataset Review
 
 ```bash
 @select 2025-07-09-10-26-30-itpbmu
