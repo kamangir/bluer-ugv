@@ -1,11 +1,11 @@
 # bluer_swallow: digital: dataset: collection: one
 
 ```bash
-@select $BLUER_UGV_SWALLOW_DATASET_LIST
+@swallow dataset download
+
 @list log \
     $(@list filter \
-	$(@metadata get \
-	key=dataset-list,object .) \
+	$(@swallow dataset list ~download) \
     --contains $(@today))
 ```
 
@@ -15,11 +15,11 @@
 
 ```bash
 runme() {
+    @swallow dataset download
+
     local object_name
     for object_name in $(@list filter \
-        $(@metadata get \
-        key=dataset-list,object \
-        $BLUER_UGV_SWALLOW_DATASET_LIST) \
+        $(@swallow dataset list ~download) \
         --contains $(@today) | tr , " "); do
         @select $object_name
 
