@@ -80,7 +80,7 @@ def build():
             {"path": "docs/bluer_swallow/digital/rpi-pinout.md"},
             {"path": "docs/bluer_swallow/digital/operation.md"},
             {"path": "docs/bluer_swallow/digital/dataset"},
-            {"path": "docs/bluer_swallow/digital/dataset/generation.md"},
+            {"path": "docs/bluer_swallow/digital/dataset/collection.md"},
             {"path": "docs/bluer_swallow/digital/dataset/combination.md"},
             {"path": "docs/bluer_swallow/digital/dataset/review.md"},
             {"path": "docs/bluer_swallow/digital/training.md"},
