@@ -32,7 +32,7 @@ dict_of_images = {
     f"{assets2}/20250709_111955.jpg?raw=true": "",
     f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png?raw=true": "",
     f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png?raw=true": "../docs/bluer_swallow/digital/dataset/combination.md",
-    f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/dataset-sequence-2025-07-12-f4z1n9/bluer_algo/docs/image_classifier/dataset/sequence.md",
+    f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
 }
 
 items = [
