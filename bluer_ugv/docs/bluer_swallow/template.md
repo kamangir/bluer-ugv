@@ -1,4 +1,4 @@
-# bluer_swallow (parastoo)
+# bluer_swallow
 
 items:::
 
