@@ -1,6 +1,6 @@
 # bluer_swallow: digital: dataset: collection: one
 
-metadata:::$BLUER_UGV_SWALLOW_DATASET_LIST
+metadata:::env:::BLUER_UGV_SWALLOW_DATASET_LIST
 
 ```bash
 @select $BLUER_UGV_SWALLOW_DATASET_LIST
