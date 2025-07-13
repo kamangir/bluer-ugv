@@ -1,4 +1,4 @@
-# bluer_swallow: Dataset Generation
+# bluer_swallow: digital: dataset: generation
 
 Start `swallow`, press `t` (to start training), drive for 5 minutes, press `i` (to exit).
 

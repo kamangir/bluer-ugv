@@ -1,4 +1,4 @@
-# bluer_swallow: Dataset Combination
+# bluer_swallow: digital: dataset: combination
 
 ```bash
 @select swallow-dataset-$(@timestamp)
