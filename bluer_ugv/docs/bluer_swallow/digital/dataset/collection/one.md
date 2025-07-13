@@ -1,35 +1,5 @@
 # bluer_swallow: digital: dataset: collection: one
 
-```yaml
-dataset-list:
-- 2025-07-09-10-59-15-x9eemj
-- 2025-07-09-11-02-42-m4b3is
-- 2025-07-09-11-08-06-pfih50
-- 2025-07-09-11-16-52-4zo4zc
-- 2025-07-09-11-34-19-bcoh75
-- 2025-07-11-15-13-31-xi472m
-- 2025-07-11-15-13-31-xi472m
-- 2025-07-11-15-13-31-xi472m
-- 2025-07-11-15-26-38-xq3md5
-- 2025-07-11-15-26-38-xq3md5
-- 2025-07-11-15-26-38-xq3md5
-- 2025-07-11-15-26-38-xq3md5
-- 2025-07-11-15-43-04-kb5j01
-- 2025-07-11-15-47-48-oa5ein
-- 2025-07-11-15-54-03-jntkne
-- 2025-07-13-10-04-43-eij8l0
-- 2025-07-13-10-15-29-46j4oy
-- 2025-07-13-10-37-12-d4iwpm
-- 2025-07-13-12-27-56-q1os6s
-- 2025-07-13-12-32-18-e9hqed
-- 2025-07-13-12-37-23-iy72pk
-- 2025-07-13-12-55-54-cx5mhk
-dataset-object: swallow-dataset-v1
-
-```
-
----
-
 ```bash
 @select $BLUER_UGV_SWALLOW_DATASET_LIST
 @list log \
@@ -39,7 +9,7 @@ dataset-object: swallow-dataset-v1
     --contains $(@today))
 ```
 
-> list of 7 item(s): 2025-07-13-10-04-43-eij8l0, 2025-07-13-10-15-29-46j4oy, 2025-07-13-10-37-12-d4iwpm, 2025-07-13-12-27-56-q1os6s, 2025-07-13-12-32-18-e9hqed, 2025-07-13-12-37-23-iy72pk, 2025-07-13-12-55-54-cx5mhk.
+> TBA
 
 ---
 
@@ -67,32 +37,12 @@ runme
 
 | | |
 |-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-04-43-eij8l0/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-04-43-eij8l0/grid-timeline.png?raw=true) |
-
-
-| | |
-|-|-|
 | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-15-29-46j4oy/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-15-29-46j4oy/grid-timeline.png?raw=true) |
 
 
 | | |
 |-|-|
 | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-37-12-d4iwpm/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-37-12-d4iwpm/grid-timeline.png?raw=true) |
-
-
-| | |
-|-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-27-56-q1os6s/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-27-56-q1os6s/grid-timeline.png?raw=true) |
-
-
-| | |
-|-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-32-18-e9hqed/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-32-18-e9hqed/grid-timeline.png?raw=true) |
-
-
-| | |
-|-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-37-23-iy72pk/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-37-23-iy72pk/grid-timeline.png?raw=true) |
 
 
 | | |
