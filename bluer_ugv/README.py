@@ -70,6 +70,7 @@ def build():
             {
                 "items": sparrow_items,
                 "path": "docs/bluer_sparrow",
+                "cols": 2,
             },
             {"path": "docs/bluer_swallow/analog"},
             {"path": "docs/bluer_swallow/digital"},

@@ -1,7 +1,6 @@
 assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-sparrow"
 
 dict_of_images = {
-    f"{assets2}/20250712_112717.jpg?raw=true": "",
     f"{assets2}/20250712_114819.jpg?raw=true": "",
     f"{assets2}/20250713_172325.jpg?raw=true": "",
     f"{assets2}/20250713_172413.jpg?raw=true": "",
