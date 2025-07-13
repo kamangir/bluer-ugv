@@ -1,4 +1,4 @@
-# bluer_swallow: Training
+# bluer_swallow: digital: train
 
 ```bash
 @select swallow-dataset-$(@timestamp)

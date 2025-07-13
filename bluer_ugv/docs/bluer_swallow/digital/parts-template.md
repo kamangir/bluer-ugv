@@ -1,4 +1,4 @@
-# bluer_swallow: Digital Control: Parts
+# bluer_swallow: digital: parts
 
 - Raspberry Pi 3B+
 - DC motors: 12 VDC, 20-45 W, 9000 RPM

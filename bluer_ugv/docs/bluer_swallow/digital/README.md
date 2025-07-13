@@ -1,4 +1,4 @@
-# bluer_swallow: Digital Control
+# bluer_swallow: digital
 
 - [electrical diagram](../../../../diagrams/bluer_swallow/digital.svg)
 - [parts](./parts.md)
@@ -6,6 +6,6 @@
 - [over-current detection](./steering-over-current-detection-template.md)
 - [rpi pin-out](./rpi-pinout.md)
 - [operation](./operation.md)
-- [@swallow](./aliases/swallow.md) 
+- [@swallow](../../aliases/swallow.md) 
 - [dataset](./dataset)
 - [training](./training.md)
