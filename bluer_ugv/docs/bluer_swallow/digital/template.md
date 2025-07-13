@@ -1,6 +1,6 @@
 # bluer_swallow: Digital Control
 
-- [electrical diagram](../../diagrams/bluer-swallow/digital.svg)
+- [electrical diagram](../../../diagrams/bluer_swallow/digital.svg)
 - [parts](./parts.md)
 - [terraform](./terraform.md)
 - [over-current detection](./steering-over-current-detection-template.md)
