@@ -23,6 +23,11 @@
  . edit the swallow dataset.
 @swallow \
 	dataset \
+	list \
+	[~download]
+ . list the swallow dataset.
+@swallow \
+	dataset \
 	upload \
 	[~metadata]
  . upload the swallow dataset.

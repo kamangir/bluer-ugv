@@ -1,5 +1,5 @@
 # bluer_swallow: digital: dataset
 
-- [generation](./generation.md)
+- [collection](./collection)
 - [review](./review.md)
 - [combination](./combination.md)

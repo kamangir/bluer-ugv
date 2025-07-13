@@ -3,13 +3,15 @@
 - **keyboard**: press the following keys:
     - a: steer left.
     - d: steer right.
+    - g: mode: prediction.
     - i: to exit.
     - o: to shutdown.
     - s: speed backward.
     - p: to reboot.
+    - t: mode: train.
     - u: to update.
     - w: speed forward.
-    - x: to start.
+    - y: mode: none.
     - space: to stop.
 - **leds**:
     - green: control loop.
