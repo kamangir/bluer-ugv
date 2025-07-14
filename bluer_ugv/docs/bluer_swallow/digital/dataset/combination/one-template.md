@@ -1,4 +1,4 @@
-# bluer_swallow: digital: dataset: combination: one
+title:::
 
 uses [collection/one](../collection/one.md).
 

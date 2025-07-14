@@ -3,4 +3,4 @@
 - [design](./design)
 - [@swallow](../../aliases/swallow.md) 
 - [dataset](./dataset)
-- [training](./training.md)
+- [model](./model)

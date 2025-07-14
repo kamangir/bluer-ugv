@@ -1,4 +1,4 @@
-# bluer_swallow: digital: dataset
+title:::
 
 - [collection](./collection)
 - [review](./review.md)

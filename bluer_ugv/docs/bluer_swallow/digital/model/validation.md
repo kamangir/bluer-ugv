@@ -1,4 +1,4 @@
-# bluer_swallow: digital: train
+# bluer_swallow: digital: model: validation
 
 ```bash
 @select swallow-dataset-$(@timestamp)

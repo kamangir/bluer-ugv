@@ -1,4 +1,4 @@
-# bluer_swallow: digital: train
+title:::
 
 ```bash
 @select swallow-dataset-$(@timestamp)
