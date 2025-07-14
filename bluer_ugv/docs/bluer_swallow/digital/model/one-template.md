@@ -18,6 +18,7 @@ uses [collection/one](../dataset/combination/one.md).
         $(@swallow dataset list) \
         --contains 2025-07-13)
 
+@upload filename=metadata.yaml .
 @assets publish \
     extensions=png,push . \
     --prefix grid

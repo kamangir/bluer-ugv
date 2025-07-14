@@ -18,6 +18,7 @@ uses [collection/one](../dataset/combination/one.md).
         $(@swallow dataset list) \
         --contains 2025-07-13)
 
+@upload filename=metadata.yaml .
 @assets publish \
     extensions=png,push . \
     --prefix grid
@@ -43,7 +44,25 @@ uses [collection/one](../dataset/combination/one.md).
 <summary>metadata</summary>
 
 ```yaml
-{}
+dataset:
+  class_count: 3
+  classes:
+    0: no_action
+    1: left
+    2: right
+  contains:
+  - 2025-07-13-10-15-29-46j4oy
+  - 2025-07-13-10-37-12-d4iwpm
+  - 2025-07-13-12-55-54-cx5mhk
+  count: 1749
+  shape:
+  - 100
+  - 300
+  - 3
+  subsets:
+    eval: 198
+    test: 180
+    train: 1371
 
 ```
 
