@@ -144,6 +144,7 @@ class ClassicalCamera:
 
     def update_prediction(self) -> bool:
         if not self.prediction_timer.tick():
+            self.buffer = []
             return True
 
         self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
