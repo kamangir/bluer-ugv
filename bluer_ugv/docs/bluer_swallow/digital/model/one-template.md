@@ -1,6 +1,6 @@
 title:::
 
-uses [collection/one](../dataset/combination/one.md).
+uses [combination/one](../dataset/combination/one.md).
 
 
 ```bash

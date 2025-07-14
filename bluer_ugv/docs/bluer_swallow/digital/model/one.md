@@ -1,6 +1,6 @@
 # bluer_swallow: digital: model: one
 
-uses [collection/one](../dataset/combination/one.md).
+uses [combination/one](../dataset/combination/one.md).
 
 
 ```bash
