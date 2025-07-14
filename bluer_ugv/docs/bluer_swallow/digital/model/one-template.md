@@ -29,7 +29,7 @@ uses [collection/one](../dataset/combination/one.md).
 
 set:::model_object_name swallow-model-2025-07-14-11-36-00-xmfhex
 
-set:::dataset_object_name metadata:::get:::model_object_name:::inputs.object_name
+set:::dataset_object_name metadata:::get:::model_object_name:::model.inputs.object_name
 
 ---
 
