@@ -1,8 +1,13 @@
 title:::
 
-uses [collection/one](../dataset/combination/one.md).
+uses [combination/one](../dataset/combination/one.md).
 
-🔥
+
+```bash
+@arvan ssh <ip-address>
+@arvan seed
+# Ctrl+V
+```
 
 ```bash
 @select swallow-dataset-$(@timestamp)
@@ -13,33 +18,34 @@ uses [collection/one](../dataset/combination/one.md).
         $(@swallow dataset list) \
         --contains 2025-07-13)
 
-@upload public,zip .
+@upload filename=metadata.yaml .
 @assets publish \
     extensions=png,push . \
     --prefix grid
 
 @select swallow-model-$(@timestamp)
 
-@image_classifier model train upload .. .
+@image_classifier model train upload .. . \
+    --num_epochs 100
 
 @upload public,zip .
 @assets publish \
     extensions=png,push .
 ```
 
----
+set:::model_object_name swallow-model-2025-07-14-09-35-16-7q7h82
 
-set:::dataset_object_name TBA
+set:::dataset_object_name metadata:::get:::model_object_name:::model.inputs.object_name
+
+---
 
 assets:::get:::dataset_object_name/grid.png
 
-object:::get:::dataset_object_name
-
+details:::metadata
 metadata:::get:::dataset_object_name
+details:::
 
 ---
-
-set:::model_object_name TBA
 
 assets:::get:::model_object_name/loss.png
 
@@ -49,4 +55,6 @@ assets:::get:::model_object_name/confusion_matrix.png
 
 object:::get:::model_object_name
 
+details:::metadata
 metadata:::get:::model_object_name
+details:::
