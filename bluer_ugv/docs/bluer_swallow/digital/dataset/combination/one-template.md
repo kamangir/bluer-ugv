@@ -3,14 +3,12 @@
 uses [collection/one](../collection/one.md).
 
 ```bash
-@swallow dataset download
-
 @select swallow-dataset-$(@timestamp)
 
 @swallow dataset combine \
     sequence=3 . \
     --datasets $(@list filter \
-	$(@swallow dataset list ~download) \
+	$(@swallow dataset list) \
     --contains 2025-07-13)
 
 @upload public,zip .
