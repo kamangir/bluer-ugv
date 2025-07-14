@@ -19,7 +19,8 @@ uses [collection/one](../dataset/combination/one.md).
 
 @select swallow-model-$(@timestamp)
 
-@image_classifier model train upload .. .
+@image_classifier model train upload .. . \
+    --num_epochs 20
 
 @upload public,zip .
 @assets publish \
@@ -29,7 +30,7 @@ uses [collection/one](../dataset/combination/one.md).
 ---
 
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-14-11-26-50-ap9cec/grid.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-14-11-30-36-wkwzat/grid.png?raw=true)
 
 ```yaml
 dataset:
@@ -48,22 +49,22 @@ dataset:
   - 300
   - 3
   subsets:
-    eval: 178
-    test: 160
-    train: 1411
+    eval: 172
+    test: 180
+    train: 1397
 
 ```
 
 ---
 
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-27-15-wup0ob/loss.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-31-01-wzbq76/loss.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-27-15-wup0ob/evaluation.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-31-01-wzbq76/evaluation.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-27-15-wup0ob/confusion_matrix.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-31-01-wzbq76/confusion_matrix.png?raw=true)
 
-[swallow-model-2025-07-14-11-27-15-wup0ob](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-14-11-27-15-wup0ob.tar.gz)
+[swallow-model-2025-07-14-11-31-01-wzbq76](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-14-11-31-01-wzbq76.tar.gz)
 
 ```yaml
 model:
@@ -81,23 +82,33 @@ model:
   evaluation:
     class_accuracy:
       0: 0.0
-      1: 0.8990825688073395
-      2: 0.3888888888888889
-    eval_accuracy: 0.6685393258426966
+      1: 0.9108910891089109
+      2: 0.30158730158730157
+    eval_accuracy: 0.6453488372093024
   inputs:
     batch_size: 16
-    num_epochs: 10
+    num_epochs: 20
   training:
     loss:
-    - 0.9067365726116783
-    - 0.8599148281367428
-    - 0.8553446277416319
-    - 0.8482238539223296
-    - 0.8348034395975563
-    - 0.8252276370577741
-    - 0.8184360103519313
-    - 0.8154178091729473
-    - 0.8033121723304143
-    - 0.8018080028635994
+    - 0.9025775203127987
+    - 0.8702159845666878
+    - 0.8615187929200546
+    - 0.8584252891151412
+    - 0.8463460803885244
+    - 0.8375800983685635
+    - 0.8252031873103629
+    - 0.8119564908013313
+    - 0.8086788177319569
+    - 0.8284006517276478
+    - 0.8022296512519451
+    - 0.8064591539870353
+    - 0.7974561142255856
+    - 0.7975125567948895
+    - 0.7919459233731138
+    - 0.7872894254000424
+    - 0.7877603093470176
+    - 0.7789561152884853
+    - 0.7782923688441409
+    - 0.7943609629517039
 
 ```

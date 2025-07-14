@@ -19,7 +19,8 @@ uses [collection/one](../dataset/combination/one.md).
 
 @select swallow-model-$(@timestamp)
 
-@image_classifier model train upload .. .
+@image_classifier model train upload .. . \
+    --num_epochs 20
 
 @upload public,zip .
 @assets publish \
@@ -28,7 +29,7 @@ uses [collection/one](../dataset/combination/one.md).
 
 ---
 
-set:::dataset_object_name swallow-dataset-2025-07-14-11-26-50-ap9cec
+set:::dataset_object_name swallow-dataset-2025-07-14-11-30-36-wkwzat
 
 assets:::get:::dataset_object_name/grid.png
 
@@ -36,7 +37,7 @@ metadata:::get:::dataset_object_name
 
 ---
 
-set:::model_object_name swallow-model-2025-07-14-11-27-15-wup0ob
+set:::model_object_name swallow-model-2025-07-14-11-31-01-wzbq76
 
 assets:::get:::model_object_name/loss.png
 
