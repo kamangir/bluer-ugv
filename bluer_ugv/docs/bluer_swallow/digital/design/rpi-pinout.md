@@ -1,4 +1,4 @@
-# bluer_swallow: digital: rpi pin-Out
+# bluer_swallow: digital: design: rpi-pinout
 
 | Responsibility | Function       | Physical Pin | GPIO #  | Notes                                      |
 | -------------- | -------------- | ------------ | ------- | ------------------------------------------ |

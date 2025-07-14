@@ -1,4 +1,4 @@
-# bluer_beast
+title:::
 
 based on [UGV Beast PI ROS2](https://www.waveshare.com/ugv-beast-ros2-kit.htm) [order link].
 

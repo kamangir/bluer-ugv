@@ -1,4 +1,4 @@
-# bluer_swallow: digital: terraform
+# bluer_swallow: digital: design: terraform
 
 ## Raspbian 64-bit
 

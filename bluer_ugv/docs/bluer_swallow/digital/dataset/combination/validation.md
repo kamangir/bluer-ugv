@@ -1,4 +1,4 @@
-# bluer_swallow: digital: dataset: combination
+# bluer_swallow: digital: dataset: combination: validation
 
 uses [collection/validation](../collection/validation.md).
 

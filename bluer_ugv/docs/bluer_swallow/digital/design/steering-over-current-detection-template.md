@@ -1,4 +1,4 @@
-# # bluer_swallow: steering over-current detection
+title:::
 
 - purpose: To recognize when the steering motor has reached its mechanical limits.
 - uses: the Current Sense Outputs (IS) of BTS7960.

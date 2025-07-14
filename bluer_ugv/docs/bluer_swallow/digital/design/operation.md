@@ -1,4 +1,4 @@
-# bluer_swallow: digital: operation
+# bluer_swallow: digital: design: operation
 
 - **keyboard**: press the following keys:
     - a: steer left.

@@ -1,4 +1,4 @@
-# bluer_swallow: digital
+title:::
 
 - [design](./design)
 - [@swallow](../../aliases/swallow.md) 

@@ -1,4 +1,4 @@
-# bluer_swallow: digital: dataset: collection: validation
+title:::
 
 Start `swallow`, press `t` (to start training), drive for 5 minutes, press `i` (to exit).
 
