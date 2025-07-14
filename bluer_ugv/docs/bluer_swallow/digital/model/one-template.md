@@ -13,7 +13,6 @@ uses [collection/one](../dataset/combination/one.md).
         $(@swallow dataset list) \
         --contains 2025-07-13)
 
-@upload public,zip .
 @assets publish \
     extensions=png,push . \
     --prefix grid
@@ -29,17 +28,15 @@ uses [collection/one](../dataset/combination/one.md).
 
 ---
 
-set:::dataset_object_name TBA
+set:::dataset_object_name swallow-dataset-2025-07-14-11-26-50-ap9cec
 
 assets:::get:::dataset_object_name/grid.png
-
-object:::get:::dataset_object_name
 
 metadata:::get:::dataset_object_name
 
 ---
 
-set:::model_object_name TBA
+set:::model_object_name swallow-model-2025-07-14-11-27-15-wup0ob
 
 assets:::get:::model_object_name/loss.png
 
