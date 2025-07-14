@@ -1,5 +1,7 @@
 title:::
 
+uses [collection/one](../dataset/combination/template.md).
+
 ```bash
 @select swallow-dataset-$(@timestamp)
 
