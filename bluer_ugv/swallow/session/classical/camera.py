@@ -1,4 +1,5 @@
 from typing import List
+import numpy as np
 
 from bluer_options.timer import Timer
 from bluer_options import string
@@ -62,6 +63,9 @@ class ClassicalCamera:
             )
         )
 
+        self.buffer_size = -1
+        self.buffer: List[np.ndarray] = []
+
     def initialize(self) -> bool:
         if not camera.open(log=True):
             return False
@@ -95,7 +99,6 @@ class ClassicalCamera:
                 )
             )
             return False
-
         self.buffer_size = int(buffer_size)
         logger.info(f"buffer size: {self.buffer_size}")
 
@@ -153,8 +156,18 @@ class ClassicalCamera:
         if not success:
             return success
 
+        self.buffer.append(image)
+        if len(self.buffer) > self.buffer_size:
+            self.buffer = self.buffer[1:]
+        if len(self.buffer) < self.buffer_size:
+            logger.info("buffering ...")
+            return True
+        if len(self.buffer) > self.buffer_size:
+            logger.error("buffer overflow - this must not happen.")
+            return False
+
         success, metadata = self.predictor.predict(
-            image=image,
+            image=np.hstack(self.buffer),
         )
         if not success:
             return success
