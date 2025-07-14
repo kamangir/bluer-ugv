@@ -2,7 +2,12 @@
 
 uses [collection/one](../dataset/combination/one.md).
 
-🔥
+
+```bash
+@arvan ssh <ip-address>
+@arvan seed
+# Ctrl+V
+```
 
 ```bash
 @select swallow-dataset-$(@timestamp)
@@ -20,7 +25,7 @@ uses [collection/one](../dataset/combination/one.md).
 @select swallow-model-$(@timestamp)
 
 @image_classifier model train upload .. . \
-    --num_epochs 40
+    --num_epochs 100
 
 @upload public,zip .
 @assets publish \
@@ -32,6 +37,10 @@ uses [collection/one](../dataset/combination/one.md).
 ---
 
 ![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-14-11-42-23-vsgfh1/grid.png?raw=true)
+
+
+<details>
+<summary>metadata</summary>
 
 ```yaml
 dataset:
@@ -56,6 +65,9 @@ dataset:
 
 ```
 
+</details>
+
+
 ---
 
 ![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-42-49-xeox1d/loss.png?raw=true)
@@ -65,6 +77,10 @@ dataset:
 ![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-11-42-49-xeox1d/confusion_matrix.png?raw=true)
 
 [swallow-model-2025-07-14-11-42-49-xeox1d](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-14-11-42-49-xeox1d.tar.gz)
+
+
+<details>
+<summary>metadata</summary>
 
 ```yaml
 model:
@@ -133,3 +149,6 @@ model:
     - 0.6888541663364266
 
 ```
+
+</details>
+
