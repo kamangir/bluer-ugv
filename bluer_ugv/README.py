@@ -72,6 +72,7 @@ def build():
                 "path": "docs/bluer_sparrow",
                 "cols": 2,
             },
+            #
             {"path": "docs/bluer_swallow/analog"},
             {"path": "docs/bluer_swallow/digital"},
             {"path": "docs/bluer_swallow/digital/design"},
@@ -93,6 +94,9 @@ def build():
             {"path": "docs/bluer_swallow/digital/model"},
             {"path": "docs/bluer_swallow/digital/model/validation.md"},
             {"path": "docs/bluer_swallow/digital/model/one.md"},
+            #
+            {"path": "docs/bluer_sparrow/analog"},
+            {"path": "docs/bluer_sparrow/analog/parts.md"},
             # aliases
             {"path": "docs/aliases/swallow.md"},
         ]

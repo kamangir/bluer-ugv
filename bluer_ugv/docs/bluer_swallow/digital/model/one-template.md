@@ -31,9 +31,19 @@ uses [combination/one](../dataset/combination/one.md).
 @upload public,zip .
 @assets publish \
     extensions=png,push .
+
+@select swallow-prediction-test-$(@timestamp)
+
+@algo image_classifier model prediction_test \
+    upload ... .. .
+
+@assets publish \
+    extensions=png,push .
 ```
 
-set:::model_object_name swallow-model-2025-07-14-09-35-16-7q7h82
+set:::model_object_name swallow-model-2025-07-14-13-18-10-kx0qrw
+
+set:::prediction_object_name swallow-prediction-test-2025-07-14-14-13-57-ngywj1
 
 set:::dataset_object_name metadata:::get:::model_object_name:::model.inputs.object_name
 
@@ -57,4 +67,12 @@ object:::get:::model_object_name
 
 details:::metadata
 metadata:::get:::model_object_name
+details:::
+
+---
+
+assets:::get:::prediction_object_name/prediction.png
+
+details:::metadata
+metadata:::get:::prediction_object_name
 details:::

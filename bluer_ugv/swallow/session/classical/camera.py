@@ -1,4 +1,5 @@
 from typing import List
+import numpy as np
 
 from bluer_options.timer import Timer
 from bluer_options import string
@@ -62,6 +63,9 @@ class ClassicalCamera:
             )
         )
 
+        self.buffer_size = -1
+        self.buffer: List[np.ndarray] = []
+
     def initialize(self) -> bool:
         if not camera.open(log=True):
             return False
@@ -75,7 +79,30 @@ class ClassicalCamera:
         success, self.predictor = ImageClassifierPredictor.load(
             object_name=env.BLUER_UGV_SWALLOW_MODEL,
         )
-        return success
+        if not success:
+            return success
+
+        if self.predictor.shape[0] != camera.resolution[0]:
+            logger.error(
+                "height mismatch: {} <> {}".format(
+                    self.predictor.shape[0],
+                    camera.resolution[0],
+                )
+            )
+            return False
+
+        buffer_size = self.predictor.shape[1] / camera.resolution[1]
+        if int(buffer_size) != buffer_size:
+            logger.error(
+                "non-integer buffer size: {} / {} = {:.2f}".format(
+                    self.predictor.shape[1], camera.resolution[1], buffer_size
+                )
+            )
+            return False
+        self.buffer_size = int(buffer_size)
+        logger.info(f"buffer size: {self.buffer_size}")
+
+        return True
 
     def cleanup(self):
         camera.close(log=True)
@@ -86,6 +113,9 @@ class ClassicalCamera:
             },
             log=True,
         )
+
+        if self.dataset.df.empty:
+            return
 
         dataset_list: List[str] = get_from_object(
             object_name=env.BLUER_UGV_SWALLOW_DATASET_LIST,
@@ -105,6 +135,7 @@ class ClassicalCamera:
 
     def update(self) -> bool:
         if self.setpoint.speed <= 0:
+            self.buffer = []
             return True
 
         if self.keyboard.mode == OperationMode.PREDICTION:
@@ -129,8 +160,18 @@ class ClassicalCamera:
         if not success:
             return success
 
+        self.buffer.append(image)
+        if len(self.buffer) > self.buffer_size:
+            self.buffer = self.buffer[1:]
+        if len(self.buffer) < self.buffer_size:
+            logger.info("buffering ...")
+            return True
+        if len(self.buffer) > self.buffer_size:
+            logger.error("buffer overflow - this must not happen.")
+            return False
+
         success, metadata = self.predictor.predict(
-            image=image,
+            image=np.hstack(self.buffer),
         )
         if not success:
             return success
