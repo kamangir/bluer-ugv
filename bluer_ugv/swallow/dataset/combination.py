@@ -25,6 +25,7 @@ def combine(
     split: bool = True,
     test_ratio: float = 0.1,
     train_ratio: float = 0.8,
+    explicit_dataset_object_names: str = "not-given",
 ) -> bool:
     eval_ratio = 1 - train_ratio - test_ratio
     if eval_ratio <= 0:
@@ -51,12 +52,17 @@ def combine(
         )
     )
 
-    list_of_dataset_object_names: List[str] = get_from_object(
-        object_name=env.BLUER_UGV_SWALLOW_DATASET_LIST,
-        key="dataset-list",
-        default=[],
-        download=download,
-    )
+    if explicit_dataset_object_names != "not-given":
+        list_of_dataset_object_names = explicit_dataset_object_names.split("+")
+    else:
+        logger.info("reading from  {} ...".format(env.BLUER_UGV_SWALLOW_DATASET_LIST))
+        list_of_dataset_object_names: List[str] = get_from_object(
+            object_name=env.BLUER_UGV_SWALLOW_DATASET_LIST,
+            key="dataset-list",
+            default=[],
+            download=download,
+        )
+
     if count != -1:
         if recent:
             list_of_dataset_object_names = list_of_dataset_object_names[-count:]

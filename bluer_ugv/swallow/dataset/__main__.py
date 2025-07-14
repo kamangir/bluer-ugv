@@ -52,6 +52,12 @@ parser.add_argument(
     type=float,
     default=0.8,
 )
+parser.add_argument(
+    "--datasets",
+    type=str,
+    default="not-given",
+    help="<object-name-1>+<object-name-2>",
+)
 args = parser.parse_args()
 
 success = False
@@ -64,6 +70,7 @@ if args.task == "combine":
         split=args.split == 1,
         test_ratio=args.test_ratio,
         train_ratio=args.train_ratio,
+        explicit_dataset_object_names=args.datasets,
     )
 else:
     success = None

@@ -8,6 +8,7 @@
 	combine \
 	[count=<count>,~download,~recent,~split,upload] \
 	[-|<object-name>] \
+	[--datasets <object-name-1>+<object-name-2>] \
 	[--test_ratio 0.1] \
 	[--train_ratio 0.8]
  . combine swallow datasets.
