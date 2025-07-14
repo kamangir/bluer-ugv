@@ -41,9 +41,9 @@ dict_of_images = {
     f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": f"{algo_docs}/image_classifier/dataset/sequence.md",
     f"{assets}/swallow-dataset-2025-07-14-09-17-04-f5bq7b/grid.png?raw=true": "./digital/dataset/combination/one.md",
     #
-    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/loss.png?raw=true": "./digital/model/one.md",
-    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/evaluation.png?raw=true": "./digital/model/one.md",
-    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/confusion_matrix.png?raw=true": "./digital/model/one.md",
+    f"{assets}/swallow-model-2025-07-14-13-18-10-kx0qrw/loss.png?raw=true": "./digital/model/one.md",
+    f"{assets}/swallow-model-2025-07-14-13-18-10-kx0qrw/evaluation.png?raw=true": "./digital/model/one.md",
+    f"{assets}/swallow-model-2025-07-14-13-18-10-kx0qrw/confusion_matrix.png?raw=true": "./digital/model/one.md",
     f"{assets2}/lab2.png?raw=true": "",
 }
 
