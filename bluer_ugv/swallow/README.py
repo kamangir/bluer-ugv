@@ -1,5 +1,6 @@
 assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-swallow"
 assets = "https://github.com/kamangir/assets/raw/main"
+algo_docs = "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs"
 
 dict_of_images = {
     f"{assets}/bluer-ugv/bluer-light.png?raw=true": "",
@@ -36,8 +37,8 @@ dict_of_images = {
     f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/evaluation.png?raw=true": "./digital/model/validation.md",
     f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/confusion_matrix.png?raw=true": "./digital/model/validation.md",
     #
-    f"{assets2}/2025-07-09-11-18-07-azy27w.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
-    f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
+    f"{assets2}/2025-07-09-11-18-07-azy27w.png?raw=true": f"{algo_docs}/image_classifier/dataset/sequence.md",
+    f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": f"{algo_docs}/image_classifier/dataset/sequence.md",
     f"{assets}/swallow-dataset-2025-07-14-09-17-04-f5bq7b/grid.png?raw=true": "./digital/dataset/combination/one.md",
     #
     f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/loss.png?raw=true": "./digital/model/one.md",
