@@ -27,7 +27,7 @@ uses [collection/one](../dataset/combination/one.md).
     extensions=png,push .
 ```
 
-set:::model_object_name TBA
+set:::model_object_name swallow-model-2025-07-14-11-42-49-xeox1d
 
 set:::dataset_object_name metadata:::get:::model_object_name:::model.inputs.object_name
 
