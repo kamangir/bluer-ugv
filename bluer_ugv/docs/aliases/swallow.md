@@ -1,4 +1,4 @@
-# swallow
+# aliases: swallow
 
 ## dataset
 
