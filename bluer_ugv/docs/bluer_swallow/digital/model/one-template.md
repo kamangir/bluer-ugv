@@ -20,14 +20,14 @@ uses [collection/one](../dataset/combination/one.md).
 @select swallow-model-$(@timestamp)
 
 @image_classifier model train upload .. . \
-    --num_epochs 4
+    --num_epochs 40
 
 @upload public,zip .
 @assets publish \
     extensions=png,push .
 ```
 
-set:::model_object_name swallow-model-2025-07-14-11-36-00-xmfhex
+set:::model_object_name TBA
 
 set:::dataset_object_name metadata:::get:::model_object_name:::model.inputs.object_name
 
