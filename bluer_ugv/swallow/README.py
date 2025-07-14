@@ -40,9 +40,9 @@ dict_of_images = {
     f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
     "": "",
     #
-    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/loss.png?raw=true": "./digital/model/validation.md",
-    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/evaluation.png?raw=true": "./digital/model/validation.md",
-    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/confusion_matrix.png?raw=true": "./digital/model/validation.md",
+    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/loss.png?raw=true": "./digital/model/one.md",
+    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/evaluation.png?raw=true": "./digital/model/one.md",
+    f"{assets}/swallow-model-2025-07-14-09-35-16-7q7h82/confusion_matrix.png?raw=true": "./digital/model/one.md",
 }
 
 items = [
