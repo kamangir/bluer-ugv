@@ -35,9 +35,10 @@ uses [combination/one](../dataset/combination/one.md).
 @select swallow-prediction-test-$(@timestamp)
 
 @algo image_classifier model prediction_test \
-    - ... .. .
+    upload ... .. .
 
-@upload filename=metadata.yaml .
+@assets publish \
+    extensions=png,push .
 ```
 
 
