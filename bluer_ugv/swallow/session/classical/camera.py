@@ -114,6 +114,9 @@ class ClassicalCamera:
             log=True,
         )
 
+        if self.dataset.df.empty:
+            return
+
         dataset_list: List[str] = get_from_object(
             object_name=env.BLUER_UGV_SWALLOW_DATASET_LIST,
             key="dataset-list",
