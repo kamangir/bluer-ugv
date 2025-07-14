@@ -32,9 +32,9 @@ dict_of_images = {
     f"{assets2}/20250709_111955.jpg?raw=true": "",
     f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png?raw=true": "",
     f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png?raw=true": "./digital/dataset/combination/validation.md",
-    f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/loss.png?raw=true": "./model/validation.md",
-    f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/evaluation.png?raw=true": "./model/validation.md",
-    f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/confusion_matrix.png?raw=true": "./model/validation.md",
+    f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/loss.png?raw=true": "./digital/model/validation.md",
+    f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/evaluation.png?raw=true": "./digital/model/validation.md",
+    f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/confusion_matrix.png?raw=true": "./digital/model/validation.md",
     f"{assets2}/2025-07-09-11-18-07-azy27w.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
     f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
 }
