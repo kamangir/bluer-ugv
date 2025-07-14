@@ -17,8 +17,8 @@
     --prefix grid
 ```
 
-set:::object_name swallow-dataset-2025-07-14-09-03-36-crhuaq
+set:::object_name swallow-dataset-2025-07-14-09-39-22-bfm9sx
 
 assets:::get:::object_name/grid.png
 
-🔥
+metadata:::get:::object_name
