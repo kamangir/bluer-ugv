@@ -2,4 +2,4 @@
 
 - [collection](./collection)
 - [review](./review.md)
-- [combination](./combination.md)
+- [combination](./combination)

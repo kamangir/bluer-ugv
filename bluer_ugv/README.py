@@ -86,7 +86,9 @@ def build():
             {"path": "docs/bluer_swallow/digital/dataset/collection"},
             {"path": "docs/bluer_swallow/digital/dataset/collection/validation.md"},
             {"path": "docs/bluer_swallow/digital/dataset/collection/one.md"},
-            {"path": "docs/bluer_swallow/digital/dataset/combination.md"},
+            {"path": "docs/bluer_swallow/digital/dataset/combination"},
+            {"path": "docs/bluer_swallow/digital/dataset/combination/validation.md"},
+            {"path": "docs/bluer_swallow/digital/dataset/combination/one.md"},
             {"path": "docs/bluer_swallow/digital/dataset/review.md"},
             {"path": "docs/bluer_swallow/digital/training.md"},
             # aliases

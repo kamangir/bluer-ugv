@@ -26,12 +26,13 @@ dict_of_images = {
     f"{assets2}/20250707_122000.jpg?raw=true": "",
     f"{assets2}/20250707_182818.jpg?raw=true": "",
     f"{assets2}/2025-07-08-13-09-38-so54ao.png?raw=true": "",
-    f"{assets}/2025-07-09-10-26-30-itpbmu/grid.png?raw=true": "./digital/dataset/collection/",
+    f"{assets}/2025-07-09-10-26-30-itpbmu/grid.png?raw=true": "./digital/dataset/collection/validation.md",
     f"{assets}/2025-07-09-10-26-30-itpbmu/grid-timeline.png?raw=true": "./digital/dataset/review.md",
     f"{assets2}/lab.png?raw=true": "",
     f"{assets2}/20250709_111955.jpg?raw=true": "",
     f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png?raw=true": "",
-    f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png?raw=true": "./digital/dataset/combination.md",
+    f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png?raw=true": "./digital/dataset/combination/validation.md",
+    f"{assets2}/2025-07-09-11-18-07-azy27w.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
     f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png?raw=true": "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/image_classifier/dataset/sequence.md",
 }
 

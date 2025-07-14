@@ -7,9 +7,18 @@ def help_combine(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("count=<count>,~download,~recent,~split,upload", mono=mono)
+    options = "".join(
+        [
+            "count=<count>",
+            xtra(",~download,~recent,", mono=mono),
+            "sequence=<3>",
+            xtra(",~split,", mono=mono),
+            "upload",
+        ]
+    )
 
     args = [
+        "[--datasets <object-name-1>+<object-name-2>]",
         "[--test_ratio 0.1]",
         "[--train_ratio 0.8]",
     ]

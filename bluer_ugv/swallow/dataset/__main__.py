@@ -52,6 +52,17 @@ parser.add_argument(
     type=float,
     default=0.8,
 )
+parser.add_argument(
+    "--datasets",
+    type=str,
+    default="not-given",
+    help="<object-name-1>,<object-name-2>",
+)
+parser.add_argument(
+    "--sequence",
+    type=int,
+    default=-1,
+)
 args = parser.parse_args()
 
 success = False
@@ -61,9 +72,11 @@ if args.task == "combine":
         count=args.count,
         download=args.download == 1,
         recent=args.recent == 1,
+        sequence=args.sequence,
         split=args.split == 1,
         test_ratio=args.test_ratio,
         train_ratio=args.train_ratio,
+        explicit_dataset_object_names=args.datasets,
     )
 else:
     success = None

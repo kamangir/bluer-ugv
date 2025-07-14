@@ -1,5 +1,7 @@
 # bluer_swallow: digital: dataset: combination
 
+uses [collection/validation](../collection/validation.md).
+
 ```bash
 @select swallow-dataset-$(@timestamp)
 
