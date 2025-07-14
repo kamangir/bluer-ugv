@@ -8,5 +8,5 @@ function test_bluer_ugv_swallow_dataset_combine_explicit() {
     bluer_ugv_swallow_dataset_combine \
         $options, \
         $object_name \
-        --datasets 2025-07-09-10-59-15-x9eemj+2025-07-09-11-02-42-m4b3is
+        --datasets 2025-07-09-10-59-15-x9eemj,2025-07-09-11-02-42-m4b3is
 }

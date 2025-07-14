@@ -53,7 +53,7 @@ def combine(
     )
 
     if explicit_dataset_object_names != "not-given":
-        list_of_dataset_object_names = explicit_dataset_object_names.split("+")
+        list_of_dataset_object_names = explicit_dataset_object_names.split(",")
     else:
         logger.info("reading from  {} ...".format(env.BLUER_UGV_SWALLOW_DATASET_LIST))
         list_of_dataset_object_names: List[str] = get_from_object(

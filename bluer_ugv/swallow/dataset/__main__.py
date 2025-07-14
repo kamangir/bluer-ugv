@@ -56,7 +56,7 @@ parser.add_argument(
     "--datasets",
     type=str,
     default="not-given",
-    help="<object-name-1>+<object-name-2>",
+    help="<object-name-1>,<object-name-2>",
 )
 args = parser.parse_args()
 
