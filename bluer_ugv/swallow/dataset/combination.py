@@ -1,9 +1,9 @@
 from typing import List
-from tqdm import tqdm
+from tqdm import tqdm, trange
 
 from blueness import module
 from bluer_options.logger import log_list
-from bluer_objects import storage
+from bluer_objects import storage, objects
 from bluer_objects.metadata import get_from_object
 from bluer_objects.storage.policies import DownloadPolicy
 from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
@@ -22,6 +22,7 @@ def combine(
     log: bool = True,
     verbose: bool = False,
     recent: bool = True,
+    sequence: int = -1,
     split: bool = True,
     test_ratio: float = 0.1,
     train_ratio: float = 0.8,
@@ -48,6 +49,7 @@ def combine(
                 if split
                 else ""
             ),
+            ("" if sequence == -1 else f"sequence={sequence}-"),
             object_name,
         )
     )
@@ -93,6 +95,22 @@ def combine(
     )
     if not success:
         return success
+
+    if sequence != -1:
+        for index in trange(len(list_of_datasets)):
+            success, list_of_datasets[index] = list_of_datasets[index].sequence(
+                length=sequence,
+                object_name=objects.unique_object(
+                    "{}-{}X".format(
+                        list_of_datasets[index].object_name,
+                        sequence,
+                    ),
+                ),
+                log=log,
+                verbose=verbose,
+            )
+            if not success:
+                return success
 
     success, dataset = ImageClassifierDataset.combine(
         list_of_datasets,

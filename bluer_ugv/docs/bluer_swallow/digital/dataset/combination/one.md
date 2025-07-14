@@ -5,7 +5,8 @@
 
 @select swallow-dataset-$(@timestamp)
 
-@swallow dataset combine - . \
+@swallow dataset combine \
+    sequence=3 . \
     --datasets $(@list filter \
 	$(@swallow dataset list ~download) \
     --contains 2025-07-13)

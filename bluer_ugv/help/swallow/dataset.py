@@ -10,7 +10,9 @@ def help_combine(
     options = "".join(
         [
             "count=<count>",
-            xtra(",~download,~recent,~split,", mono=mono),
+            xtra(",~download,~recent,", mono=mono),
+            "sequence=<3>",
+            xtra(",~split,", mono=mono),
             "upload",
         ]
     )
