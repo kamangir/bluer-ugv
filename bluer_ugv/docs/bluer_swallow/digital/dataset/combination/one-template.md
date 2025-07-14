@@ -1,5 +1,7 @@
 # bluer_swallow: digital: dataset: combination: one
 
+uses [collection/one](../collection/one.md).
+
 ```bash
 @swallow dataset download
 
