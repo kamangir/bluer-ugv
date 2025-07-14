@@ -31,38 +31,28 @@ uses [combination/one](../dataset/combination/one.md).
 @upload public,zip .
 @assets publish \
     extensions=png,push .
+
+@select swallow-prediction-test-$(@timestamp)
+
+@algo image_classifier model prediction_test \
+    - ... .. .
+
+@upload filename=metadata.yaml .
 ```
+
 
 
 
 ---
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-14-09-17-04-f5bq7b/grid.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/{}/grid.png?raw=true)
 
 
 <details>
 <summary>metadata</summary>
 
 ```yaml
-dataset:
-  class_count: 3
-  classes:
-    0: no_action
-    1: left
-    2: right
-  contains:
-  - 2025-07-13-10-15-29-46j4oy
-  - 2025-07-13-10-37-12-d4iwpm
-  - 2025-07-13-12-55-54-cx5mhk
-  count: 1749
-  shape:
-  - 100
-  - 300
-  - 3
-  subsets:
-    eval: 198
-    test: 180
-    train: 1371
+{}
 
 ```
 
@@ -71,143 +61,36 @@ dataset:
 
 ---
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-09-35-16-7q7h82/loss.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/TBA/loss.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-09-35-16-7q7h82/evaluation.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/TBA/evaluation.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-09-35-16-7q7h82/confusion_matrix.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/TBA/confusion_matrix.png?raw=true)
 
-[swallow-model-2025-07-14-09-35-16-7q7h82](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-14-09-35-16-7q7h82.tar.gz)
+[TBA](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/TBA.tar.gz)
 
 
 <details>
 <summary>metadata</summary>
 
 ```yaml
-model:
-  dataset:
-    class_count: 3
-    classes:
-      0: no_action
-      1: left
-      2: right
-    count: 1749
-    shape:
-    - 100
-    - 300
-    - 3
-  evaluation:
-    class_accuracy:
-      0: 0.0
-      1: 0.8625954198473282
-      2: 0.8448275862068966
-    eval_accuracy: 0.8181818181818182
-  inputs:
-    batch_size: 16
-    num_epochs: 100
-    object_name: swallow-dataset-2025-07-14-09-17-04-f5bq7b
-  training:
-    loss:
-    - 0.8835709723654148
-    - 0.8576109585842019
-    - 0.8380255953923009
-    - 0.8248315481788306
-    - 0.818964597389352
-    - 0.8175365407479062
-    - 0.8188719334261509
-    - 0.8025117819975276
-    - 0.8061511467009196
-    - 0.7990615869159684
-    - 0.794703261509679
-    - 0.7859700303456802
-    - 0.7964016139550769
-    - 0.7910656304058586
-    - 0.7783440494519963
-    - 0.7834135518727904
-    - 0.7776277355257392
-    - 0.7704728277037389
-    - 0.7765008028539578
-    - 0.7643579067669152
-    - 0.7690676883960796
-    - 0.7609868964776777
-    - 0.7632901342049034
-    - 0.7456455142892772
-    - 0.7607365946627115
-    - 0.741223898793032
-    - 0.7321318524932444
-    - 0.7342401479257449
-    - 0.7332697089878335
-    - 0.7167336083432343
-    - 0.7410551281326623
-    - 0.7143304775788957
-    - 0.7168682082607136
-    - 0.7108463783667611
-    - 0.7069690741821417
-    - 0.6955231367063557
-    - 0.6876064004209422
-    - 0.7119028232638459
-    - 0.685387227350043
-    - 0.6825503149578642
-    - 0.6894742528249711
-    - 0.6803928566709389
-    - 0.679929311391996
-    - 0.6631485288983101
-    - 0.6561044592173929
-    - 0.6915600048982689
-    - 0.6542984570446543
-    - 0.6578492252692787
-    - 0.6585137448025654
-    - 0.6540077907773024
-    - 0.6312116304511662
-    - 0.6768651647258205
-    - 0.6505565947202937
-    - 0.6303581095672193
-    - 0.6315323815217078
-    - 0.6089973587088999
-    - 0.6239846806122733
-    - 0.6116162316369628
-    - 0.606759788170946
-    - 0.6027713998184858
-    - 0.5971352577122522
-    - 0.5872933516791057
-    - 0.5925151747478177
-    - 0.5700887261212612
-    - 0.5927778634600706
-    - 0.575262421765178
-    - 0.5644851313465099
-    - 0.5594005550371305
-    - 0.5614136780138698
-    - 0.550950685789079
-    - 0.5549468335924489
-    - 0.54885005420529
-    - 0.5542797139750006
-    - 0.5394573843366121
-    - 0.5317505961521797
-    - 0.5500516760184068
-    - 0.5426270369627805
-    - 0.532608509172409
-    - 0.533346970876058
-    - 0.5331983131531118
-    - 0.5111917211225135
-    - 0.5343955319176443
-    - 0.5209843991752265
-    - 0.5161491189991619
-    - 0.5095976957172308
-    - 0.49891499134852535
-    - 0.4988095530361089
-    - 0.49864737803617765
-    - 0.49651565997814456
-    - 0.5262857016031973
-    - 0.5029644882218147
-    - 0.4891369100537811
-    - 0.49990368466538987
-    - 0.5358030673450662
-    - 0.47577609853271496
-    - 0.47820874281298237
-    - 0.5146881286285813
-    - 0.48309902215334377
-    - 0.4806648085666868
-    - 0.4639136787207782
+{}
+
+```
+
+</details>
+
+
+---
+
+![image](https://github.com/kamangir/assets/blob/main/TBA/prediction.png?raw=true)
+
+
+<details>
+<summary>metadata</summary>
+
+```yaml
+{}
 
 ```
 

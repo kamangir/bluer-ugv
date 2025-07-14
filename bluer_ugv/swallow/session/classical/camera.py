@@ -75,7 +75,12 @@ class ClassicalCamera:
         success, self.predictor = ImageClassifierPredictor.load(
             object_name=env.BLUER_UGV_SWALLOW_MODEL,
         )
-        return success
+        if not success:
+            return success
+
+        import ipdb
+
+        ipdb.set_trace()
 
     def cleanup(self):
         camera.close(log=True)
