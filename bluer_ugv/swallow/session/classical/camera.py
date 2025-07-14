@@ -78,9 +78,28 @@ class ClassicalCamera:
         if not success:
             return success
 
-        import ipdb
+        if self.predictor.shape[0] != camera.resolution[0]:
+            logger.error(
+                "height mismatch: {} <> {}".format(
+                    self.predictor.shape[0],
+                    camera.resolution[0],
+                )
+            )
+            return False
 
-        ipdb.set_trace()
+        buffer_size = self.predictor.shape[1] / camera.resolution[1]
+        if int(buffer_size) != buffer_size:
+            logger.error(
+                "non-integer buffer size: {} / {} = {:.2f}".format(
+                    self.predictor.shape[1], camera.resolution[1], buffer_size
+                )
+            )
+            return False
+
+        self.buffer_size = int(buffer_size)
+        logger.info(f"buffer size: {self.buffer_size}")
+
+        return True
 
     def cleanup(self):
         camera.close(log=True)
