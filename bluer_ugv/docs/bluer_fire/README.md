@@ -4,11 +4,16 @@ based on a used car.
 
 ## specs
 
-- speed: 20 km/h (max)
-- load: 400 kg (+400 kg vehicle weight)
+- load: 100 kg (+25 kg vehicle weight)
 - slope: Up to 10%
-- motor: 10 kW peak / 5–7 kW continuous
-- battery: 48V or 72V - 10–15 kWh
+- battery: 24V, SLA (sealed lead-acid).
+
+
+| Scenario        | Motor Power (W) | Battery (Ah @24V) | Battery Weight (SLA) |
+| --------------- | --------------- | ----------------- | -------------------- |
+| 2 m/s, 2 hours  | 2 × 200         | 35 Ah             | \~35 kg              |
+| 2 m/s, 1 hour   | 2 × 200         | 17 Ah             | \~20 kg              |
+| 10 km/h, 1 hour | 2 × 275         | 25 Ah             | \~25 kg              |
 
 ## references
 
