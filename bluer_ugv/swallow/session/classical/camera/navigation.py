@@ -132,15 +132,15 @@ class ClassicalNavigationCamera(ClassicalCamera):
             self.buffer = []
             return True
 
-        if self.keyboard.mode == OperationMode.PREDICTION:
-            return self.update_prediction()
+        if self.keyboard.mode == OperationMode.ACTION:
+            return self.update_action()
 
         if self.keyboard.mode == OperationMode.TRAINING:
             return self.update_training()
 
         return True
 
-    def update_prediction(self) -> bool:
+    def update_action(self) -> bool:
         if not self.prediction_timer.tick():
             return True
 

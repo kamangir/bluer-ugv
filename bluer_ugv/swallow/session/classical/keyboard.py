@@ -88,7 +88,7 @@ class ClassicalKeyboard:
             self.mode = OperationMode.TRAINING
 
         if keyboard.is_pressed("g"):
-            self.mode = OperationMode.PREDICTION
+            self.mode = OperationMode.ACTION
 
         if mode != self.mode:
             logger.info("mode: {}.".format(self.mode.name.lower()))

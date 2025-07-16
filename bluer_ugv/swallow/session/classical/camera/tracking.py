@@ -12,6 +12,7 @@ from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv.logger import logger
 
 
@@ -39,6 +40,9 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not super().initialize():
             return False
 
+        return self.select_target()
+
+    def select_target(self) -> bool:
         success, image = camera.capture(
             close_after=False,
             open_before=False,
@@ -55,6 +59,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         self.leds.set_all(False)
         if not success:
             return success
+
         logger.info(f"track_window: {self.track_window}")
 
         self.tracker.start(
@@ -71,9 +76,15 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if self.setpoint.speed <= 0:
             return True
 
-        return self.update_tracking()
+        if self.keyboard.mode == OperationMode.ACTION:
+            return self.update_action()
 
-    def update_tracking(self) -> bool:
+        if self.keyboard.mode == OperationMode.TRAINING:
+            return self.update_training()
+
+        return True
+
+    def update_action(self) -> bool:
         if not self.tracking_timer.tick():
             return True
 
@@ -107,3 +118,6 @@ class ClassicalTrackingCamera(ClassicalCamera):
             )
 
         return True
+
+    def update_training(self) -> bool:
+        return self.select_target()
