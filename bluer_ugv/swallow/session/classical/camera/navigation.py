@@ -31,20 +31,14 @@ class ClassicalNavigationCamera(ClassicalCamera):
         super().__init__(keyboard, leds, setpoint, object_name)
 
         self.prediction_timer = Timer(
-            period=env.BLUER_UGV_CAMERA_PREDICTION_PERIOD,
+            period=env.BLUER_UGV_CAMERA_ACTION_PERIOD,
             name="{}.prediction".format(self.__class__.__name__),
+            log=True,
         )
         self.training_timer = Timer(
             period=env.BLUER_UGV_CAMERA_TRAINING_PERIOD,
             name="{}.training".format(self.__class__.__name__),
-        )
-
-        logger.info(
-            "{}: prediction=1/{}, train=1/{}".format(
-                self.__class__.__name__,
-                string.pretty_duration(env.BLUER_UGV_CAMERA_PREDICTION_PERIOD),
-                string.pretty_duration(env.BLUER_UGV_CAMERA_TRAINING_PERIOD),
-            )
+            log=True,
         )
 
         self.dict_of_classes = {

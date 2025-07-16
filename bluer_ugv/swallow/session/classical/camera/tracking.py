@@ -1,8 +1,12 @@
 from typing import Tuple
 
-from bluer_sbc.imager.camera import instance as camera
+from bluer_options.timer import Timer
+from bluer_options import string
 from bluer_algo.tracker.classes.target import Target
+from bluer_algo.tracker.classes.camshift import CamShiftTracker
+from bluer_sbc.imager.camera import instance as camera
 
+from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
@@ -22,6 +26,14 @@ class ClassicalTrackingCamera(ClassicalCamera):
         super().__init__(keyboard, leds, setpoint, object_name)
 
         self.track_window: Tuple[int, int, int, int] = None
+
+        self.tracking_timer = Timer(
+            period=env.BLUER_UGV_CAMERA_ACTION_PERIOD,
+            name="{}.tracking".format(self.__class__.__name__),
+            log=True,
+        )
+
+        self.tracker = CamShiftTracker()
 
     def initialize(self) -> bool:
         if not super().initialize():
@@ -43,7 +55,47 @@ class ClassicalTrackingCamera(ClassicalCamera):
         self.leds.set_all(False)
         if not success:
             return success
-
         logger.info(f"track_window: {self.track_window}")
+
+        self.tracker.start(
+            frame=image,
+            track_window=self.track_window,
+        )
+
+        return True
+
+    def update(self) -> bool:
+        if not super().update():
+            return False
+
+        if self.setpoint.speed <= 0:
+            return True
+
+        return self.update_prediction()
+
+    def update_prediction(self) -> bool:
+        if not self.prediction_timer.tick():
+            return True
+
+        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+
+        success, image = camera.capture(
+            close_after=False,
+            open_before=False,
+            log=True,
+        )
+        if not success:
+            return success
+
+        _, self.track_window, _ = self.tracker.track(
+            frame=image,
+            track_window=self.track_window,
+        )
+
+        import ipdb
+
+        ipdb.set_trace()
+
+        # TODO: track_window -> command
 
         return True
