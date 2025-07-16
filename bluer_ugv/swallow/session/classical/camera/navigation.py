@@ -28,7 +28,7 @@ class ClassicalNavigationCamera(ClassicalCamera):
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-        super().__init__(self, keyboard, leds, setpoint, object_name)
+        super().__init__(keyboard, leds, setpoint, object_name)
 
         self.prediction_timer = Timer(
             period=env.BLUER_UGV_CAMERA_PREDICTION_PERIOD,
