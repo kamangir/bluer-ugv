@@ -35,6 +35,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not success:
             return success
 
+        self.leds.set_all(True)
         success, self.track_window = Target.select(
             image,
             local=False,

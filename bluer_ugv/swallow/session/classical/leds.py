@@ -39,8 +39,21 @@ class ClassicalLeds:
 
         return True
 
-    def update(self) -> bool:
-        self.leds["green"]["state"] = not self.leds["green"]["state"]
+    def set_all(
+        self,
+        state: bool = True,
+    ) -> bool:
+        for led in self.leds.values():
+            led["state"] = state
+
+        return self.update(flash_green=False)
+
+    def update(
+        self,
+        flash_green: bool = True,
+    ) -> bool:
+        if flash_green:
+            self.leds["green"]["state"] = not self.leds["green"]["state"]
 
         for led in self.leds.values():
             GPIO.output(
