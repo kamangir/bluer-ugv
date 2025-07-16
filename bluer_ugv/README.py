@@ -56,6 +56,8 @@ def build():
             ),
         )
         for readme in [
+            {"path": "docs"},
+            #
             {
                 "items": items,
                 "path": "..",
@@ -98,6 +100,10 @@ def build():
             {"path": "docs/bluer_sparrow/analog"},
             {"path": "docs/bluer_sparrow/analog/parts.md"},
             # aliases
+            {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
+            {"path": "docs/aliases/socket.md"},
+            #
+            {"path": "docs/socket.md"},
         ]
     )

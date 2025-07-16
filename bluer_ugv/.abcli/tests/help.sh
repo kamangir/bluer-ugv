@@ -22,6 +22,9 @@ function test_bluer_ugv_help() {
         \
         "@ugv pytest" \
         \
+        "@ugv socket" \
+        "@ugv socket test" \
+        \
         "@ugv test" \
         "@ugv test list" \
         \
