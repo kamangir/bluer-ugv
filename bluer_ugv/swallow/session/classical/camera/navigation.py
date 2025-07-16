@@ -4,22 +4,23 @@ import numpy as np
 from bluer_options.timer import Timer
 from bluer_options import string
 from bluer_options import host
-from bluer_objects.metadata import post_to_object, get_from_object
-from bluer_objects import storage
 from bluer_objects.storage.policies import DownloadPolicy
+from bluer_objects import storage
+from bluer_objects.metadata import post_to_object, get_from_object
+from bluer_sbc.imager.camera import instance as camera
 from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
 from bluer_algo.image_classifier.model.predictor import ImageClassifierPredictor
-from bluer_sbc.imager.camera import instance as camera
 
+from bluer_ugv import env
+from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
-from bluer_ugv import env
 from bluer_ugv.logger import logger
 
 
-class ClassicalCamera:
+class ClassicalNavigationCamera(ClassicalCamera):
     def __init__(
         self,
         keyboard: ClassicalKeyboard,
@@ -27,6 +28,8 @@ class ClassicalCamera:
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
+        super().__init__(keyboard, leds, setpoint, object_name)
+
         self.prediction_timer = Timer(
             period=env.BLUER_UGV_CAMERA_PREDICTION_PERIOD,
             name="{}.prediction".format(self.__class__.__name__),
@@ -36,11 +39,13 @@ class ClassicalCamera:
             name="{}.training".format(self.__class__.__name__),
         )
 
-        self.keyboard = keyboard
-        self.leds = leds
-        self.setpoint = setpoint
-
-        self.object_name = object_name
+        logger.info(
+            "{}: prediction=1/{}, train=1/{}".format(
+                self.__class__.__name__,
+                string.pretty_duration(env.BLUER_UGV_CAMERA_PREDICTION_PERIOD),
+                string.pretty_duration(env.BLUER_UGV_CAMERA_TRAINING_PERIOD),
+            )
+        )
 
         self.dict_of_classes = {
             0: "no_action",
@@ -55,19 +60,11 @@ class ClassicalCamera:
 
         self.predictor = None
 
-        logger.info(
-            "{}: prediction=1/{}, train=1/{}".format(
-                self.__class__.__name__,
-                string.pretty_duration(env.BLUER_UGV_CAMERA_PREDICTION_PERIOD),
-                string.pretty_duration(env.BLUER_UGV_CAMERA_TRAINING_PERIOD),
-            )
-        )
-
         self.buffer_size = -1
         self.buffer: List[np.ndarray] = []
 
     def initialize(self) -> bool:
-        if not camera.open(log=True):
+        if not super().initialize():
             return False
 
         if not storage.download(
@@ -105,7 +102,7 @@ class ClassicalCamera:
         return True
 
     def cleanup(self):
-        camera.close(log=True)
+        super().cleanup()
 
         self.dataset.save(
             metadata={
@@ -134,6 +131,9 @@ class ClassicalCamera:
             logger.error("failed to add object to dataset list.")
 
     def update(self) -> bool:
+        if not super().update():
+            return False
+
         if self.setpoint.speed <= 0:
             self.buffer = []
             return True

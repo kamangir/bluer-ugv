@@ -16,6 +16,7 @@ setup(
         f"{NAME}.swallow.dataset",
         f"{NAME}.swallow.session",
         f"{NAME}.swallow.session.classical",
+        f"{NAME}.swallow.session.classical.camera",
         f"{NAME}.swallow.session.classical.motor",
         f"{NAME}.sparrow",
     ],
