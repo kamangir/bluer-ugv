@@ -9,6 +9,7 @@ def help_select_target(
 ) -> str:
     args = [
         "[--host <hostname>]",
+        "[--loop 0]",
     ]
 
     return show_usage(

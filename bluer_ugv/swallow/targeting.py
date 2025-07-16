@@ -11,20 +11,38 @@ from bluer_ugv.logger import logger
 NAME = module.name(__file__, NAME)
 
 
-def select_target(host: str) -> bool:
-    logger.info(f"{NAME}.select_target on {host}")
-
-    socket = SocketComm.listen_on()
-    success, image = socket.receive_data(np.ndarray)
-    if not success:
-        return success
-
-    success, track_window = Target.select(
-        image,
-        title=f"select target on {host} ...",
+def select_target(
+    host: str,
+    loop: bool = True,
+) -> bool:
+    logger.info(
+        "{}.select_target on {}{}".format(
+            NAME,
+            host,
+            " on a loop." if loop else "",
+        )
     )
-    if not success:
-        return success
 
-    socket = SocketComm.connect_to(host)
-    return socket.send_data(track_window)
+    try:
+        while loop:
+            socket = SocketComm.listen_on()
+            success, image = socket.receive_data(np.ndarray)
+            if not success:
+                return success
+
+            success, track_window = Target.select(
+                image,
+                title=f"select target on {host} ...",
+            )
+            if not success:
+                return success
+
+            socket = SocketComm.connect_to(host)
+            if not socket.send_data(track_window):
+                return False
+
+            logger.info("Ctrl+C to exit.")
+    except KeyboardInterrupt:
+        logger.info("Ctrl+C detected.")
+
+    return True

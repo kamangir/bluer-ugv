@@ -19,11 +19,20 @@ parser.add_argument(
     "--host",
     type=str,
 )
+parser.add_argument(
+    "--loop",
+    type=int,
+    default=1,
+    help="0 | 1",
+)
 args = parser.parse_args()
 
 success = False
 if args.task == "select_target":
-    success = select_target(args.host)
+    success = select_target(
+        host=args.host,
+        loop=args.loop == 1,
+    )
 else:
     success = None
 
