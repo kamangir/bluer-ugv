@@ -102,8 +102,5 @@ def build():
             # aliases
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
-            {"path": "docs/aliases/socket.md"},
-            #
-            {"path": "docs/socket.md"},
         ]
     )
