@@ -1,4 +1,5 @@
 from typing import Tuple
+import numpy as np
 
 from bluer_options.timer import Timer
 from bluer_options import string
@@ -53,7 +54,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
 
         self.leds.set_all(True)
         success, self.track_window = Target.select(
-            image,
+            np.flip(image, axis=2),
             local=False,
         )
         self.leds.set_all(False)
