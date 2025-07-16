@@ -2,10 +2,9 @@ from RPi import GPIO  # type: ignore
 
 from bluer_sbc.env import BLUER_SBC_ENV
 
-from bluer_ugv.swallow.session.classical.camera.navigation import (
+from bluer_ugv.swallow.session.classical.camera import (
+    ClassicalCamera,
     ClassicalNavigationCamera,
-)
-from bluer_ugv.swallow.session.classical.camera.tracking import (
     ClassicalTrackingCamera,
 )
 from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
@@ -59,7 +58,11 @@ class ClassicalSession:
         camera_class = (
             ClassicalTrackingCamera
             if BLUER_SBC_ENV == "tracking"
-            else ClassicalNavigationCamera
+            else (
+                ClassicalNavigationCamera
+                if BLUER_SBC_ENV == "navigation"
+                else ClassicalCamera
+            )
         )
         logger.info(f"camera: {camera_class.__name__}")
         self.camera = camera_class(
