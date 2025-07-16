@@ -19,7 +19,10 @@ def select_target(host: str) -> bool:
     if not success:
         return success
 
-    success, track_window = Target.select(image)
+    success, track_window = Target.select(
+        image,
+        title=f"select target on {host} ...",
+    )
     if not success:
         return success
 

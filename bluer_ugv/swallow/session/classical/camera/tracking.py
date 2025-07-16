@@ -8,7 +8,7 @@ from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
-from typing import Tuple
+from bluer_ugv.logger import logger
 
 
 class ClassicalTrackingCamera(ClassicalCamera):
@@ -43,5 +43,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         self.leds.set_all(False)
         if not success:
             return success
+
+        logger.info(f"track_window: {self.track_window}")
 
         return True
