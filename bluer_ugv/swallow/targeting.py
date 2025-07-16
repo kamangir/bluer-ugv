@@ -1,6 +1,7 @@
 from blueness import module
 import numpy as np
 
+from bluer_options.terminal import hr
 from bluer_algo.socket.classes import SocketComm
 from bluer_algo.tracker.classes.target import Target
 
@@ -41,8 +42,9 @@ def select_target(
             if not socket.send_data(track_window):
                 return False
 
+            hr(width=10, mono=True)
             logger.info("Ctrl+C to exit.")
     except KeyboardInterrupt:
-        logger.info("Ctrl+C detected.")
+        logger.info("Ctrl+C, stopping.")
 
     return True
