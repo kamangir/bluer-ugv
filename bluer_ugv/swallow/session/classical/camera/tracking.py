@@ -93,16 +93,16 @@ class ClassicalTrackingCamera(ClassicalCamera):
         )
 
         x, _, w, _ = self.track_window
-        if x + w // 2 > image.shape[1] / 2:
-            self.setpoint.put(
-                what="steering",
-                value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
-                log=True,
-            )
-        else:
+        if x + w // 2 > image.shape[1] * 2 / 3:
             self.setpoint.put(
                 what="steering",
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
+                log=True,
+            )
+        elif x + w // 2 < image.shape[1] * 1 / 3:
+            self.setpoint.put(
+                what="steering",
+                value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
                 log=True,
             )
 
