@@ -121,4 +121,5 @@ class ClassicalTrackingCamera(ClassicalCamera):
         return True
 
     def update_training(self) -> bool:
+        self.keyboard.mode = OperationMode.NONE
         return self.select_target()
