@@ -46,6 +46,7 @@ dict_of_images = {
     f"{assets}/swallow-model-2025-07-14-13-18-10-kx0qrw/confusion_matrix.png?raw=true": "./digital/model/one.md",
     f"{assets}/swallow-prediction-test-2025-07-14-14-13-57-ngywj1/prediction.png?raw=true": "./digital/model/one.md",
     f"{assets2}/lab2.png?raw=true": "",
+    f"{assets2}/target-selection.png?raw=true": f"{algo_docs}/socket.md",
 }
 
 items = [
