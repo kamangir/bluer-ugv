@@ -42,8 +42,11 @@ def select_target(
             if not socket.send_data(track_window):
                 return False
 
-            hr(width=10, mono=True)
-            logger.info("Ctrl+C to exit.")
+            hr_line = hr(
+                width=12,
+                mono=True,
+            )
+            logger.info(f"{hr_line} Ctrl+C to exit {hr_line}")
     except KeyboardInterrupt:
         logger.info("Ctrl+C, stopping.")
 
