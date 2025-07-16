@@ -71,10 +71,10 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if self.setpoint.speed <= 0:
             return True
 
-        return self.update_prediction()
+        return self.update_tracking()
 
-    def update_prediction(self) -> bool:
-        if not self.prediction_timer.tick():
+    def update_tracking(self) -> bool:
+        if not self.tracking_timer.tick():
             return True
 
         self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
