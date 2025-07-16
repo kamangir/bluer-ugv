@@ -2,6 +2,8 @@
 
 # mac
 
+both on mac.
+
 ```bash
 @ugv socket test - \
     --what receiving
@@ -15,6 +17,40 @@
 
 ✅
 
-# rpi <-> mac
+# rpi -> mac
 
-🔥
+on mac:
+
+```bash
+@ugv socket test - \
+    --what receiving
+```
+
+on rpi:
+
+```bash
+@ugv socket test - \
+    --host dev.local \
+    --what sending
+```
+
+✅
+
+# mac -> rpi
+
+on rpi:
+
+```bash
+@ugv socket test - \
+    --what receiving
+```
+
+on mac:
+
+```bash
+@ugv socket test - \
+    --host swallow2.local \
+    --what sending
+```
+
+✅
