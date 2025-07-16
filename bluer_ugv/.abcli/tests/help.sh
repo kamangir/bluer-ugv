@@ -17,6 +17,8 @@ function test_bluer_ugv_help() {
         "@swallow env cp" \
         "@swallow env list" \
         \
+        "@swallow select_target" \
+        \
         "@ugv" \
         \
         "@ugv pypi" \
