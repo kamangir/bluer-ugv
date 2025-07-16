@@ -3,5 +3,5 @@ from enum import Enum, auto
 
 class OperationMode(Enum):
     NONE = auto()
-    PREDICTION = auto()
+    ACTION = auto()
     TRAINING = auto()
