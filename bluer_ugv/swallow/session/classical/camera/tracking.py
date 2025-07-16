@@ -73,14 +73,14 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not super().update():
             return False
 
+        if self.keyboard.mode == OperationMode.TRAINING:
+            return self.update_training()
+
         if self.setpoint.speed <= 0:
             return True
 
         if self.keyboard.mode == OperationMode.ACTION:
             return self.update_action()
-
-        if self.keyboard.mode == OperationMode.TRAINING:
-            return self.update_training()
 
         return True
 
