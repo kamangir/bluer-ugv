@@ -40,6 +40,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
             image,
             local=False,
         )
+        self.leds.set_all(False)
         if not success:
             return success
 
