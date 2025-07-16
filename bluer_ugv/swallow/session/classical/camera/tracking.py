@@ -92,10 +92,18 @@ class ClassicalTrackingCamera(ClassicalCamera):
             track_window=self.track_window,
         )
 
-        import ipdb
-
-        ipdb.set_trace()
-
-        # TODO: track_window -> command
+        x, _, w, _ = self.track_window
+        if x + w // 2 > image.shape[1] / 2:
+            self.setpoint.put(
+                what="steering",
+                value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
+                log=True,
+            )
+        else:
+            self.setpoint.put(
+                what="steering",
+                value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
+                log=True,
+            )
 
         return True
