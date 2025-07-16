@@ -33,3 +33,17 @@
 	[~metadata]
  . upload the swallow dataset.
 ```
+
+## env
+
+```bash
+@swallow \
+	env \
+	cp \
+	<env-name>
+ . cp swallow swallow-raspbian-<env-name>.
+@swallow \
+	env \
+	list
+ . list swallow envs.
+```

@@ -13,6 +13,10 @@ function test_bluer_ugv_help() {
         "@swallow dataset list" \
         "@swallow dataset upload" \
         \
+        "@swallow env" \
+        "@swallow env cp" \
+        "@swallow env list" \
+        \
         "@ugv" \
         \
         "@ugv pypi" \

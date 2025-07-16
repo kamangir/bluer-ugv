@@ -15,7 +15,7 @@ title:::
 
 3. run, 
 ```bash
-@env dot cp swallow-raspbian
+@swallow env cp
 ```
 
 ## Ubuntu 64-bit
