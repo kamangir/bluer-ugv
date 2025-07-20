@@ -18,16 +18,16 @@ items = README.Items(
             "url": "./bluer_ugv/docs/bluer_swallow",
         },
         {
-            "name": "bluer-fire",
-            "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-fire.png?raw=true",
-            "description": "based on a used car.",
-            "url": "./bluer_ugv/docs/bluer_fire",
-        },
-        {
             "name": "bluer_sparrow",
             "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/20250713_172442_1.gif?raw=true",
             "description": "bluer_swallow's little sister.",
             "url": "./bluer_ugv/docs/bluer_sparrow",
+        },
+        {
+            "name": "bluer-fire",
+            "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-fire.png?raw=true",
+            "description": "based on a used car.",
+            "url": "./bluer_ugv/docs/bluer_fire",
         },
         {
             "name": "bluer-beast",
