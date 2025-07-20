@@ -47,7 +47,10 @@ def build() -> bool:
     if not success:
         return success
 
-    success, swallow_list_of_parts = get_list_of_parts(swallow_dict_of_parts)
+    success, swallow_list_of_parts = get_list_of_parts(
+        swallow_dict_of_parts,
+        reference="../../../parts",
+    )
     if not success:
         return success
 
