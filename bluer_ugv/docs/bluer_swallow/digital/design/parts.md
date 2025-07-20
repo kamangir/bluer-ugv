@@ -1,5 +1,6 @@
 # bluer_swallow: digital: design: parts
 
+
 - Raspberry Pi 3B+
 - DC motors: 12 VDC, 20-45 W, 9000 RPM
 - Battery: Rechargeable sealed lead acid, 12 V, 7 Ah
