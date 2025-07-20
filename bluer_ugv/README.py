@@ -97,8 +97,8 @@ def build():
             {"path": "docs/bluer_swallow/digital/model/validation.md"},
             {"path": "docs/bluer_swallow/digital/model/one.md"},
             #
-            {"path": "docs/bluer_sparrow/analog"},
-            {"path": "docs/bluer_sparrow/analog/parts.md"},
+            {"path": "docs/bluer_sparrow/design"},
+            {"path": "docs/bluer_sparrow/design/parts.md"},
             # aliases
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
