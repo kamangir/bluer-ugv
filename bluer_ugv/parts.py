@@ -19,9 +19,10 @@ def list_of_parts(dict_of_parts: Dict[str, str]) -> List[str]:
     return sorted(
         [
             (
-                "1. {}, {}.".format(db_of_parts[part_name], description)
-                if description
-                else "1. {}.".format(db_of_parts[part_name])
+                "1. {}{}".format(
+                    db_of_parts[part_name],
+                    ": {}.".format(description) if description else "",
+                )
             )
             for part_name, description in dict_of_parts.items()
         ]
