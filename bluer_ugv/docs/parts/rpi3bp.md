@@ -1,3 +1,3 @@
 # parts: rpi3bp
 
-Raspberry Pi 3B+
+- Raspberry Pi 3B+

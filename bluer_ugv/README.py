@@ -128,7 +128,7 @@ def build() -> bool:
         + [
             {
                 "path": f"docs/parts/{part_name}.md",
-                "macros": {"info:::": part_info},
+                "macros": {"info:::": [f"- {info}" for info in part_info]},
             }
             for part_name, part_info in db_of_parts.items()
         ]
