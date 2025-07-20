@@ -47,6 +47,7 @@ db_of_parts: Dict[str, List[str]] = {
 
 def get_list_of_parts(
     dict_of_parts: Dict[str, str],
+    reference: str = "../parts",
 ) -> Tuple[bool, List[str]]:
     logger.info(
         "{}.get_list_of_parts: {}".format(
@@ -63,9 +64,10 @@ def get_list_of_parts(
     return True, sorted(
         [
             (
-                "1. {}{}.".format(
+                "1. [{}{}]().".format(
                     db_of_parts[part_name][0],
                     ": {}".format(description) if description else "",
+                    f"{reference}/{part_name}.md",
                 )
             )
             for part_name, description in dict_of_parts.items()
