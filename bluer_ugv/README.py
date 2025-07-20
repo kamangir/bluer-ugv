@@ -5,7 +5,7 @@ from bluer_objects import file, README
 
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
-from bluer_ugv.parts import list_of_parts
+from bluer_ugv.parts import get_list_of_parts, db_of_parts
 from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
 from bluer_ugv.sparrow.README import items as sparrow_items
 from bluer_ugv.swallow.parts import dict_of_parts as swallow_dict_of_parts
@@ -43,11 +43,11 @@ items = README.Items(
 
 
 def build() -> bool:
-    success, sparrow_parts = list_of_parts(sparrow_dict_of_parts)
+    success, sparrow_list_of_parts = get_list_of_parts(sparrow_dict_of_parts)
     if not success:
         return success
 
-    success, swallow_parts = list_of_parts(swallow_dict_of_parts)
+    success, swallow_list_of_parts = get_list_of_parts(swallow_dict_of_parts)
     if not success:
         return success
 
@@ -93,7 +93,7 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/design/operation.md"},
             {
                 "path": "docs/bluer_swallow/digital/design/parts.md",
-                "macros": {"parts:::": swallow_parts},
+                "macros": {"parts:::": swallow_list_of_parts},
             },
             {"path": "docs/bluer_swallow/digital/design/terraform.md"},
             {
@@ -115,10 +115,18 @@ def build() -> bool:
             {"path": "docs/bluer_sparrow/design"},
             {
                 "path": "docs/bluer_sparrow/design/parts.md",
-                "macros": {"parts:::": sparrow_parts},
+                "macros": {"parts:::": sparrow_list_of_parts},
             },
             # aliases
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
+        ]
+        # parts
+        + [
+            {
+                "path": f"docs/parts/{part_name}.md",
+                "macros": {"info:::": part_info},
+            }
+            for part_name, part_info in db_of_parts.items()
         ]
     )
