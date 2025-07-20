@@ -64,8 +64,8 @@ def get_list_of_parts(
         [
             (
                 "1. {}{}.".format(
-                    db_of_parts[part_name],
-                    ": {}".format(description[0]) if description else "",
+                    db_of_parts[part_name][0],
+                    ": {}".format(description) if description else "",
                 )
             )
             for part_name, description in dict_of_parts.items()
