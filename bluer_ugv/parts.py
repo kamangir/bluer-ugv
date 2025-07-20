@@ -11,7 +11,7 @@ db_of_parts = {
     "rpi3b+": "Raspberry Pi 3B+",
     "SLA Battery": "Battery: Rechargeable sealed lead acid, 12 V, 7 Ah",
     "TVS diode": "TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package",
-    "XL4015": "DC 12 VDC -> 5 VDC, 4A, [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
+    "XL4015": "12 VDC -> 5 VDC, 4A, [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
 }
 
 
