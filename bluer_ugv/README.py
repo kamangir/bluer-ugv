@@ -5,9 +5,7 @@ from bluer_objects import file, README
 
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
-from bluer_ugv.sparrow.parts import parts as sparrow_parts
 from bluer_ugv.sparrow.README import items as sparrow_items
-from bluer_ugv.swallow.parts import parts as swallow_parts
 from bluer_ugv.swallow.README import items as swallow_items
 
 
@@ -81,10 +79,7 @@ def build():
             {"path": "docs/bluer_swallow/digital"},
             {"path": "docs/bluer_swallow/digital/design"},
             {"path": "docs/bluer_swallow/digital/design/operation.md"},
-            {
-                "path": "docs/bluer_swallow/digital/design/parts.md",
-                "items": swallow_parts,
-            },
+            {"path": "docs/bluer_swallow/digital/design/parts.md"},
             {"path": "docs/bluer_swallow/digital/design/terraform.md"},
             {
                 "path": "docs/bluer_swallow/digital/design/steering-over-current-detection.md"
@@ -103,10 +98,7 @@ def build():
             {"path": "docs/bluer_swallow/digital/model/one.md"},
             #
             {"path": "docs/bluer_sparrow/design"},
-            {
-                "path": "docs/bluer_sparrow/design/parts.md",
-                "items": sparrow_parts,
-            },
+            {"path": "docs/bluer_sparrow/design/parts.md"},
             # aliases
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
