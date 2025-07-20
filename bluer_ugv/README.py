@@ -5,9 +5,10 @@ from bluer_objects import file, README
 
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
-from bluer_ugv.sparrow.parts import parts as sparrow_parts
+from bluer_ugv.parts import list_of_parts
+from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
 from bluer_ugv.sparrow.README import items as sparrow_items
-from bluer_ugv.swallow.parts import parts as swallow_parts
+from bluer_ugv.swallow.parts import dict_of_parts as swallow_dict_of_parts
 from bluer_ugv.swallow.README import items as swallow_items
 
 
@@ -41,7 +42,15 @@ items = README.Items(
 )
 
 
-def build():
+def build() -> bool:
+    success, sparrow_parts = list_of_parts(sparrow_dict_of_parts)
+    if not success:
+        return success
+
+    success, swallow_parts = list_of_parts(swallow_dict_of_parts)
+    if not success:
+        return success
+
     return all(
         README.build(
             items=readme.get("items", []),
