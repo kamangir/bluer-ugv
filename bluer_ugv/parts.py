@@ -64,7 +64,7 @@ def get_list_of_parts(
     return True, sorted(
         [
             (
-                "1. [{}{}]().".format(
+                "1. [{}{}]({}).".format(
                     db_of_parts[part_name][0],
                     ": {}".format(description) if description else "",
                     f"{reference}/{part_name}.md",
