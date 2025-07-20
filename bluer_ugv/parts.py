@@ -16,11 +16,13 @@ db_of_parts = {
 
 
 def list_of_parts(dict_of_parts: Dict[str, str]) -> List[str]:
-    return [
-        (
-            "1. {}: {}.".format(description, db_of_parts[part_name])
-            if description
-            else "1. {}.".format(db_of_parts[part_name])
-        )
-        for part_name, description in dict_of_parts.items()
-    ]
+    return sorted(
+        [
+            (
+                "1. {}: {}.".format(description, db_of_parts[part_name])
+                if description
+                else "1. {}.".format(db_of_parts[part_name])
+            )
+            for part_name, description in dict_of_parts.items()
+        ]
+    )
