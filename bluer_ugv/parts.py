@@ -5,7 +5,7 @@ db_of_parts = {
     "4-channel transmitter and receiver": "4-channel transmitter and receiver, [digikala](https://www.digikala.com/product/dkp-11037586/%DA%AF%DB%8C%D8%B1%D9%86%D8%AF%D9%87-%D9%88-%D9%81%D8%B1%D8%B3%D8%AA%D9%86%D8%AF%D9%87-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%DA%A9%D9%86%D8%AA%D8%B1%D9%84%DB%8C-%D9%85%D8%AF%D9%84-4ch-led/)",
     "470 μF": "Capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.",
     "BTS7960": "43 A H-Bridge Motor Driver, [BTS7960](https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf)",
-    "dc motor, 12 VDC, 45 W, 9000 RPM": "DC motors: 12 VDC, 20-45 W, 9000 RPM",
+    "dc motor, 12 VDC, 45 W, 9000 RPM": "12 VDC motors, 20-45 W, 9000 RPM",
     "LED": "LED, ~2 V forward voltage, 10-20 mA",
     "Polyfuse": "Polyfuse, 1.1 A hold, 2.2 A trip, 16 V, resettable, through-hole, e.g., MF-R110",
     "rpi3b+": "Raspberry Pi 3B+",

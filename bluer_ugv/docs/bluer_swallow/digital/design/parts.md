@@ -1,6 +1,6 @@
 # bluer_swallow: digital: design: parts
 
-1. 3 motors: DC motors: 12 VDC, 20-45 W, 9000 RPM.
+1. 2 x rear + steering: 12 VDC motors, 20-45 W, 9000 RPM.
 1. Battery: Rechargeable sealed lead acid, 12 V, 7 Ah.
 1. Capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible..
 1. DC 12 VDC -> 5 VDC, 4A, [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf).
