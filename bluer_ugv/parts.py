@@ -18,9 +18,9 @@ db_of_parts = {
 def list_of_parts(dict_of_parts: Dict[str, str]) -> List[str]:
     return [
         (
-            "{}: {}".format(description, db_of_parts[part_name])
+            "- {}: {}".format(description, db_of_parts[part_name])
             if description
-            else db_of_parts[part_name]
+            else "- {}".format(db_of_parts[part_name])
         )
         for part_name, description in dict_of_parts.items()
     ]
