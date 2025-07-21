@@ -54,5 +54,6 @@ db_of_parts["XL4015"] = [
 
 
 db_of_parts["rpi-camera"] = [
+    "Raspberry Pi Camera, V1.3"
     "https://www.raspberrypi.com/documentation/accessories/camera.html",
 ]

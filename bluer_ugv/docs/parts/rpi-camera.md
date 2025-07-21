@@ -1,3 +1,3 @@
 # parts: rpi-camera
 
-- https://www.raspberrypi.com/documentation/accessories/camera.html
+- Raspberry Pi Camera, V1.3https://www.raspberrypi.com/documentation/accessories/camera.html
