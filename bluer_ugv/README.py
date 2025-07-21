@@ -43,7 +43,9 @@ items = README.Items(
 
 
 def build() -> bool:
-    success, sparrow_list_of_parts = get_list_of_parts(sparrow_dict_of_parts)
+    success, sparrow_list_of_parts = get_list_of_parts(
+        sparrow_dict_of_parts,
+    )
     if not success:
         return success
 
@@ -130,7 +132,7 @@ def build() -> bool:
                 "path": f"docs/parts",
                 "macros": {
                     "list:::": [
-                        "- {}(./{}.md)".format(
+                        "- [{}](./{}.md)".format(
                             part_info[0],
                             part_name,
                         )
