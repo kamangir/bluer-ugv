@@ -129,7 +129,7 @@ def build() -> bool:
         # parts
         + [
             {
-                "path": f"docs/parts",
+                "path": "docs/parts",
                 "macros": {
                     "list:::": sorted(
                         [
