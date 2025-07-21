@@ -51,3 +51,8 @@ db_of_parts["XL4015"] = [
     "12 VDC -> 5 VDC, 4A",
     "specs: [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
 ]
+
+
+db_of_parts["rpi-camera"] = [
+    "https://www.raspberrypi.com/documentation/accessories/camera.html",
+]

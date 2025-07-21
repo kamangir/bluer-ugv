@@ -118,6 +118,7 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/model/one.md"},
             #
             {"path": "docs/bluer_sparrow/design"},
+            {"path": "docs/bluer_sparrow/design/specs.md"},
             {
                 "path": "docs/bluer_sparrow/design/parts.md",
                 "macros": {"parts:::": sparrow_list_of_parts},
