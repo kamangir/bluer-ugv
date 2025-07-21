@@ -124,7 +124,6 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/model/validation.md"},
             {"path": "docs/bluer_swallow/digital/model/one.md"},
             #
-            {"path": "docs/bluer_sparrow"},
             {"path": "docs/bluer_sparrow/analog"},
             {"path": "docs/bluer_sparrow/analog/parts.md"},
             {"path": "docs/bluer_sparrow/digital"},
