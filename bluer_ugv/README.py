@@ -131,13 +131,15 @@ def build() -> bool:
             {
                 "path": f"docs/parts",
                 "macros": {
-                    "list:::": [
-                        "- [{}](./{}.md)".format(
-                            part_info[0],
-                            part_name,
-                        )
-                        for part_name, part_info in db_of_parts.items()
-                    ]
+                    "list:::": sorted(
+                        [
+                            "- [{}](./{}.md)".format(
+                                part_info[0],
+                                part_name,
+                            )
+                            for part_name, part_info in db_of_parts.items()
+                        ]
+                    )
                 },
             }
         ]
