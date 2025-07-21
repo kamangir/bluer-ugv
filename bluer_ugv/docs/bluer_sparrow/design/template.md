@@ -1,3 +1,0 @@
-title:::
-
-- [parts](./parts.md)

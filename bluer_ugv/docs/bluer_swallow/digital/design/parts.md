@@ -6,6 +6,7 @@
 1. [LED, ~2 V forward voltage, 10-20 mA](../../../parts/LED.md).
 1. [Polyfuse, 1.1 A hold, 2.2 A trip, 16 V, resettable, through-hole, e.g., MF-R110](../../../parts/Polyfuse.md).
 1. [Raspberry Pi 3B+](../../../parts/rpi3bp.md).
+1. [Raspberry Pi Camera, V1.3https://www.raspberrypi.com/documentation/accessories/camera.html](../../../parts/rpi-camera.md).
 1. [Rechargeable sealed lead acid battery, 12 V, 7 Ah](../../../parts/SLA-Battery.md).
 1. [Resistor, 330-470 Ω, 1/4 watt, 5% tolerance](../../../parts/330-ohm.md).
 1. [TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package](../../../parts/TVS-diode.md).

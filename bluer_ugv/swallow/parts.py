@@ -9,4 +9,5 @@ dict_of_parts = {
     "TVS-diode": "",
     "330-ohm": "",
     "LED": "",
+    "rpi-camera": "",
 }
