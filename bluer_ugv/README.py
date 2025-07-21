@@ -133,7 +133,7 @@ def build() -> bool:
                 "macros": {
                     "list:::": sorted(
                         [
-                            "- [{}](./{}.md)".format(
+                            "- [{}](./{}.md).".format(
                                 part_info[0],
                                 part_name,
                             )
