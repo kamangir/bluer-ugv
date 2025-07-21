@@ -4,4 +4,5 @@ title:::
 
 items:::
 
-- [design](./design/)
+- [analog](./analog/)
+- [digital](./digital/)

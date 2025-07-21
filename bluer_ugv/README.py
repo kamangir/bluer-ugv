@@ -7,6 +7,7 @@ from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
+from bluer_ugv.sparrow.analog import dict_of_parts as sparrow_analog_dict_of_parts
 from bluer_ugv.sparrow.README import items as sparrow_items
 from bluer_ugv.swallow.parts import dict_of_parts as swallow_dict_of_parts
 from bluer_ugv.swallow.README import items as swallow_items
@@ -45,6 +46,12 @@ items = README.Items(
 def build() -> bool:
     success, sparrow_list_of_parts = db_of_parts.subset(
         sparrow_dict_of_parts,
+    )
+    if not success:
+        return success
+
+    success, sparrow_analog_list_of_parts = db_of_parts.subset(
+        sparrow_analog_dict_of_parts,
     )
     if not success:
         return success
@@ -117,10 +124,18 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/model/validation.md"},
             {"path": "docs/bluer_swallow/digital/model/one.md"},
             #
-            {"path": "docs/bluer_sparrow/design"},
-            {"path": "docs/bluer_sparrow/design/specs.md"},
+            {"path": "docs/bluer_sparrow"},
+            {"path": "docs/bluer_sparrow/analog"},
+            {"path": "docs/bluer_sparrow/analog/parts.md"},
+            {"path": "docs/bluer_sparrow/digital"},
+            {"path": "docs/bluer_sparrow/digital/design"},
+            {"path": "docs/bluer_sparrow/digital/design/specs.md"},
             {
-                "path": "docs/bluer_sparrow/design/parts.md",
+                "path": "docs/bluer_sparrow/analog/parts.md",
+                "macros": {"parts:::": sparrow_analog_list_of_parts},
+            },
+            {
+                "path": "docs/bluer_sparrow/digital/design/parts.md",
                 "macros": {"parts:::": sparrow_list_of_parts},
             },
             # aliases

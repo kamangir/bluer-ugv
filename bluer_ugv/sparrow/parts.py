@@ -1,5 +1,4 @@
 dict_of_parts = {
-    "4-ch-transceiver": "",
     "rpi3bp": "",
     "SLA-Battery": "",
     "XL4015": "",
