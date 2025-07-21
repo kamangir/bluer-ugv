@@ -1,9 +1,5 @@
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
-from blueness import NAME
-
-from bluer_ugv import NAME
-from bluer_ugv.logger import logger
 
 db_of_parts: Dict[str, List[str]] = {
     "330-ohm": [
@@ -43,33 +39,3 @@ db_of_parts: Dict[str, List[str]] = {
         "specs: [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
     ],
 }
-
-
-def get_list_of_parts(
-    dict_of_parts: Dict[str, str],
-    reference: str = "../../parts",
-) -> Tuple[bool, List[str]]:
-    logger.info(
-        "{}.get_list_of_parts: {}".format(
-            NAME,
-            ", ".join(dict_of_parts.keys()),
-        )
-    )
-
-    for part_name in dict_of_parts:
-        if part_name not in db_of_parts:
-            logger.error(f"{part_name}: part not found.")
-            return False, []
-
-    return True, sorted(
-        [
-            (
-                "1. [{}{}]({}).".format(
-                    db_of_parts[part_name][0],
-                    ": {}".format(description) if description else "",
-                    f"{reference}/{part_name}.md",
-                )
-            )
-            for part_name, description in dict_of_parts.items()
-        ]
-    )

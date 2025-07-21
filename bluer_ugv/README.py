@@ -5,7 +5,8 @@ from bluer_objects import file, README
 
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
-from bluer_ugv.parts import get_list_of_parts, db_of_parts
+from bluer_ugv.parts.db import db_of_parts
+from bluer_ugv.parts.functions import get_list_of_parts
 from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
 from bluer_ugv.sparrow.README import items as sparrow_items
 from bluer_ugv.swallow.parts import dict_of_parts as swallow_dict_of_parts
