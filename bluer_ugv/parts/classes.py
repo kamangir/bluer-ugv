@@ -1,14 +1,15 @@
 from typing import List, Union, Dict, Tuple
 import copy
 
+from bluer_objects import markdown
 from bluer_ugv.logger import logger
 
 
 class Part:
     def __init__(
         self,
-        name: str,
-        info: Union[List[str], str],
+        info: Union[List[str], str] = [],
+        name: str = "",
         images: List[str] = [],
     ):
         self.name = name
@@ -36,8 +37,18 @@ class Part:
         return f"docs/parts/{self.name}.md"
 
     @property
-    def README(self) -> List[str]:
-        return [f"- {info}" for info in self.info]
+    def README(
+        self,
+        cols: int = 3,
+    ) -> List[str]:
+        return [f"- {info}" for info in self.info] + (
+            markdown.generate_table(
+                [f"![image]({image})" for image in self.images],
+                cols=cols,
+            )
+            if self.images
+            else []
+        )
 
 
 class PartDB:
@@ -57,6 +68,8 @@ class PartDB:
                 name=name,
                 info=part,
             )
+        else:
+            part.name = name
 
         self._db[name] = copy.deepcopy(part)
 
