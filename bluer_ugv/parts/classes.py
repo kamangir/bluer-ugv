@@ -37,15 +37,12 @@ class Part:
         return f"docs/parts/{self.name}.md"
 
     @property
-    def README(
-        self,
-        cols: int = 3,
-    ) -> List[str]:
+    def README(self) -> List[str]:
         return [f"- {info}" for info in self.info] + (
             [""]
             + markdown.generate_table(
                 [f"![image]({image})" for image in self.images],
-                cols=cols,
+                cols=3,
             )
             if self.images
             else []
