@@ -6,7 +6,6 @@ from bluer_objects import file, README
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
 from bluer_ugv.parts.db import db_of_parts
-from bluer_ugv.parts.functions import get_list_of_parts
 from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
 from bluer_ugv.sparrow.README import items as sparrow_items
 from bluer_ugv.swallow.parts import dict_of_parts as swallow_dict_of_parts
@@ -44,13 +43,13 @@ items = README.Items(
 
 
 def build() -> bool:
-    success, sparrow_list_of_parts = get_list_of_parts(
+    success, sparrow_list_of_parts = db_of_parts.subset(
         sparrow_dict_of_parts,
     )
     if not success:
         return success
 
-    success, swallow_list_of_parts = get_list_of_parts(
+    success, swallow_list_of_parts = db_of_parts.subset(
         swallow_dict_of_parts,
         reference="../../../parts",
     )
@@ -131,24 +130,14 @@ def build() -> bool:
         + [
             {
                 "path": "docs/parts",
-                "macros": {
-                    "list:::": sorted(
-                        [
-                            "- [{}](./{}.md).".format(
-                                part_info[0],
-                                part_name,
-                            )
-                            for part_name, part_info in db_of_parts.items()
-                        ]
-                    )
-                },
+                "macros": {"list:::": db_of_parts.README},
             }
         ]
         + [
             {
-                "path": f"docs/parts/{part_name}.md",
-                "macros": {"info:::": [f"- {info}" for info in part_info]},
+                "path": part.filename,
+                "macros": {"info:::": part.README},
             }
-            for part_name, part_info in db_of_parts.items()
+            for part in db_of_parts
         ]
     )
