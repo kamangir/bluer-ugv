@@ -42,7 +42,8 @@ class Part:
         cols: int = 3,
     ) -> List[str]:
         return [f"- {info}" for info in self.info] + (
-            markdown.generate_table(
+            [""]
+            + markdown.generate_table(
                 [f"![image]({image})" for image in self.images],
                 cols=cols,
             )
