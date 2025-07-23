@@ -46,13 +46,14 @@ items = README.Items(
 def build() -> bool:
     success, sparrow_list_of_parts = db_of_parts.subset(
         sparrow_dict_of_parts,
+        reference="../../../parts",
     )
     if not success:
         return success
 
     success, sparrow_analog_list_of_parts = db_of_parts.subset(
         sparrow_analog_dict_of_parts,
-        reference="../../../parts",
+        reference="../../parts",
     )
     if not success:
         return success
