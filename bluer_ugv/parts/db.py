@@ -53,8 +53,22 @@ db_of_parts["XL4015"] = [
     "specs: [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
 ]
 
-
 db_of_parts["rpi-camera"] = [
     "Raspberry Pi Camera, V1.3"
     "https://www.raspberrypi.com/documentation/accessories/camera.html",
 ]
+
+db_of_parts["DC-gearboxed-motor-12V-120RPM"] = Part(
+    info=[
+        "Gearboxed DC Motor, 12 V (3-24 V), 3A, 120 RPM, 1:91, 15 Kg cm",
+        "[GM6558](https://www.landaelectronic.com/product/%d9%85%d9%88%d8%aa%d9%88%d8%b1-dc-%da%af%db%8c%d8%b1%d8%a8%da%a9%d8%b3-%d8%ad%d9%84%d8%b2%d9%88%d9%86%db%8c-gm6558/)",
+    ],
+    images=[
+        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/01.jpg?raw=true",
+        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/02.jpg?raw=true",
+        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/03.jpg?raw=true",
+        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/04.jpg?raw=true",
+        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/measurements.jpg?raw=true",
+        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/specs.jpg?raw=true",
+    ],
+)
