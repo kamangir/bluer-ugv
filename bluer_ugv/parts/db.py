@@ -1,5 +1,7 @@
 from bluer_ugv.parts.classes import Part, PartDB
 
+image_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts"
+
 db_of_parts: PartDB = PartDB()
 
 db_of_parts["330-ohm"] = [
@@ -12,7 +14,7 @@ db_of_parts["4-ch-transceiver"] = Part(
         "source: [digikala](https://www.digikala.com/product/dkp-11037586/%DA%AF%DB%8C%D8%B1%D9%86%D8%AF%D9%87-%D9%88-%D9%81%D8%B1%D8%B3%D8%AA%D9%86%D8%AF%D9%87-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%DA%A9%D9%86%D8%AA%D8%B1%D9%84%DB%8C-%D9%85%D8%AF%D9%84-4ch-led/)",
         "voltages: receiver 6 VDC,  transmitter 3 VDC",
     ],
-    images="https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/4-channel-remote-control/view.png?raw=true?raw=true",
+    images=f"{image_prefix}/4-channel-remote-control/view.png?raw=true?raw=true",
 )
 
 db_of_parts["470-mF"] = [
@@ -64,11 +66,11 @@ db_of_parts["DC-gearboxed-motor-12V-120RPM"] = Part(
         "[GM6558](https://www.landaelectronic.com/product/%d9%85%d9%88%d8%aa%d9%88%d8%b1-dc-%da%af%db%8c%d8%b1%d8%a8%da%a9%d8%b3-%d8%ad%d9%84%d8%b2%d9%88%d9%86%db%8c-gm6558/)",
     ],
     images=[
-        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/01.jpg?raw=true",
-        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/02.jpg?raw=true",
-        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/03.jpg?raw=true",
-        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/04.jpg?raw=true",
-        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/measurements.jpg?raw=true",
-        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/specs.png?raw=true",
+        f"{image_prefix}/GM6558/01.jpg?raw=true",
+        f"{image_prefix}/GM6558/02.jpg?raw=true",
+        f"{image_prefix}/GM6558/03.jpg?raw=true",
+        f"{image_prefix}/GM6558/04.jpg?raw=true",
+        f"{image_prefix}/GM6558/measurements.jpg?raw=true",
+        f"{image_prefix}/GM6558/specs.png?raw=true",
     ],
 )
