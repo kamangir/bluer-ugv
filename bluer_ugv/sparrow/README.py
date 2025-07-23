@@ -7,6 +7,7 @@ dict_of_images = {
     f"{assets2}/20250713_172442_1.gif?raw=true": "",
     f"{assets2}/20250723_095022.jpg?raw=true": "",
     f"{assets2}/20250723_095155~2_1.gif?raw=true": "",
+    f"{assets2}/20250722_174115.jpg?raw=true": "",
 }
 
 items = [
