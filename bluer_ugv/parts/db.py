@@ -69,6 +69,6 @@ db_of_parts["DC-gearboxed-motor-12V-120RPM"] = Part(
         "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/03.jpg?raw=true",
         "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/04.jpg?raw=true",
         "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/measurements.jpg?raw=true",
-        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/specs.jpg?raw=true",
+        "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/GM6558/specs.png?raw=true",
     ],
 )
