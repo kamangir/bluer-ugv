@@ -6,4 +6,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets/blob/main/bluer-ugv/parts/4-ch-transceiver.png?raw=true) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/4-channel-remote-control/view.png?raw=true?raw=true) |
