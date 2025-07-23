@@ -23,7 +23,7 @@ items = README.Items(
         },
         {
             "name": "bluer_sparrow",
-            "marquee": "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/20250713_172442_1.gif?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250723_095155~2_1.gif?raw=true",
             "description": "bluer_swallow's little sister.",
             "url": "./bluer_ugv/docs/bluer_sparrow",
         },
@@ -46,12 +46,14 @@ items = README.Items(
 def build() -> bool:
     success, sparrow_list_of_parts = db_of_parts.subset(
         sparrow_dict_of_parts,
+        reference="../../../parts",
     )
     if not success:
         return success
 
     success, sparrow_analog_list_of_parts = db_of_parts.subset(
         sparrow_analog_dict_of_parts,
+        reference="../../parts",
     )
     if not success:
         return success
