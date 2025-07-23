@@ -9,4 +9,5 @@ dict_of_parts = {
     "330-ohm": "",
     "LED": "",
     "rpi-camera": "",
+    "DC-gearboxed-motor-12V-120RPM": "",
 }

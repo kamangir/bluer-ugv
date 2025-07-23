@@ -2,6 +2,7 @@
 
 1. [12 VDC -> 5 VDC, 4A](../../parts/XL4015.md).
 1. [43 A, H-Bridge Motor Driver: rear drive (2 motors) & steering drive (1 motor)](../../parts/BTS7960.md).
+1. [Gearboxed DC Motor, 12 V (3-24 V), 3A, 120 RPM, 1:91, 15 Kg cm](../../parts/DC-gearboxed-motor-12V-120RPM.md).
 1. [LED, ~2 V forward voltage, 10-20 mA](../../parts/LED.md).
 1. [Polyfuse, 1.1 A hold, 2.2 A trip, 16 V, resettable, through-hole, e.g., MF-R110](../../parts/Polyfuse.md).
 1. [Raspberry Pi 3B+](../../parts/rpi3bp.md).
