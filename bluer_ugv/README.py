@@ -6,8 +6,9 @@ from bluer_objects import file, README
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
 from bluer_ugv.parts.db import db_of_parts
+from bluer_ugv.robin.parts import dict_of_parts as robin_dict_of_parts
+from bluer_ugv.robin.README import items as robin_items
 from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
-from bluer_ugv.sparrow.analog import dict_of_parts as sparrow_analog_dict_of_parts
 from bluer_ugv.sparrow.README import items as sparrow_items
 from bluer_ugv.swallow.parts import dict_of_parts as swallow_dict_of_parts
 from bluer_ugv.swallow.README import items as swallow_items
@@ -23,9 +24,15 @@ items = README.Items(
         },
         {
             "name": "bluer_sparrow",
-            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250723_095155~2_1.gif?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250722_174115-2.jpg?raw=true",
             "description": "bluer_swallow's little sister.",
             "url": "./bluer_ugv/docs/bluer_sparrow",
+        },
+        {
+            "name": "bluer_robin",
+            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250723_095155~2_1.gif?raw=true",
+            "description": "remote control car kit for teen agers.",
+            "url": "./bluer_ugv/docs/bluer_robin",
         },
         {
             "name": "bluer-fire",
@@ -44,16 +51,16 @@ items = README.Items(
 
 
 def build() -> bool:
-    success, sparrow_list_of_parts = db_of_parts.subset(
-        sparrow_dict_of_parts,
-        reference="../../../parts",
+    success, robin_list_of_parts = db_of_parts.subset(
+        robin_dict_of_parts,
+        reference="../../parts",
     )
     if not success:
         return success
 
-    success, sparrow_analog_list_of_parts = db_of_parts.subset(
-        sparrow_analog_dict_of_parts,
-        reference="../../parts",
+    success, sparrow_list_of_parts = db_of_parts.subset(
+        sparrow_dict_of_parts,
+        reference="../../../parts",
     )
     if not success:
         return success
@@ -89,18 +96,36 @@ def build() -> bool:
                 "path": "..",
                 "cols": 2,
             },
+            # beast
             {"path": "docs/bluer_beast"},
+            # fire
             {"path": "docs/bluer_fire"},
+            # robin
             {
-                "items": swallow_items,
-                "path": "docs/bluer_swallow",
+                "items": robin_items,
+                "path": "docs/bluer_robin",
             },
+            {
+                "path": "docs/bluer_robin/parts.md",
+                "macros": {"parts:::": robin_list_of_parts},
+            },
+            # sparrow
             {
                 "items": sparrow_items,
                 "path": "docs/bluer_sparrow",
                 "cols": 2,
             },
-            #
+            {"path": "docs/bluer_sparrow/design"},
+            {"path": "docs/bluer_sparrow/design/specs.md"},
+            {
+                "path": "docs/bluer_sparrow/design/parts.md",
+                "macros": {"parts:::": sparrow_list_of_parts},
+            },
+            # swallow
+            {
+                "items": swallow_items,
+                "path": "docs/bluer_swallow",
+            },
             {"path": "docs/bluer_swallow/analog"},
             {"path": "docs/bluer_swallow/digital"},
             {"path": "docs/bluer_swallow/digital/design"},
@@ -124,22 +149,7 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/dataset/review.md"},
             {"path": "docs/bluer_swallow/digital/model"},
             {"path": "docs/bluer_swallow/digital/model/validation.md"},
-            {"path": "docs/bluer_swallow/digital/model/one.md"},
-            #
-            {"path": "docs/bluer_sparrow/analog"},
-            {"path": "docs/bluer_sparrow/analog/parts.md"},
-            {"path": "docs/bluer_sparrow/digital"},
-            {"path": "docs/bluer_sparrow/digital/design"},
-            {"path": "docs/bluer_sparrow/digital/design/specs.md"},
-            {
-                "path": "docs/bluer_sparrow/analog/parts.md",
-                "macros": {"parts:::": sparrow_analog_list_of_parts},
-            },
-            {
-                "path": "docs/bluer_sparrow/digital/design/parts.md",
-                "macros": {"parts:::": sparrow_list_of_parts},
-            },
-            # aliases
+            {"path": "docs/bluer_swallow/digital/model/one.md"},  # aliases
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
         ]

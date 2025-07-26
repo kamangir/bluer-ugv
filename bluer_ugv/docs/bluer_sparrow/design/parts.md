@@ -1,4 +1,4 @@
-# bluer_sparrow: digital: design: parts
+# bluer_sparrow: design: parts
 
 1. [12 VDC -> 5 VDC, 4A](../../../parts/XL4015.md).
 1. [43 A, H-Bridge Motor Driver: rear drive (2 motors) & steering drive (1 motor)](../../../parts/BTS7960.md).
