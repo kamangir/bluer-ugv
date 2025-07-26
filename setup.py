@@ -13,6 +13,7 @@ setup(
         f"{NAME}.help",
         f"{NAME}.help.swallow",
         f"{NAME}.parts",
+        f"{NAME}.robin",
         f"{NAME}.swallow",
         f"{NAME}.swallow.dataset",
         f"{NAME}.swallow.session",

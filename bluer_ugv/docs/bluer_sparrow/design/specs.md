@@ -1,4 +1,4 @@
-# bluer_sparrow: digital: design: specs
+# bluer_sparrow: design: specs
 
 - dimensions: 300 mm x 600 mm
 - speed: 10 km / h (max)
