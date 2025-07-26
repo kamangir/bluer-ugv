@@ -31,7 +31,7 @@ items = README.Items(
         {
             "name": "bluer_robin",
             "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250723_095155~2_1.gif?raw=true",
-            "description": "remote control car kit for teen agers.",
+            "description": "remote control car kit for teenagers.",
             "url": "./bluer_ugv/docs/bluer_robin",
         },
         {
@@ -53,14 +53,14 @@ items = README.Items(
 def build() -> bool:
     success, robin_list_of_parts = db_of_parts.subset(
         robin_dict_of_parts,
-        reference="../../parts",
+        reference="../parts",
     )
     if not success:
         return success
 
     success, sparrow_list_of_parts = db_of_parts.subset(
         sparrow_dict_of_parts,
-        reference="../../../parts",
+        reference="../../parts",
     )
     if not success:
         return success
