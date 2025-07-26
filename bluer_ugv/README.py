@@ -94,7 +94,7 @@ def build() -> bool:
             {
                 "items": items,
                 "path": "..",
-                "cols": 2,
+                "cols": 3,
             },
             # beast
             {"path": "docs/bluer_beast"},
