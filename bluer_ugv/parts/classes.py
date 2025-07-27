@@ -1,7 +1,9 @@
-from typing import List, Union, Dict, Tuple
+from typing import List, Union, Dict
 import copy
 
 from bluer_objects import markdown
+from bluer_objects import README
+
 from bluer_ugv.logger import logger
 
 
@@ -86,11 +88,29 @@ class PartDB:
             ]
         )
 
-    def subset(
+    def as_images(
         self,
         dict_of_parts: Dict[str, str],
         reference: str = "../../parts",
-    ) -> Tuple[bool, List[str]]:
+    ) -> List[str]:
+        return README.Items(
+            [
+                {
+                    "name": self._db[part_name].info[0],
+                    "marquee": (self._db[part_name].images + [""])[0],
+                    "description": description,
+                    "url": f"{reference}/{part_name}.md",
+                }
+                for part_name, description in dict_of_parts.items()
+            ],
+            sort=True,
+        )
+
+    def as_list(
+        self,
+        dict_of_parts: Dict[str, str],
+        reference: str = "../../parts",
+    ) -> List[str]:
         logger.info(
             "{}.subset: {}".format(
                 self.__class__.__name__,
@@ -101,9 +121,9 @@ class PartDB:
         for part_name in dict_of_parts:
             if part_name not in self._db:
                 logger.error(f"{part_name}: part not found.")
-                return False, []
+                assert False
 
-        return True, sorted(
+        return sorted(
             [
                 (
                     "1. [{}{}]({}).".format(

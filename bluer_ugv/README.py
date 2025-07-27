@@ -6,6 +6,8 @@ from bluer_objects import file, README
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
 from bluer_ugv.parts.db import db_of_parts
+from bluer_ugv.eagle.parts import dict_of_parts as eagle_dict_of_parts
+from bluer_ugv.eagle.README import items as eagle_items
 from bluer_ugv.robin.parts import dict_of_parts as robin_dict_of_parts
 from bluer_ugv.robin.README import items as robin_items
 from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
@@ -35,6 +37,12 @@ items = README.Items(
             "url": "./bluer_ugv/docs/bluer_robin",
         },
         {
+            "name": "bluer_eagle",
+            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-eagle/20250726_171953.jpg?raw=true",
+            "description": "a remotely-controlled ballon.",
+            "url": "./bluer_ugv/docs/bluer_eagle",
+        },
+        {
             "name": "bluer-fire",
             "marquee": "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-fire.png?raw=true",
             "description": "based on a used car.",
@@ -51,27 +59,6 @@ items = README.Items(
 
 
 def build() -> bool:
-    success, robin_list_of_parts = db_of_parts.subset(
-        robin_dict_of_parts,
-        reference="../parts",
-    )
-    if not success:
-        return success
-
-    success, sparrow_list_of_parts = db_of_parts.subset(
-        sparrow_dict_of_parts,
-        reference="../../parts",
-    )
-    if not success:
-        return success
-
-    success, swallow_list_of_parts = db_of_parts.subset(
-        swallow_dict_of_parts,
-        reference="../../../parts",
-    )
-    if not success:
-        return success
-
     return all(
         README.build(
             items=readme.get("items", []),
@@ -98,6 +85,24 @@ def build() -> bool:
             },
             # beast
             {"path": "docs/bluer_beast"},
+            # eagle
+            {
+                "items": eagle_items,
+                "path": "docs/bluer_eagle",
+            },
+            {
+                "path": "docs/bluer_eagle/parts.md",
+                "items": db_of_parts.as_images(
+                    eagle_dict_of_parts,
+                    reference="../parts",
+                ),
+                "macros": {
+                    "parts:::": db_of_parts.as_list(
+                        eagle_dict_of_parts,
+                        reference="../parts",
+                    ),
+                },
+            },
             # fire
             {"path": "docs/bluer_fire"},
             # robin
@@ -107,7 +112,16 @@ def build() -> bool:
             },
             {
                 "path": "docs/bluer_robin/parts.md",
-                "macros": {"parts:::": robin_list_of_parts},
+                "items": db_of_parts.as_images(
+                    robin_dict_of_parts,
+                    reference="../parts",
+                ),
+                "macros": {
+                    "parts:::": db_of_parts.as_list(
+                        robin_dict_of_parts,
+                        reference="../parts",
+                    ),
+                },
             },
             # sparrow
             {
@@ -119,7 +133,16 @@ def build() -> bool:
             {"path": "docs/bluer_sparrow/design/specs.md"},
             {
                 "path": "docs/bluer_sparrow/design/parts.md",
-                "macros": {"parts:::": sparrow_list_of_parts},
+                "items": db_of_parts.as_images(
+                    sparrow_dict_of_parts,
+                    reference="../../parts",
+                ),
+                "macros": {
+                    "parts:::": db_of_parts.as_list(
+                        sparrow_dict_of_parts,
+                        reference="../../parts",
+                    ),
+                },
             },
             # swallow
             {
@@ -132,7 +155,16 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/design/operation.md"},
             {
                 "path": "docs/bluer_swallow/digital/design/parts.md",
-                "macros": {"parts:::": swallow_list_of_parts},
+                "items": db_of_parts.as_images(
+                    swallow_dict_of_parts,
+                    reference="../../../parts",
+                ),
+                "macros": {
+                    "parts:::": db_of_parts.as_list(
+                        swallow_dict_of_parts,
+                        reference="../../../parts",
+                    ),
+                },
             },
             {"path": "docs/bluer_swallow/digital/design/terraform.md"},
             {
@@ -149,7 +181,10 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/dataset/review.md"},
             {"path": "docs/bluer_swallow/digital/model"},
             {"path": "docs/bluer_swallow/digital/model/validation.md"},
-            {"path": "docs/bluer_swallow/digital/model/one.md"},  # aliases
+            {"path": "docs/bluer_swallow/digital/model/one.md"},
+        ]
+        # aliases
+        + [
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
         ]

@@ -1,12 +1,15 @@
 from bluer_ugv.parts.classes import Part, PartDB
 
-image_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts"
+image_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-ugv"
 
 db_of_parts: PartDB = PartDB()
 
-db_of_parts["330-ohm"] = [
-    "Resistor, 330-470 Ω, 1/4 watt, 5% tolerance",
-]
+db_of_parts["330-ohm"] = Part(
+    info=[
+        "Resistor, 330-470 Ω, 1/4 watt, 5% tolerance",
+    ],
+    images=[f"{image_prefix}/resistor.png?raw=true?raw=true"],
+)
 
 db_of_parts["4-ch-transceiver"] = Part(
     info=[
@@ -17,48 +20,89 @@ db_of_parts["4-ch-transceiver"] = Part(
     images=f"{image_prefix}/4-channel-remote-control/view.png?raw=true?raw=true",
 )
 
-db_of_parts["470-mF"] = [
-    "capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible."
-]
+db_of_parts["470-mF"] = Part(
+    info=[
+        "capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible."
+    ],
+    images=[f"{image_prefix}/capacitor.png?raw=true?raw=true"],
+)
 
-db_of_parts["BTS7960"] = [
-    "43 A, H-Bridge Motor Driver",
-    "specs: [BTS7960](https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf)",
-]
+db_of_parts["BTS7960"] = Part(
+    info=[
+        "43 A, H-Bridge Motor Driver",
+        "specs: [BTS7960](https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf)",
+    ],
+    images=f"{image_prefix}/bts7960.jpg?raw=true?raw=true",
+)
 
-db_of_parts["dc-motor-12-VDC-45W"] = [
-    "12 VDC motor, 20-45 W, 9000 RPM",
-]
+db_of_parts["dc-motor-12-VDC-45W"] = Part(
+    info=[
+        "12 VDC motor, 20-45 W, 9000 RPM",
+    ],
+    images=[f"{image_prefix}/dcmotor.png?raw=true?raw=true"],
+)
 
-db_of_parts["LED"] = [
-    "LED, ~2 V forward voltage, 10-20 mA",
-]
+db_of_parts["LED"] = Part(
+    info=[
+        "LED, ~2 V forward voltage, 10-20 mA",
+    ],
+    images=[f"{image_prefix}/led.png?raw=true?raw=true"],
+)
 
-db_of_parts["Polyfuse"] = [
-    "Polyfuse, 1.1 A hold, 2.2 A trip, 16 V, resettable, through-hole, e.g., MF-R110",
-]
+db_of_parts["Polyfuse"] = Part(
+    info=[
+        "Polyfuse, 1.1 A hold, 2.2 A trip, 16 V, resettable, through-hole, e.g., MF-R110",
+    ],
+    images=[f"{image_prefix}/polyfuse.png?raw=true?raw=true"],
+)
 
-db_of_parts["rpi3bp"] = [
-    "Raspberry Pi 3B+",
-]
+db_of_parts["rpi3bp"] = Part(
+    info=[
+        "Raspberry Pi 3B+",
+    ],
+    images=[
+        f"{image_prefix}/rpi3bplus.png?raw=true?raw=true",
+        f"{image_prefix}/gpio-pinout.png?raw=true?raw=true",
+    ],
+)
 
-db_of_parts["SLA-Battery"] = [
-    "Rechargeable sealed lead acid battery, 12 V, 7 Ah",
-]
+db_of_parts["SLA-Battery"] = Part(
+    info=[
+        "Rechargeable sealed lead acid battery, 12 V, 7 Ah",
+    ],
+    images=[
+        f"{image_prefix}/battery.png?raw=true?raw=true",
+    ],
+)
 
-db_of_parts["TVS-diode"] = [
-    "TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package",
-]
+db_of_parts["TVS-diode"] = Part(
+    info=[
+        "TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package",
+    ],
+    images=[
+        f"{image_prefix}/TVSdiode.png?raw=true?raw=true",
+    ],
+)
 
-db_of_parts["XL4015"] = [
-    "12 VDC -> 5 VDC, 4A",
-    "specs: [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
-]
+db_of_parts["XL4015"] = Part(
+    info=[
+        "12 VDC -> 5 VDC, 4A",
+        "specs: [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
+    ],
+    images=[
+        f"{image_prefix}/XL4015.png?raw=true?raw=true",
+    ],
+)
 
-db_of_parts["rpi-camera"] = [
-    "Raspberry Pi Camera, V1.3"
-    "https://www.raspberrypi.com/documentation/accessories/camera.html",
-]
+db_of_parts["rpi-camera"] = Part(
+    info=[
+        "Raspberry Pi Camera, V1.3"
+        "https://www.raspberrypi.com/documentation/accessories/camera.html",
+    ],
+    images=[
+        f"{image_prefix}/rpi-camera.jpg?raw=true?raw=true",
+    ],
+)
 
 db_of_parts["DC-gearboxed-motor-12V-120RPM"] = Part(
     info=[
@@ -72,5 +116,23 @@ db_of_parts["DC-gearboxed-motor-12V-120RPM"] = Part(
         f"{image_prefix}/GM6558/04.jpg?raw=true",
         f"{image_prefix}/GM6558/measurements.jpg?raw=true",
         f"{image_prefix}/GM6558/specs.png?raw=true",
+    ],
+)
+
+db_of_parts["2xAA-battery-holder"] = Part(
+    info=[
+        "2 x AA battery holder",
+    ],
+    images=[
+        f"{image_prefix}/2xAA-battery-holder.jpg?raw=true?raw=true",
+    ],
+)
+
+db_of_parts["4xAA-battery-holder"] = Part(
+    info=[
+        "4 x AA battery holder",
+    ],
+    images=[
+        f"{image_prefix}/4xAA-battery-holder.jpg?raw=true?raw=true",
     ],
 )
