@@ -102,7 +102,8 @@ class PartDB:
                     "url": f"{reference}/{part_name}.md",
                 }
                 for part_name, description in dict_of_parts.items()
-            ]
+            ],
+            sort=True,
         )
 
     def as_list(
