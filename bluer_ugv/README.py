@@ -51,27 +51,6 @@ items = README.Items(
 
 
 def build() -> bool:
-    success, robin_list_of_parts = db_of_parts.subset(
-        robin_dict_of_parts,
-        reference="../parts",
-    )
-    if not success:
-        return success
-
-    success, sparrow_list_of_parts = db_of_parts.subset(
-        sparrow_dict_of_parts,
-        reference="../../parts",
-    )
-    if not success:
-        return success
-
-    success, swallow_list_of_parts = db_of_parts.subset(
-        swallow_dict_of_parts,
-        reference="../../../parts",
-    )
-    if not success:
-        return success
-
     return all(
         README.build(
             items=readme.get("items", []),
@@ -119,7 +98,10 @@ def build() -> bool:
                     for part_name, description in robin_dict_of_parts.items()
                 ),
                 "macros": {
-                    "parts:::": robin_list_of_parts,
+                    "parts:::": db_of_parts.subset(
+                        robin_dict_of_parts,
+                        reference="../parts",
+                    ),
                 },
             },
             # sparrow
@@ -134,7 +116,10 @@ def build() -> bool:
                 "path": "docs/bluer_sparrow/design/parts.md",
                 "macros": {
                     "items:::": [],
-                    "parts:::": sparrow_list_of_parts,
+                    "parts:::": db_of_parts.subset(
+                        sparrow_dict_of_parts,
+                        reference="../../parts",
+                    ),
                 },
             },
             # swallow
@@ -150,7 +135,10 @@ def build() -> bool:
                 "path": "docs/bluer_swallow/digital/design/parts.md",
                 "macros": {
                     "items:::": [],
-                    "parts:::": swallow_list_of_parts,
+                    "parts:::": db_of_parts.subset(
+                        swallow_dict_of_parts,
+                        reference="../../../parts",
+                    ),
                 },
             },
             {"path": "docs/bluer_swallow/digital/design/terraform.md"},
