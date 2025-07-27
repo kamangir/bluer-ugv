@@ -6,6 +6,8 @@ from bluer_objects import file, README
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
 from bluer_ugv.parts.db import db_of_parts
+from bluer_ugv.eagle.parts import dict_of_parts as eagle_dict_of_parts
+from bluer_ugv.eagle.README import items as eagle_items
 from bluer_ugv.robin.parts import dict_of_parts as robin_dict_of_parts
 from bluer_ugv.robin.README import items as robin_items
 from bluer_ugv.sparrow.parts import dict_of_parts as sparrow_dict_of_parts
@@ -33,6 +35,12 @@ items = README.Items(
             "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250723_095155~2_1.gif?raw=true",
             "description": "remote control car kit for teenagers.",
             "url": "./bluer_ugv/docs/bluer_robin",
+        },
+        {
+            "name": "bluer_eagle",
+            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-eagle/20250726_171953.jpg?raw=true",
+            "description": "a remotely controlled ballon.",
+            "url": "./bluer_ugv/docs/bluer_eagle",
         },
         {
             "name": "bluer-fire",
@@ -77,6 +85,24 @@ def build() -> bool:
             },
             # beast
             {"path": "docs/bluer_beast"},
+            # eagle
+            {
+                "items": eagle_items,
+                "path": "docs/bluer_eagle",
+            },
+            {
+                "path": "docs/bluer_eagle/parts.md",
+                "items": db_of_parts.as_images(
+                    eagle_dict_of_parts,
+                    reference="../parts",
+                ),
+                "macros": {
+                    "parts:::": db_of_parts.as_list(
+                        eagle_dict_of_parts,
+                        reference="../parts",
+                    ),
+                },
+            },
             # fire
             {"path": "docs/bluer_fire"},
             # robin

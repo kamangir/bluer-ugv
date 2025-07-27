@@ -12,6 +12,7 @@ setup(
         NAME,
         f"{NAME}.help",
         f"{NAME}.help.swallow",
+        f"{NAME}.eagle",
         f"{NAME}.parts",
         f"{NAME}.robin",
         f"{NAME}.swallow",
