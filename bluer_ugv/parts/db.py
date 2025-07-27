@@ -74,3 +74,21 @@ db_of_parts["DC-gearboxed-motor-12V-120RPM"] = Part(
         f"{image_prefix}/GM6558/specs.png?raw=true",
     ],
 )
+
+db_of_parts["2xAA-battery-holder"] = Part(
+    info=[
+        "2 x AA battery holder",
+    ],
+    images=[
+        f"{image_prefix}/2xAA-battery-holder.jpg?raw=true?raw=true",
+    ],
+)
+
+db_of_parts["4xAA-battery-holder"] = Part(
+    info=[
+        "4 x AA battery holder",
+    ],
+    images=[
+        f"{image_prefix}/4 x AA-battery-holder.jpg?raw=true?raw=true",
+    ],
+)
