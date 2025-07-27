@@ -107,7 +107,7 @@ def build() -> bool:
             },
             {
                 "path": "docs/bluer_robin/parts.md",
-                "items:::": README.Items(
+                "items": README.Items(
                     [
                         {
                             "name": db_of_parts._db[part_name].info[0],
