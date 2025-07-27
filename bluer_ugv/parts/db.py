@@ -1,6 +1,6 @@
 from bluer_ugv.parts.classes import Part, PartDB
 
-image_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts"
+image_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-ugv"
 
 db_of_parts: PartDB = PartDB()
 

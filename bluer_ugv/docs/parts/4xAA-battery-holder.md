@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-sparrow/parts/4xAA-battery-holder.jpg?raw=true?raw=true) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/4xAA-battery-holder.jpg?raw=true?raw=true) |
