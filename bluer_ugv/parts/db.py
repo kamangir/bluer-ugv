@@ -29,7 +29,7 @@ db_of_parts["BTS7960"] = Part(
         "43 A, H-Bridge Motor Driver",
         "specs: [BTS7960](https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf)",
     ],
-    images=f"{image_prefix}/4-channel-remote-control/bts7960.jpg?raw=true?raw=true",
+    images=f"{image_prefix}/bts7960.jpg?raw=true?raw=true",
 )
 
 db_of_parts["dc-motor-12-VDC-45W"] = [
