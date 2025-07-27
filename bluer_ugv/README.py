@@ -107,20 +107,18 @@ def build() -> bool:
             },
             {
                 "path": "docs/bluer_robin/parts.md",
+                "items:::": README.Items(
+                    [
+                        {
+                            "name": db_of_parts._db[part_name].info[0],
+                            "marquee": (db_of_parts._db[part_name].images + [""])[0],
+                            "description": description,
+                            "url": f"../parts/{part_name}.md",
+                        },
+                    ]
+                    for part_name, description in robin_dict_of_parts.items()
+                ),
                 "macros": {
-                    "items:::": README.Items(
-                        [
-                            {
-                                "name": db_of_parts._db[part_name].info[0],
-                                "marquee": (db_of_parts._db[part_name].images + [""])[
-                                    0
-                                ],
-                                "description": description,
-                                "url": f"../parts/{part_name}.md",
-                            },
-                        ]
-                        for part_name, description in robin_dict_of_parts.items()
-                    ),
                     "parts:::": robin_list_of_parts,
                 },
             },
