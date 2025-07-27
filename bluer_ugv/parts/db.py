@@ -17,14 +17,20 @@ db_of_parts["4-ch-transceiver"] = Part(
     images=f"{image_prefix}/4-channel-remote-control/view.png?raw=true?raw=true",
 )
 
-db_of_parts["470-mF"] = [
-    "capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible."
-]
+db_of_parts["470-mF"] = Part(
+    info=[
+        "capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible."
+    ],
+    images=[],
+)
 
-db_of_parts["BTS7960"] = [
-    "43 A, H-Bridge Motor Driver",
-    "specs: [BTS7960](https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf)",
-]
+db_of_parts["BTS7960"] = Part(
+    info=[
+        "43 A, H-Bridge Motor Driver",
+        "specs: [BTS7960](https://www.handsontec.com/dataspecs/module/BTS7960%20Motor%20Driver.pdf)",
+    ],
+    images=f"{image_prefix}/4-channel-remote-control/bts7960.jpg?raw=true?raw=true",
+)
 
 db_of_parts["dc-motor-12-VDC-45W"] = [
     "12 VDC motor, 20-45 W, 9000 RPM",
