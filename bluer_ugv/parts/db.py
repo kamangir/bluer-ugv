@@ -89,6 +89,6 @@ db_of_parts["4xAA-battery-holder"] = Part(
         "4 x AA battery holder",
     ],
     images=[
-        f"{image_prefix}/4 x AA-battery-holder.jpg?raw=true?raw=true",
+        f"{image_prefix}/4xAA-battery-holder.jpg?raw=true?raw=true",
     ],
 )
