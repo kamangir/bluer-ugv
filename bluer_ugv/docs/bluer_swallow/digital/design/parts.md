@@ -11,3 +11,4 @@
 1. [Resistor, 330-470 Ω, 1/4 watt, 5% tolerance](../../../parts/330-ohm.md).
 1. [TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package](../../../parts/TVS-diode.md).
 1. [capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.](../../../parts/470-mF.md).
+
