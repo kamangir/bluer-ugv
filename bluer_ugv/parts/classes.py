@@ -2,6 +2,8 @@ from typing import List, Union, Dict
 import copy
 
 from bluer_objects import markdown
+from bluer_objects import README
+
 from bluer_ugv.logger import logger
 
 
@@ -86,7 +88,24 @@ class PartDB:
             ]
         )
 
-    def subset(
+    def as_images(
+        self,
+        dict_of_parts: Dict[str, str],
+        reference: str = "../../parts",
+    ) -> List[str]:
+        return README.Items(
+            [
+                {
+                    "name": self._db[part_name].info[0],
+                    "marquee": (self._db[part_name].images + [""])[0],
+                    "description": description,
+                    "url": f"{reference}/{part_name}.md",
+                },
+            ]
+            for part_name, description in dict_of_parts.items()
+        )
+
+    def as_list(
         self,
         dict_of_parts: Dict[str, str],
         reference: str = "../../parts",

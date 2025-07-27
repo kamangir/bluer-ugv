@@ -86,19 +86,12 @@ def build() -> bool:
             },
             {
                 "path": "docs/bluer_robin/parts.md",
-                "items": README.Items(
-                    [
-                        {
-                            "name": db_of_parts._db[part_name].info[0],
-                            "marquee": (db_of_parts._db[part_name].images + [""])[0],
-                            "description": description,
-                            "url": f"../parts/{part_name}.md",
-                        },
-                    ]
-                    for part_name, description in robin_dict_of_parts.items()
+                "items": db_of_parts.as_images(
+                    robin_dict_of_parts,
+                    reference="../parts",
                 ),
                 "macros": {
-                    "parts:::": db_of_parts.subset(
+                    "parts:::": db_of_parts.as_list(
                         robin_dict_of_parts,
                         reference="../parts",
                     ),
@@ -116,7 +109,7 @@ def build() -> bool:
                 "path": "docs/bluer_sparrow/design/parts.md",
                 "macros": {
                     "items:::": [],
-                    "parts:::": db_of_parts.subset(
+                    "parts:::": db_of_parts.as_list(
                         sparrow_dict_of_parts,
                         reference="../../parts",
                     ),
@@ -135,7 +128,7 @@ def build() -> bool:
                 "path": "docs/bluer_swallow/digital/design/parts.md",
                 "macros": {
                     "items:::": [],
-                    "parts:::": db_of_parts.subset(
+                    "parts:::": db_of_parts.as_list(
                         swallow_dict_of_parts,
                         reference="../../../parts",
                     ),
