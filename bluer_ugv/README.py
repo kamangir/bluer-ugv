@@ -149,7 +149,10 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/dataset/review.md"},
             {"path": "docs/bluer_swallow/digital/model"},
             {"path": "docs/bluer_swallow/digital/model/validation.md"},
-            {"path": "docs/bluer_swallow/digital/model/one.md"},  # aliases
+            {"path": "docs/bluer_swallow/digital/model/one.md"},
+        ]
+        # aliases
+        + [
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
         ]

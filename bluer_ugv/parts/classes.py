@@ -100,9 +100,9 @@ class PartDB:
                     "marquee": (self._db[part_name].images + [""])[0],
                     "description": description,
                     "url": f"{reference}/{part_name}.md",
-                },
+                }
+                for part_name, description in dict_of_parts.items()
             ]
-            for part_name, description in dict_of_parts.items()
         )
 
     def as_list(
