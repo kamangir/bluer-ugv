@@ -107,8 +107,11 @@ def build() -> bool:
             {"path": "docs/bluer_sparrow/design/specs.md"},
             {
                 "path": "docs/bluer_sparrow/design/parts.md",
+                "items": db_of_parts.as_images(
+                    sparrow_dict_of_parts,
+                    reference="../../parts",
+                ),
                 "macros": {
-                    "items:::": [],
                     "parts:::": db_of_parts.as_list(
                         sparrow_dict_of_parts,
                         reference="../../parts",
@@ -126,8 +129,11 @@ def build() -> bool:
             {"path": "docs/bluer_swallow/digital/design/operation.md"},
             {
                 "path": "docs/bluer_swallow/digital/design/parts.md",
+                "items": db_of_parts.as_images(
+                    swallow_dict_of_parts,
+                    reference="../../../parts",
+                ),
                 "macros": {
-                    "items:::": [],
                     "parts:::": db_of_parts.as_list(
                         swallow_dict_of_parts,
                         reference="../../../parts",
