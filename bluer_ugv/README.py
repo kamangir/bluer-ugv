@@ -39,7 +39,7 @@ items = README.Items(
         {
             "name": "bluer_eagle",
             "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-eagle/20250726_171953.jpg?raw=true",
-            "description": "a remotely-controlled ballon.",
+            "description": "a remotely controlled ballon.",
             "url": "./bluer_ugv/docs/bluer_eagle",
         },
         {
