@@ -181,6 +181,14 @@ db_of_parts["yellow-wheels"] = Part(
     ],
 )
 
+db_of_parts["front-wheel-accessories"] = Part(
+    info=[
+        "front wheel accessories",
+    ],
+    images=[
+        "front-wheel.jpg",
+    ],
+)
 
 db_of_parts["template"] = Part(
     info=[
