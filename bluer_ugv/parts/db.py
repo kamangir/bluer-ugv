@@ -137,6 +137,23 @@ db_of_parts["4xAA-battery-holder"] = Part(
     ],
 )
 
+db_of_parts["PCB-double-9x7"] = Part(
+    info=[
+        "double-sided PCB, 9 cm x 7 cm",
+    ],
+    images=[
+        f"{image_prefix}/PCB-double-9x7.jpeg?raw=true",
+    ],
+)
+
+db_of_parts["PCB-single-14x9_5"] = Part(
+    info=[
+        "single-sided PCB, 14 cm x 9.5 cm",
+    ],
+    images=[
+        f"{image_prefix}/pcb-14x9_5cm.jpg?raw=true",
+    ],
+)
 
 db_of_parts["template"] = Part(
     info=[
