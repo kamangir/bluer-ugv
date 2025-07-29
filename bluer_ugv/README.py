@@ -32,7 +32,7 @@ items = README.Items(
         },
         {
             "name": "bluer_robin",
-            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250723_095155~2_1.gif?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-robin/20250723_095155~2_1.gif?raw=true",
             "description": "remote control car kit for teenagers.",
             "url": "./bluer_ugv/docs/bluer_robin",
         },
