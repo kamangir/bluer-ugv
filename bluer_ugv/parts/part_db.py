@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Iterator, Tuple
 import copy
 import os
 import numpy as np
@@ -46,6 +46,9 @@ class PartDB:
 
     def __getitem__(self, name: str) -> Part:
         return self._db[name]
+
+    def items(self) -> Iterator[Tuple[str, Part]]:
+        return self._db.items()
 
     @property
     def README(self) -> List[str]:
