@@ -1,10 +1,14 @@
 from typing import List, Union, Dict
 import copy
 
+from blueness import module
 from bluer_objects import README
 
+from bluer_ugv import NAME
 from bluer_ugv.parts.part import Part
 from bluer_ugv.logger import logger
+
+NAME = module.name(__file__, NAME)
 
 
 class PartDB:
@@ -44,7 +48,19 @@ class PartDB:
             ]
         )
 
-    def adjust_image_sizes(path):
+    def adjust(
+        self,
+        dryrun: bool = True,
+    ) -> bool:
+        logger.info(
+            "{}.adjust{}".format(
+                NAME,
+                " [dryrun]" if dryrun else "",
+            )
+        )
+
+        return True
+
         images = []
         max_width = 0
         max_height = 0

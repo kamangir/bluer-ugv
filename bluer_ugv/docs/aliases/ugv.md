@@ -5,7 +5,7 @@
 ```bash
 @ugv \
 	parts \
-	adjust_images \
+	adjust \
 	[dryrun]
  . adjust part images.
 ```

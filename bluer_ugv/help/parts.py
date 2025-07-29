@@ -7,7 +7,7 @@ from bluer_plugin import ALIAS
 from bluer_plugin.help.node.functions import help_functions as help_node
 
 
-def help_adjust_images(
+def help_adjust(
     tokens: List[str],
     mono: bool,
 ) -> str:
@@ -17,7 +17,7 @@ def help_adjust_images(
         [
             "@ugv",
             "parts",
-            "adjust_images",
+            "adjust",
             f"[{options}]",
         ],
         "adjust part images.",
@@ -26,5 +26,5 @@ def help_adjust_images(
 
 
 help_functions = {
-    "adjust_images": help_adjust_images,
+    "adjust": help_adjust,
 }
