@@ -1,4 +1,5 @@
-from bluer_ugv.parts.classes import Part, PartDB
+from bluer_ugv.parts.part import Part
+from bluer_ugv.parts.part_db import PartDB
 
 image_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-ugv"
 

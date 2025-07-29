@@ -21,6 +21,9 @@ function test_bluer_ugv_help() {
         \
         "@ugv" \
         \
+        "@ugv parts" \
+        "@ugv parts adjust_images" \
+        \
         "@ugv pypi" \
         "@ugv pypi browse" \
         "@ugv pypi build" \

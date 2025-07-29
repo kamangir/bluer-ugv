@@ -1,54 +1,10 @@
 from typing import List, Union, Dict
 import copy
 
-from bluer_objects import markdown
 from bluer_objects import README
 
+from bluer_ugv.parts.part import Part
 from bluer_ugv.logger import logger
-
-
-class Part:
-    def __init__(
-        self,
-        info: Union[List[str], str] = [],
-        name: str = "",
-        images: List[str] = [],
-    ):
-        self.name = name
-
-        self.info = (
-            copy.deepcopy(info)
-            if isinstance(
-                info,
-                list,
-            )
-            else [info]
-        )
-
-        self.images = (
-            copy.deepcopy(images)
-            if isinstance(
-                images,
-                list,
-            )
-            else [images]
-        )
-
-    @property
-    def filename(self) -> str:
-        return f"docs/parts/{self.name}.md"
-
-    @property
-    def README(self) -> List[str]:
-        return [f"- {info}" for info in self.info] + (
-            [""]
-            + markdown.generate_table(
-                [f"![image]({image})" for image in self.images],
-                cols=3,
-            )
-            if self.images
-            else []
-        )
 
 
 class PartDB:
@@ -87,6 +43,49 @@ class PartDB:
                 for part in self
             ]
         )
+
+    def adjust_image_sizes(path):
+        images = []
+        max_width = 0
+        max_height = 0
+
+        # Step 1: Load all images and find max width/height
+        for filename in os.listdir(path):
+            if filename.lower().endswith((".png", ".jpg", ".jpeg", ".bmp")):
+                filepath = os.path.join(path, filename)
+                img = cv2.imread(filepath, cv2.IMREAD_UNCHANGED)
+
+                if img is None:
+                    continue  # Skip unreadable files
+
+                # Convert to 4-channel RGBA if not already
+                if img.shape[2] == 3:
+                    img = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
+                elif img.shape[2] == 1:
+                    img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGRA)
+
+                images.append((filename, img))
+                h, w = img.shape[:2]
+                max_width = max(max_width, w)
+                max_height = max(max_height, h)
+
+        # Step 2: Resize canvas for each image and save with new name
+        for filename, img in images:
+            h, w = img.shape[:2]
+            new_img = np.zeros(
+                (max_height, max_width, 4), dtype=np.uint8
+            )  # Transparent by default
+
+            # Compute top-left corner to center the image
+            y_offset = (max_height - h) // 2
+            x_offset = (max_width - w) // 2
+
+            # Paste the image into center of new canvas
+            new_img[y_offset : y_offset + h, x_offset : x_offset + w] = img
+
+            name, _ = os.path.splitext(filename)
+            new_filename = f"{name}_{max_width}x{max_height}.png"
+            cv2.imwrite(os.path.join(path, new_filename), new_img)
 
     def as_images(
         self,
