@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](TVSdiode.png) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/TVSdiode.png?raw=true) |

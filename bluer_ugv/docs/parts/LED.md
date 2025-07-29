@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](led.png) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/led.png?raw=true) |

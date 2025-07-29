@@ -5,5 +5,5 @@
 
 |   |   |   |
 | --- | --- | --- |
-| ![image](GM6558/01.jpg) | ![image](GM6558/02.jpg) | ![image](GM6558/03.jpg) |
-| ![image](GM6558/04.jpg) | ![image](GM6558/measurements.jpg) | ![image](GM6558/specs.png) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/GM6558/01.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/GM6558/02.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/GM6558/03.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/GM6558/04.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/GM6558/measurements.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/GM6558/specs.png?raw=true) |

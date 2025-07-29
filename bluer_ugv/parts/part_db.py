@@ -159,7 +159,9 @@ class PartDB:
             [
                 {
                     "name": self._db[part_name].info[0],
-                    "marquee": self._db[part_name].marquee(url_prefix=self.url_prefix),
+                    "marquee": self._db[part_name].image_url(
+                        url_prefix=self.url_prefix
+                    ),
                     "description": description,
                     "url": f"{reference}/{part_name}.md",
                 }

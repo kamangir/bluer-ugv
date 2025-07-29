@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](pcb-14x9_5cm.jpg) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/pcb-14x9_5cm.jpg?raw=true) |

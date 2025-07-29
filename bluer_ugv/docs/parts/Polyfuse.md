@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](polyfuse.png) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/polyfuse.png?raw=true) |

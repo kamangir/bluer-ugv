@@ -4,4 +4,4 @@
 
 |   |   |
 | --- | --- |
-| ![image](rpi3bplus.png) | ![image](gpio-pinout.png) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/rpi3bplus.png?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gpio-pinout.png?raw=true) |

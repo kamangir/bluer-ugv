@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](PCB-double-9x7.jpeg) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/PCB-double-9x7.jpeg?raw=true) |

@@ -35,18 +35,37 @@ class Part:
     def filename(self) -> str:
         return f"docs/parts/{self.name}.md"
 
-    def marquee(
+    def image_url(
         self,
         url_prefix: str,
+        filename: str = "",
     ) -> str:
-        return f"{url_prefix}/{self.images[0]}?raw=true" if self.images else ""
 
-    @property
-    def README(self) -> List[str]:
+        return (
+            "{}/{}?raw=true".format(
+                url_prefix,
+                filename if filename else self.images[0],
+            )
+            if self.images
+            else ""
+        )
+
+    def README(
+        self,
+        url_prefix: str,
+    ) -> List[str]:
         return [f"- {info}" for info in self.info] + (
             [""]
             + markdown.generate_table(
-                [f"![image]({image})" for image in self.images],
+                [
+                    "![image]({})".format(
+                        self.image_url(
+                            url_prefix,
+                            filename,
+                        )
+                    )
+                    for filename in self.images
+                ],
                 cols=3,
             )
             if self.images

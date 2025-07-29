@@ -205,7 +205,7 @@ def build() -> bool:
         + [
             {
                 "path": part.filename,
-                "macros": {"info:::": part.README},
+                "macros": {"info:::": part.README(db_of_parts.url_prefix)},
             }
             for part in db_of_parts
         ]
