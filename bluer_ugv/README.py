@@ -96,7 +96,7 @@ def build() -> bool:
                     eagle_dict_of_parts,
                     reference="../parts",
                 ),
-                "cols": 5,
+                "cols": 3,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         eagle_dict_of_parts,
