@@ -163,6 +163,16 @@ db_of_parts["pushbutton"] = Part(
     ],
 )
 
+db_of_parts["yellow-gearbox-dc-motor"] = Part(
+    info=[
+        "gearboxed DC motor, 6V DC",
+    ],
+    images=[
+        "yellow-gearbox-dc-motor.png",
+    ],
+)
+
+
 db_of_parts["template"] = Part(
     info=[
         "template",

@@ -3,7 +3,9 @@
 1. [2 x AA battery holder](../parts/2xAA-battery-holder.md).
 1. [4 x AA battery holder](../parts/4xAA-battery-holder.md).
 1. [4-channel transmitter and receiver](../parts/4-ch-transceiver.md).
+1. [gearboxed DC motor, 6V DC: 2 x 270 RPM + 1 x 80 RPM](../parts/yellow-gearbox-dc-motor.md).
 
 |   |   |   |
 | --- | --- | --- |
 | [`2 x AA battery holder`](../parts/2xAA-battery-holder.md) [![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/2xAA-battery-holder.jpg?raw=true)](../parts/2xAA-battery-holder.md)  | [`4 x AA battery holder`](../parts/4xAA-battery-holder.md) [![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/4xAA-battery-holder.jpg?raw=true)](../parts/4xAA-battery-holder.md)  | [`4-channel transmitter and receiver`](../parts/4-ch-transceiver.md) [![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/4-channel-remote-control.png?raw=true)](../parts/4-ch-transceiver.md)  |
+| [`gearboxed DC motor, 6V DC`](../parts/yellow-gearbox-dc-motor.md) [![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/yellow-gearbox-dc-motor.png?raw=true)](../parts/yellow-gearbox-dc-motor.md) 2 x 270 RPM + 1 x 80 RPM |  |  |
