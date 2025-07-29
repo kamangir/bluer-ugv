@@ -9,3 +9,5 @@ function bluer_ugv() {
 }
 
 bluer_ai_log $(bluer_ugv version --show_icon 1)
+
+bluer_ai_source_caller_suffix_path /ugv

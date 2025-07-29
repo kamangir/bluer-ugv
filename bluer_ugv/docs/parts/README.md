@@ -15,3 +15,10 @@
 - [Resistor, 330-470 Ω, 1/4 watt, 5% tolerance](./330-ohm.md).
 - [TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package](./TVS-diode.md).
 - [capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.](./470-mF.md).
+- [double-sided PCB, 9 cm x 7 cm](./PCB-double-9x7.md).
+- [front wheel accessories](./front-wheel-accessories.md).
+- [gearboxed DC motor, 6V DC](./yellow-gearbox-dc-motor.md).
+- [push button](./pushbutton.md).
+- [single-sided PCB, 14 cm x 9.5 cm](./PCB-single-14x9_5.md).
+- [template](./template.md).
+- [wheels for gearboxed DC motor](./yellow-wheels.md).

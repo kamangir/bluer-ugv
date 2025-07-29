@@ -38,7 +38,7 @@ items = README.Items(
         },
         {
             "name": "bluer_eagle",
-            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-eagle/20250726_171953.jpg?raw=true",
+            "marquee": "https://github.com/kamangir/assets2/raw/main/bluer-eagle/file_0000000007986246b45343b0c06325dd.png?raw=true",
             "description": "a remotely controlled ballon.",
             "url": "./bluer_ugv/docs/bluer_eagle",
         },
@@ -56,6 +56,8 @@ items = README.Items(
         },
     ]
 )
+
+parts_cols = 3
 
 
 def build() -> bool:
@@ -96,6 +98,7 @@ def build() -> bool:
                     eagle_dict_of_parts,
                     reference="../parts",
                 ),
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         eagle_dict_of_parts,
@@ -116,6 +119,7 @@ def build() -> bool:
                     robin_dict_of_parts,
                     reference="../parts",
                 ),
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         robin_dict_of_parts,
@@ -137,6 +141,7 @@ def build() -> bool:
                     sparrow_dict_of_parts,
                     reference="../../parts",
                 ),
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         sparrow_dict_of_parts,
@@ -159,6 +164,7 @@ def build() -> bool:
                     swallow_dict_of_parts,
                     reference="../../../parts",
                 ),
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         swallow_dict_of_parts,
@@ -187,6 +193,7 @@ def build() -> bool:
         + [
             {"path": "docs/aliases"},
             {"path": "docs/aliases/swallow.md"},
+            {"path": "docs/aliases/ugv.md"},
         ]
         # parts
         + [
@@ -198,8 +205,9 @@ def build() -> bool:
         + [
             {
                 "path": part.filename,
-                "macros": {"info:::": part.README},
+                "macros": {"info:::": part.README(db_of_parts.url_prefix)},
             }
-            for part in db_of_parts
+            for part_name, part in db_of_parts.items()
+            if part_name != "template"
         ]
     )

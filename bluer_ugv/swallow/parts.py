@@ -10,4 +10,7 @@ dict_of_parts = {
     "330-ohm": "",
     "LED": "",
     "rpi-camera": "",
+    "PCB-single-14x9_5": "",
+    "PCB-double-9x7": "",
+    "pushbutton": "",
 }
