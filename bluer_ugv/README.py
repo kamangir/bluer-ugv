@@ -57,6 +57,8 @@ items = README.Items(
     ]
 )
 
+parts_cols = 3
+
 
 def build() -> bool:
     return all(
@@ -96,7 +98,7 @@ def build() -> bool:
                     eagle_dict_of_parts,
                     reference="../parts",
                 ),
-                "cols": 3,
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         eagle_dict_of_parts,
@@ -117,7 +119,7 @@ def build() -> bool:
                     robin_dict_of_parts,
                     reference="../parts",
                 ),
-                "cols": 5,
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         robin_dict_of_parts,
@@ -139,7 +141,7 @@ def build() -> bool:
                     sparrow_dict_of_parts,
                     reference="../../parts",
                 ),
-                "cols": 5,
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         sparrow_dict_of_parts,
@@ -162,7 +164,7 @@ def build() -> bool:
                     swallow_dict_of_parts,
                     reference="../../../parts",
                 ),
-                "cols": 5,
+                "cols": parts_cols,
                 "macros": {
                     "parts:::": db_of_parts.as_list(
                         swallow_dict_of_parts,
