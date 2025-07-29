@@ -1,7 +1,3 @@
-# parts: template
+# parts
 
-- template
-
-|   |
-| --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/template.jpg?raw=true) |
+info:::

@@ -207,6 +207,7 @@ def build() -> bool:
                 "path": part.filename,
                 "macros": {"info:::": part.README(db_of_parts.url_prefix)},
             }
-            for part in db_of_parts
+            for part_name, part in db_of_parts._db.items()
+            if part_name != "template"
         ]
     )
