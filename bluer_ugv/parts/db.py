@@ -155,6 +155,15 @@ db_of_parts["PCB-single-14x9_5"] = Part(
     ],
 )
 
+db_of_parts["pushbutton"] = Part(
+    info=[
+        "push button",
+    ],
+    images=[
+        f"{image_prefix}/pushbutton.png?raw=true",
+    ],
+)
+
 db_of_parts["template"] = Part(
     info=[
         "template",

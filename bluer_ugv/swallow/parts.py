@@ -12,4 +12,5 @@ dict_of_parts = {
     "rpi-camera": "",
     "PCB-single-14x9_5": "",
     "PCB-double-9x7": "",
+    "pushbutton": "",
 }
