@@ -172,6 +172,15 @@ db_of_parts["yellow-gearbox-dc-motor"] = Part(
     ],
 )
 
+db_of_parts["yellow-wheels"] = Part(
+    info=[
+        "wheels for gearboxed DC motor",
+    ],
+    images=[
+        "yellow-wheels.jpg",
+    ],
+)
+
 
 db_of_parts["template"] = Part(
     info=[
