@@ -39,7 +39,7 @@ db_of_parts["dc-motor-12-VDC-45W"] = Part(
     info=[
         "12 VDC motor, 20-45 W, 9000 RPM",
     ],
-    images=[f"{image_prefix}/dcmotor.png?raw=true"],
+    images=[f"{image_prefix}/dcmotor-2.jpg?raw=true"],
 )
 
 db_of_parts["LED"] = Part(
