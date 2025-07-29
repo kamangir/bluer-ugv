@@ -1,4 +1,4 @@
-assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-sparrow"
+assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-robin"
 
 dict_of_images = {
     f"{assets2}/20250712_114819.jpg?raw=true": "",
