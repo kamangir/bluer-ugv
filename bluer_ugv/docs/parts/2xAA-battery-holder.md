@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/2xAA-battery-holder.jpg?raw=true) |
+| ![image](2xAA-battery-holder.jpg) |

@@ -1,8 +1,17 @@
-from typing import List, Union, Dict
+from typing import Dict, List
 import copy
+import os
+import numpy as np
+import cv2
+from functools import reduce
+from tqdm import tqdm
 
 from blueness import module
+from bluer_options.logger import log_list
+from bluer_options import string
+from bluer_objects import file
 from bluer_objects import README
+from bluer_objects.env import abcli_path_git
 
 from bluer_ugv import NAME
 from bluer_ugv.parts.part import Part
@@ -15,23 +24,25 @@ class PartDB:
     def __init__(self):
         self._db: Dict[str, Part] = {}
 
+        self.url_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-ugv"
+
+        self.path = os.path.join(
+            abcli_path_git,
+            "assets2/bluer-ugv",
+        )
+
     def __iter__(self):
         return iter(self._db.values())
 
     def __setitem__(
         self,
         name: str,
-        part: Union[Part, List[str]],
+        part: Part,
     ):
-        if isinstance(part, list):
-            part = Part(
-                name=name,
-                info=part,
-            )
-        else:
-            part.name = name
+        assert isinstance(part, Part)
 
         self._db[name] = copy.deepcopy(part)
+        self._db[name].name = name
 
     def __getitem__(self, name: str) -> Part:
         return self._db[name]
@@ -51,6 +62,7 @@ class PartDB:
     def adjust(
         self,
         dryrun: bool = True,
+        verbose: bool = False,
     ) -> bool:
         logger.info(
             "{}.adjust{}".format(
@@ -59,49 +71,84 @@ class PartDB:
             )
         )
 
-        return True
+        list_of_filenames = reduce(
+            lambda x, y: x + y,
+            [
+                [part.images[0]]
+                for part_name, part in self._db.items()
+                if part_name != "template" and part.images
+            ],
+            [],
+        )
+        log_list(logger, "adjusting", list_of_filenames, "images")
 
-        images = []
         max_width = 0
         max_height = 0
+        for filename in tqdm(list_of_filenames):
+            success, image = file.load_image(
+                os.path.join(self.path, filename),
+                log=verbose,
+            )
+            if not success:
+                return success
 
-        # Step 1: Load all images and find max width/height
-        for filename in os.listdir(path):
-            if filename.lower().endswith((".png", ".jpg", ".jpeg", ".bmp")):
-                filepath = os.path.join(path, filename)
-                img = cv2.imread(filepath, cv2.IMREAD_UNCHANGED)
+            max_height = max(max_height, image.shape[0])
+            max_width = max(max_width, image.shape[1])
 
-                if img is None:
-                    continue  # Skip unreadable files
+        logger.info(f"size: {max_height} x {max_width}")
 
-                # Convert to 4-channel RGBA if not already
-                if img.shape[2] == 3:
-                    img = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
-                elif img.shape[2] == 1:
-                    img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGRA)
+        for filename in tqdm(list_of_filenames):
+            success, image = file.load_image(
+                os.path.join(self.path, filename),
+                log=verbose,
+            )
+            if not success:
+                return success
 
-                images.append((filename, img))
-                h, w = img.shape[:2]
-                max_width = max(max_width, w)
-                max_height = max(max_height, h)
+            if image.shape[0] == max_height and image.shape[1] == max_width:
+                logger.info("✅")
+                continue
 
-        # Step 2: Resize canvas for each image and save with new name
-        for filename, img in images:
-            h, w = img.shape[:2]
-            new_img = np.zeros(
-                (max_height, max_width, 4), dtype=np.uint8
-            )  # Transparent by default
+            image = image[:, :, :3]
 
-            # Compute top-left corner to center the image
-            y_offset = (max_height - h) // 2
-            x_offset = (max_width - w) // 2
+            scale = min(
+                max_height / image.shape[0],
+                max_width / image.shape[1],
+            )
+            image = cv2.resize(
+                image,
+                dsize=(
+                    int(scale * image.shape[1]),
+                    int(scale * image.shape[0]),
+                ),
+                interpolation=cv2.INTER_LINEAR,
+            )
 
-            # Paste the image into center of new canvas
-            new_img[y_offset : y_offset + h, x_offset : x_offset + w] = img
+            padded_image = (
+                np.ones(
+                    (max_height, max_width, 3),
+                    dtype=np.uint8,
+                )
+                * 255
+            )
 
-            name, _ = os.path.splitext(filename)
-            new_filename = f"{name}_{max_width}x{max_height}.png"
-            cv2.imwrite(os.path.join(path, new_filename), new_img)
+            y_offset = (max_height - image.shape[0]) // 2
+            x_offset = (max_width - image.shape[1]) // 2
+
+            padded_image[
+                y_offset : y_offset + image.shape[0],
+                x_offset : x_offset + image.shape[1],
+            ] = image
+
+            if not dryrun:
+                if not file.save_image(
+                    os.path.join(self.path, filename),
+                    padded_image,
+                    log=verbose,
+                ):
+                    return False
+
+        return True
 
     def as_images(
         self,
@@ -112,7 +159,7 @@ class PartDB:
             [
                 {
                     "name": self._db[part_name].info[0],
-                    "marquee": (self._db[part_name].images + [""])[0],
+                    "marquee": self._db[part_name].marquee(url_prefix=self.url_prefix),
                     "description": description,
                     "url": f"{reference}/{part_name}.md",
                 }

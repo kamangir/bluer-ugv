@@ -6,6 +6,7 @@
 @ugv \
 	parts \
 	adjust \
-	[dryrun]
+	[dryrun] \
+	[--verbose 1]
  . adjust part images.
 ```

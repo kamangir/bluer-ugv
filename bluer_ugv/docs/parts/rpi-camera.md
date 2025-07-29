@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/rpi-camera.jpg?raw=true) |
+| ![image](rpi-camera.jpg) |

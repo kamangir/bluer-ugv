@@ -35,6 +35,12 @@ class Part:
     def filename(self) -> str:
         return f"docs/parts/{self.name}.md"
 
+    def marquee(
+        self,
+        url_prefix: str,
+    ) -> str:
+        return f"{url_prefix}/{self.images[0]}?raw=true" if self.images else ""
+
     @property
     def README(self) -> List[str]:
         return [f"- {info}" for info in self.info] + (

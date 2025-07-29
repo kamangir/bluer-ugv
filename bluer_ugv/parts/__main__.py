@@ -17,15 +17,24 @@ parser.add_argument(
 )
 parser.add_argument(
     "--dryrun",
-    type=bool,
+    type=int,
     default=1,
+    help="0 | 1",
+)
+parser.add_argument(
+    "--verbose",
+    type=int,
+    default=0,
     help="0 | 1",
 )
 args = parser.parse_args()
 
 success = False
 if args.task == "adjust":
-    success = db_of_parts.adjust(dryrun=args.dryrun == 1)
+    success = db_of_parts.adjust(
+        dryrun=args.dryrun == 1,
+        verbose=args.verbose == 1,
+    )
 else:
     success = None
 

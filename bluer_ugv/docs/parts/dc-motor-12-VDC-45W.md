@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/dcmotor-lres.jpg?raw=true) |
+| ![image](dcmotor.png) |

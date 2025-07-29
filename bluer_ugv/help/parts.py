@@ -13,13 +13,18 @@ def help_adjust(
 ) -> str:
     options = "dryrun"
 
+    args = [
+        "[--verbose 1]",
+    ]
+
     return show_usage(
         [
             "@ugv",
             "parts",
             "adjust",
             f"[{options}]",
-        ],
+        ]
+        + args,
         "adjust part images.",
         mono=mono,
     )

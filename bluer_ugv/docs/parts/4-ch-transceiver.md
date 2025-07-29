@@ -6,4 +6,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/4-channel-remote-control/view.png?raw=true) |
+| ![image](4-channel-remote-control.png) |
