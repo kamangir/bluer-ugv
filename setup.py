@@ -12,8 +12,11 @@ setup(
         NAME,
         f"{NAME}.help",
         f"{NAME}.help.swallow",
-        f"{NAME}.eagle",
         f"{NAME}.parts",
+        f"{NAME}.README",
+        # kinds
+        f"{NAME}.eagle",
+        f"{NAME}.fire",
         f"{NAME}.robin",
         f"{NAME}.swallow",
         f"{NAME}.swallow.dataset",

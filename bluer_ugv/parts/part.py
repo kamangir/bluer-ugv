@@ -2,6 +2,7 @@ from typing import List, Union
 import copy
 
 from bluer_objects import markdown
+from bluer_objects import file
 
 
 class Part:
@@ -31,9 +32,34 @@ class Part:
             else [images]
         )
 
-    @property
-    def filename(self) -> str:
-        return f"docs/parts/{self.name}.md"
+    def filename(
+        self,
+        create: bool = False,
+    ) -> str:
+        filename = f"../docs/parts/{self.name}.md"
+
+        if not create:
+            return filename
+
+        reference = file.path(__file__)
+        full_filename = file.absolute(
+            file.add_suffix(filename, "template"),
+            reference,
+        )
+
+        if file.exists(full_filename):
+            return filename
+
+        assert file.copy(
+            file.absolute(
+                f"../docs/parts/template-template.md",
+                reference,
+            ),
+            full_filename,
+            log=True,
+        )
+
+        return filename
 
     def image_url(
         self,
