@@ -52,7 +52,7 @@ class Part:
 
         assert file.copy(
             file.absolute(
-                f"../docs/parts/template-template.md",
+                "../docs/parts/template-template.md",
                 reference,
             ),
             full_filename,

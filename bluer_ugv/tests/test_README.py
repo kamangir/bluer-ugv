@@ -1,5 +1,5 @@
-from bluer_ugv import README
+from bluer_ugv.README.build import build
 
 
 def test_build_README():
-    assert README.build()
+    assert build()
