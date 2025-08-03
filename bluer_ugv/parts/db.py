@@ -190,6 +190,26 @@ db_of_parts["front-wheel-accessories"] = Part(
     ],
 )
 
+db_of_parts["36v-hub-motor"] = Part(
+    info=[
+        "36V DC hub motor, 350 W, front, no gearbox",
+        "[source](https://samamotor.ir/%D9%87%D8%A7%D8%A8-%D9%85%D9%88%D8%AA%D9%88%D8%B1/5105-%D9%87%D8%A7%D8%A8-%D9%85%D9%88%D8%AA%D9%88%D8%B1-350-%D9%88%D8%A7%D8%AA-36-%D9%88%D9%84%D8%AA-%D8%A8%D8%AF%D9%88%D9%86-%DA%AF%DB%8C%D8%B1%D8%A8%DA%A9%D8%B3-%D8%AF%D9%88%DA%86%D8%B1%D8%AE%D9%87-%D9%85%D8%AE%D8%B5%D9%88%D8%B5-%DA%86%D8%B1%D8%AE-%D8%AC%D9%84%D9%88-.html)",
+    ],
+    images=[
+        "36v-hub-motor.jpg",
+    ],
+)
+
+db_of_parts["brushless-350w-drive"] = Part(
+    info=[
+        "brushless drive, 36 - 48 V DC, 350 W, sine wave, silent",
+        "[source](https://samamotor.ir/%D8%AF%D8%B1%D8%A7%DB%8C%D9%88%D8%B1-%D9%85%D9%88%D8%AA%D9%88%D8%B1-%D8%A8%D8%B1%D8%A7%D8%B4%D9%84%D8%B3-bldc/4821-%D8%AF%D8%B1%D8%A7%DB%8C%D9%88%D8%B1-%D8%A8%D8%B1%D8%A7%D8%B4%D9%84%D8%B3-36-48-%D9%88%D9%84%D8%AA-350-%D9%88%D8%A7%D8%AA-sine-wave-silent.html)",
+    ],
+    images=[
+        "brushless-350w-drive.jpg",
+    ],
+)
+
 db_of_parts["template"] = Part(
     info=[
         "template",
