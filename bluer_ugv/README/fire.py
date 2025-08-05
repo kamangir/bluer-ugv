@@ -5,7 +5,7 @@ from bluer_ugv.fire.parts import dict_of_parts
 docs = [
     {"path": "../docs/bluer_fire"},
     {
-        "path": "../docs/bluer_robin/parts.md",
+        "path": "../docs/bluer_fire/parts.md",
         "items": db_of_parts.as_images(
             dict_of_parts,
             reference="../parts",
