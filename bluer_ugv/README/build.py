@@ -6,7 +6,17 @@ from bluer_objects import file, README
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.README.items import items
 from bluer_ugv.help.functions import help_functions
-from bluer_ugv.README import alias, beast, eagle, fire, parts, robin, sparrow, swallow
+from bluer_ugv.README import (
+    alias,
+    beast,
+    eagle,
+    fire,
+    parts,
+    robin,
+    shield,
+    sparrow,
+    swallow,
+)
 
 
 def build() -> bool:
@@ -34,6 +44,7 @@ def build() -> bool:
         + eagle.docs
         + fire.docs
         + robin.docs
+        + shield.docs
         + sparrow.docs
         + swallow.docs
         + alias.docs
