@@ -1,5 +1,7 @@
 # bluer_robin
 
+remote control car kit for teenagers.
+
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/assets2/blob/main/bluer-robin/20250712_114819.jpg?raw=true)](https://github.com/kamangir/assets2/blob/main/bluer-robin/20250712_114819.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/blob/main/bluer-robin/20250713_172325.jpg?raw=true)](https://github.com/kamangir/assets2/blob/main/bluer-robin/20250713_172325.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/blob/main/bluer-robin/20250713_172413.jpg?raw=true)](https://github.com/kamangir/assets2/blob/main/bluer-robin/20250713_172413.jpg?raw=true) |
