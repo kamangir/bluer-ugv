@@ -93,6 +93,7 @@ class Part:
                     for filename in self.images
                 ],
                 cols=3,
+                log=False,
             )
             if self.images
             else []
