@@ -1,30 +1,38 @@
 title:::
 
-- **keyboard**: press the following keys:
+- keyboard:
     - a: steer left.
     - d: steer right.
-    - g: mode: prediction.
-    - i: to exit.
-    - o: to shutdown.
+    - g: mode = prediction.
+    - i: exit.
+    - o: shutdown.
     - s: speed backward.
-    - p: to reboot.
-    - t: mode: train.
-    - u: to update.
+    - p: reboot.
+    - t: mode = train.
+    - u: update.
     - w: speed forward.
-    - y: mode: none.
-    - space: to stop.
-- **leds**:
+    - y: mode = none.
+    - space: stop.
+- leds:
     - green: control loop.
     - red:
-       - flashing: release the push button to update.
-       - solid: release the push button to shutdown.
-    - yellow: command received. 
-- **mouse pad**: 
+        - flashing:
+            - motor update.
+            - prediction / training.
+            - release the push button to update.
+            - setpoint update.
+        - solid: release the push button to shutdown.
+    - yellow: 
+        - command received. 
+        - mousepad activity.
+
+- mouse pad: 
     - move your finger:
-        - vertically: to adjust speed.
-        - horizontally: to set steering.
-    - double click: to stop.
-- **push button**: press and hold:
-    - for 5 seconds: to update.
-    - for 10 seconds: to shutdown.
-    - for > 15 seconds: to skip.
+        - vertically: adjust speed.
+        - horizontally: set steering.
+    - double click: stop.
+
+- push button:
+    - hold for 5 seconds: update.
+    - hold for 10 seconds: shutdown.
+    - hold for > 15 seconds: skip.
