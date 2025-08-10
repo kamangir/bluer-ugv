@@ -16,15 +16,15 @@
 - leds:
     - green: control loop.
     - red:
-       - flashing:
-          - motor update.
-          - prediction / training.
-          - release the push button to update.
-          - setpoint update.
-       - solid: release the push button to shutdown.
+        - flashing:
+            - motor update.
+            - prediction / training.
+            - release the push button to update.
+            - setpoint update.
+        - solid: release the push button to shutdown.
     - yellow: 
-       - command received. 
-       - mousepad activity.
+        - command received. 
+        - mousepad activity.
 
 - mouse pad: 
     - move your finger:
