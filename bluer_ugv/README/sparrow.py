@@ -20,6 +20,7 @@ docs = [
             "parts:::": db_of_parts.as_list(
                 dict_of_parts,
                 reference="../../parts",
+                log=False,
             ),
         },
     },

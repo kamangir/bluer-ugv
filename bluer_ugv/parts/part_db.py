@@ -177,13 +177,15 @@ class PartDB:
         self,
         dict_of_parts: Dict[str, str],
         reference: str = "../../parts",
+        log: bool = True,
     ) -> List[str]:
-        logger.info(
-            "{}.subset: {}".format(
-                self.__class__.__name__,
-                ", ".join(dict_of_parts.keys()),
+        if log:
+            logger.info(
+                "{}.as_list: {}".format(
+                    self.__class__.__name__,
+                    ", ".join(dict_of_parts.keys()),
+                )
             )
-        )
 
         for part_name in dict_of_parts:
             if part_name not in self._db:
