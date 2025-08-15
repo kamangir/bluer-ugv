@@ -14,5 +14,6 @@ items = ImageItems(
         f"{assets2}/20250726_134024.jpg": "",
         f"{assets2}/20250807_103534.jpg": "",
         f"{assets2}/20250807_171354.jpg": "",
+        f"{assets2}/20250813_172023.jpg": "",
     }
 )
