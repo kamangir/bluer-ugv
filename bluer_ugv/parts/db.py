@@ -181,15 +181,6 @@ db_of_parts["yellow-wheels"] = Part(
     ],
 )
 
-db_of_parts["front-wheel-accessories"] = Part(
-    info=[
-        "front wheel accessories",
-    ],
-    images=[
-        "front-wheel.jpg",
-    ],
-)
-
 db_of_parts["36v-hub-motor"] = Part(
     info=[
         "36V DC hub motor, 350 W, front, no gearbox",
@@ -250,6 +241,24 @@ db_of_parts["shaft-10cm"] = Part(
     ],
     images=[
         "shaft-10cm.jpg",
+    ],
+)
+
+db_of_parts["M3"] = Part(
+    info=[
+        "M3 nuts and bolts",
+    ],
+    images=[
+        "M3.jpg",
+    ],
+)
+
+db_of_parts["front-connector"] = Part(
+    info=[
+        "front connector",
+    ],
+    images=[
+        "front-connector.jpg",
     ],
 )
 
