@@ -8,4 +8,5 @@ dict_of_parts = {
     "shaft-10cm": "",
     "M3": "",
     "front-connector": "",
+    "front-wheels": "",
 }

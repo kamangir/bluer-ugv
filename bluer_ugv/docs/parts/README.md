@@ -23,6 +23,7 @@
 - [capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.](./470-mF.md).
 - [double-sided PCB, 9 cm x 7 cm](./PCB-double-9x7.md).
 - [front connector](./front-connector.md).
+- [front wheels](./front-wheels.md).
 - [gearboxed DC motor, 6V DC](./yellow-gearbox-dc-motor.md).
 - [push button](./pushbutton.md).
 - [shaft, 10 cm](./shaft-10cm.md).

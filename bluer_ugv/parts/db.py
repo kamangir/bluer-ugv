@@ -262,6 +262,15 @@ db_of_parts["front-connector"] = Part(
     ],
 )
 
+db_of_parts["front-wheels"] = Part(
+    info=[
+        "front wheels",
+    ],
+    images=[
+        "front-wheels.jpg",
+    ],
+)
+
 db_of_parts["template"] = Part(
     info=[
         "template",
