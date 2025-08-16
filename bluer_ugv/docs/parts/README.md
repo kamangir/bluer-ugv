@@ -10,7 +10,9 @@
 - [6V DC (4 cell) NICD battery](./LJ-6V-battery.md).
 - [6V DC charger for NICD batteries](./USB-charger-NICD-6V.md).
 - [Gearboxed DC Motor, 12 V (3-24 V), 3A, 120 RPM, 1:91, 15 Kg cm](./DC-gearboxed-motor-12V-120RPM.md).
+- [L 1x2](./L-1x2.md).
 - [LED, ~2 V forward voltage, 10-20 mA](./LED.md).
+- [M3 nuts and bolts](./M3.md).
 - [Polyfuse, 1.1 A hold, 2.2 A trip, 16 V, resettable, through-hole, e.g., MF-R110](./Polyfuse.md).
 - [Raspberry Pi 3B+](./rpi3bp.md).
 - [Raspberry Pi Camera, V1.3https://www.raspberrypi.com/documentation/accessories/camera.html](./rpi-camera.md).
@@ -20,9 +22,11 @@
 - [brushless drive, 36 - 48 V DC, 350 W, sine wave, silent](./brushless-350w-drive.md).
 - [capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.](./470-mF.md).
 - [double-sided PCB, 9 cm x 7 cm](./PCB-double-9x7.md).
-- [front wheel accessories](./front-wheel-accessories.md).
+- [front connector](./front-connector.md).
+- [front wheels](./front-wheels.md).
 - [gearboxed DC motor, 6V DC](./yellow-gearbox-dc-motor.md).
 - [push button](./pushbutton.md).
+- [shaft, 10 cm](./shaft-10cm.md).
 - [single-sided PCB, 14 cm x 9.5 cm](./PCB-single-14x9_5.md).
 - [template](./template.md).
 - [wheels for gearboxed DC motor](./yellow-wheels.md).

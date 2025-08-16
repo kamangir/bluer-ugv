@@ -181,15 +181,6 @@ db_of_parts["yellow-wheels"] = Part(
     ],
 )
 
-db_of_parts["front-wheel-accessories"] = Part(
-    info=[
-        "front wheel accessories",
-    ],
-    images=[
-        "front-wheel.jpg",
-    ],
-)
-
 db_of_parts["36v-hub-motor"] = Part(
     info=[
         "36V DC hub motor, 350 W, front, no gearbox",
@@ -232,6 +223,53 @@ db_of_parts["USB-charger-NICD-6V"] = Part(
     ],
 )
 
+db_of_parts["L-1x2"] = Part(
+    info=[
+        "L 1x2",
+        "https://robotexiran.com/product/%d8%a8%d8%b3%d8%aa-21-l/",
+    ],
+    images=[
+        "L-1x2-1.jpg",
+        "L-1x2-2.jpg",
+    ],
+)
+
+db_of_parts["shaft-10cm"] = Part(
+    info=[
+        "shaft, 10 cm",
+        "https://robotexiran.com/product/%d9%85%d8%ad%d9%88%d8%b1-10cm/",
+    ],
+    images=[
+        "shaft-10cm.jpg",
+    ],
+)
+
+db_of_parts["M3"] = Part(
+    info=[
+        "M3 nuts and bolts",
+    ],
+    images=[
+        "M3.jpg",
+    ],
+)
+
+db_of_parts["front-connector"] = Part(
+    info=[
+        "front connector",
+    ],
+    images=[
+        "front-connector.jpg",
+    ],
+)
+
+db_of_parts["front-wheels"] = Part(
+    info=[
+        "front wheels",
+    ],
+    images=[
+        "front-wheels.jpg",
+    ],
+)
 
 db_of_parts["template"] = Part(
     info=[
