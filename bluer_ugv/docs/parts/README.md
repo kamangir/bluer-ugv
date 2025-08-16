@@ -10,6 +10,7 @@
 - [6V DC (4 cell) NICD battery](./LJ-6V-battery.md).
 - [6V DC charger for NICD batteries](./USB-charger-NICD-6V.md).
 - [Gearboxed DC Motor, 12 V (3-24 V), 3A, 120 RPM, 1:91, 15 Kg cm](./DC-gearboxed-motor-12V-120RPM.md).
+- [L 1x2](./L-1x2.md).
 - [LED, ~2 V forward voltage, 10-20 mA](./LED.md).
 - [Polyfuse, 1.1 A hold, 2.2 A trip, 16 V, resettable, through-hole, e.g., MF-R110](./Polyfuse.md).
 - [Raspberry Pi 3B+](./rpi3bp.md).

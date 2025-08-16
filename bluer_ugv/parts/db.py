@@ -232,6 +232,16 @@ db_of_parts["USB-charger-NICD-6V"] = Part(
     ],
 )
 
+db_of_parts["L-1x2"] = Part(
+    info=[
+        "L 1x2",
+        "https://robotexiran.com/product/%d8%a8%d8%b3%d8%aa-21-l/",
+    ],
+    images=[
+        "L-1x2-1.jpg",
+        "L-1x2-2.jpg",
+    ],
+)
 
 db_of_parts["template"] = Part(
     info=[
