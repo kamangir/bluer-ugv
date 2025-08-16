@@ -5,6 +5,7 @@ assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-robin"
 items = ImageItems(
     {
         f"{assets2}/20250712_114819.jpg": "",
+        f"{assets2}/wiring.png": "../../../diagrams/bluer_robin/wiring.svg",
         f"{assets2}/20250713_172325.jpg": "",
         f"{assets2}/20250713_172413.jpg": "",
         f"{assets2}/20250713_172442_1.gif": "",
