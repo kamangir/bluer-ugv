@@ -243,6 +243,16 @@ db_of_parts["L-1x2"] = Part(
     ],
 )
 
+db_of_parts["shaft-10cm"] = Part(
+    info=[
+        "shaft, 10 cm",
+        "https://robotexiran.com/product/%d9%85%d8%ad%d9%88%d8%b1-10cm/",
+    ],
+    images=[
+        "shaft-10cm.jpg",
+    ],
+)
+
 db_of_parts["template"] = Part(
     info=[
         "template",

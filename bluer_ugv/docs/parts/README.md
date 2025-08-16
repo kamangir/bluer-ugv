@@ -24,6 +24,7 @@
 - [front wheel accessories](./front-wheel-accessories.md).
 - [gearboxed DC motor, 6V DC](./yellow-gearbox-dc-motor.md).
 - [push button](./pushbutton.md).
+- [shaft, 10 cm](./shaft-10cm.md).
 - [single-sided PCB, 14 cm x 9.5 cm](./PCB-single-14x9_5.md).
 - [template](./template.md).
 - [wheels for gearboxed DC motor](./yellow-wheels.md).

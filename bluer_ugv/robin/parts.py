@@ -6,4 +6,5 @@ dict_of_parts = {
     "yellow-wheels": "x 2",
     "front-wheel-accessories": "",
     "L-1x2": "",
+    "shaft-10cm": "",
 }
