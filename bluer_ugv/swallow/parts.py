@@ -8,7 +8,7 @@ dict_of_parts = {
     "Polyfuse": "",
     "TVS-diode": "",
     "330-ohm": "",
-    "LED": "",
+    "LED": "green, red, yellow",
     "rpi-camera": "",
     "PCB-single-14x9_5": "2 x",
     "PCB-double-9x7": "",
