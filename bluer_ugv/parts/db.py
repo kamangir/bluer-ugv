@@ -37,8 +37,19 @@ db_of_parts["BTS7960"] = Part(
 db_of_parts["dc-motor-12-VDC-45W"] = Part(
     info=[
         "12 VDC motor, 20-45 W, 9000 RPM",
+        "https://parsbike.com/product/%D9%85%D9%88%D8%AA%D9%88%D8%B1-%DA%AF%DB%8C%D8%B1%D8%A8%DA%A9%D8%B3-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D8%B4%D8%A7%D8%B1%DA%98%DB%8C-%D9%88-%D9%85%D9%88%D8%AA%D9%88%D8%B1-%D8%B4%D8%A7%D8%B1%DA%98%DB%8C/",
     ],
-    images=["dcmotor.png"],
+    images=[
+        "dcmotor.png",
+        "gearbox1.jpg",
+        "gearbox2.jpg",
+        "gearbox3.jpg",
+        "gearbox4.jpg",
+        "gearbox5.jpg",
+        "gearbox6.jpg",
+        "gearbox7.jpg",
+        "gearbox8.jpg",
+    ],
 )
 
 db_of_parts["LED"] = Part(
@@ -268,6 +279,19 @@ db_of_parts["front-wheels"] = Part(
     ],
     images=[
         "front-wheels.jpg",
+    ],
+)
+
+db_of_parts["wheel"] = Part(
+    info=[
+        "power wheel wheels",
+        "https://sarobatic.ir/product/%DA%86%D8%B1%D8%AE-%D8%A8%D8%B2%D8%B1%DA%AF-%D8%B9%D9%82%D8%A8-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D8%B4%D8%A7%D8%B1%DA%98%DB%8C-%D8%A7%D8%B3%D8%AA%D9%88%DA%A9/",
+        "https://toys-repair.ir/product/2768/",
+    ],
+    images=[
+        "wheel1.jpg",
+        "wheel4.jpg",
+        "wheel3.jpg",
     ],
 )
 

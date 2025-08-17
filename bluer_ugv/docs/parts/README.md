@@ -25,6 +25,7 @@
 - [front connector](./front-connector.md).
 - [front wheels](./front-wheels.md).
 - [gearboxed DC motor, 6V DC](./yellow-gearbox-dc-motor.md).
+- [power wheel wheels](./wheel.md).
 - [push button](./pushbutton.md).
 - [shaft, 10 cm](./shaft-10cm.md).
 - [single-sided PCB, 14 cm x 9.5 cm](./PCB-single-14x9_5.md).
