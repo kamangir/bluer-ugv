@@ -41,14 +41,14 @@ db_of_parts["dc-motor-12-VDC-45W"] = Part(
     ],
     images=[
         "dcmotor.png",
-        "gearbox1.png",
-        "gearbox2.png",
-        "gearbox3.png",
-        "gearbox4.png",
-        "gearbox5.png",
-        "gearbox6.png",
-        "gearbox7.png",
-        "gearbox8.png",
+        "gearbox1.jpg",
+        "gearbox2.jpg",
+        "gearbox3.jpg",
+        "gearbox4.jpg",
+        "gearbox5.jpg",
+        "gearbox6.jpg",
+        "gearbox7.jpg",
+        "gearbox8.jpg",
     ],
 )
 
