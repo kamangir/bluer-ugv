@@ -13,4 +13,5 @@ dict_of_parts = {
     "PCB-single-14x9_5": "2 x",
     "PCB-double-9x7": "",
     "pushbutton": "",
+    "wheel": "4 x ",
 }
