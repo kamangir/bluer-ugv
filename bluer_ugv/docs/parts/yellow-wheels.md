@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/yellow-wheels.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/yellow-wheels.jpg?raw=true) |

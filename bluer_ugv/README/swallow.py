@@ -3,7 +3,7 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.README import items
 from bluer_ugv.swallow.parts import dict_of_parts
-from bluer_ugv.README.consts import algo_docs, assets, assets2
+from bluer_ugv.README.consts import algo_docs, assets, assets2_bluer_swallow
 
 docs = [
     {
@@ -39,9 +39,9 @@ docs = [
         "path": "../docs/bluer_swallow/digital/design/terraform.md",
         "items": ImageItems(
             {
-                f"{assets2}/20250611_100917.jpg": "",
-                f"{assets2}/lab.png": "",
-                f"{assets2}/lab2.png": "",
+                f"{assets2_bluer_swallow}/20250611_100917.jpg": "",
+                f"{assets2_bluer_swallow}/lab.png": "",
+                f"{assets2_bluer_swallow}/lab2.png": "",
             }
         ),
     },
@@ -66,9 +66,9 @@ docs = [
         "path": "../docs/bluer_swallow/digital/dataset/collection",
         "items": ImageItems(
             {
-                f"{assets2}/2025-07-08-13-09-38-so54ao.png": "",
-                f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
-                f"{assets2}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
+                f"{assets2_bluer_swallow}/2025-07-08-13-09-38-so54ao.png": "",
+                f"{assets2_bluer_swallow}/2025-07-09-11-20-27-4qf255-000-2.png": "",
+                f"{assets2_bluer_swallow}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
             }
         ),
     },
@@ -85,7 +85,7 @@ docs = [
         "path": "../docs/bluer_swallow/digital/model/tracking.md",
         "items": ImageItems(
             {
-                f"{assets2}/target-selection.png": f"{algo_docs}/socket.md",
+                f"{assets2_bluer_swallow}/target-selection.png": f"{algo_docs}/socket.md",
             }
         ),
     },

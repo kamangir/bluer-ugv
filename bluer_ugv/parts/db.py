@@ -294,6 +294,18 @@ db_of_parts["wheel"] = Part(
     ],
 )
 
+db_of_parts["ultrasonic-sensor"] = Part(
+    info=[
+        "HC-SR04",
+        "[datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)",
+        "1m ~= 6ms",
+        "fov = 15 - 30 deg",
+    ],
+    images=[
+        "HC-SR04.jpg",
+    ],
+)
+
 db_of_parts["template"] = Part(
     info=[
         "template",

@@ -1,5 +1,5 @@
 from bluer_objects.README.items import ImageItems
 
-assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-fire"
+from bluer_ugv.README.consts import assets2_bluer_fire
 
 items = ImageItems({})

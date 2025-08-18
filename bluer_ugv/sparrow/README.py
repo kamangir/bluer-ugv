@@ -1,10 +1,10 @@
 from bluer_objects.README.items import ImageItems
 
-assets2 = "https://github.com/kamangir/assets2/blob/main/bluer-sparrow"
+from bluer_ugv.README.consts import assets2_bluer_sparrow
 
 items = ImageItems(
     {
-        f"{assets2}/20250722_174115-2.jpg": "",
-        f"{assets2}/20250729_234927.jpg": "",
+        f"{assets2_bluer_sparrow}/20250722_174115-2.jpg": "",
+        f"{assets2_bluer_sparrow}/20250818_191815.jpg": "",
     }
 )

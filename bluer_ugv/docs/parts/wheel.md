@@ -6,4 +6,4 @@
 
 |   |   |   |
 | --- | --- | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/wheel1.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/wheel4.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/wheel3.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/wheel1.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/wheel4.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/wheel3.jpg?raw=true) |
