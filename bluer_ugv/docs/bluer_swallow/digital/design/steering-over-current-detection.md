@@ -8,4 +8,4 @@ proposed. 🚧
 
 |   |
 | --- |
-| [![image](../../../diagrams/bluer_swallow/steering-over-current.png)](../../../diagrams/bluer_swallow/steering-over-current.svg) |
+| [![image](../../../../diagrams/bluer_swallow/steering-over-current.png)](../../../../diagrams/bluer_swallow/steering-over-current.svg) |

@@ -32,7 +32,7 @@ docs = [
         "path": "../docs/bluer_swallow/digital/design/steering-over-current-detection.md",
         "items": ImageItems(
             {
-                "../../../diagrams/bluer_swallow/steering-over-current.png": "../../../diagrams/bluer_swallow/steering-over-current.svg",
+                "../../../../diagrams/bluer_swallow/steering-over-current.png": "../../../../diagrams/bluer_swallow/steering-over-current.svg",
             }
         ),
     },
