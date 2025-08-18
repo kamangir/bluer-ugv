@@ -21,8 +21,6 @@ items = ImageItems(
         f"{assets2}/20250707_122000.jpg": "",
         f"{assets2}/20250707_182818.jpg": "",
         f"{assets2}/2025-07-08-13-09-38-so54ao.png": "",
-        f"{assets}/2025-07-09-10-26-30-itpbmu/grid.png": "./digital/dataset/collection/validation.md",
-        f"{assets}/2025-07-09-10-26-30-itpbmu/grid-timeline.png": "./digital/dataset/review.md",
         f"{assets2}/20250709_111955.jpg": "",
         f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
         f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png": "./digital/dataset/combination/validation.md",
