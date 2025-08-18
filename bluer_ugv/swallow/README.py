@@ -22,9 +22,6 @@ items = ImageItems(
         f"{assets2}/2025-07-08-13-09-38-so54ao.png": "",
         f"{assets2}/20250709_111955.jpg": "",
         f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
-        f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/loss.png": "./digital/model/validation.md",
-        f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/evaluation.png": "./digital/model/validation.md",
-        f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/confusion_matrix.png": "./digital/model/validation.md",
         #
         f"{assets2}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
         f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
