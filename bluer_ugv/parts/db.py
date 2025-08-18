@@ -302,3 +302,12 @@ db_of_parts["template"] = Part(
         "template.jpg",
     ],
 )
+
+db_of_parts["template"] = Part(
+    info=[
+        "template",
+    ],
+    images=[
+        "template.jpg",
+    ],
+)
