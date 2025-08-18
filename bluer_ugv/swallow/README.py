@@ -1,7 +1,6 @@
-from bluer_ugv.README.consts import assets, assets2
+from bluer_ugv.README.consts import algo_docs, assets, assets2
 from bluer_objects.README.items import ImageItems
 
-algo_docs = "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs"
 
 items = ImageItems(
     {
@@ -24,8 +23,5 @@ items = ImageItems(
         f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
         #
         f"{assets2}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
-        f"{assets}/swallow-dataset-2025-07-14-09-17-04-f5bq7b/grid.png": "./digital/dataset/combination/one.md",
-        #
-        f"{assets2}/target-selection.png": f"{algo_docs}/socket.md",
     }
 )

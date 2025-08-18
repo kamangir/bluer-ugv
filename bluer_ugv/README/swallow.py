@@ -3,7 +3,7 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.README import items
 from bluer_ugv.swallow.parts import dict_of_parts
-from bluer_ugv.README.consts import assets, assets2
+from bluer_ugv.README.consts import algo_docs, assets, assets2
 
 docs = [
     {
@@ -72,4 +72,12 @@ docs = [
     {"path": "../docs/bluer_swallow/digital/model"},
     {"path": "../docs/bluer_swallow/digital/model/validation.md"},
     {"path": "../docs/bluer_swallow/digital/model/one.md"},
+    {
+        "path": "../docs/bluer_swallow/digital/model/tracking.md",
+        "items": ImageItems(
+            {
+                f"{assets2}/target-selection.png": f"{algo_docs}/socket.md",
+            }
+        ),
+    },
 ]
