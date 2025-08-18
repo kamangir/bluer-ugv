@@ -20,8 +20,5 @@ items = ImageItems(
         f"{assets2}/20250707_182818.jpg": "",
         f"{assets2}/2025-07-08-13-09-38-so54ao.png": "",
         f"{assets2}/20250709_111955.jpg": "",
-        f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
-        #
-        f"{assets2}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
     }
 )

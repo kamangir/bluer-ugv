@@ -59,6 +59,8 @@ docs = [
         "path": "../docs/bluer_swallow/digital/dataset/collection",
         "items": ImageItems(
             {
+                f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
+                f"{assets2}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
                 f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png": "./digital/dataset/combination/validation.md",
             }
         ),
