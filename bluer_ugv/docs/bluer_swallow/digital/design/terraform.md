@@ -18,6 +18,8 @@
 @swallow env cp
 ```
 
+<details>
+
 ## Ubuntu 64-bit
 
 > ⚠️ camera needs work.
@@ -28,6 +30,7 @@
 ```bash
 @env dot cp swallow
 ```
+</details>
 
 |   |   |   |
 | --- | --- | --- |
