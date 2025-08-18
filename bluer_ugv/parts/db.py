@@ -40,7 +40,6 @@ db_of_parts["dc-motor-12-VDC-45W"] = Part(
         "https://parsbike.com/product/%D9%85%D9%88%D8%AA%D9%88%D8%B1-%DA%AF%DB%8C%D8%B1%D8%A8%DA%A9%D8%B3-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D8%B4%D8%A7%D8%B1%DA%98%DB%8C-%D9%88-%D9%85%D9%88%D8%AA%D9%88%D8%B1-%D8%B4%D8%A7%D8%B1%DA%98%DB%8C/",
     ],
     images=[
-        "dcmotor.png",
         "gearbox1.jpg",
         "gearbox2.jpg",
         "gearbox3.jpg",
