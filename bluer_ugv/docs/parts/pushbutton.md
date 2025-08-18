@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/pushbutton.png?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/pushbutton.png?raw=true) |

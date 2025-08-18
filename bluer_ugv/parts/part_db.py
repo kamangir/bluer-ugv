@@ -15,6 +15,7 @@ from bluer_objects.env import abcli_path_git
 
 from bluer_ugv import NAME
 from bluer_ugv.parts.part import Part
+from bluer_ugv.README.consts import assets2
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
@@ -24,7 +25,7 @@ class PartDB:
     def __init__(self):
         self._db: Dict[str, Part] = {}
 
-        self.url_prefix = "https://github.com/kamangir/assets2/blob/main/bluer-ugv"
+        self.url_prefix = f"{assets2}/bluer-ugv"
 
         self.path = os.path.join(
             abcli_path_git,

@@ -7,4 +7,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/HC-SR04.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/HC-SR04.jpg?raw=true) |
