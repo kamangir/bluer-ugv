@@ -9,7 +9,6 @@ items = ImageItems(
         f"{assets}/bluer-ugv/bluer-light.png": "",
         "../../../diagrams/bluer_swallow/3d-design.png": "../../../diagrams/bluer_swallow/3d-design.stl",
         f"{assets2}/20250605_180136.jpg": "",
-        "../../../diagrams/bluer_swallow/analog.png": "../../../diagrams/bluer_swallow/analog.svg",
         f"{assets2}/20250608_144453.jpg": "",
         f"{assets2}/20250611_100917.jpg": "",
         f"{assets2}/20250616_134654.jpg": "",

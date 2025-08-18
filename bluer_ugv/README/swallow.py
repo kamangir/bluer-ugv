@@ -9,7 +9,14 @@ docs = [
         "items": items,
         "path": "../docs/bluer_swallow",
     },
-    {"path": "../docs/bluer_swallow/analog"},
+    {
+        "path": "../docs/bluer_swallow/analog",
+        "items": ImageItems(
+            {
+                "../../../diagrams/bluer_swallow/analog.png": "../../../diagrams/bluer_swallow/analog.svg",
+            }
+        ),
+    },
     {"path": "../docs/bluer_swallow/digital"},
     {"path": "../docs/bluer_swallow/digital/design"},
     {"path": "../docs/bluer_swallow/digital/design/operation.md"},
