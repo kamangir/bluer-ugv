@@ -3,7 +3,7 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.README import items
 from bluer_ugv.swallow.parts import dict_of_parts
-from bluer_ugv.README.consts import assets2
+from bluer_ugv.README.consts import assets, assets2
 
 docs = [
     {
@@ -55,7 +55,14 @@ docs = [
     },
     {"path": "../docs/bluer_swallow/digital/design/rpi-pinout.md"},
     {"path": "../docs/bluer_swallow/digital/dataset"},
-    {"path": "../docs/bluer_swallow/digital/dataset/collection"},
+    {
+        "path": "../docs/bluer_swallow/digital/dataset/collection",
+        "items": ImageItems(
+            {
+                f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png": "./digital/dataset/combination/validation.md",
+            }
+        ),
+    },
     {"path": "../docs/bluer_swallow/digital/dataset/collection/validation.md"},
     {"path": "../docs/bluer_swallow/digital/dataset/collection/one.md"},
     {"path": "../docs/bluer_swallow/digital/dataset/combination"},

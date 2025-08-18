@@ -1,7 +1,6 @@
-from bluer_ugv.README.consts import assets2
+from bluer_ugv.README.consts import assets, assets2
 from bluer_objects.README.items import ImageItems
 
-assets = "https://github.com/kamangir/assets/raw/main"
 algo_docs = "https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs"
 
 items = ImageItems(
@@ -23,7 +22,6 @@ items = ImageItems(
         f"{assets2}/2025-07-08-13-09-38-so54ao.png": "",
         f"{assets2}/20250709_111955.jpg": "",
         f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
-        f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png": "./digital/dataset/combination/validation.md",
         f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/loss.png": "./digital/model/validation.md",
         f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/evaluation.png": "./digital/model/validation.md",
         f"{assets}/swallow-model-2025-07-11-15-04-03-2glcch/confusion_matrix.png": "./digital/model/validation.md",
