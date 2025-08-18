@@ -41,7 +41,7 @@ uses [combination/one](../dataset/combination/one.md).
     extensions=png,push .
 ```
 
-set:::model_object_name swallow-model-2025-07-14-13-18-10-kx0qrw
+set:::model_object_name env:::BLUER_UGV_SWALLOW_MODEL
 
 set:::prediction_object_name swallow-prediction-test-2025-07-14-14-13-57-ngywj1
 

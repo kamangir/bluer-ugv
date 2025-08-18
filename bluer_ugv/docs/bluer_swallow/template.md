@@ -2,5 +2,5 @@ title:::
 
 items:::
 
-- [mechanical and analog control](./analog)
+- [analog control](./analog)
 - [digital control](./digital)

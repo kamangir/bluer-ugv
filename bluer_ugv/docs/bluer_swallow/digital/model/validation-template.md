@@ -32,7 +32,7 @@ metadata:::get:::dataset_object_name
 
 ---
 
-set:::model_object_name swallow-model-2025-07-11-15-04-03-2glcch
+set:::model_object_name env:::BLUER_UGV_SWALLOW_MODEL_1X
 
 assets:::get:::model_object_name/loss.png
 

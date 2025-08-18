@@ -5,6 +5,6 @@
 
 |   |   |   |
 | --- | --- | --- |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/dcmotor.png?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox1.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox2.jpg?raw=true) |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox3.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox4.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox5.jpg?raw=true) |
-| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox6.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox7.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox8.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox1.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox2.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox3.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox4.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox5.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox6.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox7.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/blob/main/bluer-ugv/gearbox8.jpg?raw=true) |  |
