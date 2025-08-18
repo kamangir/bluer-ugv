@@ -19,6 +19,7 @@
 ```
 
 <details>
+<summary>Ubuntu 64-bit</summary>
 
 ## Ubuntu 64-bit
 
