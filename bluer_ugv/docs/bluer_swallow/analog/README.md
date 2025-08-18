@@ -8,4 +8,4 @@
 
 |   |
 | --- |
-| [![image](../../../../../diagrams/bluer_swallow/analog.png)](../../../../../diagrams/bluer_swallow/analog.svg) |
+| [![image](../../../../diagrams/bluer_swallow/analog.png)](../../../../diagrams/bluer_swallow/analog.svg) |
