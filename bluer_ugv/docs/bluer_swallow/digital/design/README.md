@@ -5,4 +5,4 @@
 - [shield](./shield.md)
 - [rpi-pinout](./rpi-pinout.md)
 - [operation](./operation.md)
-- [over-current detection](./steering-over-current-detection-template.md)
+- [over-current detection](./steering-over-current-detection.md)
