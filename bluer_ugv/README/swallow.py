@@ -1,3 +1,5 @@
+from bluer_objects.README.items import ImageItems
+
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.README import items
 from bluer_ugv.swallow.parts import dict_of_parts
@@ -26,7 +28,14 @@ docs = [
         },
     },
     {"path": "../docs/bluer_swallow/digital/design/terraform.md"},
-    {"path": "../docs/bluer_swallow/digital/design/steering-over-current-detection.md"},
+    {
+        "path": "../docs/bluer_swallow/digital/design/steering-over-current-detection.md",
+        "items": ImageItems(
+            {
+                "../../../diagrams/bluer_swallow/steering-over-current.png": "../../../diagrams/bluer_swallow/steering-over-current.svg",
+            }
+        ),
+    },
     {"path": "../docs/bluer_swallow/digital/design/rpi-pinout.md"},
     {"path": "../docs/bluer_swallow/digital/dataset"},
     {"path": "../docs/bluer_swallow/digital/dataset/collection"},

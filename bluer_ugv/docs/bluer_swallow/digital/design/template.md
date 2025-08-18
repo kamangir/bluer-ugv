@@ -1,6 +1,5 @@
 # bluer_swallow: digital: design 
 
-- [electrical diagram](../../../../../diagrams/bluer_swallow/digital.svg)
 - [parts](parts.md)
 - [terraform](./terraform.md)
 - [shield](./shield.md)

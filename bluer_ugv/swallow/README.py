@@ -20,7 +20,6 @@ items = ImageItems(
         f"{assets2}/20250629_123616.jpg": "",
         f"{assets2}/20250630_214923.jpg": "",
         f"{assets2}/20250701_2206342_1.gif": "",
-        "../../../diagrams/bluer_swallow/steering-over-current.png": "../../../diagrams/bluer_swallow/steering-over-current.svg",
         f"{assets2}/20250707_122000.jpg": "",
         f"{assets2}/20250707_182818.jpg": "",
         f"{assets2}/2025-07-08-13-09-38-so54ao.png": "",
