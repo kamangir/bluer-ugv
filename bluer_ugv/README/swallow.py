@@ -13,7 +13,7 @@ docs = [
         "path": "../docs/bluer_swallow/analog",
         "items": ImageItems(
             {
-                "../../../diagrams/bluer_swallow/analog.png": "../../../diagrams/bluer_swallow/analog.svg",
+                "../../../../../diagrams/bluer_swallow/analog.png": "../../../../../diagrams/bluer_swallow/analog.svg",
             }
         ),
     },
