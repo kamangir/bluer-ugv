@@ -24,13 +24,8 @@ items = ImageItems(
         f"{assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
         #
         f"{assets2}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
-        f"{assets}/sequence-2025-07-12-21-58-04-0wmt6d/grid.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
         f"{assets}/swallow-dataset-2025-07-14-09-17-04-f5bq7b/grid.png": "./digital/dataset/combination/one.md",
         #
-        f"{assets}/swallow-model-2025-07-14-13-18-10-kx0qrw/loss.png": "./digital/model/one.md",
-        f"{assets}/swallow-model-2025-07-14-13-18-10-kx0qrw/evaluation.png": "./digital/model/one.md",
-        f"{assets}/swallow-model-2025-07-14-13-18-10-kx0qrw/confusion_matrix.png": "./digital/model/one.md",
-        f"{assets}/swallow-prediction-test-2025-07-14-14-13-57-ngywj1/prediction.png": "./digital/model/one.md",
         f"{assets2}/target-selection.png": f"{algo_docs}/socket.md",
     }
 )
