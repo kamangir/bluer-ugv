@@ -13,6 +13,7 @@
     - w: speed forward.
     - y: mode = none.
     - space: stop.
+
 - leds:
     - green: control loop.
     - red:
@@ -25,6 +26,7 @@
     - yellow: 
         - command received. 
         - mousepad activity.
+    - blue: ultrasonic sensor activated.
 
 - mouse pad: 
     - move your finger:
