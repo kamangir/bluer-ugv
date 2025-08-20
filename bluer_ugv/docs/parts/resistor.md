@@ -1,6 +1,6 @@
-# parts: 330-ohm
+# parts: resistor
 
-- Resistor, 330-470 Ω, 1/4 watt, 5% tolerance
+- Resistor, 1/4 watt, 5% tolerance
 
 |   |
 | --- |

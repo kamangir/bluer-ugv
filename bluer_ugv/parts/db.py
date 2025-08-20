@@ -3,9 +3,9 @@ from bluer_ugv.parts.part_db import PartDB
 
 db_of_parts: PartDB = PartDB()
 
-db_of_parts["330-ohm"] = Part(
+db_of_parts["resistor"] = Part(
     info=[
-        "Resistor, 330-470 Ω, 1/4 watt, 5% tolerance",
+        "Resistor, 1/4 watt, 5% tolerance",
     ],
     images=["resistor.png"],
 )

@@ -7,7 +7,7 @@ dict_of_parts = {
     "470-mF": "",
     "Polyfuse": "",
     "TVS-diode": "",
-    "330-ohm": "",
+    "resistor": "3 x 330-470 Ω",
     "LED": "green, red, yellow",
     "rpi-camera": "",
     "PCB-single-14x9_5": "2 x",
