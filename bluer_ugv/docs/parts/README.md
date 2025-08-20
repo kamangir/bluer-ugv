@@ -1,7 +1,7 @@
 # parts
 
 - [12 VDC -> 5 VDC, 4A](./XL4015.md).
-- [12 VDC motor, 20-45 W, 9000 RPM](./dc-motor-12-VDC-45W.md).
+- [12 VDC motor, 20-45 W](./dc-motor-12-VDC-45W.md).
 - [2 x AA battery holder](./2xAA-battery-holder.md).
 - [36V DC hub motor, 350 W, front, no gearbox](./36v-hub-motor.md).
 - [4 x AA battery holder](./4xAA-battery-holder.md).
@@ -18,7 +18,7 @@
 - [Raspberry Pi 3B+](./rpi3bp.md).
 - [Raspberry Pi Camera, V1.3https://www.raspberrypi.com/documentation/accessories/camera.html](./rpi-camera.md).
 - [Rechargeable sealed lead acid battery, 12 V, 7 Ah](./SLA-Battery.md).
-- [Resistor, 330-470 Ω, 1/4 watt, 5% tolerance](./330-ohm.md).
+- [Resistor, 1/4 watt, 5% tolerance](./resistor.md).
 - [TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package](./TVS-diode.md).
 - [brushless drive, 36 - 48 V DC, 350 W, sine wave, silent](./brushless-350w-drive.md).
 - [capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.](./470-mF.md).
