@@ -26,7 +26,7 @@
     - yellow: 
         - command received. 
         - mousepad activity.
-    - blue: ultrasonic sensor activated.
+    - blue: ultrasonic sensor echo.
 
 - mouse pad: 
     - move your finger:

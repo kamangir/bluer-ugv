@@ -821,14 +821,14 @@
          y="13.999997" /></g><text
        xml:space="preserve"
        style="font-size:3.52777px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none"
-       x="179.83133"
-       y="289.7966"
+       x="280.70511"
+       y="292.77344"
        id="text42"><tspan
          sodipodi:role="line"
          id="tspan42"
          style="fill:#000000;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
-         x="179.83133"
-         y="289.7966">revision 1.7.0</tspan></text><image
+         x="280.70511"
+         y="292.77344">revision 1.8.0</tspan></text><image
        width="20.000004"
        height="35.555565"
        preserveAspectRatio="none"
@@ -1322,7 +1322,7 @@
          style="text-align:end;text-anchor:end;fill:#1f6acd;fill-opacity:1;stroke:#1f6acd;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
          x="271.7959"
          y="190"
-         id="tspan57">Trigger: 16, 29, 36, 31</tspan></text><text
+         id="tspan57">Trigger: 16, 29, 31, 36</tspan></text><text
        xml:space="preserve"
        style="font-size:3.52777px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#26cd1f;fill-opacity:1;stroke:#26cd1f;stroke-width:0.3;stroke-miterlimit:2;stroke-dasharray:none;stroke-opacity:1"
        x="271.81064"
