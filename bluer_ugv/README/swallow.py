@@ -113,4 +113,12 @@ docs = [
     {
         "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/model/one.md",
     },
+    {
+        "path": "../docs/bluer_sparrow/algo/target-detection",
+        "items": ImageItems(
+            {
+                f"{assets2_bluer_swallow}/target-selection.png": f"{algo_docs}/socket.md",
+            }
+        ),
+    },
 ]
