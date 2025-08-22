@@ -1,4 +1,4 @@
-# bluer_swallow: digital: dataset: combination: validation
+# bluer_swallow: digital: algo: autonomous-driving: dataset: combination: validation
 
 uses [collection/validation](../collection/validation.md).
 

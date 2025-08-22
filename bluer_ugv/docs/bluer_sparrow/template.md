@@ -5,3 +5,4 @@ title:::
 items:::
 
 - [design](./design)
+- [algo](./algo)

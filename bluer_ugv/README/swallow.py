@@ -18,9 +18,15 @@ docs = [
             }
         ),
     },
-    {"path": "../docs/bluer_swallow/digital"},
-    {"path": "../docs/bluer_swallow/digital/design"},
-    {"path": "../docs/bluer_swallow/digital/design/operation.md"},
+    {
+        "path": "../docs/bluer_swallow/digital",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/design",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/design/operation.md",
+    },
     {
         "path": "../docs/bluer_swallow/digital/design/parts.md",
         "items": db_of_parts.as_images(
@@ -53,9 +59,17 @@ docs = [
             }
         ),
     },
-    {"path": "../docs/bluer_swallow/digital/design/rpi-pinout.md"},
     {
-        "path": "../docs/bluer_swallow/digital/dataset",
+        "path": "../docs/bluer_swallow/digital/design/rpi-pinout.md",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset",
         "items": ImageItems(
             {
                 f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png": "./digital/dataset/combination/validation.md",
@@ -63,7 +77,7 @@ docs = [
         ),
     },
     {
-        "path": "../docs/bluer_swallow/digital/dataset/collection",
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/collection",
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/2025-07-08-13-09-38-so54ao.png": "",
@@ -72,17 +86,35 @@ docs = [
             }
         ),
     },
-    {"path": "../docs/bluer_swallow/digital/dataset/collection/validation.md"},
-    {"path": "../docs/bluer_swallow/digital/dataset/collection/one.md"},
-    {"path": "../docs/bluer_swallow/digital/dataset/combination"},
-    {"path": "../docs/bluer_swallow/digital/dataset/combination/validation.md"},
-    {"path": "../docs/bluer_swallow/digital/dataset/combination/one.md"},
-    {"path": "../docs/bluer_swallow/digital/dataset/review.md"},
-    {"path": "../docs/bluer_swallow/digital/model"},
-    {"path": "../docs/bluer_swallow/digital/model/validation.md"},
-    {"path": "../docs/bluer_swallow/digital/model/one.md"},
     {
-        "path": "../docs/bluer_swallow/digital/model/tracking.md",
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/collection/validation.md"
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/collection/one.md"
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/combination"
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/combination/validation.md"
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/combination/one.md"
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/review.md",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/model",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/model/validation.md"
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/model/one.md",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/target-tracking",
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/target-selection.png": f"{algo_docs}/socket.md",
