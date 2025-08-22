@@ -1,6 +1,9 @@
+from bluer_objects.README.items import ImageItems
+
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.sparrow.README import items
 from bluer_ugv.sparrow.parts import dict_of_parts
+from bluer_ugv.README.consts import algo_docs, assets2_bluer_swallow
 
 docs = [
     {
@@ -24,6 +27,15 @@ docs = [
             ),
         },
     },
-    {"path": "../docs/bluer_sparrow/algo"},
-    {"path": "../docs/bluer_sparrow/algo/target-detection"},
+    {
+        "path": "../docs/bluer_sparrow/algo",
+    },
+    {
+        "path": "../docs/bluer_sparrow/algo/target-detection",
+        "items": ImageItems(
+            {
+                f"{assets2_bluer_swallow}/target-selection.png": f"{algo_docs}/socket.md",
+            }
+        ),
+    },
 ]
