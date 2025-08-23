@@ -2,10 +2,10 @@
 
 | Responsibility        | Function       | Physical Pin | GPIO | Notes                                      |
 | --------------------- | -------------- | ------------ | ---- | ------------------------------------------ |
-| Steering Motor        | PWM Right      | 12           | 18   | PWM0                                       |
-| Steering Motor        | PWM Left       | 32           | 12   | PWM0 (alternate), Shares PWM0 with GPIO 18 |
-| Rear Motors           | PWM Right      | 33           | 13   | PWM1                                       |
-| Rear Motors           | PWM Left       | 35           | 19   | PWM1 (alternate), Shares PWM1 with GPIO 13 |
+| Motor 1               | PWM Right      | 12           | 18   | PWM0, Steering / Right                     |
+| Motor 1               | PWM Left       | 32           | 12   | PWM0 (alternate), Shares PWM0 with GPIO 18 |
+| Motor 2               | PWM Right      | 33           | 13   | PWM1, Rear / Left                          |
+| Motor 2               | PWM Left       | 35           | 19   | PWM1 (alternate), Shares PWM1 with GPIO 13 |
 | Green LED             | Digital Output | 11           | 17   |                                            |
 | RED LED               | Digital Output | 13           | 27   |                                            |
 | Blue LED              | Digital Output | 15           | 22   |                                            |
