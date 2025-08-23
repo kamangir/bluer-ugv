@@ -15,7 +15,7 @@
 
 3. run, 
 ```bash
-@swallow env cp
+@swallow env cp driving
 ```
 
 <details>
@@ -29,7 +29,7 @@
 
 2. run,
 ```bash
-@env dot cp swallow
+@env dot cp swallow driving
 ```
 </details>
 
