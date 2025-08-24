@@ -45,12 +45,12 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        self.steering = ClassicalSteeringMotor(
+        self.motor1 = ClassicalSteeringMotor(
             setpoint=self.setpoint,
             leds=self.leds,
         )
 
-        self.rear = ClassicalRearMotors(
+        self.motor2 = ClassicalRearMotors(
             setpoint=self.setpoint,
             leds=self.leds,
         )
@@ -81,8 +81,8 @@ class ClassicalSession:
 
     def cleanup(self):
         for thing in [
-            self.rear,
-            self.steering,
+            self.motor1,
+            self.motor2,
             self.camera,
         ]:
             thing.cleanup()
@@ -103,8 +103,8 @@ class ClassicalSession:
             for thing in [
                 self.push_button,
                 self.leds,
-                self.steering,
-                self.rear,
+                self.motor1,
+                self.motor2,
                 self.camera,
             ]
         )
@@ -117,8 +117,8 @@ class ClassicalSession:
                 self.push_button,
                 self.camera,
                 self.setpoint,
-                self.steering,
-                self.rear,
+                self.motor1,
+                self.motor2,
                 self.leds,
             ]
         )
