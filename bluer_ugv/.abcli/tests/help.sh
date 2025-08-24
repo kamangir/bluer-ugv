@@ -16,6 +16,7 @@ function test_bluer_ugv_help() {
         "@swallow env" \
         "@swallow env cp" \
         "@swallow env list" \
+        "@swallow env set" \
         \
         "@swallow select_target" \
         \

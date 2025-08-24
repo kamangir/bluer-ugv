@@ -8,8 +8,12 @@ docs = [
         "path": "../docs/bluer_sparrow",
         "cols": 2,
     },
-    {"path": "../docs/bluer_sparrow/design"},
-    {"path": "../docs/bluer_sparrow/design/specs.md"},
+    {
+        "path": "../docs/bluer_sparrow/design",
+    },
+    {
+        "path": "../docs/bluer_sparrow/design/specs.md",
+    },
     {
         "path": "../docs/bluer_sparrow/design/parts.md",
         "items": db_of_parts.as_images(
@@ -23,6 +27,9 @@ docs = [
                 log=False,
             ),
         },
+    },
+    {
+        "path": "../docs/bluer_sparrow/design/terraform.md",
     },
     {
         "path": "../docs/bluer_sparrow/algo",

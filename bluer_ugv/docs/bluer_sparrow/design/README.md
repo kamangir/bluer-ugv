@@ -1,4 +1,5 @@
 # bluer_sparrow: design
 
-- [parts](./parts.md)
 - [specs](./specs.md)
+- [parts](./parts.md)
+- [terraform](./terraform.md)

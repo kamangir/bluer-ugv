@@ -18,6 +18,6 @@ def help_select_target(
             "select_target",
         ]
         + args,
-        "bluer-plugin leaf <object-name>.",
+        "select swallow target.",
         mono=mono,
     )

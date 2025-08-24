@@ -34,7 +34,28 @@ def help_list(
     )
 
 
+def help_set(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    return show_usage(
+        [
+            "@swallow",
+            "env",
+            "set",
+            "steering",
+            "0 | 1",
+        ],
+        "set env.",
+        {
+            "steering: BLUER_SBC_SWALLOW_HAS_STEERING": "",
+        },
+        mono=mono,
+    )
+
+
 help_functions = {
     "cp": help_cp,
     "list": help_list,
+    "set": help_set,
 }
