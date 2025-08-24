@@ -1,6 +1,6 @@
 from RPi import GPIO  # type: ignore
 
-from bluer_sbc.env import BLUER_SBC_ENV
+from bluer_sbc.env import BLUER_SBC_ENV, BLUER_SBC_SWALLOW_HAS_STEERING
 
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
@@ -11,8 +11,12 @@ from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
-from bluer_ugv.swallow.session.classical.motor.rear import ClassicalRearMotors
-from bluer_ugv.swallow.session.classical.motor.steering import ClassicalSteeringMotor
+from bluer_ugv.swallow.session.classical.motor import (
+    ClassicalLeftMotor,
+    ClassicalRightMotor,
+    ClassicalRearMotors,
+    ClassicalSteeringMotor,
+)
 from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
 from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
@@ -45,14 +49,28 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        self.motor1 = ClassicalSteeringMotor(
+        self.has_steering = BLUER_SBC_SWALLOW_HAS_STEERING == 1
+        logger.info("has_steering: {}".format(self.has_steering))
+
+        self.motor1 = (
+            ClassicalSteeringMotor if self.has_steering else ClassicalRightMotor
+        )(
             setpoint=self.setpoint,
             leds=self.leds,
         )
 
-        self.motor2 = ClassicalRearMotors(
+        self.motor2 = (
+            ClassicalRearMotors if self.has_steering else ClassicalLeftMotor
+        )(
             setpoint=self.setpoint,
             leds=self.leds,
+        )
+
+        logger.info(
+            "wheel arrangement: {} + {}".format(
+                self.motor1.role,
+                self.motor2.role,
+            )
         )
 
         camera_class = (

@@ -47,6 +47,9 @@ def help_set(
             "0 | 1",
         ],
         "set env.",
+        {
+            "steering: BLUER_SBC_SWALLOW_HAS_STEERING": "",
+        },
         mono=mono,
     )
 
