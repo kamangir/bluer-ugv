@@ -46,4 +46,10 @@
 	env \
 	list
  . list swallow envs.
+@swallow \
+	env \
+	set \
+	steering \
+	0 | 1
+ . set env.
 ```
