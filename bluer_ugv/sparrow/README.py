@@ -6,5 +6,6 @@ items = ImageItems(
     {
         f"{assets2_bluer_sparrow}/20250722_174115-2.jpg": "",
         f"{assets2_bluer_sparrow}/20250818_191815.jpg": "",
+        "../../../diagrams/bluer_sparrow/design.png": "../../../diagrams/bluer_sparrow/design.stl",
     }
 )
