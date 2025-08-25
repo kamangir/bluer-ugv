@@ -88,3 +88,10 @@ Untracked files:
 	bluer-sparrow-mechanical-design
 
 no changes added to commit (use "git add" and/or "git commit -a")
+[sparrow-design-2025-08-25-s4ii4u 3d6e1cf] - - kamangir/bolt#746
+ 9 files changed, 94 insertions(+), 4 deletions(-)
+ create mode 100644 bluer-sparrow-mechanical-design
+ delete mode 100644 diagrams/bluer_sparrow/design.blend
+ delete mode 100644 diagrams/bluer_sparrow/design.blend1
+ delete mode 100644 diagrams/bluer_sparrow/design.png
+ delete mode 100644 diagrams/bluer_sparrow/design.stl
