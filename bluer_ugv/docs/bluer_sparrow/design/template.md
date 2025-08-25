@@ -3,4 +3,5 @@ title:::
 - [specs](./specs.md)
 - [parts](./parts.md)
 - [terraform](./terraform.md)
-- [steering](../../../../notebooks/tank_mixing.ipynb)
+- [steering](../../../../notebooks/bluer-swallow-steering-setpoint.ipynb)
+- [mechanical design](https://github.com/kamangir/bluer-sparrow-mechanical-design)
