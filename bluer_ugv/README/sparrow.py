@@ -6,7 +6,6 @@ docs = [
     {
         "items": items,
         "path": "../docs/bluer_sparrow",
-        "cols": 2,
     },
     {
         "path": "../docs/bluer_sparrow/design",
