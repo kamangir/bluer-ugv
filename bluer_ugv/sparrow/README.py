@@ -9,5 +9,9 @@ items = ImageItems(
         f"{assets2_bluer_sparrow}/20250825_190439.jpg": "",
         f"{assets2_bluer_sparrow}/20250825_190450.jpg": "",
         f"{assets2_bluer_sparrow}/20250825_190512.jpg": "",
+        f"{assets2_bluer_sparrow}/20250830_125608.jpg": "",
+        f"{assets2_bluer_sparrow}/20250830_125643.jpg": "",
+        f"{assets2_bluer_sparrow}/20250830_132019.jpg": "",
+        f"{assets2_bluer_sparrow}/VID-20250830-WA0000~3_1.gif": "",
     }
 )
