@@ -15,4 +15,5 @@ dict_of_parts = {
     "pushbutton": "",
     "wheel": "4 x ",
     "ultrasonic-sensor": "4 x",
+    "connector": "8 pairs",
 }

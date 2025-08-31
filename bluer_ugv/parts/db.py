@@ -308,6 +308,15 @@ db_of_parts["ultrasonic-sensor"] = Part(
     ],
 )
 
+db_of_parts["connector"] = Part(
+    info=[
+        "auto power connectors",
+    ],
+    images=[
+        "connector.jpg",
+    ],
+)
+
 db_of_parts["template"] = Part(
     info=[
         "template",
