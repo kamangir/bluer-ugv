@@ -19,7 +19,7 @@ items = README.Items(
         {
             "name": "bluer-sparrow",
             "marquee": f"{assets2_bluer_sparrow}/VID-20250830-WA0000~3_1.gif?raw=true",
-            "description": "bluer-swallow's little sister.",
+            "description": "[bluer-swallow](./bluer_ugv/docs/bluer_swallow)'s little sister.",
             "url": "./bluer_ugv/docs/bluer_sparrow",
         },
         {
