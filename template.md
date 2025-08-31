@@ -11,7 +11,7 @@ items:::
 # aliases
 
 [@swallow](./bluer_ugv/docs/aliases/swallow.md), 
-[@ugv](./ugv.md).
+[@ugv](./bluer_ugv/docs/aliases/ugv.md).
 
 ---
 
