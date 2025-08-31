@@ -3,7 +3,7 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.sparrow.README import items
 from bluer_ugv.sparrow.parts import dict_of_parts
-from bluer_ugv.README.consts import bluer_sparrow_design
+from bluer_ugv.README.consts import bluer_sparrow_mechanical_design
 
 docs = [
     {
@@ -37,9 +37,9 @@ docs = [
         "path": "../docs/bluer_sparrow/design/mechanical.md",
         "items": ImageItems(
             {
-                f"{bluer_sparrow_design}/robot.png": f"{bluer_sparrow_design}/robot.stl",
-                f"{bluer_sparrow_design}/cage.png": f"{bluer_sparrow_design}/cage.stl",
-                f"{bluer_sparrow_design}/measurements.png": "",
+                f"{bluer_sparrow_mechanical_design}/robot.png": f"{bluer_sparrow_mechanical_design}/robot.stl",
+                f"{bluer_sparrow_mechanical_design}/cage.png": f"{bluer_sparrow_mechanical_design}/cage.stl",
+                f"{bluer_sparrow_mechanical_design}/measurements.png": "",
             }
         ),
     },

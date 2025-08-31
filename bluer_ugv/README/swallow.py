@@ -4,6 +4,7 @@ from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.README import items
 from bluer_ugv.swallow.parts import dict_of_parts
 from bluer_ugv.README.consts import algo_docs, assets, assets2_bluer_swallow
+from bluer_ugv.README.consts import bluer_swallow_mechanical_design
 
 docs = [
     {
@@ -61,6 +62,16 @@ docs = [
     },
     {
         "path": "../docs/bluer_swallow/digital/design/rpi-pinout.md",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/design/mechanical.md",
+        "items": ImageItems(
+            {
+                f"{bluer_swallow_mechanical_design}/robot.png": f"{bluer_swallow_mechanical_design}/robot.stl",
+                f"{bluer_swallow_mechanical_design}/cage.png": f"{bluer_swallow_mechanical_design}/cage.stl",
+                f"{bluer_swallow_mechanical_design}/measurements.png": "",
+            }
+        ),
     },
     {
         "path": "../docs/bluer_swallow/digital/algo",
