@@ -1,6 +1,6 @@
 # 🐬 bluer-ugv
 
-🐬 `@ugv` is a [bluer-ai](https://github.com/kamangir/bluer-ai) plugin for [ROS](https://www.ros.org/).
+🐬 `@ugv` is a [bluer-ai](https://github.com/kamangir/bluer-ai) plugin for UGVs.
 
 ```bash
 pip install bluer_ugv
@@ -24,5 +24,5 @@ pip install bluer_ugv
 
 [![pylint](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/bluer-ugv.svg)](https://pypi.org/project/bluer-ugv/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/bluer-ugv)](https://pypistats.org/packages/bluer-ugv)
 
-built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-6.746.1`](https://github.com/kamangir/bluer-ugv).
+built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-6.747.1`](https://github.com/kamangir/bluer-ugv).
 
