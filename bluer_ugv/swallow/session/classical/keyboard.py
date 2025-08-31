@@ -2,7 +2,7 @@ import keyboard
 
 from bluer_sbc.session.functions import reply_to_bash
 
-from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv import env
 from bluer_ugv.logger import logger

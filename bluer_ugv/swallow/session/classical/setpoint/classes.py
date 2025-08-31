@@ -1,7 +1,10 @@
 import threading
-from typing import Union, Dict, Tuple
+from typing import Union, Dict
 
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
+from bluer_ugv.swallow.session.classical.setpoint.steering import (
+    generate_left_and_right,
+)
 from bluer_ugv.logger import logger
 
 
@@ -31,10 +34,10 @@ class ClassicalSetPoint:
                 }
 
             if what == "left":
-                return self.tank_mixing(self.speed, self.steering)[0]
+                return generate_left_and_right(self.speed, self.steering)[0]
 
             if what == "right":
-                return self.tank_mixing(self.speed, self.steering)[1]
+                return generate_left_and_right(self.speed, self.steering)[1]
 
             if what == "speed":
                 return self.speed
@@ -120,17 +123,6 @@ class ClassicalSetPoint:
 
         self.leds.leds["red"]["state"] = False
         self.leds.leds["yellow"]["state"] = False
-
-    @staticmethod
-    def tank_mixing(speed: int, steering: int) -> Tuple[int, int]:
-        left = speed + steering
-        right = speed - steering
-
-        m = max(abs(left), abs(right), 100)
-        left = left * 100 / m
-        right = right * 100 / m
-
-        return int(left), int(right)
 
     def update(self) -> bool:
         with self._lock:
