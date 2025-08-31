@@ -1,4 +1,4 @@
-# bluer_sparrow
+# bluer-sparrow
 
 [bluer_swallow](../bluer_swallow/)'s little sister.
 

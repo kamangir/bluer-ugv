@@ -1,4 +1,4 @@
-# bluer_sparrow: design: mechanical
+# bluer-sparrow: design: mechanical
 
 - [Blender files](https://github.com/kamangir/bluer-sparrow-mechanical-design)
 - material: 20 mm x 20 mm x 1.5 mm

@@ -15,7 +15,7 @@ from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
-from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv.logger import logger
 

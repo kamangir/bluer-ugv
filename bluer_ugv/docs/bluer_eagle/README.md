@@ -1,4 +1,4 @@
-# bluer_eagle
+# bluer-eagle
 
 |   |   |   |
 | --- | --- | --- |

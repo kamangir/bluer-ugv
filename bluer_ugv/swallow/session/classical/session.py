@@ -17,7 +17,7 @@ from bluer_ugv.swallow.session.classical.motor import (
     ClassicalRearMotors,
     ClassicalSteeringMotor,
 )
-from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 

@@ -24,6 +24,7 @@ setup(
         f"{NAME}.swallow.session.classical",
         f"{NAME}.swallow.session.classical.camera",
         f"{NAME}.swallow.session.classical.motor",
+        f"{NAME}.swallow.session.classical.setpoint",
         f"{NAME}.sparrow",
     ],
     include_package_data=True,

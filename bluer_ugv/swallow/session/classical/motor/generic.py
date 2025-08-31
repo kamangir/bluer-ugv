@@ -1,7 +1,7 @@
 from RPi import GPIO  # type: ignore
 
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
-from bluer_ugv.swallow.session.classical.setpoint import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 

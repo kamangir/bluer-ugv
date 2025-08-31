@@ -1,4 +1,4 @@
-# bluer_swallow: digital: design: parts
+# bluer-swallow: digital: design: parts
 
 1. [12 VDC -> 5 VDC, 4A](../../../parts/XL4015.md).
 1. [12 VDC motor, 20-45 W: type 1, 2 x rear + steering](../../../parts/dc-motor-12-VDC-45W.md).
