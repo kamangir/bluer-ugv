@@ -4,4 +4,4 @@
 - [parts](./parts.md)
 - [terraform](./terraform.md)
 - [steering setpoint](../../../../notebooks/bluer-swallow-steering-setpoint.ipynb)
-- [mechanical design](./mechanical.md)
+- [mechanical](./mechanical.md)
