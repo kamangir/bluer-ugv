@@ -8,12 +8,11 @@ dict_of_parts = {
     "Polyfuse": "optional",
     "TVS-diode": "",
     "resistor": "7 x 330-470 Ω + 4 x 1 kΩ + 4 x 2 kΩ",
-    "LED": "green + red + yellow",
+    "LED": "green + red + yellow + 4 x blue",
     "rpi-camera": "",
     "PCB-single-14x9_5": "2 x",
     "PCB-double-9x7": "2 x",
     "pushbutton": "",
     "wheel": "4 x ",
     "ultrasonic-sensor": "4 x",
-    "LED": "4 x blue",
 }
