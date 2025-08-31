@@ -12,4 +12,10 @@ assets2_bluer_robin = f"{assets2}/bluer-robin"
 assets2_bluer_swallow = f"{assets2}/bluer-swallow"
 assets2_bluer_sparrow = f"{assets2}/bluer-sparrow"
 
-bluer_sparrow_design = f"{github_kamangir}/bluer-sparrow-mechanical-design/blob/main"
+bluer_ugv_mechanical_design = f"{github_kamangir}/bluer-ugv-mechanical-design/"
+bluer_sparrow_mechanical_design = (
+    f"{bluer_ugv_mechanical_design}/blob/main/bluer_sparrow"
+)
+bluer_swallow_mechanical_design = (
+    f"{bluer_ugv_mechanical_design}/blob/main/bluer_swallow"
+)

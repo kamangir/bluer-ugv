@@ -6,3 +6,4 @@
 - [rpi-pinout](./rpi-pinout.md)
 - [operation](./operation.md)
 - [over-current detection](./steering-over-current-detection.md)
+- [mechanical](./mechanical.md)

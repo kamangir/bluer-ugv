@@ -10,7 +10,8 @@ items:::
 
 # aliases
 
-[@swallow](./bluer_ugv/docs/aliases/swallow.md).
+[@swallow](./bluer_ugv/docs/aliases/swallow.md), 
+[@ugv](./bluer_ugv/docs/aliases/ugv.md).
 
 ---
 
