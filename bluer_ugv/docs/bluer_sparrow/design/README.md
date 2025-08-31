@@ -1,4 +1,4 @@
-# bluer_sparrow: design
+# bluer-sparrow: design
 
 - [specs](./specs.md)
 - [parts](./parts.md)

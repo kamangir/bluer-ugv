@@ -1,4 +1,4 @@
-# bluer_robin: parts
+# bluer-robin: parts
 
 - source: [robotexiran](https://robotexiran.com/).
 

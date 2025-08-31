@@ -1,4 +1,4 @@
-# bluer_sparrow: design: parts
+# bluer-sparrow: design: parts
 
 same as [bluer-swallow parts](../../bluer_swallow/digital/design/parts.md) + ⬇️. 
 

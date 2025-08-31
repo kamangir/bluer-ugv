@@ -1,4 +1,4 @@
-# bluer_swallow: analog
+# bluer-swallow: analog
 
 - based on power wheels
 - [electrical diagram](../../../../diagrams/bluer_swallow/analog.svg)

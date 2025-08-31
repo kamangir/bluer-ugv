@@ -1,4 +1,4 @@
-# bluer_sparrow: design: terraform
+# bluer-sparrow: design: terraform
 
 1. follow [swallow](../../bluer_swallow/digital/design/terraform.md).
 

@@ -1,4 +1,4 @@
-# bluer_swallow: digital: algo
+# bluer-swallow: digital: algo
 
 - [autonomous driving](./autonomous-driving)
 - [target tracking](./target-tracking)

@@ -1,4 +1,4 @@
-# bluer_swallow: digital: algo: target-tracking
+# bluer-swallow: digital: algo: target-tracking
 
 |   |
 | --- |

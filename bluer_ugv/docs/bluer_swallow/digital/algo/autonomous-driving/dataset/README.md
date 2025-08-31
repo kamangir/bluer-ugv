@@ -1,4 +1,4 @@
-# bluer_swallow: digital: algo: autonomous-driving: dataset
+# bluer-swallow: digital: algo: autonomous-driving: dataset
 
 - [collection](./collection)
 - [review](./review.md)

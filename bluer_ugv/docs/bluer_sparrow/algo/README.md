@@ -1,3 +1,3 @@
-# bluer_sparrow: algo
+# bluer-sparrow: algo
 
 - [target detection](./target-detection/)

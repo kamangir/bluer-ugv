@@ -1,4 +1,4 @@
-# bluer_robin
+# bluer-robin
 
 remote control car kit for teenagers.
 
