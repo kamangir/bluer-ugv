@@ -1,6 +1,6 @@
 # bluer-sparrow: design: mechanical
 
-- [Blender files](https://github.com/kamangir/bluer-sparrow-mechanical-design)
+- [Blender files](https://github.com/kamangir/bluer-ugv-mechanical-design)
 - material: 20 mm x 20 mm x 1.5 mm x 6000 mm
 - parts:
     - 4 x 600 mm
@@ -12,4 +12,4 @@
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/robot.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/robot.stl) | [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/cage.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/cage.stl) | [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/measurements.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/measurements.png?raw=true) |
+| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/robot.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/robot.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/cage.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/cage.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/measurements.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/measurements.png?raw=true) |
