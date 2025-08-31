@@ -10,6 +10,6 @@
     - total: 5060 mm (5.06 m)
     - cut into 4 x (600 mm + 2 x 220 mm + 120 mm + 2 x 80 mm = 1320 mm ~= 1500 mm)
 
-|   |   |
-| --- | --- |
-| [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/robot.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/robot.stl) | [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/cage.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/cage.stl) |
+|   |   |   |
+| --- | --- | --- |
+| [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/robot.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/robot.stl) | [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/cage.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/cage.stl) | [![image](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/measurements.png?raw=true)](https://github.com/kamangir/bluer-sparrow-mechanical-design/blob/main/measurements.png?raw=true) |

@@ -39,6 +39,7 @@ docs = [
             {
                 f"{bluer_sparrow_design}/robot.png": f"{bluer_sparrow_design}/robot.stl",
                 f"{bluer_sparrow_design}/cage.png": f"{bluer_sparrow_design}/cage.stl",
+                f"{bluer_sparrow_design}/measurements.png": "",
             }
         ),
     },
