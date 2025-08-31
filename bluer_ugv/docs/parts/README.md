@@ -20,6 +20,7 @@
 - [Rechargeable sealed lead acid battery, 12 V, 7 Ah](./SLA-Battery.md).
 - [Resistor, 1/4 watt, 5% tolerance](./resistor.md).
 - [TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package](./TVS-diode.md).
+- [auto power connectors](./connector.md).
 - [brushless drive, 36 - 48 V DC, 350 W, sine wave, silent](./brushless-350w-drive.md).
 - [capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.](./470-mF.md).
 - [double-sided PCB, 9 cm x 7 cm](./PCB-double-9x7.md).
