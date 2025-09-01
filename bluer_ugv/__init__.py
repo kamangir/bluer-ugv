@@ -10,7 +10,7 @@ VERSION = "6.763.1"
 
 REPO_NAME = "bluer-ugv"
 
-MARQUEE = f"{assets2}/bluer-swallow/VID-20250830-WA0000~3_1.gif"
+MARQUEE = f"{assets2}/bluer-sparrow/VID-20250830-WA0000~3_1.gif"
 
 
 ALIAS = "@ugv"
