@@ -2,8 +2,8 @@ from typing import Tuple
 
 
 def generate_left_and_right(speed: int, steering: int) -> Tuple[int, int]:
-    left = speed + steering
-    right = speed - steering
+    right = speed + steering
+    left = speed - steering
 
     m = max(abs(left), abs(right), 100)
     left = left * 100 / m
