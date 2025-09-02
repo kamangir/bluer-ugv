@@ -34,12 +34,22 @@ docs = [
         "path": "../docs/bluer_sparrow/design/terraform.md",
     },
     {
-        "path": "../docs/bluer_sparrow/design/mechanical.md",
+        "path": "../docs/bluer_sparrow/design/mechanical",
         "items": ImageItems(
             {
                 f"{bluer_sparrow_mechanical_design}/robot.png": f"{bluer_sparrow_mechanical_design}/robot.stl",
                 f"{bluer_sparrow_mechanical_design}/cage.png": f"{bluer_sparrow_mechanical_design}/cage.stl",
                 f"{bluer_sparrow_mechanical_design}/measurements.png": "",
+            }
+        ),
+    },
+    {
+        "path": "../docs/bluer_sparrow/design/mechanical/v1.md",
+        "items": ImageItems(
+            {
+                f"{bluer_sparrow_mechanical_design}/v1/robot.png": f"{bluer_sparrow_mechanical_design}/v1/robot.stl",
+                f"{bluer_sparrow_mechanical_design}/v1/cage.png": f"{bluer_sparrow_mechanical_design}/v1/cage.stl",
+                f"{bluer_sparrow_mechanical_design}/v1/measurements.png": "",
             }
         ),
     },

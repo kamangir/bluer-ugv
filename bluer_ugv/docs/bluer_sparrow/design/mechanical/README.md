@@ -5,11 +5,12 @@
 - parts:
     - 4 x 600 mm
     - 7 x 220 mm
-    - 4 x 120 mm
-    - 8 x 80 mm
+    - 12 x 80 mm
     - total: 5060 mm (5.06 m)
-    - cut into 4 x (600 mm + 2 x 220 mm + 120 mm + 2 x 80 mm = 1320 mm ~= 1500 mm)
+    - cut into 4 x (600 mm + 2 x 220 mm + 3 x 80 mm = 1280 mm) ~= 1500 mm
 
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/robot.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/robot.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/cage.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/cage.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/measurements.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_sparrow/measurements.png?raw=true) |
+
+- [v1](./v1.md)
