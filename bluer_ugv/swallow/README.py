@@ -19,5 +19,6 @@ items = ImageItems(
         f"{assets2_bluer_swallow}/20250707_122000.jpg": "",
         f"{assets2_bluer_swallow}/20250707_182818.jpg": "",
         f"{assets2_bluer_swallow}/20250709_111955.jpg": "",
+        f"{assets2_bluer_swallow}/20250904_174526.jpg": "",
     }
 )
