@@ -14,7 +14,7 @@ def help_cp(
             "cp",
             "[<env-name>]",
         ],
-        "cp swallow swallow-raspbian-<env-name>.",
+        "cp swallow swallow-raspbian-<env-name>.env.",
         mono=mono,
     )
 

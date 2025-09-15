@@ -1,4 +1,7 @@
 # bluer-swallow: digital: algo: driving
 
-- [autonomous driving](./autonomous-driving)
-- [target tracking](./target-tracking)
+drive [with a keyboard](../design/operation.md).
+
+```bash
+@swallow env cp driving
+```

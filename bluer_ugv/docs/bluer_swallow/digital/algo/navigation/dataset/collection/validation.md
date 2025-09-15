@@ -1,4 +1,4 @@
-# bluer-swallow: digital: algo: autonomous-driving: dataset: collection: validation
+# bluer-swallow: digital: algo: navigation: dataset: collection: validation
 
 Start `swallow`, press `t` (to start training), drive for 5 minutes, press `i` (to exit).
 

@@ -1,4 +1,4 @@
-# bluer-swallow: digital: algo: autonomous-driving: dataset: review
+# bluer-swallow: digital: algo: navigation: dataset: review
 
 ```bash
 @select 2025-07-09-10-26-30-itpbmu
