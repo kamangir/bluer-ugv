@@ -1,4 +1,4 @@
-# bluer_swallow: digital: model
+title:::
 
 - [validation](./validation.md)
 - [one](./one.md)

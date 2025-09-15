@@ -1,4 +1,4 @@
-# bluer_swallow: digital: model
+# bluer-swallow: digital: algo: autonomous-driving: model
 
 - [validation](./validation.md)
 - [one](./one.md)
