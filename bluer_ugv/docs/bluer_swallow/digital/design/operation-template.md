@@ -14,6 +14,8 @@ title:::
     - y: mode = none.
     - space: stop.
 
+items:::
+
 - leds:
     - green: control loop.
     - red:

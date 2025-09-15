@@ -27,6 +27,11 @@ docs = [
     },
     {
         "path": "../docs/bluer_swallow/digital/design/operation.md",
+        "items": ImageItems(
+            {
+                f"{assets2_bluer_swallow}/20250915_111435.jpg": "",
+            }
+        ),
     },
     {
         "path": "../docs/bluer_swallow/digital/design/parts.md",
