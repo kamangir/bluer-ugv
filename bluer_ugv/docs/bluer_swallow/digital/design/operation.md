@@ -14,6 +14,10 @@
     - y: mode = none.
     - space: stop.
 
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20250915_111435.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20250915_111435.jpg?raw=true) |
+
 - leds:
     - green: control loop.
     - red:
