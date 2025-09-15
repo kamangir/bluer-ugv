@@ -92,6 +92,9 @@ docs = [
         "path": "../docs/bluer_swallow/digital/algo",
     },
     {
+        "path": "../docs/bluer_swallow/digital/algo/driving.md",
+    },
+    {
         "path": "../docs/bluer_swallow/digital/algo/autonomous-driving",
     },
     {
