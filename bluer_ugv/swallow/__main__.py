@@ -5,6 +5,7 @@ from blueness.argparse.generic import sys_exit
 
 from bluer_ugv import NAME
 from bluer_ugv.swallow.targeting import select_target
+from bluer_ugv.swallow.debug import debug
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
@@ -13,7 +14,7 @@ parser = argparse.ArgumentParser(NAME)
 parser.add_argument(
     "task",
     type=str,
-    help="select_target",
+    help="debug|select_target",
 )
 parser.add_argument(
     "--host",
@@ -28,7 +29,12 @@ parser.add_argument(
 args = parser.parse_args()
 
 success = False
-if args.task == "select_target":
+if args.task == "debug":
+    success = debug(
+        host=args.host,
+        loop=args.loop == 1,
+    )
+elif args.task == "select_target":
     success = select_target(
         host=args.host,
         loop=args.loop == 1,

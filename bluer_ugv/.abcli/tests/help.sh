@@ -18,6 +18,7 @@ function test_bluer_ugv_help() {
         "@swallow env list" \
         "@swallow env set" \
         \
+        "@swallow debug" \
         "@swallow select_target" \
         \
         "@ugv" \
