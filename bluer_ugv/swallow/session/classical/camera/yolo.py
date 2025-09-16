@@ -111,9 +111,11 @@ class ClassicalYoloCamera(ClassicalCamera):
         return True
 
     def update_action(self) -> bool:
-        self.action_enabled = not self.action_enabled
+        if not self.prediction_timer.tick():
+            return True
 
-        if not self.prediction_timer.tick() or not self.action_enabled:
+        self.action_enabled = not self.action_enabled
+        if not self.action_enabled:
             return True
 
         self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
