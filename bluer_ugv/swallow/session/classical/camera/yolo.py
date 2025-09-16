@@ -8,6 +8,7 @@ from bluer_objects.storage.policies import DownloadPolicy
 from bluer_objects import storage
 from bluer_objects.metadata import post_to_object, get_from_object
 from bluer_sbc.imager.camera import instance as camera
+from bluer_sbc.env import BLUER_SBC_CAMERA_WIDTH
 from bluer_algo.yolo.dataset.classes import YoloDataset
 from bluer_algo.yolo.model.predictor import YoloPredictor
 
@@ -62,6 +63,7 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         success, self.predictor = YoloPredictor.load(
             object_name=env.BLUER_UGV_SWALLOW_YOLO_MODEL,
+            image_size=BLUER_SBC_CAMERA_WIDTH,
         )
         return success
 
