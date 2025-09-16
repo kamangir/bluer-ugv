@@ -41,10 +41,10 @@ class ClassicalYoloCamera(ClassicalCamera):
             log=True,
         )
 
-        # TODO: enable
-        # self.dataset = YoloDataset(
-        #    object_name=self.object_name,
-        # )
+        self.dataset = YoloDataset(
+            object_name=self.object_name,
+            create=True,
+        )
 
         self.predictor = None
 
@@ -67,10 +67,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         super().cleanup()
 
         self.dataset.save(
-            metadata={
-                "source": host.get_name(),
-            },
-            log=True,
+            verbose=True,
         )
 
         if self.dataset.df.empty:
