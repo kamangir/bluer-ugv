@@ -157,7 +157,7 @@ docs = [
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/yolo-debug-{index}.png": ""
-                for index in range(3)
+                for index in range(6)
             }
         ),
     },
