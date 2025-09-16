@@ -161,7 +161,7 @@ docs = [
                 f"{assets2_bluer_swallow}/yolo-debug-{3}.png": "",
                 f"{assets2_bluer_swallow}/yolo-debug-{4}.png": "",
                 f"{assets2_bluer_swallow}/yolo-debug-{5}.png": "",
-                f"{assets}/swallow-debug-2025-09-16-19-53-19-4yzsp8/swallow-debug-2025-09-16-19-53-19-4yzsp8.gif": "",
+                f"{assets}/swallow-debug-2025-09-16-19-53-19-4yzsp8/swallow-debug-2025-09-16-19-53-19-4yzsp8-2.gif": "",
             }
         ),
     },
