@@ -10,5 +10,5 @@ function bluer_ugv_swallow_dataset_edit() {
     fi
 
     bluer_ai_code \
-        $ABCLI_OBJECT_ROOT/$BLUER_UGV_SWALLOW_DATASET_LIST/metadata.yaml
+        $ABCLI_OBJECT_ROOT/$BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST/metadata.yaml
 }

@@ -10,5 +10,5 @@ function bluer_ugv_swallow_dataset_download() {
 
     bluer_objects_download \
         $download_options \
-        $BLUER_UGV_SWALLOW_DATASET_LIST
+        $BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST
 }

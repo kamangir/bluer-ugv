@@ -23,11 +23,11 @@ def test_bluer_ugv_env():
 
     assert isinstance(env.BLUER_UGV_MOUSEPAD_ENABLED, int)
 
-    assert isinstance(env.BLUER_UGV_SWALLOW_DATASET_LIST, str)
-    assert env.BLUER_UGV_SWALLOW_DATASET_LIST
-
-    assert isinstance(env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL, str)
-    assert env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL
-
-    assert isinstance(env.BLUER_UGV_SWALLOW_YOLO_MODEL, str)
-    assert env.BLUER_UGV_SWALLOW_YOLO_MODEL
+    for object_name in [
+        env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
+        env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
+        env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
+        env.BLUER_UGV_SWALLOW_YOLO_MODEL,
+    ]:
+        assert isinstance(object_name, str)
+        assert object_name

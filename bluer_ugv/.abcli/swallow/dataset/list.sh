@@ -11,5 +11,5 @@ function bluer_ugv_swallow_dataset_list() {
 
     bluer_objects_metadata_get \
         key=dataset-list,object \
-        $BLUER_UGV_SWALLOW_DATASET_LIST
+        $BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST
 }

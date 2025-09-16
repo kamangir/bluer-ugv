@@ -57,9 +57,11 @@ def combine(
     if explicit_dataset_object_names != "not-given":
         list_of_dataset_object_names = explicit_dataset_object_names.split(",")
     else:
-        logger.info("reading from  {} ...".format(env.BLUER_UGV_SWALLOW_DATASET_LIST))
+        logger.info(
+            "reading from  {} ...".format(env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST)
+        )
         list_of_dataset_object_names: List[str] = get_from_object(
-            object_name=env.BLUER_UGV_SWALLOW_DATASET_LIST,
+            object_name=env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
             key="dataset-list",
             default=[],
             download=download,

@@ -10,5 +10,5 @@ function bluer_ugv_swallow_dataset_upload() {
 
     bluer_objects_upload \
         $upload_options \
-        $BLUER_UGV_SWALLOW_DATASET_LIST
+        $BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST
 }

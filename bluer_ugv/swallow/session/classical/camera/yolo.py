@@ -74,14 +74,14 @@ class ClassicalYoloCamera(ClassicalCamera):
             return
 
         dataset_list: List[str] = get_from_object(
-            object_name=env.BLUER_UGV_SWALLOW_DATASET_LIST,
+            object_name=env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
             key="dataset-list",
             default=[],
             download=True,
         )
         dataset_list.append(self.object_name)
         if not post_to_object(
-            object_name=env.BLUER_UGV_SWALLOW_DATASET_LIST,
+            object_name=env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
             key="dataset-list",
             value=dataset_list,
             upload=True,
