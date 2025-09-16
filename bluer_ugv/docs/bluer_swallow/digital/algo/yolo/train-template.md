@@ -128,3 +128,5 @@ metadata:::get:::object_name
 
 @assets publish extensions=gif,push
 ```
+
+items:::
