@@ -148,11 +148,17 @@ docs = [
         "path": "../docs/bluer_swallow/digital/algo/yolo",
         "items": ImageItems(
             {
-                f"{assets2_bluer_swallow}/yolo-debug.png": f"{algo_docs}/socket.md",
+                f"{assets2_bluer_swallow}/yolo-debug.png": "",
             }
         ),
     },
     {
         "path": "../docs/bluer_swallow/digital/algo/yolo/train.md",
+        "items": ImageItems(
+            {
+                f"{assets2_bluer_swallow}/yolo-debug-{index}.png": ""
+                for index in range(3)
+            }
+        ),
     },
 ]

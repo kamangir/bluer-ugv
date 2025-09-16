@@ -118,3 +118,7 @@ set:::object_name yolo-prediction-test-2025-09-16-17-02-49-yhwh85
 assets:::get:::object_name/000000000389.png
 
 metadata:::get:::object_name
+
+## predict (rpi)
+
+items:::

@@ -14,4 +14,4 @@ target tracking using an [@algo/yolo](https://github.com/kamangir/bluer-algo/tre
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug.png?raw=true)](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/socket.md) |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug.png?raw=true) |
