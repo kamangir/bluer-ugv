@@ -121,6 +121,10 @@ class ClassicalYoloCamera(ClassicalCamera):
         if not success:
             return success
 
+        import ipdb
+
+        ipdb.set_tace()
+
         # TODO: process metadata
 
         if 0 == 1:
