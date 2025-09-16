@@ -137,7 +137,7 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         if self.keyboard.debug_mode:
             if not self.send_debug_data(metadata["annotated_image"]):
-                return False
+                logger.warning("failed to send debug data.")
 
         if not metadata["detections"]:
             logger.info("no detections.")
