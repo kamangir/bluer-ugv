@@ -92,13 +92,6 @@ class ClassicalYoloCamera(ClassicalCamera):
             logger.error("failed to add object to dataset list.")
 
     def update(self) -> bool:
-        if self.keyboard.mode == OperationMode.ACTION:
-            self.setpoint.put(
-                what="steering",
-                value=0,
-                log=True,
-            )
-
         if not super().update():
             return False
 
@@ -116,6 +109,11 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         self.action_enabled = not self.action_enabled
         if not self.action_enabled:
+            self.setpoint.put(
+                what="steering",
+                value=0,
+                log=True,
+            )
             return True
 
         self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
