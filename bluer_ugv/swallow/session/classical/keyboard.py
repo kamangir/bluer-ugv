@@ -1,6 +1,5 @@
 import keyboard
 
-from bluer_options.env import abcli_hostname
 from bluer_sbc.session.functions import reply_to_bash
 from bluer_algo.socket.classes import DEV_HOST
 
@@ -91,12 +90,7 @@ class ClassicalKeyboard:
         if keyboard.is_pressed("b"):
             self.debug_mode = not self.debug_mode
             if self.debug_mode:
-                logger.info(
-                    'debug mode enabled, run "{}" on {}.'.format(
-                        f"@swallow debug --host {abcli_hostname}.local",
-                        DEV_HOST,
-                    )
-                )
+                logger.info(f'debug  enabled, run "@swallow debug" on {DEV_HOST}.')
 
         if keyboard.is_pressed("t"):
             self.mode = OperationMode.TRAINING
