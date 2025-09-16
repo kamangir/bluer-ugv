@@ -41,7 +41,7 @@
 	env \
 	cp \
 	[<env-name>]
- . cp swallow swallow-raspbian-<env-name>.
+ . cp swallow swallow-raspbian-<env-name>.env.
 @swallow \
 	env \
 	list

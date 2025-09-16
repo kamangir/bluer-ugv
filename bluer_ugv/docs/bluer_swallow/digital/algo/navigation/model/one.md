@@ -1,4 +1,4 @@
-# bluer-swallow: digital: algo: autonomous-driving: model: one
+# bluer-swallow: digital: algo: navigation: model: one
 
 uses [combination/one](../dataset/combination/one.md).
 

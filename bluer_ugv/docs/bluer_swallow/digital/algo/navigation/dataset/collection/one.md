@@ -1,4 +1,4 @@
-# bluer-swallow: digital: algo: autonomous-driving: dataset: collection: one
+# bluer-swallow: digital: algo: navigation: dataset: collection: one
 
 ```bash
 @list log \

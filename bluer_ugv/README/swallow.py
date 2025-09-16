@@ -92,10 +92,13 @@ docs = [
         "path": "../docs/bluer_swallow/digital/algo",
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving",
+        "path": "../docs/bluer_swallow/digital/algo/driving.md",
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset",
+        "path": "../docs/bluer_swallow/digital/algo/navigation",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/navigation/dataset",
         "items": ImageItems(
             {
                 f"{assets}/swallow-dataset-2025-07-11-10-53-04-n3oybs/grid.png": "./digital/dataset/combination/validation.md",
@@ -103,7 +106,7 @@ docs = [
         ),
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/collection",
+        "path": "../docs/bluer_swallow/digital/algo/navigation/dataset/collection",
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/2025-07-08-13-09-38-so54ao.png": "",
@@ -113,34 +116,28 @@ docs = [
         ),
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/collection/validation.md"
+        "path": "../docs/bluer_swallow/digital/algo/navigation/dataset/collection/validation.md"
+    },
+    {"path": "../docs/bluer_swallow/digital/algo/navigation/dataset/collection/one.md"},
+    {"path": "../docs/bluer_swallow/digital/algo/navigation/dataset/combination"},
+    {
+        "path": "../docs/bluer_swallow/digital/algo/navigation/dataset/combination/validation.md"
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/collection/one.md"
+        "path": "../docs/bluer_swallow/digital/algo/navigation/dataset/combination/one.md"
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/combination"
+        "path": "../docs/bluer_swallow/digital/algo/navigation/dataset/review.md",
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/combination/validation.md"
+        "path": "../docs/bluer_swallow/digital/algo/navigation/model",
+    },
+    {"path": "../docs/bluer_swallow/digital/algo/navigation/model/validation.md"},
+    {
+        "path": "../docs/bluer_swallow/digital/algo/navigation/model/one.md",
     },
     {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/combination/one.md"
-    },
-    {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/dataset/review.md",
-    },
-    {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/model",
-    },
-    {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/model/validation.md"
-    },
-    {
-        "path": "../docs/bluer_swallow/digital/algo/autonomous-driving/model/one.md",
-    },
-    {
-        "path": "../docs/bluer_swallow/digital/algo/target-tracking",
+        "path": "../docs/bluer_swallow/digital/algo/tracking",
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/target-selection.png": f"{algo_docs}/socket.md",
