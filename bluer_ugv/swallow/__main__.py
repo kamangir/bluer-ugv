@@ -30,10 +30,7 @@ args = parser.parse_args()
 
 success = False
 if args.task == "debug":
-    success = debug(
-        host=args.host,
-        loop=args.loop == 1,
-    )
+    success = debug()
 elif args.task == "select_target":
     success = select_target(
         host=args.host,
