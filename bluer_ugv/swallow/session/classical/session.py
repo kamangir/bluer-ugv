@@ -6,6 +6,7 @@ from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
     ClassicalNavigationCamera,
     ClassicalTrackingCamera,
+    ClassicalYoloCamera,
 )
 from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
 from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
@@ -74,12 +75,16 @@ class ClassicalSession:
         )
 
         camera_class = (
-            ClassicalTrackingCamera
-            if BLUER_SBC_ENV == "tracking"
+            ClassicalYoloCamera
+            if BLUER_SBC_ENV == "yolo"
             else (
-                ClassicalNavigationCamera
-                if BLUER_SBC_ENV == "navigation"
-                else ClassicalCamera
+                ClassicalTrackingCamera
+                if BLUER_SBC_ENV == "tracking"
+                else (
+                    ClassicalNavigationCamera
+                    if BLUER_SBC_ENV == "navigation"
+                    else ClassicalCamera
+                )
             )
         )
         logger.info(f"camera: {camera_class.__name__}")

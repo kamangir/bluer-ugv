@@ -7,3 +7,6 @@ from bluer_ugv.swallow.session.classical.camera.navigation import (
 from bluer_ugv.swallow.session.classical.camera.tracking import (
     ClassicalTrackingCamera,
 )
+from bluer_ugv.swallow.session.classical.camera.yolo import (
+    ClassicalYoloCamera,
+)
