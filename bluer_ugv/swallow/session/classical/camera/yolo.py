@@ -121,19 +121,46 @@ class ClassicalYoloCamera(ClassicalCamera):
         if not success:
             return success
 
-        import ipdb
+        if not metadata["detections"]:
+            logger.info("no detections.")
+            return True
 
-        ipdb.set_trace()
+        detection_off_center = [
+            (
+                (detection["bbox_xyxy"][0] + detection["bbox_xyxy"][2]) / 2
+                - image.shape[1] / 2
+            )
+            ** 2
+            + (
+                (detection["bbox_xyxy"][1] + detection["bbox_xyxy"][3]) / 2
+                - image.shape[0] / 2
+            )
+            ** 2
+            for detection in metadata["detections"]
+        ]
 
-        # TODO: process metadata
+        detection_index_list = [
+            index
+            for index in range(len(detection_off_center))
+            if detection_off_center[index] == min(detection_off_center)
+        ]
+        detection_index = detection_index_list[0]
+        logger.info(
+            "taking detection #{}: off-center: {} px".format(
+                detection_index,
+                detection_off_center[detection_index] ** 0.5,
+            )
+        )
 
-        if 0 == 1:
+        detection = metadata["detections"][detection_index]
+        detection_y_center = (detection["bbox_xyxy"][1] + detection["bbox_xyxy"][3]) / 2
+        if detection_y_center > image.shape[0] / 2:
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
                 log=True,
             )
-        elif 0 == 2:
+        else:
             self.setpoint.put(
                 what="steering",
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
