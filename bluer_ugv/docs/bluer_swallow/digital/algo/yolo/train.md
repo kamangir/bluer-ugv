@@ -1,5 +1,7 @@
 # bluer-swallow: digital: algo: yolo: train
 
+training a `256 x 256` model.
+
 # ingest
 
 ```bash
