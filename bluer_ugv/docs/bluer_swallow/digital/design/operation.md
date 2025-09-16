@@ -4,15 +4,15 @@
     - a: steer left.
     - b: debug.
     - d: steer right.
-    - G: mode = prediction.
-    - I: exit.
-    - O: shutdown.
+    - g: mode = prediction.
+    - i: exit.
+    - o: shutdown.
     - s: speed backward.
-    - P: reboot.
-    - T: mode = train.
-    - U: update.
+    - p: reboot.
+    - t: mode = train.
+    - u: update.
     - w: speed forward.
-    - Y: mode = none.
+    - y: mode = none.
     - space: stop.
 
 |   |
