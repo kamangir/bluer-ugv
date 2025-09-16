@@ -152,4 +152,7 @@ docs = [
             }
         ),
     },
+    {
+        "path": "../docs/bluer_swallow/digital/algo/yolo/train.md",
+    },
 ]
