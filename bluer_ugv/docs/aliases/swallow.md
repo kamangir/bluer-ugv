@@ -15,22 +15,22 @@
 @swallow \
 	dataset \
 	download \
-	[~metadata]
+	[~metadata,navigation|yolo]
  . download the swallow dataset.
 @swallow \
 	dataset \
 	edit \
-	[~download]
+	[~download,navigation|yolo]
  . edit the swallow dataset.
 @swallow \
 	dataset \
 	list \
-	[~download]
+	[~download,navigation|yolo]
  . list the swallow dataset.
 @swallow \
 	dataset \
 	upload \
-	[~metadata]
+	[~metadata,navigation|yolo]
  . upload the swallow dataset.
 ```
 
