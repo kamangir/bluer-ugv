@@ -128,9 +128,14 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         success, metadata = self.predictor.predict(
             image=image,
+            return_annotated_image=self.keyboard.debug_mode,
         )
         if not success:
             return success
+
+        if self.keyboard.debug_mode:
+            if not self.send_debug_data(metadata["annotated_image"]):
+                return False
 
         if not metadata["detections"]:
             logger.info("no detections.")
