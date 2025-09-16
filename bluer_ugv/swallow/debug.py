@@ -21,7 +21,7 @@ def debug() -> bool:
     title = "debug..."
 
     cv2.namedWindow(title)
-    logger.info(f"Ctrl+C to exit...")
+    logger.info("Ctrl+C to exit...")
 
     image = np.zeros((480, 640, 3), np.uint8)
 
