@@ -70,7 +70,7 @@ class ClassicalYoloCamera(ClassicalCamera):
             verbose=True,
         )
 
-        if self.dataset.df.empty:
+        if self.dataset.empty:
             return
 
         dataset_list: List[str] = get_from_object(
