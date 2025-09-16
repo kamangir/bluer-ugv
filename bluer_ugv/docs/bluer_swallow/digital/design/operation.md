@@ -3,15 +3,15 @@
 - keyboard:
     - a: steer left.
     - d: steer right.
-    - g: mode = prediction.
-    - i: exit.
-    - o: shutdown.
+    - G: mode = prediction.
+    - I: exit.
+    - O: shutdown.
     - s: speed backward.
-    - p: reboot.
-    - t: mode = train.
-    - u: update.
+    - P: reboot.
+    - T: mode = train.
+    - U: update.
     - w: speed forward.
-    - y: mode = none.
+    - Y: mode = none.
     - space: stop.
 
 |   |

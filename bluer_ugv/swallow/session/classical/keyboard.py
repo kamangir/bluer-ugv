@@ -8,10 +8,10 @@ from bluer_ugv import env
 from bluer_ugv.logger import logger
 
 bash_keys = {
-    "i": "exit",
-    "o": "shutdown",
-    "p": "reboot",
-    "u": "update",
+    "I": "exit",
+    "O": "shutdown",
+    "P": "reboot",
+    "U": "update",
 }
 
 
@@ -81,13 +81,13 @@ class ClassicalKeyboard:
                 value=self.setpoint.get(what="speed") + 10,
             )
 
-        if keyboard.is_pressed("y"):
+        if keyboard.is_pressed("Y"):
             self.mode = OperationMode.NONE
 
-        if keyboard.is_pressed("t"):
+        if keyboard.is_pressed("T"):
             self.mode = OperationMode.TRAINING
 
-        if keyboard.is_pressed("g"):
+        if keyboard.is_pressed("G"):
             self.mode = OperationMode.ACTION
 
         if mode != self.mode:
