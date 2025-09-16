@@ -10312,6 +10312,15 @@ train:
 
 ## predict (rpi)
 
+```bash
+@select swallow-debug-$(@timestamp)
+
+@swallow debug .
+
+@assets publish extensions=gif,push
+```
+
 |   |   |   |
 | --- | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-0.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-0.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-1.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-1.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-2.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-2.png?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-0.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-0.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-2.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-2.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-3.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-3.png?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-4.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-4.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-5.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-5.png?raw=true) | [![image](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-09-16-19-53-19-4yzsp8/swallow-debug-2025-09-16-19-53-19-4yzsp8-2.gif?raw=true)](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-09-16-19-53-19-4yzsp8/swallow-debug-2025-09-16-19-53-19-4yzsp8-2.gif?raw=true) |

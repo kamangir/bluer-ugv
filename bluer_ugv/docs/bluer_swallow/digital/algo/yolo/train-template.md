@@ -121,4 +121,12 @@ metadata:::get:::object_name
 
 ## predict (rpi)
 
+```bash
+@select swallow-debug-$(@timestamp)
+
+@swallow debug .
+
+@assets publish extensions=gif,push
+```
+
 items:::

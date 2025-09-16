@@ -26,11 +26,31 @@ parser.add_argument(
     default=1,
     help="0 | 1",
 )
+parser.add_argument(
+    "--object_name",
+    type=str,
+)
+parser.add_argument(
+    "--save_images",
+    type=int,
+    default=1,
+    help="0 | 1",
+)
+parser.add_argument(
+    "--generate_gif",
+    type=int,
+    default=1,
+    help="0 | 1",
+)
 args = parser.parse_args()
 
 success = False
 if args.task == "debug":
-    success = debug()
+    success = debug(
+        object_name=args.object_name,
+        generate_gif=args.generate_gif == 1,
+        save_images=args.save_images == 1,
+    )
 elif args.task == "select_target":
     success = select_target(
         host=args.host,
