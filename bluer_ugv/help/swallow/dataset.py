@@ -41,7 +41,12 @@ def help_download(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("~metadata", mono=mono)
+    options = "".join(
+        [
+            xtra("~metadata,", mono=mono),
+            "navigation|yolo",
+        ]
+    )
 
     return show_usage(
         [
@@ -59,7 +64,12 @@ def help_edit(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("~download", mono=mono)
+    options = "".join(
+        [
+            xtra("~download,", mono=mono),
+            "navigation|yolo",
+        ]
+    )
 
     return show_usage(
         [
@@ -77,7 +87,12 @@ def help_list(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("~download", mono=mono)
+    options = "".join(
+        [
+            xtra("~download,", mono=mono),
+            "navigation|yolo",
+        ]
+    )
 
     return show_usage(
         [
@@ -95,7 +110,12 @@ def help_upload(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("~metadata", mono=mono)
+    options = "".join(
+        [
+            xtra("~metadata,", mono=mono),
+            "navigation|yolo",
+        ]
+    )
 
     return show_usage(
         [

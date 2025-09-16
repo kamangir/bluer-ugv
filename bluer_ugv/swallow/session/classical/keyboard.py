@@ -1,6 +1,7 @@
 import keyboard
 
 from bluer_sbc.session.functions import reply_to_bash
+from bluer_algo.socket.classes import DEV_HOST
 
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
@@ -33,6 +34,8 @@ class ClassicalKeyboard:
         self.setpoint = setpoint
 
         self.mode = OperationMode.NONE
+
+        self.debug_mode: bool = False
 
     def update(self) -> bool:
         self.last_key = ""
@@ -83,6 +86,11 @@ class ClassicalKeyboard:
 
         if keyboard.is_pressed("y"):
             self.mode = OperationMode.NONE
+
+        if keyboard.is_pressed("b"):
+            self.debug_mode = not self.debug_mode
+            if self.debug_mode:
+                logger.info(f'debug  enabled, run "@swallow debug" on {DEV_HOST}.')
 
         if keyboard.is_pressed("t"):
             self.mode = OperationMode.TRAINING

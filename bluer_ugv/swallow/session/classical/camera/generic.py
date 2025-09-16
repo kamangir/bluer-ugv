@@ -1,3 +1,6 @@
+from typing import Any
+
+from bluer_algo.socket.classes import SocketComm, DEV_HOST
 from bluer_sbc.imager.camera import instance as camera
 from bluer_sbc.env import BLUER_SBC_ENV
 
@@ -28,6 +31,10 @@ class ClassicalCamera:
 
     def cleanup(self):
         camera.close(log=True)
+
+    def send_debug_data(self, data: Any) -> bool:
+        socket = SocketComm.connect_to(DEV_HOST)
+        return socket.send_data(data)
 
     def update(self) -> bool:
         return True

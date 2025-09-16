@@ -8,8 +8,8 @@ from bluer_objects.storage.policies import DownloadPolicy
 from bluer_objects import storage
 from bluer_objects.metadata import post_to_object, get_from_object
 from bluer_sbc.imager.camera import instance as camera
-from bluer_algo.image_classifier.dataset.dataset import ImageClassifierDataset
-from bluer_algo.image_classifier.model.predictor import ImageClassifierPredictor
+from bluer_algo.yolo.dataset.classes import YoloDataset
+from bluer_algo.yolo.model.predictor import YoloPredictor
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
@@ -20,7 +20,7 @@ from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv.logger import logger
 
 
-class ClassicalNavigationCamera(ClassicalCamera):
+class ClassicalYoloCamera(ClassicalCamera):
     def __init__(
         self,
         keyboard: ClassicalKeyboard,
@@ -41,82 +41,49 @@ class ClassicalNavigationCamera(ClassicalCamera):
             log=True,
         )
 
-        self.dict_of_classes = {
-            0: "no_action",
-            1: "left",
-            2: "right",
-        }
-
-        self.dataset = ImageClassifierDataset(
-            dict_of_classes=self.dict_of_classes,
+        self.dataset = YoloDataset(
             object_name=self.object_name,
+            create=True,
         )
 
         self.predictor = None
 
-        self.buffer_size = -1
-        self.buffer: List[np.ndarray] = []
+        self.action_enabled: bool = True
 
     def initialize(self) -> bool:
         if not super().initialize():
             return False
 
         if not storage.download(
-            env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
+            env.BLUER_UGV_SWALLOW_YOLO_MODEL,
             policy=DownloadPolicy.DOESNT_EXIST,
         ):
             return False
 
-        success, self.predictor = ImageClassifierPredictor.load(
-            object_name=env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
+        success, self.predictor = YoloPredictor.load(
+            object_name=env.BLUER_UGV_SWALLOW_YOLO_MODEL,
         )
-        if not success:
-            return success
-
-        if self.predictor.shape[0] != camera.resolution[0]:
-            logger.error(
-                "height mismatch: {} <> {}".format(
-                    self.predictor.shape[0],
-                    camera.resolution[0],
-                )
-            )
-            return False
-
-        buffer_size = self.predictor.shape[1] / camera.resolution[1]
-        if int(buffer_size) != buffer_size:
-            logger.error(
-                "non-integer buffer size: {} / {} = {:.2f}".format(
-                    self.predictor.shape[1], camera.resolution[1], buffer_size
-                )
-            )
-            return False
-        self.buffer_size = int(buffer_size)
-        logger.info(f"buffer size: {self.buffer_size}")
-
-        return True
+        return success
 
     def cleanup(self):
         super().cleanup()
 
         self.dataset.save(
-            metadata={
-                "source": host.get_name(),
-            },
-            log=True,
+            verbose=True,
         )
 
-        if self.dataset.df.empty:
+        if self.dataset.empty:
             return
 
         dataset_list: List[str] = get_from_object(
-            object_name=env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
+            object_name=env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
             key="dataset-list",
             default=[],
             download=True,
         )
         dataset_list.append(self.object_name)
         if not post_to_object(
-            object_name=env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
+            object_name=env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
             key="dataset-list",
             value=dataset_list,
             upload=True,
@@ -127,10 +94,6 @@ class ClassicalNavigationCamera(ClassicalCamera):
     def update(self) -> bool:
         if not super().update():
             return False
-
-        if self.setpoint.speed <= 0:
-            self.buffer = []
-            return True
 
         if self.keyboard.mode == OperationMode.ACTION:
             return self.update_action()
@@ -144,6 +107,15 @@ class ClassicalNavigationCamera(ClassicalCamera):
         if not self.prediction_timer.tick():
             return True
 
+        self.action_enabled = not self.action_enabled
+        if not self.action_enabled:
+            self.setpoint.put(
+                what="steering",
+                value=0,
+                log=True,
+            )
+            return True
+
         self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
 
         success, image = camera.capture(
@@ -154,30 +126,31 @@ class ClassicalNavigationCamera(ClassicalCamera):
         if not success:
             return success
 
-        self.buffer.append(image)
-        if len(self.buffer) > self.buffer_size:
-            self.buffer = self.buffer[1:]
-        if len(self.buffer) < self.buffer_size:
-            logger.info("buffering ...")
-            return True
-        if len(self.buffer) > self.buffer_size:
-            logger.error("buffer overflow - this must not happen.")
-            return False
-
         success, metadata = self.predictor.predict(
-            image=np.hstack(self.buffer),
+            image=image,
+            return_annotated_image=self.keyboard.debug_mode,
         )
         if not success:
             return success
 
-        predicted_class = metadata["predicted_class"]
-        if predicted_class == 1:
+        if self.keyboard.debug_mode:
+            if not self.send_debug_data(metadata["annotated_image"]):
+                return False
+
+        if not metadata["detections"]:
+            logger.info("no detections.")
+            return True
+
+        detection = metadata["detections"][0]
+        logger.info("confidence: {:.2f}".format(detection["confidence"]))
+        detection_y_center = (detection["bbox_xyxy"][1] + detection["bbox_xyxy"][3]) / 2
+        if detection_y_center > image.shape[0] / 2:
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
                 log=True,
             )
-        elif predicted_class == 2:
+        else:
             self.setpoint.put(
                 what="steering",
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
@@ -209,18 +182,7 @@ class ClassicalNavigationCamera(ClassicalCamera):
         if not success:
             return success
 
-        logger.info(f"self.keyboard.last_key: {self.keyboard.last_key}")
-
-        if not self.dataset.add(
-            filename=filename,
-            class_index=(
-                0
-                if self.keyboard.last_key == ""
-                else 1 if self.keyboard.last_key == "a" else 2
-            ),
-            log=True,
-        ):
-            return False
+        # TODO: dataset +=
 
         self.training_timer.reset()
 

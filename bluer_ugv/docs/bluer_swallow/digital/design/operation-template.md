@@ -2,6 +2,7 @@ title:::
 
 - keyboard:
     - a: steer left.
+    - b: debug.
     - d: steer right.
     - g: mode = prediction.
     - i: exit.
