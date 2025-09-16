@@ -123,7 +123,7 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         import ipdb
 
-        ipdb.set_tace()
+        ipdb.set_trace()
 
         # TODO: process metadata
 
