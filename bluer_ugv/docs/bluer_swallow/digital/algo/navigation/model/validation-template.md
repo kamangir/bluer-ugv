@@ -32,7 +32,7 @@ metadata:::get:::dataset_object_name
 
 ---
 
-set:::model_object_name env:::BLUER_UGV_SWALLOW_MODEL_1X
+set:::model_object_name env:::BLUER_UGV_SWALLOW_NAVIGATION_MODEL_1X
 
 assets:::get:::model_object_name/loss.png
 

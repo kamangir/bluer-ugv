@@ -62,13 +62,13 @@ class ClassicalNavigationCamera(ClassicalCamera):
             return False
 
         if not storage.download(
-            env.BLUER_UGV_SWALLOW_MODEL,
+            env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
             policy=DownloadPolicy.DOESNT_EXIST,
         ):
             return False
 
         success, self.predictor = ImageClassifierPredictor.load(
-            object_name=env.BLUER_UGV_SWALLOW_MODEL,
+            object_name=env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
         )
         if not success:
             return success
