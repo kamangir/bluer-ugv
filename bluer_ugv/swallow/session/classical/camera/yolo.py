@@ -41,9 +41,10 @@ class ClassicalYoloCamera(ClassicalCamera):
             log=True,
         )
 
-        self.dataset = YoloDataset(
-            object_name=self.object_name,
-        )
+        # TODO: enable
+        # self.dataset = YoloDataset(
+        #    object_name=self.object_name,
+        # )
 
         self.predictor = None
 
@@ -60,19 +61,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         success, self.predictor = YoloPredictor.load(
             object_name=env.BLUER_UGV_SWALLOW_YOLO_MODEL,
         )
-        if not success:
-            return success
-
-        if self.predictor.shape[0] != camera.resolution[0]:
-            logger.error(
-                "height mismatch: {} <> {}".format(
-                    self.predictor.shape[0],
-                    camera.resolution[0],
-                )
-            )
-            return False
-
-        return True
+        return success
 
     def cleanup(self):
         super().cleanup()
