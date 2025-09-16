@@ -3,7 +3,7 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.README import items
 from bluer_ugv.swallow.parts import dict_of_parts
-from bluer_ugv.README.consts import algo_docs, assets, assets2_bluer_swallow
+from bluer_ugv.README.consts import algo_docs, assets, assets2, assets2_bluer_swallow
 from bluer_ugv.README.consts import bluer_swallow_mechanical_design
 
 docs = [
@@ -156,8 +156,12 @@ docs = [
         "path": "../docs/bluer_swallow/digital/algo/yolo/train.md",
         "items": ImageItems(
             {
-                f"{assets2_bluer_swallow}/yolo-debug-{index}.png": ""
-                for index in range(6)
+                f"{assets2_bluer_swallow}/yolo-debug-{0}.png": "",
+                f"{assets2_bluer_swallow}/yolo-debug-{2}.png": "",
+                f"{assets2_bluer_swallow}/yolo-debug-{3}.png": "",
+                f"{assets2_bluer_swallow}/yolo-debug-{4}.png": "",
+                f"{assets2_bluer_swallow}/yolo-debug-{5}.png": "",
+                f"{assets2}/swallow-debug-2025-09-16-19-53-19-4yzsp8/swallow-debug-2025-09-16-19-53-19-4yzsp8.gif": "",
             }
         ),
     },
