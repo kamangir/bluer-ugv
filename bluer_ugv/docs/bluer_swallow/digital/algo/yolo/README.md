@@ -6,6 +6,8 @@ target tracking using an [@algo/yolo](https://github.com/kamangir/bluer-algo/tre
 @swallow env cp yolo
 ```
 
+- [training a 256x256 model](./train.md)
+
 ```bash
 @swallow debug
 ```
