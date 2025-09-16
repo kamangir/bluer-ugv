@@ -90,7 +90,9 @@ class ClassicalKeyboard:
         if keyboard.is_pressed("b"):
             self.debug_mode = not self.debug_mode
             if self.debug_mode:
-                logger.info(f'debug  enabled, run "@swallow debug" on {DEV_HOST}.')
+                logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
+            else:
+                logger.info("debug disabled.")
 
         if keyboard.is_pressed("t"):
             self.mode = OperationMode.TRAINING

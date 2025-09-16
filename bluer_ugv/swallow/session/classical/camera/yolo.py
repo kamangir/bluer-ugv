@@ -8,6 +8,7 @@ from bluer_objects.storage.policies import DownloadPolicy
 from bluer_objects import storage
 from bluer_objects.metadata import post_to_object, get_from_object
 from bluer_sbc.imager.camera import instance as camera
+from bluer_sbc.env import BLUER_SBC_CAMERA_WIDTH
 from bluer_algo.yolo.dataset.classes import YoloDataset
 from bluer_algo.yolo.model.predictor import YoloPredictor
 
@@ -62,6 +63,7 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         success, self.predictor = YoloPredictor.load(
             object_name=env.BLUER_UGV_SWALLOW_YOLO_MODEL,
+            image_size=BLUER_SBC_CAMERA_WIDTH,
         )
         return success
 
@@ -135,7 +137,7 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         if self.keyboard.debug_mode:
             if not self.send_debug_data(metadata["annotated_image"]):
-                return False
+                logger.warning("failed to send debug data.")
 
         if not metadata["detections"]:
             logger.info("no detections.")
@@ -143,8 +145,8 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         detection = metadata["detections"][0]
         logger.info("confidence: {:.2f}".format(detection["confidence"]))
-        detection_y_center = (detection["bbox_xyxy"][1] + detection["bbox_xyxy"][3]) / 2
-        if detection_y_center > image.shape[0] / 2:
+        detection_x_center = (detection["bbox_xyxy"][0] + detection["bbox_xyxy"][2]) / 2
+        if detection_x_center < image.shape[1] / 2:
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,

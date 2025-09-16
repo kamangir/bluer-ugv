@@ -27,7 +27,7 @@ def debug() -> bool:
 
     try:
         while True:
-            cv2.imshow(title, image)
+            cv2.imshow(title, np.flip(image, axis=2))
             cv2.waitKey(1)
 
             success, image = socket.receive_data(np.ndarray)
