@@ -23,14 +23,16 @@ def debug() -> bool:
     cv2.namedWindow(title)
     logger.info(f"Ctrl+C to exit...")
 
+    image = np.zeros((480, 640, 3), np.uint8)
+
     try:
         while True:
+            cv2.imshow(title, image)
+            cv2.waitKey(1)
+
             success, image = socket.receive_data(np.ndarray)
             if not success:
                 break
-
-            cv2.imshow(title, image)
-            cv2.waitKey(1)
     except KeyboardInterrupt:
         logger.info("Ctrl+C, stopping.")
 
