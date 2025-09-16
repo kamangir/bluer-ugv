@@ -10312,6 +10312,10 @@ train:
 
 ## predict (rpi)
 
+```bash
+@swallow debug
+```
+
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-0.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-0.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-1.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-1.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-2.png?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/yolo-debug-2.png?raw=true) |

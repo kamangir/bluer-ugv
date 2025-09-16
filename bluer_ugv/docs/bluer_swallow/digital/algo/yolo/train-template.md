@@ -121,4 +121,8 @@ metadata:::get:::object_name
 
 ## predict (rpi)
 
+```bash
+@swallow debug
+```
+
 items:::
