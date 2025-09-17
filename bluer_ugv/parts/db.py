@@ -317,6 +317,16 @@ db_of_parts["connector"] = Part(
     ],
 )
 
+db_of_parts["1N4148"] = Part(
+    info=[
+        "1N4148 diode",
+    ],
+    images=[
+        "TVSdiode.png",
+    ],
+)
+
+
 db_of_parts["template"] = Part(
     info=[
         "template",

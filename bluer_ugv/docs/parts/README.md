@@ -2,6 +2,7 @@
 
 - [12 VDC -> 5 VDC, 4A](./XL4015.md).
 - [12 VDC motor, 20-45 W](./dc-motor-12-VDC-45W.md).
+- [1N4148 diode](./1N4148.md).
 - [2 x AA battery holder](./2xAA-battery-holder.md).
 - [36V DC hub motor, 350 W, front, no gearbox](./36v-hub-motor.md).
 - [4 x AA battery holder](./4xAA-battery-holder.md).
