@@ -15,9 +15,9 @@ setup(
         f"{NAME}.parts",
         f"{NAME}.README",
         f"{NAME}.README.swallow",
-        f"{NAME}.README.swallow.digital"
-        f"{NAME}.README.swallow.digital.algo"
-        f"{NAME}.README.swallow.digital.design"
+        f"{NAME}.README.swallow.digital",
+        f"{NAME}.README.swallow.digital.algo",
+        f"{NAME}.README.swallow.digital.design",
         # kinds
         f"{NAME}.eagle",
         f"{NAME}.fire",
