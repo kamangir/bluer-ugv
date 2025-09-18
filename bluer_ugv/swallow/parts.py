@@ -17,5 +17,4 @@ dict_of_parts = {
     "wheel": "4 x ",
     "ultrasonic-sensor": "4 x",
     "connector": "8 pairs",
-    "USB-charger-NICD-6V": "",
 }
