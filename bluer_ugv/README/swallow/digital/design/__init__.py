@@ -60,7 +60,7 @@ items = (
             "items": ImageItems(
                 {
                     f"{assets2_bluer_swallow}/20250918_122725.jpg": "",
-                    f"{assets2_bluer_swallow}/20250918_194715.jpg": "",
+                    f"{assets2_bluer_swallow}/20250918_194715-2.jpg": "",
                     f"{assets2_bluer_swallow}/20250918_194804_1.gif": "",
                 }
             ),
