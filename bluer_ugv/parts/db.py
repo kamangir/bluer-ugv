@@ -97,7 +97,7 @@ db_of_parts["TVS-diode"] = Part(
 
 db_of_parts["XL4015"] = Part(
     info=[
-        "12 VDC -> 5 VDC, 4A",
+        "XL4015: 12 VDC -> 5 VDC, 4A",
         "specs: [XL4015](https://www.handsontec.com/dataspecs/module/XL4015-5A-PS.pdf)",
     ],
     images=[
@@ -298,7 +298,7 @@ db_of_parts["wheel"] = Part(
 
 db_of_parts["ultrasonic-sensor"] = Part(
     info=[
-        "HC-SR04",
+        "HC-SR04: ultrasonic-sensor",
         "[datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)",
         "1m ~= 6ms",
         "fov = 15 - 30 deg",

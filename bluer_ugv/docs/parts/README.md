@@ -1,6 +1,5 @@
 # parts
 
-- [12 VDC -> 5 VDC, 4A](./XL4015.md).
 - [12 VDC motor, 20-45 W](./dc-motor-12-VDC-45W.md).
 - [1N4148 diode](./1N4148.md).
 - [2 x AA battery holder](./2xAA-battery-holder.md).
@@ -11,7 +10,7 @@
 - [6V DC (4 cell) NICD battery](./LJ-6V-battery.md).
 - [6V DC charger for NICD batteries](./USB-charger-NICD-6V.md).
 - [Gearboxed DC Motor, 12 V (3-24 V), 3A, 120 RPM, 1:91, 15 Kg cm](./DC-gearboxed-motor-12V-120RPM.md).
-- [HC-SR04](./ultrasonic-sensor.md).
+- [HC-SR04: ultrasonic-sensor](./ultrasonic-sensor.md).
 - [L 1x2](./L-1x2.md).
 - [LED, ~2 V forward voltage, 10-20 mA](./LED.md).
 - [M3 nuts and bolts](./M3.md).
@@ -21,6 +20,7 @@
 - [Rechargeable sealed lead acid battery, 12 V, 7 Ah](./SLA-Battery.md).
 - [Resistor, 1/4 watt, 5% tolerance](./resistor.md).
 - [TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package](./TVS-diode.md).
+- [XL4015: 12 VDC -> 5 VDC, 4A](./XL4015.md).
 - [auto power connectors](./connector.md).
 - [brushless drive, 36 - 48 V DC, 350 W, sine wave, silent](./brushless-350w-drive.md).
 - [capacitor, 470 μF to 1000 μF, 16 V or 25 V, Electrolytic, 105 °C rated if possible.](./470-mF.md).
