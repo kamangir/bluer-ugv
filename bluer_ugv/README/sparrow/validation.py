@@ -21,6 +21,16 @@ items = [
     },
     {
         "path": "../docs/bluer_sparrow/validation/village-2.md",
-        "items": ImageItems({}),
+        "items": ImageItems(
+            {
+                f"{assets2_bluer_sparrow}/20250922_094548.jpg": "",
+                f"{assets2_bluer_sparrow}/20250922_101156.jpg": "",
+                f"{assets2_bluer_sparrow}/20250922_101409.jpg": "",
+                f"{assets2_bluer_sparrow}/20250922_101557.jpg": "",
+                f"{assets2_bluer_sparrow}/20250922_101653.jpg": "",
+                f"{assets2_bluer_sparrow}/20250922_102822.jpg": "",
+                f"{assets2_bluer_sparrow}/20250922_101202_1.gif": "",
+            }
+        ),
     },
 ]
