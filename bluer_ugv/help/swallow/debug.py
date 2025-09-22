@@ -1,12 +1,14 @@
 from typing import List
 
-from bluer_options.terminal import show_usage
+from bluer_options.terminal import show_usage, xtra
 
 
 def help_debug(
     tokens: List[str],
     mono: bool,
 ) -> str:
+    options = xtra("~upload", mono=mono)
+
     args = [
         "[--generate_gif 0]",
         "[--save_images 0]",
@@ -16,6 +18,7 @@ def help_debug(
         [
             "@swallow",
             "debug",
+            f"[{options}]",
             "[-|<object-name>]",
         ]
         + args,

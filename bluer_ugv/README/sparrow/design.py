@@ -1,18 +1,10 @@
 from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.parts.db import db_of_parts
-from bluer_ugv.sparrow.README import items
+from bluer_ugv.README.consts import bluer_sparrow_mechanical_design
 from bluer_ugv.sparrow.parts import dict_of_parts
-from bluer_ugv.README.consts import (
-    bluer_sparrow_mechanical_design,
-    assets2_bluer_sparrow,
-)
 
-docs = [
-    {
-        "items": items,
-        "path": "../docs/bluer_sparrow",
-    },
+items = [
     {
         "path": "../docs/bluer_sparrow/design",
     },
@@ -53,28 +45,6 @@ docs = [
                 f"{bluer_sparrow_mechanical_design}/v1/robot.png": f"{bluer_sparrow_mechanical_design}/v1/robot.stl",
                 f"{bluer_sparrow_mechanical_design}/v1/cage.png": f"{bluer_sparrow_mechanical_design}/v1/cage.stl",
                 f"{bluer_sparrow_mechanical_design}/v1/measurements.png": "",
-            }
-        ),
-    },
-    {
-        "path": "../docs/bluer_sparrow/algo",
-    },
-    {
-        "path": "../docs/bluer_sparrow/algo/target-detection",
-    },
-    {
-        "path": "../docs/bluer_sparrow/validation",
-    },
-    {
-        "path": "../docs/bluer_sparrow/validation/village-1.md",
-        "items": ImageItems(
-            {
-                f"{assets2_bluer_sparrow}/20250905_120526.jpg": "",
-                f"{assets2_bluer_sparrow}/20250905_120808.jpg": "",
-                f"{assets2_bluer_sparrow}/20250905_121030.jpg": "",
-                f"{assets2_bluer_sparrow}/20250905_121032.jpg": "",
-                f"{assets2_bluer_sparrow}/20250905_121702.jpg": "",
-                f"{assets2_bluer_sparrow}/20250905_121711.jpg": "",
             }
         ),
     },
