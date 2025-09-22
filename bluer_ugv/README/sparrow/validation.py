@@ -42,7 +42,7 @@ items = [
                     + [
                         {
                             "name": object_name,
-                            "url": "🔗 https://{}.{}/{}".format(
+                            "url": "https://{}.{}/{}".format(
                                 env.S3_PUBLIC_STORAGE_BUCKET,
                                 env.S3_STORAGE_ENDPOINT_URL.split("https://", 1)[1],
                                 f"{object_name}.tar.gz",
