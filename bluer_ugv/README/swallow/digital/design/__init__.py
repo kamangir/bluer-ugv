@@ -56,7 +56,7 @@ items = (
     + mechanical_items
     + [
         {
-            "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor.md",
+            "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor-tester.md",
             "items": ImageItems(
                 {
                     f"{assets2_bluer_swallow}/20250918_122725.jpg": "",
