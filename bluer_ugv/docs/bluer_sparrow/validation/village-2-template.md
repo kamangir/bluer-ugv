@@ -58,5 +58,6 @@ debug_objects:::
 
 }
 
-runme
 🔥
+
+assets:::bluer_sparrow/20250922_101202_1.gif

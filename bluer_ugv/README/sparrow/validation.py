@@ -38,11 +38,6 @@ items = [
                 Items(
                     [
                         {
-                            "url": f"{assets2_bluer_sparrow}/20250922_101202_1.gif",
-                        },
-                    ]
-                    + [
-                        {
                             "name": object_name,
                             "url": "https://{}.{}/{}".format(
                                 env.S3_PUBLIC_STORAGE_BUCKET,
