@@ -2,7 +2,7 @@ title:::
 
 items:::
 
-# debug objects
+## debug objects
 
 details:::collection
 ```bash
@@ -47,7 +47,7 @@ details:::
 
 debug_objects:::
 
-# observations
+## observations
 
 - two wheel nuts loosened every few minutes.
 - one wheel nut tightened every few minutes.
