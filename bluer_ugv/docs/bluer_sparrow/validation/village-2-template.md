@@ -47,7 +47,7 @@ runme gif
 ```
 details:::
 
-gifs:::
+debug_objects:::
 
 🔥
 

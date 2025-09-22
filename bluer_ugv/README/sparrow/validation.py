@@ -34,10 +34,12 @@ items = [
             }
         ),
         "macros": {
-            "gifs": markdown.generate_table(
+            "debug_objects": markdown.generate_table(
                 Items(
                     [
-                        {"image": f"{assets2_bluer_sparrow}/20250922_101202_1.gif"},
+                        {
+                            "url": f"{assets2_bluer_sparrow}/20250922_101202_1.gif",
+                        },
                     ]
                     + [
                         {
