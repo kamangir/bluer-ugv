@@ -1,5 +1,7 @@
 # parts: ultrasonic-sensor
 
+- [different views](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/ultrasonic-sensor-tester.md)
+
 - HC-SR04: ultrasonic-sensor
 - [datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
 - 1m ~= 6ms
