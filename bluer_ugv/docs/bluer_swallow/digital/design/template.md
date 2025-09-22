@@ -7,4 +7,4 @@
 - [operation](./operation.md)
 - [over-current detection](./steering-over-current-detection.md)
 - [mechanical](./mechanical.md)
-- [ultrasonic-sensor](./ultrasonic-sensor.md)
+- [ultrasonic-sensor-tester](./ultrasonic-sensor-tester.md)
