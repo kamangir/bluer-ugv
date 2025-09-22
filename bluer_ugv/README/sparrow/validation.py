@@ -32,5 +32,6 @@ items = [
                 f"{assets2_bluer_sparrow}/20250922_101202_1.gif": "",
             }
         ),
+        "gifs": "🔥",
     },
 ]
