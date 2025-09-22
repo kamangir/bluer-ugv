@@ -2,7 +2,7 @@ from bluer_objects.README.items import ImageItems, Items
 from bluer_objects import markdown
 from bluer_objects import env
 
-from bluer_ugv.README.consts import assets2, assets2_bluer_sparrow
+from bluer_ugv.README.consts import assets, assets2_bluer_sparrow
 
 items = [
     {
@@ -47,7 +47,7 @@ items = [
                                 env.S3_STORAGE_ENDPOINT_URL.split("https://", 1)[1],
                                 f"{object_name}.tar.gz",
                             ),
-                            "marquee": f"{assets2}/{object_name}/{object_name}.gif",
+                            "marquee": f"{assets}/{object_name}/{object_name}.gif",
                         }
                         for object_name in [
                             "swallow-debug-2025-09-22-09-47-32-85hag3",
