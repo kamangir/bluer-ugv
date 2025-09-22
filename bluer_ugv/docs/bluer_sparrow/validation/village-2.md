@@ -71,4 +71,4 @@ runme gif
 
 🔥
 
-![image](https://github.com/kamangir/assets/blob/main/bluer_sparrow/20250922_101202_1.gif?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/bluer-sparrow/20250922_101202_1.gif?raw=true)

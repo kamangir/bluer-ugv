@@ -60,4 +60,4 @@ debug_objects:::
 
 🔥
 
-assets:::bluer_sparrow/20250922_101202_1.gif
+assets:::bluer-sparrow/20250922_101202_1.gif
