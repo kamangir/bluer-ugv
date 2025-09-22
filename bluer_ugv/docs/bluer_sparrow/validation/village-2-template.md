@@ -2,8 +2,6 @@ title:::
 
 items:::
 
----
-
 # debug objects
 
 details:::collection
@@ -49,15 +47,11 @@ details:::
 
 debug_objects:::
 
-🔥
+# observations
 
-```bash
-@ls local,objects --prefix $(@today)
-@ls cloud,objects --prefix $(@today)
-```
+- two wheel nuts loosened every few minutes.
+- one wheel nut tightened every few minutes.
 
-}
-
-🔥
+---
 
 assets:::bluer-sparrow/20250922_101202_1.gif
