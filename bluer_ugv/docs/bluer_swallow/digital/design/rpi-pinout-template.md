@@ -10,11 +10,12 @@ title:::
 | RED LED               | Digital Output | 13           | 27   |                                            |
 | Blue LED              | Digital Output | 15           | 22   |                                            |
 | Push Button           | Digital Input  | 37           | 26   |                                            |
-| Front Left, Trigger   | Digital Output | 36           | 16   | Ultrasonic Sensor                          |
-| Front Right, Trigger  | Digital Output | 31           | 6    | Ultrasonic Sensor                          |
-| Front Center, Trigger | Digital Output | 16           | 23   | Ultrasonic Sensor                          |
-| Back, Trigger         | Digital Output | 29           | 5    | Ultrasonic Sensor                          |
-| Front Left, Echo      | Digital Input  | 38           | 20   | Ultrasonic Sensor                          |
-| Front Right, Echo     | Digital Input  | 40           | 21   | Ultrasonic Sensor                          |
-| Front Center, Echo    | Digital Input  | 18           | 24   | Ultrasonic Sensor                          |
-| Back, Echo            | Digital Input  | 22           | 25   | Ultrasonic Sensor                          |
+| Sensor 1, Trigger     | Digital Output | 36           | 16   |                                            |
+| Sensor 2, Trigger     | Digital Output | 31           | 6    |                                            |
+| Sensor 3, Trigger     | Digital Output | 16           | 23   |                                            |
+| Sensor 4, Trigger     | Digital Output | 29           | 5    |                                            |
+| Sensor 1, Echo        | Digital Input  | 38           | 20   |                                            |
+| Sensor 2, Echo        | Digital Input  | 40           | 21   |                                            |
+| Sensor 3, Echo        | Digital Input  | 18           | 24   |                                            |
+| Sensor 4, Echo        | Digital Input  | 22           | 25   |                                            |
+
