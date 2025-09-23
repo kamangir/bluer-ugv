@@ -15,7 +15,7 @@
 
 3. run, 
 ```bash
-@swallow env cp driving
+@swallow env cp navigation
 ```
 
 4. watch for any errors, if none found run,
