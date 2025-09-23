@@ -20,6 +20,7 @@ items = [
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/20250923_142200.jpg": "",
+                f"{assets2_bluer_swallow}/20250923_145111.jpg": "",
             }
         ),
     },
