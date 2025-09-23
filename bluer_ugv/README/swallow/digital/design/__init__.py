@@ -1,8 +1,12 @@
 from bluer_objects.README.items import ImageItems
-from bluer_ugv.README.consts import assets2, assets2_bluer_swallow
+from bluer_ugv.README.consts import assets2_bluer_swallow
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.parts import dict_of_parts
 from bluer_ugv.README.swallow.digital.design.mechanical import items as mechanical_items
+from bluer_ugv.README.swallow.digital.design.ultrasonic_sensor import (
+    items as ultrasonic_sensor_items,
+)
+
 
 items = (
     [
@@ -54,18 +58,5 @@ items = (
         },
     ]
     + mechanical_items
-    + [
-        {
-            "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor-tester.md",
-            "cols": 2,
-            "items": ImageItems(
-                {
-                    f"{assets2_bluer_swallow}/20250918_122725.jpg": "",
-                    f"{assets2_bluer_swallow}/20250918_194715-2.jpg": "",
-                    f"{assets2_bluer_swallow}/20250918_194804_1.gif": "",
-                    f"{assets2}/ultrasonic-sensor-tester/00.jpg": "",
-                }
-            ),
-        },
-    ]
+    + ultrasonic_sensor_items
 )
