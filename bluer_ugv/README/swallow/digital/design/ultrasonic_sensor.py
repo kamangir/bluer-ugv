@@ -3,7 +3,6 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.README.consts import (
     assets2,
     assets2_bluer_swallow,
-    bluer_swallow_mechanical_design,
 )
 
 items = [
@@ -25,7 +24,6 @@ items = [
             {
                 f"{assets2_bluer_swallow}/20250923_142200.jpg": "",
                 f"{assets2_bluer_swallow}/20250923_145111.jpg": "",
-                f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.png?raw=true": f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.svg",
             }
         ),
     },
