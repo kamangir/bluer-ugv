@@ -1,9 +1,9 @@
 # bluer-sparrow: validation: village-3
 
-|   |   |   |
-| --- | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133637.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133637.jpg?raw=true) |
-| [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_132521~2_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_132521~2_1.gif?raw=true) |  |  |
+|   |   |
+| --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133637.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133637.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_132521~2_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_132521~2_1.gif?raw=true) |
 
 ## debug object
 

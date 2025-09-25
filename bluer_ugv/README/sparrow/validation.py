@@ -70,6 +70,6 @@ items = [
                 f"{assets2_bluer_sparrow}/20250925_132521~2_1.gif": "",
             },
         ),
-        "col2": 2,
+        "cols": 2,
     },
 ]
