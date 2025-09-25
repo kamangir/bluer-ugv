@@ -19,13 +19,18 @@ details:::collection
 
 ```bash
 runme() {
-    @select $1
+    local options=$1
+    @select $2
 
-    @open
+    # @open
     @download policy=doesnt_exist
+
+    @upload public,zip
+
+    @assets publish extensions=gif,push
 }
 
-runme swallow-debug-2025-09-25-13-16-59-rnm7jd
+runme publish swallow-debug-2025-09-25-13-16-59-rnm7jd
 ```
 details:::
 
@@ -33,7 +38,7 @@ set:::object_name swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 object:::get:::object_name
 
-assets:::get:::object_name/$object_name.gif
+assets:::get:::object_name/get:::object_name.gif
 
 # session object
 

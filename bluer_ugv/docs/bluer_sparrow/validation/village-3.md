@@ -25,13 +25,18 @@
 
 ```bash
 runme() {
-    @select $1
+    local options=$1
+    @select $2
 
-    @open
+    # @open
     @download policy=doesnt_exist
+
+    @upload public,zip
+
+    @assets publish extensions=gif,push
 }
 
-runme swallow-debug-2025-09-25-13-16-59-rnm7jd
+runme publish swallow-debug-2025-09-25-13-16-59-rnm7jd
 ```
 
 </details>
@@ -40,7 +45,7 @@ runme swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 [swallow-debug-2025-09-25-13-16-59-rnm7jd](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-debug-2025-09-25-13-16-59-rnm7jd.tar.gz)
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/$object_name.gif?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/swallow-debug-2025-09-25-13-16-59-rnm7jd.gif?raw=true)
 
 # session object
 
