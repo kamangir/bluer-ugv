@@ -49,8 +49,8 @@ debug_objects:::
 
 ## observations
 
-- two wheel nuts loosened every few minutes.
-- one wheel nut tightened every few minutes.
+- two wheel nuts loosened every few minutes. ⚠️
+- one wheel nut tightened every few minutes. ⚠️
 
 ---
 
