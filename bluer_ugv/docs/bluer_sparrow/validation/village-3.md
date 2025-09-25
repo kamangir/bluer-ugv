@@ -5,7 +5,7 @@
 | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133637.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133637.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_132521~2_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_132521~2_1.gif?raw=true) |  |  |
 
-## debug objects
+## debug object
 
 
 <details>
@@ -40,9 +40,18 @@ runme swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 [swallow-debug-2025-09-25-13-16-59-rnm7jd](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-debug-2025-09-25-13-16-59-rnm7jd.tar.gz)
 
+![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/$object_name.gif?raw=true)
+
+# session object
+
+
 ```yaml
-{}
+dataset:
+  count: 0
+names:
+  0: target
+source: 000000000953c665
+train: images/train
+val: images/val
 
 ```
-
-![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/$object_name.gif?raw=true)

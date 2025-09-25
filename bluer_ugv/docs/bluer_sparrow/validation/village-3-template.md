@@ -2,7 +2,7 @@ title:::
 
 items:::
 
-## debug objects
+## debug object
 
 details:::collection
 ```bash
@@ -33,6 +33,10 @@ set:::object_name swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 object:::get:::object_name
 
-metadata:::get:::object_name
-
 assets:::get:::object_name/$object_name.gif
+
+# session object
+
+set:::object_name 2025-09-25-12-45-49-ckd3zv
+
+metadata:::get:::object_name
