@@ -47,7 +47,7 @@ runme publish swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/swallow-debug-2025-09-25-13-16-59-rnm7jd.gif?raw=true)
 
-# session object
+## session object
 
 
 ```yaml
@@ -60,3 +60,7 @@ train: images/train
 val: images/val
 
 ```
+
+## observations
+
+- no wheel nuts loosened or tightened. ✅
