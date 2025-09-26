@@ -41,3 +41,7 @@ dataset:
 ```
 
 ![image](https://github.com/kamangir/assets/blob/main/2025-09-05-11-48-27-d56azo/VID-20250905-WA0014_1.gif?raw=true)
+
+## observations
+
+- image-classifier 

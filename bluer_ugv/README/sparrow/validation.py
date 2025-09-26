@@ -72,4 +72,7 @@ items = [
         ),
         "cols": 2,
     },
+    {
+        "path": "../docs/bluer_sparrow/validation/village-4.md",
+    },
 ]
