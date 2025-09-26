@@ -20,4 +20,5 @@ UGV: `sparrow2`
 
 ## observations
 
+- wheels functioned as expected.
 - robot rebooted after a minute of operation and again. ⚠️ -> 📜
