@@ -21,3 +21,7 @@ assets:::get:::object_name/grid-timeline.png
 metadata:::get:::object_name
 
 assets:::get:::object_name/VID-20250905-WA0014_1.gif
+
+## observations
+
+- image-classifier is validated. ✅

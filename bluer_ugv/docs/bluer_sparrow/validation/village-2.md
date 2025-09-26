@@ -63,6 +63,8 @@ runme gif
 - two wheel nuts loosened every few minutes. ⚠️
 - one wheel nut tightened every few minutes. ⚠️
 
+-> fixed in [village-3](./village-3.md)
+
 ---
 
 ![image](https://github.com/kamangir/assets/blob/main/bluer-sparrow/20250922_101202_1.gif?raw=true)

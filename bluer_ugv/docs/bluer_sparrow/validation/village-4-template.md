@@ -13,4 +13,4 @@ details:::collection
 
 ## observations
 
-- robot rebooted after a minute of operation and again. ⚠️
+- robot rebooted after a minute of operation and again. ⚠️ -> 📜

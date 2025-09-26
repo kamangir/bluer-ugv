@@ -44,4 +44,4 @@ dataset:
 
 ## observations
 
-- image-classifier 
+- image-classifier is validated. ✅
