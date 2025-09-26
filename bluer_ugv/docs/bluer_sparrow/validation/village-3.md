@@ -63,4 +63,5 @@ val: images/val
 
 ## observations
 
-- no wheel nuts loosened or tightened. ✅ (from [village-2](./village-2.md))
+- no wheel nuts loosened or tightened (: [village-2](./village-2.md)) ✅
+- bottom cover broke. -> 📜

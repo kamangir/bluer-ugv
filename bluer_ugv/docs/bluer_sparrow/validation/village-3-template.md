@@ -1,5 +1,7 @@
 title:::
 
+UGV: `sparrow`
+
 items:::
 
 ## debug object
@@ -48,4 +50,5 @@ metadata:::get:::object_name
 
 ## observations
 
-- no wheel nuts loosened or tightened. ✅ (from [village-2](./village-2.md))
+- no wheel nuts loosened or tightened (: [village-2](./village-2.md)) ✅
+- bottom cover broke. -> 📜
