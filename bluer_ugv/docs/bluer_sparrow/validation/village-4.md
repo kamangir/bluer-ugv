@@ -22,3 +22,4 @@ UGV: `sparrow2`
 
 - wheels functioned as expected.
 - robot rebooted after a minute of operation and again. ⚠️ -> 📜
+- camera is upside down. -> 📜

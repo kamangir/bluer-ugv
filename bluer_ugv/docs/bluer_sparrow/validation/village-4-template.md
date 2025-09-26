@@ -22,5 +22,6 @@ assets:::get:::object_name/get:::object_name.gif
 
 ## observations
 
-- wheels functioned as expected.
+- wheels functioned as expected. ✅
 - robot rebooted after a minute of operation and again. ⚠️ -> 📜
+- camera is upside down. -> 📜
