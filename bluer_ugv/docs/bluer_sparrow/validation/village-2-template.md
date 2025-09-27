@@ -1,5 +1,7 @@
 title:::
 
+UGV: `sparrow`
+
 items:::
 
 ## debug objects
@@ -51,6 +53,8 @@ debug_objects:::
 
 - two wheel nuts loosened every few minutes. ⚠️
 - one wheel nut tightened every few minutes. ⚠️
+
+-> fixed in [village-3](./village-3.md)
 
 ---
 

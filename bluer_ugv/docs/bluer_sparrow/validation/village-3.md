@@ -1,5 +1,7 @@
 # bluer-sparrow: validation: village-3
 
+UGV: `sparrow`
+
 |   |   |
 | --- | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133136.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250925_133628.jpg?raw=true) |
@@ -63,4 +65,5 @@ val: images/val
 
 ## observations
 
-- no wheel nuts loosened or tightened. ✅
+- no wheel nuts loosened or tightened (: [village-2](./village-2.md)) ✅
+- bottom cover broke. -> 📜

@@ -1,5 +1,7 @@
 # bluer-sparrow: validation: village-1
 
+UGV: `sparrow`
+
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250905_120526.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250905_120526.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250905_120808.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250905_120808.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250905_121030.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-sparrow/20250905_121030.jpg?raw=true) |
@@ -41,3 +43,7 @@ dataset:
 ```
 
 ![image](https://github.com/kamangir/assets/blob/main/2025-09-05-11-48-27-d56azo/VID-20250905-WA0014_1.gif?raw=true)
+
+## observations
+
+- image-classifier is validated. ✅
