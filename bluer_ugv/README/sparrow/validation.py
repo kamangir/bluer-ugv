@@ -74,5 +74,10 @@ items = [
     },
     {
         "path": "../docs/bluer_sparrow/validation/village-4.md",
+        "items": ImageItems(
+            {
+                f"{assets2_bluer_sparrow}/20250927_192024.jpg": "",
+            },
+        ),
     },
 ]

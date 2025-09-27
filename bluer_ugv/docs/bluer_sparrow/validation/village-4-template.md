@@ -2,8 +2,6 @@ title:::
 
 UGV: `sparrow2`
 
-items:::
-
 ## debug object
 
 ```bash
@@ -35,3 +33,5 @@ runme swallow-debug-2025-09-27-19-15-31-6iq5vz
 |-|-|
 | object:::get:::object1_name | object:::get:::object2_name |
 | assets:::get:::object1_name/get:::object1_name.gif | assets:::get:::object2_name/get:::object2_name.gif |
+
+items:::
