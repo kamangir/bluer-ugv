@@ -23,6 +23,8 @@ function test_bluer_ugv_help() {
         \
         "@ugv" \
         \
+        "@ugv git" \
+        \
         "@ugv parts" \
         "@ugv parts adjust" \
         \
