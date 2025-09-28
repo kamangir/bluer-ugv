@@ -1,5 +1,3 @@
-from typing import List
-
 from bluer_ai.help.generic import help_functions as generic_help_functions
 
 from bluer_ugv import ALIAS
