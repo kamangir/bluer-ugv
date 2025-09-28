@@ -17,6 +17,11 @@ items = ImageItems(
         f"{assets2_bluer_swallow}/design/v3/01.jpg": "",
         f"{assets2_bluer_swallow}/design/v4/01.jpg": "",
         f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.png?raw=true": f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.svg",
+        f"{assets2_bluer_swallow}/20250925_213013.jpg": "",
+        f"{assets2_bluer_swallow}/20250925_214017.jpg": "",
+        f"{assets2_bluer_swallow}/20250928_160425.jpg": "",
+        f"{assets2_bluer_swallow}/20250928_160449.jpg": "",
+        f"{assets2_bluer_swallow}/design/head-v1/01.jpg": "",
     }
 )
 
