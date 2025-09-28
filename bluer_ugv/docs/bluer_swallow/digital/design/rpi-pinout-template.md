@@ -10,12 +10,12 @@ title:::
 | RED LED               | Digital Output | 13           | 27   |                                            |
 | Blue LED              | Digital Output | 15           | 22   |                                            |
 | Push Button           | Digital Input  | 37           | 26   |                                            |
-
+| --------------------- | -------------- | ------------ | ---- | ------------------------------------------ |
 | Sensor 3, Trigger     | Digital Output | 16           | 23   |                                            |
 | Sensor 4, Trigger     | Digital Output | 29           | 5    |                                            |
 | Sensor 2, Trigger     | Digital Output | 31           | 6    |                                            |
 | Sensor 1, Trigger     | Digital Output | 36           | 16   |                                            |
-
+| --------------------- | -------------- | ------------ | ---- | ------------------------------------------ |
 | Sensor 3, Echo        | Digital Input  | 18           | 24   |                                            |
 | Sensor 4, Echo        | Digital Input  | 22           | 25   |                                            |
 | Sensor 1, Echo        | Digital Input  | 38           | 20   |                                            |
