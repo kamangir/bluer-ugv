@@ -19,6 +19,8 @@ items = ImageItems(
         f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.png?raw=true": f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.svg",
         f"{assets2_bluer_swallow}/20250925_213013.jpg": "",
         f"{assets2_bluer_swallow}/20250925_214017.jpg": "",
+        f"{assets2_bluer_swallow}/20250928_111941.jpg": "",
+        f"{assets2_bluer_swallow}/20250928_112027.jpg": "",
     }
 )
 
