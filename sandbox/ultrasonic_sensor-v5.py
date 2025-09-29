@@ -1,6 +1,4 @@
-# works on the left sensor, over-estimates the distance on teh right sensor. ⚠️
-
-# continues -v2
+# continues -v4
 
 from RPi import GPIO
 import argparse
@@ -13,7 +11,6 @@ parser.add_argument(
     help="left | right",
 )
 args = parser.parse_args()
-
 
 # Pin definitions
 if args.side == "left":
@@ -28,7 +25,7 @@ else:
 # Constants
 C = 343.0  # speed of sound (m/s)
 MAX_RANGE_M = 0.8
-THRESHOLD_S = (2 * MAX_RANGE_M) / C  # round-trip time for 1 m
+THRESHOLD_S = (2 * MAX_RANGE_M) / C  # round-trip time for 0.8 m
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(TRIG, GPIO.OUT)
@@ -41,26 +38,25 @@ print(
 
 try:
     while True:
-        # Send trigger pulse (10 µs)
+        # Send trigger pulse (min 10 µs, but Python sleep can undershoot, so use 30 µs)
         GPIO.output(TRIG, True)
-        time.sleep(10e-6)
+        time.sleep(30e-6)
         GPIO.output(TRIG, False)
 
-        # Wait for echo to go HIGH (start of pulse)
-        start_time = time.time()
-        timeout = start_time + 0.05  # 50 ms safety
+        # Wait for echo HIGH
+        timeout = time.time() + 0.05  # 50 ms max wait
         while GPIO.input(ECHO) == 0 and time.time() < timeout:
-            start_time = time.time()
+            pass
+        start_time = time.time()
 
-        # Wait for echo to go LOW (end of pulse)
-        end_time = start_time
+        # Wait for echo LOW
         while GPIO.input(ECHO) == 1 and time.time() < timeout:
-            end_time = time.time()
+            pass
+        end_time = time.time()
 
         # Calculate pulse width
         pulse_width = end_time - start_time
 
-        # Check if within threshold
         if 0 < pulse_width < THRESHOLD_S:
             distance = (pulse_width * C / 2) * 1000  # mm
             print(f"echo detected, distance ≈ {distance:.0f} mm")
