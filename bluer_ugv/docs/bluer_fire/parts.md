@@ -5,4 +5,4 @@
 
 |   |   |
 | --- | --- |
-| [`36V DC hub motor, 350 W, front, no gearbox`](../parts/36v-hub-motor.md) [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/36v-hub-motor.jpg?raw=true)](../parts/36v-hub-motor.md) x 4 | [`brushless drive, 36 - 48 V DC, 350 W, sine wave, silent`](../parts/brushless-350w-drive.md) [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/brushless-350w-drive.jpg?raw=true)](../parts/brushless-350w-drive.md) x 2? |
+| [`36V DC hub motor, 350 W, front, no gearbox`](../parts/36v-hub-motor.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/36v-hub-motor.jpg?raw=true)](../parts/36v-hub-motor.md) x 4 | [`brushless drive, 36 - 48 V DC, 350 W, sine wave, silent`](../parts/brushless-350w-drive.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/brushless-350w-drive.jpg?raw=true)](../parts/brushless-350w-drive.md) x 2? |

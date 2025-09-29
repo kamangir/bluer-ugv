@@ -7,6 +7,6 @@
 
 |   |   |   |
 | --- | --- | --- |
-| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox1.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox2.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox3.jpg?raw=true) |
-| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox4.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox5.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox6.jpg?raw=true) |
-| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox7.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/gearbox8.jpg?raw=true) |  |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox1.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox2.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox3.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox4.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox5.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox6.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox7.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/gearbox8.jpg?raw=true) |  |

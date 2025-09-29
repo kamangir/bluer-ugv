@@ -5,4 +5,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/brushless-350w-drive.jpg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/brushless-350w-drive.jpg?raw=true) |

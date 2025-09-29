@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/PCB-double-9x7.jpeg?raw=true) |
+| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/PCB-double-9x7.jpeg?raw=true) |
