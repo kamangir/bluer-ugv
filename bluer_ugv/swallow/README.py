@@ -9,14 +9,14 @@ from bluer_ugv.README.consts import (
 items = ImageItems(
     {
         f"{assets}/bluer-ugv/bluer-light.png": "",
-        f"{bluer_swallow_mechanical_design}/3d-design.png": f"{bluer_swallow_mechanical_design}/3d-design.stl",
+        f"{bluer_swallow_mechanical_design}/v0/3d-design.png": f"{bluer_swallow_mechanical_design}/v0/3d-design.stl",
         f"{assets2_bluer_swallow}/20250605_180136.jpg": "",
         f"{assets2_bluer_swallow}/20250608_144453.jpg": "",
         f"{assets2_bluer_swallow}/20250616_134654.jpg": "",
         f"{assets2_bluer_swallow}/20250616_145049.jpg": "",
         f"{assets2_bluer_swallow}/20250618_102816~2_1.gif": "",
         f"{assets2_bluer_swallow}/20250618_122604.jpg": "",
-        f"{bluer_swallow_mechanical_design}cover.png": f"{bluer_swallow_mechanical_design}/cover.stl",
+        f"{bluer_swallow_mechanical_design}/v0/cover.png": f"{bluer_swallow_mechanical_design}/v0/cover.stl",
         f"{assets2_bluer_swallow}/20250629_123616.jpg": "",
         f"{assets2_bluer_swallow}/20250630_214923.jpg": "",
         f"{assets2_bluer_swallow}/20250701_2206342_1.gif": "",
