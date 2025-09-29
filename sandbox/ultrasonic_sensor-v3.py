@@ -1,3 +1,5 @@
+# always: "echo detected (at least one sensor)" ⚠️
+
 from RPi import GPIO
 import time
 

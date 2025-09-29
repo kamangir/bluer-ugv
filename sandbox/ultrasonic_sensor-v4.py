@@ -1,4 +1,4 @@
-# reports "no object" if only one sensor is occluded, when sensors are OR'd. ⚠️
+# continues -v2
 
 from RPi import GPIO
 import time

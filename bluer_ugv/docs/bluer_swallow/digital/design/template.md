@@ -7,6 +7,7 @@ title:::
 - [operation](./operation.md)
 - [mechanical](./mechanical.md)
 - [ultrasonic sensor tester](./ultrasonic-sensor-tester.md)
+- [ultrasonic sensor](./ultrasonic-sensor.md)
 
 ## obsolete
 
