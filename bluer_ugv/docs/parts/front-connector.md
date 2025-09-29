@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/front-connector.jpg?raw=true) |
+| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/front-connector.jpg?raw=true) |

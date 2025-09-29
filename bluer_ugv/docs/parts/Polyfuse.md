@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/polyfuse.png?raw=true) |
+| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/polyfuse.png?raw=true) |

@@ -6,4 +6,4 @@
 
 |   |   |   |
 | --- | --- | --- |
-| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/wheel1.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/wheel4.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/wheel3.jpg?raw=true) |
+| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/wheel1.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/wheel4.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/wheel3.jpg?raw=true) |

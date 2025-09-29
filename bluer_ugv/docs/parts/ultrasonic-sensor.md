@@ -7,4 +7,4 @@
 
 |   |
 | --- |
-| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/HC-SR04.jpg?raw=true) |
+| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/HC-SR04.jpg?raw=true) |

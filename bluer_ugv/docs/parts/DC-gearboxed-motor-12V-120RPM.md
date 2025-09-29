@@ -5,5 +5,5 @@
 
 |   |   |   |
 | --- | --- | --- |
-| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/GM6558/01.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/GM6558/02.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/GM6558/03.jpg?raw=true) |
-| ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/GM6558/04.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/GM6558/measurements.jpg?raw=true) | ![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/GM6558/specs.png?raw=true) |
+| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/GM6558/01.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/GM6558/02.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/GM6558/03.jpg?raw=true) |
+| ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/GM6558/04.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/GM6558/measurements.jpg?raw=true) | ![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/parts/GM6558/specs.png?raw=true) |
