@@ -1,11 +1,11 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.consts import assets2_bluer_robin
+from bluer_ugv.README.consts import assets2_bluer_robin, bluer_robin_design
 
 items = ImageItems(
     {
         f"{assets2_bluer_robin}/20250712_114819.jpg": "",
-        "../../../diagrams/bluer_robin/wiring.png": "../../../diagrams/bluer_robin/wiring.svg",
+        f"{bluer_robin_design}/wiring.png": f"{bluer_robin_design}/wiring.svg",
         f"{assets2_bluer_robin}/20250713_172325.jpg": "",
         f"{assets2_bluer_robin}/20250713_172413.jpg": "",
         f"{assets2_bluer_robin}/20250713_172442_1.gif": "",
