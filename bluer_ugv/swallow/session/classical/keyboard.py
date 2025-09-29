@@ -48,20 +48,31 @@ class ClassicalKeyboard:
 
         mode = self.mode
 
+        # bash keys
         if self.special_key:
             for key, event in bash_keys.items():
                 if keyboard.is_pressed(key):
                     reply_to_bash(event)
                     return False
 
-        if keyboard.is_pressed(" "):
-            self.special_key = False
-            self.setpoint.stop()
+        # other keys
+        for key, func in {
+            " ": lambda: self.setpoint.stop(),
+            "x": lambda: self.setpoint.start(),
+            "s": lambda: self.setpoint.put(
+                what="speed",
+                value=self.setpoint.get(what="speed") - 10,
+            ),
+            "w": lambda: self.setpoint.put(
+                what="speed",
+                value=self.setpoint.get(what="speed") + 10,
+            ),
+        }.items():
+            if keyboard.is_pressed(key):
+                self.special_key = False
+                func()
 
-        if keyboard.is_pressed("x"):
-            self.special_key = False
-            self.setpoint.start()
-
+        # steering
         if keyboard.is_pressed("a"):
             self.special_key = False
             self.last_key = "a"
@@ -83,24 +94,7 @@ class ClassicalKeyboard:
                 log=False,
             )
 
-        if keyboard.is_pressed("s"):
-            self.special_key = False
-            self.setpoint.put(
-                what="speed",
-                value=self.setpoint.get(what="speed") - 10,
-            )
-
-        if keyboard.is_pressed("w"):
-            self.special_key = False
-            self.setpoint.put(
-                what="speed",
-                value=self.setpoint.get(what="speed") + 10,
-            )
-
-        if keyboard.is_pressed("y"):
-            self.special_key = False
-            self.mode = OperationMode.NONE
-
+        # debug mode
         if keyboard.is_pressed("b"):
             self.special_key = False
             self.debug_mode = True
@@ -111,20 +105,24 @@ class ClassicalKeyboard:
             self.debug_mode = False
             logger.info("debug disabled.")
 
+        # mode
+        if keyboard.is_pressed("y"):
+            self.mode = OperationMode.NONE
+
         if keyboard.is_pressed("t"):
-            self.special_key = False
             self.mode = OperationMode.TRAINING
 
         if keyboard.is_pressed("g"):
-            self.special_key = False
             self.mode = OperationMode.ACTION
 
+        if mode != self.mode:
+            self.special_key = False
+            logger.info("mode: {}.".format(self.mode.name.lower()))
+
+        # special key
         if keyboard.is_pressed("z") and not self.special_key:
             self.special_key = True
             logger.info("🪄 special key enabled.")
-
-        if mode != self.mode:
-            logger.info("mode: {}.".format(self.mode.name.lower()))
 
         if self.special_key:
             for led in self.leds.leds.values():
