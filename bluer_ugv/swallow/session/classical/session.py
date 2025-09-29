@@ -43,7 +43,7 @@ class ClassicalSession:
             )
 
         self.keyboard = ClassicalKeyboard(
-            led=self.leds,
+            leds=self.leds,
             setpoint=self.setpoint,
         )
 
