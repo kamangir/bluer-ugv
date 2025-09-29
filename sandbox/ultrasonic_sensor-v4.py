@@ -14,10 +14,10 @@ args = parser.parse_args()
 
 
 # Pin definitions
-if args.side == "right":
+if args.side == "left":
     TRIG = 23  # GPIO 23, pin 16
     ECHO = 24  # GPIO 24, pin 18
-elif args.side == "left":
+elif args.side == "right":
     TRIG = 5  # GPIO 5, pin 29
     ECHO = 25  # GPIO 25, pin 22
 else:
