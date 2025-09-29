@@ -1,6 +1,9 @@
 from RPi import GPIO
 import time
 
+from bluer_options import string
+from bluer_options.logger import logger
+
 # Pin definitions
 TRIG = 23  # GPIO 23, pin 16
 ECHO = 24  # GPIO 24, pin 18
@@ -15,7 +18,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(TRIG, GPIO.OUT)
 GPIO.setup(ECHO, GPIO.IN)
 
-print(f"t_ms = {t_ms:.3f} ms for {DISTANCE_MM} mm")
+logger.info(f"t_ms = {t_ms:.3f} ms for {DISTANCE_MM} mm")
 
 try:
     while True:
@@ -36,11 +39,11 @@ try:
                 break
 
         if echo_detected:
-            print("echo detected")
+            logger.info("{}: echo detected.".format(string.pretty_date()))
 
         time.sleep(0.1)  # small delay between triggers
 
 except KeyboardInterrupt:
-    print("Stopped by user")
+    logger.info("^C detected.")
 finally:
     GPIO.cleanup()
