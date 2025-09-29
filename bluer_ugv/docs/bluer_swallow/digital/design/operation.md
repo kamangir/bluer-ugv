@@ -3,7 +3,6 @@
 - keyboard:
     -  a: steer left.
     -  b: debug on.
-    - zb: debug off. 
     -  d: steer right.
     -  g: mode = prediction.
     - zi: exit.
@@ -12,6 +11,7 @@
     - zp: reboot.
     -  t: mode = train.
     - zu: update.
+    -  v: debug off. 
     -  w: speed forward.
     -  y: mode = none.
     - space: stop.

@@ -102,17 +102,14 @@ class ClassicalKeyboard:
             self.mode = OperationMode.NONE
 
         if keyboard.is_pressed("b"):
-            if self.special_key:
-                self.debug_mode = False
-            else:
-                self.debug_mode = True
-
             self.special_key = False
+            self.debug_mode = True
+            logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
 
-            if self.debug_mode:
-                logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
-            else:
-                logger.info("debug disabled.")
+        if keyboard.is_pressed("v"):
+            self.special_key = False
+            self.debug_mode = False
+            logger.info("debug disabled.")
 
         if keyboard.is_pressed("t"):
             self.special_key = False
