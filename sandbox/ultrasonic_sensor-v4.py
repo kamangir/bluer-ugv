@@ -6,7 +6,7 @@ import time
 
 parser = argparse.ArgumentParser(__name__)
 parser.add_argument(
-    "side",
+    "--side",
     type=str,
     help="left | right",
 )
