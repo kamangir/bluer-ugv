@@ -37,29 +37,36 @@ class ClassicalKeyboard:
 
         self.debug_mode: bool = False
 
+        self.special_key: bool = False
+
     def update(self) -> bool:
         self.last_key = ""
 
         mode = self.mode
 
-        for key, event in bash_keys.items():
-            if keyboard.is_pressed(key):
-                reply_to_bash(event)
-                return False
+        if self.special_key:
+            for key, event in bash_keys.items():
+                if keyboard.is_pressed(key):
+                    reply_to_bash(event)
+                    return False
 
         if keyboard.is_pressed(" "):
+            self.special_key = False
             self.setpoint.stop()
 
         if keyboard.is_pressed("x"):
+            self.special_key = False
             self.setpoint.start()
 
         if keyboard.is_pressed("a"):
+            self.special_key = False
             self.last_key = "a"
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed("d"):
+            self.special_key = False
             self.last_key = "d"
             self.setpoint.put(
                 what="steering",
@@ -73,32 +80,47 @@ class ClassicalKeyboard:
             )
 
         if keyboard.is_pressed("s"):
+            self.special_key = False
             self.setpoint.put(
                 what="speed",
                 value=self.setpoint.get(what="speed") - 10,
             )
 
         if keyboard.is_pressed("w"):
+            self.special_key = False
             self.setpoint.put(
                 what="speed",
                 value=self.setpoint.get(what="speed") + 10,
             )
 
         if keyboard.is_pressed("y"):
+            self.special_key = False
             self.mode = OperationMode.NONE
 
         if keyboard.is_pressed("b"):
-            self.debug_mode = not self.debug_mode
+            if self.special_key:
+                self.debug_mode = False
+            else:
+                self.debug_mode = True
+
+            self.special_key = False
+
             if self.debug_mode:
                 logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
             else:
                 logger.info("debug disabled.")
 
         if keyboard.is_pressed("t"):
+            self.special_key = False
             self.mode = OperationMode.TRAINING
 
         if keyboard.is_pressed("g"):
+            self.special_key = False
             self.mode = OperationMode.ACTION
+
+        if keyboard.is_pressed("z"):
+            self.special_key = True
+            logger.info("🪄 special key enabled.")
 
         if mode != self.mode:
             logger.info("mode: {}.".format(self.mode.name.lower()))
