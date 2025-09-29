@@ -57,8 +57,8 @@ class ClassicalKeyboard:
 
         # other keys
         for key, func in {
-            " ": lambda: self.setpoint.stop(),
-            "x": lambda: self.setpoint.start(),
+            " ": self.setpoint.stop,
+            "x": self.setpoint.start,
             "s": lambda: self.setpoint.put(
                 what="speed",
                 value=self.setpoint.get(what="speed") - 10,
