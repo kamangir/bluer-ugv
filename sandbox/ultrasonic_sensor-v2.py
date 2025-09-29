@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
+from RPi import GPIO
 import time
 
 # Pin definitions
@@ -7,7 +7,7 @@ ECHO = 24  # GPIO 24, pin 18
 
 # Constants
 C = 343.0  # speed of sound (m/s)
-MAX_RANGE_M = 1.0  # only detect obstacles closer than 1 m
+MAX_RANGE_M = 0.8
 THRESHOLD_S = (2 * MAX_RANGE_M) / C  # round-trip time for 1 m
 
 GPIO.setmode(GPIO.BCM)
