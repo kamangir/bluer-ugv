@@ -14,7 +14,9 @@ function bluer_ugv_swallow_debug() {
     local status="$?"
 
     [[ "$do_upload" == 1 ]] &&
-        bluer_objects_upload - $object_name
+        bluer_objects_upload \
+            filename=$object_name.gif \
+            $object_name
 
     return $status
 }
