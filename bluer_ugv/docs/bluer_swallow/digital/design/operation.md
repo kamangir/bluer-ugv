@@ -1,18 +1,19 @@
 # bluer-swallow: digital: design: operation
 
 - keyboard:
-    - a: steer left.
-    - b: debug.
-    - d: steer right.
-    - g: mode = prediction.
-    - i: exit.
-    - o: shutdown.
-    - s: speed backward.
-    - p: reboot.
-    - t: mode = train.
-    - u: update.
-    - w: speed forward.
-    - y: mode = none.
+    -  a: steer left.
+    -  b: debug on.
+    -  d: steer right.
+    -  g: mode = prediction.
+    - zi: exit.
+    - zo: shutdown.
+    -  s: speed backward.
+    - zp: reboot.
+    -  t: mode = train.
+    - zu: update.
+    -  v: debug off. 
+    -  w: speed forward.
+    -  y: mode = none.
     - space: stop.
 
 |   |

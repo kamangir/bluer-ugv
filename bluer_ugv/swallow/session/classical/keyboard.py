@@ -5,6 +5,7 @@ from bluer_algo.socket.classes import DEV_HOST
 
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv import env
 from bluer_ugv.logger import logger
 
@@ -19,6 +20,7 @@ bash_keys = {
 class ClassicalKeyboard:
     def __init__(
         self,
+        leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
     ):
         logger.info(
@@ -30,6 +32,8 @@ class ClassicalKeyboard:
             )
         )
 
+        self.leds = leds
+
         self.last_key: str = ""
         self.setpoint = setpoint
 
@@ -37,29 +41,47 @@ class ClassicalKeyboard:
 
         self.debug_mode: bool = False
 
+        self.special_key: bool = False
+
     def update(self) -> bool:
         self.last_key = ""
 
         mode = self.mode
 
-        for key, event in bash_keys.items():
+        # bash keys
+        if self.special_key:
+            for key, event in bash_keys.items():
+                if keyboard.is_pressed(key):
+                    reply_to_bash(event)
+                    return False
+
+        # other keys
+        for key, func in {
+            " ": self.setpoint.stop,
+            "x": self.setpoint.start,
+            "s": lambda: self.setpoint.put(
+                what="speed",
+                value=self.setpoint.get(what="speed") - 10,
+            ),
+            "w": lambda: self.setpoint.put(
+                what="speed",
+                value=self.setpoint.get(what="speed") + 10,
+            ),
+        }.items():
             if keyboard.is_pressed(key):
-                reply_to_bash(event)
-                return False
+                self.special_key = False
+                func()
 
-        if keyboard.is_pressed(" "):
-            self.setpoint.stop()
-
-        if keyboard.is_pressed("x"):
-            self.setpoint.start()
-
+        # steering
         if keyboard.is_pressed("a"):
+            self.special_key = False
             self.last_key = "a"
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed("d"):
+            self.special_key = False
             self.last_key = "d"
             self.setpoint.put(
                 what="steering",
@@ -72,27 +94,20 @@ class ClassicalKeyboard:
                 log=False,
             )
 
-        if keyboard.is_pressed("s"):
-            self.setpoint.put(
-                what="speed",
-                value=self.setpoint.get(what="speed") - 10,
-            )
+        # debug mode
+        if keyboard.is_pressed("b"):
+            self.special_key = False
+            self.debug_mode = True
+            logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
 
-        if keyboard.is_pressed("w"):
-            self.setpoint.put(
-                what="speed",
-                value=self.setpoint.get(what="speed") + 10,
-            )
+        if keyboard.is_pressed("v"):
+            self.special_key = False
+            self.debug_mode = False
+            logger.info("debug disabled.")
 
+        # mode
         if keyboard.is_pressed("y"):
             self.mode = OperationMode.NONE
-
-        if keyboard.is_pressed("b"):
-            self.debug_mode = not self.debug_mode
-            if self.debug_mode:
-                logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
-            else:
-                logger.info("debug disabled.")
 
         if keyboard.is_pressed("t"):
             self.mode = OperationMode.TRAINING
@@ -101,6 +116,16 @@ class ClassicalKeyboard:
             self.mode = OperationMode.ACTION
 
         if mode != self.mode:
+            self.special_key = False
             logger.info("mode: {}.".format(self.mode.name.lower()))
+
+        # special key
+        if keyboard.is_pressed("z") and not self.special_key:
+            self.special_key = True
+            logger.info("🪄 special key enabled.")
+
+        if self.special_key:
+            for led in self.leds.leds.values():
+                led["state"] = not led["state"]
 
         return True

@@ -131,6 +131,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         success, metadata = self.predictor.predict(
             image=image,
             return_annotated_image=self.keyboard.debug_mode,
+            annotated_image_scale=2,
         )
         if not success:
             return success
