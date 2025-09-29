@@ -5,6 +5,7 @@ from bluer_algo.socket.classes import DEV_HOST
 
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv import env
 from bluer_ugv.logger import logger
 
@@ -19,6 +20,7 @@ bash_keys = {
 class ClassicalKeyboard:
     def __init__(
         self,
+        leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
     ):
         logger.info(
@@ -29,6 +31,8 @@ class ClassicalKeyboard:
                 ),
             )
         )
+
+        self.leds = leds
 
         self.last_key: str = ""
         self.setpoint = setpoint
@@ -118,11 +122,15 @@ class ClassicalKeyboard:
             self.special_key = False
             self.mode = OperationMode.ACTION
 
-        if keyboard.is_pressed("z"):
+        if keyboard.is_pressed("z") and not self.special_key:
             self.special_key = True
             logger.info("🪄 special key enabled.")
 
         if mode != self.mode:
             logger.info("mode: {}.".format(self.mode.name.lower()))
+
+        if self.special_key:
+            for led in self.leds.leds:
+                led["state"] = not led["state"]
 
         return True
