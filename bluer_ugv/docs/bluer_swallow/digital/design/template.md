@@ -5,7 +5,7 @@ title:::
 - [shield](./shield.md)
 - [rpi-pinout](./rpi-pinout.md)
 - [operation](./operation.md)
-- [mechanical](./mechanical.md)
+- [mechanical](./mechanical)
 - [ultrasonic sensor](./ultrasonic-sensor)
 
 ## obsolete
