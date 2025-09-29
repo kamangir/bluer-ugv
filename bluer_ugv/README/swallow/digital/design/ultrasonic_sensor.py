@@ -7,7 +7,13 @@ from bluer_ugv.README.consts import (
 
 items = [
     {
-        "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor-tester.md",
+        "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor/dev.md",
+    },
+    {
+        "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor/tester.md",
         "cols": 2,
         "items": ImageItems(
             {
@@ -19,7 +25,7 @@ items = [
         ),
     },
     {
-        "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor-shield.md",
+        "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor/shield.md",
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/20250923_142200.jpg": "",

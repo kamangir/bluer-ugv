@@ -6,10 +6,8 @@ title:::
 - [rpi-pinout](./rpi-pinout.md)
 - [operation](./operation.md)
 - [mechanical](./mechanical.md)
-- [ultrasonic sensor tester](./ultrasonic-sensor-tester.md)
-- [ultrasonic sensor](./ultrasonic-sensor.md)
+- [ultrasonic sensor](./ultrasonic-sensor)
 
 ## obsolete
 
 - [over-current detection](./steering-over-current-detection.md)
-- [ultrasonic sensor shield](./ultrasonic-sensor-shield.md)
