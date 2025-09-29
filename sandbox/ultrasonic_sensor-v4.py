@@ -1,11 +1,27 @@
 # continues -v2
 
 from RPi import GPIO
+import argparse
 import time
 
+parser = argparse.ArgumentParser(__name__)
+parser.add_argument(
+    "side",
+    type=str,
+    help="left | right",
+)
+args = parser.parse_args()
+
+
 # Pin definitions
-TRIG = 23  # GPIO 23, pin 16
-ECHO = 24  # GPIO 24, pin 18
+if args.side == "left":
+    TRIG = 23  # GPIO 23, pin 16
+    ECHO = 24  # GPIO 24, pin 18
+elif args.side == "right":
+    TRIG = 5  # GPIO 5, pin 29
+    ECHO = 25  # GPIO 25, pin 22
+else:
+    raise ValueError("side must be 'left' or 'right'")
 
 # Constants
 C = 343.0  # speed of sound (m/s)
