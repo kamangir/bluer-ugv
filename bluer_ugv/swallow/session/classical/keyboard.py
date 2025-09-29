@@ -130,7 +130,7 @@ class ClassicalKeyboard:
             logger.info("mode: {}.".format(self.mode.name.lower()))
 
         if self.special_key:
-            for led in self.leds.leds:
+            for led in self.leds.leds.values():
                 led["state"] = not led["state"]
 
         return True
