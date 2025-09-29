@@ -1,5 +1,4 @@
-# doesn't work ⚠️
-# always sees a detection.
+# always sees a detection. ⚠️
 
 from RPi import GPIO
 import time

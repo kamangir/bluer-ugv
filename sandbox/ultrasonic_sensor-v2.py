@@ -1,3 +1,5 @@
+# reports "no object" if only one sensor is occluded. ⚠️
+
 from RPi import GPIO
 import time
 
