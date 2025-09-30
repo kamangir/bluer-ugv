@@ -1,7 +1,5 @@
 title:::
 
-## validation
-
 using [ultrasonic_sensor-v8.py](../../../../../../sandbox/ultrasonic_sensor-v8.py).
 
 ```text
@@ -21,7 +19,15 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 ```
 
 ```bash
-@swallow ultrasonic test
+@select ultrasonic-test-$(@timestamp)
+@swallow ultrasonic test - .
+
+@assets publish \
+	download,extensions=png,push .
 ```
 
-🔥
+set:::object_name ultrasonic-test-2025-09-30-12-11-56-5awwdm
+
+| | |
+|-|-|
+| assets:::get:::object_name/distance-mm-.png | assets:::get:::object_name/pulse--ms-.png |
