@@ -2,9 +2,9 @@ from bluer_objects.README.items import ImageItems, Items
 from bluer_objects import markdown
 
 from bluer_ugv.README.consts import (
-    bluer_swallow_mechanical_design,
-    assets2_bluer_ugv,
     assets2_bluer_swallow,
+    assets2_bluer_ugv,
+    bluer_swallow_electrical_design,
 )
 
 items = markdown.generate_table(
@@ -18,7 +18,7 @@ items = markdown.generate_table(
             {
                 "name": "shield",
                 "url": "./bluer_ugv/docs/bluer_swallow/digital/design/shield.md",
-                "marquee": f"{bluer_swallow_mechanical_design}/electrical/digital.png?raw=true",
+                "marquee": f"{bluer_swallow_electrical_design}/digital.png?raw=true",
             },
             {
                 "name": "terraform",
