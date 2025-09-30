@@ -1,6 +1,19 @@
 from RPi import GPIO
+from typing import Tuple
+import time
 
 from bluer_ugv.logger import logger
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.consts import (
+    C,
+    CYCLE_MIN_S,
+    WAIT_LOW_TIMEOUT_S,
+    WAIT_HIGH_TIMEOUT_S,
+    TRIG_PULSE_S,
+)
+
+
+def monotonic_s():
+    return time.monotonic_ns() * 1e-9
 
 
 class ClassicalUltrasonicSensor:
@@ -8,9 +21,13 @@ class ClassicalUltrasonicSensor:
         self,
         side: str,
         setmode: bool = True,
+        max_m: float = 0.8,
     ):
         self.side = side
         self.valid = True
+
+        self.max_m = max_m
+        self.THRESH_S = (2 * max_m) / C  # round-trip time threshold
 
         # Pin definitions
         if side == "left":
@@ -33,10 +50,71 @@ class ClassicalUltrasonicSensor:
         GPIO.setup(self.ECHO, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
         logger.info(
-            "{}: {} ultrasonic sensor initialized on TRIG=GPIO#{}, ECHO=GPIO#{}".format(
+            "{}: {} ultrasonic sensor initialized on TRIG=GPIO#{}, ECHO=GPIO#{} at max distance={:6.2f} mm == {:6.2} ms.".format(
                 self.__class__.__name__,
                 self.side,
                 self.TRIG,
                 self.ECHO,
+                self.max_m * 1000,
+                self.THRESH_S * 1000,
             )
         )
+
+    def detect(self) -> Tuple[bool, bool, float, float]:
+        if not self.valid:
+            logger.error("invalid ultrasonic sensor")
+            return False, False, 0.0, 0.0
+
+        echo_detected: int = False
+        pulse_ms: float = 0.0
+        distance_mm: float = 0.0
+
+        cycle_start = monotonic_s()
+
+        # Trigger pulse
+        GPIO.output(self.TRIG, GPIO.LOW)
+        time.sleep(200e-6)  # settle
+        GPIO.output(self.TRIG, GPIO.HIGH)
+        time.sleep(TRIG_PULSE_S)  # 30 µs
+        GPIO.output(self.TRIG, GPIO.LOW)
+
+        # Wait for rising edge
+        t0 = monotonic_s()
+        while GPIO.input(self.ECHO) == 0 and (monotonic_s() - t0) < WAIT_HIGH_TIMEOUT_S:
+            pass
+        if GPIO.input(self.ECHO) == 0:
+            logger.info("no object (no echo high)")
+        else:
+            t_rise = monotonic_s()
+
+            # Wait for falling edge
+            t_fall_deadline = t_rise + WAIT_LOW_TIMEOUT_S
+            while GPIO.input(self.ECHO) == 1 and monotonic_s() < t_fall_deadline:
+                pass
+
+            if GPIO.input(self.ECHO) == 1:
+                logger.info("no object (pulse timeout)")
+            else:
+                t_fall = monotonic_s()
+                pulse_s = t_fall - t_rise
+                pulse_ms = pulse_s * 1000
+                distance_m = (pulse_s * C) / 2
+                distance_mm = distance_m * 1000
+
+                echo_detected = 0 < pulse_s < self.THRESH_S
+
+                logger.info(
+                    "{}: {}  | pulse={:6.2f} ms | dist≈{:5.0f} mm".format(
+                        self.side,
+                        "echo detected" if echo_detected else "no object",
+                        pulse_ms,
+                        distance_mm,
+                    )
+                )
+
+        # Keep cycle rate sane
+        elapsed = monotonic_s() - cycle_start
+        if elapsed < CYCLE_MIN_S:
+            time.sleep(CYCLE_MIN_S - elapsed)
+
+        return True, echo_detected, pulse_ms, distance_mm
