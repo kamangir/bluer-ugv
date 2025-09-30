@@ -4,7 +4,7 @@ from RPi import GPIO
 import argparse
 
 from bluer_ugv.logger import logger
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.sensor import (
     ClassicalUltrasonicSensor,
 )
 
@@ -35,11 +35,11 @@ if not right_ultrasonic_sensor.valid:
 
 try:
     while True:
-        success, echo_detected, pulse_ms, distance_mm = left_ultrasonic_sensor.detect()
+        success, left_detection = left_ultrasonic_sensor.detect()
         if not success:
             break
 
-        success, echo_detected, pulse_ms, distance_mm = right_ultrasonic_sensor.detect()
+        success, right_detection = right_ultrasonic_sensor.detect()
         if not success:
             break
 except KeyboardInterrupt:

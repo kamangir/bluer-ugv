@@ -10,6 +10,9 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.consts import (
     WAIT_HIGH_TIMEOUT_S,
     TRIG_PULSE_S,
 )
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
+    ClassicalUltrasonicSensorDetection as Detection,
+)
 
 
 def monotonic_s():
@@ -60,14 +63,18 @@ class ClassicalUltrasonicSensor:
             )
         )
 
-    def detect(self) -> Tuple[bool, bool, float, float]:
+    def detect(
+        self,
+        log: bool = True,
+    ) -> Tuple[bool, Detection]:
         if not self.valid:
             logger.error("invalid ultrasonic sensor")
-            return False, False, 0.0, 0.0
+            return False, Detection(
+                side=self.side,
+                reason="invalid sensor",
+            )
 
-        echo_detected: int = False
-        pulse_ms: float = 0.0
-        distance_mm: float = 0.0
+        detection = Detection(side=self.side)
 
         cycle_start = monotonic_s()
 
@@ -83,6 +90,11 @@ class ClassicalUltrasonicSensor:
         while GPIO.input(self.ECHO) == 0 and (monotonic_s() - t0) < WAIT_HIGH_TIMEOUT_S:
             pass
         if GPIO.input(self.ECHO) == 0:
+            detection = Detection(
+                side=self.side,
+                detection=False,
+                reason="no echo high",
+            )
             logger.info(f"{self.side}: no detection (no echo high)")
         else:
             t_rise = monotonic_s()
@@ -93,6 +105,11 @@ class ClassicalUltrasonicSensor:
                 pass
 
             if GPIO.input(self.ECHO) == 1:
+                detection = Detection(
+                    side=self.side,
+                    detection=False,
+                    reason="pulse timeout",
+                )
                 logger.info(f"{self.side}: no detection (pulse timeout)")
             else:
                 t_fall = monotonic_s()
@@ -103,6 +120,14 @@ class ClassicalUltrasonicSensor:
 
                 echo_detected = 0 < pulse_s < self.THRESH_S
 
+                detection = Detection(
+                    side=self.side,
+                    detection=True,
+                    echo_detected=echo_detected,
+                    pulse_ms=pulse_ms,
+                    distance_mm=distance_mm,
+                )
+
                 logger.info(
                     "{:8}: {:16}, {:6.2f} ms == {:5.0f} mm".format(
                         self.side,
@@ -112,9 +137,12 @@ class ClassicalUltrasonicSensor:
                     )
                 )
 
+        if log:
+            logger.info(detection.as_str())
+
         # Keep cycle rate sane
         elapsed = monotonic_s() - cycle_start
         if elapsed < CYCLE_MIN_S:
             time.sleep(CYCLE_MIN_S - elapsed)
 
-        return True, echo_detected, pulse_ms, distance_mm
+        return True, detection
