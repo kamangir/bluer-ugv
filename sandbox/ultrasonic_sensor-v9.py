@@ -5,7 +5,7 @@ import argparse
 
 from bluer_ugv.logger import logger
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.pack import (
-    ClassicalUltrasonicSensorPack,
+    UltrasonicSensorPack,
 )
 
 parser = argparse.ArgumentParser(description="HC-SR04 single-sensor test")
@@ -17,7 +17,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-ultrasonic_sensor_pack = ClassicalUltrasonicSensorPack(max_m=args.max_m)
+ultrasonic_sensor_pack = UltrasonicSensorPack(max_m=args.max_m)
 if not ultrasonic_sensor_pack.valid:
     raise RuntimeError("at least one sensor not found.")
 

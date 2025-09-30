@@ -5,7 +5,7 @@ import argparse
 
 from bluer_ugv.logger import logger
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.sensor import (
-    ClassicalUltrasonicSensor,
+    lUltrasonicSensor,
 )
 
 parser = argparse.ArgumentParser(description="HC-SR04 single-sensor test")
@@ -24,7 +24,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-ultrasonic_sensor = ClassicalUltrasonicSensor(
+ultrasonic_sensor = lUltrasonicSensor(
     side=args.side,
     setmode=True,
     max_m=args.max_m,

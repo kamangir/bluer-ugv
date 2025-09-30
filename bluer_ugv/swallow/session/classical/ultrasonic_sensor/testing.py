@@ -10,7 +10,7 @@ from bluer_objects.graphics.signature import justify_text
 
 from bluer_ugv.logger import logger
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.pack import (
-    ClassicalUltrasonicSensorPack,
+    UltrasonicSensorPack,
     Detection,
 )
 from bluer_ugv.host import signature
@@ -23,7 +23,7 @@ def test(
     log: bool = True,
     line_width: int = 80,
 ) -> bool:
-    ultrasonic_sensor_pack = ClassicalUltrasonicSensorPack(max_m=max_m)
+    ultrasonic_sensor_pack = UltrasonicSensorPack(max_m=max_m)
     if not ultrasonic_sensor_pack.valid:
         return False
 

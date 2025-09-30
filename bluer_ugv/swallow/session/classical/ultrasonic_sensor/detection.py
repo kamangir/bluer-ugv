@@ -1,4 +1,4 @@
-class ClassicalUltrasonicSensorDetection:
+class Detection:
     def __init__(
         self,
         side: str,

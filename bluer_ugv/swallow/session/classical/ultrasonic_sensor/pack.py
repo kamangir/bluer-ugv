@@ -1,26 +1,24 @@
 from typing import List, Tuple
 
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.sensor import (
-    ClassicalUltrasonicSensor,
+    lUltrasonicSensor,
 )
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    ClassicalUltrasonicSensorDetection as Detection,
-)
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
 from bluer_ugv.logger import logger
 
 
-class ClassicalUltrasonicSensorPack:
+class UltrasonicSensorPack:
     def __init__(
         self,
         setmode: bool = True,
         max_m: float = 0.8,
     ) -> None:
-        self.left = ClassicalUltrasonicSensor(
+        self.left = lUltrasonicSensor(
             side="left",
             setmode=setmode,
             max_m=max_m,
         )
-        self.right = ClassicalUltrasonicSensor(
+        self.right = lUltrasonicSensor(
             side="right",
             setmode=False,
             max_m=max_m,
