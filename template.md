@@ -6,9 +6,15 @@
 pip install bluer_ugv
 ```
 
+## designs
+
 items:::
 
-# aliases
+## shortcuts
+
+shortcuts:::
+
+## aliases
 
 [@swallow](./bluer_ugv/docs/aliases/swallow.md), 
 [@ugv](./bluer_ugv/docs/aliases/ugv.md).

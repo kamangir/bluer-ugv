@@ -11,6 +11,7 @@ assets2_bluer_fire = f"{assets2}/bluer-fire"
 assets2_bluer_robin = f"{assets2}/bluer-robin"
 assets2_bluer_swallow = f"{assets2}/bluer-swallow"
 assets2_bluer_sparrow = f"{assets2}/bluer-sparrow"
+assets2_bluer_ugv = f"{assets2}/bluer-ugv"
 
 # design
 bluer_ugv_mechanical_design = f"{github_kamangir}/bluer-ugv-mechanical-design/"

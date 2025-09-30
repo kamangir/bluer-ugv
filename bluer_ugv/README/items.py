@@ -1,7 +1,6 @@
 from bluer_objects import README
 
 from bluer_ugv.README.consts import (
-    assets2,
     assets2_bluer_eagle,
     assets2_bluer_robin,
     assets2_bluer_sparrow,
