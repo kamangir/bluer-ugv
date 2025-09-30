@@ -49,7 +49,7 @@ def test(
     if not success:
         return success
 
-    for func, name in zip(
+    for func, name, plt.ylim in zip(
         [
             lambda detection: int(detection.detection),
             lambda detection: int(detection.echo_detected),
@@ -61,6 +61,12 @@ def test(
             "echo detection",
             "pulse (ms)",
             "distance(mm)",
+        ],
+        [
+            [0, 1],
+            [0, 1],
+            [0, ultrasonic_sensor_pack.left.THRESH_S],
+            [0, max_m],
         ],
     ):
         plt.figure(figsize=(5, 5))
@@ -93,6 +99,7 @@ def test(
         )
     )
     plt.ylabel(name)
+    plt.ylim(ylim)
     plt.legend(["left", "right"])
     plt.tight_layout()
     plt.grid(True)
