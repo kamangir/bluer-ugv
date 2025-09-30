@@ -79,39 +79,39 @@ def test(
             color="blue",
         )
 
-    plt.title(
-        justify_text(
-            " | ".join(
-                [
-                    "ultrasonic-sensor",
-                ]
-                + objects.signature(object_name=object_name)
-            ),
-            line_width=line_width,
-            return_str=True,
+        plt.title(
+            justify_text(
+                " | ".join(
+                    [
+                        "ultrasonic-sensor",
+                    ]
+                    + objects.signature(object_name=object_name)
+                ),
+                line_width=line_width,
+                return_str=True,
+            )
         )
-    )
-    plt.xlabel(
-        justify_text(
-            " | ".join(signature()),
-            line_width=line_width,
-            return_str=True,
+        plt.xlabel(
+            justify_text(
+                " | ".join(signature()),
+                line_width=line_width,
+                return_str=True,
+            )
         )
-    )
-    plt.ylabel(name)
-    plt.ylim(ylim)
-    plt.legend(["left", "right"])
-    plt.tight_layout()
-    plt.grid(True)
-    if not file.save_fig(
-        objects.path_of(
-            object_name=object_name,
-            filename="{}.png".format(
-                name.replace(" ", "-").replace("(", "-").replace(")", "-")
+        plt.ylabel(name)
+        plt.ylim(ylim)
+        plt.legend(["left", "right"])
+        plt.tight_layout()
+        plt.grid(True)
+        if not file.save_fig(
+            objects.path_of(
+                object_name=object_name,
+                filename="{}.png".format(
+                    name.replace(" ", "-").replace("(", "-").replace(")", "-")
+                ),
             ),
-        ),
-        log=log,
-    ):
-        return False
+            log=log,
+        ):
+            return False
 
     return True
