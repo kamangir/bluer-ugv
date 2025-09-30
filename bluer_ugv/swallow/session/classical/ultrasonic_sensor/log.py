@@ -87,14 +87,12 @@ class UltrasonicSensorDetectionLog:
     def load(
         self,
         object_name: str,
-        log: bool = True,
     ) -> bool:
         success, self.log = file.load(
             objects.path_of(
                 object_name=object_name,
                 filename="detections.dill",
             ),
-            log=log,
         )
 
         return success

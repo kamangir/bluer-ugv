@@ -20,7 +20,6 @@ def review(
 
     if not detection_log.load(
         object_name=object_name,
-        log=log,
     ):
         return False
 
