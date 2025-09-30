@@ -107,10 +107,12 @@ class UltrasonicSensorDetectionLog:
                 object_name=object_name,
                 filename="detections.yaml",
             ),
-            [
-                [detection.as_dict() for detection in list_of_detections]
-                for list_of_detections in self.log
-            ],
+            {
+                "detections": [
+                    [detection.as_dict() for detection in list_of_detections]
+                    for list_of_detections in self.log
+                ]
+            },
             log=log,
         ):
             return False
