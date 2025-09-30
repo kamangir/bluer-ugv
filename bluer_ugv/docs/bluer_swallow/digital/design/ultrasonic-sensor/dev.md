@@ -38,6 +38,6 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 
 | | |
 |-|-|
-| ![image](https://github.com/kamangir/assets/blob/main//pulse--ms-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main//distance-mm-.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/TBA/pulse--ms-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/TBA/distance-mm-.png?raw=true) |
 
-[detections.yaml](assets:::/detections.yaml)
+[detections.yaml](assets:::TBA/detections.yaml)

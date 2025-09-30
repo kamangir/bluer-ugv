@@ -126,3 +126,5 @@ class UltrasonicSensorDetectionLog:
             log=log,
         ):
             return False
+
+        return True
