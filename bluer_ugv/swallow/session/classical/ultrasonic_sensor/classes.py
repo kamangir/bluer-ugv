@@ -106,7 +106,7 @@ class ClassicalUltrasonicSensor:
                 logger.info(
                     "{}: {}  | pulse={:6.2f} ms | dist≈{:5.0f} mm".format(
                         self.side,
-                        "echo detected" if echo_detected else "no object",
+                        "detection" if echo_detected else "no detection",
                         pulse_ms,
                         distance_mm,
                     )
