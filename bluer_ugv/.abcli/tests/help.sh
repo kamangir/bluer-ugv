@@ -22,6 +22,7 @@ function test_bluer_ugv_help() {
         "@swallow select_target" \
         \
         "@swallow ultrasonic" \
+        "@swallow ultrasonic review" \
         "@swallow ultrasonic test" \
         \
         "@ugv" \

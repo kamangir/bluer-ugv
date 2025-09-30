@@ -19,15 +19,26 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 ```
 
 ```bash
+@rpi
 @select ultrasonic-test-$(@timestamp)
+
 @swallow ultrasonic test - .
+@.
+
+@mac
+@select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
+
+@swallow ultrasonic review upload .
 
 @assets publish \
-	download,extensions=png,push .
+	download,extensions=png+yaml,push .
+@.
 ```
 
-set:::object_name ultrasonic-test-2025-09-30-12-11-56-5awwdm
+set:::object_name env:::BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
 | | |
 |-|-|
 | assets:::get:::object_name/pulse--ms-.png | assets:::get:::object_name/distance-mm-.png |
+
+[detections.yaml](assets:::get:::object_name/detections.yaml)

@@ -19,14 +19,25 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 ```
 
 ```bash
+@rpi
 @select ultrasonic-test-$(@timestamp)
+
 @swallow ultrasonic test - .
+@.
+
+@mac
+@select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
+
+@swallow ultrasonic review upload .
 
 @assets publish \
-	download,extensions=png,push .
+	download,extensions=png+yaml,push .
+@.
 ```
 
 
 | | |
 |-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-12-11-56-5awwdm/pulse--ms-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-12-11-56-5awwdm/distance-mm-.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main//pulse--ms-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main//distance-mm-.png?raw=true) |
+
+[detections.yaml](assets:::/detections.yaml)

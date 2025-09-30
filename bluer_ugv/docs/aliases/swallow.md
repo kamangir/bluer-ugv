@@ -60,6 +60,12 @@
 ```bash
 @swallow \
 	ultrasonic \
+	review \
+	[~download,upload] \
+	[.|<object-name>]
+ . review ultrasonic sensor data.
+@swallow \
+	ultrasonic \
 	test \
 	[~upload] \
 	[-|<object-name>] \

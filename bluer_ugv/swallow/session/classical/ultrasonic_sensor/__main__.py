@@ -4,6 +4,7 @@ from blueness import module
 from blueness.argparse.generic import sys_exit
 
 from bluer_ugv import NAME
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.review import review
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.testing import test
 from bluer_ugv.logger import logger
 
@@ -13,7 +14,7 @@ parser = argparse.ArgumentParser(NAME)
 parser.add_argument(
     "task",
     type=str,
-    help="test",
+    help="review|test",
 )
 parser.add_argument(
     "--max_m",
@@ -40,7 +41,11 @@ parser.add_argument(
 args = parser.parse_args()
 
 success = False
-if args.task == "test":
+if args.task == "review":
+    success = review(
+        object_name=args.object_name,
+    )
+elif args.task == "test":
     success = test(
         object_name=args.object_name,
         max_m=args.max_m,
