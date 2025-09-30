@@ -49,7 +49,7 @@ def test(
     if not success:
         return success
 
-    for func, name, ylabel in zip(
+    for func, name in zip(
         [
             lambda detection: int(detection.detection),
             lambda detection: int(detection.echo_detected),
@@ -61,12 +61,6 @@ def test(
             "echo detection",
             "pulse (ms)",
             "distance(mm)",
-        ],
-        [
-            "yes / no",
-            "yes / no",
-            "ms",
-            "mm",
         ],
     ):
         plt.figure(figsize=(5, 5))
@@ -93,12 +87,12 @@ def test(
     )
     plt.xlabel(
         justify_text(
-            " | ".join([name] + signature()),
+            " | ".join(signature()),
             line_width=line_width,
             return_str=True,
         )
     )
-    plt.ylabel(ylabel)
+    plt.ylabel(name)
     plt.legend(["left", "right"])
     plt.tight_layout()
     plt.grid(True)
