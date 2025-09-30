@@ -11,6 +11,7 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.pack import (
 
 
 def test(
+    object_name: str,
     max_m: float = 0.8,
     graph: bool = True,
     log: bool = True,

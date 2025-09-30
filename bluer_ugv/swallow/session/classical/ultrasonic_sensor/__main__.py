@@ -22,6 +22,10 @@ parser.add_argument(
     help="detection threshold in meters.",
 )
 parser.add_argument(
+    "--object_name",
+    type=str,
+)
+parser.add_argument(
     "--log",
     type=int,
     default=1,
@@ -38,6 +42,7 @@ args = parser.parse_args()
 success = False
 if args.task == "test":
     success = test(
+        object_name=args.object_name,
         max_m=args.max_m,
         graph=args.graph == 1,
         log=args.log == 1,
