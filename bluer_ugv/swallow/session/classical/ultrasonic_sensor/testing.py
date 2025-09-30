@@ -49,7 +49,7 @@ def test(
     if not success:
         return success
 
-    for func, name, plt.ylim in zip(
+    for func, name, ylim in zip(
         [
             lambda detection: int(detection.detection),
             lambda detection: int(detection.echo_detected),
