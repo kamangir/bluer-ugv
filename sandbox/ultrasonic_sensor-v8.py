@@ -4,7 +4,7 @@ from RPi import GPIO
 import argparse
 
 from bluer_ugv.logger import logger
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.sensor import (
     ClassicalUltrasonicSensor,
 )
 
