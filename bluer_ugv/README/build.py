@@ -4,7 +4,6 @@ from bluer_options.help.functions import get_help
 from bluer_objects import file, README
 
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
-from bluer_ugv.README.items import items
 from bluer_ugv.help.functions import help_functions
 from bluer_ugv.README import (
     alias,
@@ -13,6 +12,7 @@ from bluer_ugv.README import (
     fire,
     parts,
     robin,
+    root,
     shield,
     sparrow,
     swallow,
@@ -38,8 +38,8 @@ def build() -> bool:
         )
         for readme in [
             {"path": "../docs"},
-            {"path": "../..", "items": items},
         ]
+        + root.docs
         + beast.docs
         + eagle.docs
         + fire.docs
