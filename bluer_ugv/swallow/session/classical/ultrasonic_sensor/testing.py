@@ -46,6 +46,9 @@ def test(
     if not graph:
         return success
 
+    if not success:
+        return success
+
     for func, name, ylabel in zip(
         [
             lambda detection: int(detection.detection),
@@ -99,7 +102,7 @@ def test(
     plt.legend(["left", "right"])
     plt.tight_layout()
     plt.grid(True)
-    return file.save_fig(
+    if not file.save_fig(
         objects.path_of(
             object_name=object_name,
             filename="{}.png".format(
@@ -107,4 +110,7 @@ def test(
             ),
         ),
         log=log,
-    )
+    ):
+        return False
+
+    return True
