@@ -26,9 +26,6 @@ items = [
         },
     },
     {
-        "path": "../docs/bluer_sparrow/design/terraform.md",
-    },
-    {
         "path": "../docs/bluer_sparrow/design/mechanical",
         "items": ImageItems(
             {

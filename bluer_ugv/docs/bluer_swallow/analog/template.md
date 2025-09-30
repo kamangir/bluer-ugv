@@ -1,7 +1,7 @@
 title:::
 
 - based on power wheels
-- [electrical diagram](../../../../diagrams/bluer_swallow/analog.svg) ([png](../../../../diagrams/bluer_swallow/analog.png))
+- [electrical diagram](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/bluer_swallow/electrical/analog.svg) ([png](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/bluer_swallow/electrical/analog.png))
 - sources:
     - https://persian-toys.com/
     - https://www.instagram.com/khamooshi_bike

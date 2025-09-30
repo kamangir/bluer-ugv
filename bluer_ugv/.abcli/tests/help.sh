@@ -21,6 +21,9 @@ function test_bluer_ugv_help() {
         "@swallow debug" \
         "@swallow select_target" \
         \
+        "@swallow ultrasonic" \
+        "@swallow ultrasonic test" \
+        \
         "@ugv" \
         \
         "@ugv git" \

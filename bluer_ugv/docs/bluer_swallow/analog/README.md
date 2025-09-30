@@ -1,11 +1,11 @@
 # bluer-swallow: analog
 
 - based on power wheels
-- [electrical diagram](../../../../diagrams/bluer_swallow/analog.svg) ([png](../../../../diagrams/bluer_swallow/analog.png))
+- [electrical diagram](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/bluer_swallow/electrical/analog.svg) ([png](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/bluer_swallow/electrical/analog.png))
 - sources:
     - https://persian-toys.com/
     - https://www.instagram.com/khamooshi_bike
 
 |   |
 | --- |
-| [![image](../../../../diagrams/bluer_swallow/analog.png)](../../../../diagrams/bluer_swallow/analog.svg) |
+| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/analog.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/analog.svg) |

@@ -1,6 +1,6 @@
 title:::
 
-- [electrical diagram](../../../../../diagrams/bluer_swallow/digital.svg) ([png](../../../../../diagrams/bluer_swallow/digital.png))
+- [electrical diagram](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/bluer_swallow/electrical/digital.svg) ([png](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/bluer_swallow/electrical/digital.png))
 - [different views](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/bluer-swallow.md)
 
 - connectors: all socket.

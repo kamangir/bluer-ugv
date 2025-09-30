@@ -1,11 +1,13 @@
 from bluer_objects.README.items import ImageItems
 
+from bluer_ugv.README.consts import bluer_swallow_electrical_design
+
 items = [
     {
         "path": "../docs/bluer_swallow/analog",
         "items": ImageItems(
             {
-                "../../../../diagrams/bluer_swallow/analog.png": "../../../../diagrams/bluer_swallow/analog.svg",
+                f"{bluer_swallow_electrical_design}/analog.png": f"{bluer_swallow_electrical_design}/analog.svg",
             }
         ),
     }

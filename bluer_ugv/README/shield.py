@@ -2,12 +2,13 @@ from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.consts import (
     assets2_bluer_swallow,
-    bluer_swallow_mechanical_design,
+    bluer_swallow_electrical_design,
+    bluer_swallow_ultrasonic_sensor_design,
 )
 
 items = ImageItems(
     {
-        "https://github.com/kamangir/bluer-ugv/raw/main/diagrams/bluer_swallow/digital.png": "https://github.com/kamangir/bluer-ugv/blob/main/diagrams/bluer_swallow/digital.svg",
+        f"{bluer_swallow_electrical_design}/digital.png": f"{bluer_swallow_electrical_design}/digital.svg",
         f"{assets2_bluer_swallow}/20250609_164433.jpg": "",
         f"{assets2_bluer_swallow}/20250614_102301.jpg": "",
         f"{assets2_bluer_swallow}/20250614_114954.jpg": "",
@@ -16,7 +17,7 @@ items = ImageItems(
         f"{assets2_bluer_swallow}/design/v2/01.jpg": "",
         f"{assets2_bluer_swallow}/design/v3/01.jpg": "",
         f"{assets2_bluer_swallow}/design/v4/01.jpg": "",
-        f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.png?raw=true": f"{bluer_swallow_mechanical_design}/ultrasonic-sensors/geometry.svg",
+        f"{bluer_swallow_ultrasonic_sensor_design}/geometry.png?raw=true": f"{bluer_swallow_ultrasonic_sensor_design}/geometry.svg",
         f"{assets2_bluer_swallow}/20250925_213013.jpg": "",
         f"{assets2_bluer_swallow}/20250925_214017.jpg": "",
         f"{assets2_bluer_swallow}/20250928_160425.jpg": "",

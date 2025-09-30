@@ -8,4 +8,4 @@
 
 |   |
 | --- |
-| [![image](../../../../../diagrams/bluer_swallow/steering-over-current.png)](../../../../../diagrams/bluer_swallow/steering-over-current.svg) |
+| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/steering-over-current.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/bluer_swallow/electrical/steering-over-current.svg) |
