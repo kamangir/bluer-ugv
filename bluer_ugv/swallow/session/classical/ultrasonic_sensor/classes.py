@@ -1,8 +1,14 @@
+from RPi import GPIO
+
 from bluer_ugv.logger import logger
 
 
 class ClassicalUltrasonicSensor:
-    def __init__(self, side: str):
+    def __init__(
+        self,
+        side: str,
+        setmode: bool = True,
+    ):
         self.side = side
         self.valid = True
 
@@ -17,12 +23,20 @@ class ClassicalUltrasonicSensor:
             logger.error(f"{side}: ultrasonic sensor not found.")
             self.valid = False
 
-        if self.valid:
-            logger.info(
-                "{}: {} ultrasonic sensor initialized on TRIG=GPIO#{}, ECHO=GPIO#{}".format(
-                    self.__class__.__name__,
-                    self.side,
-                    self.TRIG,
-                    self.ECHO,
-                )
+        if not self.valid:
+            return
+
+        if setmode:
+            GPIO.setmode(GPIO.BCM)
+
+        GPIO.setup(self.TRIG, GPIO.OUT, initial=GPIO.LOW)
+        GPIO.setup(self.ECHO, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+
+        logger.info(
+            "{}: {} ultrasonic sensor initialized on TRIG=GPIO#{}, ECHO=GPIO#{}".format(
+                self.__class__.__name__,
+                self.side,
+                self.TRIG,
+                self.ECHO,
             )
+        )

@@ -4,8 +4,7 @@ from RPi import GPIO
 import argparse
 import time
 
-from bluer_options.logger import logger
-
+from bluer_ugv.logger import logger
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
     ClassicalUltrasonicSensor,
 )
@@ -26,7 +25,10 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-ultrasonic_sensor = ClassicalUltrasonicSensor(side=args.side)
+ultrasonic_sensor = ClassicalUltrasonicSensor(
+    side=args.side,
+    setmode=True,
+)
 if not ultrasonic_sensor.valid:
     raise RuntimeError(f"{args.side}: sensor not found.")
 
@@ -43,11 +45,6 @@ WAIT_LOW_TIMEOUT_S = 0.040  # 40 ms max pulse width
 def monotonic_s():
     return time.monotonic_ns() * 1e-9
 
-
-# Setup
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(ultrasonic_sensor.TRIG, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(ultrasonic_sensor.ECHO, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 logger.info(
     f"[{args.side}] Using TRIG=GPIO{ultrasonic_sensor.TRIG}, ECHO=GPIO{ultrasonic_sensor.ECHO}"
