@@ -47,8 +47,6 @@ object:::get:::object_name
 
 ## review
 
-🔥
-
 ```bash
 @select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
