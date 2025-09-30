@@ -29,4 +29,4 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 
 | | |
 |-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-12-11-56-5awwdm/distance-mm-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-12-11-56-5awwdm/pulse--ms-.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-12-11-56-5awwdm/pulse--ms-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-12-11-56-5awwdm/distance-mm-.png?raw=true) |

@@ -30,4 +30,4 @@ set:::object_name ultrasonic-test-2025-09-30-12-11-56-5awwdm
 
 | | |
 |-|-|
-| assets:::get:::object_name/distance-mm-.png | assets:::get:::object_name/pulse--ms-.png |
+| assets:::get:::object_name/pulse--ms-.png | assets:::get:::object_name/distance-mm-.png |
