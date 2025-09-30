@@ -63,7 +63,7 @@
 	test \
 	[~upload] \
 	[-|<object-name>] \
-	[--graph 0] \
+	[--export 0] \
 	[--log 0] \
 	[--max_m 0.8]
  . test ultrasonic sensors.

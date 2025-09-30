@@ -19,7 +19,7 @@ from bluer_ugv.host import signature
 def test(
     object_name: str,
     max_m: float = 0.8,
-    graph: bool = True,
+    export: bool = True,
     log: bool = True,
     line_width: int = 80,
 ) -> bool:
@@ -36,14 +36,14 @@ def test(
             if not success:
                 break
 
-            if graph:
+            if export:
                 list_of_detection.append(detection)
     except KeyboardInterrupt:
         logger.info("^C detected.")
     finally:
         GPIO.cleanup()
 
-    if not graph:
+    if not export:
         return success
 
     if not success:

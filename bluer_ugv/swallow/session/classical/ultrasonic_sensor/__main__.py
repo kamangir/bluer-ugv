@@ -32,7 +32,7 @@ parser.add_argument(
     help="0 | 1.",
 )
 parser.add_argument(
-    "--graph",
+    "--export",
     type=int,
     default=1,
     help="0 | 1.",
@@ -44,7 +44,7 @@ if args.task == "test":
     success = test(
         object_name=args.object_name,
         max_m=args.max_m,
-        graph=args.graph == 1,
+        export=args.export == 1,
         log=args.log == 1,
     )
 else:

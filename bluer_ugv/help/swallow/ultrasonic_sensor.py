@@ -10,7 +10,7 @@ def help_test(
     options = xtra("~upload", mono=mono)
 
     args = [
-        "[--graph 0]",
+        "[--export 0]",
         "[--log 0]",
         "[--max_m 0.8]",
     ]
