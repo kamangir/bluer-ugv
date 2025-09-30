@@ -1,10 +1,14 @@
-# continues -v6
+# continues -v7
 
 from RPi import GPIO
 import argparse
 import time
 
 from bluer_options.logger import logger
+
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
+    ClassicalUltrasonicSensor,
+)
 
 parser = argparse.ArgumentParser(description="HC-SR04 single-sensor test")
 parser.add_argument(
@@ -22,13 +26,10 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-# Pin definitions
-if args.side == "left":
-    TRIG = 23  # GPIO 23, pin 16
-    ECHO = 24  # GPIO 24, pin 18
-else:  # right
-    TRIG = 5  # GPIO 5,  pin 29
-    ECHO = 25  # GPIO 25, pin 22
+ultrasonic_sensor = ClassicalUltrasonicSensor(side=args.side)
+if not ultrasonic_sensor.valid:
+    raise RuntimeError(f"{args.side}: sensor not found.")
+
 
 # Constants
 C = 343.0  # speed of sound (m/s)
@@ -45,10 +46,12 @@ def monotonic_s():
 
 # Setup
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(TRIG, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(ECHO, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(ultrasonic_sensor.TRIG, GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(ultrasonic_sensor.ECHO, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-logger.info(f"[{args.side}] Using TRIG=GPIO{TRIG}, ECHO=GPIO{ECHO}")
+logger.info(
+    f"[{args.side}] Using TRIG=GPIO{ultrasonic_sensor.TRIG}, ECHO=GPIO{ultrasonic_sensor.ECHO}"
+)
 logger.info(f"Detect < {int(args.max_m*1000)} mm (pulse < {THRESH_S*1000:.2f} ms)")
 
 try:
@@ -56,27 +59,33 @@ try:
         cycle_start = monotonic_s()
 
         # Trigger pulse
-        GPIO.output(TRIG, GPIO.LOW)
+        GPIO.output(ultrasonic_sensor.TRIG, GPIO.LOW)
         time.sleep(200e-6)  # settle
-        GPIO.output(TRIG, GPIO.HIGH)
+        GPIO.output(ultrasonic_sensor.TRIG, GPIO.HIGH)
         time.sleep(TRIG_PULSE_S)  # 30 µs
-        GPIO.output(TRIG, GPIO.LOW)
+        GPIO.output(ultrasonic_sensor.TRIG, GPIO.LOW)
 
         # Wait for rising edge
         t0 = monotonic_s()
-        while GPIO.input(ECHO) == 0 and (monotonic_s() - t0) < WAIT_HIGH_TIMEOUT_S:
+        while (
+            GPIO.input(ultrasonic_sensor.ECHO) == 0
+            and (monotonic_s() - t0) < WAIT_HIGH_TIMEOUT_S
+        ):
             pass
-        if GPIO.input(ECHO) == 0:
+        if GPIO.input(ultrasonic_sensor.ECHO) == 0:
             logger.info("no object (no echo high)")
         else:
             t_rise = monotonic_s()
 
             # Wait for falling edge
             t_fall_deadline = t_rise + WAIT_LOW_TIMEOUT_S
-            while GPIO.input(ECHO) == 1 and monotonic_s() < t_fall_deadline:
+            while (
+                GPIO.input(ultrasonic_sensor.ECHO) == 1
+                and monotonic_s() < t_fall_deadline
+            ):
                 pass
 
-            if GPIO.input(ECHO) == 1:
+            if GPIO.input(ultrasonic_sensor.ECHO) == 1:
                 logger.info("no object (pulse timeout)")
             else:
                 t_fall = monotonic_s()
