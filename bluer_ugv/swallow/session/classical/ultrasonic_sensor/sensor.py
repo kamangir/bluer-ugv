@@ -10,16 +10,14 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.consts import (
     WAIT_HIGH_TIMEOUT_S,
     TRIG_PULSE_S,
 )
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    ClassicalUltrasonicSensorDetection as Detection,
-)
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
 
 
 def monotonic_s():
     return time.monotonic_ns() * 1e-9
 
 
-class ClassicalUltrasonicSensor:
+class lUltrasonicSensor:
     def __init__(
         self,
         side: str,

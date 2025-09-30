@@ -31,3 +31,5 @@ def test_bluer_ugv_env():
     ]:
         assert isinstance(object_name, str)
         assert object_name
+
+    assert isinstance(env.BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT, str)

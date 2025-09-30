@@ -1,4 +1,7 @@
-class ClassicalUltrasonicSensorDetection:
+from typing import Dict
+
+
+class Detection:
     def __init__(
         self,
         side: str,
@@ -16,6 +19,16 @@ class ClassicalUltrasonicSensorDetection:
         self.echo_detected = echo_detected
         self.pulse_ms = pulse_ms
         self.distance_mm = distance_mm
+
+    def as_dict(self) -> Dict:
+        return {
+            "side": self.side,
+            "detection": self.detection,
+            "reason": self.reason,
+            "echo_detected": self.echo_detected,
+            "pulse_ms": self.pulse_ms,
+            "distance_mm": self.distance_mm,
+        }
 
     def as_str(self) -> str:
         if self.detection:

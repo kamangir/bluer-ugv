@@ -1,5 +1,7 @@
 title:::
 
+## test
+
 using [ultrasonic_sensor-v8.py](../../../../../../sandbox/ultrasonic_sensor-v8.py).
 
 ```text
@@ -19,15 +21,30 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 ```
 
 ```bash
+@rpi
 @select ultrasonic-test-$(@timestamp)
+
 @swallow ultrasonic test - .
+@.
+
+@mac
+@select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
 @assets publish \
-	download,extensions=png,push .
+	extensions=png+yaml,push
+
+@upload public,zip
+@.
 ```
 
-set:::object_name ultrasonic-test-2025-09-30-12-11-56-5awwdm
+set:::object_name env:::BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
 | | |
 |-|-|
 | assets:::get:::object_name/pulse--ms-.png | assets:::get:::object_name/distance-mm-.png |
+
+object:::get:::object_name
+
+## review
+
+🔥
