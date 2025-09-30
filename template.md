@@ -2,11 +2,11 @@
 
 🐬 `@ugv` is a [bluer-ai](https://github.com/kamangir/bluer-ai) plugin for UGVs.
 
-## designs
-
 ```bash
 pip install bluer_ugv
 ```
+
+## designs
 
 items:::
 
