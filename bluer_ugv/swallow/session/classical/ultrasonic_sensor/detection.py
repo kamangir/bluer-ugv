@@ -31,7 +31,6 @@ class Detection:
 
         if not self.detection:
             image[:, :width, 0] = 255
-
         elif not self.echo_detected:
             image[:, :width, :2] = 255
         else:
@@ -42,7 +41,7 @@ class Detection:
                 ),
                 0,
             )
-            image[distance:, :, :] = 128
+            image[height - distance :, :, :] = 128
 
         return image
 
@@ -56,13 +55,25 @@ class Detection:
             "distance_mm": self.distance_mm,
         }
 
-    def as_str(self) -> str:
+    def as_str(
+        self,
+        short: bool = False,
+    ) -> str:
         if self.detection:
-            return "{:8}: {:16}, {:6.2f} ms == {:5.0f} mm".format(
+            return ("{}: {}" if short else "{:8}: {}").format(
                 self.side,
-                "detection" if self.echo_detected else "no detection",
-                self.pulse_ms,
-                self.distance_mm,
+                (
+                    (
+                        "{:.2f} ms == {:.0f} mm"
+                        if short
+                        else "{:6.2f} ms == {:5.0f} mm"
+                    ).format(
+                        self.pulse_ms,
+                        self.distance_mm,
+                    )
+                    if self.echo_detected
+                    else "no echo" if self.detection else "no detection"
+                ),
             )
 
         return f"{self.side}: no detection ({self.reason})"
