@@ -55,7 +55,7 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 	--gif 1
 
 @assets publish \
-	extensions=png,push
+	extensions=gif,push
 
 @upload public,zip
 ```

@@ -56,7 +56,7 @@ object:::get:::object_name
 	--gif 1
 
 @assets publish \
-	extensions=png,push
+	extensions=gif,push
 
 @upload public,zip
 ```
