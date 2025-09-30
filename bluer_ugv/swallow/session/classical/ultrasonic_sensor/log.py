@@ -151,17 +151,7 @@ class UltrasonicSensorDetectionLog:
                 header=[
                     " | ".join(
                         ["ultrasonic-sensor"]
-                        + [
-                            (
-                                "{}: {:6.2f} mm".format(
-                                    detection.side,
-                                    detection.distance_mm,
-                                )
-                                if detection.detection
-                                else "no detection"
-                            )
-                            for detection in detections
-                        ]
+                        + [detection.as_str(short=True) for detection in detections]
                         + objects.signature(
                             f"frame #{index:04d}",
                             object_name,
