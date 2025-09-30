@@ -1,5 +1,7 @@
 # bluer-swallow: digital: design: ultrasonic-sensor: dev
 
+## test
+
 using [ultrasonic_sensor-v8.py](../../../../../../sandbox/ultrasonic_sensor-v8.py).
 
 ```text
@@ -41,3 +43,7 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-17-54-43-96l9ps/pulse--ms-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-17-54-43-96l9ps/distance-mm-.png?raw=true) |
 
 [ultrasonic-test-2025-09-30-17-54-43-96l9ps](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-09-30-17-54-43-96l9ps.tar.gz)
+
+## review
+
+🔥
