@@ -44,7 +44,7 @@ def monotonic_s():
 # Setup
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(TRIG, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(ECHO, GPIO.IN)
+GPIO.setup(ECHO, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 print(f"[{args.side}] Using TRIG=GPIO{TRIG}, ECHO=GPIO{ECHO}")
 print(f"Detect < {int(args.max_m*1000)} mm (pulse < {THRESH_S*1000:.2f} ms)")
