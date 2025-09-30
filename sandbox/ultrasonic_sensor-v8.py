@@ -35,7 +35,7 @@ if not ultrasonic_sensor.valid:
 
 try:
     while True:
-        success, echo_detected, pulse_ms, distance_mm = ultrasonic_sensor.detect()
+        success, _ = ultrasonic_sensor.detect()
         if not success:
             break
 except KeyboardInterrupt:
