@@ -95,7 +95,6 @@ class ClassicalUltrasonicSensor:
                 detection=False,
                 reason="no echo high",
             )
-            logger.info(f"{self.side}: no detection (no echo high)")
         else:
             t_rise = monotonic_s()
 
@@ -110,7 +109,6 @@ class ClassicalUltrasonicSensor:
                     detection=False,
                     reason="pulse timeout",
                 )
-                logger.info(f"{self.side}: no detection (pulse timeout)")
             else:
                 t_fall = monotonic_s()
                 pulse_s = t_fall - t_rise
@@ -126,15 +124,6 @@ class ClassicalUltrasonicSensor:
                     echo_detected=echo_detected,
                     pulse_ms=pulse_ms,
                     distance_mm=distance_mm,
-                )
-
-                logger.info(
-                    "{:8}: {:16}, {:6.2f} ms == {:5.0f} mm".format(
-                        self.side,
-                        "detection" if echo_detected else "no detection",
-                        pulse_ms,
-                        distance_mm,
-                    )
                 )
 
         if log:

@@ -4,8 +4,8 @@ from RPi import GPIO
 import argparse
 
 from bluer_ugv.logger import logger
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.sensor import (
-    ClassicalUltrasonicSensor,
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.pack import (
+    ClassicalUltrasonicSensorPack,
 )
 
 parser = argparse.ArgumentParser(description="HC-SR04 single-sensor test")
@@ -17,29 +17,14 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-left_ultrasonic_sensor = ClassicalUltrasonicSensor(
-    side="left",
-    max_m=args.max_m,
-)
-if not left_ultrasonic_sensor.valid:
-    raise RuntimeError(f"{args.side}: sensor not found.")
-
-right_ultrasonic_sensor = ClassicalUltrasonicSensor(
-    side="right",
-    setmode=False,
-    max_m=args.max_m,
-)
-if not right_ultrasonic_sensor.valid:
-    raise RuntimeError(f"{args.side}: sensor not found.")
+ultrasonic_sensor_pack = ClassicalUltrasonicSensorPack(max_m=args.max_m)
+if not ultrasonic_sensor_pack.valid:
+    raise RuntimeError("at least one sensor not found.")
 
 
 try:
     while True:
-        success, left_detection = left_ultrasonic_sensor.detect()
-        if not success:
-            break
-
-        success, right_detection = right_ultrasonic_sensor.detect()
+        success, detection = ultrasonic_sensor_pack.detect()
         if not success:
             break
 except KeyboardInterrupt:
