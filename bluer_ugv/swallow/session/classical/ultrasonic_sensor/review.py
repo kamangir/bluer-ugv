@@ -12,6 +12,7 @@ NAME = module.name(__file__, NAME)
 
 def review(
     object_name: str,
+    export_gif: bool = False,
     log: bool = True,
 ) -> bool:
     logger.info("{}.review({})".format(NAME, object_name))
@@ -26,6 +27,7 @@ def review(
     if not detection_log.export(
         object_name=object_name,
         line_width=80,
+        export_gif=export_gif,
         log=log,
     ):
         return False

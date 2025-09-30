@@ -1,3 +1,5 @@
+import numpy as np
+
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
@@ -52,3 +54,5 @@ def test_ultrasonic_sensor_detection():
         "distance_mm",
     ]:
         assert field in as_dict
+
+    assert isinstance(detection.as_image(), np.ndarray)

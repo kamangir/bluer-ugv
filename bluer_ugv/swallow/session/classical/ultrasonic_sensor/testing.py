@@ -18,6 +18,7 @@ def test(
     object_name: str,
     max_m: float = 0.8,
     export: bool = True,
+    export_gif: bool = False,
     log: bool = True,
     line_width: int = 80,
 ) -> bool:
@@ -56,6 +57,7 @@ def test(
     if not detection_log.export(
         object_name=object_name,
         line_width=line_width,
+        export_gif=export_gif,
         log=log,
     ):
         return False

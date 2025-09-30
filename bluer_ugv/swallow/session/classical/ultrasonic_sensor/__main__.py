@@ -38,18 +38,26 @@ parser.add_argument(
     default=1,
     help="0 | 1.",
 )
+parser.add_argument(
+    "--gif",
+    type=int,
+    default=0,
+    help="0 | 1.",
+)
 args = parser.parse_args()
 
 success = False
 if args.task == "review":
     success = review(
         object_name=args.object_name,
+        export_gif=args.gif == 1,
     )
 elif args.task == "test":
     success = test(
         object_name=args.object_name,
         max_m=args.max_m,
         export=args.export == 1,
+        export_gif=args.gif == 1,
         log=args.log == 1,
     )
 else:

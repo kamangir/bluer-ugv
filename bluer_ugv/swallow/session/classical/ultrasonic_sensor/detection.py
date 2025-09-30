@@ -1,4 +1,5 @@
 from typing import Dict
+import numpy as np
 
 
 class Detection:
@@ -19,6 +20,31 @@ class Detection:
         self.echo_detected = echo_detected
         self.pulse_ms = pulse_ms
         self.distance_mm = distance_mm
+
+    def as_image(
+        self,
+        height: int = 512,
+        width: int = 256,
+        max_m: float = 0.8,
+    ) -> np.ndarray:
+        image = np.zeros((height, width, 3), dtype=np.uint8)
+
+        if not self.detection:
+            image[:, :width, 0] = 255
+
+        elif not self.echo_detected:
+            image[:, :width, :2] = 255
+        else:
+            distance = max(
+                min(
+                    int(self.distance_mm / 1000 / max_m * height),
+                    height,
+                ),
+                0,
+            )
+            image[distance:, :, :] = 128
+
+        return image
 
     def as_dict(self) -> Dict:
         return {
