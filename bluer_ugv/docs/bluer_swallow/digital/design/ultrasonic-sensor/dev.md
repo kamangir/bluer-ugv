@@ -28,12 +28,10 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 @mac
 @select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
-@swallow ultrasonic review
-
 @assets publish \
 	extensions=png+yaml,push
 
-@upload public,zip]
+@upload public,zip
 @.
 ```
 
@@ -42,4 +40,4 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 |-|-|
 | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-17-54-43-96l9ps/pulse--ms-.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-17-54-43-96l9ps/distance-mm-.png?raw=true) |
 
-[ultrasonic-test-2025-09-30-17-54-43-96l9ps/detections.yaml](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-09-30-17-54-43-96l9ps/detections.yaml.tar.gz)
+[ultrasonic-test-2025-09-30-17-54-43-96l9ps](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-09-30-17-54-43-96l9ps.tar.gz)

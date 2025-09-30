@@ -28,12 +28,10 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 @mac
 @select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
-@swallow ultrasonic review
-
 @assets publish \
 	extensions=png+yaml,push
 
-@upload public,zip]
+@upload public,zip
 @.
 ```
 
@@ -43,4 +41,4 @@ set:::object_name env:::BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 |-|-|
 | assets:::get:::object_name/pulse--ms-.png | assets:::get:::object_name/distance-mm-.png |
 
-object:::get:::object_name/detections.yaml
+object:::get:::object_name
