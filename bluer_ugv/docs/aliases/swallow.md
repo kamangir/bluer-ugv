@@ -54,3 +54,17 @@
  . set env.
    steering: BLUER_SBC_SWALLOW_HAS_STEERING
 ```
+
+## ultrasonic-sensor
+
+```bash
+@swallow \
+	ultrasonic \
+	test \
+	[~upload] \
+	[-|<object-name>] \
+	[--graph 0] \
+	[--log 0] \
+	[--max_m 0.8]
+ . test ultrasonic sensors.
+```
