@@ -28,10 +28,10 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 @mac
 @select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
-@swallow ultrasonic review upload .
+@swallow ultrasonic review
 
 @assets publish \
-	download,extensions=png+yaml,push .
+	extensions=png+yaml,push
 @.
 ```
 

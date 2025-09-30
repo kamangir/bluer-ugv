@@ -47,7 +47,7 @@ def test(
     finally:
         GPIO.cleanup()
 
-    if export:
+    if not export:
         return success
 
     if not success:
