@@ -7,7 +7,7 @@ docs = [
         "path": "../..",
         "items": items,
         "macros": {
-            "shortcuts": shortcuts_items,
+            "shortcuts:::": shortcuts_items,
         },
     },
 ]
