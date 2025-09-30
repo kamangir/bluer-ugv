@@ -83,7 +83,7 @@ class ClassicalUltrasonicSensor:
         while GPIO.input(self.ECHO) == 0 and (monotonic_s() - t0) < WAIT_HIGH_TIMEOUT_S:
             pass
         if GPIO.input(self.ECHO) == 0:
-            logger.info("no object (no echo high)")
+            logger.info(f"{self.side}: no detection (no echo high)")
         else:
             t_rise = monotonic_s()
 
@@ -93,7 +93,7 @@ class ClassicalUltrasonicSensor:
                 pass
 
             if GPIO.input(self.ECHO) == 1:
-                logger.info("no object (pulse timeout)")
+                logger.info(f"{self.side}: no detection (pulse timeout)")
             else:
                 t_fall = monotonic_s()
                 pulse_s = t_fall - t_rise
@@ -104,7 +104,7 @@ class ClassicalUltrasonicSensor:
                 echo_detected = 0 < pulse_s < self.THRESH_S
 
                 logger.info(
-                    "{}: {}  | pulse={:6.2f} ms | dist≈{:5.0f} mm".format(
+                    "{}: {:10}  | pulse={:6.2f} ms | dist≈{:5.0f} mm".format(
                         self.side,
                         "detection" if echo_detected else "no detection",
                         pulse_ms,
