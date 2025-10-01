@@ -9,6 +9,10 @@ def help_review(
 ) -> str:
     options = xtra("~download,upload", mono=mono)
 
+    args = [
+        "[--frame_count <100>]",
+    ]
+
     return show_usage(
         [
             "@swallow",
@@ -16,7 +20,8 @@ def help_review(
             "review",
             f"[{options}]",
             "[.|<object-name>]",
-        ],
+        ]
+        + args,
         "review ultrasonic sensor data.",
         mono=mono,
     )

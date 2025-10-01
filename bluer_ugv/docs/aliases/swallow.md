@@ -62,7 +62,8 @@
 	ultrasonic \
 	review \
 	[~download,upload] \
-	[.|<object-name>]
+	[.|<object-name>] \
+	[--frame_count <100>]
  . review ultrasonic sensor data.
 @swallow \
 	ultrasonic \

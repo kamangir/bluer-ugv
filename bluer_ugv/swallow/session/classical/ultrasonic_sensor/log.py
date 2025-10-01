@@ -28,6 +28,7 @@ class UltrasonicSensorDetectionLog:
         self,
         object_name: str,
         export_gif: bool = False,
+        frame_count: int = -1,
         line_width: int = 80,
         log: bool = True,
     ) -> bool:
@@ -103,6 +104,7 @@ class UltrasonicSensorDetectionLog:
             if not self.export_gif(
                 object_name=object_name,
                 line_width=line_width,
+                frame_count=frame_count,
                 max_m=max_m,
                 log=log,
             ):
@@ -114,6 +116,7 @@ class UltrasonicSensorDetectionLog:
         self,
         object_name: str,
         line_width: int = 80,
+        frame_count: int = -1,
         height: int = 512,
         width: int = 512,
         max_m: float = 0.8,
@@ -129,6 +132,9 @@ class UltrasonicSensorDetectionLog:
             return False
 
         for index, detections in tqdm(enumerate(self.log)):
+            if frame_count != -1 and index >= frame_count:
+                break
+
             filename = objects.path_of(
                 object_name=object_name,
                 filename=f"frames/{index:010d}.png",
