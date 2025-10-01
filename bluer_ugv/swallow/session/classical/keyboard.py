@@ -123,10 +123,10 @@ class ClassicalKeyboard:
 
         # ultrasound
         ultrasound_enabled = self.ultrasound_enabled
-        if keyboard.is_pressed("N"):
+        if keyboard.is_pressed("n"):
             self.ultrasound_enabled = False
 
-        if keyboard.is_pressed("M"):
+        if keyboard.is_pressed("m"):
             self.ultrasound_enabled = True
 
         if ultrasound_enabled != self.ultrasound_enabled:

@@ -109,7 +109,7 @@ def test_ultrasonic_sensor_detection_no_echo_detected():
 # ---
 
 
-def ultrasonic_sensor_detection_900mm():
+def ultrasonic_sensor_detection_clear():
     return Detection(
         side="left",
         detection=True,
@@ -119,8 +119,8 @@ def ultrasonic_sensor_detection_900mm():
     )
 
 
-def test_ultrasonic_sensor_detection_900mm():
-    detection = ultrasonic_sensor_detection_900mm()
+def test_ultrasonic_sensor_detection_clear():
+    detection = ultrasonic_sensor_detection_clear()
 
     assert isinstance(detection.as_str(), str)
 
@@ -132,18 +132,18 @@ def test_ultrasonic_sensor_detection_900mm():
 # ---
 
 
-def ultrasonic_sensor_detection_700mm():
+def ultrasonic_sensor_detection_warning():
     return Detection(
         side="left",
         detection=True,
         echo_detected=True,
         pulse_ms=4.0,
-        distance_mm=700.0,
+        distance_mm=300.0,
     )
 
 
-def test_ultrasonic_sensor_detection_700mm():
-    detection = ultrasonic_sensor_detection_700mm()
+def test_ultrasonic_sensor_detection_warning():
+    detection = ultrasonic_sensor_detection_warning()
 
     assert isinstance(detection.as_str(), str)
 
@@ -155,18 +155,18 @@ def test_ultrasonic_sensor_detection_700mm():
 # ---
 
 
-def ultrasonic_sensor_detection_200mm():
+def ultrasonic_sensor_detection_danger():
     return Detection(
         side="left",
         detection=True,
         echo_detected=True,
         pulse_ms=4.0,
-        distance_mm=200.0,
+        distance_mm=150.0,
     )
 
 
-def test_ultrasonic_sensor_detection_200mm():
-    detection = ultrasonic_sensor_detection_200mm()
+def test_ultrasonic_sensor_detection_danger():
+    detection = ultrasonic_sensor_detection_danger()
 
     assert isinstance(detection.as_str(), str)
 

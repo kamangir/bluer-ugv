@@ -7,7 +7,7 @@ title:::
     -  g: mode = prediction.
     - zi: exit.
     -  m: ultrasonic sensor disabled.
-    -  m: ultrasonic sensor enabled.
+    -  n: ultrasonic sensor enabled.
     - zo: shutdown.
     -  s: speed backward.
     - zp: reboot.
