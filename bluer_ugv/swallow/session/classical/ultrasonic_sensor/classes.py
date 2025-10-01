@@ -10,6 +10,7 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
 )
+from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
@@ -18,6 +19,7 @@ class ClassicalUltrasonicSensor:
     def __init__(
         self,
         setpoint: ClassicalSetPoint,
+        keyboard: ClassicalKeyboard,
     ):
         self.enabled = env.BLUER_UGV_ULTRASONIC_SENSOR_ENABLED == 1
         logger.info(
@@ -35,6 +37,7 @@ class ClassicalUltrasonicSensor:
         )
 
         self.setpoint = setpoint
+        self.keyboard = keyboard
 
         self.pack = None
 
@@ -63,6 +66,9 @@ class ClassicalUltrasonicSensor:
         if not self.enabled:
             return True
 
+        if not self.keyboard.ultrasound_enabled:
+            return True
+
         success, detections = self.pack.detect(
             log=env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1
         )
@@ -73,14 +79,18 @@ class ClassicalUltrasonicSensor:
             self.log.append(detections)
 
         log_detections: bool = False
+        speed = self.setpoint.get(what="speed")
         if any(detection.state == DetectionState.DANGER for detection in detections):
             self.setpoint.stop()
             log_detections = True
             logger.info("⛔️ danger detected, stopping.")
-        elif any(detection.state == DetectionState.WARNING for detection in detections):
+        elif (
+            any(detection.state == DetectionState.WARNING for detection in detections)
+            and speed > 0
+        ):
             self.setpoint.put(
                 what="speed",
-                value=self.setpoint.get(what="speed") // 2,
+                value=speed // 2,
             )
             log_detections = True
             logger.info("⚠️ warning detected, lowering speed.")

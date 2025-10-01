@@ -43,6 +43,8 @@ class ClassicalKeyboard:
 
         self.special_key: bool = False
 
+        self.ultrasound_enabled: bool = True
+
     def update(self) -> bool:
         self.last_key = ""
 
@@ -118,6 +120,22 @@ class ClassicalKeyboard:
         if mode != self.mode:
             self.special_key = False
             logger.info("mode: {}.".format(self.mode.name.lower()))
+
+        # ultrasound
+        ultrasound_enabled = self.ultrasound_enabled
+        if keyboard.is_pressed("N"):
+            self.ultrasound_enabled = False
+
+        if keyboard.is_pressed("M"):
+            self.ultrasound_enabled = True
+
+        if ultrasound_enabled != self.ultrasound_enabled:
+            self.special_key = False
+            logger.info(
+                "ultrasound: {}.".format(
+                    "enabled" if self.ultrasound_enabled else "disabled"
+                )
+            )
 
         # special key
         if keyboard.is_pressed("z") and not self.special_key:

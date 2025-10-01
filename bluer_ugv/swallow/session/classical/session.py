@@ -52,6 +52,7 @@ class ClassicalSession:
 
         self.ultrasonic_sensor = ClassicalUltrasonicSensor(
             setpoint=self.setpoint,
+            keyboard=self.keyboard,
         )
 
         self.push_button = ClassicalPushButton(
