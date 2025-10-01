@@ -131,7 +131,7 @@ class ClassicalSession:
         post_to_object(
             abcli_object_name,
             "timing",
-            self.timing.stats,
+            self.timing.as_dict,
         )
 
         logger.info(f"{self.__class__.__name__}.cleanup")
