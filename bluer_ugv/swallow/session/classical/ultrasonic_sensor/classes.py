@@ -73,6 +73,6 @@ class ClassicalUltrasonicSensor:
                 what="speed",
                 value=self.setpoint.get(what="speed") // 2,
             )
-            logger.info("⚠️ warning detected, stopping.")
+            logger.info("⚠️ warning detected, lowering speed.")
 
         return True
