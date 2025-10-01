@@ -17,6 +17,13 @@ items = [
     },
     {
         "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor/dev.md",
+        "cols": 2,
+        "items": ImageItems(
+            {
+                f"{assets2_bluer_swallow}/20251001_185852.jpg": "",
+                f"{assets2_bluer_swallow}/20251001_203056_1.gif": "",
+            }
+        ),
     },
     {
         "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor/tester.md",

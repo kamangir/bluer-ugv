@@ -62,3 +62,9 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-09-30-17-54-43-96l9ps/ultrasonic-sensor-detections.gif?raw=true)
 
 [ultrasonic-test-2025-09-30-17-54-43-96l9ps](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-09-30-17-54-43-96l9ps.tar.gz)
+
+## in session
+
+|   |   |
+| --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_203056_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_203056_1.gif?raw=true) |
