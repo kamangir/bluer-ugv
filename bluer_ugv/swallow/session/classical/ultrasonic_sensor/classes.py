@@ -78,9 +78,17 @@ class ClassicalUltrasonicSensor:
             log_detections = True
             logger.info("⚠️ warning detected, lowering speed.")
 
+        if env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1:
+            log_detections = False
+
         if log_detections:
             logger.info(
-                ", ".join([detection.as_str(short=True) for detection in detections])
+                "{}: {}".format(
+                    self.__class__.__name__,
+                    ", ".join(
+                        [detection.as_str(short=True) for detection in detections]
+                    ),
+                )
             )
 
         return True
