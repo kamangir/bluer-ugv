@@ -3,11 +3,17 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.README.consts import (
     assets2,
     assets2_bluer_swallow,
+    bluer_swallow_ultrasonic_sensor_design,
 )
 
 items = [
     {
         "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor",
+        "items": ImageItems(
+            {
+                f"{bluer_swallow_ultrasonic_sensor_design}/geometry.png?raw=true": f"{bluer_swallow_ultrasonic_sensor_design}/geometry.svg",
+            }
+        ),
     },
     {
         "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor/dev.md",

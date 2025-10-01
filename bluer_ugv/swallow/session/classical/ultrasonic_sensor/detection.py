@@ -1,5 +1,13 @@
 from typing import Dict
 import numpy as np
+import time
+from enum import Enum, auto
+
+
+class DetectionState(Enum):
+    CLEAR = auto()
+    WARNING = auto()
+    DANGER = auto()
 
 
 class Detection:
@@ -12,6 +20,7 @@ class Detection:
         pulse_ms: float = 0.0,
         distance_mm: float = 0.0,
     ) -> None:
+        self.time = time.time()
         self.side = side
 
         self.detection = detection
@@ -77,3 +86,7 @@ class Detection:
             )
 
         return f"{self.side}: no detection ({self.reason})"
+
+    @property
+    def state(self) -> DetectionState:
+        return DetectionState.CLEAR

@@ -1,6 +1,9 @@
 import numpy as np
 
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
+    Detection,
+    DetectionState,
+)
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
 )
@@ -17,6 +20,8 @@ def test_ultrasonic_sensor_detection():
         reason="pulse timeout",
     )
     assert isinstance(detection.as_str(), str)
+    assert isinstance(detection.as_str(short=True), str)
+    assert isinstance(detection.state, DetectionState)
 
     detection = Detection(
         side="left",
@@ -42,7 +47,6 @@ def test_ultrasonic_sensor_detection():
         distance_mm=700.0,
     )
     assert isinstance(detection.as_str(), str)
-    assert isinstance(detection.as_str(short=True), str)
 
     as_dict = detection.as_dict()
     assert isinstance(as_dict, dict)
