@@ -1,5 +1,6 @@
 from RPi import GPIO  # type: ignore
 
+from bluer_options.timing.classes import Timing
 from bluer_sbc.env import BLUER_SBC_ENV, BLUER_SBC_SWALLOW_HAS_STEERING
 
 from bluer_ugv.swallow.session.classical.camera import (
@@ -111,6 +112,8 @@ class ClassicalSession:
             )
         )
 
+        self.timing = Timing()
+
     def cleanup(self):
         for thing in [
             self.motor1,
@@ -121,6 +124,8 @@ class ClassicalSession:
             thing.cleanup()
 
         GPIO.cleanup()
+
+        self.timing.log()
 
         logger.info(f"{self.__class__.__name__}.cleanup")
 
@@ -144,16 +149,21 @@ class ClassicalSession:
         )
 
     def update(self) -> bool:
-        return all(
-            thing.update()
-            for thing in [
-                self.keyboard,
-                self.push_button,
-                self.camera,
-                self.ultrasonic_sensor,
-                self.setpoint,
-                self.motor1,
-                self.motor2,
-                self.leds,
-            ]
-        )
+        for thing in [
+            self.keyboard,
+            self.push_button,
+            self.camera,
+            self.ultrasonic_sensor,
+            self.setpoint,
+            self.motor1,
+            self.motor2,
+            self.leds,
+        ]:
+            self.timing.start(thing.__class__.__name__)
+
+            if not thing.update():
+                return False
+
+            self.timing.stop(thing.__class__.__name__)
+
+        return True
