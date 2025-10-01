@@ -11,6 +11,8 @@ UGV: `sparrow2`
 ::  #   4 - ClassicalRightMotor: called 237 time(s), total 012 ms, avg < 1 ms
 ```
 
-set:::object_name 2025-10-01-22-45-32-21ixzp
+set:::object_name 2025-10-01-22-59-03-4b3vf8
 
+details:::yaml
 metadata:::get:::object_name:::timing
+details:::

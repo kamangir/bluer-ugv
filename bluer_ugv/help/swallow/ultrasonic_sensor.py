@@ -4,7 +4,7 @@ from bluer_options.terminal import show_usage, xtra
 
 review_args = [
     "[--frame_count <100>]",
-    "[--gif 1]",
+    "[--gif 0]",
     "[--rm_blank 0]",
 ]
 

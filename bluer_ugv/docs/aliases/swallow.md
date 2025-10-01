@@ -64,7 +64,7 @@
 	[~download,upload] \
 	[.|<object-name>] \
 	[--frame_count <100>] \
-	[--gif 1] \
+	[--gif 0] \
 	[--rm_blank 0]
  . review ultrasonic sensor data.
 @swallow \
@@ -74,7 +74,7 @@
 	[-|<object-name>] \
 	[--export 0] \
 	[--frame_count <100>] \
-	[--gif 1] \
+	[--gif 0] \
 	[--log 0] \
 	[--max_m 0.8] \
 	[--rm_blank 0]

@@ -12,7 +12,37 @@ UGV: `sparrow2`
 ```
 
 
+
+<details>
+<summary>yaml</summary>
+
 ```yaml
-{}
+ClassicalKeyboard:
+  count: 79
+  total: 0.26060522400121044
+ClassicalLeds:
+  count: 79
+  total: 0.018996546999460406
+ClassicalLeftMotor:
+  count: 79
+  total: 0.0021381899998687004
+ClassicalPushButton:
+  count: 79
+  total: 0.005884663001324952
+ClassicalRightMotor:
+  count: 79
+  total: 0.003850979000389998
+ClassicalSetPoint:
+  count: 79
+  total: 0.001273975000003702
+ClassicalUltrasonicSensor:
+  count: 79
+  total: 9.526912757000673
+ClassicalYoloCamera:
+  count: 79
+  total: 0.0025396730004558776
 
 ```
+
+</details>
+
