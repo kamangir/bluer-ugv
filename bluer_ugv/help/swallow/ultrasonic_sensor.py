@@ -10,6 +10,7 @@ def help_review(
     options = xtra("~download,upload", mono=mono)
 
     args = [
+        "[--gif 1]",
         "[--frame_count <100>]",
     ]
 
