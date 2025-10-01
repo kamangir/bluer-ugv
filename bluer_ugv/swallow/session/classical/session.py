@@ -50,7 +50,9 @@ class ClassicalSession:
             setpoint=self.setpoint,
         )
 
-        self.ultrasonic_sensor = ClassicalUltrasonicSensor()
+        self.ultrasonic_sensor = ClassicalUltrasonicSensor(
+            setpoint=self.setpoint,
+        )
 
         self.push_button = ClassicalPushButton(
             leds=self.leds,
