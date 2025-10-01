@@ -1,14 +1,5 @@
 # continues -v7
-
-from typing import List
-
-from bluer_objects import file
-from bluer_objects import objects
-
 from bluer_ugv.logger import logger
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    Detection,
-)
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
 )

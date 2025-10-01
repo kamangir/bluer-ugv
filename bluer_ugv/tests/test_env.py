@@ -36,3 +36,9 @@ def test_bluer_ugv_env():
 
     assert isinstance(env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD, float)
     assert isinstance(env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD, float)
+
+    assert env.BLUER_UGV_ULTRASONIC_SENSOR_ENABLED in (0, 1)
+
+    assert env.BLUER_UGV_ULTRASONIC_SENSOR_KEEP_LOG in (0, 1)
+
+    assert env.BLUER_UGV_ULTRASONIC_SENSOR_LOG in (0, 1)

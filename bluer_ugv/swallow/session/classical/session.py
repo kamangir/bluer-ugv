@@ -19,6 +19,9 @@ from bluer_ugv.swallow.session.classical.motor import (
     ClassicalSteeringMotor,
 )
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
+    ClassicalUltrasonicSensor,
+)
 from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 
@@ -46,6 +49,8 @@ class ClassicalSession:
             leds=self.leds,
             setpoint=self.setpoint,
         )
+
+        self.ultrasonic_sensor = ClassicalUltrasonicSensor()
 
         self.push_button = ClassicalPushButton(
             leds=self.leds,
