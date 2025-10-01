@@ -6,6 +6,8 @@ title:::
     -  d: steer right.
     -  g: mode = prediction.
     - zi: exit.
+    -  m: ultrasonic sensor disabled.
+    -  n: ultrasonic sensor enabled.
     - zo: shutdown.
     -  s: speed backward.
     - zp: reboot.

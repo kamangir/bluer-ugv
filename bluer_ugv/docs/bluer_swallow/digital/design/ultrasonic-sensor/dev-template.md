@@ -64,3 +64,7 @@ set:::object_name env:::BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 assets:::get:::object_name/ultrasonic-sensor-detections.gif
 
 object:::get:::object_name
+
+## in session
+
+items:::
