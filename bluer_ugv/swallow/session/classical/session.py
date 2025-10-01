@@ -1,6 +1,8 @@
 from RPi import GPIO  # type: ignore
 
 from bluer_options.timing.classes import Timing
+from bluer_objects.env import abcli_object_name
+from bluer_objects.metadata import post_to_object
 from bluer_sbc.env import BLUER_SBC_ENV, BLUER_SBC_SWALLOW_HAS_STEERING
 
 from bluer_ugv.swallow.session.classical.camera import (
@@ -126,6 +128,11 @@ class ClassicalSession:
         GPIO.cleanup()
 
         self.timing.log()
+        post_to_object(
+            abcli_object_name,
+            "timing",
+            self.timing.stats,
+        )
 
         logger.info(f"{self.__class__.__name__}.cleanup")
 
