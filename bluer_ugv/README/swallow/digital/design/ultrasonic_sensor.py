@@ -17,7 +17,7 @@ items = [
     },
     {
         "path": "../docs/bluer_swallow/digital/design/ultrasonic-sensor/dev.md",
-        "cols": 2,
+        "cols": 1,
         "items": ImageItems(
             {
                 f"{assets2_bluer_swallow}/20251001_185852.jpg": "",
