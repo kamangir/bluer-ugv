@@ -10,11 +10,12 @@ from bluer_objects import file, path
 from bluer_objects.graphics.gif import generate_animated_gif
 from bluer_objects.graphics.signature import add_signature
 
-from bluer_ugv.logger import logger
+from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
     Detection,
 )
 from bluer_ugv.host import signature
+from bluer_ugv.logger import logger
 
 
 class UltrasonicSensorDetectionLog:
@@ -171,7 +172,16 @@ class UltrasonicSensorDetectionLog:
                 image,
                 header=[
                     " | ".join(
-                        ["ultrasonic-sensor"]
+                        [
+                            "ultrasonic-sensor",
+                            "max distance: {:.2f}".format(max_m * 1000),
+                            "warning: {:.2f}".format(
+                                env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD
+                            ),
+                            "danger: {:.2f}".format(
+                                env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD
+                            ),
+                        ]
                         + [detection.as_str(short=True) for detection in detections]
                         + objects.signature(
                             "frame #{:04d}/{}".format(
