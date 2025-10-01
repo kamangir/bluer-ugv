@@ -146,6 +146,8 @@ class UltrasonicSensorDetectionLog:
                         height=height,
                         width=int(width / len(detections)),
                         max_m=max_m,
+                        line_width=int(line_width / len(detections)),
+                        sign=False,
                     )
                     for detection in detections
                 ],
@@ -159,7 +161,10 @@ class UltrasonicSensorDetectionLog:
                         ["ultrasonic-sensor"]
                         + [detection.as_str(short=True) for detection in detections]
                         + objects.signature(
-                            f"frame #{index:04d}",
+                            "frame #{:04d}/{}".format(
+                                index,
+                                len(self.log),
+                            ),
                             object_name,
                         )
                     )

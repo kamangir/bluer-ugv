@@ -1,13 +1,25 @@
-from typing import Dict
+from typing import Dict, Tuple
 import numpy as np
 import time
 from enum import Enum, auto
+
+from bluer_objects.graphics.signature import add_signature
+
+from bluer_ugv import env
 
 
 class DetectionState(Enum):
     CLEAR = auto()
     WARNING = auto()
     DANGER = auto()
+
+    @property
+    def color_code(self) -> Tuple[int, int, int]:
+        return (
+            [0, 255, 0]
+            if self == DetectionState.CLEAR
+            else ([255, 255, 0] if self == DetectionState.WARNING else [255, 0, 0])
+        )
 
 
 class Detection:
@@ -35,13 +47,15 @@ class Detection:
         height: int = 512,
         width: int = 256,
         max_m: float = 0.8,
+        sign: bool = True,
+        line_width: int = 80,
     ) -> np.ndarray:
         image = np.zeros((height, width, 3), dtype=np.uint8)
 
         if not self.detection:
-            image[:, :width, 0] = 255
+            image[:, :, :] = 0
         elif not self.echo_detected:
-            image[:, :width, :2] = 255
+            image[:, :, :] = 64
         else:
             distance = max(
                 min(
@@ -50,7 +64,19 @@ class Detection:
                 ),
                 0,
             )
+
+            color_code = self.state.color_code
+            for channel in range(3):
+                image[:, :, channel] = color_code[channel]
+
             image[height - distance :, :, :] = 128
+
+        if sign:
+            image = add_signature(
+                image,
+                header=[self.as_str(short=True)],
+                line_width=line_width,
+            )
 
         return image
 
@@ -69,24 +95,37 @@ class Detection:
         short: bool = False,
     ) -> str:
         if self.detection:
-            return ("{}: {}" if short else "{:8}: {}").format(
+            return ("{}: {}: {}" if short else "{:8}: {}: {:7}").format(
                 self.side,
                 (
                     (
-                        "{:.2f} ms == {:.0f} mm"
+                        "{:.0f} mm".format(self.distance_mm)
                         if short
-                        else "{:6.2f} ms == {:5.0f} mm"
-                    ).format(
-                        self.pulse_ms,
-                        self.distance_mm,
+                        else "{:6.2f} ms == {:5.0f} mm".format(
+                            self.pulse_ms,
+                            self.distance_mm,
+                        )
                     )
                     if self.echo_detected
                     else "no echo" if self.detection else "no detection"
                 ),
+                self.state.name.lower(),
             )
 
-        return f"{self.side}: no detection ({self.reason})"
+        return "{}: no detection{}".format(
+            self.side,
+            f" ({self.reason})" if self.reason else "",
+        )
 
     @property
     def state(self) -> DetectionState:
+        if not self.echo_detected or not self.detection:
+            return DetectionState.CLEAR
+
+        if self.distance_mm < env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD:
+            return DetectionState.DANGER
+
+        if self.distance_mm < env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD:
+            return DetectionState.WARNING
+
         return DetectionState.CLEAR
