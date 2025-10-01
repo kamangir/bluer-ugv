@@ -113,6 +113,7 @@ class ClassicalSession:
             self.motor1,
             self.motor2,
             self.camera,
+            self.ultrasonic_sensor,
         ]:
             thing.cleanup()
 
@@ -135,6 +136,7 @@ class ClassicalSession:
                 self.motor1,
                 self.motor2,
                 self.camera,
+                self.ultrasonic_sensor,
             ]
         )
 
@@ -145,6 +147,7 @@ class ClassicalSession:
                 self.keyboard,
                 self.push_button,
                 self.camera,
+                self.ultrasonic_sensor,
                 self.setpoint,
                 self.motor1,
                 self.motor2,
