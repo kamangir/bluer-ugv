@@ -20,8 +20,8 @@ items = [
         "cols": 1,
         "items": ImageItems(
             {
-                f"{assets2_bluer_swallow}/20251001_185852.jpg": "",
                 f"{assets2_bluer_swallow}/20251001_203056_1.gif": "",
+                f"{assets2_bluer_swallow}/20251001_185852.jpg": "",
             }
         ),
     },

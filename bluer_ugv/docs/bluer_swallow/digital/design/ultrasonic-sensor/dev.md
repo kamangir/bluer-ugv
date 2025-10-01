@@ -67,5 +67,5 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_203056_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_203056_1.gif?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true) |
