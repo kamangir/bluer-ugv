@@ -16,11 +16,13 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
 
 def test(
     object_name: str,
-    max_m: float = 0.8,
     export: bool = True,
     export_gif: bool = False,
-    log: bool = True,
+    frame_count: int = -1,
     line_width: int = 80,
+    log: bool = True,
+    max_m: float = 0.8,
+    rm_blank: bool = True,
 ) -> bool:
     from RPi import GPIO
 
@@ -56,9 +58,11 @@ def test(
 
     if not detection_log.export(
         object_name=object_name,
-        line_width=line_width,
         export_gif=export_gif,
+        frame_count=frame_count,
+        line_width=line_width,
         log=log,
+        rm_blank=rm_blank,
     ):
         return False
 

@@ -118,6 +118,10 @@ class Detection:
         )
 
     @property
+    def is_blank(self) -> bool:
+        return not self.detection or not self.echo_detected
+
+    @property
     def state(self) -> DetectionState:
         if not self.echo_detected or not self.detection:
             return DetectionState.CLEAR

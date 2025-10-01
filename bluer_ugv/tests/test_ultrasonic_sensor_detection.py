@@ -38,6 +38,8 @@ def test_ultrasonic_sensor_detection():
 
     assert isinstance(detection.as_image(), np.ndarray)
 
+    assert detection.is_blank is True
+
 
 # ---
 
@@ -57,6 +59,8 @@ def test_ultrasonic_sensor_detection_pulse_timeout():
 
     assert detection.state == DetectionState.CLEAR
 
+    assert detection.is_blank is True
+
 
 # ---
 
@@ -75,6 +79,8 @@ def test_ultrasonic_sensor_detection_no_echo_high():
     assert isinstance(detection.as_str(), str)
 
     assert detection.state == DetectionState.CLEAR
+
+    assert detection.is_blank is True
 
 
 # ---
@@ -97,6 +103,8 @@ def test_ultrasonic_sensor_detection_no_echo_detected():
 
     assert detection.state == DetectionState.CLEAR
 
+    assert detection.is_blank is True
+
 
 # ---
 
@@ -117,6 +125,8 @@ def test_ultrasonic_sensor_detection_900mm():
     assert isinstance(detection.as_str(), str)
 
     assert detection.state == DetectionState.CLEAR
+
+    assert detection.is_blank is False
 
 
 # ---
@@ -139,6 +149,8 @@ def test_ultrasonic_sensor_detection_700mm():
 
     assert detection.state == DetectionState.WARNING
 
+    assert detection.is_blank is False
+
 
 # ---
 
@@ -159,3 +171,5 @@ def test_ultrasonic_sensor_detection_200mm():
     assert isinstance(detection.as_str(), str)
 
     assert detection.state == DetectionState.DANGER
+
+    assert detection.is_blank is False
