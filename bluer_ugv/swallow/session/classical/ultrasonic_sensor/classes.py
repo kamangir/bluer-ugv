@@ -23,7 +23,14 @@ class ClassicalUltrasonicSensor:
         logger.info(
             "{}: {}".format(
                 self.__class__.__name__,
-                "enabled" if self.enabled else "disabled",
+                (
+                    "enabled: warning<{:.2f} mm, danger<{:.2f} mm".format(
+                        env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD,
+                        env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD,
+                    )
+                    if self.enabled
+                    else "disabled"
+                ),
             )
         )
 
