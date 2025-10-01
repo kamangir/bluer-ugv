@@ -174,12 +174,12 @@ class UltrasonicSensorDetectionLog:
                     " | ".join(
                         [
                             "ultrasonic-sensor",
-                            "max distance: {:.2f}".format(max_m * 1000),
-                            "warning: {:.2f}".format(
-                                env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD
-                            ),
-                            "danger: {:.2f}".format(
+                            "max distance: {:.2f} mm".format(max_m * 1000),
+                            "warning: {:.2f} mm".format(
                                 env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD
+                            ),
+                            "danger: {:.2f} mm".format(
+                                env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD
                             ),
                         ]
                         + [detection.as_str(short=True) for detection in detections]
