@@ -6,4 +6,7 @@ def test_ultrasonic_sensor_detection_log_review(test_object):
     assert review(
         object_name=test_object,
         export_gif=True,
+        frame_count=100,
+        log=True,
+        rm_blank=True,
     )

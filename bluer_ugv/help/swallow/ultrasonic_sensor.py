@@ -2,6 +2,12 @@ from typing import List
 
 from bluer_options.terminal import show_usage, xtra
 
+review_args = [
+    "[--frame_count <100>]",
+    "[--gif 1]",
+    "[--rm_blank 0]",
+]
+
 
 def help_review(
     tokens: List[str],
@@ -9,10 +15,7 @@ def help_review(
 ) -> str:
     options = xtra("~download,upload", mono=mono)
 
-    args = [
-        "[--gif 1]",
-        "[--frame_count <100>]",
-    ]
+    args = review_args
 
     return show_usage(
         [
@@ -34,11 +37,14 @@ def help_test(
 ) -> str:
     options = xtra("~upload", mono=mono)
 
-    args = [
-        "[--export 0]",
-        "[--log 0]",
-        "[--max_m 0.8]",
-    ]
+    args = sorted(
+        review_args
+        + [
+            "[--export 0]",
+            "[--log 0]",
+            "[--max_m 0.8]",
+        ]
+    )
 
     return show_usage(
         [

@@ -15,6 +15,7 @@ def review(
     export_gif: bool = False,
     frame_count: int = -1,
     log: bool = True,
+    rm_blank: bool = True,
 ) -> bool:
     logger.info(
         "{}.review{}: {}".format(
@@ -37,6 +38,7 @@ def review(
         export_gif=export_gif,
         frame_count=frame_count,
         log=log,
+        rm_blank=rm_blank,
     ):
         return False
 

@@ -16,6 +16,8 @@ def test_ultrasonic_sensor_detection_log(test_object):
     assert detection_log.export(
         object_name=object_name,
         export_gif=True,
+        frame_count=100,
+        log=True,
     )
 
     assert detection_log.save(object_name=object_name)

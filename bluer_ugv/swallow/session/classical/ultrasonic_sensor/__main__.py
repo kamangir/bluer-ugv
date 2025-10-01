@@ -36,12 +36,18 @@ parser.add_argument(
     "--export",
     type=int,
     default=1,
-    help="0 | 1.",
+    help="0 | 1",
 )
 parser.add_argument(
     "--gif",
     type=int,
     default=0,
+    help="0 | 1",
+)
+parser.add_argument(
+    "--rm_blank",
+    type=int,
+    default=1,
     help="0 | 1.",
 )
 parser.add_argument(
@@ -58,6 +64,7 @@ if args.task == "review":
         object_name=args.object_name,
         export_gif=args.gif == 1,
         frame_count=args.frame_count,
+        rm_blank=args.rm_blank == 1,
     )
 elif args.task == "test":
     success = test(
@@ -65,7 +72,9 @@ elif args.task == "test":
         max_m=args.max_m,
         export=args.export == 1,
         export_gif=args.gif == 1,
+        frame_count=args.frame_count,
         log=args.log == 1,
+        rm_blank=args.rm_blank == 1,
     )
 else:
     success = None

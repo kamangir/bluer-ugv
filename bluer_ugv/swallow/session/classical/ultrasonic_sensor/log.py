@@ -31,6 +31,7 @@ class UltrasonicSensorDetectionLog:
         frame_count: int = -1,
         line_width: int = 80,
         log: bool = True,
+        rm_blank: bool = True,
     ) -> bool:
         for func, name in zip(
             [
@@ -103,10 +104,11 @@ class UltrasonicSensorDetectionLog:
 
             if not self.export_gif(
                 object_name=object_name,
-                line_width=line_width,
                 frame_count=frame_count,
-                max_m=max_m,
+                line_width=line_width,
                 log=log,
+                max_m=max_m,
+                rm_blank=rm_blank,
             ):
                 return False
 
@@ -121,8 +123,11 @@ class UltrasonicSensorDetectionLog:
         width: int = 512,
         max_m: float = 0.8,
         log: bool = True,
+        rm_blank: bool = True,
     ) -> bool:
         image_list: List[str] = []
+
+        rm_blank_count: int = 0
 
         temp_folder = objects.path_of(
             object_name=object_name,
@@ -132,8 +137,12 @@ class UltrasonicSensorDetectionLog:
             return False
 
         for index, detections in tqdm(enumerate(self.log)):
-            if frame_count != -1 and index >= frame_count:
+            if frame_count != -1 and len(image_list) >= frame_count:
+                rm_blank_count += 1
                 break
+
+            if rm_blank and all(detection.is_blank for detection in detections):
+                continue
 
             filename = objects.path_of(
                 object_name=object_name,
@@ -146,6 +155,8 @@ class UltrasonicSensorDetectionLog:
                         height=height,
                         width=int(width / len(detections)),
                         max_m=max_m,
+                        line_width=int(line_width / len(detections)),
+                        sign=False,
                     )
                     for detection in detections
                 ],
@@ -159,7 +170,10 @@ class UltrasonicSensorDetectionLog:
                         ["ultrasonic-sensor"]
                         + [detection.as_str(short=True) for detection in detections]
                         + objects.signature(
-                            f"frame #{index:04d}",
+                            "frame #{:04d}/{}".format(
+                                index,
+                                len(self.log),
+                            ),
                             object_name,
                         )
                     )
@@ -182,6 +196,9 @@ class UltrasonicSensorDetectionLog:
             log=log,
         ):
             return False
+
+        if rm_blank:
+            logger.info("removed {} blank frame(s).".format(rm_blank_count))
 
         return path.delete(temp_folder)
 
