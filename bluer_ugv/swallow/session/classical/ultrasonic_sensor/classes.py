@@ -49,6 +49,7 @@ class ClassicalUltrasonicSensor:
 
     def cleanup(self):
         if self.log is not None:
+            self.log.save(object_name=abcli_object_name)
             self.log.export(object_name=abcli_object_name)
 
     def initialize(self) -> bool:
