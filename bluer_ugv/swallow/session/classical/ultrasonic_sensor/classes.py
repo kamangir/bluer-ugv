@@ -53,6 +53,9 @@ class ClassicalUltrasonicSensor:
         return self.pack.valid
 
     def update(self) -> bool:
+        if not self.enabled:
+            return True
+
         success, detections = self.pack.detect(
             log=env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1
         )
