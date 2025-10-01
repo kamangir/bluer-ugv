@@ -65,8 +65,10 @@ class ClassicalUltrasonicSensor:
         if self.log is not None:
             self.log.append(detections)
 
+        log_detections: bool = False
         if any(detection.state == DetectionState.DANGER for detection in detections):
             self.setpoint.stop()
+            log_detections = True
             logger.info("⛔️ danger detected, stopping.")
         elif any(detection.state == DetectionState.WARNING for detection in detections):
             self.setpoint.put(
@@ -74,5 +76,10 @@ class ClassicalUltrasonicSensor:
                 value=self.setpoint.get(what="speed") // 2,
             )
             logger.info("⚠️ warning detected, lowering speed.")
+
+        if log_detections:
+            logger.info(
+                ", ".join([detection.as_str(short=True) for detection in detections])
+            )
 
         return True
