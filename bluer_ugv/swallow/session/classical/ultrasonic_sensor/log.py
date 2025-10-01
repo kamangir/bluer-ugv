@@ -33,7 +33,7 @@ class UltrasonicSensorDetectionLog:
         log: bool = True,
         rm_blank: bool = True,
     ) -> bool:
-        for func, name in zip(
+        for func, name, filename in zip(
             [
                 lambda detection: int(detection.detection),
                 lambda detection: int(detection.echo_detected),
@@ -45,6 +45,12 @@ class UltrasonicSensorDetectionLog:
                 "echo detection",
                 "pulse (ms)",
                 "distance(mm)",
+            ],
+            [
+                "ultrasonic-sensor-detection",
+                "ultrasonic-sensor-echo-detection",
+                "ultrasonic-sensor-pulse-ms",
+                "ultrasonic-sensor-distance-mm",
             ],
         ):
             plt.figure(figsize=(5, 5))
@@ -83,9 +89,7 @@ class UltrasonicSensorDetectionLog:
             if not file.save_fig(
                 objects.path_of(
                     object_name=object_name,
-                    filename="{}.png".format(
-                        name.replace(" ", "-").replace("(", "-").replace(")", "-")
-                    ),
+                    filename=f"{filename}.png",
                 ),
                 log=log,
             ):
