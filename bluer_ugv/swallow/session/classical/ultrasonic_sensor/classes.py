@@ -42,11 +42,13 @@ class ClassicalUltrasonicSensor:
             self.log.export(object_name=abcli_object_name)
 
     def initialize(self) -> bool:
-        if self.enabled:
-            self.pack = UltrasonicSensorPack(
-                setmode=False,
-                max_m=env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
-            )
+        if not self.enabled:
+            return True
+
+        self.pack = UltrasonicSensorPack(
+            setmode=False,
+            max_m=env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
+        )
 
         return self.pack.valid
 
