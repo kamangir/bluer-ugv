@@ -44,6 +44,12 @@ parser.add_argument(
     default=0,
     help="0 | 1.",
 )
+parser.add_argument(
+    "--frame_count",
+    type=int,
+    default=-1,
+    help="-1: all",
+)
 args = parser.parse_args()
 
 success = False
@@ -51,6 +57,7 @@ if args.task == "review":
     success = review(
         object_name=args.object_name,
         export_gif=args.gif == 1,
+        frame_count=args.frame_count,
     )
 elif args.task == "test":
     success = test(

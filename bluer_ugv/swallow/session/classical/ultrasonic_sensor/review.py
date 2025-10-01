@@ -13,9 +13,16 @@ NAME = module.name(__file__, NAME)
 def review(
     object_name: str,
     export_gif: bool = False,
+    frame_count: int = -1,
     log: bool = True,
 ) -> bool:
-    logger.info("{}.review({})".format(NAME, object_name))
+    logger.info(
+        "{}.review{}: {}".format(
+            NAME,
+            f" [{frame_count} frame(s)]" if frame_count == -1 else "",
+            object_name,
+        )
+    )
 
     detection_log = UltrasonicSensorDetectionLog()
 
@@ -28,6 +35,7 @@ def review(
         object_name=object_name,
         line_width=80,
         export_gif=export_gif,
+        frame_count=frame_count,
         log=log,
     ):
         return False
