@@ -41,7 +41,7 @@ class ClassicalSession:
             GPIO.setmode(GPIO.BCM)
         except Exception as e:
             logger.error(e)
-            return False
+            raise NameError("GPIO not available.")
 
         self.leds = ClassicalLeds()
 
