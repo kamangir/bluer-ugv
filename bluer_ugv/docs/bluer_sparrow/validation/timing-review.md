@@ -3,15 +3,15 @@
 UGV: `sparrow2`
 
 ```text
-::  in 2 min called 8 function(s):
-::  #   0 - ClassicalUltrasonicSensor: called 671 time(s), total 1 min, avg 120 ms
-::  #   1 - ClassicalKeyboard: called 671 time(s), total 891 ms, avg 001 ms
-::  #   2 - ClassicalLeds: called 671 time(s), total 178 ms, avg < 1 ms
-::  #   3 - ClassicalRightMotor: called 671 time(s), total 065 ms, avg < 1 ms
-::  #   4 - ClassicalPushButton: called 671 time(s), total 053 ms, avg < 1 ms
-::  #   5 - ClassicalLeftMotor: called 671 time(s), total 051 ms, avg < 1 ms
-::  #   6 - ClassicalYoloCamera: called 671 time(s), total 023 ms, avg < 1 ms
-::  #   7 - ClassicalSetPoint: called 671 time(s), total 011 ms, avg < 1 ms
+::  in 1 min called 8 function(s):
+::  #   0 - ClassicalUltrasonicSensor: called 388 time(s), total 46 s, avg 120 ms
+::  #   1 - ClassicalYoloCamera: called 388 time(s), total 29 s, avg 076 ms
+::  #   2 - ClassicalKeyboard: called 388 time(s), total 489 ms, avg 001 ms
+::  #   3 - ClassicalLeds: called 388 time(s), total 081 ms, avg < 1 ms
+::  #   4 - ClassicalRightMotor: called 388 time(s), total 072 ms, avg < 1 ms
+::  #   5 - ClassicalLeftMotor: called 388 time(s), total 060 ms, avg < 1 ms
+::  #   6 - ClassicalPushButton: called 388 time(s), total 025 ms, avg < 1 ms
+::  #   7 - ClassicalSetPoint: called 388 time(s), total 005 ms, avg < 1 ms
 ```
 
 
@@ -21,37 +21,37 @@ UGV: `sparrow2`
 
 ```yaml
 ClassicalKeyboard:
-  average: 0.0013274088047693206
-  count: 671
-  total: 0.8906913080002141
+  average: 0.0012590726881466928
+  count: 388
+  total: 0.4885202030009168
 ClassicalLeds:
-  average: 0.00026552901639225515
-  count: 671
-  total: 0.1781699699992032
+  average: 0.00020801985309429997
+  count: 388
+  total: 0.08071170300058839
 ClassicalLeftMotor:
-  average: 7.61643233999059e-05
-  count: 671
-  total: 0.05110626100133686
+  average: 0.0001556224587559263
+  count: 388
+  total: 0.06038151399729941
 ClassicalPushButton:
-  average: 7.886879582344121e-05
-  count: 671
-  total: 0.05292096199752905
+  average: 6.528609278352774e-05
+  count: 388
+  total: 0.02533100400000876
 ClassicalRightMotor:
-  average: 9.689938301006779e-05
-  count: 671
-  total: 0.06501948599975549
+  average: 0.00018496146648039563
+  count: 388
+  total: 0.07176504899439351
 ClassicalSetPoint:
-  average: 1.5898505214852845e-05
-  count: 671
-  total: 0.01066789699916626
+  average: 1.3237850508823012e-05
+  count: 388
+  total: 0.005136285997423329
 ClassicalUltrasonicSensor:
-  average: 0.12048252017734756
-  count: 671
-  total: 80.84377103900022
+  average: 0.12047331612371254
+  count: 388
+  total: 46.743646656000465
 ClassicalYoloCamera:
-  average: 3.405913412822088e-05
-  count: 671
-  total: 0.02285367900003621
+  average: 0.07628990444845254
+  count: 388
+  total: 29.600482925999586
 
 ```
 
