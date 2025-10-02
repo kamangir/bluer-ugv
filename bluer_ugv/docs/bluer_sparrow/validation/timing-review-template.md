@@ -42,5 +42,5 @@ set:::object_name 2025-10-02-19-20-36-27apgh
 loop frequency: metadata:::get:::object_name:::loop_frequency
 
 details:::yaml
-metadata:::get:::object_name:::timing
+metadata:::get:::object_name:::timing Hz
 details:::
