@@ -1,4 +1,5 @@
 import threading
+import time
 
 from bluer_objects.env import abcli_object_name
 
@@ -80,6 +81,7 @@ class ClassicalUltrasonicSensor:
     def loop(self):
         while self.running:
             if not self.keyboard.ultrasound_enabled:
+                time.sleep(0.01)
                 continue
 
             success, detections = self.pack.detect(
