@@ -76,7 +76,7 @@ loop frequency: 7 Hz
 ```
 
 
-loop frequency: 45.50045661601763
+loop frequency: 706.1261339378069
 
 
 <details>
@@ -84,37 +84,37 @@ loop frequency: 45.50045661601763
 
 ```yaml
 ClassicalKeyboard:
-  average: 0.0010086867588569087
-  count: 875
-  total: 0.882600913999795
+  average: 0.000852381115435842
+  count: 12336
+  total: 10.514973440016547
 ClassicalLeds:
-  average: 0.0001818800285810929
-  count: 875
-  total: 0.1591450250084563
+  average: 0.00018912323411088093
+  count: 12336
+  total: 2.333024215991827
 ClassicalLeftMotor:
-  average: 5.4980485710465085e-05
-  count: 875
-  total: 0.04810792499665695
+  average: 7.492074926813429e-05
+  count: 12336
+  total: 0.9242223629717046
 ClassicalPushButton:
-  average: 5.346943884796929e-05
-  count: 875
-  total: 0.046785758991973125
+  average: 5.449534654246469e-05
+  count: 12336
+  total: 0.6722545949478445
 ClassicalRightMotor:
-  average: 8.680194971696307e-05
-  count: 875
-  total: 0.07595170600234269
+  average: 0.00013058696409492163
+  count: 12336
+  total: 1.610920789074953
 ClassicalSetPoint:
-  average: 1.0828638865599974e-05
-  count: 875
-  total: 0.009475059007399977
+  average: 9.864902483012672e-06
+  count: 12336
+  total: 0.12169343703044433
 ClassicalYoloCamera:
-  average: 0.02050823117143279
-  count: 875
-  total: 17.944702275003692
+  average: 2.7932153371733966e-05
+  count: 12336
+  total: 0.3445710439937102
 session.update:
-  average: 0.021977801419425045
-  count: 875
-  total: 19.230576241996914
+  average: 0.0014161775806588069
+  count: 12336
+  total: 17.46996663500704
 
 ```
 
