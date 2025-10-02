@@ -1,5 +1,6 @@
 from RPi import GPIO  # type: ignore
 
+from bluer_options import string
 from bluer_options.timing.classes import Timing
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
@@ -35,6 +36,8 @@ class ClassicalSession:
         object_name: str,
     ):
         self.object_name = object_name
+
+        GPIO.setmode(GPIO.BCM)
 
         self.leds = ClassicalLeds()
 
@@ -117,32 +120,40 @@ class ClassicalSession:
         self.timing = Timing()
 
     def cleanup(self):
+        self.ultrasonic_sensor.stop()
+
         for thing in [
             self.motor1,
             self.motor2,
             self.camera,
-            self.ultrasonic_sensor,
         ]:
             thing.cleanup()
 
         GPIO.cleanup()
 
+        self.timing.calculate()
+        loop_frequency = round(
+            1 / self.timing.stats["session.update"]["average"],
+            2,
+        )
         self.timing.log()
         post_to_object(
             abcli_object_name,
             "timing",
             self.timing.as_dict,
         )
+        logger.info(
+            "loop frequency: {}".format(string.pretty_frequency(loop_frequency))
+        )
+        post_to_object(
+            abcli_object_name,
+            "loop_frequency",
+            loop_frequency,
+        )
 
         logger.info(f"{self.__class__.__name__}.cleanup")
 
     def initialize(self) -> bool:
-        try:
-            GPIO.setmode(GPIO.BCM)
-        except Exception as e:
-            logger.error(e)
-            return False
-
         return all(
             thing.initialize()
             for thing in [
@@ -151,16 +162,16 @@ class ClassicalSession:
                 self.motor1,
                 self.motor2,
                 self.camera,
-                self.ultrasonic_sensor,
             ]
         )
 
     def update(self) -> bool:
+        self.timing.start("session.update")
+
         for thing in [
             self.keyboard,
             self.push_button,
             self.camera,
-            self.ultrasonic_sensor,
             self.setpoint,
             self.motor1,
             self.motor2,
@@ -173,4 +184,5 @@ class ClassicalSession:
 
             self.timing.stop(thing.__class__.__name__)
 
+        self.timing.stop("session.update")
         return True
