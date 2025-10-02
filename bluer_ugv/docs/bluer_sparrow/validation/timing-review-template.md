@@ -22,7 +22,7 @@ details:::yaml
 metadata:::get:::object_name:::timing
 details:::
 
-loop frequency: 7 Hz
+loop frequency (Hz): 7
 
 ## ultrasonic thread
 
@@ -39,7 +39,7 @@ loop frequency: 7 Hz
 
 set:::object_name 2025-10-02-19-48-18-zf60td
 
-loop frequency: metadata:::get:::object_name:::loop_frequency
+loop frequency (Hz): metadata:::get:::object_name:::loop_frequency
 
 details:::yaml
 metadata:::get:::object_name:::timing Hz

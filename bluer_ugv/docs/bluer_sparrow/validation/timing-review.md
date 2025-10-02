@@ -60,7 +60,7 @@ ClassicalYoloCamera:
 </details>
 
 
-loop frequency: 7 Hz
+loop frequency (Hz): 7
 
 ## ultrasonic thread
 
@@ -76,7 +76,7 @@ loop frequency: 7 Hz
 ```
 
 
-loop frequency: 706.1261339378069
+loop frequency (Hz): 706.1261339378069
 
 
 <details>

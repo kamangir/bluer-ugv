@@ -132,7 +132,10 @@ class ClassicalSession:
         GPIO.cleanup()
 
         self.timing.calculate()
-        loop_frequency = 1 / self.timing.stats["session.update"]["average"]
+        loop_frequency = round(
+            1 / self.timing.stats["session.update"]["average"],
+            2,
+        )
         self.timing.log()
         post_to_object(
             abcli_object_name,
