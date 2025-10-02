@@ -1,3 +1,5 @@
+import threading
+
 from bluer_objects.env import abcli_object_name
 
 from bluer_ugv import env
@@ -40,73 +42,86 @@ class ClassicalUltrasonicSensor:
         self.keyboard = keyboard
 
         self.pack = None
+        self.log = None
+        self.running = False
 
-        self.log = (
-            UltrasonicSensorDetectionLog()
-            if env.BLUER_UGV_ULTRASONIC_SENSOR_KEEP_LOG == 1
-            else None
-        )
-
-    def cleanup(self):
-        if self.log is not None:
-            self.log.save(object_name=abcli_object_name)
-            self.log.export(object_name=abcli_object_name)
-
-    def initialize(self) -> bool:
         if not self.enabled:
-            return True
+            return
 
         self.pack = UltrasonicSensorPack(
             setmode=False,
             max_m=env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
         )
 
-        return self.pack.valid
+        if not self.pack.valid:
+            raise NameError("valid ultrasonic sensor pack.")
 
-    def update(self) -> bool:
+        if env.BLUER_UGV_ULTRASONIC_SENSOR_KEEP_LOG == 1:
+            self.log = UltrasonicSensorDetectionLog()
+
+        self.running = True
+
+        self.thread = threading.Thread(target=self.loop, daemon=True)
+        self.thread.start()
+
+    def stop(self):
         if not self.enabled:
-            return True
+            return
 
-        if not self.keyboard.ultrasound_enabled:
-            return True
+        self.running = False
+        self.thread.join()
 
-        success, detections = self.pack.detect(
-            log=env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1
-        )
-        if not success:
-            return success
+        logger.info(f"{self.__class__.__name__}.stop()")
 
         if self.log is not None:
-            self.log.append(detections)
+            self.log.save(object_name=abcli_object_name)
+            self.log.export(object_name=abcli_object_name)
 
-        log_detections: bool = False
-        speed = self.setpoint.get(what="speed")
-        if any(detection.state == DetectionState.DANGER for detection in detections):
-            self.setpoint.stop()
-            log_detections = True
-            logger.info("⛔️ danger detected, stopping.")
-        elif (
-            any(detection.state == DetectionState.WARNING for detection in detections)
-            and speed > 0
-        ):
-            self.setpoint.put(
-                what="speed",
-                value=speed // 2,
+    def loop(self):
+        while self.running:
+            if not self.keyboard.ultrasound_enabled:
+                continue
+
+            success, detections = self.pack.detect(
+                log=env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1
             )
-            log_detections = True
-            logger.info("⚠️ warning detected, lowering speed.")
+            if not success:
+                raise NameError("failed to detect ultrasonic sensor.")
 
-        if env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1:
-            log_detections = False
+            if self.log is not None:
+                self.log.append(detections)
 
-        if log_detections:
-            logger.info(
-                "{}: {}".format(
-                    self.__class__.__name__,
-                    ", ".join(
-                        [detection.as_str(short=True) for detection in detections]
-                    ),
+            log_detections: bool = False
+            speed = self.setpoint.get(what="speed")
+            if any(
+                detection.state == DetectionState.DANGER for detection in detections
+            ):
+                self.setpoint.stop()
+                log_detections = True
+                logger.info("⛔️ danger detected, stopping.")
+            elif (
+                any(
+                    detection.state == DetectionState.WARNING
+                    for detection in detections
                 )
-            )
+                and speed > 0
+            ):
+                self.setpoint.put(
+                    what="speed",
+                    value=speed // 2,
+                )
+                log_detections = True
+                logger.info("⚠️ warning detected, lowering speed.")
 
-        return True
+            if env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1:
+                log_detections = False
+
+            if log_detections:
+                logger.info(
+                    "{}: {}".format(
+                        self.__class__.__name__,
+                        ", ".join(
+                            [detection.as_str(short=True) for detection in detections]
+                        ),
+                    )
+                )

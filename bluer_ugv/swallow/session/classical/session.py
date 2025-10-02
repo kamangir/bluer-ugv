@@ -36,6 +36,12 @@ class ClassicalSession:
     ):
         self.object_name = object_name
 
+        try:
+            GPIO.setmode(GPIO.BCM)
+        except Exception as e:
+            logger.error(e)
+            return False
+
         self.leds = ClassicalLeds()
 
         self.setpoint = ClassicalSetPoint(
@@ -117,11 +123,12 @@ class ClassicalSession:
         self.timing = Timing()
 
     def cleanup(self):
+        self.ultrasonic_sensor.stop()
+
         for thing in [
             self.motor1,
             self.motor2,
             self.camera,
-            self.ultrasonic_sensor,
         ]:
             thing.cleanup()
 
@@ -137,12 +144,6 @@ class ClassicalSession:
         logger.info(f"{self.__class__.__name__}.cleanup")
 
     def initialize(self) -> bool:
-        try:
-            GPIO.setmode(GPIO.BCM)
-        except Exception as e:
-            logger.error(e)
-            return False
-
         return all(
             thing.initialize()
             for thing in [
@@ -151,7 +152,6 @@ class ClassicalSession:
                 self.motor1,
                 self.motor2,
                 self.camera,
-                self.ultrasonic_sensor,
             ]
         )
 
@@ -160,7 +160,6 @@ class ClassicalSession:
             self.keyboard,
             self.push_button,
             self.camera,
-            self.ultrasonic_sensor,
             self.setpoint,
             self.motor1,
             self.motor2,
