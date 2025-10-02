@@ -2,6 +2,8 @@ title:::
 
 UGV: `sparrow2`
 
+## all in the loop
+
 ```text
 ::  in 1 min called 8 function(s):
 ::  #   0 - ClassicalUltrasonicSensor: called 388 time(s), total 46 s, avg 120 ms
@@ -15,6 +17,27 @@ UGV: `sparrow2`
 ```
 
 set:::object_name 2025-10-02-18-34-41-g7zbqi
+
+details:::yaml
+metadata:::get:::object_name:::timing
+details:::
+
+loop frequency: `7 Hz`
+
+## ultrasonic thread
+
+```text
+::  in 1 min called 7 function(s):
+::  #   0 - ClassicalYoloCamera: called 1,344 time(s), total 24 s, avg 019 ms
+::  #   1 - ClassicalKeyboard: called 1,344 time(s), total 1 s, avg 001 ms
+::  #   2 - ClassicalLeds: called 1,344 time(s), total 245 ms, avg < 1 ms
+::  #   3 - ClassicalLeftMotor: called 1,344 time(s), total 164 ms, avg < 1 ms
+::  #   4 - ClassicalRightMotor: called 1,344 time(s), total 147 ms, avg < 1 ms
+::  #   5 - ClassicalPushButton: called 1,344 time(s), total 073 ms, avg < 1 ms
+::  #   6 - ClassicalSetPoint: called 1,344 time(s), total 013 ms, avg < 1 ms
+```
+
+set:::object_name 2025-10-02-19-03-28-2bh8yd
 
 details:::yaml
 metadata:::get:::object_name:::timing
