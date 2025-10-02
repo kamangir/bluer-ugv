@@ -1,5 +1,6 @@
 from RPi import GPIO  # type: ignore
 
+from bluer_options import string
 from bluer_options.timing.classes import Timing
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
@@ -134,11 +135,21 @@ class ClassicalSession:
 
         GPIO.cleanup()
 
+        self.timing.calculate()
+        loop_frequency = 1 / self.timing.stats["session.update"]["average"]
         self.timing.log()
         post_to_object(
             abcli_object_name,
             "timing",
             self.timing.as_dict,
+        )
+        logger.info(
+            "loop frequency: {}".format(string.pretty_frequency(loop_frequency))
+        )
+        post_to_object(
+            abcli_object_name,
+            "loop_frequency",
+            loop_frequency,
         )
 
         logger.info(f"{self.__class__.__name__}.cleanup")
@@ -156,6 +167,8 @@ class ClassicalSession:
         )
 
     def update(self) -> bool:
+        self.timing.start("session.update")
+
         for thing in [
             self.keyboard,
             self.push_button,
@@ -172,4 +185,5 @@ class ClassicalSession:
 
             self.timing.stop(thing.__class__.__name__)
 
+        self.timing.stop("session.update")
         return True
