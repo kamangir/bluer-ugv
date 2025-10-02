@@ -22,6 +22,9 @@ items = ImageItems(
         f"{assets2_bluer_swallow}/20250928_160425.jpg": "",
         f"{assets2_bluer_swallow}/20250928_160449.jpg": "",
         f"{assets2_bluer_swallow}/design/head-v1/01.jpg": "",
+        f"{assets2_bluer_swallow}/20251002_103712.jpg": "",
+        f"{assets2_bluer_swallow}/20251002_103720.jpg": "",
+        f"{assets2_bluer_swallow}/design/v5/01.jpg": "",
     }
 )
 
