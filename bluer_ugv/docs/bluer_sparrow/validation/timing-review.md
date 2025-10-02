@@ -76,7 +76,7 @@ loop frequency (Hz): 7
 ```
 
 
-loop frequency (Hz): 706.1261339378069
+loop frequency (Hz): 706.13
 
 
 <details>
