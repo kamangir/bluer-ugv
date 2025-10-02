@@ -72,13 +72,15 @@ class ClassicalUltrasonicSensor:
         self.running = False
         self.thread.join()
 
-        logger.info(f"{self.__class__.__name__}.stop()")
+        logger.info(f"{self.__class__.__name__}.stopped.")
 
         if self.log is not None:
             self.log.save(object_name=abcli_object_name)
             self.log.export(object_name=abcli_object_name)
 
     def loop(self):
+        logger.info(f"{self.__class__.__name__}.loop started.")
+
         while self.running:
             if not self.keyboard.ultrasound_enabled:
                 time.sleep(0.01)
