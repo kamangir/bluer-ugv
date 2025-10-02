@@ -49,8 +49,7 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 ```bash
 @select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
-@swallow ultrasonic review download . \
-	--gif 1
+@swallow ultrasonic review download
 
 @assets publish \
 	extensions=gif,push

@@ -41,7 +41,7 @@ parser.add_argument(
 parser.add_argument(
     "--gif",
     type=int,
-    default=0,
+    default=1,
     help="0 | 1",
 )
 parser.add_argument(

@@ -50,8 +50,7 @@ object:::get:::object_name
 ```bash
 @select $BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT
 
-@swallow ultrasonic review download . \
-	--gif 1
+@swallow ultrasonic review download
 
 @assets publish \
 	extensions=gif,push

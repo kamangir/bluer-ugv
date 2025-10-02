@@ -4,9 +4,7 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
     Detection,
     DetectionState,
 )
-
-# test assets are separated from the tests
-# to make them accessible externally.
+from bluer_ugv import env
 
 
 def ultrasonic_sensor_detection():
@@ -115,7 +113,7 @@ def ultrasonic_sensor_detection_clear():
         detection=True,
         echo_detected=True,
         pulse_ms=4.0,
-        distance_mm=900.0,
+        distance_mm=env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD + 10,
     )
 
 
@@ -138,7 +136,11 @@ def ultrasonic_sensor_detection_warning():
         detection=True,
         echo_detected=True,
         pulse_ms=4.0,
-        distance_mm=300.0,
+        distance_mm=(
+            env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD
+            + env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD
+        )
+        / 2,
     )
 
 
@@ -161,7 +163,7 @@ def ultrasonic_sensor_detection_danger():
         detection=True,
         echo_detected=True,
         pulse_ms=4.0,
-        distance_mm=150.0,
+        distance_mm=env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD - 10,
     )
 
 
