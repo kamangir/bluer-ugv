@@ -22,7 +22,7 @@ details:::yaml
 metadata:::get:::object_name:::timing
 details:::
 
-loop frequency: `7 Hz`
+loop frequency: 7 Hz
 
 ## ultrasonic thread
 
@@ -37,7 +37,9 @@ loop frequency: `7 Hz`
 ::  #   6 - ClassicalSetPoint: called 1,344 time(s), total 013 ms, avg < 1 ms
 ```
 
-set:::object_name 2025-10-02-19-03-28-2bh8yd
+set:::object_name 2025-10-02-19-20-36-27apgh
+
+loop frequency: metadata:::get:::object_name:::loop_frequency
 
 details:::yaml
 metadata:::get:::object_name:::timing
