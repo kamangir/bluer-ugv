@@ -63,7 +63,7 @@
 	review \
 	[~download,upload] \
 	[.|<object-name>] \
-	[--frame_count <100>] \
+	[--frame_count <-1>] \
 	[--gif 0] \
 	[--rm_blank 0]
  . review ultrasonic sensor data.
@@ -73,7 +73,7 @@
 	[~upload] \
 	[-|<object-name>] \
 	[--export 0] \
-	[--frame_count <100>] \
+	[--frame_count <-1>] \
 	[--gif 0] \
 	[--log 0] \
 	[--max_m 0.8] \

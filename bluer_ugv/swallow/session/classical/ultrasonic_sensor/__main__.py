@@ -53,7 +53,7 @@ parser.add_argument(
 parser.add_argument(
     "--frame_count",
     type=int,
-    default=-1,
+    default=100,
     help="-1: all",
 )
 args = parser.parse_args()
