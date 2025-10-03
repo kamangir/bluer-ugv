@@ -17,8 +17,8 @@ items = ImageItems(
         f"{assets2_bluer_sparrow}/20250905_120625.jpg": "",
         f"{assets2_bluer_sparrow}/VID-20250905-WA0014_1.gif": "./validation/village-1.md",
         f"{assets2_bluer_swallow}/20251001_185852.jpg": "",
-        f"{assets2_bluer_swallow}/20251003_113240.jpg": "",
-        f"{assets2_bluer_swallow}/20251003_121114.jpg": "",
+        f"{assets2_bluer_swallow}/20251003_113240-2.jpg": "",
+        f"{assets2_bluer_swallow}/20251003_121114-2.jpg": "",
         f"{assets2_bluer_swallow}/20251003_121417.jpg": "",
     }
 )
