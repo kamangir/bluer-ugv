@@ -27,8 +27,10 @@ items = [
     },
     {
         "path": "../docs/bluer_sparrow/design/mechanical",
+        "cols": 2,
         "items": ImageItems(
             {
+                f"{bluer_sparrow_mechanical_design}/robot-with-cover.png": f"{bluer_sparrow_mechanical_design}/robot.stl",
                 f"{bluer_sparrow_mechanical_design}/robot.png": f"{bluer_sparrow_mechanical_design}/robot.stl",
                 f"{bluer_sparrow_mechanical_design}/cage.png": f"{bluer_sparrow_mechanical_design}/cage.stl",
                 f"{bluer_sparrow_mechanical_design}/measurements.png": "",
