@@ -31,5 +31,6 @@ items = markdown.generate_table(
                 "marquee": f"{assets2_bluer_swallow}/20250912_211652.jpg?raw=true",
             },
         ]
-    )
+    ),
+    cols=4,
 )
