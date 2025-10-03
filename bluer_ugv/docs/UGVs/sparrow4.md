@@ -10,4 +10,6 @@ the first ad robot.
 - body is pending. 🚧
 - cover is pending. 🚧
 
-items::
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true)](https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true) |

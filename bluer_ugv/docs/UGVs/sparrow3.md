@@ -13,4 +13,6 @@ the first one with two motherboards.
 
 
 
-items::
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true)](https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true) |
