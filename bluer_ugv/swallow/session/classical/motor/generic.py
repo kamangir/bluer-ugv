@@ -99,6 +99,5 @@ class GenericMotor:
             )
         )
 
-        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
-
+        self.leds.flash("red")
         return True

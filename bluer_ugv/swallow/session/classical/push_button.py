@@ -49,15 +49,15 @@ class ClassicalPushButton:
                 logger.info("push button pressed.")
                 self.press_time = time.time()
 
-            self.leds.leds["yellow"]["state"] = True
+            self.leds.set("yellow", True)
 
             self.press_duration = time.time() - self.press_time
             if self.press_duration > BUTTON_PRESS_DURATION_IGNORE:
-                self.leds.leds["red"]["state"] = False
+                self.leds.set("red", False)
             elif self.press_duration > BUTTON_PRESS_DURATION_SHUTDOWN:
-                self.leds.leds["red"]["state"] = True
+                self.leds.set("red", True)
             elif self.press_duration > BUTTON_PRESS_DURATION_UPDATE:
-                self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+                self.leds.flash("red")
         elif self.state:
             logger.info(
                 "push button released after {}.".format(
@@ -67,7 +67,7 @@ class ClassicalPushButton:
                 )
             )
 
-            self.leds.leds["yellow"]["state"] = False
+            self.leds.set("yellow", False)
 
             if self.press_duration < BUTTON_PRESS_DURATION_IGNORE:
                 if self.press_duration > BUTTON_PRESS_DURATION_SHUTDOWN:
