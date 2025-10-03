@@ -1,6 +1,6 @@
 title:::
 
-UGV: `sparrow`
+UGV: [`sparrow`](../../UGVs/sparrow.md)
 
 items:::
 

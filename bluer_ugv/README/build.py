@@ -16,6 +16,7 @@ from bluer_ugv.README import (
     shield,
     sparrow,
     swallow,
+    UGVs,
 )
 
 
@@ -36,10 +37,7 @@ def build() -> bool:
             ),
             macros=readme.get("macros", {}),
         )
-        for readme in [
-            {"path": "../docs"},
-        ]
-        + root.docs
+        for readme in root.docs
         + beast.docs
         + eagle.docs
         + fire.docs
@@ -49,4 +47,5 @@ def build() -> bool:
         + swallow.docs
         + alias.docs
         + parts.docs
+        + UGVs.docs
     )

@@ -10,4 +10,7 @@ docs = [
             "shortcuts:::": shortcuts_items,
         },
     },
+    {
+        "path": "../docs",
+    },
 ]

@@ -25,6 +25,12 @@ items = markdown.generate_table(
                 "url": "./bluer_ugv/docs/bluer_swallow/digital/design/terraform.md",
                 "marquee": f"{assets2_bluer_swallow}/20250611_100917.jpg?raw=true",
             },
+            {
+                "name": "UGVs",
+                "url": "./bluer_ugv/docs/UGVs",
+                "marquee": f"{assets2_bluer_swallow}/20250912_211652.jpg?raw=true",
+            },
         ]
-    )
+    ),
+    cols=4,
 )

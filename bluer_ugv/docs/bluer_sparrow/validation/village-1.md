@@ -1,6 +1,6 @@
 # bluer-sparrow: validation: village-1
 
-UGV: `sparrow`
+UGV: [`sparrow`](../../UGVs/sparrow.md)
 
 |   |   |   |
 | --- | --- | --- |
