@@ -1,6 +1,6 @@
 # bluer-sparrow: validation: village-4
 
-UGV: `sparrow2`
+UGV: [`sparrow2`](../../UGVs/sparrow2.md)
 
 ## debug object
 
