@@ -4,10 +4,10 @@ the first one with two motherboards.
 
 - computer(s):
     - `sparrow3-front`
+        - build is pending. 🚧
+    - `sparrow3-back`.
         - camera is validated. ✅
         - ultrasonic is validated. ✅
-    - `sparrow3-back`.
-        - build is pending. 🚧
 - body is pending. 🚧
 - cover is pending. 🚧
 
