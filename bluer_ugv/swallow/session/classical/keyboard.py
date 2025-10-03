@@ -143,7 +143,6 @@ class ClassicalKeyboard:
             logger.info("🪄 special key enabled.")
 
         if self.special_key:
-            for led in self.leds.leds.values():
-                led["state"] = not led["state"]
+            self.leds.flash_all()
 
         return True

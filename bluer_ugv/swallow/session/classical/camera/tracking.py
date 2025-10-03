@@ -89,7 +89,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not self.tracking_timer.tick():
             return True
 
-        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+        self.leds.flash("red")
 
         success, image = camera.capture(
             close_after=False,

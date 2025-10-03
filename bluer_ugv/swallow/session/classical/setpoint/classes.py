@@ -121,12 +121,12 @@ class ClassicalSetPoint:
 
         logger.info(f"{self.__class__.__name__}.stop")
 
-        self.leds.leds["red"]["state"] = False
-        self.leds.leds["yellow"]["state"] = False
+        self.leds.set("red", False)
+        self.leds.set("yellow", False)
 
     def update(self) -> bool:
         with self._lock:
             if self.started:
-                self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+                self.leds.flash("red")
 
         return True

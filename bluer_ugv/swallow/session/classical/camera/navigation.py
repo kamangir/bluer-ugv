@@ -144,7 +144,7 @@ class ClassicalNavigationCamera(ClassicalCamera):
         if not self.prediction_timer.tick():
             return True
 
-        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+        self.leds.flash("red")
 
         success, image = camera.capture(
             close_after=False,
@@ -190,7 +190,7 @@ class ClassicalNavigationCamera(ClassicalCamera):
         if not (self.training_timer.tick() or self.keyboard.last_key != ""):
             return True
 
-        self.leds.leds["red"]["state"] = not self.leds.leds["red"]["state"]
+        self.leds.flash("red")
 
         filename = "{}.png".format(
             string.pretty_date(

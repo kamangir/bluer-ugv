@@ -50,9 +50,7 @@ class ClassicalMousePad:
                         value=-event.value,
                     )  # left/right
 
-                self.leds.leds["yellow"]["state"] = not self.leds.leds["yellow"][
-                    "state"
-                ]
+                self.leds.flash("yellow")
 
             elif (
                 event.type == ecodes.EV_KEY
