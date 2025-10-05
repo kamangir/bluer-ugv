@@ -30,7 +30,7 @@ setup(
         f"{NAME}.swallow.session.classical.motor",
         f"{NAME}.swallow.session.classical.setpoint",
         f"{NAME}.swallow.session.classical.ultrasonic_sensor",
-        f"{NAME}.sparrow",
+        f"{NAME}.arzhang",
     ],
     include_package_data=True,
     package_data={

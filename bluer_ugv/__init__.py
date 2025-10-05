@@ -6,11 +6,11 @@ ICON = "🐬"
 
 DESCRIPTION = f"{ICON} AI x UGV."
 
-VERSION = "6.1103.1"
+VERSION = "6.1104.1"
 
 REPO_NAME = "bluer-ugv"
 
-MARQUEE = f"{assets2}/bluer-sparrow/VID-20250905-WA0014_1.gif"
+MARQUEE = f"{assets2}/arzhang/VID-20250905-WA0014_1.gif"
 
 
 ALIAS = "@ugv"

@@ -1,0 +1,16 @@
+# arzhang
+
+[swallow](../bluer_swallow/)'s little sister, formerly known as `sparrow`.
+
+|   |   |   |
+| --- | --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250722_174115-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250722_174115-2.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190410.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190410.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190439.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190439.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190450.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190450.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190512.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190512.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250830_125608.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250830_125608.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250830_125643.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250830_125643.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250830_132019.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250830_132019.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250830-WA0000~3_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250830-WA0000~3_1.gif?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250901_105247.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250901_105247.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250905_120625.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250905_120625.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250905-WA0014_1.gif?raw=true)](./validation/village-1.md) |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251001_185852.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251003_113240-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251003_113240-2.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251003_121114-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251003_121114-2.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251003_121417.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/bluer-swallow/20251003_121417.jpg?raw=true) |  |  |
+
+- [design](./design)
+- [algo](./algo)
+- [validation](./validation)

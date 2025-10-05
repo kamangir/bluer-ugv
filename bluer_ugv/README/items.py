@@ -3,7 +3,7 @@ from bluer_objects import README
 from bluer_ugv.README.consts import (
     assets2_bluer_eagle,
     assets2_bluer_robin,
-    assets2_bluer_sparrow,
+    assets2_arzhang,
     assets2_bluer_swallow,
 )
 
@@ -16,10 +16,10 @@ items = README.Items(
             "url": "./bluer_ugv/docs/bluer_swallow",
         },
         {
-            "name": "bluer-sparrow",
-            "marquee": f"{assets2_bluer_sparrow}/VID-20250905-WA0014_1.gif?raw=true",
+            "name": "arzhang",
+            "marquee": f"{assets2_arzhang}/VID-20250905-WA0014_1.gif?raw=true",
             "description": "[bluer-swallow](./bluer_ugv/docs/bluer_swallow)'s little sister.",
-            "url": "./bluer_ugv/docs/bluer_sparrow",
+            "url": "./bluer_ugv/docs/arzhang",
         },
         {
             "name": "bluer-robin",

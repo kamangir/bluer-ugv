@@ -14,7 +14,7 @@ from bluer_ugv.README import (
     robin,
     root,
     shield,
-    sparrow,
+    arzhang,
     swallow,
     UGVs,
 )
@@ -43,7 +43,7 @@ def build() -> bool:
         + fire.docs
         + robin.docs
         + shield.docs
-        + sparrow.docs
+        + arzhang.docs
         + swallow.docs
         + alias.docs
         + parts.docs

@@ -14,23 +14,23 @@ docs = [
         ),
     },
     {
-        "path": "../docs/UGVs/sparrow.md",
+        "path": "../docs/UGVs/arzhang.md",
         "items": ImageItems(
             {
-                "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/VID-20250905-WA0014_1.gif?raw=true": "",
+                "https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250905-WA0014_1.gif?raw=true": "",
             }
         ),
     },
     {
-        "path": "../docs/UGVs/sparrow2.md",
+        "path": "../docs/UGVs/arzhang2.md",
         "items": ImageItems(
             {
-                "https://github.com/kamangir/assets2/raw/main/bluer-sparrow/VID-20250905-WA0014_1.gif?raw=true": "",
+                "https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250905-WA0014_1.gif?raw=true": "",
             }
         ),
     },
     {
-        "path": "../docs/UGVs/sparrow3.md",
+        "path": "../docs/UGVs/arzhang3.md",
         "items": ImageItems(
             {
                 "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true": ""
@@ -38,7 +38,7 @@ docs = [
         ),
     },
     {
-        "path": "../docs/UGVs/sparrow4.md",
+        "path": "../docs/UGVs/rangin.md",
         "items": ImageItems(
             {
                 "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true": ""
