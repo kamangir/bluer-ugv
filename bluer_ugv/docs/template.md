@@ -1,10 +1,11 @@
 title:::
 
 - [aliases](./aliases)
-- [bluer_beast](./bluer_beast)
-- [bluer_fire](./bluer_fire)
-- [bluer_robin](./bluer_robin)
 - [arzhang](./arzhang)
-- [bluer_swallow](./bluer_swallow)
+- [rangin](./rangin.md)
+- [swallow](./swallow)
 - [parts](./parts)
 - [UGVs](./UGVs)
+- [robin](./robin)
+- [fire](./fire)
+- [beast](./beast)

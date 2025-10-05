@@ -15,4 +15,4 @@ the first one with two motherboards.
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true)](https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png?raw=true) |
+| [![image](https://github.com/kamangir/assets/raw/main/bluer-ugv/bluer-light.png?raw=true)](https://github.com/kamangir/assets/raw/main/bluer-ugv/bluer-light.png?raw=true) |

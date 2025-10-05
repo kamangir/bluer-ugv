@@ -5,10 +5,10 @@ from bluer_ugv.eagle.parts import dict_of_parts
 docs = [
     {
         "items": items,
-        "path": "../docs/bluer_eagle",
+        "path": "../docs/eagle",
     },
     {
-        "path": "../docs/bluer_eagle/parts.md",
+        "path": "../docs/eagle/parts.md",
         "items": db_of_parts.as_images(
             dict_of_parts,
             reference="../parts",

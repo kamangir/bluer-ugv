@@ -6,10 +6,10 @@ from bluer_ugv.robin.parts import dict_of_parts
 docs = [
     {
         "items": items,
-        "path": "../docs/bluer_robin",
+        "path": "../docs/robin",
     },
     {
-        "path": "../docs/bluer_robin/parts.md",
+        "path": "../docs/robin/parts.md",
         "items": db_of_parts.as_images(
             dict_of_parts,
             reference="../parts",

@@ -5,8 +5,8 @@ load_env(__name__)
 load_config(__name__)
 
 
-BLUER_BEAST_MODEL = get_env(
-    "BLUER_BEAST_MODEL",
+BLUER_UGV_BEAST_MODEL = get_env(
+    "BLUER_UGV_BEAST_MODEL",
 )
 
 BLUER_UGV_CAMERA_TRAINING_PERIOD = get_env(

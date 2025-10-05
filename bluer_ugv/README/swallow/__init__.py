@@ -6,7 +6,7 @@ docs = (
     [
         {
             "items": items,
-            "path": "../docs/bluer_swallow",
+            "path": "../docs/swallow",
         }
     ]
     + items_analog

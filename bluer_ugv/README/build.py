@@ -15,6 +15,7 @@ from bluer_ugv.README import (
     root,
     shield,
     arzhang,
+    rangin,
     swallow,
     UGVs,
 )
@@ -48,4 +49,5 @@ def build() -> bool:
         + alias.docs
         + parts.docs
         + UGVs.docs
+        + rangin.docs
     )

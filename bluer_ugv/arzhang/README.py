@@ -1,6 +1,6 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.consts import assets2_arzhang, assets2_bluer_swallow
+from bluer_ugv.README.consts import assets2_arzhang, assets2_swallow
 
 items = ImageItems(
     {
@@ -16,9 +16,12 @@ items = ImageItems(
         f"{assets2_arzhang}/20250901_105247.jpg": "",
         f"{assets2_arzhang}/20250905_120625.jpg": "",
         f"{assets2_arzhang}/VID-20250905-WA0014_1.gif": "./validation/village-1.md",
-        f"{assets2_bluer_swallow}/20251001_185852.jpg": "",
-        f"{assets2_bluer_swallow}/20251003_113240-2.jpg": "",
-        f"{assets2_bluer_swallow}/20251003_121114-2.jpg": "",
-        f"{assets2_bluer_swallow}/20251003_121417.jpg": "",
+        f"{assets2_swallow}/20251001_185852.jpg": "",
+        f"{assets2_swallow}/20251003_113240-2.jpg": "",
+        f"{assets2_swallow}/20251003_121114-2.jpg": "",
+        f"{assets2_swallow}/20251003_121417.jpg": "",
+        f"{assets2_arzhang}/20251005_112250.jpg": "",
+        f"{assets2_arzhang}/20251005_112332.jpg": "",
+        f"{assets2_arzhang}/20251005_112530.jpg": "",
     }
 )

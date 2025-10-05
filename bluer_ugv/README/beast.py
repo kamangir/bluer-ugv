@@ -1,3 +1,3 @@
 docs = [
-    {"path": "../docs/bluer_beast"},
+    {"path": "../docs/beast"},
 ]
