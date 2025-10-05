@@ -1,6 +1,6 @@
 title:::
 
-the first Arzhang.
+[the first Arzhang](../arzhang).
 
 - computer(s):
     - `sparrow`

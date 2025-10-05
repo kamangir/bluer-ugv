@@ -1,6 +1,6 @@
 # UGVs: arzhang
 
-the first Arzhang.
+[the first Arzhang](../arzhang).
 
 - computer(s):
     - `sparrow`
