@@ -1,8 +1,9 @@
 from bluer_objects.README.items import ImageItems, Items
 from bluer_objects import markdown
 from bluer_objects import env
+from bluer_objects.README.consts import assets
 
-from bluer_ugv.README.consts import assets, assets2_arzhang
+from bluer_ugv.README.arzhang.consts import arzhang_assets2
 
 items = [
     {
@@ -12,12 +13,12 @@ items = [
         "path": "../docs/arzhang/validation/village-1.md",
         "items": ImageItems(
             {
-                f"{assets2_arzhang}/20250905_120526.jpg": "",
-                f"{assets2_arzhang}/20250905_120808.jpg": "",
-                f"{assets2_arzhang}/20250905_121030.jpg": "",
-                f"{assets2_arzhang}/20250905_121032.jpg": "",
-                f"{assets2_arzhang}/20250905_121702.jpg": "",
-                f"{assets2_arzhang}/20250905_121711.jpg": "",
+                f"{arzhang_assets2}/20250905_120526.jpg": "",
+                f"{arzhang_assets2}/20250905_120808.jpg": "",
+                f"{arzhang_assets2}/20250905_121030.jpg": "",
+                f"{arzhang_assets2}/20250905_121032.jpg": "",
+                f"{arzhang_assets2}/20250905_121702.jpg": "",
+                f"{arzhang_assets2}/20250905_121711.jpg": "",
             }
         ),
     },
@@ -25,12 +26,12 @@ items = [
         "path": "../docs/arzhang/validation/village-2.md",
         "items": ImageItems(
             {
-                f"{assets2_arzhang}/20250922_094548.jpg": "",
-                f"{assets2_arzhang}/20250922_101156.jpg": "",
-                f"{assets2_arzhang}/20250922_101409.jpg": "",
-                f"{assets2_arzhang}/20250922_101557.jpg": "",
-                f"{assets2_arzhang}/20250922_101653.jpg": "",
-                f"{assets2_arzhang}/20250922_102822.jpg": "",
+                f"{arzhang_assets2}/20250922_094548.jpg": "",
+                f"{arzhang_assets2}/20250922_101156.jpg": "",
+                f"{arzhang_assets2}/20250922_101409.jpg": "",
+                f"{arzhang_assets2}/20250922_101557.jpg": "",
+                f"{arzhang_assets2}/20250922_101653.jpg": "",
+                f"{arzhang_assets2}/20250922_102822.jpg": "",
             }
         ),
         "macros": {
@@ -64,10 +65,10 @@ items = [
         "path": "../docs/arzhang/validation/village-3.md",
         "items": ImageItems(
             {
-                f"{assets2_arzhang}/20250925_133136.jpg": "",
-                f"{assets2_arzhang}/20250925_133628.jpg": "",
-                f"{assets2_arzhang}/20250925_133637.jpg": "",
-                f"{assets2_arzhang}/20250925_132521~2_1.gif": "",
+                f"{arzhang_assets2}/20250925_133136.jpg": "",
+                f"{arzhang_assets2}/20250925_133628.jpg": "",
+                f"{arzhang_assets2}/20250925_133637.jpg": "",
+                f"{arzhang_assets2}/20250925_132521~2_1.gif": "",
             },
         ),
         "cols": 2,
@@ -76,7 +77,7 @@ items = [
         "path": "../docs/arzhang/validation/village-4.md",
         "items": ImageItems(
             {
-                f"{assets2_arzhang}/20250927_192024.jpg": "",
+                f"{arzhang_assets2}/20250927_192024.jpg": "",
             },
         ),
     },

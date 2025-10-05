@@ -1,4 +1,4 @@
-from bluer_ugv.README.consts import assets2
+from bluer_objects.README.consts import assets2
 
 NAME = "bluer_ugv"
 
@@ -6,7 +6,7 @@ ICON = "🐬"
 
 DESCRIPTION = f"{ICON} AI x UGV."
 
-VERSION = "6.1133.1"
+VERSION = "6.1144.1"
 
 REPO_NAME = "bluer-ugv"
 

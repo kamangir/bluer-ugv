@@ -20,7 +20,7 @@
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251005_113232.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251005_113232.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets/raw/main2/swallow/20251005_113232.jpg?raw=true)](https://github.com/kamangir/assets/raw/main2/swallow/20251005_113232.jpg?raw=true) |
 
 - leds:
     - green: control loop.

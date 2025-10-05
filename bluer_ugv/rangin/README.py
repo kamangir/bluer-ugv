@@ -1,9 +1,10 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.consts import assets2_rangin
+from bluer_ugv.README.rangin.consts import rangin_assets2
+
 
 items = ImageItems(
     {
-        f"{assets2_rangin}/rangin.png": "",
+        f"{rangin_assets2}/rangin.png": "",
     }
 )

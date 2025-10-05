@@ -1,49 +1,47 @@
 from bluer_objects import README
 
-from bluer_ugv.README.consts import (
-    assets2_eagle,
-    assets2_robin,
-    assets2_arzhang,
-    assets2_rangin,
-    assets2_swallow,
-    assets_bluer_ugv,
-)
+from bluer_ugv.README.consts import bluer_ugv_assets
+from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.eagle.consts import eagle_assets2
+from bluer_ugv.README.rangin.consts import rangin_assets2
+from bluer_ugv.README.robin.consts import robin_assets2
+from bluer_ugv.README.swallow.consts import swallow_assets2
 
 items = README.Items(
     [
         {
             "name": "swallow",
-            "marquee": f"{assets2_swallow}/20250913_203635~2_1.gif?raw=true",
+            "marquee": f"{swallow_assets2}/20250913_203635~2_1.gif?raw=true",
             "description": "based on power wheels.",
             "url": "./bluer_ugv/docs/swallow",
         },
         {
             "name": "arzhang",
-            "marquee": f"{assets2_arzhang}/VID-20250905-WA0014_1.gif?raw=true",
+            "marquee": f"{arzhang_assets2}/VID-20250905-WA0014_1.gif?raw=true",
             "description": "[swallow](./bluer_ugv/docs/swallow)'s little sister.",
             "url": "./bluer_ugv/docs/arzhang",
         },
         {
             "name": "rangin",
-            "marquee": f"{assets2_rangin}/rangin.png",
+            "marquee": f"{rangin_assets2}/rangin.png",
             "description": "[swallow](./bluer_ugv/docs/swallow)'s ad robot.",
             "url": "./bluer_ugv/docs/rangin.md",
         },
         {
             "name": "robin",
-            "marquee": f"{assets2_robin}/20250723_095155~2_1.gif?raw=true",
+            "marquee": f"{robin_assets2}/20250723_095155~2_1.gif?raw=true",
             "description": "remote control car kit for teenagers.",
             "url": "./bluer_ugv/docs/robin",
         },
         {
             "name": "eagle",
-            "marquee": f"{assets2_eagle}/file_0000000007986246b45343b0c06325dd.png?raw=true",
+            "marquee": f"{eagle_assets2}/file_0000000007986246b45343b0c06325dd.png?raw=true",
             "description": "a remotely controlled ballon.",
             "url": "./bluer_ugv/docs/eagle",
         },
         {
             "name": "fire",
-            "marquee": f"{assets_bluer_ugv}/fire.png?raw=true",
+            "marquee": f"{bluer_ugv_assets}/fire.png?raw=true",
             "description": "based on a used car.",
             "url": "./bluer_ugv/docs/fire",
         },

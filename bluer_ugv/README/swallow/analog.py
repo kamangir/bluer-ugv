@@ -1,6 +1,6 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.consts import swallow_electrical_design
+from bluer_ugv.README.swallow.consts import swallow_electrical_design
 
 items = [
     {
