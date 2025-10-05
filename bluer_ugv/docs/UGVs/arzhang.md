@@ -1,12 +1,12 @@
 # UGVs: arzhang
 
-the first sparrow.
+the first Arzhang.
 
 - computer(s):
     - `sparrow`
         - camera is validated. ✅
         - ultrasonic is validated. ✅
-- cover is pending. 🚧
+- cover is complete. ✅
 
 
 |   |
