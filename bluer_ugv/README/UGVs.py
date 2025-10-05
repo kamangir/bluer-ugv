@@ -2,7 +2,7 @@ from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.consts import (
     assets2_arzhang,
-    assets2_bluer_swallow,
+    assets2_swallow,
     assets_bluer_ugv,
     assets2_bluer_ugv,
     assets2_rangin,
@@ -16,8 +16,8 @@ docs = [
         "path": "../docs/UGVs/swallow.md",
         "items": ImageItems(
             {
-                f"{assets2_bluer_swallow}/20250701_2206342_1.gif": "",
-                f"{assets2_bluer_swallow}/20250913_203635~2_1.gif": "",
+                f"{assets2_swallow}/20250701_2206342_1.gif": "",
+                f"{assets2_swallow}/20250913_203635~2_1.gif": "",
             }
         ),
     },

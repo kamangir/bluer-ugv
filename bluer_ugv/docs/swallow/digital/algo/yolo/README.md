@@ -1,0 +1,17 @@
+# swallow: digital: algo: yolo
+
+target tracking using an [@algo/yolo](https://github.com/kamangir/bluer-algo/tree/main/bluer_algo/docs/yolo).
+
+```bash
+@swallow env cp yolo
+```
+
+- [training a 256x256 model](./train.md)
+
+```bash
+@swallow debug
+```
+
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/yolo-debug.png?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/yolo-debug.png?raw=true) |
