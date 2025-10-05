@@ -8,8 +8,8 @@ assets_bluer_ugv = f"{assets}/bluer-ugv"
 
 assets2 = f"{github_kamangir}/assets2/raw/main"
 
-assets2_bluer_eagle = f"{assets2}/bluer-eagle"
-assets2_bluer_fire = f"{assets2}/bluer-fire"
+assets2_eagle = f"{assets2}/eagle"
+assets2_fire = f"{assets2}/fire"
 assets2_robin = f"{assets2}/robin"
 assets2_swallow = f"{assets2}/swallow"
 assets2_arzhang = f"{assets2}/arzhang"

@@ -3,9 +3,9 @@ from bluer_ugv.fire.README import items
 from bluer_ugv.fire.parts import dict_of_parts
 
 docs = [
-    {"path": "../docs/bluer_fire"},
+    {"path": "../docs/fire"},
     {
-        "path": "../docs/bluer_fire/parts.md",
+        "path": "../docs/fire/parts.md",
         "items": db_of_parts.as_images(
             dict_of_parts,
             reference="../parts",

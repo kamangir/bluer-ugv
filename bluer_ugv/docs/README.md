@@ -7,5 +7,5 @@
 - [parts](./parts)
 - [UGVs](./UGVs)
 - [robin](./robin)
-- [bluer_fire](./bluer_fire)
-- [bluer_beast](./bluer_beast)
+- [fire](./fire)
+- [beast](./beast)

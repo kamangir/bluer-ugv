@@ -1,4 +1,4 @@
-# bluer-fire: parts
+# fire: parts
 
 1. [36V DC hub motor, 350 W, front, no gearbox: x 4](../parts/36v-hub-motor.md).
 1. [brushless drive, 36 - 48 V DC, 350 W, sine wave, silent: x 2?](../parts/brushless-350w-drive.md).

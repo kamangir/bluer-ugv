@@ -1,7 +1,7 @@
 from bluer_objects import README
 
 from bluer_ugv.README.consts import (
-    assets2_bluer_eagle,
+    assets2_eagle,
     assets2_robin,
     assets2_arzhang,
     assets2_rangin,
@@ -36,22 +36,22 @@ items = README.Items(
             "url": "./bluer_ugv/docs/robin",
         },
         {
-            "name": "bluer-eagle",
-            "marquee": f"{assets2_bluer_eagle}/file_0000000007986246b45343b0c06325dd.png?raw=true",
+            "name": "eagle",
+            "marquee": f"{assets2_eagle}/file_0000000007986246b45343b0c06325dd.png?raw=true",
             "description": "a remotely controlled ballon.",
-            "url": "./bluer_ugv/docs/bluer_eagle",
+            "url": "./bluer_ugv/docs/eagle",
         },
         {
-            "name": "bluer-fire",
-            "marquee": f"{assets_bluer_ugv}/bluer-fire.png?raw=true",
+            "name": "fire",
+            "marquee": f"{assets_bluer_ugv}/fire.png?raw=true",
             "description": "based on a used car.",
-            "url": "./bluer_ugv/docs/bluer_fire",
+            "url": "./bluer_ugv/docs/fire",
         },
         {
-            "name": "bluer-beast",
+            "name": "beast",
             "marquee": "https://github.com/waveshareteam/ugv_rpi/raw/main/media/UGV-Rover-details-23.jpg",
             "description": "based on [UGV Beast PI ROS2](https://www.waveshare.com/wiki/UGV_Beast_PI_ROS2).",
-            "url": "./bluer_ugv/docs/bluer_beast",
+            "url": "./bluer_ugv/docs/beast",
         },
     ]
 )
