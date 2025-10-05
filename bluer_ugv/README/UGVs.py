@@ -3,6 +3,7 @@ from bluer_objects.README.items import ImageItems
 from bluer_ugv.README.consts import (
     assets2_arzhang,
     assets2_bluer_swallow,
+    assets_bluer_ugv,
     assets2_bluer_ugv,
 )
 
@@ -37,7 +38,7 @@ docs = [
     },
     {
         "path": "../docs/UGVs/arzhang3.md",
-        "items": ImageItems({f"{assets2_bluer_ugv}/bluer-light.png": ""}),
+        "items": ImageItems({f"{assets_bluer_ugv}/bluer-light.png": ""}),
     },
     {
         "path": "../docs/UGVs/rangin.md",

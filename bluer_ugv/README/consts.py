@@ -4,6 +4,8 @@ algo_docs = f"{github_kamangir}/bluer-algo/blob/main/bluer_algo/docs"
 
 assets = f"{github_kamangir}/assets/raw/main"
 
+assets_bluer_ugv = f"{assets}/bluer-ugv"
+
 assets2 = f"{github_kamangir}/assets2/raw/main"
 
 assets2_bluer_eagle = f"{assets2}/bluer-eagle"
