@@ -6,6 +6,7 @@ from bluer_ugv.README.consts import (
     assets2_arzhang,
     assets2_rangin,
     assets2_bluer_swallow,
+    assets2_bluer_ugv,
 )
 
 items = README.Items(
@@ -18,7 +19,7 @@ items = README.Items(
         },
         {
             "name": "rangin",
-            "marquee": f"{assets2_rangin}/rangin.md",
+            "marquee": f"{assets2_rangin}/rangin.png",
             "description": "[bluer-swallow](./bluer_ugv/docs/bluer_swallow)'s ad robot.",
             "url": "./bluer_ugv/docs/rangin.md",
         },
@@ -42,7 +43,7 @@ items = README.Items(
         },
         {
             "name": "bluer-fire",
-            "marquee": "https://github.com/kamangir/assets/raw/main/bluer-ugv/bluer-fire.png?raw=true",
+            "marquee": f"{assets2_bluer_ugv}/bluer-fire.png?raw=true",
             "description": "based on a used car.",
             "url": "./bluer_ugv/docs/bluer_fire",
         },
