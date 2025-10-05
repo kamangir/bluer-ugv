@@ -31,6 +31,7 @@ setup(
         f"{NAME}.swallow.session.classical.setpoint",
         f"{NAME}.swallow.session.classical.ultrasonic_sensor",
         f"{NAME}.arzhang",
+        f"{NAME}.rangin",
     ],
     include_package_data=True,
     package_data={
