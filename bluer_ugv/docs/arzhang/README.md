@@ -2,6 +2,10 @@
 
 [swallow](../swallow/)'s little sister, formerly known as `sparrow`, Arzhang (ارژنگ) is named after the demon in the Shahnameh. It embodies noble strength and quiet defense.
 
+- [design](./design)
+- [algo](./algo)
+- [validation](./validation)
+
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250722_174115-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250722_174115-2.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190410.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190410.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190439.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250825_190439.jpg?raw=true) |
@@ -11,7 +15,3 @@
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251001_185852.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251001_185852.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251003_113240-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251003_113240-2.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251003_121114-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251003_121114-2.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251003_121417.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251003_121417.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251005_112250.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251005_112250.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251005_112332.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251005_112332.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251005_112530.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251005_112530.jpg?raw=true) |  |  |
-
-- [design](./design)
-- [algo](./algo)
-- [validation](./validation)

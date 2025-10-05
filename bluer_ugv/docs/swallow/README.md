@@ -1,5 +1,8 @@
 # swallow
 
+- [analog control](./analog)
+- [digital control](./digital)
+
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/assets/raw/main/bluer-ugv/bluer-light.png?raw=true)](https://github.com/kamangir/assets/raw/main/bluer-ugv/bluer-light.png?raw=true) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/v0/3d-design.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/v0/3d-design.stl) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250605_180136.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250605_180136.jpg?raw=true) |
@@ -9,6 +12,3 @@
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250707_122000.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250707_122000.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250707_182818.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250707_182818.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250709_111955.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250709_111955.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250904_174526.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250904_174526.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250912_211652.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250912_211652.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250913_111410.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250913_111410.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250913_200401.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250913_200401.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250913_203635~2_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250913_203635~2_1.gif?raw=true) |  |
-
-- [analog control](./analog)
-- [digital control](./digital)
