@@ -2,7 +2,7 @@ from bluer_objects import README
 
 from bluer_ugv.README.consts import (
     assets2_bluer_eagle,
-    assets2_bluer_robin,
+    assets2_robin,
     assets2_arzhang,
     assets2_rangin,
     assets2_swallow,
@@ -30,10 +30,10 @@ items = README.Items(
             "url": "./bluer_ugv/docs/rangin.md",
         },
         {
-            "name": "bluer-robin",
-            "marquee": f"{assets2_bluer_robin}/20250723_095155~2_1.gif?raw=true",
+            "name": "robin",
+            "marquee": f"{assets2_robin}/20250723_095155~2_1.gif?raw=true",
             "description": "remote control car kit for teenagers.",
-            "url": "./bluer_ugv/docs/bluer_robin",
+            "url": "./bluer_ugv/docs/robin",
         },
         {
             "name": "bluer-eagle",
