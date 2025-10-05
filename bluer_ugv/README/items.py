@@ -4,6 +4,7 @@ from bluer_ugv.README.consts import (
     assets2_bluer_eagle,
     assets2_bluer_robin,
     assets2_arzhang,
+    assets2_rangin,
     assets2_bluer_swallow,
 )
 
@@ -20,6 +21,12 @@ items = README.Items(
             "marquee": f"{assets2_arzhang}/VID-20250905-WA0014_1.gif?raw=true",
             "description": "[bluer-swallow](./bluer_ugv/docs/bluer_swallow)'s little sister.",
             "url": "./bluer_ugv/docs/arzhang",
+        },
+        {
+            "name": "rangin",
+            "marquee": f"{assets2_rangin}/rangin.md",
+            "description": "[bluer-swallow](./bluer_ugv/docs/bluer_swallow)'s ad robot.",
+            "url": "./bluer_ugv/docs/rangin.md",
         },
         {
             "name": "bluer-robin",

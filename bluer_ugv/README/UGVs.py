@@ -5,6 +5,7 @@ from bluer_ugv.README.consts import (
     assets2_bluer_swallow,
     assets_bluer_ugv,
     assets2_bluer_ugv,
+    assets2_rangin,
 )
 
 docs = [
@@ -42,10 +43,6 @@ docs = [
     },
     {
         "path": "../docs/UGVs/rangin.md",
-        "items": ImageItems(
-            {
-                "https://github.com/kamangir/assets/blob/main/bluer-ugv/bluer-light.png": ""
-            }
-        ),
+        "items": ImageItems({f"{assets2_rangin}/rangin.png": ""}),
     },
 ]

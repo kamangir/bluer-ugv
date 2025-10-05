@@ -13,6 +13,7 @@ assets2_bluer_fire = f"{assets2}/bluer-fire"
 assets2_bluer_robin = f"{assets2}/bluer-robin"
 assets2_bluer_swallow = f"{assets2}/bluer-swallow"
 assets2_arzhang = f"{assets2}/arzhang"
+assets2_rangin = f"{assets2}/rangin"
 assets2_bluer_ugv = f"{assets2}/bluer-ugv"
 
 # design
