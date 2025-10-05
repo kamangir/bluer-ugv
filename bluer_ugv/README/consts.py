@@ -10,7 +10,7 @@ assets2_bluer_eagle = f"{assets2}/bluer-eagle"
 assets2_bluer_fire = f"{assets2}/bluer-fire"
 assets2_bluer_robin = f"{assets2}/bluer-robin"
 assets2_bluer_swallow = f"{assets2}/bluer-swallow"
-assets2_bluer_sparrow = f"{assets2}/bluer-sparrow"
+assets2_arzhang = f"{assets2}/arzhang"
 assets2_bluer_ugv = f"{assets2}/bluer-ugv"
 
 # design
@@ -28,6 +28,4 @@ bluer_swallow_ultrasonic_sensor_design = (
     f"{bluer_ugv_mechanical_design}/blob/main/bluer_swallow/ultrasonic-sensors"
 )
 
-bluer_sparrow_mechanical_design = (
-    f"{bluer_ugv_mechanical_design}/blob/main/bluer_sparrow"
-)
+arzhang_mechanical_design = f"{bluer_ugv_mechanical_design}/blob/main/arzhang"
