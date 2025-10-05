@@ -6,7 +6,7 @@ from bluer_ugv.README.consts import (
     assets2_arzhang,
     assets2_rangin,
     assets2_swallow,
-    assets2_bluer_ugv,
+    assets_bluer_ugv,
 )
 
 items = README.Items(
@@ -43,7 +43,7 @@ items = README.Items(
         },
         {
             "name": "bluer-fire",
-            "marquee": f"{assets2_bluer_ugv}/bluer-fire.png?raw=true",
+            "marquee": f"{assets_bluer_ugv}/bluer-fire.png?raw=true",
             "description": "based on a used car.",
             "url": "./bluer_ugv/docs/bluer_fire",
         },
