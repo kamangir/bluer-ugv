@@ -11,12 +11,6 @@ from bluer_ugv.README.consts import (
 items = README.Items(
     [
         {
-            "name": "bluer-swallow",
-            "marquee": f"{assets2_bluer_swallow}/20250913_203635~2_1.gif?raw=true",
-            "description": "based on power wheels.",
-            "url": "./bluer_ugv/docs/bluer_swallow",
-        },
-        {
             "name": "arzhang",
             "marquee": f"{assets2_arzhang}/VID-20250905-WA0014_1.gif?raw=true",
             "description": "[bluer-swallow](./bluer_ugv/docs/bluer_swallow)'s little sister.",
@@ -27,6 +21,12 @@ items = README.Items(
             "marquee": f"{assets2_rangin}/rangin.md",
             "description": "[bluer-swallow](./bluer_ugv/docs/bluer_swallow)'s ad robot.",
             "url": "./bluer_ugv/docs/rangin.md",
+        },
+        {
+            "name": "bluer-swallow",
+            "marquee": f"{assets2_bluer_swallow}/20250913_203635~2_1.gif?raw=true",
+            "description": "based on power wheels.",
+            "url": "./bluer_ugv/docs/bluer_swallow",
         },
         {
             "name": "bluer-robin",

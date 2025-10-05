@@ -1,6 +1,6 @@
 title:::
 
-the first ad robot.
+an ad robot.
 
 - computer(s):
     - `rangin`
