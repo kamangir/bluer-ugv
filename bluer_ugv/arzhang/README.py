@@ -20,8 +20,8 @@ items = ImageItems(
         f"{assets2_bluer_swallow}/20251003_113240-2.jpg": "",
         f"{assets2_bluer_swallow}/20251003_121114-2.jpg": "",
         f"{assets2_bluer_swallow}/20251003_121417.jpg": "",
-        f"{assets2_bluer_swallow}/20251005_112250.jpg": "",
-        f"{assets2_bluer_swallow}/20251005_112332.jpg": "",
-        f"{assets2_bluer_swallow}/20251005_112530.jpg": "",
+        f"{assets2_arzhang}/20251005_112250.jpg": "",
+        f"{assets2_arzhang}/20251005_112332.jpg": "",
+        f"{assets2_arzhang}/20251005_112530.jpg": "",
     }
 )
