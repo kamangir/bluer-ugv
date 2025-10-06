@@ -1,6 +1,6 @@
 # arzhang: design: mechanical
 
-- [Blender files](https://github.com/kamangir/bluer-ugv-mechanical-design)
+- [Blender files](https://github.com/kamangir/designs)
 - metal profile: 20 mm x 20 mm x 1.5 mm x 6000 mm
     - parts:
         - 4 x 600 mm
@@ -17,7 +17,7 @@
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot-with-cover-v2.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.stl) |
-| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/cage.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/cage.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/measurements.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/measurements.png?raw=true) |
+| [![image](https://github.com/kamangir/designs//blob/main/arzhang/robot-with-cover-v2.png?raw=true)](https://github.com/kamangir/designs//blob/main/arzhang/robot.stl) | [![image](https://github.com/kamangir/designs//blob/main/arzhang/robot.png?raw=true)](https://github.com/kamangir/designs//blob/main/arzhang/robot.stl) |
+| [![image](https://github.com/kamangir/designs//blob/main/arzhang/cage.png?raw=true)](https://github.com/kamangir/designs//blob/main/arzhang/cage.stl) | [![image](https://github.com/kamangir/designs//blob/main/arzhang/measurements.png?raw=true)](https://github.com/kamangir/designs//blob/main/arzhang/measurements.png?raw=true) |
 
 - [v1](./v1.md)

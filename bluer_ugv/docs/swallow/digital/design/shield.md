@@ -1,6 +1,6 @@
 # swallow: digital: design: shield
 
-- [electrical diagram](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/swallow/electrical/digital.svg) ([png](https://github.com/kamangir/bluer-ugv-mechanical-design/blob/main/swallow/electrical/digital.png))
+- [electrical diagram](https://github.com/kamangir/designs/blob/main/swallow/electrical/digital.svg) ([png](https://github.com/kamangir/designs/blob/main/swallow/electrical/digital.png))
 - [different views](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow.md)
 
 - connectors: all socket.
@@ -17,7 +17,7 @@
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/electrical/digital.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/electrical/digital.svg) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250609_164433.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250609_164433.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250614_102301.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250614_102301.jpg?raw=true) |
+| [![image](https://github.com/kamangir/designs//blob/main/swallow/electrical/digital.png?raw=true)](https://github.com/kamangir/designs//blob/main/swallow/electrical/digital.svg) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250609_164433.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250609_164433.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250614_102301.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250614_102301.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250614_114954.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250614_114954.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250615_192339.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250615_192339.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250703_153834.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250703_153834.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/design/v2/01.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/design/v2/01.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/design/v3/01.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/design/v3/01.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/design/v4/01.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/design/v4/01.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250925_213013.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250925_213013.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250925_214017.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250925_214017.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250928_160425.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250928_160425.jpg?raw=true) |

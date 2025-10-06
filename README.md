@@ -18,7 +18,7 @@ pip install bluer_ugv
 
 |   |   |   |   |
 | --- | --- | --- | --- |
-| [`parts`](./bluer_ugv/docs/swallow/digital/design/parts.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/XL4015.png)](./bluer_ugv/docs/swallow/digital/design/parts.md)  | [`shield`](./bluer_ugv/docs/swallow/digital/design/shield.md) [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/electrical/digital.png?raw=true)](./bluer_ugv/docs/swallow/digital/design/shield.md)  | [`terraform`](./bluer_ugv/docs/swallow/digital/design/terraform.md) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250611_100917.jpg?raw=true)](./bluer_ugv/docs/swallow/digital/design/terraform.md)  | [`UGVs`](./bluer_ugv/docs/UGVs) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250912_211652.jpg?raw=true)](./bluer_ugv/docs/UGVs)  |
+| [`parts`](./bluer_ugv/docs/swallow/digital/design/parts.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/XL4015.png)](./bluer_ugv/docs/swallow/digital/design/parts.md)  | [`shield`](./bluer_ugv/docs/swallow/digital/design/shield.md) [![image](https://github.com/kamangir/designs//blob/main/swallow/electrical/digital.png?raw=true)](./bluer_ugv/docs/swallow/digital/design/shield.md)  | [`terraform`](./bluer_ugv/docs/swallow/digital/design/terraform.md) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250611_100917.jpg?raw=true)](./bluer_ugv/docs/swallow/digital/design/terraform.md)  | [`UGVs`](./bluer_ugv/docs/UGVs) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250912_211652.jpg?raw=true)](./bluer_ugv/docs/UGVs)  |
 
 ## aliases
 
@@ -34,5 +34,5 @@ pip install bluer_ugv
 
 [![pylint](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/bluer-ugv.svg)](https://pypi.org/project/bluer-ugv/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/bluer-ugv)](https://pypistats.org/packages/bluer-ugv)
 
-built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-6.1175.1`](https://github.com/kamangir/bluer-ugv).
+built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-6.1176.1`](https://github.com/kamangir/bluer-ugv).
 
