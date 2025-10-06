@@ -6,6 +6,7 @@
 - [36V DC hub motor, 350 W, front, no gearbox](./36v-hub-motor.md).
 - [4 x AA battery holder](./4xAA-battery-holder.md).
 - [4-channel transmitter and receiver](./4-ch-transceiver.md).
+- [40 inch TV](./40-inch-TV.md).
 - [43 A, H-Bridge Motor Driver](./BTS7960.md).
 - [6V DC (4 cell) NICD battery](./LJ-6V-battery.md).
 - [6V DC charger for NICD batteries](./USB-charger-NICD-6V.md).

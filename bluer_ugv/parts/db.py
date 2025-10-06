@@ -326,6 +326,15 @@ db_of_parts["1N4148"] = Part(
     ],
 )
 
+db_of_parts["40-inch-TV"] = Part(
+    info=[
+        "40 inch TV",
+    ],
+    images=[
+        "40-inch-TV.jpg",
+    ],
+)
+
 
 db_of_parts["template"] = Part(
     info=[
