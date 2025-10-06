@@ -30,7 +30,7 @@ items = [
         "cols": 2,
         "items": ImageItems(
             {
-                f"{arzhang_mechanical_design}/robot-with-cover.png": f"{arzhang_mechanical_design}/robot.stl",
+                f"{arzhang_mechanical_design}/robot-with-cover-v2.png": f"{arzhang_mechanical_design}/robot.stl",
                 f"{arzhang_mechanical_design}/robot.png": f"{arzhang_mechanical_design}/robot.stl",
                 f"{arzhang_mechanical_design}/cage.png": f"{arzhang_mechanical_design}/cage.stl",
                 f"{arzhang_mechanical_design}/measurements.png": "",

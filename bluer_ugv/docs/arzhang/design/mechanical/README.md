@@ -11,11 +11,13 @@
 - plexiglass
     - 260 mm x 170 mm x 2 mm  
     - 260 mm x 430 mm x 2 mm
-- thin metal sheet: 260 mm x 600 mm x 0.5 mm
+- thin metal sheet
+    - 260 mm x 600 mm x 0.5 mm
+    - 2 x 120 mm x 600 mm x 0.5
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot-with-cover.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.stl) |
+| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot-with-cover-v2.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/robot.stl) |
 | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/cage.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/cage.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/measurements.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/arzhang/measurements.png?raw=true) |
 
 - [v1](./v1.md)
