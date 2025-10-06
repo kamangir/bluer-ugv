@@ -20,6 +20,7 @@
 - [Raspberry Pi Camera, V1.3https://www.raspberrypi.com/documentation/accessories/camera.html](./rpi-camera.md).
 - [Rechargeable sealed lead acid battery, 12 V, 7 Ah](./SLA-Battery.md).
 - [Resistor, 1/4 watt, 5% tolerance](./resistor.md).
+- [TV bracket](./TV-bracket.md).
 - [TVS diode, unidirectional, 600 W, 6.8 V clamp, e.g. P6KE6.8A, DO-15 package](./TVS-diode.md).
 - [XL4015: 12 VDC -> 5 VDC, 4A](./XL4015.md).
 - [auto power connectors](./connector.md).
@@ -29,6 +30,7 @@
 - [front connector](./front-connector.md).
 - [front wheels](./front-wheels.md).
 - [gearboxed DC motor, 6V DC](./yellow-gearbox-dc-motor.md).
+- [power station.](./power-station.md).
 - [power wheel wheels](./wheel.md).
 - [push button](./pushbutton.md).
 - [shaft, 10 cm](./shaft-10cm.md).
