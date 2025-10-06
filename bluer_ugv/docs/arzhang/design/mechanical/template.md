@@ -1,6 +1,6 @@
 title:::
 
-- [Blender files](https://github.com/kamangir/bluer-ugv-mechanical-design)
+- [Blender files](https://github.com/kamangir/designs)
 - metal profile: 20 mm x 20 mm x 1.5 mm x 6000 mm
     - parts:
         - 4 x 600 mm

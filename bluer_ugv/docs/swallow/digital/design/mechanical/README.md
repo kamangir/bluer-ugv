@@ -1,6 +1,6 @@
 # swallow: digital: design: mechanical
 
-- [Blender files](https://github.com/kamangir/bluer-ugv-mechanical-design)
+- [Blender files](https://github.com/kamangir/designs)
 - material: 20 mm x 20 mm x 1.5 mm x 6000 mm x 2
 - parts:
     - 4 x 1000 mm
@@ -11,6 +11,6 @@
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/robot.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/robot.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/cage.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/cage.stl) | [![image](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/measurements.png?raw=true)](https://github.com/kamangir/bluer-ugv-mechanical-design//blob/main/swallow/mechanical/measurements.png?raw=true) |
+| [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/robot.stl) | [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/cage.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/cage.stl) | [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/measurements.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/measurements.png?raw=true) |
 
 - [v1](./v1.md)

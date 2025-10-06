@@ -2,12 +2,12 @@ from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.swallow.consts import (
     swallow_assets2,
-    swallow_electrical_design,
+    swallow_electrical_designs,
 )
 
 items = ImageItems(
     {
-        f"{swallow_electrical_design}/digital.png": f"{swallow_electrical_design}/digital.svg",
+        f"{swallow_electrical_designs}/digital.png": f"{swallow_electrical_designs}/digital.svg",
         f"{swallow_assets2}/20250609_164433.jpg": "",
         f"{swallow_assets2}/20250614_102301.jpg": "",
         f"{swallow_assets2}/20250614_114954.jpg": "",

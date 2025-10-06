@@ -2,7 +2,7 @@ from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.swallow.consts import (
     swallow_assets2,
-    swallow_electrical_design,
+    swallow_electrical_designs,
 )
 from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.parts import dict_of_parts
@@ -53,7 +53,7 @@ items = (
             "path": "../docs/swallow/digital/design/steering-over-current-detection.md",
             "items": ImageItems(
                 {
-                    f"{swallow_electrical_design}/steering-over-current.png": f"{swallow_electrical_design}/steering-over-current.svg",
+                    f"{swallow_electrical_designs}/steering-over-current.png": f"{swallow_electrical_designs}/steering-over-current.svg",
                 }
             ),
         },
