@@ -2,7 +2,7 @@ title:::
 
 - [aliases](./aliases)
 - [arzhang](./arzhang)
-- [rangin](./rangin.md)
+- [rangin](./rangin)
 - [swallow](./swallow)
 - [parts](./parts)
 - [UGVs](./UGVs)
