@@ -8,7 +8,7 @@ docs = [
         "path": "../docs/rangin",
     },
     {
-        "path": "../docs/arzhang/design/parts.md",
+        "path": "../docs/rangin/parts.md",
         "items": db_of_parts.as_images(
             dict_of_parts,
             reference="../../parts",
