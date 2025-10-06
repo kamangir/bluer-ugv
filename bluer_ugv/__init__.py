@@ -1,16 +1,16 @@
-from bluer_objects.README.consts import assets2
-
 NAME = "bluer_ugv"
 
 ICON = "🐬"
 
 DESCRIPTION = f"{ICON} AI x UGV."
 
-VERSION = "6.1151.1"
+VERSION = "6.1152.1"
 
 REPO_NAME = "bluer-ugv"
 
-MARQUEE = f"{assets2}/arzhang/VID-20250905-WA0014_1.gif"
+MARQUEE = (
+    "https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250905-WA0014_1.gif"
+)
 
 
 ALIAS = "@ugv"
