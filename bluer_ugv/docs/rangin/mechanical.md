@@ -6,4 +6,4 @@
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/designs//blob/main/rangin/robot.png?raw=true)](https://github.com/kamangir/designs//blob/main/rangin/robot.stl) |
+| [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl) |
