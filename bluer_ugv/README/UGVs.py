@@ -31,7 +31,7 @@ docs = [
         "path": "../docs/UGVs/arzhang2.md",
         "items": ImageItems(
             {
-                f"{arzhang_assets2}/VID-20250905-WA0014_1.gif": "",
+                f"{arzhang_assets2}/20251005_112530.jpg": "",
             }
         ),
     },

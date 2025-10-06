@@ -6,6 +6,6 @@ updated body design.
     - `sparrow2`
         - camera is validated. ✅
         - ultrasonic is validated. ✅
-- cover is in progress. 🔥
+- cover is complete. ✅
 
 items:::
