@@ -1,4 +1,4 @@
-from bluer_ugv.rangin.README import items
+from bluer_ugv.README.rangin.items import items
 
 docs = [
     {

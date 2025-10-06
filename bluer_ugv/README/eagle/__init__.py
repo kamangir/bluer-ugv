@@ -1,5 +1,5 @@
 from bluer_ugv.parts.db import db_of_parts
-from bluer_ugv.eagle.README import items
+from bluer_ugv.README.items import items
 from bluer_ugv.eagle.parts import dict_of_parts
 
 docs = [

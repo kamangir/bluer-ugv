@@ -4,8 +4,8 @@ UGV: [`arzhang`](../../UGVs/arzhang.md)
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_133136.jpg?raw=true)](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_133136.jpg?raw=true) | [![image](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_133628.jpg?raw=true)](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_133628.jpg?raw=true) |
-| [![image](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_133637.jpg?raw=true)](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_133637.jpg?raw=true) | [![image](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_132521~2_1.gif?raw=true)](https://github.com/kamangir/assets/raw/main2/arzhang/20250925_132521~2_1.gif?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133136.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133136.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133628.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133628.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133637.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133637.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_132521~2_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_132521~2_1.gif?raw=true) |
 
 ## debug object
 

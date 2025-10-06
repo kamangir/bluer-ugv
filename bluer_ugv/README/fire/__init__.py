@@ -1,9 +1,12 @@
 from bluer_ugv.parts.db import db_of_parts
-from bluer_ugv.fire.README import items
+from bluer_ugv.README.fire.items import items
 from bluer_ugv.fire.parts import dict_of_parts
 
 docs = [
-    {"path": "../docs/fire"},
+    {
+        "path": "../docs/fire",
+        "items": items,
+    },
     {
         "path": "../docs/fire/parts.md",
         "items": db_of_parts.as_images(

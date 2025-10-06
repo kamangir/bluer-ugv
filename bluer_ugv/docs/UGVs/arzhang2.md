@@ -10,4 +10,4 @@ updated body design.
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets/raw/main2/arzhang/VID-20250905-WA0014_1.gif?raw=true)](https://github.com/kamangir/assets/raw/main2/arzhang/VID-20250905-WA0014_1.gif?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250905-WA0014_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/VID-20250905-WA0014_1.gif?raw=true) |
