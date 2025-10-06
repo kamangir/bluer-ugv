@@ -1,5 +1,8 @@
 from bluer_objects.README.items import ImageItems
-from bluer_ugv.README.consts import algo_docs, assets, assets2_swallow
+from bluer_objects.README.consts import assets
+
+from bluer_ugv.README.consts import algo_docs
+from bluer_ugv.README.swallow.consts import swallow_assets2
 
 items = [
     {
@@ -17,9 +20,9 @@ items = [
         "path": "../docs/swallow/digital/algo/navigation/dataset/collection",
         "items": ImageItems(
             {
-                f"{assets2_swallow}/2025-07-08-13-09-38-so54ao.png": "",
-                f"{assets2_swallow}/2025-07-09-11-20-27-4qf255-000-2.png": "",
-                f"{assets2_swallow}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
+                f"{swallow_assets2}/2025-07-08-13-09-38-so54ao.png": "",
+                f"{swallow_assets2}/2025-07-09-11-20-27-4qf255-000-2.png": "",
+                f"{swallow_assets2}/2025-07-09-11-18-07-azy27w.png": f"{algo_docs}/image_classifier/dataset/sequence.md",
             }
         ),
     },

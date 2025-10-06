@@ -1,12 +1,10 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.consts import (
-    assets2_arzhang,
-    assets2_swallow,
-    assets_bluer_ugv,
-    assets2_bluer_ugv,
-    assets2_rangin,
-)
+from bluer_ugv.README.consts import bluer_ugv_assets
+from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.rangin.consts import rangin_assets2
+from bluer_ugv.README.swallow.consts import swallow_assets2
+
 
 docs = [
     {
@@ -16,8 +14,8 @@ docs = [
         "path": "../docs/UGVs/swallow.md",
         "items": ImageItems(
             {
-                f"{assets2_swallow}/20250701_2206342_1.gif": "",
-                f"{assets2_swallow}/20250913_203635~2_1.gif": "",
+                f"{swallow_assets2}/20250701_2206342_1.gif": "",
+                f"{swallow_assets2}/20250913_203635~2_1.gif": "",
             }
         ),
     },
@@ -25,7 +23,7 @@ docs = [
         "path": "../docs/UGVs/arzhang.md",
         "items": ImageItems(
             {
-                f"{assets2_arzhang}/20251005_112530.jpg": "",
+                f"{arzhang_assets2}/20251005_112530.jpg": "",
             }
         ),
     },
@@ -33,16 +31,16 @@ docs = [
         "path": "../docs/UGVs/arzhang2.md",
         "items": ImageItems(
             {
-                f"{assets2_arzhang}/VID-20250905-WA0014_1.gif": "",
+                f"{arzhang_assets2}/VID-20250905-WA0014_1.gif": "",
             }
         ),
     },
     {
         "path": "../docs/UGVs/arzhang3.md",
-        "items": ImageItems({f"{assets_bluer_ugv}/bluer-light.png": ""}),
+        "items": ImageItems({f"{bluer_ugv_assets}/bluer-light.png": ""}),
     },
     {
         "path": "../docs/UGVs/rangin.md",
-        "items": ImageItems({f"{assets2_rangin}/rangin.png": ""}),
+        "items": ImageItems({f"{rangin_assets2}/rangin.png": ""}),
     },
 ]

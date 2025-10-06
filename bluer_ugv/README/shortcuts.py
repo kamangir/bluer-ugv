@@ -1,9 +1,9 @@
 from bluer_objects.README.items import ImageItems, Items
 from bluer_objects import markdown
 
-from bluer_ugv.README.consts import (
-    assets2_swallow,
-    assets2_bluer_ugv,
+from bluer_ugv.README.consts import bluer_ugv_assets2
+from bluer_ugv.README.swallow.consts import (
+    swallow_assets2,
     swallow_electrical_design,
 )
 
@@ -13,7 +13,7 @@ items = markdown.generate_table(
             {
                 "name": "parts",
                 "url": "./bluer_ugv/docs/swallow/digital/design/parts.md",
-                "marquee": f"{assets2_bluer_ugv}/XL4015.png",
+                "marquee": f"{bluer_ugv_assets2}/XL4015.png",
             },
             {
                 "name": "shield",
@@ -23,12 +23,12 @@ items = markdown.generate_table(
             {
                 "name": "terraform",
                 "url": "./bluer_ugv/docs/swallow/digital/design/terraform.md",
-                "marquee": f"{assets2_swallow}/20250611_100917.jpg?raw=true",
+                "marquee": f"{swallow_assets2}/20250611_100917.jpg?raw=true",
             },
             {
                 "name": "UGVs",
                 "url": "./bluer_ugv/docs/UGVs",
-                "marquee": f"{assets2_swallow}/20250912_211652.jpg?raw=true",
+                "marquee": f"{swallow_assets2}/20250912_211652.jpg?raw=true",
             },
         ]
     ),

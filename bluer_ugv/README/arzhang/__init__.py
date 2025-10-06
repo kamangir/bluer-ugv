@@ -1,4 +1,4 @@
-from bluer_ugv.arzhang.README import items
+from bluer_ugv.README.arzhang.items import items
 from bluer_ugv.README.arzhang.algo import items as algo_items
 from bluer_ugv.README.arzhang.design import items as design_items
 from bluer_ugv.README.arzhang.validation import items as validation_items

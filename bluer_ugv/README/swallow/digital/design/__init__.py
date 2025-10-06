@@ -1,6 +1,7 @@
 from bluer_objects.README.items import ImageItems
-from bluer_ugv.README.consts import (
-    assets2_swallow,
+
+from bluer_ugv.README.swallow.consts import (
+    swallow_assets2,
     swallow_electrical_design,
 )
 from bluer_ugv.parts.db import db_of_parts
@@ -20,7 +21,7 @@ items = (
             "path": "../docs/swallow/digital/design/operation.md",
             "items": ImageItems(
                 {
-                    f"{assets2_swallow}/20251005_113232.jpg": "",
+                    f"{swallow_assets2}/20251005_113232.jpg": "",
                 }
             ),
         },
@@ -42,9 +43,9 @@ items = (
             "path": "../docs/swallow/digital/design/terraform.md",
             "items": ImageItems(
                 {
-                    f"{assets2_swallow}/20250611_100917.jpg": "",
-                    f"{assets2_swallow}/lab.png": "",
-                    f"{assets2_swallow}/lab2.png": "",
+                    f"{swallow_assets2}/20250611_100917.jpg": "",
+                    f"{swallow_assets2}/lab.png": "",
+                    f"{swallow_assets2}/lab2.png": "",
                 }
             ),
         },
