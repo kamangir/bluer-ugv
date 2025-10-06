@@ -2,7 +2,7 @@
 
 same as [swallow parts](../../swallow/digital/design/parts.md) + ⬇️. 
 
-1. [40 inch TV: 2 x](../../parts/40-inch-TV.md).
+1. [40 inch TV: 2 x](../parts/40-inch-TV.md).
 
 |   |
 | --- |
