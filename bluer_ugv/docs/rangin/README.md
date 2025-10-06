@@ -1,5 +1,6 @@
 # rangin
 
+- [mechanical](./mechanical.md)
 - [parts](./parts.md)
 
 |   |

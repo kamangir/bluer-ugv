@@ -2,9 +2,9 @@
 
 same as [swallow parts](../../swallow/digital/design/parts.md) + ⬇️. 
 
-1. [40 inch TV: 2 x](./parts/40-inch-TV.md).
-1. [TV bracket](./parts/TV-bracket.md).
-1. [power station.](./parts/power-station.md).
+1. [40 inch TV: 2 x](../parts/40-inch-TV.md).
+1. [TV bracket](../parts/TV-bracket.md).
+1. [power station.](../parts/power-station.md).
 
 |   |   |   |
 | --- | --- | --- |
