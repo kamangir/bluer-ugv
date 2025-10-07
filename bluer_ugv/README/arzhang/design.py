@@ -1,5 +1,6 @@
 from bluer_objects.README.items import ImageItems
 from bluer_sbc.parts.db import db_of_parts
+from bluer_sbc.parts.consts import parts_url_prefix
 
 from bluer_ugv.README.arzhang.consts import arzhang_mechanical_design
 from bluer_ugv.arzhang.parts import dict_of_parts
@@ -15,12 +16,12 @@ items = [
         "path": "../docs/arzhang/design/parts.md",
         "items": db_of_parts.as_images(
             dict_of_parts,
-            reference="../../parts",
+            reference=parts_url_prefix,
         ),
         "macros": {
             "parts:::": db_of_parts.as_list(
                 dict_of_parts,
-                reference="../../parts",
+                reference=parts_url_prefix,
                 log=False,
             ),
         },
