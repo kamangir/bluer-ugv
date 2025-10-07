@@ -1,6 +1,6 @@
 # swallow: digital: design: mechanical
 
-- [Blender files](https://github.com/kamangir/designs)
+- [Blender files](https://github.com/kamangir/bluer-designs)
 - material: 20 mm x 20 mm x 1.5 mm x 6000 mm x 2
 - parts:
     - 4 x 1000 mm
