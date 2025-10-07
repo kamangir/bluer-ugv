@@ -1,10 +1,10 @@
 from bluer_objects.README.items import ImageItems
+from bluer_sbc.parts.db import db_of_parts
 
 from bluer_ugv.README.swallow.consts import (
     swallow_assets2,
     swallow_electrical_designs,
 )
-from bluer_ugv.parts.db import db_of_parts
 from bluer_ugv.swallow.parts import dict_of_parts
 from bluer_ugv.README.swallow.digital.design.mechanical import items as mechanical_items
 from bluer_ugv.README.swallow.digital.design.ultrasonic_sensor import (

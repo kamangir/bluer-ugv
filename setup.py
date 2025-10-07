@@ -12,7 +12,6 @@ setup(
         NAME,
         f"{NAME}.help",
         f"{NAME}.help.swallow",
-        f"{NAME}.parts",
         f"{NAME}.README",
         f"{NAME}.README.arzhang",
         f"{NAME}.README.eagle",
