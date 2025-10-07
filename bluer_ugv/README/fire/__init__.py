@@ -1,4 +1,5 @@
-from bluer_ugv.parts.db import db_of_parts
+from bluer_sbc.parts.db import db_of_parts
+
 from bluer_ugv.README.fire.items import items
 from bluer_ugv.fire.parts import dict_of_parts
 

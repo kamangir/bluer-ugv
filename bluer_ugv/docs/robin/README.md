@@ -11,4 +11,4 @@ remote control car kit for teenagers.
 | [![image](https://github.com/kamangir/assets2/raw/main/robin/20250827_170346.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/robin/20250827_170346.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/robin/20250827_170319~3_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/robin/20250827_170319~3_1.gif?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/robin/20250914_175506-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/robin/20250914_175506-2.jpg?raw=true) |
 
 - [parts](./parts.md)
-- [wiring](https://github.com/kamangir/designs/blob/main/robin/wiring.svg) ([png](https://github.com/kamangir/designs/blob/main/robin/wiring.png))
+- [wiring](https://github.com/kamangir/bluer-designs/blob/main/robin/wiring.svg) ([png](https://github.com/kamangir/bluer-designs/blob/main/robin/wiring.png))

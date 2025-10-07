@@ -1,5 +1,3 @@
 title:::
 
-## parts
-
-help::: bluer_ugv parts
+help::: bluer_ugv

@@ -1,7 +1,7 @@
-from bluer_objects.README.consts import assets_path, designs_url
+from bluer_objects.README.consts import assets_url, designs_url
 
 
-arzhang_assets2 = assets_path(
+arzhang_assets2 = assets_url(
     suffix="arzhang",
     volume=2,
 )

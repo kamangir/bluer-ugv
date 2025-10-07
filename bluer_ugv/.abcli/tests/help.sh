@@ -29,9 +29,6 @@ function test_bluer_ugv_help() {
         \
         "@ugv git" \
         \
-        "@ugv parts" \
-        "@ugv parts adjust" \
-        \
         "@ugv pypi" \
         "@ugv pypi browse" \
         "@ugv pypi build" \

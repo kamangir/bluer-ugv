@@ -1,7 +1,7 @@
-from bluer_objects.README.consts import assets_path, designs_url
+from bluer_objects.README.consts import assets_url, designs_url
 
 
-swallow_assets2 = assets_path(
+swallow_assets2 = assets_url(
     "swallow",
     volume=2,
 )

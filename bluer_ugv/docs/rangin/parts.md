@@ -8,4 +8,4 @@ same as [swallow parts](../../swallow/digital/design/parts.md) + ⬇️.
 
 |   |   |   |
 | --- | --- | --- |
-| [`40 inch TV`](../parts/40-inch-TV.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/40-inch-TV.jpg?raw=true)](../parts/40-inch-TV.md) 2 x | [`TV bracket`](../parts/TV-bracket.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/tv-bracket.jpeg?raw=true)](../parts/TV-bracket.md)  | [`power station.`](../parts/power-station.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-ugv/power-station.jpeg?raw=true)](../parts/power-station.md)  |
+| [`40 inch TV`](../parts/40-inch-TV.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/40-inch-TV.jpg?raw=true)](../parts/40-inch-TV.md) 2 x | [`TV bracket`](../parts/TV-bracket.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/tv-bracket.jpeg?raw=true)](../parts/TV-bracket.md)  | [`power station.`](../parts/power-station.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/power-station.jpeg?raw=true)](../parts/power-station.md)  |
