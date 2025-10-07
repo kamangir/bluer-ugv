@@ -1,4 +1,4 @@
-items = [
+docs = [
     {
         "path": "../docs/arzhang/algo",
     },

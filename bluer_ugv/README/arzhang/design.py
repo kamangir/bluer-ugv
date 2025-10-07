@@ -5,7 +5,7 @@ from bluer_sbc.parts.consts import parts_url_prefix
 from bluer_ugv.README.arzhang.consts import arzhang_mechanical_design
 from bluer_ugv.arzhang.parts import dict_of_parts
 
-items = [
+docs = [
     {
         "path": "../docs/arzhang/design",
     },
