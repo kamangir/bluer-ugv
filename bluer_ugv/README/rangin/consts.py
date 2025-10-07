@@ -1,7 +1,7 @@
-from bluer_objects.README.consts import assets_path, designs_repo
+from bluer_objects.README.consts import assets_url, designs_repo
 
 
-rangin_assets2 = assets_path(
+rangin_assets2 = assets_url(
     suffix="rangin",
     volume=2,
 )
