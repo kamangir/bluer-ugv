@@ -16,14 +16,14 @@ items = markdown.generate_table(
                 "marquee": f"{swallow_electrical_designs}/digital.png?raw=true",
             },
             {
-                "name": "terraform",
-                "url": "./bluer_ugv/docs/swallow/digital/design/terraform.md",
-                "marquee": f"{swallow_assets2}/20250611_100917.jpg?raw=true",
-            },
-            {
                 "name": "UGVs",
                 "url": "./bluer_ugv/docs/UGVs",
                 "marquee": f"{swallow_assets2}/20250912_211652.jpg?raw=true",
+            },
+            {
+                "name": "terraform",
+                "url": "./bluer_ugv/docs/swallow/digital/design/terraform.md",
+                "marquee": f"{swallow_assets2}/20250611_100917.jpg?raw=true",
             },
             {
                 "name": "arzhang validations",
