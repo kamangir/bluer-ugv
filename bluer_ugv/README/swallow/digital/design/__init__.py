@@ -19,6 +19,9 @@ items = (
             "path": "../docs/swallow/digital/design",
         },
         {
+            "path": "../docs/swallow/digital/design/computers.md",
+        },
+        {
             "path": "../docs/swallow/digital/design/operation.md",
             "items": ImageItems(
                 {
