@@ -9,7 +9,7 @@ docs = [
             [
                 {
                     "name": validation_name,
-                    "image": info["marquee"],
+                    "marquee": info["marquee"],
                     "url": f"./{validation_name}.md",
                 }
                 for validation_name, info in validations.items()
