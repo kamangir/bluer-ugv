@@ -2,7 +2,7 @@
 
 [swallow design](../swallow/digital/design/parts.md) parts + ⬇️. 
 
-1. [40 inch TV: 2 x](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/40-inch-TV.md).
+1. [40 inch TV](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/40-inch-TV.md): 2 x.
 1. [TV bracket](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/TV-bracket.md).
 1. [power station.](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/power-station.md).
 
