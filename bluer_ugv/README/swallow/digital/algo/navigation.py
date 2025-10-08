@@ -4,7 +4,7 @@ from bluer_objects.README.consts import assets
 from bluer_ugv.README.consts import algo_docs
 from bluer_ugv.README.swallow.consts import swallow_assets2
 
-items = [
+docs = [
     {
         "path": "../docs/swallow/digital/algo/navigation",
     },

@@ -3,7 +3,7 @@ from bluer_objects.README.consts import assets
 
 from bluer_ugv.README.swallow.consts import swallow_assets2
 
-items = [
+docs = [
     {
         "path": "../docs/swallow/digital/algo/yolo",
         "items": ImageItems(

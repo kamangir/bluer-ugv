@@ -7,13 +7,10 @@ from bluer_ugv.README.swallow.consts import (
     swallow_electrical_designs,
 )
 from bluer_ugv.swallow.parts import dict_of_parts
-from bluer_ugv.README.swallow.digital.design.mechanical import items as mechanical_items
-from bluer_ugv.README.swallow.digital.design.ultrasonic_sensor import (
-    items as ultrasonic_sensor_items,
-)
+from bluer_ugv.README.swallow.digital.design import mechanical, ultrasonic_sensor
 
 
-items = (
+docs = (
     [
         {
             "path": "../docs/swallow/digital/design",
@@ -65,6 +62,6 @@ items = (
             "path": "../docs/swallow/digital/design/rpi-pinout.md",
         },
     ]
-    + mechanical_items
-    + ultrasonic_sensor_items
+    + mechanical.docs
+    + ultrasonic_sensor.docs
 )
