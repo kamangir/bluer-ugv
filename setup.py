@@ -22,9 +22,12 @@ setup(
         f"{NAME}.README.swallow.digital",
         f"{NAME}.README.swallow.digital.algo",
         f"{NAME}.README.swallow.digital.design",
-        # kinds
+        # designs
+        f"{NAME}.arzhang",
+        f"{NAME}.arzhang.validations",
         f"{NAME}.eagle",
         f"{NAME}.fire",
+        f"{NAME}.rangin",
         f"{NAME}.robin",
         f"{NAME}.swallow",
         f"{NAME}.swallow.dataset",
@@ -34,8 +37,6 @@ setup(
         f"{NAME}.swallow.session.classical.motor",
         f"{NAME}.swallow.session.classical.setpoint",
         f"{NAME}.swallow.session.classical.ultrasonic_sensor",
-        f"{NAME}.arzhang",
-        f"{NAME}.rangin",
     ],
     include_package_data=True,
     package_data={

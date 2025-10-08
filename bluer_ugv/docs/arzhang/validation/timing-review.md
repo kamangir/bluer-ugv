@@ -1,6 +1,6 @@
 # arzhang: validation: timing-review
 
-UGV: [`sparrow2`](../../UGVs/sparrow2.md)
+UGV: [`arzhang2`](../../UGVs/arzhang2.md)
 
 ## all in the loop
 

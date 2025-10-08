@@ -1,6 +1,6 @@
 title:::
 
-UGV: [`arzhang`](../../UGVs/arzhang.md)
+UGV: ugv_name:::
 
 items:::
 

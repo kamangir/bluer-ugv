@@ -1,6 +1,6 @@
 title:::
 
-UGV: [`arzhang2`](../../UGVs/arzhang2.md)
+UGV: ugv_name:::
 
 ## debug object
 
