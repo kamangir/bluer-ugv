@@ -1,6 +1,6 @@
 title:::
 
-a [swallow](../swallow/) robot, `rangin` is an ad robot.
+a member of the [swallow](../swallow/) family, `rangin` is an ad UGV.
 
 - [mechanical](./mechanical.md)
 - [parts](./parts.md)
