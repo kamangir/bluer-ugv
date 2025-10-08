@@ -5,7 +5,7 @@ from bluer_objects.README.consts import assets
 
 from bluer_ugv.README.arzhang.consts import arzhang_assets2
 
-items = [
+docs = [
     {
         "path": "../docs/arzhang/validation",
     },
