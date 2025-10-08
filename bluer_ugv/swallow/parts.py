@@ -5,4 +5,5 @@ dict_of_parts = {
     "on-off-switch": "",
     "charging-port": "",
     "connector": "4 pairs",
+    "nuts-bolts-spacers": "TBA",
 }
