@@ -24,7 +24,6 @@ setup(
         f"{NAME}.README.swallow.digital.design",
         # designs
         f"{NAME}.arzhang",
-        f"{NAME}.arzhang.validations",
         f"{NAME}.eagle",
         f"{NAME}.fire",
         f"{NAME}.rangin",
