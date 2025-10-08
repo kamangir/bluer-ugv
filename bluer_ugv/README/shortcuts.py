@@ -1,7 +1,7 @@
-from bluer_objects.README.items import ImageItems, Items
+from bluer_objects.README.items import Items
 from bluer_objects import markdown
+from bluer_objects.README.consts import assets_url
 
-from bluer_ugv.README.consts import bluer_ugv_assets2
 from bluer_ugv.README.swallow.consts import (
     swallow_assets2,
     swallow_electrical_designs,
@@ -24,6 +24,15 @@ items = markdown.generate_table(
                 "name": "UGVs",
                 "url": "./bluer_ugv/docs/UGVs",
                 "marquee": f"{swallow_assets2}/20250912_211652.jpg?raw=true",
+            },
+            {
+                "name": "arzhang validations",
+                "url": "./bluer_ugv/docs/arzhang/validation",
+                "marquee": assets_url(
+                    suffix="{object_name}/{object_name}.gif".format(
+                        object_name="swallow-debug-2025-09-25-13-16-59-rnm7jd"
+                    )
+                ),
             },
         ]
     ),
