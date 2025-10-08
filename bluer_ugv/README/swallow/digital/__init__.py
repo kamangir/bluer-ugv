@@ -1,12 +1,11 @@
-from bluer_ugv.README.swallow.digital.algo import items as algo_items
-from bluer_ugv.README.swallow.digital.design import items as design_items
+from bluer_ugv.README.swallow.digital import algo, design
 
-items = (
+docs = (
     [
         {
             "path": "../docs/swallow/digital",
         }
     ]
-    + design_items
-    + algo_items
+    + design.docs
+    + algo.docs
 )

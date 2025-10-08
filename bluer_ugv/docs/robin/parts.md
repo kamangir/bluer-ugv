@@ -5,13 +5,13 @@
 1. [2 x AA battery holder](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/2xAA-battery-holder.md).
 1. [4 x AA battery holder](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4xAA-battery-holder.md).
 1. [4-channel transmitter and receiver](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4-ch-transceiver.md).
-1. [L 1x2: x 4](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/L-1x2.md).
+1. [L 1x2](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/L-1x2.md): x 4.
 1. [M3 nuts and bolts](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/M3.md).
 1. [front connector](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/front-connector.md).
-1. [front wheels: x 2](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/front-wheels.md).
-1. [gearboxed DC motor, 6V DC: 2 x 270 RPM + 1 x 80 RPM](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-gearbox-dc-motor.md).
+1. [front wheels](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/front-wheels.md): x 2.
+1. [gearboxed DC motor, 6V DC](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-gearbox-dc-motor.md): 2 x 270 RPM + 1 x 80 RPM.
 1. [shaft, 10 cm](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/shaft-10cm.md).
-1. [wheels for gearboxed DC motor: x 2](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-wheels.md).
+1. [wheels for gearboxed DC motor](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-wheels.md): x 2.
 
 |   |   |   |
 | --- | --- | --- |

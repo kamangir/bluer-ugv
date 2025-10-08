@@ -6,7 +6,7 @@ from bluer_ugv.README.swallow.consts import (
     swallow_ultrasonic_sensor_designs,
 )
 
-items = [
+docs = [
     {
         "path": "../docs/swallow/digital/design/ultrasonic-sensor",
         "items": ImageItems(

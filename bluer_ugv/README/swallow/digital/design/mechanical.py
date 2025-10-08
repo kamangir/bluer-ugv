@@ -2,7 +2,7 @@ from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.swallow.consts import swallow_mechanical_designs
 
-items = [
+docs = [
     {
         "path": "../docs/swallow/digital/design/mechanical",
         "items": ImageItems(

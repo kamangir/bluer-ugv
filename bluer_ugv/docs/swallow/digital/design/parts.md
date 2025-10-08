@@ -2,12 +2,12 @@
 
 a [swallow computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow.md) + an optional [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head.md) + ⬇️
 
-1. [12 VDC motor, 20-45 W: type 2, 2 x right + 2 x left](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/dc-motor-12-VDC-45W.md).
+1. [12 VDC motor, 20-45 W](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/dc-motor-12-VDC-45W.md): type 2, 2 x right + 2 x left.
 1. [Rechargeable sealed lead acid battery, 12 V, 7 Ah](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/SLA-Battery.md).
-1. [auto power connectors: 4 pairs](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/connector.md).
+1. [auto power connectors](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/connector.md): 4 pairs.
 1. [charging port](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/charging-port.md).
 1. [on/off switch, 12V DC 10 A, with indicator led](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/on-off-switch.md).
-1. [power wheel wheels: 4 x ](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/wheel.md).
+1. [power wheel wheels](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/wheel.md): 4 x .
 
 |   |   |   |
 | --- | --- | --- |
