@@ -1,6 +1,6 @@
 # arzhang: design: parts
 
-same as [swallow parts](../../swallow/digital/design/parts.md) + ⬇️. 
+[swallow design](../../swallow/digital/design/parts.md) parts + ⬇️. 
 
 1. [Gearboxed DC Motor, 12 V (3-24 V), 3A, 120 RPM, 1:91, 15 Kg cm: proposed, not used.](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/DC-gearboxed-motor-12V-120RPM.md).
 

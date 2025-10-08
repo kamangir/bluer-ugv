@@ -1,6 +1,6 @@
 # rangin: parts
 
-same as [swallow parts](../swallow/digital/design/parts.md) + ⬇️. 
+[swallow design](../swallow/digital/design/parts.md) parts + ⬇️. 
 
 1. [40 inch TV: 2 x](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/40-inch-TV.md).
 1. [TV bracket](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/TV-bracket.md).
