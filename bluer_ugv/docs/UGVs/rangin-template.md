@@ -3,7 +3,7 @@ title:::
 an ad robot.
 
 - computer(s):
-    - `rangin`
+    - `rangin-front`
         - build is pending. 🚧
     - `rangin-top`.
         - build is pending. 🚧
