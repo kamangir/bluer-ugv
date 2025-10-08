@@ -36,5 +36,5 @@ items = markdown.generate_table(
             },
         ]
     ),
-    cols=4,
+    cols=2,
 )
