@@ -9,6 +9,6 @@
         - TBA
         - height: 25 cm wheels + 45 cm + 50 cm TVs = 120 cm
 
-|   |
-| --- |
-| [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl) |
+|   |   |
+| --- | --- |
+| [`arzhang`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl)  | [`90`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.png)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl)  |
