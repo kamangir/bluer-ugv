@@ -8,4 +8,4 @@ a member of the [swallow](../swallow/) family, `rangin` is an ad UGV.
 
 |   |   |
 | --- | --- |
-|  |  |
+| [`arzhang`](#) [![image](https://github.com/kamangir/assets2/raw/main/rangin/rangin.png)](#)  | [`90`](#) [![image](https://github.com/kamangir/assets2/raw/main/rangin/rangin-90.png)](#)  |

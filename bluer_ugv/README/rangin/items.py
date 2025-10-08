@@ -6,11 +6,11 @@ from bluer_ugv.README.rangin.consts import rangin_assets2
 items = Items(
     [
         {
-            "title": "arzhang",
+            "name": "arzhang",
             "marquee": f"{rangin_assets2}/rangin.png",
         },
         {
-            "title": "90",
+            "name": "90",
             "marquee": f"{rangin_assets2}/rangin-90.png",
         },
     ]
