@@ -1,16 +1,20 @@
-from bluer_objects.README.items import ImageItems
+from bluer_objects.README import Items
 
 from bluer_ugv.README.arzhang.validations.db import validations
 
 docs = [
     {
         "path": "../docs/arzhang/validation",
-        "items": ImageItems(
-            {
-                info["marquee"]: f"./{validation_name}.md"
+        "items": Items(
+            [
+                {
+                    "name": validation_name,
+                    "image": info["marquee"],
+                    "url": f"./{validation_name}.md",
+                }
                 for validation_name, info in validations.items()
                 if validation_name != "template" and "marquee" in info
-            }
+            ]
         ),
         "macros": {
             "list:::": [
@@ -19,7 +23,7 @@ docs = [
                 if validation_name != "template"
             ]
         },
-        "cols"
+        "cols": 2,
     }
 ] + [
     {
