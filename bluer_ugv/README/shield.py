@@ -24,7 +24,6 @@ items = ImageItems(
         f"{swallow_assets2}/20251002_103712.jpg": "",
         f"{swallow_assets2}/20251002_103720.jpg": "",
         f"{swallow_assets2}/design/v5/01.jpg": "",
-        f"{swallow_assets2}/20251008_105016.jpg": "",
         f"{swallow_electrical_designs}/nuts-bolts-spacers.png": f"{swallow_electrical_designs}/nuts-bolts-spacers.svg",
     }
 )
