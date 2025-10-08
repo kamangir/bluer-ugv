@@ -1,16 +1,13 @@
 from bluer_objects.README.items import ImageItems, Items
+from bluer_objects.README.consts import assets, assets_url
 from bluer_objects import markdown
 from bluer_objects import env
-from bluer_objects.README.consts import assets
 
 from bluer_ugv.README.arzhang.consts import arzhang_assets2
 
-docs = [
-    {
-        "path": "../docs/arzhang/validation",
-    },
-    {
-        "path": "../docs/arzhang/validation/village-1.md",
+validations = {
+    "village-1": {
+        "ugv_name": "arzhang",
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250905_120526.jpg": "",
@@ -21,9 +18,10 @@ docs = [
                 f"{arzhang_assets2}/20250905_121711.jpg": "",
             }
         ),
+        "marquee": f"{assets}/2025-09-05-11-48-27-d56azo/VID-20250905-WA0014_1.gif",
     },
-    {
-        "path": "../docs/arzhang/validation/village-2.md",
+    "village-2": {
+        "ugv_name": "arzhang",
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250922_094548.jpg": "",
@@ -58,11 +56,13 @@ docs = [
                     ]
                 ),
                 cols=3,
+                log=False,
             ),
         },
+        "marquee": f"{assets}/arzhang/20250922_101202_1.gif",
     },
-    {
-        "path": "../docs/arzhang/validation/village-3.md",
+    "village-3": {
+        "ugv_name": "arzhang",
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250925_133136.jpg": "",
@@ -72,16 +72,30 @@ docs = [
             },
         ),
         "cols": 2,
+        "marquee": assets_url(
+            suffix="{object_name}/{object_name}.gif".format(
+                object_name="swallow-debug-2025-09-25-13-16-59-rnm7jd"
+            )
+        ),
     },
-    {
-        "path": "../docs/arzhang/validation/village-4.md",
+    "village-4": {
+        "ugv_name": "arzhang2",
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250927_192024.jpg": "",
             },
         ),
+        "marquee": assets_url(
+            suffix="{object_name}/{object_name}.gif".format(
+                object_name="swallow-debug-2025-09-27-19-15-31-6iq5vz"
+            )
+        ),
     },
-    {
-        "path": "../docs/arzhang/validation/timing-review.md",
+    "timing-review": {
+        "ugv_name": "arzhang2",
     },
-]
+    "template": {
+        "ugv_name": "template",
+        "marquee": "template.jpg",
+    },
+}

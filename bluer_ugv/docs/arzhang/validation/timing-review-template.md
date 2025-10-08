@@ -1,6 +1,6 @@
 title:::
 
-UGV: [`sparrow2`](../../UGVs/sparrow2.md)
+UGV: ugv_name:::
 
 ## all in the loop
 

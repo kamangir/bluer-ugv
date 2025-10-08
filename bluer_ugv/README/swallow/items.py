@@ -3,6 +3,7 @@ from bluer_objects.README.consts import assets
 
 from bluer_ugv.README.swallow.consts import (
     swallow_assets2,
+    swallow_designs,
     swallow_mechanical_designs,
 )
 
@@ -28,5 +29,6 @@ items = ImageItems(
         f"{swallow_assets2}/20250913_111410.jpg": "",
         f"{swallow_assets2}/20250913_200401.jpg": "",
         f"{swallow_assets2}/20250913_203635~2_1.gif": "",
+        f"{swallow_designs}/terminology.png": f"{swallow_designs}/terminology.svg",
     }
 )

@@ -1,4 +1,4 @@
-from bluer_objects.README.items import ImageItems
+from bluer_objects.README.items import ImageItems, Items
 from bluer_sbc.parts.db import db_of_parts
 from bluer_sbc.parts.consts import parts_url_prefix
 
@@ -28,10 +28,19 @@ docs = [
     {
         "path": "../docs/rangin/mechanical.md",
         "cols": 2,
-        "items": ImageItems(
-            {
-                f"{rangin_mechanical_design}/robot.png": f"{rangin_mechanical_design}/robot.stl",
-            }
+        "items": Items(
+            [
+                {
+                    "name": "arzhang",
+                    "marquee": f"{rangin_mechanical_design}/robot.png?raw=true",
+                    "url": f"{rangin_mechanical_design}/robot.stl",
+                },
+                {
+                    "name": "90",
+                    "marquee": f"{rangin_mechanical_design}/robot-90.png?raw=true",
+                    "url": f"{rangin_mechanical_design}/robot-90.stl",
+                },
+            ]
         ),
     },
     {

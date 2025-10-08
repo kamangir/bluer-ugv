@@ -1,11 +1,11 @@
 # 
 
-- [aliases](./aliases)
-- [arzhang](./arzhang)
-- [rangin](./rangin)
-- [swallow](./swallow)
-- [parts](./parts)
+- designs
+    - [swallow](./swallow)
+    - [arzhang](./arzhang)
+    - [rangin](./rangin)
+    - [robin](./robin)
+    - [fire](./fire)
+    - [beast](./beast)
 - [UGVs](./UGVs)
-- [robin](./robin)
-- [fire](./fire)
-- [beast](./beast)
+- [aliases](./aliases)

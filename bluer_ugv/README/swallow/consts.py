@@ -6,6 +6,8 @@ swallow_assets2 = assets_url(
     volume=2,
 )
 
+swallow_designs = designs_url("swallow")
+
 swallow_electrical_designs = designs_url("swallow/electrical")
 
 swallow_mechanical_designs = designs_url("swallow/mechanical")

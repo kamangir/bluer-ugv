@@ -1,5 +1,6 @@
 from bluer_ugv.README.arzhang.items import items
-from bluer_ugv.README.arzhang import design, algo, flag, validation
+from bluer_ugv.README.arzhang import design, algo, flag
+from bluer_ugv.README.arzhang.validations import docs as validations
 
 docs = (
     [
@@ -11,5 +12,5 @@ docs = (
     + algo.docs
     + design.docs
     + flag.docs
-    + validation.docs
+    + validations.docs
 )
