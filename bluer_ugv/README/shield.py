@@ -26,6 +26,7 @@ items = ImageItems(
         f"{swallow_assets2}/design/v5/01.jpg": "",
         f"{swallow_electrical_designs}/nuts-bolts-spacers.png": f"{swallow_electrical_designs}/nuts-bolts-spacers.svg",
         f"{swallow_assets2}/20251008_114557.jpg": "",
+        f"{swallow_assets2}/20251008_133418.jpg": "",
         f"{swallow_assets2}/20251008_124129.jpg": "",
         f"{swallow_assets2}/20251008_124932.jpg": "",
     }
