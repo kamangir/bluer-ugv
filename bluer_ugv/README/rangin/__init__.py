@@ -32,12 +32,12 @@ docs = [
             [
                 {
                     "name": "arzhang",
-                    "marquee": f"{rangin_mechanical_design}/robot.png",
+                    "marquee": f"{rangin_mechanical_design}/robot.png?raw=true",
                     "url": f"{rangin_mechanical_design}/robot.stl",
                 },
                 {
                     "name": "90",
-                    "marquee": f"{rangin_mechanical_design}/robot-90.png",
+                    "marquee": f"{rangin_mechanical_design}/robot-90.png?raw=true",
                     "url": f"{rangin_mechanical_design}/robot-90.stl",
                 },
             ]
