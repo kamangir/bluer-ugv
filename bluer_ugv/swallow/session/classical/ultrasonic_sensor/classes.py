@@ -61,7 +61,6 @@ class ClassicalUltrasonicSensor:
             self.log = UltrasonicSensorDetectionLog()
 
         self.running = True
-
         self.thread = threading.Thread(target=self.loop, daemon=True)
         self.thread.start()
 
