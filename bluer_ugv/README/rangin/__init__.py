@@ -40,6 +40,11 @@ docs = [
                     "marquee": f"{rangin_mechanical_design}/robot-90.png?raw=true",
                     "url": f"{rangin_mechanical_design}/robot-90.stl",
                 },
+                {
+                    "name": "90 (with the cage)",
+                    "marquee": f"{rangin_mechanical_design}/robot-90-2.png?raw=true",
+                    "url": f"{rangin_mechanical_design}/robot-90.stl",
+                },
             ]
         ),
     },
