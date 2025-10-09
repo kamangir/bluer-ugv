@@ -100,12 +100,15 @@ class ClassicalYoloCamera(ClassicalCamera):
             logger.error("failed to add object to dataset list.")
 
     def loop(self):
-        mode = self.keyboard.get("mode", OperationMode.NONE)
-        if mode == OperationMode.ACTION:
-            return self.loop_action()
+        logger.info(f"{self.__class__.__name__}.loop started.")
 
-        if mode == OperationMode.TRAINING:
-            return self.loop_training()
+        while self.running:
+            mode = self.keyboard.get("mode", OperationMode.NONE)
+            if mode == OperationMode.ACTION:
+                return self.loop_action()
+
+            if mode == OperationMode.TRAINING:
+                return self.loop_training()
 
     def loop_action(self) -> bool:
         if not self.prediction_timer.tick():
