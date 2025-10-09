@@ -2,7 +2,7 @@ title:::
 
 UGV: ugv_name:::
 
-## all in the loop
+## single thread
 
 ```text
 ::  in 1 min called 8 function(s):
@@ -24,7 +24,9 @@ details:::
 
 loop frequency (Hz): 7
 
-## ultrasonic thread
+## multi-threaded
+
+yolo and ultrasonic run on individual threads.
 
 ```text
 ::  in 5 min called 8 function(s):
@@ -45,3 +47,7 @@ loop frequency (Hz): metadata:::get:::object_name:::loop_frequency
 details:::yaml
 metadata:::get:::object_name:::timing Hz
 details:::
+
+set:::object_gif_name swallow-debug-2025-10-09-17-04-47-vm23uf
+
+assets:::get:::object_gif_name/get:::object_gif_name.gif

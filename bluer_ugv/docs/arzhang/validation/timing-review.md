@@ -2,7 +2,7 @@
 
 UGV: [`arzhang2`](../../UGVs/arzhang2.md)
 
-## all in the loop
+## single thread
 
 ```text
 ::  in 1 min called 8 function(s):
@@ -62,7 +62,9 @@ ClassicalYoloCamera:
 
 loop frequency (Hz): 7
 
-## ultrasonic thread
+## multi-threaded
+
+yolo and ultrasonic run on individual threads.
 
 ```text
 ::  in 5 min called 8 function(s):
@@ -121,3 +123,6 @@ session.update:
 
 </details>
 
+
+
+![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-10-09-17-04-47-vm23uf/swallow-debug-2025-10-09-17-04-47-vm23uf.gif?raw=true)
