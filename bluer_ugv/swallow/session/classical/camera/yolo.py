@@ -74,6 +74,8 @@ class ClassicalYoloCamera(ClassicalCamera):
         self.running = False
         self.thread.join()
 
+        logger.info(f"{self.__class__.__name__}.stopped.")
+
         super().cleanup()
 
         assert self.dataset.save(
