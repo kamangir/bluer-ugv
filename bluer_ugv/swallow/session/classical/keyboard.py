@@ -1,4 +1,6 @@
 import keyboard
+import threading
+from typing import Any, Dict
 
 from bluer_sbc.session.functions import reply_to_bash
 from bluer_algo.socket.classes import DEV_HOST
@@ -35,20 +37,28 @@ class ClassicalKeyboard:
         self.leds = leds
 
         self.last_key: str = ""
+
         self.setpoint = setpoint
-
-        self.mode = OperationMode.NONE
-
-        self.debug_mode: bool = False
 
         self.special_key: bool = False
 
-        self.ultrasound_enabled: bool = True
+        self._lock = threading.Lock()
+        self.config: Dict[str, Any] = {
+            "debug_mode": False,
+            "mode": OperationMode.NONE,
+            "ultrasound_enabled": True,
+        }
+
+    def get(self, what: str, default: Any) -> Any:
+        with self._lock:
+            return self.config.get(what, default)
+
+    def set(self, what: str, value: Any):
+        with self._lock:
+            self.config[what] = value
 
     def update(self) -> bool:
         self.last_key = ""
-
-        mode = self.mode
 
         # bash keys
         if self.special_key:
@@ -99,43 +109,41 @@ class ClassicalKeyboard:
         # debug mode
         if keyboard.is_pressed("b"):
             self.special_key = False
-            self.debug_mode = True
+            self.set("debug_mode", True)
             logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
 
         if keyboard.is_pressed("v"):
             self.special_key = False
-            self.debug_mode = False
+            self.set("debug_mode", False)
             logger.info("debug disabled.")
 
         # mode
+        mode = self.get("mode", OperationMode.NONE)
+        updated_mode = mode
         if keyboard.is_pressed("y"):
-            self.mode = OperationMode.NONE
+            updated_mode = OperationMode.NONE
 
         if keyboard.is_pressed("t"):
-            self.mode = OperationMode.TRAINING
+            updated_mode = OperationMode.TRAINING
 
         if keyboard.is_pressed("g"):
-            self.mode = OperationMode.ACTION
+            updated_mode = OperationMode.ACTION
 
-        if mode != self.mode:
+        if mode != updated_mode:
+            self.set("mode", updated_mode)
+            logger.info("mode: {}.".format(updated_mode.name.lower()))
             self.special_key = False
-            logger.info("mode: {}.".format(self.mode.name.lower()))
 
         # ultrasound
-        ultrasound_enabled = self.ultrasound_enabled
         if keyboard.is_pressed("n"):
-            self.ultrasound_enabled = False
+            self.set("ultrasound_enabled", False)
+            logger.info("ultrasound: disabled")
+            self.special_key = False
 
         if keyboard.is_pressed("m"):
-            self.ultrasound_enabled = True
-
-        if ultrasound_enabled != self.ultrasound_enabled:
+            self.set("ultrasound_enabled", True)
+            logger.info("ultrasound: enabled")
             self.special_key = False
-            logger.info(
-                "ultrasound: {}.".format(
-                    "enabled" if self.ultrasound_enabled else "disabled"
-                )
-            )
 
         # special key
         if keyboard.is_pressed("z") and not self.special_key:

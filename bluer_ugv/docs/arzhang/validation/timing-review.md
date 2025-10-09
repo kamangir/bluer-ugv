@@ -2,7 +2,7 @@
 
 UGV: [`arzhang2`](../../UGVs/arzhang2.md)
 
-## all in the loop
+## single thread
 
 ```text
 ::  in 1 min called 8 function(s):
@@ -16,6 +16,8 @@ UGV: [`arzhang2`](../../UGVs/arzhang2.md)
 ::  #   7 - ClassicalSetPoint: called 388 time(s), total 005 ms, avg < 1 ms
 ```
 
+
+loop frequency (Hz): 7
 
 
 <details>
@@ -60,23 +62,24 @@ ClassicalYoloCamera:
 </details>
 
 
-loop frequency (Hz): 7
+## multi-threaded
 
-## ultrasonic thread
+yolo and ultrasonic run on individual threads.
 
 ```text
-::  in 1 min called 7 function(s):
-::  #   0 - ClassicalYoloCamera: called 1,344 time(s), total 24 s, avg 019 ms
-::  #   1 - ClassicalKeyboard: called 1,344 time(s), total 1 s, avg 001 ms
-::  #   2 - ClassicalLeds: called 1,344 time(s), total 245 ms, avg < 1 ms
-::  #   3 - ClassicalLeftMotor: called 1,344 time(s), total 164 ms, avg < 1 ms
-::  #   4 - ClassicalRightMotor: called 1,344 time(s), total 147 ms, avg < 1 ms
-::  #   5 - ClassicalPushButton: called 1,344 time(s), total 073 ms, avg < 1 ms
-::  #   6 - ClassicalSetPoint: called 1,344 time(s), total 013 ms, avg < 1 ms
+::  in 5 min called 8 function(s):
+::  #   0 - session.update: called 5,881 time(s), total 10 s, avg 002 ms
+::  #   1 - ClassicalKeyboard: called 5,881 time(s), total 5 s, avg 001 ms
+::  #   2 - ClassicalRightMotor: called 5,881 time(s), total 1 s, avg < 1 ms
+::  #   3 - ClassicalLeds: called 5,881 time(s), total 1 s, avg < 1 ms
+::  #   4 - ClassicalLeftMotor: called 5,881 time(s), total 888 ms, avg < 1 ms
+::  #   5 - ClassicalPushButton: called 5,881 time(s), total 417 ms, avg < 1 ms
+::  #   6 - ClassicalSetPoint: called 5,881 time(s), total 061 ms, avg < 1 ms
+::  #   7 - ClassicalYoloCamera: called 5,881 time(s), total 033 ms, avg < 1 ms
 ```
 
 
-loop frequency (Hz): 706.13
+loop frequency (Hz): 570.76
 
 
 <details>
@@ -84,39 +87,42 @@ loop frequency (Hz): 706.13
 
 ```yaml
 ClassicalKeyboard:
-  average: 0.000852381115435842
-  count: 12336
-  total: 10.514973440016547
+  average: 0.000980741563002365
+  count: 5881
+  total: 5.7677411320169085
 ClassicalLeds:
-  average: 0.00018912323411088093
-  count: 12336
-  total: 2.333024215991827
+  average: 0.00019095355415421297
+  count: 5881
+  total: 1.1229978519809265
 ClassicalLeftMotor:
-  average: 7.492074926813429e-05
-  count: 12336
-  total: 0.9242223629717046
+  average: 0.00015103849719449376
+  count: 5881
+  total: 0.8882574020008178
 ClassicalPushButton:
-  average: 5.449534654246469e-05
-  count: 12336
-  total: 0.6722545949478445
+  average: 7.08729685428869e-05
+  count: 5881
+  total: 0.41680392800071786
 ClassicalRightMotor:
-  average: 0.00013058696409492163
-  count: 12336
-  total: 1.610920789074953
+  average: 0.0002535338092136507
+  count: 5881
+  total: 1.4910323319854797
 ClassicalSetPoint:
-  average: 9.864902483012672e-06
-  count: 12336
-  total: 0.12169343703044433
+  average: 1.0343385477002432e-05
+  count: 5881
+  total: 0.060829449990251305
 ClassicalYoloCamera:
-  average: 2.7932153371733966e-05
-  count: 12336
-  total: 0.3445710439937102
+  average: 5.568318821771838e-06
+  count: 5881
+  total: 0.032747282990840176
 session.update:
-  average: 0.0014161775806588069
-  count: 12336
-  total: 17.46996663500704
+  average: 0.0017520639202520283
+  count: 5881
+  total: 10.303887915002178
 
 ```
 
 </details>
 
+
+
+![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-10-09-17-04-47-vm23uf/swallow-debug-2025-10-09-17-04-47-vm23uf.gif?raw=true)

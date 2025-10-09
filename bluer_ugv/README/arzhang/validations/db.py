@@ -7,6 +7,7 @@ from bluer_ugv.README.arzhang.consts import arzhang_assets2
 
 dict_of_validations = {
     "village-1": {
+        "order": 1,
         "ugv_name": "arzhang",
         "items": ImageItems(
             {
@@ -21,6 +22,7 @@ dict_of_validations = {
         "marquee": f"{assets}/2025-09-05-11-48-27-d56azo/VID-20250905-WA0014_1.gif",
     },
     "village-2": {
+        "order": 2,
         "ugv_name": "arzhang",
         "items": ImageItems(
             {
@@ -62,6 +64,7 @@ dict_of_validations = {
         "marquee": f"{assets}/arzhang/20250922_101202_1.gif",
     },
     "village-3": {
+        "order": 3,
         "ugv_name": "arzhang",
         "items": ImageItems(
             {
@@ -79,6 +82,7 @@ dict_of_validations = {
         ),
     },
     "village-4": {
+        "order": 4,
         "ugv_name": "arzhang2",
         "items": ImageItems(
             {
@@ -92,7 +96,13 @@ dict_of_validations = {
         ),
     },
     "timing-review": {
+        "order": 5,
         "ugv_name": "arzhang2",
+        "marquee": assets_url(
+            suffix="{object_name}/{object_name}.gif".format(
+                object_name="swallow-debug-2025-10-09-17-04-47-vm23uf"
+            )
+        ),
     },
     "template": {
         "ugv_name": "template",

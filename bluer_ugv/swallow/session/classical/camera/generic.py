@@ -36,5 +36,9 @@ class ClassicalCamera:
         socket = SocketComm.connect_to(DEV_HOST)
         return socket.send_data(data)
 
+    # multi-threaded support
+    def stop(self):
+        pass
+
     def update(self) -> bool:
         return True

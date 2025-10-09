@@ -121,6 +121,7 @@ class ClassicalSession:
 
     def cleanup(self):
         self.ultrasonic_sensor.stop()
+        self.camera.stop()
 
         for thing in [
             self.motor1,
