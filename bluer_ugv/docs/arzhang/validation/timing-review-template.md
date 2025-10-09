@@ -18,11 +18,11 @@ UGV: ugv_name:::
 
 set:::object_name 2025-10-02-18-34-41-g7zbqi
 
+loop frequency (Hz): 7
+
 details:::yaml
 metadata:::get:::object_name:::timing
 details:::
-
-loop frequency (Hz): 7
 
 ## multi-threaded
 

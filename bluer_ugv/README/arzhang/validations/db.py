@@ -93,6 +93,11 @@ dict_of_validations = {
     },
     "timing-review": {
         "ugv_name": "arzhang2",
+        "marquee": assets_url(
+            suffix="{object_name}/{object_name}.gif".format(
+                object_name="swallow-debug-2025-10-09-17-04-47-vm23uf"
+            )
+        ),
     },
     "template": {
         "ugv_name": "template",
