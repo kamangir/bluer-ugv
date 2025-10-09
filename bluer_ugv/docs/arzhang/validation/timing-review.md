@@ -17,6 +17,8 @@ UGV: [`arzhang2`](../../UGVs/arzhang2.md)
 ```
 
 
+loop frequency (Hz): 7
+
 
 <details>
 <summary>yaml</summary>
@@ -59,8 +61,6 @@ ClassicalYoloCamera:
 
 </details>
 
-
-loop frequency (Hz): 7
 
 ## multi-threaded
 
