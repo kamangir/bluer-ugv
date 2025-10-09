@@ -27,17 +27,18 @@ loop frequency (Hz): 7
 ## ultrasonic thread
 
 ```text
-::  in 1 min called 7 function(s):
-::  #   0 - ClassicalYoloCamera: called 1,344 time(s), total 24 s, avg 019 ms
-::  #   1 - ClassicalKeyboard: called 1,344 time(s), total 1 s, avg 001 ms
-::  #   2 - ClassicalLeds: called 1,344 time(s), total 245 ms, avg < 1 ms
-::  #   3 - ClassicalLeftMotor: called 1,344 time(s), total 164 ms, avg < 1 ms
-::  #   4 - ClassicalRightMotor: called 1,344 time(s), total 147 ms, avg < 1 ms
-::  #   5 - ClassicalPushButton: called 1,344 time(s), total 073 ms, avg < 1 ms
-::  #   6 - ClassicalSetPoint: called 1,344 time(s), total 013 ms, avg < 1 ms
+::  in 5 min called 8 function(s):
+::  #   0 - session.update: called 5,881 time(s), total 10 s, avg 002 ms
+::  #   1 - ClassicalKeyboard: called 5,881 time(s), total 5 s, avg 001 ms
+::  #   2 - ClassicalRightMotor: called 5,881 time(s), total 1 s, avg < 1 ms
+::  #   3 - ClassicalLeds: called 5,881 time(s), total 1 s, avg < 1 ms
+::  #   4 - ClassicalLeftMotor: called 5,881 time(s), total 888 ms, avg < 1 ms
+::  #   5 - ClassicalPushButton: called 5,881 time(s), total 417 ms, avg < 1 ms
+::  #   6 - ClassicalSetPoint: called 5,881 time(s), total 061 ms, avg < 1 ms
+::  #   7 - ClassicalYoloCamera: called 5,881 time(s), total 033 ms, avg < 1 ms
 ```
 
-set:::object_name 2025-10-02-19-48-18-zf60td
+set:::object_name 2025-10-09-17-29-38-2d897k
 
 loop frequency (Hz): metadata:::get:::object_name:::loop_frequency
 
