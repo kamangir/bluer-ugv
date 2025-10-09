@@ -119,6 +119,7 @@ class ClassicalKeyboard:
 
         # mode
         mode = self.get("mode", OperationMode.NONE)
+        updated_mode = mode
         if keyboard.is_pressed("y"):
             updated_mode = OperationMode.NONE
 
