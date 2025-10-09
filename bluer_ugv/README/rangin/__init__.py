@@ -27,7 +27,6 @@ docs = [
     },
     {
         "path": "../docs/rangin/mechanical.md",
-        "cols": 2,
         "items": Items(
             [
                 {
@@ -41,7 +40,7 @@ docs = [
                     "url": f"{rangin_mechanical_design}/robot-90.stl",
                 },
                 {
-                    "name": "90 (with the cage)",
+                    "name": "90 (without the cage)",
                     "marquee": f"{rangin_mechanical_design}/robot-90-2.png?raw=true",
                     "url": f"{rangin_mechanical_design}/robot-90.stl",
                 },
