@@ -104,11 +104,16 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         while self.running:
             mode = self.keyboard.get("mode", OperationMode.NONE)
+
+            success = True
             if mode == OperationMode.ACTION:
-                return self.loop_action()
+                success = self.loop_action()
 
             if mode == OperationMode.TRAINING:
-                return self.loop_training()
+                success = self.loop_training()
+
+            if not success:
+                logger.error(f"loop failed, mode: {mode.name.lower()}.")
 
     def loop_action(self) -> bool:
         if not self.prediction_timer.tick():
