@@ -3,7 +3,7 @@ from bluer_sbc.parts.db import db_of_parts
 from bluer_sbc.parts.consts import parts_url_prefix
 
 from bluer_ugv.README.rangin.items import items
-from bluer_ugv.rangin.parts import dict_of_parts
+from bluer_ugv.designs.rangin.parts import dict_of_parts
 from bluer_ugv.README.rangin.consts import rangin_mechanical_design
 
 docs = [

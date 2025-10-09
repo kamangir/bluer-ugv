@@ -2,7 +2,7 @@ from bluer_sbc.parts.db import db_of_parts
 from bluer_sbc.parts.consts import parts_url_prefix
 
 from bluer_ugv.README.fire.items import items
-from bluer_ugv.fire.parts import dict_of_parts
+from bluer_ugv.designs.fire.parts import dict_of_parts
 
 docs = [
     {

@@ -6,7 +6,7 @@ from bluer_ugv.README.swallow.consts import (
     swallow_assets2,
     swallow_electrical_designs,
 )
-from bluer_ugv.swallow.parts import dict_of_parts
+from bluer_ugv.designs.swallow.parts import dict_of_parts
 from bluer_ugv.README.swallow.digital.design import mechanical, ultrasonic_sensor
 
 
