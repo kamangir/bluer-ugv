@@ -2,7 +2,7 @@ from bluer_sbc.parts.db import db_of_parts
 from bluer_sbc.parts.consts import parts_url_prefix
 
 from bluer_ugv.README.eagle.items import items
-from bluer_ugv.eagle.parts import dict_of_parts
+from bluer_ugv.designs.eagle.parts import dict_of_parts
 
 docs = [
     {
