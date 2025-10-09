@@ -132,10 +132,11 @@ class ClassicalNavigationCamera(ClassicalCamera):
             self.buffer = []
             return True
 
-        if self.keyboard.mode == OperationMode.ACTION:
+        mode = self.keyboard.get("mode", OperationMode.NONE)
+        if mode == OperationMode.ACTION:
             return self.update_action()
 
-        if self.keyboard.mode == OperationMode.TRAINING:
+        if mode == OperationMode.TRAINING:
             return self.update_training()
 
         return True

@@ -74,13 +74,14 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not super().update():
             return False
 
-        if self.keyboard.mode == OperationMode.TRAINING:
+        mode = self.keyboard.get("mode", OperationMode.NONE)
+        if mode == OperationMode.TRAINING:
             return self.update_training()
 
         if self.setpoint.speed <= 0:
             return True
 
-        if self.keyboard.mode == OperationMode.ACTION:
+        if mode == OperationMode.ACTION:
             return self.update_action()
 
         return True
@@ -121,5 +122,5 @@ class ClassicalTrackingCamera(ClassicalCamera):
         return True
 
     def update_training(self) -> bool:
-        self.keyboard.mode = OperationMode.NONE
+        self.keyboardset("mode", OperationMode.NONE)
         return self.select_target()

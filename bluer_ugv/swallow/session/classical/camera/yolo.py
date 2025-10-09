@@ -97,10 +97,11 @@ class ClassicalYoloCamera(ClassicalCamera):
         if not super().update():
             return False
 
-        if self.keyboard.mode == OperationMode.ACTION:
+        mode = self.keyboard.get("mode", OperationMode.NONE)
+        if mode == OperationMode.ACTION:
             return self.update_action()
 
-        if self.keyboard.mode == OperationMode.TRAINING:
+        if mode == OperationMode.TRAINING:
             return self.update_training()
 
         return True
@@ -128,15 +129,16 @@ class ClassicalYoloCamera(ClassicalCamera):
         if not success:
             return success
 
+        debug_mode = self.keyboard.get("debug_mode", False)
         success, metadata = self.predictor.predict(
             image=image,
-            return_annotated_image=self.keyboard.debug_mode,
+            return_annotated_image=debug_mode,
             annotated_image_scale=2,
         )
         if not success:
             return success
 
-        if self.keyboard.debug_mode:
+        if debug_mode:
             if not self.send_debug_data(metadata["annotated_image"]):
                 logger.warning("failed to send debug data.")
 
