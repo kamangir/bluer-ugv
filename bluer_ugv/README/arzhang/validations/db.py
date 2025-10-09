@@ -5,7 +5,7 @@ from bluer_objects import env
 
 from bluer_ugv.README.arzhang.consts import arzhang_assets2
 
-validations = {
+dict_of_validations = {
     "village-1": {
         "ugv_name": "arzhang",
         "items": ImageItems(

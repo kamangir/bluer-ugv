@@ -1,27 +1,13 @@
-from bluer_objects.README import Items
+from bluer_objects.README.items import Items_of_dict, list_of_dict
 
-from bluer_ugv.README.arzhang.validations.db import validations
+from bluer_ugv.README.arzhang.validations.db import dict_of_validations
 
 docs = [
     {
         "path": "../docs/arzhang/validation",
-        "items": Items(
-            [
-                {
-                    "name": validation_name,
-                    "marquee": info["marquee"],
-                    "url": f"./{validation_name}.md",
-                }
-                for validation_name, info in validations.items()
-                if validation_name != "template" and "marquee" in info
-            ]
-        ),
+        "items": Items_of_dict(dict_of_validations),
         "macros": {
-            "list:::": [
-                f"- [{validation_name}](./{validation_name}.md)"
-                for validation_name in validations
-                if validation_name != "template"
-            ]
+            "list:::": list_of_dict(dict_of_validations),
         },
         "cols": 2,
     }
@@ -42,6 +28,6 @@ docs = [
         },
         "cols": info.get("cols", 3),
     }
-    for validation_name, info in validations.items()
+    for validation_name, info in dict_of_validations.items()
     if validation_name != "template"
 ]
