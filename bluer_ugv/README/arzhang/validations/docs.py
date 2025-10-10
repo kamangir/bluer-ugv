@@ -18,7 +18,7 @@ docs = [
         "macros": {
             **info.get("macros", {}),
             "ugv_name:::": [
-                "UGV: {}".format(
+                "UGV(s): {}".format(
                     ", ".join(
                         [
                             "[`{ugv_name}`](../../UGVs/{ugv_name}.md)".format(

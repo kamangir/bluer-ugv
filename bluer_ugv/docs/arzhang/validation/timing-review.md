@@ -1,6 +1,6 @@
 # arzhang: validation: timing-review
 
-UGV: [`arzhang2`](../../UGVs/arzhang2.md)
+UGV(s): [`arzhang2`](../../UGVs/arzhang2.md)
 
 ## single thread
 
