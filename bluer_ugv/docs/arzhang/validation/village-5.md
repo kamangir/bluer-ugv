@@ -54,3 +54,7 @@ runme \
 
 - ultrasonic sensor is activated when the surface is uneven - will adjust the sensor.
 - yolo may not have time to perform the action. -> 📜
+
+|   |   |   |
+| --- | --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085451.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085451.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085508.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085508.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_090203.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_090203.jpg?raw=true) |

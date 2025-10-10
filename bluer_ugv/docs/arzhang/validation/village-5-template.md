@@ -58,3 +58,5 @@ set:::arzhang2_object 2025-10-10-08-42-42-ee6oln
 
 - ultrasonic sensor is activated when the surface is uneven - will adjust the sensor.
 - yolo may not have time to perform the action. -> 📜
+
+items:::
