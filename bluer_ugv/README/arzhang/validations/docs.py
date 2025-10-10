@@ -18,10 +18,23 @@ docs = [
         "macros": {
             **info.get("macros", {}),
             "ugv_name:::": [
-                "UGV: [`{ugv_name}`](../../UGVs/{ugv_name}.md)".format(
-                    ugv_name=info.get(
-                        "ugv_name",
-                        "unknown",
+                "UGV: {}".format(
+                    ", ".join(
+                        [
+                            "[`{ugv_name}`](../../UGVs/{ugv_name}.md)".format(
+                                ugv_name=ugv_name
+                            )
+                            for ugv_name in (
+                                lambda thing: (
+                                    thing if isinstance(thing, list) else [thing]
+                                )
+                            )(
+                                info.get(
+                                    "ugv_name",
+                                    ["unknown"],
+                                )
+                            )
+                        ]
                     )
                 )
             ],

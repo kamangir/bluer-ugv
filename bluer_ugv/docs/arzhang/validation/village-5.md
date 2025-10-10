@@ -1,6 +1,6 @@
 # arzhang: validation: village-5
 
-UGV: [`['arzhang', 'arzhang2']`](../../UGVs/['arzhang', 'arzhang2'].md)
+UGV: [`arzhang`](../../UGVs/arzhang.md), [`arzhang2`](../../UGVs/arzhang2.md)
 
 ## debug objects
 
