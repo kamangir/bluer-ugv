@@ -2,17 +2,21 @@
 
 UGV: [`arzhang`](../../UGVs/arzhang.md), [`arzhang2`](../../UGVs/arzhang2.md)
 
-## debug objects
+## objects
 
-- arzhang: swallow-debug-2025-10-10-08-49-45-yk18ei, 2025-10-10-08-52-35-6jjnzn 🚧
-- arzhang2: swallow-debug-2025-10-10-08-40-38-k8oc2p, 2025-10-10-08-42-42-ee6oln 🚧
+### arzhang
+
+
+🔥
 
 review ultrasonic data 🚧 doc loop frequency 🚧
 
-🚧
+### arzhang2
 
+
+🔥
 
 ## observations
 
-- ultrasonic sensor is activated when the surface is uneven. 🚧
-- yolo may not have time to perform the action. 🚧
+- ultrasonic sensor is activated when the surface is uneven - will adjust the sensor.
+- yolo may not have time to perform the action. -> 📜
