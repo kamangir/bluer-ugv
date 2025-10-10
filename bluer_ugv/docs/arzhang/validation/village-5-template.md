@@ -38,6 +38,12 @@ set:::arzhang1_object 2025-10-10-08-52-35-6jjnzn
 
 ### arzhang2
 
+```bash
+runme \
+    swallow-debug-2025-10-10-08-40-38-k8oc2p \
+    2025-10-10-08-42-42-ee6oln
+```    
+
 set:::arzhang2_debug_object swallow-debug-2025-10-10-08-40-38-k8oc2p
 set:::arzhang2_object 2025-10-10-08-42-42-ee6oln
 

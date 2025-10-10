@@ -36,6 +36,12 @@ runme \
 
 ### arzhang2
 
+```bash
+runme \
+    swallow-debug-2025-10-10-08-40-38-k8oc2p \
+    2025-10-10-08-42-42-ee6oln
+```    
+
 
 | | [arzhang](../../UGVs/arzhang.md) | [arzhang2](../../UGVs/arzhang2.md) |
 |-|-|-|
