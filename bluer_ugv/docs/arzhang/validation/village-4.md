@@ -1,6 +1,6 @@
 # arzhang: validation: village-4
 
-UGV: [`arzhang2`](../../UGVs/arzhang2.md)
+UGV(s): [`arzhang2`](../../UGVs/arzhang2.md)
 
 ## debug object
 

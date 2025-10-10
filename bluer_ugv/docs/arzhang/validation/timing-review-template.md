@@ -1,6 +1,6 @@
 title:::
 
-UGV: ugv_name:::
+UGV(s): ugv_name:::
 
 ## single thread
 
