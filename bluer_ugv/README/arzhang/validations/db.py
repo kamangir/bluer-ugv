@@ -104,6 +104,15 @@ dict_of_validations = {
             )
         ),
     },
+    "village-5": {
+        "order": 6,
+        "ugv_name": ["arzhang", "arzhang2"],
+        "marquee": assets_url(
+            suffix="{object_name}/{object_name}.gif".format(
+                object_name="swallow-debug-2025-10-10-08-49-45-yk18ei"
+            )
+        ),
+    },
     "template": {
         "ugv_name": "template",
         "marquee": "template.jpg",
