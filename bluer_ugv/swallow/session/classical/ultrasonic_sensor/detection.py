@@ -46,7 +46,7 @@ class Detection:
         self,
         height: int = 512,
         width: int = 256,
-        max_m: float = 0.8,
+        max_m: float = env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
         sign: bool = True,
         line_width: int = 80,
     ) -> np.ndarray:

@@ -33,6 +33,7 @@ class UltrasonicSensorDetectionLog:
         line_width: int = 80,
         log: bool = True,
         rm_blank: bool = True,
+        max_m: float = env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
     ) -> bool:
         for func, name, filename in zip(
             [
@@ -63,6 +64,9 @@ class UltrasonicSensorDetectionLog:
                 [func(list_of_detections[1]) for list_of_detections in self.log],
                 color="blue",
             )
+
+            if "distance" in name:
+                plt.ylim([0, max_m])
 
             plt.title(
                 justify_text(
@@ -97,16 +101,6 @@ class UltrasonicSensorDetectionLog:
                 return False
 
         if export_gif:
-            max_m = (
-                max(
-                    detection.distance_mm
-                    for detection in reduce(lambda x, y: x + y, self.log, [])
-                )
-                / 1000
-            )
-
-            logger.info("max distance: {:.3f} m".format(max_m))
-
             if not self.export_gif(
                 object_name=object_name,
                 frame_count=frame_count,
@@ -126,7 +120,7 @@ class UltrasonicSensorDetectionLog:
         frame_count: int = -1,
         height: int = 512,
         width: int = 512,
-        max_m: float = 0.8,
+        max_m: float = env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
         log: bool = True,
         rm_blank: bool = True,
     ) -> bool:
