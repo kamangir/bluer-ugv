@@ -2,7 +2,7 @@ from typing import List
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 import numpy as np
-from functools import reduce
+import cv2
 
 from bluer_objects.graphics.signature import justify_text
 from bluer_objects import objects
@@ -11,9 +11,7 @@ from bluer_objects.graphics.gif import generate_animated_gif
 from bluer_objects.graphics.signature import add_signature
 
 from bluer_ugv import env
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    Detection,
-)
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
 from bluer_ugv.host import signature
 from bluer_ugv.logger import logger
 
@@ -55,24 +53,45 @@ class UltrasonicSensorDetectionLog:
                 "ultrasonic-sensor-distance-mm",
             ],
         ):
-            plt.figure(figsize=(5, 5))
+            plt.figure(figsize=(10, 5))
+
+            if "distance" in name:
+                plt.plot(
+                    [0, len(self.log) - 1],
+                    2 * [env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD],
+                    color="yellow",
+                    linestyle=":",
+                    label="warning threshold",
+                )
+                plt.plot(
+                    [0, len(self.log) - 1],
+                    2 * [env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD],
+                    color="red",
+                    linestyle=":",
+                    label="danger threshold",
+                )
+
             plt.plot(
                 [func(list_of_detections[0]) for list_of_detections in self.log],
                 color="green",
+                label="left sensor",
             )
             plt.plot(
                 [func(list_of_detections[1]) for list_of_detections in self.log],
                 color="blue",
+                label="right sensor",
             )
 
+            plt.xlim([0, len(self.log) - 1])
             if "distance" in name:
-                plt.ylim([0, max_m])
+                plt.ylim([0, max_m * 1000])
 
             plt.title(
                 justify_text(
                     " | ".join(
                         [
                             "ultrasonic-sensor",
+                            name,
                         ]
                         + objects.signature(object_name=object_name)
                     ),
@@ -88,7 +107,7 @@ class UltrasonicSensorDetectionLog:
                 )
             )
             plt.ylabel(name)
-            plt.legend(["left", "right"])
+            plt.legend()
             plt.tight_layout()
             plt.grid(True)
             if not file.save_fig(
@@ -99,6 +118,14 @@ class UltrasonicSensorDetectionLog:
                 log=log,
             ):
                 return False
+
+        if not self.export_state(
+            object_name=object_name,
+            line_width=line_width,
+            log=log,
+            max_m=max_m,
+        ):
+            return False
 
         if export_gif:
             if not self.export_gif(
@@ -112,6 +139,57 @@ class UltrasonicSensorDetectionLog:
                 return False
 
         return True
+
+    def export_state(
+        self,
+        object_name: str,
+        line_width: int = 80,
+        height=512,
+        max_m: float = env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
+        log: bool = True,
+    ) -> bool:
+        image = np.zeros((len(self.log[0]), len(self.log), 3), dtype=np.uint8)
+
+        for detection_index, list_of_detections in enumerate(self.log):
+            for sensor_index, detection in enumerate(list_of_detections):
+                assert isinstance(detection, Detection)
+
+                for channel in range(3):
+                    image[sensor_index, detection_index, channel] = (
+                        detection.state.color_code[channel]
+                    )
+
+        image = cv2.resize(
+            image,
+            (
+                int(image.shape[1]),
+                int(image.shape[0] * (height / image.shape[0])),
+            ),
+            interpolation=cv2.INTER_NEAREST_EXACT,
+        )
+
+        image = add_signature(
+            image,
+            header=[
+                " | ".join(
+                    [
+                        "ultrasonic sensor state",
+                    ]
+                    + objects.signature(object_name=object_name)
+                ),
+            ],
+            footer=[" | ".join(signature())],
+            line_width=line_width,
+        )
+
+        return file.save_image(
+            objects.path_of(
+                filename="ultrasonic-sensor-state.png",
+                object_name=object_name,
+            ),
+            image,
+            log=log,
+        )
 
     def export_gif(
         self,
