@@ -2,6 +2,8 @@ from typing import List
 
 from bluer_options.terminal import show_usage, xtra
 
+from bluer_ugv import env
+
 review_args = [
     "[--frame_count <-1>]",
     "[--gif 0]",
@@ -42,7 +44,7 @@ def help_test(
         + [
             "[--export 0]",
             "[--log 0]",
-            "[--max_m 0.8]",
+            "[--max_m {:.2f}]".format(env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M),
         ]
     )
 

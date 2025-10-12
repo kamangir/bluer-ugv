@@ -2,6 +2,7 @@ from RPi import GPIO
 from typing import Tuple
 import time
 
+from bluer_ugv import env
 from bluer_ugv.logger import logger
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.consts import (
     C,
@@ -22,7 +23,7 @@ class lUltrasonicSensor:
         self,
         side: str,
         setmode: bool = True,
-        max_m: float = 0.8,
+        max_m: float = env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
     ):
         self.side = side
         self.valid = True

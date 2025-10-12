@@ -4,6 +4,7 @@ from blueness import module
 from blueness.argparse.generic import sys_exit
 
 from bluer_ugv import NAME
+from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.review import review
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.testing import test
 from bluer_ugv.logger import logger
@@ -19,7 +20,7 @@ parser.add_argument(
 parser.add_argument(
     "--max_m",
     type=float,
-    default=0.8,
+    default=env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
     help="detection threshold in meters.",
 )
 parser.add_argument(

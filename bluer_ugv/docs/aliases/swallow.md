@@ -76,7 +76,7 @@
 	[--frame_count <-1>] \
 	[--gif 0] \
 	[--log 0] \
-	[--max_m 0.8] \
+	[--max_m 0.80] \
 	[--rm_blank 0]
  . test ultrasonic sensors.
 ```

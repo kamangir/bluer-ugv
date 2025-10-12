@@ -1,4 +1,6 @@
-# continues -v7
+# continues /sandbox/ultrasonic_sensor-v7.py
+
+from bluer_ugv import env
 from bluer_ugv.logger import logger
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
@@ -12,7 +14,7 @@ def test(
     frame_count: int = -1,
     line_width: int = 80,
     log: bool = True,
-    max_m: float = 0.8,
+    max_m: float = env.BLUER_UGV_ULTRASONIC_SENSOR_MAX_M,
     rm_blank: bool = True,
 ) -> bool:
     from RPi import GPIO
