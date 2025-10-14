@@ -1,5 +1,6 @@
 from bluer_objects.README.consts import assets_url, designs_url
 
+description = "remote control car kit for teenagers."
 
 robin_assets2 = assets_url(
     suffix="robin",
