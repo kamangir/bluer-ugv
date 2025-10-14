@@ -20,4 +20,5 @@ dict_of_parts = {
     "PCB-single-14x9_5": "1 x",
     "mt-3608": "",
     "arduino-nano": "",
+    "tb6612": "",
 }
