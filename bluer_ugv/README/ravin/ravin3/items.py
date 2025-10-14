@@ -1,12 +1,12 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.ravin.ravin3.consts import assets, assets
+from bluer_ugv.README.ravin.ravin3.consts import assets, designs
 
 
 items = ImageItems(
     {
         f"{assets}/20250712_114819.jpg": "",
-        f"{assets}/wiring.png": f"{assets}/wiring.svg",
+        f"{designs}/wiring.png": f"{designs}/wiring.svg",
         f"{assets}/20250713_172325.jpg": "",
         f"{assets}/20250713_172413.jpg": "",
         f"{assets}/20250713_172442_1.gif": "",
