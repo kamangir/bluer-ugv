@@ -16,5 +16,8 @@ dict_of_parts = {
         )
     ),
     "ni-mh-battery": "x 4",
+    "plexiglass": "14 cm x 9.5 cm",
+    "PCB-single-14x9_5": "1 x",
     "mt-3608": "",
+    "arduino-nano": "",
 }
