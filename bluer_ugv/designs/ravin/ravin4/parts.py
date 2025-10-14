@@ -5,5 +5,6 @@ dict_of_parts = {
     "yellow-gearbox-dc-motor": "4 x 270 RPM",
     "yellow-wheels": "x 4",
     "L-1x2": "x 8",
-    "nuts-bolts-spacers": " + ".join([]),
+    "nuts-bolts-spacers": "M3: (TBA x bolt + TBA x TBA mm + TBA x nut)",
+    "ni-mh-battery": "x 4",
 }
