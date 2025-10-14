@@ -4,7 +4,8 @@ from bluer_ugv.README.consts import bluer_ugv_assets
 from bluer_ugv.README.arzhang.consts import arzhang_assets2
 from bluer_ugv.README.eagle.consts import eagle_assets2
 from bluer_ugv.README.rangin.consts import rangin_assets2
-from bluer_ugv.README.robin.consts import robin_assets2
+from bluer_ugv.README.ravin.consts import ravin_assets2
+from bluer_ugv.README.ravin.consts import description as ravin_description
 from bluer_ugv.README.swallow.consts import swallow_assets2
 
 items = README.Items(
@@ -28,10 +29,10 @@ items = README.Items(
             "url": "./bluer_ugv/docs/rangin",
         },
         {
-            "name": "robin",
-            "marquee": f"{robin_assets2}/20250723_095155~2_1.gif?raw=true",
-            "description": "remote control car kit for teenagers.",
-            "url": "./bluer_ugv/docs/robin",
+            "name": "ravin",
+            "marquee": f"{ravin_assets2}/20250723_095155~2_1.gif?raw=true",
+            "description": ravin_description,
+            "url": "./bluer_ugv/docs/ravin",
         },
         {
             "name": "eagle",
