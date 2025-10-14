@@ -1,6 +1,6 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.ravin.consts import ravin_assets2, ravin_design
+from bluer_ugv.README.ravin.ravin3.consts import ravin_assets2, ravin_design
 
 
 items = ImageItems(
