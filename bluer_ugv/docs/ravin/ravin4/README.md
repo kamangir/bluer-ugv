@@ -1,34 +1,6 @@
 # ravin: ravin4
 
-4
- 
-m
-o
-t
-o
-r
-s
-,
- 
-d
-i
-f
-f
-e
-r
-e
-n
-t
-i
-a
-l
- 
-d
-r
-i
-v
-e
-.
+4 motors, differential drive.
 
 |   |   |   |
 | --- | --- | --- |

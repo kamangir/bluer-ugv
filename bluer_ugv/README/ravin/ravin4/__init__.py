@@ -11,7 +11,7 @@ docs = [
         "items": items,
         "path": "../docs/ravin/ravin4",
         "macros": {
-            "description:::": description,
+            "description:::": [description],
         },
     },
     {

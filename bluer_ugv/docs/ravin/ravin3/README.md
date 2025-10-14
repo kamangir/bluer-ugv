@@ -1,29 +1,6 @@
 # ravin: ravin3
 
-3
- 
-m
-o
-t
-o
-r
-s
-,
- 
-w
-i
-t
-h
- 
-s
-t
-e
-e
-r
-i
-n
-g
-.
+3 motors, with steering.
 
 |   |   |   |
 | --- | --- | --- |
