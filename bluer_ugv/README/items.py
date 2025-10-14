@@ -4,7 +4,7 @@ from bluer_ugv.README.consts import bluer_ugv_assets
 from bluer_ugv.README.arzhang.consts import arzhang_assets2
 from bluer_ugv.README.eagle.consts import eagle_assets2
 from bluer_ugv.README.rangin.consts import rangin_assets2
-from bluer_ugv.README.ravin.ravin3.consts import ravin3_assets2
+from bluer_ugv.README.ravin.ravin3.consts import assets as ravin3_assets2
 from bluer_ugv.README.ravin.consts import description as ravin_description
 from bluer_ugv.README.swallow.consts import swallow_assets2
 
