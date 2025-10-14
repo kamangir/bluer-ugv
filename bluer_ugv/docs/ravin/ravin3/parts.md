@@ -1,6 +1,4 @@
-# ravin: parts
-
-- source: [robotexiran](https://robotexiran.com/).
+# ravin: ravin3: parts
 
 1. [2 x AA battery holder](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/2xAA-battery-holder.md).
 1. [4 x AA battery holder](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4xAA-battery-holder.md).

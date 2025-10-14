@@ -29,6 +29,8 @@ setup(
         f"{NAME}.designs.fire",
         f"{NAME}.designs.rangin",
         f"{NAME}.designs.ravin",
+        f"{NAME}.designs.ravin.ravin3",
+        f"{NAME}.designs.ravin.ravin4",
         f"{NAME}.swallow",
         f"{NAME}.swallow.dataset",
         f"{NAME}.swallow.session",

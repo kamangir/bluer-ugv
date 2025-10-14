@@ -1,0 +1,15 @@
+# ravin: ravin4: parts
+
+1. [2 x AA battery holder](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/2xAA-battery-holder.md).
+1. [4 x AA battery holder](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4xAA-battery-holder.md).
+1. [4-channel transmitter and receiver](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4-ch-transceiver.md).
+1. [L 1x2](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/L-1x2.md): x 8.
+1. [M3 nuts and bolts](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/M3.md): 🚧.
+1. [gearboxed DC motor, 6V DC](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-gearbox-dc-motor.md): 4 x 270 RPM.
+1. [wheels for gearboxed DC motor](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-wheels.md): x 4.
+
+|   |   |   |
+| --- | --- | --- |
+| [`2 x AA battery holder`](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/2xAA-battery-holder.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/2xAA-battery-holder.jpg?raw=true)](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/2xAA-battery-holder.md)  | [`4 x AA battery holder`](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4xAA-battery-holder.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/4xAA-battery-holder.jpg?raw=true)](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4xAA-battery-holder.md)  | [`4-channel transmitter and receiver`](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4-ch-transceiver.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/4-channel-remote-control.png?raw=true)](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/4-ch-transceiver.md)  |
+| [`L 1x2`](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/L-1x2.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/L-1x2-1.jpg?raw=true)](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/L-1x2.md) x 8 | [`M3 nuts and bolts`](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/M3.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/M3.jpg?raw=true)](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/M3.md) 🚧 | [`gearboxed DC motor, 6V DC`](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-gearbox-dc-motor.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/yellow-gearbox-dc-motor.png?raw=true)](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-gearbox-dc-motor.md) 4 x 270 RPM |
+| [`wheels for gearboxed DC motor`](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-wheels.md) [![image](https://github.com/kamangir/assets2/raw/main/bluer-sbc/parts/yellow-wheels.jpg?raw=true)](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/yellow-wheels.md) x 4 |  |  |
