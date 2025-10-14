@@ -9,13 +9,13 @@ items = Items(
         {
             "name": "ravin3",
             "description": ravin3.description,
-            "marquee": f"{ravin3.assets}/TBA.jpg",
+            "marquee": f"{ravin3.assets}/20250723_095155~2_1.gif",
             "url": "./ravin3",
         },
         {
             "name": "ravin4",
             "description": ravin4.description,
-            "marquee": f"{ravin4.assets}/TBA.jpg",
+            "marquee": f"{ravin4.assets}/20251014_164022.jpg",
             "url": "./ravin4",
         },
     ]

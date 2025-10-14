@@ -1,6 +1,7 @@
 from bluer_sbc.parts.db import db_of_parts
 from bluer_sbc.parts.consts import parts_url_prefix
 
+from bluer_ugv.README.ravin.ravin3.consts import description
 from bluer_ugv.README.ravin.ravin3.items import items
 from bluer_ugv.designs.ravin.ravin3.parts import dict_of_parts
 
@@ -9,6 +10,9 @@ docs = [
     {
         "items": items,
         "path": "../docs/ravin/ravin3",
+        "macros": {
+            "description:::": description,
+        },
     },
     {
         "path": "../docs/ravin/ravin3/parts.md",
