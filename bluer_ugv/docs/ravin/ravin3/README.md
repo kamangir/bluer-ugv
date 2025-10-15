@@ -2,6 +2,9 @@
 
 3 motors, with steering.
 
+- [parts](./parts.md)
+- [wiring](https://github.com/kamangir/bluer-designs/blob/main/ravin3/wiring.svg) ([png](https://github.com/kamangir/bluer-designs/blob/main/ravin3/wiring.png))
+
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250712_114819.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250712_114819.jpg?raw=true) | [![image](https://github.com/kamangir/bluer-designs//blob/main/ravin3/wiring.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/ravin3/wiring.svg) | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250713_172325.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250713_172325.jpg?raw=true) |
@@ -10,6 +13,3 @@
 | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250807_103534.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250807_103534.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250807_171354.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250807_171354.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250813_172023.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250813_172023.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250827_170346.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250827_170346.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250827_170319~3_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250827_170319~3_1.gif?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250914_175506-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20250914_175506-2.jpg?raw=true) |
 | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20251013_154125-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20251013_154125-2.jpg?raw=true) |  |  |
-
-- [parts](./parts.md)
-- [wiring](https://github.com/kamangir/bluer-designs/blob/main/ravin3/wiring.svg) ([png](https://github.com/kamangir/bluer-designs/blob/main/ravin3/wiring.png))
