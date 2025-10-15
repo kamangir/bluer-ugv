@@ -12,4 +12,4 @@
 | [![image](https://github.com/kamangir/assets2/raw/main/ravin/20251013_154125-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin/20251013_154125-2.jpg?raw=true) |  |  |
 
 - [parts](./parts.md)
-- [wiring](https://github.com/kamangir/bluer-designs/blob/main/ravin/wiring.svg) ([png](https://github.com/kamangir/bluer-designs/blob/main/ravin/wiring.png))
+- [wiring](https://github.com/kamangir/bluer-designs/blob/main/ravin3/wiring.svg) ([png](https://github.com/kamangir/bluer-designs/blob/main/ravin3/wiring.png))

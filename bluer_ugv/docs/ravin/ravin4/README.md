@@ -8,4 +8,4 @@
 | [![image](https://github.com/kamangir/assets2/raw/main/ravin4/20251014_164022.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/ravin4/20251014_164022.jpg?raw=true) |  |  |
 
 - [parts](./parts.md)
-- wiring 🚧
+- [wiring](https://github.com/kamangir/bluer-designs/blob/main/ravin4/wiring.svg) ([png](https://github.com/kamangir/bluer-designs/blob/main/ravin4/wiring.png))
