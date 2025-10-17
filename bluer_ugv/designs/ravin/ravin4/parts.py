@@ -9,8 +9,10 @@ dict_of_parts = {
         " + ".join(
             [
                 "10 x 6 mm bolt",
-                "8 x 25 mm bolt",
-                "2 x 5 mm spacer",
+                "1 x 5 mm bolt",
+                "8 x 30 mm bolt",
+                "1 x 5 mm spacer",
+                "2 x 10 mm spacer",
                 "20 x nut",
             ]
         )
@@ -21,4 +23,9 @@ dict_of_parts = {
     "mt-3608": "",
     "arduino-nano": "",
     "tb6612": "",
+    "small-on-off-switch": "",
+    "pin-headers": "2 x (male, 1 x 40) -> 2 x 4 + 2 x 6 + 2 x 15",
+    "double-sided-tape": "",
+    "electrical-tape": "",
+    "micro-usb-cable": "",
 }
