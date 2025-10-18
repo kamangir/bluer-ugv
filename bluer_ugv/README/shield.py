@@ -34,6 +34,8 @@ items = ImageItems(
         f"{swallow_designs}/kicad/swallow/swallow-3d.png": "",
         f"{swallow_designs}/kicad/swallow/swallow-3d-back.png": "",
         f"{swallow_designs}/kicad/swallow/swallow-pcb.png": "",
+        f"{swallow_assets2}/20251018_133202.jpg": "",
+        f"{swallow_assets2}/20251018_133349.jpg": "",
     }
 )
 
