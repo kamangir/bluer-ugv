@@ -62,15 +62,17 @@ class ClassicalSetPoint:
         log: bool = True,
     ):
         with self._lock:
-            if self.expiry > time.time():
-                if log:
-                    logger.info("setpoint expired.")
+            if self.expiry < time.time():
+                return
 
-            self.put(
-                what="steering",
-                value=0,
-                log=False,
-            )
+        if log:
+            logger.info("setpoint expired.")
+
+        self.put(
+            what="steering",
+            value=0,
+            log=False,
+        )
 
     def put(
         self,
