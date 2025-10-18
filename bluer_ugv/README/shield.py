@@ -26,6 +26,8 @@ items = ImageItems(
         f"{swallow_assets2}/20251002_103720.jpg": "",
         f"{swallow_assets2}/design/v5/01.jpg": "",
         f"{swallow_electrical_designs}/nuts-bolts-spacers.png": f"{swallow_electrical_designs}/nuts-bolts-spacers.svg",
+        f"{swallow_assets2}/20251018_133202.jpg": "",
+        f"{swallow_assets2}/20251018_133349.jpg": "",
         f"{swallow_assets2}/20251008_114557.jpg": "",
         f"{swallow_assets2}/20251008_133418.jpg": "",
         f"{swallow_assets2}/20251008_124129.jpg": "",
@@ -34,8 +36,6 @@ items = ImageItems(
         f"{swallow_designs}/kicad/swallow/swallow-3d.png": "",
         f"{swallow_designs}/kicad/swallow/swallow-3d-back.png": "",
         f"{swallow_designs}/kicad/swallow/swallow-pcb.png": "",
-        f"{swallow_assets2}/20251018_133202.jpg": "",
-        f"{swallow_assets2}/20251018_133349.jpg": "",
     }
 )
 
