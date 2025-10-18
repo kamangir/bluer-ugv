@@ -44,6 +44,11 @@ docs = [
                     "marquee": f"{rangin_mechanical_design}/robot-90-2.png?raw=true",
                     "url": f"{rangin_mechanical_design}/robot-90.stl",
                 },
+                {
+                    "name": "90c (curved)",
+                    "marquee": f"{rangin_mechanical_design}/robot-90c.png?raw=true",
+                    "url": f"{rangin_mechanical_design}/robot-90c.stl",
+                },
             ]
         ),
     },
