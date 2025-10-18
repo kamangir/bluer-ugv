@@ -1,5 +1,8 @@
 import threading
 from typing import Union, Dict
+import time
+
+from bluer_options import string
 
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.steering import (
@@ -15,6 +18,9 @@ class ClassicalSetPoint:
     ):
         self.speed = 0
         self.steering = 0
+
+        self.expiry = time.time()
+
         self.started = False
 
         self.leds = leds
@@ -51,17 +57,34 @@ class ClassicalSetPoint:
             logger.error(f"{self.__class__.__name__}.get: {what} not found.")
             return 0
 
+    def check_expiry(
+        self,
+        log: bool = True,
+    ):
+        with self._lock:
+            if self.expiry > time.time():
+                if log:
+                    logger.info("setpoint expired.")
+
+            self.put(
+                what="steering",
+                value=0,
+                log=False,
+            )
+
     def put(
         self,
         value: Union[int, bool, Dict[str, Union[int, bool]]],
         what: str = "all",
         log: bool = False,
+        expires_in: float = 0,
     ):
         with self._lock:
             if what == "all":
                 self.speed = min(100, max(-100, int(value["speed"])))
                 self.started = bool(value["started"])
                 self.steering = min(100, max(-100, int(value["steering"])))
+                self.expiry = time.time() + expires_in
                 return
 
             if what == "speed":
@@ -88,11 +111,17 @@ class ClassicalSetPoint:
 
             if what == "steering":
                 self.steering = min(100, max(-100, int(value)))
+                self.expiry = time.time() + expires_in
                 if log:
                     logger.info(
-                        "{}.put: steering={}".format(
+                        "{}.put: steering={}, expires in {}".format(
                             self.__class__.__name__,
                             self.steering,
+                            string.pretty_duration(
+                                expires_in,
+                                largest=True,
+                                short=True,
+                            ),
                         )
                     )
                 return

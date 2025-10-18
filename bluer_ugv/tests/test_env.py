@@ -21,6 +21,9 @@ def test_bluer_ugv_env():
     assert isinstance(env.BLUER_UGV_SWALLOW_STEERING_SETPOINT, int)
     assert env.BLUER_UGV_SWALLOW_STEERING_SETPOINT > 0
 
+    assert isinstance(env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY, float)
+    assert env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY > 0
+
     assert isinstance(env.BLUER_UGV_MOUSEPAD_ENABLED, int)
 
     for object_name in [
