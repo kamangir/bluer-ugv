@@ -27,6 +27,7 @@ docs = [
     },
     {
         "path": "../docs/rangin/mechanical.md",
+        "cols": 2,
         "items": Items(
             [
                 {
