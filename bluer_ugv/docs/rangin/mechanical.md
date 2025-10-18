@@ -22,6 +22,7 @@
                 - 260 mm x 900 mm x 0.5 mm
                 - 2 x 120 mm x 900 mm x 0.5
 
-|   |   |   |
-| --- | --- | --- |
-| [`arzhang`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl)  | [`90`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl)  | [`90 (without the cage)`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90-2.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl)  |
+|   |   |
+| --- | --- |
+| [`arzhang`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.stl)  | [`90`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl)  |
+| [`90 (without the cage)`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90-2.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90.stl)  | [`90c (curved)`](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90c.stl) [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90c.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot-90c.stl)  |
