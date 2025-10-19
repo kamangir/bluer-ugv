@@ -100,11 +100,7 @@ class ClassicalKeyboard:
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         else:
-            self.setpoint.put(
-                what="steering",
-                value=0,
-                log=False,
-            )
+            self.setpoint.check_steering_expiry()
 
         # debug mode
         if keyboard.is_pressed("b"):

@@ -48,15 +48,18 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         assert super().initialize()
 
-        assert storage.download(
+        if not storage.download(
             env.BLUER_UGV_SWALLOW_YOLO_MODEL,
             policy=DownloadPolicy.DOESNT_EXIST,
-        )
+        ):
+            logger.error("cannot download the model.")
+
         success, self.predictor = YoloPredictor.load(
             object_name=env.BLUER_UGV_SWALLOW_YOLO_MODEL,
             image_size=BLUER_SBC_CAMERA_WIDTH,
         )
-        assert success
+        if not success:
+            logger.error("cannot create the predictor.")
 
         self.running = True
         self.thread = threading.Thread(target=self.loop, daemon=True)
@@ -78,9 +81,10 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         super().cleanup()
 
-        assert self.dataset.save(
+        if not self.dataset.save(
             verbose=True,
-        )
+        ):
+            logger.error("cannot save the dataset.")
 
         if self.dataset.empty:
             return
@@ -156,12 +160,14 @@ class ClassicalYoloCamera(ClassicalCamera):
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
                 log=True,
+                steering_expires_in=env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY,
             )
         else:
             self.setpoint.put(
                 what="steering",
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
                 log=True,
+                steering_expires_in=env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY,
             )
 
         return True
