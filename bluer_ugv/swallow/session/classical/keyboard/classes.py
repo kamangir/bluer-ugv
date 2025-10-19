@@ -135,9 +135,6 @@ class ClassicalKeyboard:
             self.special_key = True
             logger.info("🪄 special key enabled.")
 
-        if keyboard.is_pressed("z"):
-            self.keys.is_full()
-
         if self.special_key:
             self.leds.flash_all()
 

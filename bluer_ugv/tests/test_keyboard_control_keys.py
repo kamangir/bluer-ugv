@@ -5,18 +5,15 @@ from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
 
 @pytest.mark.parametrize(
     [
-        "is_full",
+        "is_numpad",
     ],
     [
         [True],
         [False],
     ],
 )
-def test_keyboard_control_keys(is_full: bool):
-    keys = ControlKeys()
-
-    if is_full:
-        keys.is_full()
+def test_keyboard_control_keys(is_numpad: bool):
+    keys = ControlKeys(is_numpad=is_numpad)
 
     # ---
 

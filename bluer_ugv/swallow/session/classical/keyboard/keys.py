@@ -1,11 +1,16 @@
 from typing import Dict, Tuple
 
+from bluer_sbc.env import BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD
+
 from bluer_ugv.logger import logger
 
 
 class ControlKeys:
-    def __init__(self):
-        self.is_numpad = True
+    def __init__(
+        self,
+        is_numpad: bool = BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD == 0,
+    ):
+        self.is_numpad = is_numpad
 
         self._keys: Dict[str, Tuple[str, str]] = {
             "ultrasonic off": ("n", "-"),
@@ -50,13 +55,6 @@ class ControlKeys:
 
     def get(self, event: str) -> str:
         return self._keys[event][int(self.is_numpad)]
-
-    def is_full(self):
-        if not self.is_numpad:
-            return
-
-        self.is_numpad = False
-        logger.info("full keyboard detected.")
 
     @property
     def special_keys(self) -> Dict[str, str]:

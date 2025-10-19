@@ -5,6 +5,8 @@ function bluer_ugv_swallow_env_set() {
 
     if [[ "$var_name" == "steering" ]]; then
         var_name=BLUER_SBC_SWALLOW_HAS_STEERING
+    elif [[ "$var_name" == "full_keyboard" ]]; then
+        var_name=BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD
     else
         bluer_ai_log_error "$var_name: var not found."
         return 1

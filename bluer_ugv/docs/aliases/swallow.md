@@ -49,9 +49,10 @@
 @swallow \
 	env \
 	set \
-	steering \
+	full_keyboard | steering \
 	0 | 1
  . set env.
+   full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD
    steering: BLUER_SBC_SWALLOW_HAS_STEERING
 ```
 

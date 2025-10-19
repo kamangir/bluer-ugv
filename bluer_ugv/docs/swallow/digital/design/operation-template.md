@@ -6,7 +6,11 @@ keys:::
 
 *: special key.
 
-> ℹ️ press `z` to enable full keyboard.
+to enable full keyboard:
+
+```bash
+@swallow env set full_keyboard 1
+```
 
 items:::
 
