@@ -12,6 +12,9 @@ to enable full keyboard:
 @swallow env set full_keyboard 1
 ```
 
+the range of numpad is ~10-20 m range, noticeably lower than that of the full keyboard, which is ~50 m, see [village-6](../../../arzhang/validation/village-6.md) for details.
+
+
 items:::
 
 ## leds

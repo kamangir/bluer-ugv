@@ -30,6 +30,9 @@ to enable full keyboard:
 @swallow env set full_keyboard 1
 ```
 
+the range of numpad is ~10-20 m range, noticeably lower than that of the full keyboard, which is ~50 m, see [village-6](../../../arzhang/validation/village-6.md) for details.
+
+
 |   |   |
 | --- | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121811.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121811.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121842.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121842.jpg?raw=true) |
