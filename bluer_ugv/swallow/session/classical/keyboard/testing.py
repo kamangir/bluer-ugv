@@ -14,7 +14,7 @@ def test(list_of_keys: str = "") -> bool:
     try:
         while True:
             for key in list_of_keys:
-                if keyboard.is_pressed("a"):
+                if keyboard.is_pressed(key):
                     logger.info(f"{key} is pressed.")
     except KeyboardInterrupt:
         logger.info("^C detected.")
