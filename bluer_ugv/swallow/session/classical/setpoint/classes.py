@@ -71,7 +71,6 @@ class ClassicalSetPoint:
         self.put(
             what="steering",
             value=0,
-            log=False,
         )
 
     def put(
