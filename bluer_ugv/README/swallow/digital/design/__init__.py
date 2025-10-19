@@ -21,9 +21,11 @@ docs = (
         },
         {
             "path": "../docs/swallow/digital/design/operation.md",
+            "cols": 2,
             "items": ImageItems(
                 {
-                    f"{swallow_assets2}/20251005_113232.jpg": "",
+                    f"{swallow_assets2}/20251019_121811.jpg": "",
+                    f"{swallow_assets2}/20251019_121842.jpg": "",
                 }
             ),
             "macros": {

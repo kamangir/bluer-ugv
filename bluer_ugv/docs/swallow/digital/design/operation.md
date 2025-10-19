@@ -30,9 +30,9 @@ to enable full keyboard:
 @swallow env set full_keyboard 1
 ```
 
-|   |
-| --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251005_113232.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251005_113232.jpg?raw=true) |
+|   |   |
+| --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121811.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121811.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121842.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121842.jpg?raw=true) |
 
 ## leds
     - green: control loop.
