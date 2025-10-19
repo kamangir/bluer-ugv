@@ -4,8 +4,8 @@
 
 | event | full keyboard | numpad |
 |-|-|-|
- | debug off | b | 9 | 
- | debug on | v | 7 | 
+ | debug off | v | 9 | 
+ | debug on | b | 7 | 
  | exit | *i | *7 | 
  | mode = action | g | 1 | 
  | mode = none | y | 5 | 

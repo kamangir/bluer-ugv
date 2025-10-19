@@ -21,8 +21,8 @@ class ControlKeys:
         self._keys: Dict[str, Tuple[str, str]] = {
             "ultrasonic off": ("n", "-"),
             "ultrasonic on": ("m", "+"),
-            "debug off": ("b", "9"),
-            "debug on": ("v", "7"),
+            "debug off": ("v", "9"),
+            "debug on": ("b", "7"),
             "mode = none": ("y", "5"),
             "mode = action": ("g", "1"),
             "mode = training": ("t", "3"),
