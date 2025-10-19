@@ -55,6 +55,17 @@
    steering: BLUER_SBC_SWALLOW_HAS_STEERING
 ```
 
+## keyboard
+
+```bash
+@swallow \
+	keyboard \
+	test \
+	[dryrun] \
+	[--keys 1234567890-+/.]
+ . test keyboard.
+```
+
 ## ultrasonic-sensor
 
 ```bash

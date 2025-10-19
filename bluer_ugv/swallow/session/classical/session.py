@@ -13,7 +13,7 @@ from bluer_ugv.swallow.session.classical.camera import (
     ClassicalYoloCamera,
 )
 from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
-from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
 from bluer_ugv.swallow.session.classical.motor import (
