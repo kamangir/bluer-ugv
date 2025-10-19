@@ -13,7 +13,7 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
 )
-from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
