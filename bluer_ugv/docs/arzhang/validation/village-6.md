@@ -50,7 +50,7 @@ loop frequency (Hz): 242.58
 
 ## observations
 
-- the range of numpad is ~10-20 m range, noticeably lower than that of the full keyboard, which is ~50 m. 
+- the range of numpad is ~10-20 m, noticeably lower than that of the full keyboard, which is ~50 m. 
 
 ---
 
