@@ -48,7 +48,8 @@ loop frequency (Hz): metadata:::get:::arzhang2_object:::loop_frequency
 | assets:::get:::arzhang1_object/ultrasonic-sensor-detections.gif | assets:::get:::arzhang2_object/ultrasonic-sensor-detections.gif |
 | assets:::get:::arzhang1_object/ultrasonic-sensor-state.png | assets:::get:::arzhang2_object/ultrasonic-sensor-state.png |
 | assets:::get:::arzhang1_object/ultrasonic-sensor-distance-mm.png | assets:::get:::arzhang2_object/ultrasonic-sensor-distance-mm.png |
-| assets:::get:::arzhang1_debug_object/get:::arzhang1_debug_object.gif | assets:::get:::arzhang2_debug_object/get:::arzhang2_debug_object.gif |
+
+assets:::get:::debug_object/get:::arzhang1_debug_object.gif
 
 ## observations
 
