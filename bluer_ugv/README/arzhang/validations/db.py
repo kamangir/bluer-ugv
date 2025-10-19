@@ -120,6 +120,24 @@ dict_of_validations = {
             },
         ),
     },
+    "village-6": {
+        "order": 7,
+        "ugv_name": ["arzhang", "arzhang2"],
+        "marquee": assets_url(
+            suffix="{object_name}/{object_name}.gif".format(
+                object_name="swallow-debug-2025-10-19-14-14-23-ectn97"
+            )
+        ),
+        "items": ImageItems(
+            {
+                f"{arzhang_assets2}/20251019_141351.jpg": "",
+                f"{arzhang_assets2}/20251019_141455.jpg": "",
+                f"{arzhang_assets2}/20251019_142031.jpg": "",
+                f"{arzhang_assets2}/20251019_142602.jpg": "",
+                f"{arzhang_assets2}/20251019_142055_1.gif": "",
+            },
+        ),
+    },
     "template": {
         "ugv_name": "template",
         "marquee": "template.jpg",
