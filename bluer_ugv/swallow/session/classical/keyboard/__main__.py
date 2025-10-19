@@ -24,7 +24,7 @@ args = parser.parse_args()
 
 success = False
 if args.task == "test":
-    success = test(keys=args.keys)
+    success = test(list_of_keys=args.keys)
 else:
     success = None
 
