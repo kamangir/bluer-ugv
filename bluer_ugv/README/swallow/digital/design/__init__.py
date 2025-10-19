@@ -8,6 +8,7 @@ from bluer_ugv.README.swallow.consts import (
 )
 from bluer_ugv.designs.swallow.parts import dict_of_parts
 from bluer_ugv.README.swallow.digital.design import mechanical, ultrasonic_sensor
+from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
 
 
 docs = (
@@ -25,6 +26,9 @@ docs = (
                     f"{swallow_assets2}/20251005_113232.jpg": "",
                 }
             ),
+            "macros": {
+                "keys:::": ControlKeys.as_table(),
+            },
         },
         {
             "path": "../docs/swallow/digital/design/parts.md",
