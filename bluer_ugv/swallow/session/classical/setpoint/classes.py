@@ -122,6 +122,7 @@ class ClassicalSetPoint:
                                 expires_in,
                                 largest=True,
                                 short=True,
+                                include_ms=True,
                             ),
                         )
                     )
