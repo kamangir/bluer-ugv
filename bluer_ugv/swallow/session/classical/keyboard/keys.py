@@ -49,7 +49,7 @@ class ControlKeys:
         )
 
     def get(self, event: str) -> str:
-        return self._keys.get[event][int(self.is_numpad)]
+        return self._keys[event][int(self.is_numpad)]
 
     def is_full(self):
         if not self.is_numpad:
