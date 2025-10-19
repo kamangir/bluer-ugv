@@ -78,7 +78,7 @@ class ClassicalSetPoint:
         self,
         value: Union[int, bool, Dict[str, Union[int, bool]]],
         what: str = "all",
-        log: bool = False,
+        log: bool = True,
         expires_in: float = 0,
     ):
         with self._lock:
