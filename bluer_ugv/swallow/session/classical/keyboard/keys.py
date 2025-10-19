@@ -26,7 +26,7 @@ class ControlKeys:
     @staticmethod
     def as_table():
         keys = ControlKeys()
-        table = keys._keys.copy()
+        table = keys._keys.copy()  # pylint: disable=protected-access
 
         for is_numpad in [False, True]:
             keys.is_numpad = is_numpad
