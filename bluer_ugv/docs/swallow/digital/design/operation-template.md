@@ -6,6 +6,8 @@ keys:::
 
 *: special key.
 
+> ℹ️ press `z` to enable full keyboard.
+
 items:::
 
 ## leds

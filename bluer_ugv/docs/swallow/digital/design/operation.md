@@ -24,6 +24,8 @@
 
 *: special key.
 
+press `z` to enable full keyboard.
+
 |   |
 | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251005_113232.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251005_113232.jpg?raw=true) |
