@@ -9,7 +9,9 @@ function bluer_ugv_swallow_keyboard() {
         return
     fi
 
-    python3 -m bluer_ugv.swallow.session.classical.keyboard "$@"
+    sudo -E $(which python3) \
+        -m bluer_ugv.swallow.session.classical.keyboard \
+        "$@"
 }
 
 bluer_ai_source_caller_suffix_path /keyboard
