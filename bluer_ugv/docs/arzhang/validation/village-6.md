@@ -46,7 +46,7 @@ loop frequency (Hz): 242.58
 | ![image](https://github.com/kamangir/assets/blob/main/2025-10-19-14-16-36-tunrlm/ultrasonic-sensor-state.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-10-19-14-16-07-75yxbw/ultrasonic-sensor-state.png?raw=true) |
 | ![image](https://github.com/kamangir/assets/blob/main/2025-10-19-14-16-36-tunrlm/ultrasonic-sensor-distance-mm.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-10-19-14-16-07-75yxbw/ultrasonic-sensor-distance-mm.png?raw=true) |
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-10-19-14-14-23-ectn97/swallow-debug-2025-10-10-08-49-45-yk18ei.gif?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-10-19-14-14-23-ectn97/swallow-debug-2025-10-19-14-14-23-ectn97.gif?raw=true)
 
 ## observations
 
