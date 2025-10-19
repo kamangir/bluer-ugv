@@ -15,11 +15,16 @@ parser.add_argument(
     type=str,
     help="test",
 )
+parser.add_argument(
+    "--keys",
+    type=str,
+    default=" ",
+)
 args = parser.parse_args()
 
 success = False
 if args.task == "test":
-    success = test()
+    success = test(keys=args.keys)
 else:
     success = None
 
