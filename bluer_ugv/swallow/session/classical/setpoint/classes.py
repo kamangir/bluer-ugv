@@ -63,6 +63,12 @@ class ClassicalSetPoint:
     ):
         with self._lock:
             if self.expiry < time.time():
+                if log:
+                    logger.info(
+                        "setpoint will expire in {}.".format(
+                            string.pretty_duration(time.time() - self.expiry)
+                        )
+                    )
                 return
 
         if log:
