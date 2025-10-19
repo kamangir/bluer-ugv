@@ -31,7 +31,10 @@ def test_keyboard_control_keys(is_full: bool):
 
     # ---
 
-    for keyword, tuple_of_keys in keys._keys.items():
+    for (
+        keyword,
+        tuple_of_keys,
+    ) in keys._keys.items():  # pylint: disable=protected-access
         assert isinstance(keyword, str)
 
         assert isinstance(tuple_of_keys, tuple)
@@ -43,7 +46,8 @@ def test_keyboard_control_keys(is_full: bool):
     # ---
 
     all_keys = [
-        tuple_of_keys[int(keys.is_numpad)] for tuple_of_keys in keys._keys.values()
+        tuple_of_keys[int(keys.is_numpad)]
+        for tuple_of_keys in keys._keys.values()  # pylint: disable=protected-access
     ]
     assert len(all_keys) == len(set(all_keys)), "repeated key"
 
