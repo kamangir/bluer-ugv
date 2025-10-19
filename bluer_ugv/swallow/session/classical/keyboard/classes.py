@@ -5,18 +5,12 @@ from typing import Any, Dict
 from bluer_sbc.session.functions import reply_to_bash
 from bluer_algo.socket.classes import DEV_HOST
 
-from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
-from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
+from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv import env
 from bluer_ugv.logger import logger
-
-bash_keys = {
-    "i": "exit",
-    "o": "shutdown",
-    "p": "reboot",
-    "u": "update",
-}
 
 
 class ClassicalKeyboard:
@@ -25,14 +19,9 @@ class ClassicalKeyboard:
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
     ):
-        logger.info(
-            "{}: {}".format(
-                self.__class__.__name__,
-                ", ".join(
-                    [f"{key}:{action}" for key, action in bash_keys.items()],
-                ),
-            )
-        )
+        logger.info(self.__class__.__name__)
+
+        self.keys = ControlKeys()
 
         self.leds = leds
 
@@ -62,20 +51,20 @@ class ClassicalKeyboard:
 
         # bash keys
         if self.special_key:
-            for key, event in bash_keys.items():
+            for key, event in self.keys.special_keys.items():
                 if keyboard.is_pressed(key):
                     reply_to_bash(event)
                     return False
 
         # other keys
         for key, func in {
-            " ": self.setpoint.stop,
+            self.keys.get("stop"): self.setpoint.stop,
             "x": self.setpoint.start,
-            "s": lambda: self.setpoint.put(
+            self.keys.get("speed backward"): lambda: self.setpoint.put(
                 what="speed",
                 value=self.setpoint.get(what="speed") - 10,
             ),
-            "w": lambda: self.setpoint.put(
+            self.keys.get("speed forward"): lambda: self.setpoint.put(
                 what="speed",
                 value=self.setpoint.get(what="speed") + 10,
             ),
@@ -85,14 +74,14 @@ class ClassicalKeyboard:
                 func()
 
         # steering
-        if keyboard.is_pressed("a"):
+        if keyboard.is_pressed(self.keys.get("steer left")):
             self.special_key = False
             self.last_key = "a"
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
-        elif keyboard.is_pressed("d"):
+        elif keyboard.is_pressed(self.keys.get("steer right")):
             self.special_key = False
             self.last_key = "d"
             self.setpoint.put(
@@ -103,12 +92,12 @@ class ClassicalKeyboard:
             self.setpoint.check_steering_expiry()
 
         # debug mode
-        if keyboard.is_pressed("b"):
+        if keyboard.is_pressed(self.keys.get("debug on")):
             self.special_key = False
             self.set("debug_mode", True)
             logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
 
-        if keyboard.is_pressed("v"):
+        if keyboard.is_pressed(self.keys.get("debug off")):
             self.special_key = False
             self.set("debug_mode", False)
             logger.info("debug disabled.")
@@ -116,14 +105,14 @@ class ClassicalKeyboard:
         # mode
         mode = self.get("mode", OperationMode.NONE)
         updated_mode = mode
-        if keyboard.is_pressed("y"):
+        if keyboard.is_pressed(self.keys.get("mode = none")):
             updated_mode = OperationMode.NONE
 
-        if keyboard.is_pressed("t"):
-            updated_mode = OperationMode.TRAINING
-
-        if keyboard.is_pressed("g"):
+        if keyboard.is_pressed(self.keys.get("mode = action")):
             updated_mode = OperationMode.ACTION
+
+        if keyboard.is_pressed(self.keys.get("mode = training")):
+            updated_mode = OperationMode.TRAINING
 
         if mode != updated_mode:
             self.set("mode", updated_mode)
@@ -131,18 +120,18 @@ class ClassicalKeyboard:
             self.special_key = False
 
         # ultrasound
-        if keyboard.is_pressed("n"):
+        if keyboard.is_pressed(self.keys.get("ultrasonic off")):
             self.set("ultrasound_enabled", False)
-            logger.info("ultrasound: disabled")
+            logger.info("ultrasound: off")
             self.special_key = False
 
-        if keyboard.is_pressed("m"):
+        if keyboard.is_pressed(self.keys.get("ultrasonic on")):
             self.set("ultrasound_enabled", True)
-            logger.info("ultrasound: enabled")
+            logger.info("ultrasound: on")
             self.special_key = False
 
         # special key
-        if keyboard.is_pressed("z") and not self.special_key:
+        if keyboard.is_pressed(self.keys.get("special key")) and not self.special_key:
             self.special_key = True
             logger.info("🪄 special key enabled.")
 

@@ -36,6 +36,7 @@ setup(
         f"{NAME}.swallow.session",
         f"{NAME}.swallow.session.classical",
         f"{NAME}.swallow.session.classical.camera",
+        f"{NAME}.swallow.session.classical.keyboard",
         f"{NAME}.swallow.session.classical.motor",
         f"{NAME}.swallow.session.classical.setpoint",
         f"{NAME}.swallow.session.classical.ultrasonic_sensor",

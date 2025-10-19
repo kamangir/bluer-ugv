@@ -1,31 +1,25 @@
 title:::
 
-- keyboard:
-    -  a: steer left.
-    -  b: debug on.
-    -  d: steer right.
-    -  g: mode = prediction.
-    - zi: exit.
-    -  m: ultrasonic sensor disabled.
-    -  n: ultrasonic sensor enabled.
-    - zo: shutdown.
-    -  s: speed backward.
-    - zp: reboot.
-    -  t: mode = train.
-    - zu: update.
-    -  v: debug off. 
-    -  w: speed forward.
-    -  y: mode = none.
-    - space: stop.
+## keyboard
+
+keys:::
+
+*: special key.
+
+to enable full keyboard:
+
+```bash
+@swallow env set full_keyboard 1
+```
 
 items:::
 
-- leds:
+## leds
     - green: control loop.
     - red:
         - flashing:
             - motor update.
-            - prediction / training.
+            - action / training.
             - release the push button to update.
             - setpoint update.
         - solid: release the push button to shutdown.
@@ -34,13 +28,20 @@ items:::
         - mousepad activity.
     - blue: ultrasonic sensor echo.
 
-- mouse pad: 
+details:::mouse pad (obsolete)
+## mouse pad
+
+⚠️ obsolete
+
     - move your finger:
         - vertically: adjust speed.
         - horizontally: set steering.
     - double click: stop.
 
-- push button:
+details:::
+
+## push button
+
     - hold for 5 seconds: update.
     - hold for 10 seconds: shutdown.
     - hold for > 15 seconds: skip.

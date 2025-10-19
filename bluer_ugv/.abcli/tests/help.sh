@@ -13,12 +13,16 @@ function test_bluer_ugv_help() {
         "@swallow dataset list" \
         "@swallow dataset upload" \
         \
+        "@swallow debug" \
+        \
         "@swallow env" \
         "@swallow env cp" \
         "@swallow env list" \
         "@swallow env set" \
         \
-        "@swallow debug" \
+        "@swallow keyboard" \
+        "@swallow keyboard test" \
+        \
         "@swallow select_target" \
         \
         "@swallow ultrasonic" \

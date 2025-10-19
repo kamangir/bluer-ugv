@@ -4,7 +4,7 @@ from bluer_algo.socket.classes import SocketComm, DEV_HOST
 from bluer_sbc.imager.camera import instance as camera
 from bluer_sbc.env import BLUER_SBC_ENV
 
-from bluer_ugv.swallow.session.classical.keyboard import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
