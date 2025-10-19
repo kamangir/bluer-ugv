@@ -66,7 +66,12 @@ class ClassicalSetPoint:
                 if log:
                     logger.info(
                         "setpoint will expire in {}.".format(
-                            string.pretty_duration(time.time() - self.expiry)
+                            string.pretty_duration(
+                                time.time() - self.expiry,
+                                largest=True,
+                                short=True,
+                                include_ms=True,
+                            )
                         )
                     )
                 return
