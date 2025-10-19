@@ -11,6 +11,12 @@ class ControlKeys:
         is_numpad: bool = BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD == 0,
     ):
         self.is_numpad = is_numpad
+        logger.info(
+            "{}: {}".format(
+                self.__class__.__name__,
+                "numpad" if self.is_numpad else "full",
+            )
+        )
 
         self._keys: Dict[str, Tuple[str, str]] = {
             "ultrasonic off": ("n", "-"),
