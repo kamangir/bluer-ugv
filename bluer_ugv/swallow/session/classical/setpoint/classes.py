@@ -19,7 +19,7 @@ class ClassicalSetPoint:
         self.speed = 0
         self.steering = 0
 
-        self.expiry = time.time()
+        self.steering_expiry = time.time()
 
         self.started = False
 
@@ -57,17 +57,20 @@ class ClassicalSetPoint:
             logger.error(f"{self.__class__.__name__}.get: {what} not found.")
             return 0
 
-    def check_expiry(
+    def check_steering_expiry(
         self,
         log: bool = True,
     ):
         with self._lock:
-            if self.expiry > time.time():
+            if self.steering == 0:
+                return
+
+            if self.steering_expiry > time.time():
                 if log:
                     logger.info(
                         "setpoint will expire in {}.".format(
                             string.pretty_duration(
-                                self.expiry - time.time(),
+                                self.steering_expiry - time.time(),
                                 largest=True,
                                 short=True,
                                 include_ms=True,
@@ -89,14 +92,14 @@ class ClassicalSetPoint:
         value: Union[int, bool, Dict[str, Union[int, bool]]],
         what: str = "all",
         log: bool = True,
-        expires_in: float = 0,
+        steering_expires_in: float = 0,
     ):
         with self._lock:
             if what == "all":
                 self.speed = min(100, max(-100, int(value["speed"])))
                 self.started = bool(value["started"])
                 self.steering = min(100, max(-100, int(value["steering"])))
-                self.expiry = time.time() + expires_in
+                self.steering_expiry = time.time() + steering_expires_in
                 return
 
             if what == "speed":
@@ -123,14 +126,14 @@ class ClassicalSetPoint:
 
             if what == "steering":
                 self.steering = min(100, max(-100, int(value)))
-                self.expiry = time.time() + expires_in
+                self.steering_expiry = time.time() + steering_expires_in
                 if log:
                     logger.info(
                         "{}.put: steering={}, expires in {}".format(
                             self.__class__.__name__,
                             self.steering,
                             string.pretty_duration(
-                                expires_in,
+                                steering_expires_in,
                                 largest=True,
                                 short=True,
                                 include_ms=True,
