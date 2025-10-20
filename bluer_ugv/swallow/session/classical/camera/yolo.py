@@ -10,6 +10,7 @@ from bluer_sbc.imager.camera import instance as camera
 from bluer_sbc.env import BLUER_SBC_CAMERA_WIDTH
 from bluer_algo.yolo.dataset.classes import YoloDataset
 from bluer_algo.yolo.model.predictor import YoloPredictor
+from bluer_algo.socket.message import SocketMessage
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
@@ -145,7 +146,13 @@ class ClassicalYoloCamera(ClassicalCamera):
             return success
 
         if debug_mode:
-            if not self.send_debug_data(metadata["annotated_image"]):
+            if not self.send_debug_data(
+                SocketMessage(
+                    {
+                        "image": metadata["annotated_image"],
+                    }
+                )
+            ):
                 logger.warning("failed to send debug data.")
 
         if not metadata["detections"]:

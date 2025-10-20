@@ -7,8 +7,8 @@ from bluer_options import string
 from bluer_objects import file
 from bluer_objects import objects
 from bluer_objects.graphics.gif import generate_animated_gif
-from bluer_algo.socket.classes import SocketComm
-from bluer_algo.tracker.classes.target import Target
+from bluer_algo.socket.connection import SocketConnection
+from bluer_algo.socket.message import SocketMessage
 
 from bluer_ugv import NAME
 from bluer_ugv.logger import logger
@@ -31,7 +31,7 @@ def debug(
         )
     )
 
-    socket = SocketComm.listen_on()
+    socket = SocketConnection.listen_on()
 
     title = "debug..."
 
@@ -46,9 +46,15 @@ def debug(
             cv2.imshow(title, np.flip(image, axis=2))
             cv2.waitKey(1)
 
-            success, image = socket.receive_data(np.ndarray)
+            success, message = socket.receive_data(SocketMessage)
             if not success:
                 break
+
+            assert isinstance(message, SocketMessage)
+
+            logger.info(f"message from {message.hostname}.")
+
+            image = message.payload.get("image", image)
 
             if save_images:
                 filename = objects.path_of(
