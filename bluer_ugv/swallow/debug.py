@@ -62,7 +62,7 @@ def debug(
                 logger.warning("no image.")
                 continue
 
-            dict_of_images[message.hostname] = message.payload.get["image"]
+            dict_of_images[message.hostname] = message.payload["image"]
 
             list_of_images = [image for _, image in sorted(dict_of_images.items())]
 
