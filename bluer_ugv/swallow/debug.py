@@ -64,9 +64,9 @@ def debug(
 
             dict_of_images[message.hostname] = message.payload["image"]
 
-            list_of_images = [image for _, image in sorted(dict_of_images.items())]
-
-            image = stitch_images(list_of_images)
+            image = stitch_images(
+                [image for _, image in sorted(dict_of_images.items())]
+            )
 
             if save_images:
                 filename = objects.path_of(
