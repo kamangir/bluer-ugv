@@ -3,7 +3,7 @@ import threading
 from typing import Any, Dict
 
 from bluer_sbc.session.functions import reply_to_bash
-from bluer_algo.socket.classes import DEV_HOST
+from bluer_algo.socket.connection import DEV_HOST
 
 from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds

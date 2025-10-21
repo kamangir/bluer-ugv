@@ -2,7 +2,7 @@ from blueness import module
 import numpy as np
 
 from bluer_options.terminal import hr
-from bluer_algo.socket.classes import SocketComm
+from bluer_algo.socket.connection import SocketConnection
 from bluer_algo.tracker.classes.target import Target
 
 from bluer_ugv import NAME
@@ -26,7 +26,7 @@ def select_target(
 
     try:
         while loop:
-            socket = SocketComm.listen_on()
+            socket = SocketConnection.listen_on()
             success, image = socket.receive_data(np.ndarray)
             if not success:
                 return success
@@ -38,7 +38,7 @@ def select_target(
             if not success:
                 return success
 
-            socket = SocketComm.connect_to(host)
+            socket = SocketConnection.connect_to(host)
             if not socket.send_data(track_window):
                 return False
 
