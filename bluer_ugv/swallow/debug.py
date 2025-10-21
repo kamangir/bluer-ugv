@@ -1,11 +1,12 @@
 from blueness import module
 import numpy as np
 import cv2
-from typing import List
+from typing import List, Dict
 
 from bluer_options import string
 from bluer_objects import file
 from bluer_objects import objects
+from bluer_objects.logger.stitch import stitch_images
 from bluer_objects.graphics.gif import generate_animated_gif
 from bluer_algo.socket.connection import SocketConnection
 from bluer_algo.socket.message import SocketMessage
@@ -38,7 +39,10 @@ def debug(
     cv2.namedWindow(title)
     logger.info("Ctrl+C to exit...")
 
-    image = np.zeros((480, 640, 3), np.uint8)
+    blank_image = np.zeros((480, 640, 3), np.uint8)
+
+    image = blank_image.copy()
+    dict_of_images: Dict[str, np.ndarray] = {}
 
     list_of_images: List[str] = []
     try:
@@ -54,7 +58,15 @@ def debug(
 
             logger.info(f"message from {message.hostname}.")
 
-            image = message.payload.get("image", image)
+            if "image" not in message.payload:
+                logger.warning("no image.")
+                continue
+
+            dict_of_images[message.hostname] = message.payload.get["image"]
+
+            list_of_images = [image for _, image in sorted(dict_of_images.items())]
+
+            image = stitch_images(list_of_images)
 
             if save_images:
                 filename = objects.path_of(

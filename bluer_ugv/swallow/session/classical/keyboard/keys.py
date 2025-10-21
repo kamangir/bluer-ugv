@@ -9,14 +9,17 @@ class ControlKeys:
     def __init__(
         self,
         is_numpad: bool = BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD == 0,
+        log: bool = True,
     ):
         self.is_numpad = is_numpad
-        logger.info(
-            "{}: {}".format(
-                self.__class__.__name__,
-                "numpad" if self.is_numpad else "full",
+
+        if log:
+            logger.info(
+                "{}: {}".format(
+                    self.__class__.__name__,
+                    "numpad" if self.is_numpad else "full",
+                )
             )
-        )
 
         self._keys: Dict[str, Tuple[str, str]] = {
             "ultrasonic off": ("n", "-"),
@@ -36,7 +39,7 @@ class ControlKeys:
 
     @staticmethod
     def as_table():
-        keys = ControlKeys()
+        keys = ControlKeys(log=False)
         table = keys._keys.copy()  # pylint: disable=protected-access
 
         for is_numpad in [False, True]:
