@@ -6,5 +6,6 @@ from bluer_ugv.README.rangin.consts import rangin_assets2
 items = ImageItems(
     {
         f"{rangin_assets2}/rangin.png": "",
+        f"{rangin_assets2}/concepts/12.png": "",
     }
 )
