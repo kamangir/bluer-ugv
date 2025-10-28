@@ -24,7 +24,7 @@ items = README.Items(
         },
         {
             "name": "rangin",
-            "marquee": f"{rangin_assets2}/rangin.png",
+            "marquee": f"{rangin_assets2}/concepts/11.png",
             "description": "[swallow](./bluer_ugv/docs/swallow)'s ad robot.",
             "url": "./bluer_ugv/docs/rangin",
         },
