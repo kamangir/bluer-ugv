@@ -32,10 +32,10 @@ items = ImageItems(
         f"{swallow_assets2}/20251008_133418.jpg": "",
         f"{swallow_assets2}/20251008_124129.jpg": "",
         f"{swallow_assets2}/20251008_124932.jpg": "",
-        f"{swallow_designs}/kicad/swallow/swallow.png": f"{swallow_designs}/kicad/swallow/swallow.pdf",
-        f"{swallow_designs}/kicad/swallow/swallow-3d.png": "",
-        f"{swallow_designs}/kicad/swallow/swallow-3d-back.png": "",
-        f"{swallow_designs}/kicad/swallow/swallow-pcb.png": "",
+        f"{swallow_designs}/kicad/swallow/exports/swallow.png": f"{swallow_designs}/kicad/swallow/exports/swallow.pdf",
+        f"{swallow_designs}/kicad/swallow/exports/swallow-3d.png": "",
+        f"{swallow_designs}/kicad/swallow/exports/swallow-3d-back.png": "",
+        f"{swallow_designs}/kicad/swallow/exports/swallow-pcb.png": "",
     }
 )
 
