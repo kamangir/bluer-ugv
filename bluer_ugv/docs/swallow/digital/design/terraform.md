@@ -13,12 +13,17 @@
 @seed swallow_raspbian clipboard
 ```
 
-3. run, 
+3. run,
+```bash
+@bps install
+```
+
+4. run, 
 ```bash
 @swallow env cp navigation
 ```
 
-4. watch for any errors, if none found run,
+3. watch for any errors, if none found run,
 ```bash
 @init; @select; @session start
 ```
