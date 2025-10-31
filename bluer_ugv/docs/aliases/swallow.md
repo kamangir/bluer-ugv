@@ -49,7 +49,7 @@
 @swallow \
 	env \
 	set \
-	full_keyboard | steering \
+	bps | full_keyboard | steering \
 	0 | 1
  . set env.
    bps: BLUER_SBC_SWALLOW_BPS_IS_ON

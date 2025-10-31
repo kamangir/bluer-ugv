@@ -43,7 +43,7 @@ def help_set(
             "@swallow",
             "env",
             "set",
-            "full_keyboard | steering",
+            "bps | full_keyboard | steering",
             "0 | 1",
         ],
         "set env.",
