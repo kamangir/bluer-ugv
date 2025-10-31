@@ -14,7 +14,7 @@ function bluer_ugv_swallow_session() {
         session,host=$abcli_hostname,$BLUER_SBC_SESSION_OBJECT_TAGS
 
     if [[ "$BLUER_SBC_SWALLOW_HAS_BPS" == 1 ]]; then
-        bluer_ai_log "starting bps in the background 🏓"
+        bluer_ai_log "🏓 starting bps in the background"
 
         bluer_ai_eval \
             background,dryrun=$do_dryrun \
