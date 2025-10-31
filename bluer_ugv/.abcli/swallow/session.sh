@@ -37,13 +37,15 @@ function bluer_ugv_swallow_session() {
     local status="$?"
 
     if [[ "$BLUER_SBC_SWALLOW_HAS_BPS" == 1 ]]; then
-        bluer_ai_log "stopping bps 🏓"
+        bluer_ai_log "🏓 stopping bps ..."
 
         bluer_ai_eval dryrun=$do_dryrun \
             bluer_algo_bps \
             loop \
             stop \
             wait
+
+        bluer_ai_log "🏓 bps stopped."
     fi
 
     [[ "$do_upload" == 1 ]] &&
