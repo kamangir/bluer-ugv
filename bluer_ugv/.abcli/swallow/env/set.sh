@@ -4,7 +4,7 @@ function bluer_ugv_swallow_env_set() {
     local var_name=${1:-void}
 
     if [[ "$var_name" == "bps" ]]; then
-        var_name=BLUER_SBC_SWALLOW_BPS_IS_ON
+        var_name=BLUER_SBC_SWALLOW_HAS_BPS
     elif [[ "$var_name" == "full_keyboard" ]]; then
         var_name=BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD
     elif [[ "$var_name" == "steering" ]]; then
