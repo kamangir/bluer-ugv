@@ -13,6 +13,18 @@ function bluer_ugv_swallow_session() {
         $abcli_object_name \
         session,host=$abcli_hostname,$BLUER_SBC_SESSION_OBJECT_TAGS
 
+    if [[ "$BLUER_SBC_SWALLOW_HAS_BPS" == 1 ]]; then
+        bluer_ai_log "starting bps in the background 🏓"
+
+        bluer_ai_eval \
+            background,dryrun=$do_dryrun \
+            bluer_algo_bps \
+            loop \
+            start \
+            upload=$do_upload \
+            $abcli_object_name
+    fi
+
     local sudo_prefix=""
     [[ "$BLUER_AI_SESSION_IS_SUDO" == 1 ]] &&
         sudo_prefix="sudo -E"
@@ -23,6 +35,16 @@ function bluer_ugv_swallow_session() {
         ${task}_session \
         "${@:3}"
     local status="$?"
+
+    if [[ "$BLUER_SBC_SWALLOW_HAS_BPS" == 1 ]]; then
+        bluer_ai_log "stopping bps 🏓"
+
+        bluer_ai_eval dryrun=$do_dryrun \
+            bluer_algo_bps \
+            loop \
+            stop \
+            wait
+    fi
 
     [[ "$do_upload" == 1 ]] &&
         bluer_objects_upload - $abcli_object_name
