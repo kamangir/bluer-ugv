@@ -40,7 +40,7 @@ function bluer_ugv_swallow_session() {
         bluer_ai_log "🏓 stopping bps ..."
 
         chmod 700 \
-            $ABCLI_OBJECT_ROOT/$object_name/metadata.yaml
+            $ABCLI_OBJECT_ROOT/$abcli_object_name/metadata.yaml
 
         bluer_ai_eval dryrun=$do_dryrun \
             bluer_algo_bps \
