@@ -39,7 +39,7 @@ function bluer_ugv_swallow_session() {
     if [[ "$BLUER_SBC_SWALLOW_HAS_BPS" == 1 ]]; then
         bluer_ai_log "🏓 stopping bps ..."
 
-        chmod 700 \
+        sudo chown pi \
             $ABCLI_OBJECT_ROOT/$abcli_object_name/metadata.yaml
 
         bluer_ai_eval dryrun=$do_dryrun \
