@@ -21,7 +21,7 @@ function bluer_ugv_swallow_session() {
             bluer_algo_bps \
             loop \
             start \
-            upload=$do_upload \
+            ~upload \
             $abcli_object_name
     fi
 
