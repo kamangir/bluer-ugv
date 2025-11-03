@@ -23,6 +23,7 @@ from bluer_ugv.swallow.session.classical.motor import (
     ClassicalSteeringMotor,
 )
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.position import ClassicalPosition
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
     ClassicalUltrasonicSensor,
 )
@@ -81,6 +82,8 @@ class ClassicalSession:
             setpoint=self.setpoint,
             leds=self.leds,
         )
+
+        self.position = ClassicalPosition(object_name)
 
         logger.info(
             "wheel arrangement: {} + {}".format(
@@ -163,6 +166,7 @@ class ClassicalSession:
                 self.motor1,
                 self.motor2,
                 self.camera,
+                self.position,
             ]
         )
 
@@ -173,6 +177,7 @@ class ClassicalSession:
             self.keyboard,
             self.push_button,
             self.camera,
+            self.position,
             self.setpoint,
             self.motor1,
             self.motor2,
