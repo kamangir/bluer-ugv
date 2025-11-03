@@ -18,6 +18,8 @@ class ClassicalPosition:
         return self.update()
 
     def update(self) -> bool:
+        self.updated = False
+
         filename = objects.path_of(
             object_name=self.object_name,
             filename="position.yaml",
