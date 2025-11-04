@@ -52,9 +52,9 @@
 	bps | full_keyboard | steering \
 	0 | 1
  . set env.
-   bps: BLUER_SBC_SWALLOW_HAS_BPS
-   full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD
-   steering: BLUER_SBC_SWALLOW_HAS_STEERING
+   bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: 0)
+   full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: 0)
+   steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: 1)
 ```
 
 ## keyboard
