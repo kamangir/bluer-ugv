@@ -1,6 +1,7 @@
 from typing import List
 
-from bluer_options.terminal import show_usage, xtra
+from bluer_options.terminal import show_usage
+from bluer_sbc import env
 
 
 def help_cp(
@@ -48,9 +49,9 @@ def help_set(
         ],
         "set env.",
         {
-            "bps: BLUER_SBC_SWALLOW_HAS_BPS": "",
-            "full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD": "",
-            "steering: BLUER_SBC_SWALLOW_HAS_STEERING": "",
+            f"bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: {env.BLUER_SBC_SWALLOW_HAS_BPS})": "",
+            f"full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: {env.BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD})": "",
+            f"steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: {env.BLUER_SBC_SWALLOW_HAS_STEERING})": "",
         },
         mono=mono,
     )

@@ -21,20 +21,27 @@ title:::
 4. run, 
 ```bash
 @swallow env cp navigation
-```
-
-3. watch for any errors, if none found run,
-```bash
+@swallow env set full_keyboard 1
 @init; @select; @session start
 ```
 now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then press `i`. an dataset should be uploaded that contains a few frames from the camera.
 
 assets:::bluer-ugv/terraform-validation.png
 
-the terraform is complete, shut down the machine,
+5. run,
+```bash
+@swallow env cp yolo
+@swallow env set full_keyboard 1
+@swallow env set bps 1
+@init; @select; @session start
+```
+
+6. the terraform is complete, shut down the machine,
 ```bash
 @host shutdown
 ```
+
+items:::
 
 <details>
 <summary>Ubuntu 64-bit</summary>
@@ -50,5 +57,3 @@ the terraform is complete, shut down the machine,
 @env dot cp swallow driving
 ```
 </details>
-
-items:::

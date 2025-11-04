@@ -21,20 +21,29 @@
 4. run, 
 ```bash
 @swallow env cp navigation
-```
-
-3. watch for any errors, if none found run,
-```bash
+@swallow env set full_keyboard 1
 @init; @select; @session start
 ```
 now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then press `i`. an dataset should be uploaded that contains a few frames from the camera.
 
 ![image](https://github.com/kamangir/assets/blob/main/bluer-ugv/terraform-validation.png?raw=true)
 
-the terraform is complete, shut down the machine,
+5. run,
+```bash
+@swallow env cp yolo
+@swallow env set full_keyboard 1
+@swallow env set bps 1
+@init; @select; @session start
+```
+
+6. the terraform is complete, shut down the machine,
 ```bash
 @host shutdown
 ```
+
+|   |   |   |
+| --- | --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250611_100917.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250611_100917.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/lab.png?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/lab.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/lab2.png?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/lab2.png?raw=true) |
 
 <details>
 <summary>Ubuntu 64-bit</summary>
@@ -50,7 +59,3 @@ the terraform is complete, shut down the machine,
 @env dot cp swallow driving
 ```
 </details>
-
-|   |   |   |
-| --- | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250611_100917.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250611_100917.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/lab.png?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/lab.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/lab2.png?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/lab2.png?raw=true) |
