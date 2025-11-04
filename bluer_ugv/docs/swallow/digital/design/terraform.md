@@ -16,13 +16,12 @@
 3. run,
 ```bash
 @bps install
-@swallow env set full_keyboard 1
-@swallow env set bps 1
 ```
 
 4. run, 
 ```bash
 @swallow env cp navigation
+@swallow env set full_keyboard 1
 @init; @select; @session start
 ```
 now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then press `i`. an dataset should be uploaded that contains a few frames from the camera.
@@ -32,6 +31,8 @@ now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then pres
 5. run,
 ```bash
 @swallow env cp yolo
+@swallow env set full_keyboard 1
+@swallow env set bps 1
 @init; @select; @session start
 ```
 
