@@ -4,12 +4,15 @@ UGV(s): [`arzhang`](../../UGVs/arzhang.md), [`arzhang2`](../../UGVs/arzhang2.md)
 
 
 
-
 <details>
 <summary>publication</summary>
 
 ```bash
+🔥
 ```
+
+</details>
+
 
 ### arzhang
 
@@ -32,7 +35,8 @@ loop frequency (Hz): {}
 
 ## observations
 
-- 🔥
+- one of the back wheels on arzhang broke. -> 📜
+- the on/off switch on arzhang broke -> 📜
 
 ---
 

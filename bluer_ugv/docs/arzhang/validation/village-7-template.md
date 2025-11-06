@@ -5,10 +5,11 @@ UGV(s): ugv_name:::
 set:::arzhang1_object TBA
 set:::arzhang2_object TBA
 
-
 details:::publication
 ```bash
+🔥
 ```
+details:::
 
 ### arzhang
 
@@ -31,7 +32,8 @@ assets:::get:::debug_object/get:::debug_object.gif
 
 ## observations
 
-- 🔥
+- one of the back wheels on arzhang broke. -> 📜
+- the on/off switch on arzhang broke -> 📜
 
 ---
 
