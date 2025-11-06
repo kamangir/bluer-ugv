@@ -9,7 +9,22 @@ UGV(s): [`arzhang`](../../UGVs/arzhang.md), [`arzhang2`](../../UGVs/arzhang2.md)
 
 ```bash
 @ls cloud,objects --prefix 2025-11-06
-🔥
+```
+
+```bash
+runme() {
+    local object_name
+    for object_name in \
+        2025-11-06-10-50-35-myadvn \
+        2025-11-06-10-49-58-denev4 \
+        2025-11-06-10-49-36-koxzf3; do
+        @select $object_name
+        @assets publish extensions=gif+png,push
+        @upload public,zip
+    done
+}
+
+runme
 ```
 
 </details>
@@ -25,7 +40,7 @@ loop frequency (Hz): 190.13
 
 ### arzhang3
 
-loop frequency (Hz): {}
+loop frequency (Hz): 183.64
 
 ---
 
