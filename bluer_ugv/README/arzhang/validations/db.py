@@ -149,7 +149,7 @@ dict_of_validations = {
                 f"{arzhang_assets2}/20251106_111938.jpg": "",
                 f"{arzhang_assets2}/20251106_112045.jpg": "",
                 f"{arzhang_assets2}/20251106_113438.jpg": "",
-                f"{arzhang_assets2}/20251106_114005.jpg": "",
+                f"{arzhang_assets2}/20251106_114005-2.jpg": "",
                 f"{arzhang_assets2}/20251106_114107.jpg": "",
                 f"{arzhang_assets2}/20251106_114629.jpg": "",
                 f"{arzhang_assets2}/20251106_175643.jpg": "",

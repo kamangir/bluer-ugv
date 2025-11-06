@@ -28,8 +28,6 @@ loop frequency (Hz): metadata:::get:::arzhang2_object:::loop_frequency
 | assets:::get:::arzhang1_object/ultrasonic-sensor-state.png | assets:::get:::arzhang2_object/ultrasonic-sensor-state.png |
 | assets:::get:::arzhang1_object/ultrasonic-sensor-distance-mm.png | assets:::get:::arzhang2_object/ultrasonic-sensor-distance-mm.png |
 
-assets:::get:::debug_object/get:::debug_object.gif
-
 ## observations
 
 - one of the back wheels on arzhang broke. -> 📜
