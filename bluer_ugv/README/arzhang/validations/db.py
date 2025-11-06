@@ -138,23 +138,24 @@ dict_of_validations = {
             },
         ),
     },
-    # "village-7": {
-    #    "ugv_name": ["arzhang", "arzhang2", "arzhang3"],
-    #    "marquee": f"{arzhang_assets2}/20251106_114412_1.gif",
-    #    "items": ImageItems(
-    #        {
-    #            f"{arzhang_assets2}/20251106_110834.jpg": "",
-    #            f"{arzhang_assets2}/20251106_111750.jpg": "",
-    #            f"{arzhang_assets2}/20251106_111938.jpg": "",
-    #            f"{arzhang_assets2}/20251106_112045.jpg": "",
-    #            f"{arzhang_assets2}/20251106_113438.jpg": "",
-    #            f"{arzhang_assets2}/20251106_114005.jpg": "",
-    #            f"{arzhang_assets2}/20251106_114107.jpg": "",
-    #            f"{arzhang_assets2}/20251106_114629.jpg": "",
-    #            f"{arzhang_assets2}/20251106_175643.jpg": "",
-    #        },
-    #    ),
-    # },
+    "village-7": {
+        "order": 8,
+        "ugv_name": ["arzhang", "arzhang2", "arzhang3"],
+        "marquee": f"{arzhang_assets2}/20251106_114412_1.gif",
+        #    "items": ImageItems(
+        #        {
+        #            f"{arzhang_assets2}/20251106_110834.jpg": "",
+        #            f"{arzhang_assets2}/20251106_111750.jpg": "",
+        #            f"{arzhang_assets2}/20251106_111938.jpg": "",
+        #            f"{arzhang_assets2}/20251106_112045.jpg": "",
+        #            f"{arzhang_assets2}/20251106_113438.jpg": "",
+        #            f"{arzhang_assets2}/20251106_114005.jpg": "",
+        #            f"{arzhang_assets2}/20251106_114107.jpg": "",
+        #            f"{arzhang_assets2}/20251106_114629.jpg": "",
+        #            f"{arzhang_assets2}/20251106_175643.jpg": "",
+        #        },
+        #    ),
+    },
     "template": {
         "ugv_name": "template",
         "marquee": "template.jpg",
