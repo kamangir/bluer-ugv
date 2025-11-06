@@ -44,12 +44,12 @@ loop frequency (Hz): 183.64
 
 ---
 
-| [arzhang](../../UGVs/arzhang.md) | [arzhang2](../../UGVs/arzhang2.md) |
+| arzhang | arzhang2 | arzhang3 |
 |-|-|
-| [2025-11-06-10-50-35-myadvn](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn) | [2025-11-06-10-49-58-denev4](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4) |
-| ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn/ultrasonic-sensor-detections.gif?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4/ultrasonic-sensor-detections.gif?raw=true) |
-| ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn/ultrasonic-sensor-state.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4/ultrasonic-sensor-state.png?raw=true) |
-| ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn/ultrasonic-sensor-distance-mm.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4/ultrasonic-sensor-distance-mm.png?raw=true) |
+| [2025-11-06-10-50-35-myadvn](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn) | [2025-11-06-10-49-58-denev4](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4) | [2025-11-06-10-49-36-koxzf3](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-36-koxzf3) |
+| ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn/bps.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4/bps.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-36-koxzf3/bps.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn/ultrasonic-sensor-state.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4/ultrasonic-sensor-state.png?raw=true) | |
+| ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-50-35-myadvn/ultrasonic-sensor-distance-mm.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-11-06-10-49-58-denev4/ultrasonic-sensor-distance-mm.png?raw=true) | |
 
 ## observations
 

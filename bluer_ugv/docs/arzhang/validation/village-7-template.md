@@ -42,12 +42,12 @@ loop frequency (Hz): metadata:::get:::arzhang3_object:::loop_frequency
 
 ---
 
-| [arzhang](../../UGVs/arzhang.md) | [arzhang2](../../UGVs/arzhang2.md) |
+| arzhang | arzhang2 | arzhang3 |
 |-|-|
-| assets:::get:::arzhang1_object | assets:::get:::arzhang2_object |
-| assets:::get:::arzhang1_object/ultrasonic-sensor-detections.gif | assets:::get:::arzhang2_object/ultrasonic-sensor-detections.gif |
-| assets:::get:::arzhang1_object/ultrasonic-sensor-state.png | assets:::get:::arzhang2_object/ultrasonic-sensor-state.png |
-| assets:::get:::arzhang1_object/ultrasonic-sensor-distance-mm.png | assets:::get:::arzhang2_object/ultrasonic-sensor-distance-mm.png |
+| assets:::get:::arzhang1_object | assets:::get:::arzhang2_object | assets:::get:::arzhang3_object |
+| assets:::get:::arzhang1_object/bps.png | assets:::get:::arzhang2_object/bps.png | assets:::get:::arzhang3_object/bps.png |
+| assets:::get:::arzhang1_object/ultrasonic-sensor-state.png | assets:::get:::arzhang2_object/ultrasonic-sensor-state.png | |
+| assets:::get:::arzhang1_object/ultrasonic-sensor-distance-mm.png | assets:::get:::arzhang2_object/ultrasonic-sensor-distance-mm.png | |
 
 ## observations
 
