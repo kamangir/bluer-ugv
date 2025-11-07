@@ -1,4 +1,4 @@
-# arzhang: validation: village-2
+# validations: village-2
 
 UGV(s): 🐬 [`arzhang`](../../UGVs/arzhang.md)
 

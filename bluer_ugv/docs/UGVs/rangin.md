@@ -10,7 +10,7 @@ an ad robot.
 - body is pending. 🚧
 - cover is pending. 🚧
 
-validations: TBA
+validations: 
 
 |   |
 | --- |

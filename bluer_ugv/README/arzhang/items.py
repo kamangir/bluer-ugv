@@ -16,7 +16,7 @@ items = ImageItems(
         f"{arzhang_assets2}/VID-20250830-WA0000~3_1.gif": "",
         f"{arzhang_assets2}/20250901_105247.jpg": "",
         f"{arzhang_assets2}/20250905_120625.jpg": "",
-        f"{arzhang_assets2}/VID-20250905-WA0014_1.gif": "./validation/village-1.md",
+        f"{arzhang_assets2}/VID-20250905-WA0014_1.gif": "../validations/village-1.md",
         f"{swallow_assets2}/20251001_185852.jpg": "",
         f"{swallow_assets2}/20251003_113240-2.jpg": "",
         f"{swallow_assets2}/20251003_121114-2.jpg": "",

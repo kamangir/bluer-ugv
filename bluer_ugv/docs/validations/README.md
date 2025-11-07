@@ -1,4 +1,4 @@
-# arzhang: validation
+# validations
 
 - [timing-review](./timing-review.md)
 - [village-1](./village-1.md)

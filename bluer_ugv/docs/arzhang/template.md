@@ -4,6 +4,5 @@ title:::
 
 - [design](./design)
 - [algo](./algo)
-- [validation](./validation)
 
 items:::

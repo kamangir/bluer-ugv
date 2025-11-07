@@ -8,7 +8,7 @@ from bluer_ugv.README.arzhang.consts import arzhang_assets2
 dict_of_validations = {
     "village-1": {
         "order": 1,
-        "ugv_name": "arzhang:ugv",
+        "ugv_name": ["arzhang:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250905_120526.jpg": "",
@@ -23,7 +23,7 @@ dict_of_validations = {
     },
     "village-2": {
         "order": 2,
-        "ugv_name": "arzhang:ugv",
+        "ugv_name": ["arzhang:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250922_094548.jpg": "",
@@ -65,7 +65,7 @@ dict_of_validations = {
     },
     "village-3": {
         "order": 3,
-        "ugv_name": "arzhang:ugv",
+        "ugv_name": ["arzhang:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250925_133136.jpg": "",
@@ -83,7 +83,7 @@ dict_of_validations = {
     },
     "village-4": {
         "order": 4,
-        "ugv_name": "arzhang2:ugv",
+        "ugv_name": ["arzhang2:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250927_192024.jpg": "",
@@ -97,7 +97,7 @@ dict_of_validations = {
     },
     "timing-review": {
         "order": 5,
-        "ugv_name": "arzhang2:ugv",
+        "ugv_name": ["arzhang2:ugv"],
         "marquee": assets_url(
             suffix="{object_name}/{object_name}.gif".format(
                 object_name="swallow-debug-2025-10-09-17-04-47-vm23uf"

@@ -1,11 +1,11 @@
 from bluer_objects.README.items import Items_of_dict, list_of_dict
 
-from bluer_ugv.README.arzhang.validations.db import dict_of_validations
+from bluer_ugv.README.validations.db import dict_of_validations
 from bluer_ugv import ICON
 
 docs = [
     {
-        "path": "../docs/arzhang/validation",
+        "path": "../docs/validations",
         "items": Items_of_dict(dict_of_validations),
         "macros": {
             "list:::": list_of_dict(dict_of_validations),
@@ -14,7 +14,7 @@ docs = [
     }
 ] + [
     {
-        "path": f"../docs/arzhang/validation/{validation_name}.md",
+        "path": f"../docs/validations/{validation_name}.md",
         "items": info.get("items", []),
         "macros": {
             **info.get("macros", {}),
@@ -40,18 +40,7 @@ docs = [
                                 ),
                                 ugv_name=ugv_name.split(":")[0],
                             )
-                            for ugv_name in (
-                                lambda thing: (
-                                    thing
-                                    if isinstance(thing, list)
-                                    else thing.split(",")
-                                )
-                            )(
-                                info.get(
-                                    "ugv_name",
-                                    ["unknown"],
-                                )
-                            )
+                            for ugv_name in info["ugv_name"]
                         ]
                     )
                 )

@@ -11,7 +11,7 @@ the first one with two motherboards.
 - body is pending. 🚧
 - cover is pending. 🚧
 
-validations: TBA
+validations: [`village-7`](../validations/village-7.md)
 
 |   |
 | --- |
