@@ -2,8 +2,6 @@ title:::
 
 UGV(s): ugv_name:::
 
-arzhang and arzhang2 are robots. arzhang3 is an anchor.
-
 set:::arzhang1_object 2025-11-06-10-50-35-myadvn
 set:::arzhang2_object 2025-11-06-10-49-58-denev4
 set:::arzhang3_object 2025-11-06-10-49-36-koxzf3
