@@ -15,4 +15,4 @@ the first one with two motherboards.
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251107_175506.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251107_175506.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets/raw/main/arzhang/20251107_175506.jpg?raw=true)](https://github.com/kamangir/assets/raw/main/arzhang/20251107_175506.jpg?raw=true) |

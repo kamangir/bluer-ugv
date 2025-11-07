@@ -1,7 +1,6 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.consts import bluer_ugv_assets
-from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
 from bluer_ugv.README.rangin.consts import rangin_assets2
 from bluer_ugv.README.swallow.consts import swallow_assets2
 
@@ -39,7 +38,7 @@ docs = [
         "path": "../docs/UGVs/arzhang3.md",
         "items": ImageItems(
             {
-                f"{arzhang_assets2}/20251107_175506.jpg": "",
+                f"{arzhang_assets}/20251107_175506.jpg": "",
             }
         ),
     },
