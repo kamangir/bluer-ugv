@@ -22,7 +22,7 @@ docs = [
                 "UGV(s): {}".format(
                     ", ".join(
                         [
-                            "{icon} [`{ugv_name}`](../../UGVs/{ugv_name}.md)".format(
+                            "{icon} [`{ugv_name}`](../UGVs/{ugv_name}.md)".format(
                                 icon=(
                                     (
                                         lambda keyword: (

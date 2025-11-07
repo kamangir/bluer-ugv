@@ -1,6 +1,6 @@
 # validations: timing-review
 
-UGV(s): 🐬 [`arzhang2`](../../UGVs/arzhang2.md)
+UGV(s): 🐬 [`arzhang2`](../UGVs/arzhang2.md)
 
 ## single thread
 
