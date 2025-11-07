@@ -11,14 +11,16 @@ docs = [
             "validations:::": [
                 "validations: {}".format(
                     ", ".join(
-                        [
-                            f"[`{validation_name}`](../validations/{validation_name}.md)"
-                            for validation_name, info in dict_of_validations.items()
-                            if any(
-                                ugv_name_.startswith(f"{ugv_name}:")
-                                for ugv_name_ in info["ugv_name"]
-                            )
-                        ]
+                        sorted(
+                            [
+                                f"[`{validation_name}`](../validations/{validation_name}.md)"
+                                for validation_name, info in dict_of_validations.items()
+                                if any(
+                                    ugv_name_.startswith(f"{ugv_name}:")
+                                    for ugv_name_ in info["ugv_name"]
+                                )
+                            ]
+                        )
                     )
                 ),
             ]
