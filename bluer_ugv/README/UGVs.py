@@ -23,7 +23,7 @@ docs = [
         "path": "../docs/UGVs/arzhang.md",
         "items": ImageItems(
             {
-                f"{arzhang_assets2}/20251005_112530.jpg": "",
+                f"{arzhang_assets2}/20251106_111750.jpg": "",
             }
         ),
     },
@@ -31,13 +31,17 @@ docs = [
         "path": "../docs/UGVs/arzhang2.md",
         "items": ImageItems(
             {
-                f"{arzhang_assets2}/20251005_112530.jpg": "",
+                f"{arzhang_assets2}/20251106_111750.jpg": "",
             }
         ),
     },
     {
         "path": "../docs/UGVs/arzhang3.md",
-        "items": ImageItems({f"{bluer_ugv_assets}/bluer-light.png": ""}),
+        "items": ImageItems(
+            {
+                f"{arzhang_assets2}/20251107_175506.jpg": "",
+            }
+        ),
     },
     {
         "path": "../docs/UGVs/rangin.md",
