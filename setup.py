@@ -22,6 +22,7 @@ setup(
         f"{NAME}.README.swallow.digital",
         f"{NAME}.README.swallow.digital.algo",
         f"{NAME}.README.swallow.digital.design",
+        f"{NAME}.README.ugvs",
         # designs
         f"{NAME}.designs",
         f"{NAME}.designs.arzhang",

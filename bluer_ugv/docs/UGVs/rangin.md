@@ -10,6 +10,8 @@ an ad robot.
 - body is pending. 🚧
 - cover is pending. 🚧
 
+validations: TBA
+
 |   |
 | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/rangin/rangin.png?raw=true)](https://github.com/kamangir/assets2/raw/main/rangin/rangin.png?raw=true) |

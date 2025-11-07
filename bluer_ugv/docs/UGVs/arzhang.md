@@ -8,6 +8,7 @@ the first [Arzhang](../arzhang).
         - ultrasonic is validated. ✅
 - cover is complete. ✅
 
+validations: TBA
 
 |   |
 | --- |
