@@ -1,5 +1,3 @@
-from bluer_objects.README.items import ImageItems
-
 from bluer_ugv.README.swallow.consts import swallow_assets2
 from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
 from bluer_ugv.README.rangin.consts import rangin_assets2
@@ -32,6 +30,3 @@ dict_of_ugvs = {
         ]
     },
 }
-
-for info in dict_of_ugvs.values():
-    info["items"] = ImageItems({item: "" for item in info["items"]})
