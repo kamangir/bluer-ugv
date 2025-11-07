@@ -16,8 +16,8 @@ from bluer_ugv.README import (
     arzhang,
     rangin,
     swallow,
-    UGVs,
 )
+from bluer_ugv.README.ugvs import docs as ugvs
 
 
 def build() -> bool:
@@ -46,6 +46,6 @@ def build() -> bool:
         + arzhang.docs
         + swallow.docs
         + alias.docs
-        + UGVs.docs
+        + ugvs.docs
         + rangin.docs
     )

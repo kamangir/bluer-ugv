@@ -1,6 +1,6 @@
 import pytest
 
-from bluer_ugv.README.arzhang.validations.db import dict_of_validations
+from bluer_ugv.README.validations.db import dict_of_validations
 
 
 @pytest.mark.parametrize(

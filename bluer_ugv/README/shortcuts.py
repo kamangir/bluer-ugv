@@ -26,8 +26,8 @@ items = markdown.generate_table(
                 "marquee": f"{swallow_assets2}/20250611_100917.jpg?raw=true",
             },
             {
-                "name": "arzhang validations",
-                "url": "./bluer_ugv/docs/arzhang/validation",
+                "name": "validations",
+                "url": "./bluer_ugv/docs/validations",
                 "marquee": assets_url(
                     suffix="{object_name}/{object_name}.gif".format(
                         object_name="swallow-debug-2025-09-25-13-16-59-rnm7jd"

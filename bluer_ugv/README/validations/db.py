@@ -8,7 +8,7 @@ from bluer_ugv.README.arzhang.consts import arzhang_assets2
 dict_of_validations = {
     "village-1": {
         "order": 1,
-        "ugv_name": "arzhang",
+        "ugv_name": ["arzhang:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250905_120526.jpg": "",
@@ -23,7 +23,7 @@ dict_of_validations = {
     },
     "village-2": {
         "order": 2,
-        "ugv_name": "arzhang",
+        "ugv_name": ["arzhang:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250922_094548.jpg": "",
@@ -65,7 +65,7 @@ dict_of_validations = {
     },
     "village-3": {
         "order": 3,
-        "ugv_name": "arzhang",
+        "ugv_name": ["arzhang:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250925_133136.jpg": "",
@@ -83,7 +83,7 @@ dict_of_validations = {
     },
     "village-4": {
         "order": 4,
-        "ugv_name": "arzhang2",
+        "ugv_name": ["arzhang2:ugv"],
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20250927_192024.jpg": "",
@@ -97,7 +97,7 @@ dict_of_validations = {
     },
     "timing-review": {
         "order": 5,
-        "ugv_name": "arzhang2",
+        "ugv_name": ["arzhang2:ugv"],
         "marquee": assets_url(
             suffix="{object_name}/{object_name}.gif".format(
                 object_name="swallow-debug-2025-10-09-17-04-47-vm23uf"
@@ -106,7 +106,10 @@ dict_of_validations = {
     },
     "village-5": {
         "order": 6,
-        "ugv_name": ["arzhang", "arzhang2"],
+        "ugv_name": [
+            "arzhang:ugv",
+            "arzhang2:ugv",
+        ],
         "marquee": assets_url(
             suffix="{object_name}/{object_name}.gif".format(
                 object_name="swallow-debug-2025-10-10-08-49-45-yk18ei"
@@ -122,7 +125,10 @@ dict_of_validations = {
     },
     "village-6": {
         "order": 7,
-        "ugv_name": ["arzhang", "arzhang2"],
+        "ugv_name": [
+            "arzhang:ugv",
+            "arzhang2:ugv",
+        ],
         "marquee": assets_url(
             suffix="{object_name}/{object_name}.gif".format(
                 object_name="swallow-debug-2025-10-19-14-14-23-ectn97"
@@ -135,6 +141,28 @@ dict_of_validations = {
                 f"{arzhang_assets2}/20251019_142031.jpg": "",
                 f"{arzhang_assets2}/20251019_142602.jpg": "",
                 f"{arzhang_assets2}/20251019_142055_1.gif": "",
+            },
+        ),
+    },
+    "village-7": {
+        "order": 8,
+        "ugv_name": [
+            "arzhang:ugv",
+            "arzhang2:ugv",
+            "arzhang3:anchor",
+        ],
+        "marquee": f"{arzhang_assets2}/20251106_114412_1.gif",
+        "items": ImageItems(
+            {
+                f"{arzhang_assets2}/20251106_110834.jpg": "",
+                f"{arzhang_assets2}/20251106_111750.jpg": "",
+                f"{arzhang_assets2}/20251106_111938.jpg": "",
+                f"{arzhang_assets2}/20251106_112045.jpg": "",
+                f"{arzhang_assets2}/20251106_113438.jpg": "",
+                f"{arzhang_assets2}/20251106_114005-2.jpg": "",
+                f"{arzhang_assets2}/20251106_114107.jpg": "",
+                f"{arzhang_assets2}/20251106_114629.jpg": "",
+                f"{arzhang_assets2}/20251106_175643.jpg": "",
             },
         ),
     },
