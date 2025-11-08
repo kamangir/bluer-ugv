@@ -78,7 +78,9 @@ def build(
                 reference.url,
                 reference.title,
             )
-            for reference in list_of_references.db
+            for reference in sorted(
+                list_of_references.db, key=lambda reference: reference.title
+            )
             if reference.title != "template"
         ]
         + ["</ol>"]
