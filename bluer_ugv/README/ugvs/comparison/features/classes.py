@@ -83,7 +83,7 @@ class Feature:
             self.long_name,
             self.__class__.comparison_as_str.get(comparison, ""),
             (
-                "در {} ".format(ugv_name)
+                " در {} ".format(ugv_name)
                 if comparison != Feature_Comparison.SIMILAR
                 else ""
             ),
