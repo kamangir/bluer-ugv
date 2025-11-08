@@ -15,6 +15,8 @@ class Feature_Comparison(Feature_Enum):
     HIGHER = auto()
     LOWER = auto()
 
+    UNKNOWN = auto()
+
 
 class Feature:
     nickname: str
@@ -38,12 +40,22 @@ class Feature:
         ugv_name: str,
         log: bool = False,
     ) -> Tuple[Feature_Comparison, str]:
-        status: Feature_Comparison = Feature_Comparison.HIGHER
-        if feature is not None and feature.score is not Ellipsis:
-            if self.score_index == feature.score_index:
-                status = Feature_Comparison.SIMILAR
-            elif self.score_index < feature.score_index:
-                status = Feature_Comparison.LOWER
+        comparison: Feature_Comparison = Feature_Comparison.HIGHER
+        if feature is None:
+            if isinstance(self.score, bool):
+                comparison = (
+                    Feature_Comparison.HIGHER
+                    if self.score
+                    else Feature_Comparison.LOWER
+                )
+            else:
+                comparison = Feature_Comparison.UNKNOWN
+        elif feature.score is Ellipsis:
+            comparison = Feature_Comparison.UNKNOWN
+        elif self.score_index == feature.score_index:
+            comparison = Feature_Comparison.SIMILAR
+        elif self.score_index < feature.score_index:
+            comparison = Feature_Comparison.LOWER
 
         if log:
             logger.info(
@@ -53,24 +65,28 @@ class Feature:
                     self.score_index,
                     "-" if feature is None else feature.score,
                     "-" if feature is None else feature.score_index,
-                    status.name,
+                    comparison.name,
                 )
             )
 
-        return status, self.describe_status(
-            status,
+        return comparison, self.describe_status(
+            comparison,
             ugv_name,
         )
 
     def describe_status(
         self,
-        status: Feature_Comparison,
+        comparison: Feature_Comparison,
         ugv_name: str,
     ) -> str:
         return "{} {}{}{}".format(
             self.long_name,
-            self.__class__.comparison_as_str.get(status, ""),
-            "در {} ".format(ugv_name) if status != Feature_Comparison.SIMILAR else "",
+            self.__class__.comparison_as_str.get(comparison, ""),
+            (
+                "در {} ".format(ugv_name)
+                if comparison != Feature_Comparison.SIMILAR
+                else ""
+            ),
             (lambda info: f" ({info})" if info else "")(self.score_as_str()),
         )
 

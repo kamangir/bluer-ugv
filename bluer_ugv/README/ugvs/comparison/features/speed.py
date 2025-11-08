@@ -1,5 +1,3 @@
-from typing import Any
-
 from bluer_ugv.README.ugvs.comparison.features.classes import Feature
 
 

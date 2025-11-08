@@ -51,6 +51,8 @@ class UGV:
 
             if comparison == Feature_Comparison.SIMILAR:
                 similarities.append(message)
+            elif comparison == Feature_Comparison.UNKNOWN:
+                pass
             else:
                 differences.append(message)
 
