@@ -37,7 +37,7 @@ list_of_ugvs.add(
 )
 
 list_of_ugvs.add(
-    nickname="heidar",
+    nickname="haydar",
     name="ربات حیدر",
     features={
         "concealment": True,
