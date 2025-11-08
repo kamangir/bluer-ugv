@@ -3,7 +3,7 @@ title:::
 
 ```bash
 @select release$(@timestamp)
-@ugv build_pdf ...
+@pdf convert @ugv swallow .
 @assets publish extensions=pdf,push .
 ```
 
