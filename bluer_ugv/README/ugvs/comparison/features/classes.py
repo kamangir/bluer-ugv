@@ -14,7 +14,7 @@ class Feature:
     nickname: str
     long_name: str
 
-    description_template = "{} {} در {} ({})"
+    comparison_template = "{} {} در {}{}"
     both_template = "هر دو"
 
     comparison_as_str: Dict[Feature_Comparison, str] = {
@@ -70,7 +70,7 @@ class Feature:
         ugv_name_2: str,
         ugv_name_both: str,
     ) -> str:
-        return self.description_template.format(
+        return self.comparison_template.format(
             self.long_name,
             self.__class__.comparison_as_str.get(status, ""),
             (
@@ -78,8 +78,12 @@ class Feature:
                 if status == Feature_Comparison.HIGHER
                 else ugv_name_2 if status == Feature_Comparison.LOWER else ugv_name_both
             ),
-            self.score,
+            self.score_as_str,
         )
+
+    @property
+    def score_as_str(self) -> str:
+        return ""
 
     @property
     def score_index(self):

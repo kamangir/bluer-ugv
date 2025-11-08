@@ -1,3 +1,5 @@
+from typing import Any
+
 from bluer_ugv.README.ugvs.comparison.features.classes import (
     Feature,
     Feature_Comparison,
@@ -13,3 +15,7 @@ class PayloadFeature(Feature):
         Feature_Comparison.LOWER: "کمتر",
         Feature_Comparison.SIMILAR: "مشابه",
     }
+
+    @property
+    def score_as_str(self) -> str:
+        return f" ({self.score} کیلوگرم)"
