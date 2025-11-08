@@ -85,7 +85,7 @@ list_of_references.add(
     title="Iran Heydar combat robot",
     url="https://en.wikipedia.org/wiki/Iran_Heydar_combat_robot",
     list_of_ugvs=[
-        "heydar",
+        "haydar",
     ],
 )
 

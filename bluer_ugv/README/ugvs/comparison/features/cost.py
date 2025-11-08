@@ -6,9 +6,9 @@ from bluer_ugv.README.ugvs.comparison.features.classes import (
 
 
 class UGV_Cost(Feature_Enum):
-    LOW = 100  # < 50 mT ~= $500
-    MEDIUM = 10  # < 500 mT ~= $5k
-    HIGH = 1  # < 5 MT ~= $50k
+    LOW = 100  # < 100 mT ~= $100
+    MEDIUM = 10  # < 1 MT ~= $10k
+    HIGH = 1  #
 
     @property
     def as_str(self):
