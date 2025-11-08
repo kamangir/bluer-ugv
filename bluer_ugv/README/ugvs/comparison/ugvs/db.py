@@ -354,8 +354,8 @@ list_of_ugvs.add(
 )
 
 list_of_ugvs.add(
-    nickname="Sharl Claw 1",
-    name="sharp_claw_1",
+    nickname="sharp_claw_1",
+    name="Sharl Claw 1",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
@@ -368,8 +368,8 @@ list_of_ugvs.add(
 )
 
 list_of_ugvs.add(
-    nickname="Sharl Claw 2",
-    name="sharp_claw_2",
+    nickname="sharp_claw_2",
+    name="Sharl Claw 2",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,

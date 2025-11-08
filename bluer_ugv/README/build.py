@@ -22,8 +22,6 @@ from bluer_ugv.README.ugvs.comparison.build import build as build_comparison
 
 
 def build() -> bool:
-    return build_comparison()
-
     return (
         all(
             README.build(

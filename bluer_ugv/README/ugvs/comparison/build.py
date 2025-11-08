@@ -64,7 +64,12 @@ def build(
                 for index, ugv in enumerate(
                     [
                         ugv_
-                        for ugv_ in list_of_ugvs.db
+                        for ugv_ in reversed(
+                            sorted(
+                                list_of_ugvs.db,
+                                key=lambda ugv: ugv.name,
+                            )
+                        )
                         if ugv_.nickname not in [reference_ugv_name, "template"]
                     ]
                 )
