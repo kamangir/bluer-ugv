@@ -1,0 +1,14 @@
+from bluer_ugv.README.ugvs.comparison.features.classes import Feature
+
+
+class PayloadFeature(Feature):
+    nickname = "payload"
+
+    def __init__(
+        self,
+        score: float,  # kg
+    ):
+        super().__init__(
+            score=score,
+            better_func=lambda score_1, score_2: score_1 > score_2,
+        )
