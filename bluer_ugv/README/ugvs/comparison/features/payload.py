@@ -1,14 +1,15 @@
-from bluer_ugv.README.ugvs.comparison.features.classes import Feature
+from bluer_ugv.README.ugvs.comparison.features.classes import (
+    Feature,
+    Feature_Comparison,
+)
 
 
 class PayloadFeature(Feature):
     nickname = "payload"
+    long_name = "توان حمل بار"
 
-    def __init__(
-        self,
-        score: float,  # kg
-    ):
-        super().__init__(
-            score=score,
-            better_func=lambda score_1, score_2: score_1 > score_2,
-        )
+    comparison_as_str = {
+        Feature_Comparison.HIGHER: "بیشتر",
+        Feature_Comparison.LOWER: "کمتر",
+        Feature_Comparison.SIMILAR: "مشابه",
+    }

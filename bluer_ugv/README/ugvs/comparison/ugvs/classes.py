@@ -1,6 +1,9 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Union
 
-from bluer_ugv.README.ugvs.comparison.features.classes import FeatureList
+from bluer_ugv.README.ugvs.comparison.features.classes import (
+    FeatureList,
+    Feature_Comparison,
+)
 from bluer_ugv.README.ugvs.comparison.features.db import dict_of_feature_classes
 from bluer_ugv.logger import logger
 
@@ -10,7 +13,7 @@ class UGV:
         self,
         nickname: str,
         name: str,
-        features: Dict[str:Any],
+        features: Dict[str, Any],
         deficiencies: List[str] = [],
     ):
         self.nickname = nickname
@@ -18,14 +21,54 @@ class UGV:
 
         self.feature_list: FeatureList = FeatureList()
 
-        for feature_name, feature_value in features.items():
+        for feature_name, feature_score in features.items():
             if feature_name not in dict_of_feature_classes:
-                logger.error(f"{feature_name} not found.")
+                logger.error(f"{feature_name}: feature not found.")
                 assert False
 
-            self.feature_list.add(dict_of_feature_classes[feature_name](feature_value))
+            self.feature_list.add(
+                dict_of_feature_classes[feature_name](
+                    score=feature_score,
+                )
+            )
 
         self.deficiencies = deficiencies
+
+    def compare(
+        self,
+        ugv: "UGV",
+    ) -> List[str]:
+        similarities: List[str] = []
+        differences: List[str] = []
+
+        for feature in ugv.feature_list.db:
+            comparison, message = feature.compare(
+                ugv.feature_list.get(feature.nickname),
+                self.name,
+                ugv.name,
+            )
+
+            if comparison == Feature_Comparison.SIMILAR:
+                similarities.append(message)
+            else:
+                differences.append(message)
+
+        return (
+            [
+                "<p>مشابهت: </p>",
+                "<ol>",
+            ]
+            + [f"<li>{line}</li>" for line in similarities]
+            + [
+                "</ol>",
+                "<p>تفاوت‌ها:</p>",
+                "<ol>",
+            ]
+            + [f"<li>{line}</li>" for line in differences]
+            + [
+                "</ol>",
+            ]
+        )
 
 
 class List_of_UGVs:
@@ -38,3 +81,13 @@ class List_of_UGVs:
     ):
         ugv = UGV(**kw_args)
         self.db.append(ugv)
+
+    def get(
+        self,
+        ugv_name: str,
+    ) -> Union[UGV, None]:
+        for ugv in self.db:
+            if ugv_name == ugv.nickname:
+                return ugv
+
+        return None

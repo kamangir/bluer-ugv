@@ -10,18 +10,6 @@ class UGV_Control(Enum):
 
 class ControlFeature(Feature):
     nickname = "control"
+    long_name = "سامانه‌ی هوش مصنوعی"
 
-    def __init__(
-        self,
-        score: UGV_Control,
-    ):
-        super().__init__(
-            score=score,
-            better_func=lambda score_1, score_2: score_1.score > score_2.score,
-        )
-
-    def brag(
-        self,
-        ugv_name: str,
-    ) -> str:
-        return f"سامانه‌ی هوش مصنوعی {ugv_name}"
+    comparison_as_str = {}

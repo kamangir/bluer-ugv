@@ -18,34 +18,40 @@ from bluer_ugv.README import (
     swallow,
 )
 from bluer_ugv.README.ugvs import docs as ugvs
+from bluer_ugv.README.ugvs.comparison.build import build as build_comparison
 
 
 def build() -> bool:
-    return all(
-        README.build(
-            items=readme.get("items", []),
-            path=os.path.join(file.path(__file__), readme["path"]),
-            cols=readme.get("cols", 3),
-            ICON=ICON,
-            NAME=NAME,
-            VERSION=VERSION,
-            REPO_NAME=REPO_NAME,
-            help_function=lambda tokens: get_help(
-                tokens,
-                help_functions,
-                mono=True,
-            ),
-            macros=readme.get("macros", {}),
+    return build_comparison()
+
+    return (
+        all(
+            README.build(
+                items=readme.get("items", []),
+                path=os.path.join(file.path(__file__), readme["path"]),
+                cols=readme.get("cols", 3),
+                ICON=ICON,
+                NAME=NAME,
+                VERSION=VERSION,
+                REPO_NAME=REPO_NAME,
+                help_function=lambda tokens: get_help(
+                    tokens,
+                    help_functions,
+                    mono=True,
+                ),
+                macros=readme.get("macros", {}),
+            )
+            for readme in root.docs
+            + beast.docs
+            + eagle.docs
+            + fire.docs
+            + ravin.docs
+            + shield.docs
+            + arzhang.docs
+            + swallow.docs
+            + alias.docs
+            + ugvs.docs
+            + rangin.docs
         )
-        for readme in root.docs
-        + beast.docs
-        + eagle.docs
-        + fire.docs
-        + ravin.docs
-        + shield.docs
-        + arzhang.docs
-        + swallow.docs
-        + alias.docs
-        + ugvs.docs
-        + rangin.docs
+        and build_comparison()
     )

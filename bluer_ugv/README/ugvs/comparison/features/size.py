@@ -1,6 +1,9 @@
 from enum import Enum
 
-from bluer_ugv.README.ugvs.comparison.features.classes import Feature
+from bluer_ugv.README.ugvs.comparison.features.classes import (
+    Feature,
+    Feature_Comparison,
+)
 
 
 class UGV_Size(Enum):
@@ -11,18 +14,10 @@ class UGV_Size(Enum):
 
 class SizeFeature(Feature):
     nickname = "size"
+    long_name = "اندازه"
 
-    def __init__(
-        self,
-        score: UGV_Size,
-    ):
-        super().__init__(
-            score=score,
-            better_func=lambda score_1, score_2: score_1.score < score_2.score,
-        )
-
-    def brag(
-        self,
-        ugv_name: str,
-    ) -> str:
-        return f"اندازه‌ی کوچکتر{ugv_name}"
+    comparison_as_str = {
+        Feature_Comparison.HIGHER: "کوچکتر",
+        Feature_Comparison.LOWER: "بزرگتر",
+        Feature_Comparison.SIMILAR: "مشابه",
+    }
