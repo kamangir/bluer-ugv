@@ -78,8 +78,11 @@ def build(
                 reference.url,
                 reference.title,
             )
-            for reference in sorted(
-                list_of_references.db, key=lambda reference: reference.title
+            for reference in reversed(
+                sorted(
+                    list_of_references.db,
+                    key=lambda reference: reference.title,
+                )
             )
             if reference.title != "template"
         ]
