@@ -77,11 +77,13 @@ def build(
             [],
         )
         + contents[content_index + 1 :]
-        + ["<ol>"]
+        + ['<ol dir="rtl" style="text-align:right;">']
         + [
-            '<li><a href="{}">{}</a></li>'.format(
+            '<li dir="rtl" style="text-align:{};"><a href="{}">{} - {}</a></li>'.format(
+                "right" if reference.is_in_farsi else "left",
                 reference.url,
                 reference.title,
+                reference.url,
             )
             for reference in reversed(
                 sorted(
@@ -91,7 +93,7 @@ def build(
             )
             if reference.title != "template"
         ]
-        + ["</ol>"]
+        + ['</ol dir="rtl" style="text-align:right;">']
     )
 
     return file.save_text(

@@ -8,6 +8,7 @@ list_of_references.add(
     list_of_ugvs=[
         "nazir",
     ],
+    is_in_farsi=True,
 )
 
 list_of_references.add(
@@ -16,6 +17,7 @@ list_of_references.add(
     list_of_ugvs=[
         "heidar",
     ],
+    is_in_farsi=True,
 )
 
 list_of_references.add(
@@ -26,6 +28,7 @@ list_of_references.add(
         "heidar",
         "karakal",
     ],
+    is_in_farsi=True,
 )
 
 
@@ -36,7 +39,9 @@ list_of_references.add(
         "qasem",
         "raad1",
     ],
+    is_in_farsi=True,
 )
+
 list_of_references.add(
     title="ربات‌های جنگی در ایران عملیاتی شدند",
     url="https://snn.ir/fa/news/1249403/%D8%B1%D8%A8%D8%A7%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C-%D8%AC%D9%86%DA%AF%DB%8C-%D8%AF%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%B9%D9%85%D9%84%DB%8C%D8%A7%D8%AA%DB%8C-%D8%B4%D8%AF%D9%86%D8%AF-%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%DB%B5-%D8%B1%D8%A8%D8%A7%D8%AA-%D8%AC%D9%86%DA%AF%DB%8C-%D8%B3%D8%A7%D8%AE%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86",
@@ -47,6 +52,7 @@ list_of_references.add(
         "heidar",
         "sepah",
     ],
+    is_in_farsi=True,
 )
 
 list_of_references.add(
@@ -55,6 +61,7 @@ list_of_references.add(
     list_of_ugvs=[
         "arya",
     ],
+    is_in_farsi=True,
 )
 
 list_of_references.add(
@@ -63,6 +70,7 @@ list_of_references.add(
     list_of_ugvs=[
         "arya",
     ],
+    is_in_farsi=True,
 )
 
 list_of_references.add(

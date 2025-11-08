@@ -58,16 +58,22 @@ class UGV:
 
         return (
             [
-                "<p>مشابهت: </p>",
+                '<p dir="rtl" style="text-align:right;">مشابهت: </p>',
                 "<ol>",
             ]
-            + [f"<li>{line}</li>" for line in similarities]
+            + [
+                f'<li dir="rtl" style="text-align:right;">{line}</li>'
+                for line in similarities
+            ]
             + [
                 "</ol>",
-                "<p>تفاوت‌ها:</p>",
+                '<p dir="rtl" style="text-align:right;">تفاوت‌ها:</p>',
                 "<ol>",
             ]
-            + [f"<li>{line}</li>" for line in differences]
+            + [
+                f'<li dir="rtl" style="text-align:right;">{line}</li>'
+                for line in differences
+            ]
             + [
                 "</ol>",
             ]
@@ -76,9 +82,14 @@ class UGV:
     @property
     def description(self) -> List[str]:
         return (
-            [self.name, "<ol>"]
+            [
+                '<p dir="rtl" style="text-align:right;">{}</p>'.format(self.name),
+                "<ol>",
+            ]
             + [
-                "<li>{}</li>".format(feature.description)
+                '<li dir="rtl" style="text-align:right;">{}</li>'.format(
+                    feature.description
+                )
                 for feature in self.feature_list.db
             ]
             + ["</ol>"]
