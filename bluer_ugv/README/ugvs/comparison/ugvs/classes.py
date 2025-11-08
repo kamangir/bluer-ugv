@@ -37,15 +37,17 @@ class UGV:
     def compare(
         self,
         ugv: "UGV",
+        verbose: bool = False,
     ) -> List[str]:
         similarities: List[str] = []
         differences: List[str] = []
 
-        for feature in ugv.feature_list.db:
+        for feature in self.feature_list.db:
             comparison, message = feature.compare(
                 ugv.feature_list.get(feature.nickname),
                 self.name,
                 ugv.name,
+                log=verbose,
             )
 
             if comparison == Feature_Comparison.SIMILAR:

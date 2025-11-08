@@ -17,7 +17,7 @@ class CostFeature(Feature):
     long_name = "هزینه"
 
     comparison_as_str = {
-        Feature_Comparison.HIGHER: "بالاتر",
-        Feature_Comparison.LOWER: "پایین‌تر",
+        Feature_Comparison.HIGHER: "پایین‌تر",
+        Feature_Comparison.LOWER: "بالاتر",
         Feature_Comparison.SIMILAR: "مشابه",
     }

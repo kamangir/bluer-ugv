@@ -1,6 +1,8 @@
 from typing import List, Any, Union, Tuple, Dict
 from enum import Enum, auto
 
+from bluer_ugv.logger import logger
+
 
 class Feature_Comparison(Enum):
     SIMILAR = auto()
@@ -12,7 +14,7 @@ class Feature:
     nickname: str
     long_name: str
 
-    description_template = "{} در {} {} {} ({})"
+    description_template = "{} {} در {} ({})"
     both_template = "هر دو"
 
     comparison_as_str: Dict[Feature_Comparison, str] = {
@@ -33,13 +35,26 @@ class Feature:
         ugv_name_1: str,
         ugv_name_2: str,
         ugv_name_both: str = both_template,
+        log: bool = False,
     ) -> Tuple[Feature_Comparison, str]:
         status: Feature_Comparison = Feature_Comparison.HIGHER
-        if feature is not None:
+        if feature is not None and feature.score is not Ellipsis:
             if self.score_index == feature.score_index:
                 status = Feature_Comparison.SIMILAR
             elif self.score_index < feature.score_index:
                 status = Feature_Comparison.LOWER
+
+        if log:
+            logger.info(
+                "{}: {} ({}) vs. {} ({}): {}".format(
+                    self.__class__.__name__,
+                    self.score,
+                    self.score_index,
+                    "-" if feature is None else feature.score,
+                    "-" if feature is None else feature.score_index,
+                    status.name,
+                )
+            )
 
         return status, self.describe(
             status,
@@ -56,15 +71,14 @@ class Feature:
         ugv_name_both: str,
     ) -> str:
         return self.description_template.format(
-            self.__class__.comparison_as_str.get(status, ""),
             self.long_name,
-            status.name,
-            self.score,
+            self.__class__.comparison_as_str.get(status, ""),
             (
                 ugv_name_1
                 if status == Feature_Comparison.HIGHER
                 else ugv_name_2 if status == Feature_Comparison.LOWER else ugv_name_both
             ),
+            self.score,
         )
 
     @property
