@@ -17,5 +17,5 @@ class PayloadFeature(Feature):
     }
 
     @property
-    def score_as_str(self) -> str:
-        return f" ({self.score} کیلوگرم)"
+    def score_as_str_(self) -> str:
+        return f"{self.score} کیلوگرم"

@@ -1,7 +1,4 @@
-from bluer_ugv.README.ugvs.comparison.features.classes import (
-    Feature,
-    Feature_Comparison,
-)
+from bluer_ugv.README.ugvs.comparison.features.classes import Feature
 
 
 class UVDeliveryFeature(Feature):

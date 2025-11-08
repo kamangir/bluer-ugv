@@ -57,7 +57,7 @@ def build(
                 row_of(
                     [
                         str(index + 1),
-                        ugv.name,
+                        ugv.description,
                         reference_ugv.compare(ugv),
                     ]
                 )

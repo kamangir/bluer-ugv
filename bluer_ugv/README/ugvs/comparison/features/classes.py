@@ -4,7 +4,13 @@ from enum import Enum, auto
 from bluer_ugv.logger import logger
 
 
-class Feature_Comparison(Enum):
+class Feature_Enum(Enum):
+    @property
+    def as_str(self):
+        return self.name
+
+
+class Feature_Comparison(Feature_Enum):
     SIMILAR = auto()
     HIGHER = auto()
     LOWER = auto()
@@ -13,9 +19,6 @@ class Feature_Comparison(Enum):
 class Feature:
     nickname: str
     long_name: str
-
-    comparison_template = "{} {} در {}{}"
-    both_template = "هر دو"
 
     comparison_as_str: Dict[Feature_Comparison, str] = {
         Feature_Comparison.HIGHER: "بیشتر",
@@ -32,9 +35,7 @@ class Feature:
     def compare(
         self,
         feature: Union["Feature", None],
-        ugv_name_1: str,
-        ugv_name_2: str,
-        ugv_name_both: str = both_template,
+        ugv_name: str,
         log: bool = False,
     ) -> Tuple[Feature_Comparison, str]:
         status: Feature_Comparison = Feature_Comparison.HIGHER
@@ -56,33 +57,42 @@ class Feature:
                 )
             )
 
-        return status, self.describe(
+        return status, self.describe_status(
             status,
-            ugv_name_1,
-            ugv_name_2,
-            ugv_name_both,
+            ugv_name,
         )
 
-    def describe(
+    def describe_status(
         self,
         status: Feature_Comparison,
-        ugv_name_1: str,
-        ugv_name_2: str,
-        ugv_name_both: str,
+        ugv_name: str,
     ) -> str:
-        return self.comparison_template.format(
+        return "{} {}{}{}".format(
             self.long_name,
             self.__class__.comparison_as_str.get(status, ""),
-            (
-                ugv_name_1
-                if status == Feature_Comparison.HIGHER
-                else ugv_name_2 if status == Feature_Comparison.LOWER else ugv_name_both
-            ),
-            self.score_as_str,
+            "در {} ".format(ugv_name) if status != Feature_Comparison.SIMILAR else "",
+            (lambda info: f" ({info})" if info else "")(self.score_as_str()),
         )
 
     @property
-    def score_as_str(self) -> str:
+    def description(self) -> str:
+        return "{} {}".format(
+            self.long_name,
+            self.score_as_str(force=True),
+        )
+
+    def score_as_str(
+        self,
+        force: bool = False,
+    ) -> str:
+        return (
+            self.score.as_str
+            if isinstance(self.score, Feature_Enum) and force
+            else self.score_as_str_
+        )
+
+    @property
+    def score_as_str_(self) -> str:
         return ""
 
     @property

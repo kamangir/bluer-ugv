@@ -1,9 +1,9 @@
 from enum import Enum
 
-from bluer_ugv.README.ugvs.comparison.features.classes import Feature
+from bluer_ugv.README.ugvs.comparison.features.classes import Feature, Feature_Enum
 
 
-class UGV_Control(Enum):
+class UGV_Control(Feature_Enum):
     AI = 2
     RC = 1
 

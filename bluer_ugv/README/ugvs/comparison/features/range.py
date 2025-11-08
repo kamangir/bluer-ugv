@@ -10,9 +10,5 @@ class RangeFeature(Feature):
     long_name = "شعاع عملکرد عملیاتی"
 
     @property
-    def score_as_str(self) -> str:
-        return (
-            f" ({self.score} کیلومتر)"
-            if self.score != unlimited_range
-            else " (نامحدود)"
-        )
+    def score_as_str_(self) -> str:
+        return f"{self.score} کیلومتر" if self.score != unlimited_range else "نامحدود"

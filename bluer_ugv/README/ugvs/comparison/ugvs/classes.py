@@ -46,7 +46,6 @@ class UGV:
             comparison, message = feature.compare(
                 ugv.feature_list.get(feature.nickname),
                 self.name,
-                ugv.name,
                 log=verbose,
             )
 
@@ -70,6 +69,17 @@ class UGV:
             + [
                 "</ol>",
             ]
+        )
+
+    @property
+    def description(self) -> List[str]:
+        return (
+            [self.name, "<ol>"]
+            + [
+                "<li>{}</li>".format(feature.description)
+                for feature in self.feature_list.db
+            ]
+            + ["</ol>"]
         )
 
 

@@ -8,5 +8,5 @@ class SpeedFeature(Feature):
     long_name = "سرعت"
 
     @property
-    def score_as_str(self) -> str:
-        return f"({self.score} کیلومتر بر ساعت)"
+    def score_as_str_(self) -> str:
+        return f"{self.score} کیلومتر بر ساعت"
