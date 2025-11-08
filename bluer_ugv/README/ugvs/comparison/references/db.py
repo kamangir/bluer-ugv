@@ -98,10 +98,34 @@ list_of_references.add(
 )
 
 list_of_references.add(
-    title="Uran-9",
+    title="Uran-6",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/uran-6-ugv-mrtk-r",
+    list_of_ugvs=[
+        "uran_6",
+    ],
+)
+
+list_of_references.add(
+    title="Uran-9 UGV",
     url="https://en.wikipedia.org/wiki/Uran-9",
     list_of_ugvs=[
         "uran_9",
+    ],
+)
+
+list_of_references.add(
+    title="Uran-9",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/uran-9-ugcv-ugv-unmanned-ground-combat-vehicle-technical-data-sheet-specifications-pictures-video-10910163",
+    list_of_ugvs=[
+        "uran_6",
+    ],
+)
+
+list_of_references.add(
+    title="Uran-14 MRTK-P",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/uran-14-mrtk-p-unmanned-robotic-mine-clearance-and-firefighting-tracked-vehicle-data-sheet-specifications-pictures-video11201166",
+    list_of_ugvs=[
+        "uran_14",
     ],
 )
 
@@ -182,6 +206,14 @@ list_of_references.add(
 list_of_references.add(
     title="Miloš (unmanned ground vehicle)",
     url="https://en.wikipedia.org/wiki/Milo%C5%A1_(unmanned_ground_vehicle)",
+    list_of_ugvs=[
+        "milica",
+    ],
+)
+
+list_of_references.add(
+    title="Milca UGV",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/milca-serbia",
     list_of_ugvs=[
         "milica",
     ],
@@ -271,6 +303,29 @@ list_of_references.add(
         "guardium",
     ],
 )
+
+
+list_of_references.add(
+    title="Guardium UGV",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/guardium-ugv-israel-uk",
+    list_of_ugvs=[
+        "guardium",
+    ],
+)
+
+list_of_references.add(
+    title="Guardium-LS",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/guardium-lg-israel-uk",
+    list_of_ugvs=[
+        "guardium",
+    ],
+)
+
+list_of_references.add(
+    title="Unmanned Ground Vehicles",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles",
+)
+
 
 list_of_references.add(
     title="template",

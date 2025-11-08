@@ -111,15 +111,41 @@ list_of_ugvs.add(
 )
 
 list_of_ugvs.add(
+    nickname="uran_6",
+    name="Uran-6",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "range": 1,
+        "size": UGV_Size.LARGE,
+        "speed": 5,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
     nickname="uran_9",
     name="Uran-9",
     features={
-        "DYI": ...,
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
         "range": 1,
         "size": UGV_Size.LARGE,
         "speed": 133,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="uran_14",
+    name="Uran-14",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "payload": 2700,
+        "range": 1.5,
+        "size": UGV_Size.LARGE,
+        "speed": 10,
     },
     deficiencies=[],
 )
@@ -302,7 +328,7 @@ list_of_ugvs.add(
 )
 
 list_of_ugvs.add(
-    nickname="avantGuard",
+    nickname="avantguard",
     name="AvantGuard UGCV",
     features={
         "control": UGV_Control.AI,

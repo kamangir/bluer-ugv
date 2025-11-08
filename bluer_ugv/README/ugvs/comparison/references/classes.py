@@ -6,7 +6,7 @@ class Reference:
         self,
         title: str,
         url: str,
-        list_of_ugvs: List[str],
+        list_of_ugvs: List[str] = [],
     ):
         self.title = title
         self.url = url
