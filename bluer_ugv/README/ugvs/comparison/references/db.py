@@ -195,6 +195,82 @@ list_of_references.add(
     ],
 )
 
+list_of_references.add(
+    title="Jackal: Unmanned Ground Vehicle",
+    url="https://clearpathrobotics.com/jackal-small-unmanned-ground-vehicle/",
+    list_of_ugvs=[
+        "jackal",
+    ],
+)
+
+
+list_of_references.add(
+    title="AvantGuard UGCV",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/avantguard-israel-uk",
+    list_of_ugvs=[
+        "avantguard",
+    ],
+)
+
+
+list_of_references.add(
+    title="AvantGuard",
+    url="https://en.wikipedia.org/wiki/AvantGuard",
+    list_of_ugvs=[
+        "avantguard",
+    ],
+)
+
+
+list_of_references.add(
+    title="SIM RACAR UGV",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/sim-racar-lambda-germany-uk",
+    list_of_ugvs=[
+        "sr-lambda",
+    ],
+)
+
+
+list_of_references.add(
+    title="SIM-RACAR-Lambda",
+    url="https://www.army-guide.com/eng/product5740.html",
+    list_of_ugvs=[
+        "sr-lambda",
+    ],
+)
+
+list_of_references.add(
+    title="Sharp Claw 2",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/sharp-claw-2-ugv-6x6-unmanned-ground-vehicle-technical-data-sheet-specifications-pictures-video-11412165",
+    list_of_ugvs=[
+        "sharp_claw_2",
+    ],
+)
+
+list_of_references.add(
+    title="Sharp Claw 1",
+    url="https://www.armyrecognition.com/military-products/army/unmanned-systems/unmanned-ground-vehicles/sharp-claw-1-ugv-unmanned-ground-vehicle-china-data-fact-sheet",
+    list_of_ugvs=[
+        "sharp_claw_1",
+    ],
+)
+
+list_of_references.add(
+    title="Robattle",
+    url="https://en.wikipedia.org/wiki/Robattle",
+    list_of_ugvs=[
+        "robattle",
+    ],
+)
+
+
+list_of_references.add(
+    title="Guardium",
+    url="https://en.wikipedia.org/wiki/Guardium",
+    list_of_ugvs=[
+        "guardium",
+    ],
+)
 
 list_of_references.add(
     title="template",

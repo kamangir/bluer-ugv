@@ -287,15 +287,94 @@ list_of_ugvs.add(
     deficiencies=[],
 )
 
+
+list_of_ugvs.add(
+    nickname="jackal",
+    name="Jackal",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "payload": 20,
+        "size": UGV_Size.MEDIUM,
+        "speed": 7.2,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="avantGuard",
+    name="AvantGuard UGCV",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "size": UGV_Size.MEDIUM,
+        "speed": 20,
+    },
+    deficiencies=[],
+)
+
+
+list_of_ugvs.add(
+    nickname="sr-lambda",
+    name="SIM-RACAR-Lambda",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "payload": 45,
+        "range": 1,
+        "size": UGV_Size.LARGE,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="Sharl Claw 1",
+    name="sharp_claw_1",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "range": 6,
+        "size": UGV_Size.LARGE,
+        "speed": 9,
+        "uv_delivery": False,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="Sharl Claw 2",
+    name="sharp_claw_2",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "payload": 120,
+        "range": 50,
+        "size": UGV_Size.LARGE,
+        "speed": 30,
+        "uv_delivery": True,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="robattle",
+    name="Robattle",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "payload": 3000,
+        "size": UGV_Size.LARGE,
+    },
+    deficiencies=[],
+)
+
 list_of_ugvs.add(
     nickname="template",
     name="template",
     features={
-        "DYI": ...,
         "control": ...,
         "cost": ...,
         "payload": ...,
-        "ps": ...,
         "range": ...,
         "size": ...,
         "speed": ...,
