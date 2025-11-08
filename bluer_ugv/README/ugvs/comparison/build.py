@@ -4,7 +4,6 @@ from functools import reduce
 
 from blueness import module
 from bluer_objects import file
-from bluer_objects.env import abcli_path_git
 
 from bluer_ugv import NAME
 from bluer_ugv.README.ugvs.comparison.ugvs.db import list_of_ugvs
@@ -26,9 +25,9 @@ def build(
     logger.info(f"{NAME}.build")
 
     success, contents = file.load_text(
-        os.path.join(
-            abcli_path_git,
-            "bluer-ugv/bluer_ugv/assets/comparison.html",
+        file.absolute(
+            "../../../assets/comparison.html",
+            reference_path=file.path(__file__),
         ),
         log=log,
     )
@@ -75,9 +74,9 @@ def build(
     )
 
     return file.save_text(
-        os.path.join(
-            abcli_path_git,
-            "bluer-ugv/bluer_ugv/docs/UGVs/comparison.html",
+        file.absolute(
+            "../../../docs/UGVs/comparison.html",
+            reference_path=file.path(__file__),
         ),
         contents,
         log=log,
