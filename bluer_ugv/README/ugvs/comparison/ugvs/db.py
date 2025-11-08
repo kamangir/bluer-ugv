@@ -59,16 +59,11 @@ list_of_ugvs.add(
     nickname="karakal",
     name="ربات جنگجوی هوشمند کاراکال",
     features={
-        "DYI": ...,
-        "control": UGV_Control.RC,
-        "cost": ...,
-        "payload": ...,
-        "ps": ...,
-        "range": ...,
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.MEDIUM,
         "size": UGV_Size.MEDIUM,
         "speed": 30,
-        "swarm": ...,
-        "uv_delivery": ...,
+        "range": 0.5,
     },
 )
 
@@ -76,16 +71,9 @@ list_of_ugvs.add(
     nickname="qasem",
     name="ربات قاسم",
     features={
-        "DYI": ...,
-        "control": ...,
-        "cost": ...,
-        "payload": ...,
-        "ps": ...,
-        "range": ...,
-        "size": ...,
-        "speed": ...,
-        "swarm": ...,
-        "uv_delivery": ...,
+        "cost": UGV_Cost.MEDIUM,
+        "size": UGV_Size.MEDIUM,
+        "uv_delivery": True,
     },
     deficiencies=[],
 )
@@ -94,16 +82,11 @@ list_of_ugvs.add(
     nickname="arya",
     name="ربات آریا",
     features={
-        "DYI": ...,
-        "control": ...,
-        "cost": ...,
-        "payload": ...,
-        "ps": ...,
-        "range": ...,
-        "size": ...,
-        "speed": ...,
-        "swarm": ...,
-        "uv_delivery": ...,
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.MEDIUM,
+        "size": UGV_Size.MEDIUM,
+        "speed": 50,
+        "uv_delivery": True,
     },
     deficiencies=[],
 )
@@ -111,18 +94,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="sepah",
     name="ربات جنگ میدانی سپاه",
-    features={
-        "DYI": ...,
-        "control": ...,
-        "cost": ...,
-        "payload": ...,
-        "ps": ...,
-        "range": ...,
-        "size": ...,
-        "speed": ...,
-        "swarm": ...,
-        "uv_delivery": ...,
-    },
+    features={},
     deficiencies=[],
 )
 
@@ -131,16 +103,23 @@ list_of_ugvs.add(
     nickname="raad1",
     name="متلاشی‌کننده بمب و تله انفجاری رعد ۱",
     features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.MEDIUM,
+        "size": UGV_Size.SMALL,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="uran_9",
+    name="Uran-9",
+    features={
         "DYI": ...,
-        "control": ...,
-        "cost": ...,
-        "payload": ...,
-        "ps": ...,
-        "range": ...,
-        "size": ...,
-        "speed": ...,
-        "swarm": ...,
-        "uv_delivery": ...,
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "range": 1,
+        "size": UGV_Size.LARGE,
+        "speed": 133,
     },
     deficiencies=[],
 )
@@ -149,38 +128,164 @@ list_of_ugvs.add(
     nickname="themis_9",
     name="THeMIS-9",
     features={
-        "DYI": ...,
-        "control": ...,
-        "cost": ...,
-        "payload": ...,
-        "ps": ...,
-        "range": ...,
-        "size": ...,
-        "speed": ...,
-        "swarm": ...,
-        "uv_delivery": ...,
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "payload": 1630,
+        "range": 1.5,
+        "size": UGV_Size.LARGE,
+        "speed": 20,
     },
     deficiencies=[],
 )
 
 list_of_ugvs.add(
-    nickname="centaur",
-    name="Centaur",
+    nickname="type_x",
+    name="Type-X",
     features={
-        "DYI": ...,
-        "control": ...,
-        "cost": ...,
-        "payload": ...,
-        "ps": ...,
-        "range": ...,
-        "size": ...,
-        "speed": ...,
-        "swarm": ...,
-        "uv_delivery": ...,
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "payload": 4100,
+        "size": UGV_Size.LARGE,
+        "speed": 80,
     },
     deficiencies=[],
 )
 
+
+list_of_ugvs.add(
+    nickname="centaur",
+    name="Centaur",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "payload": 14.5,
+        "range": 0.8,
+        "size": UGV_Size.MEDIUM,
+        "speed": 4,
+    },
+    deficiencies=[],
+)
+
+
+list_of_ugvs.add(
+    nickname="xm1219",
+    name="XM1219",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "size": UGV_Size.LARGE,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="talon",
+    name="Foster-Miller TALON",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "range": 1.2,
+        "size": UGV_Size.MEDIUM,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="gladiator",
+    name="Gladiator TUGV",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "size": UGV_Size.LARGE,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="ukap",
+    name="UKAP",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "size": UGV_Size.LARGE,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="ripsaw",
+    name="Ripsaw",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "payload": 910,
+        "size": UGV_Size.LARGE,
+        "speed": 105,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="teodor",
+    name="tEODor",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "payload": 100,
+        "size": UGV_Size.MEDIUM,
+    },
+    deficiencies=[],
+)
+
+
+list_of_ugvs.add(
+    nickname="black_knight",
+    name="Black Knight",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "size": UGV_Size.LARGE,
+        "speed": 77,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="guardium",
+    name="Guardium",
+    features={
+        "control": UGV_Control.AI,
+        "cost": UGV_Cost.HIGH,
+        "size": UGV_Size.LARGE,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="milica",
+    name="Milos & Milica",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.MEDIUM,
+        "payload": 100,
+        "range": 3,
+        "size": UGV_Size.LARGE,
+        "speed": 12.5,
+    },
+    deficiencies=[],
+)
+
+list_of_ugvs.add(
+    nickname="taifun_m",
+    name="Taifun-M",
+    features={
+        "control": UGV_Control.RC,
+        "cost": UGV_Cost.HIGH,
+        "size": UGV_Size.LARGE,
+        "uv_delivery": True,
+    },
+    deficiencies=[],
+)
 
 list_of_ugvs.add(
     nickname="template",

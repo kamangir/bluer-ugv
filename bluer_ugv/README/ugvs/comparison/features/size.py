@@ -8,8 +8,8 @@ from bluer_ugv.README.ugvs.comparison.features.classes import (
 
 
 class UGV_Size(Feature_Enum):
-    SMALL = 100
-    MEDIUM = 10
+    SMALL = 100  # < 5 kg
+    MEDIUM = 10  # < 50 kg
     LARGE = 1
 
     @property

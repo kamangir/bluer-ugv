@@ -7,6 +7,7 @@ from bluer_objects import file
 
 from bluer_ugv import NAME
 from bluer_ugv.README.ugvs.comparison.ugvs.db import list_of_ugvs
+from bluer_ugv.README.ugvs.comparison.references.db import list_of_references
 from bluer_ugv.logger import logger
 
 
@@ -71,6 +72,16 @@ def build(
             [],
         )
         + contents[content_index + 1 :]
+        + ["<ol>"]
+        + [
+            '<li><a href="{}">{}</a></li>'.format(
+                reference.url,
+                reference.title,
+            )
+            for reference in list_of_references.db
+            if reference.title != "template"
+        ]
+        + ["</ol>"]
     )
 
     return file.save_text(
