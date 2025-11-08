@@ -15,6 +15,7 @@ from bluer_ugv.README import (
     shield,
     arzhang,
     rangin,
+    releases,
     swallow,
 )
 from bluer_ugv.README.ugvs import docs as ugvs
@@ -40,16 +41,17 @@ def build() -> bool:
                 macros=readme.get("macros", {}),
             )
             for readme in root.docs
+            + alias.docs
+            + arzhang.docs
             + beast.docs
             + eagle.docs
             + fire.docs
-            + ravin.docs
-            + shield.docs
-            + arzhang.docs
-            + swallow.docs
-            + alias.docs
-            + ugvs.docs
             + rangin.docs
+            + ravin.docs
+            + releases.docs
+            + shield.docs
+            + ugvs.docs
+            + swallow.docs
         )
         and build_comparison()
     )

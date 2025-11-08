@@ -15,7 +15,7 @@ list_of_references.add(
     title="ربات ایرانی که تانک‌های دشمن را شکار می‌کند",
     url="https://www.mashreghnews.ir/news/1746417/%D8%B1%D8%A8%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%DA%A9%D9%87-%D8%AA%D8%A7%D9%86%DA%A9-%D9%87%D8%A7%DB%8C-%D8%AF%D8%B4%D9%85%D9%86-%D8%B1%D8%A7-%D8%B4%DA%A9%D8%A7%D8%B1-%D9%85%DB%8C-%DA%A9%D9%86%D8%AF-%D9%81%DB%8C%D9%84%D9%85",
     list_of_ugvs=[
-        "heidar",
+        "heydar",
     ],
     is_in_farsi=True,
 )
@@ -25,7 +25,7 @@ list_of_references.add(
     url="https://farsnews.ir/M_r7726/1738414889748074000/%D8%B1%D8%A8%D8%A7%D8%AA%D9%87%D8%A7%DB%8C%DB%8C-%DA%A9%D9%87-%D8%A8%D9%84%D8%A7%DB%8C-%D8%AC%D8%A7%D9%86-%D8%AA%D8%A7%D9%86%DA%A9%D9%87%D8%A7%DB%8C-%D8%AF%D8%B4%D9%85%D9%86-%D9%85%DB%8C%D8%B4%D9%88%D9%86%D8%AF",
     list_of_ugvs=[
         "nazir",
-        "heidar",
+        "heydar",
         "karakal",
     ],
     is_in_farsi=True,
@@ -49,7 +49,7 @@ list_of_references.add(
         "karakal",
         "nazir",
         "qasem",
-        "heidar",
+        "heydar",
         "sepah",
     ],
     is_in_farsi=True,
