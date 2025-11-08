@@ -25,6 +25,7 @@ setup(
         f"{NAME}.README.ugvs",
         f"{NAME}.README.ugvs.comparison",
         f"{NAME}.README.ugvs.comparison.features",
+        f"{NAME}.README.ugvs.comparison.references",
         f"{NAME}.README.ugvs.comparison.ugvs",
         # designs
         f"{NAME}.designs",

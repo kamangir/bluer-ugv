@@ -13,5 +13,8 @@ class UVDeliveryFeature(Feature):
             better_func=lambda score_1, score_2: score_1 and not score_2,
         )
 
-    def brag(self) -> str:
-        return "حمل پهپاد و رهپاد"
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return f"حمل پهپاد و رهپاد {ugv_name}"

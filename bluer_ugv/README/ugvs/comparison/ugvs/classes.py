@@ -1,7 +1,7 @@
 from typing import List, Dict, Any
 
 from bluer_ugv.README.ugvs.comparison.features.classes import FeatureList
-from bluer_ugv.README.ugvs.comparison.ugvs.features import dict_of_feature_classes
+from bluer_ugv.README.ugvs.comparison.features.db import dict_of_feature_classes
 from bluer_ugv.logger import logger
 
 

@@ -13,5 +13,8 @@ class SanctionProofFeature(Feature):
             better_func=lambda score_1, score_2: score_1 and not score_2,
         )
 
-    def brag(self) -> str:
-        return "تحریم گریزی"
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return f"تحریم گریزی {ugv_name}"

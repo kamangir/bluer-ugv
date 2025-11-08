@@ -13,5 +13,8 @@ class ConcealmentFeature(Feature):
             better_func=lambda score_1, score_2: score_1 and not score_2,
         )
 
-    def brag(self) -> str:
-        return "قابلیت استتار و کمین درازمدت"
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return f"قابلیت استتار و کمین درازمدت {ugv_name}"

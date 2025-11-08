@@ -15,7 +15,11 @@ class RangeFeature(Feature):
             better_func=lambda score_1, score_2: score_1 > score_2,
         )
 
-    def brag(self) -> str:
-        return "شعاع عملکرد عملیاتی {}".format(
-            "نامحدود" if self.score == -1 else f"{self.score} کیلومتر"
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return "شعاع عملکرد عملیاتی {} {}".format(
+            "نامحدود" if self.score == -1 else f"{self.score} کیلومتر",
+            ugv_name,
         )

@@ -24,6 +24,7 @@ list_of_feature_classes: List[Type[Feature]] = [
     PayloadFeature,
     PSFeature,
     RangeFeature,
+    SanctionProofFeature,
     SizeFeature,
     SpeedFeature,
     SwarmFeature,

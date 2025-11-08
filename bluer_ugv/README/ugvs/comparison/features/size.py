@@ -20,3 +20,9 @@ class SizeFeature(Feature):
             score=score,
             better_func=lambda score_1, score_2: score_1.score < score_2.score,
         )
+
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return f"اندازه‌ی کوچکتر{ugv_name}"

@@ -12,8 +12,11 @@ class Feature:
         self.score = score
         self.better_func = better_func
 
-    def brag(self) -> str:
-        return "TBA"
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return f"{ugv_name} {self.nickname}: {self.score}"
 
 
 class FeatureList:

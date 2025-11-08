@@ -12,3 +12,9 @@ class SpeedFeature(Feature):
             score=score,
             better_func=lambda score_1, score_2: score_1 > score_2,
         )
+
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return f"سرعت بالاتر {ugv_name}"

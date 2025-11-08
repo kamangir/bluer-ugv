@@ -20,5 +20,8 @@ class ControlFeature(Feature):
             better_func=lambda score_1, score_2: score_1.score > score_2.score,
         )
 
-    def brag(self) -> str:
-        return "سامانه‌ی هوش مصنوعی"
+    def brag(
+        self,
+        ugv_name: str,
+    ) -> str:
+        return f"سامانه‌ی هوش مصنوعی {ugv_name}"

@@ -1,7 +1,7 @@
 from typing import List
 
 
-class UGV_Reference:
+class Reference:
     def __init__(
         self,
         title: str,
@@ -11,3 +11,15 @@ class UGV_Reference:
         self.title = title
         self.url = url
         self.list_of_ugvs = list_of_ugvs
+
+
+class List_of_References:
+    def __init__(self):
+        self.db: List[Reference] = []
+
+    def add(
+        self,
+        **kw_args,
+    ):
+        ugv = Reference(**kw_args)
+        self.db.append(ugv)
