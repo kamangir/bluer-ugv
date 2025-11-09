@@ -102,6 +102,8 @@ bps/validations/live-3.md,\
 bps/simulations,\
 bps/simulations/timing.md .
 
+@upload filename=release.pdf .
+
 @assets publish extensions=pdf,push .
 ```
 
