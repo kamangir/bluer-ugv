@@ -45,6 +45,7 @@ swallow/digital/algo/yolo,\
 swallow/digital/algo/yolo/train.md .
 
 @pdf convert - @ugv \
+arzhang,\
 arzhang/design,\
 arzhang/design/specs.md,\
 arzhang/design/mechanical,\
