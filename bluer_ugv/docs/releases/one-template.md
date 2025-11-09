@@ -6,6 +6,7 @@ title:::
 
 @pdf convert - @ugv \
 swallow,\
+$abcli_path_git/bluer-designs/swallow/terminology.png,\
 swallow/digital,\
 swallow/digital/design,\
 swallow/digital/design/parts.md,\
@@ -13,10 +14,18 @@ aliases/swallow.md,\
 swallow/digital/design/parts.md,\
 swallow/digital/design/terraform.md,\
 swallow/digital/design/shield.md,\
+$abcli_path_git/bluer-designs/swallow/electrical/digital.png,\
+$abcli_path_git/bluer-designs/swallow/kicad/swallow/exports/swallow.pdf,\
+$abcli_path_git/bluer-designs/swallow/kicad/swallow/exports/swallow-3d.png,\
+$abcli_path_git/bluer-designs/swallow/kicad/swallow/exports/swallow-3d-back.png,\
+$abcli_path_git/bluer-designs/swallow/kicad/swallow/exports/swallow-pcb.png,\
 swallow/digital/design/rpi-pinout.md,\
 swallow/digital/design/operation.md,\
 swallow/digital/design/mechanical,\
-swallow/digital/design/ultrasonic-sensor,\
+$abcli_path_git/bluer-designs/swallow/mechanical/robot.png,\
+$abcli_path_git/bluer-designs/swallow/mechanical/cage.png,\
+$abcli_path_git/bluer-designs/swallow/mechanical/measurements.png,\
+$abcli_path_git/bluer-designs/swallow/ultrasonic-sensors/geometry.png,\
 swallow/digital/algo,\
 swallow/digital/algo/driving.md,\
 swallow/digital/algo/navigation,\
@@ -36,9 +45,14 @@ swallow/digital/algo/yolo,\
 swallow/digital/algo/yolo/train.md .
 
 @pdf convert - @ugv \
+arzhang,\
 arzhang/design,\
 arzhang/design/specs.md,\
 arzhang/design/mechanical,\
+$abcli_path_git/bluer-designs/arzhang/robot.png,\
+$abcli_path_git/bluer-designs/arzhang/cage.png,\
+$abcli_path_git/bluer-designs/arzhang/robot-with-cover.png,\
+$abcli_path_git/bluer-designs/arzhang/measurements.png,\
 arzhang/design/parts.md .
 
 @pdf convert - @ugv \
@@ -102,9 +116,11 @@ bps/validations/live-3.md,\
 bps/simulations,\
 bps/simulations/timing.md .
 
+@upload filename=release.pdf .
+
 @assets publish extensions=pdf,push .
 ```
 
 set:::object_name release-2025-11-09-02-50-43-vkhs2k
 
-assets:::get:::object_name/get:::object_name.pdf
+assets:::get:::object_name/release.pdf
