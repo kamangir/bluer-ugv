@@ -122,4 +122,4 @@ bps/simulations/timing.md .
 
 set:::object_name release-2025-11-09-02-50-43-vkhs2k
 
-assets:::get:::object_name/get:::object_name.pdf
+assets:::get:::object_name/release.pdf
