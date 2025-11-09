@@ -24,6 +24,9 @@ setup(
         f"{NAME}.README.swallow.digital.design",
         f"{NAME}.README.ugvs",
         f"{NAME}.README.ugvs.comparison",
+        f"{NAME}.README.ugvs.comparison.features",
+        f"{NAME}.README.ugvs.comparison.references",
+        f"{NAME}.README.ugvs.comparison.ugvs",
         # designs
         f"{NAME}.designs",
         f"{NAME}.designs.arzhang",
@@ -49,6 +52,7 @@ setup(
             "config.env",
             "sample.env",
             ".abcli/**/*.sh",
+            "assets/**/*",
         ],
     },
 )
