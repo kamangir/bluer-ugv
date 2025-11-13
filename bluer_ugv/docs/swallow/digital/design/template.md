@@ -6,6 +6,7 @@ title:::
 - [rpi-pinout](./rpi-pinout.md)
 - [operation](./operation.md)
 - [mechanical](./mechanical)
+- [steering setpoint](../../../../../notebooks/swallow-steering-setpoint.ipynb)
 - [ultrasonic sensor](./ultrasonic-sensor)
 
 ## obsolete
