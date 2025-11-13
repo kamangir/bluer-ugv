@@ -1,6 +1,6 @@
 title:::
 
-connect [adapter-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/adapter-bus.md) and [regulated-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/regulated-bus.md) and the additional connects (see figure).
+connect [adapter-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/adapter-bus.md) and [regulated-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/regulated-bus.md) and the additional connections (see figure).
 
 - validate green, red, blue leds.
 - validate sw.

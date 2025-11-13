@@ -54,8 +54,8 @@ docs = [
         "items": ImageItems(
             {
                 f"{swallow_assets2}/20251113_205145.jpg": "",
-                f"{swallow_assets2}/20251113_210706.jpg": "",
                 f"{swallow_assets2}/20251113_210730.jpg": "",
+                f"{swallow_assets2}/20251113_210706.jpg": "",
             },
         ),
     },
