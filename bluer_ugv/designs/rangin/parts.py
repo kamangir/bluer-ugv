@@ -7,7 +7,7 @@ dict_of_parts = {
     "power-adapter": "12V DC, 1 A",
     "TV-bracket": "2 x",
     #
-    "dsn-vc288": "0 - 50 V, 0 - 50 A",
+    "dc-volt-meter": "0 - 50 V, 0 - 50 A",
     "mcb": "2 - 3 A @ 220 V AC",
     "ac-switch": "2 - 5 A @ 250 V AC",
     "safety-fuse": "30 mA trip",
