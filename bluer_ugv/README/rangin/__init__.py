@@ -34,7 +34,7 @@ docs = [
         "items": Items(
             [
                 {
-                    "name": "arzhang",
+                    "name": "electrical",
                     "marquee": f"{rangin_electrical_design}/electrical.png?raw=true",
                     "url": f"{rangin_electrical_design}/electrical.svg",
                 },

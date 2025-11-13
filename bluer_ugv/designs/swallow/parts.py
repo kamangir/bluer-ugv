@@ -1,8 +1,8 @@
 dict_of_parts = {
     "dc-motor-12-VDC-45W": "type 2, 2 x right + 2 x left",
-    "SLA-Battery": "",
+    "SLA-Battery": "12 V, 7.2 Ah",
     "wheel": "4 x ",
-    "on-off-switch": "",
+    "dc-switch": "12V DC 10 A",
     "charging-port": "",
     "connector": "4 pairs",
 }
