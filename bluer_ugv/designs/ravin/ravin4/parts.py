@@ -23,7 +23,7 @@ dict_of_parts = {
     "mt-3608": "",
     "arduino-nano": "",
     "tb6612": "",
-    "small-on-off-switch": "",
+    "small-dc-switch": "",
     "pin-headers": "2 x (male, 1 x 40) -> 2 x 4 + 2 x 6 + 2 x 15",
     "double-sided-tape": "",
     "electrical-tape": "",
