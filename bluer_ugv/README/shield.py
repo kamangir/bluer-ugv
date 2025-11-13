@@ -46,7 +46,17 @@ items = ImageItems(
 
 docs = [
     {
-        "path": "../docs/swallow/digital/design/shield.md",
+        "path": "../docs/swallow/digital/design/shield",
         "items": items,
+    },
+    {
+        "path": "../docs/swallow/digital/design/shield/testing.md",
+        "items": ImageItems(
+            {
+                f"{swallow_assets2}/20251113_205142.jpg": "",
+                f"{swallow_assets2}/20251113_210730.jpg": "",
+                f"{swallow_assets2}/20251113_210706.jpg": "",
+            },
+        ),
     },
 ]

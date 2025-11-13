@@ -12,7 +12,7 @@ items = markdown.generate_table(
         [
             {
                 "name": "shield",
-                "url": "./bluer_ugv/docs/swallow/digital/design/shield.md",
+                "url": "./bluer_ugv/docs/swallow/digital/design/shield",
                 "marquee": f"{swallow_electrical_designs}/digital.png?raw=true",
             },
             {
