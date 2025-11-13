@@ -5,4 +5,5 @@ dict_of_parts = {
     "dc-switch": "12V DC 10 A",
     "charging-port": "",
     "connector": "4 pairs",
+    "power-adapter": "12V DC, 1 A",
 }
