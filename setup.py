@@ -29,7 +29,6 @@ setup(
         f"{NAME}.README.ugvs.comparison.ugvs",
         # designs
         f"{NAME}.designs",
-        f"{NAME}.designs.arzhang",
         f"{NAME}.designs.eagle",
         f"{NAME}.designs.fire",
         f"{NAME}.designs.rangin",
