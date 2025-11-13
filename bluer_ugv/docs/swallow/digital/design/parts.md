@@ -1,6 +1,6 @@
 # swallow: digital: design: parts
 
-a [swallow computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow.md) + an optional [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head.md) at the back  + 2 optional [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head.md)s at the top ⬇️
+a [swallow computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow.md) + an optional [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head.md) at the back  + 2 optional [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head.md)s at the top + ⬇️
 
 1. [12 VDC motor, 20-45 W](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/dc-motor-12-VDC-45W.md): type 2, 2 x right + 2 x left.
 1. [AC to DC power adapter](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/power-adapter.md): 12V DC, 1 A.
