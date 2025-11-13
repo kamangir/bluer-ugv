@@ -6,4 +6,5 @@ dict_of_parts = {
     "charging-port": "",
     "connector": "4 pairs",
     "power-adapter": "12V DC, 1 A",
+    "DC-gearboxed-motor-12V-120RPM": "4 x",
 }
