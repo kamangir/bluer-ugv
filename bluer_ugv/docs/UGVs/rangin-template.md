@@ -4,11 +4,11 @@ an ad robot.
 
 - computer(s):
     - `rangin-front`
-        - build is pending. 🚧
+        - build is ongoing 🔥
     - `rangin-top`.
-        - build is pending. 🚧
-- body is pending. 🚧
-- cover is pending. 🚧
+        - build is ongoing 🔥
+- body is ongoing 🔥
+- cover is ongoing 🔥
 
 validations:::
 
