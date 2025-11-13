@@ -6,7 +6,6 @@ connect [adapter-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/
 - validate sw.
 - validate echo conditioning. between 2.0 VDC and 3.3 VDC is safe. 2.53 VDC - 2.83 VDC have been observed.
 
-|   |   |
-| --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210706.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210706.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210730.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210730.jpg?raw=true) |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251113_205145.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251113_205145.jpg?raw=true) |  |
+|   |   |   |
+| --- | --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251113_205145.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251113_205145.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210706.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210706.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210730.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251113_210730.jpg?raw=true) |
