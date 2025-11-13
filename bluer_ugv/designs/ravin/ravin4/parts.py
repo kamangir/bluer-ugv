@@ -11,9 +11,9 @@ dict_of_parts = {
                 "10 x 6 mm bolt",
                 "1 x 5 mm bolt",
                 "8 x 30 mm bolt",
+                "20 x nut",
                 "1 x 5 mm spacer",
                 "2 x 10 mm spacer",
-                "20 x nut",
             ]
         )
     ),
