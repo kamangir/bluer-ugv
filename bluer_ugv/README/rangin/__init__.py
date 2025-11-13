@@ -4,7 +4,10 @@ from bluer_sbc.parts.consts import parts_url_prefix
 
 from bluer_ugv.README.rangin.items import items
 from bluer_ugv.designs.rangin.parts import dict_of_parts
-from bluer_ugv.README.rangin.consts import rangin_mechanical_design
+from bluer_ugv.README.rangin.consts import (
+    rangin_electrical_design,
+    rangin_mechanical_design,
+)
 
 docs = [
     {
@@ -26,7 +29,17 @@ docs = [
         },
     },
     {
-        "path": "../docs/rangin/power.md",
+        "path": "../docs/rangin/electrical.md",
+        "cols": 2,
+        "items": Items(
+            [
+                {
+                    "name": "arzhang",
+                    "marquee": f"{rangin_electrical_design}/electrical.png?raw=true",
+                    "url": f"{rangin_electrical_design}/electrical.svg",
+                },
+            ]
+        ),
     },
     {
         "path": "../docs/rangin/mechanical.md",

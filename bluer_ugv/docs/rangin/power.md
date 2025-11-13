@@ -1,4 +1,0 @@
-# rangin: power
-
-🔥
-
