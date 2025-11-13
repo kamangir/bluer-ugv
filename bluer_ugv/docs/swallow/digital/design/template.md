@@ -2,7 +2,7 @@ title:::
 
 - [parts](parts.md)
 - [terraform](./terraform.md)
-- [shield](./shield.md)
+- [shield](./shield)
 - [rpi-pinout](./rpi-pinout.md)
 - [operation](./operation.md)
 - [mechanical](./mechanical)

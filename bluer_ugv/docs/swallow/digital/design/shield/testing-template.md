@@ -1,0 +1,9 @@
+title:::
+
+connect [adapter-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/adapter-bus.md) and [regulated-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/regulated-bus.md) and the additional connects (see figure).
+
+- validate green, red, blue leds.
+- validate sw.
+- validate echo conditioning. between 2.0 VDC and 3.3 VDC is safe. 2.53 VDC - 2.83 VDC have been observed.
+
+items:::
