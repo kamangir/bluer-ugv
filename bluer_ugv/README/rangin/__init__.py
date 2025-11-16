@@ -15,6 +15,9 @@ docs = [
         "path": "../docs/rangin",
     },
     {
+        "path": "../docs/rangin/specs.md",
+    },
+    {
         "path": "../docs/rangin/parts.md",
         "items": db_of_parts.as_images(
             dict_of_parts,

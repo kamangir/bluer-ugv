@@ -21,5 +21,6 @@ title:::
             - thin metal sheet
                 - 260 mm x 900 mm x 0.5 mm
                 - 2 x 120 mm x 900 mm x 0.5
+    - 90c: 90 with curved front and back. ⭐️
 
 items:::
