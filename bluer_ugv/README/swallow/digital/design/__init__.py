@@ -71,9 +71,9 @@ docs = (
             "path": "../docs/swallow/digital/design/testing.md",
             "items": ImageItems(
                 {
-                    "20251116_145939": "",
-                    "20251116_150940": "",
-                    "20251116_151611": "",
+                    f"{swallow_assets2}/20251116_145939": "",
+                    f"{swallow_assets2}/20251116_150940": "",
+                    f"{swallow_assets2}/20251116_151611": "",
                 }
             ),
         },

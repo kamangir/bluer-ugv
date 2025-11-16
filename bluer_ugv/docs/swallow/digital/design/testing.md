@@ -12,4 +12,4 @@
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](20251116_145939)](20251116_145939) | [![image](20251116_150940)](20251116_150940) | [![image](20251116_151611)](20251116_151611) |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_145939?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_145939?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_150940?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_150940?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_151611?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_151611?raw=true) |
