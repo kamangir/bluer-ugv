@@ -67,6 +67,10 @@ docs = (
         {
             "path": "../docs/swallow/digital/design/rpi-pinout.md",
         },
+        {
+            "path": "../docs/swallow/digital/design/testing.md",
+            "items": [],
+        },
     ]
     + mechanical.docs
     + ultrasonic_sensor.docs
