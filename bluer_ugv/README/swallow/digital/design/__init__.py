@@ -69,7 +69,13 @@ docs = (
         },
         {
             "path": "../docs/swallow/digital/design/testing.md",
-            "items": [],
+            "items": ImageItems(
+                {
+                    "20251116_145939": "",
+                    "20251116_150940": "",
+                    "20251116_151611": "",
+                }
+            ),
         },
     ]
     + mechanical.docs
