@@ -8,8 +8,8 @@
 - 🔥
 - wire the ultrasonic sensors, turn the power on, validate that ultrasonic sensors log warning and danger, shutdown, power off.
 - test the camera 🔥
-- test the bps 🔥
 
 |   |   |   |
 | --- | --- | --- |
 | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_145939.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_145939.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_150940.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_150940.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_151611.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_151611.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152801.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152801.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152832_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152832_1.gif?raw=true) |  |

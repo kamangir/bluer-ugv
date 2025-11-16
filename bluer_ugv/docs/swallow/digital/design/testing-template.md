@@ -8,6 +8,5 @@ title:::
 - 🔥
 - wire the ultrasonic sensors, turn the power on, validate that ultrasonic sensors log warning and danger, shutdown, power off.
 - test the camera 🔥
-- test the bps 🔥
 
 items:::
