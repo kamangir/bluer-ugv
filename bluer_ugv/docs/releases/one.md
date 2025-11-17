@@ -67,8 +67,8 @@ validations/village-6.md,\
 validations/village-7.md .
 
 @pdf convert - @sbc \
-swallow.md,\
-swallow-head.md .
+swallow,\
+swallow-head .
 
 @pdf convert - @algo \
 image_classifier,\

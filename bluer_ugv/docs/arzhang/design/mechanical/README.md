@@ -13,7 +13,9 @@
     - 260 mm x 430 mm x 2 mm
 - thin metal sheet
     - 260 mm x 600 mm x 0.5 mm
-    - 2 x 120 mm x 600 mm x 0.5
+- fiberglass
+    - 2 x 120 mm x 600 mm
+    - 260 mm x 120 mm
 
 |   |   |
 | --- | --- |

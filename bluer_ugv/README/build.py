@@ -12,12 +12,12 @@ from bluer_ugv.README import (
     fire,
     ravin,
     root,
-    shield,
     arzhang,
     rangin,
     releases,
     swallow,
 )
+from bluer_ugv.README.shield import docs as shield
 from bluer_ugv.README.ugvs import docs as ugvs
 from bluer_ugv.README.ugvs.comparison.build import build as build_comparison
 

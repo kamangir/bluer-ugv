@@ -18,6 +18,7 @@ setup(
         f"{NAME}.README.fire",
         f"{NAME}.README.rangin",
         f"{NAME}.README.ravin",
+        f"{NAME}.README.shield",
         f"{NAME}.README.swallow",
         f"{NAME}.README.swallow.digital",
         f"{NAME}.README.swallow.digital.algo",

@@ -24,6 +24,7 @@ from bluer_ugv.swallow.session.classical.motor import (
 )
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.position import ClassicalPosition
+from bluer_ugv.swallow.session.classical.screen import ClassicalScreen
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
     ClassicalUltrasonicSensor,
 )
