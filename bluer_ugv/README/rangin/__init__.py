@@ -5,6 +5,7 @@ from bluer_sbc.parts.consts import parts_url_prefix
 from bluer_ugv.README.rangin.items import items
 from bluer_ugv.designs.rangin.parts import dict_of_parts
 from bluer_ugv.README.rangin.consts import (
+    rangin_assets2,
     rangin_electrical_design,
     rangin_mechanical_design,
 )
@@ -16,6 +17,11 @@ docs = [
     },
     {
         "path": "../docs/rangin/specs.md",
+        "items": ImageItems(
+            {
+                f"{rangin_assets2}/20251116_124842.jpg": "",
+            }
+        ),
     },
     {
         "path": "../docs/rangin/parts.md",
