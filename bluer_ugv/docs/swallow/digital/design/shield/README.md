@@ -1,9 +1,10 @@
 # swallow: digital: design: shield
 
-- [electrical diagram](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/)
-- [schematics and PCB](https://github.com/kamangir/bluer-designs/tree/main/swallow/kicad/swallow)
+- design:
+    - [electrical diagram](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/)
+    - [schematics and PCB](https://github.com/kamangir/bluer-designs/tree/main/swallow/kicad/swallow)
 - [testing](./testing.md)
-- [parts and more views](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow.md)
+- [parts and more views](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow)
 
 
 
