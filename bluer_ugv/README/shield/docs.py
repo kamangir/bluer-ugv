@@ -5,10 +5,10 @@ from bluer_ugv.README.swallow.consts import (
     swallow_designs,
     swallow_electrical_designs,
 )
+from bluer_ugv.README.shield import pcb, schematics, testing
 
 items = ImageItems(
     {
-        f"{swallow_electrical_designs}/digital.png": f"{swallow_electrical_designs}/digital.svg",
         f"{swallow_assets2}/20250614_102301.jpg": "",
         f"{swallow_assets2}/20250703_153834.jpg": "",
         f"{swallow_assets2}/20250925_213013.jpg": "",
@@ -24,10 +24,6 @@ items = ImageItems(
         f"{swallow_assets2}/20251008_133418.jpg": "",
         f"{swallow_assets2}/20251008_124129.jpg": "",
         f"{swallow_assets2}/20251008_124932.jpg": "",
-        f"{swallow_designs}/kicad/swallow/exports/swallow.png": f"{swallow_designs}/kicad/swallow/exports/swallow.pdf",
-        f"{swallow_designs}/kicad/swallow/exports/swallow-3d.png": "",
-        f"{swallow_designs}/kicad/swallow/exports/swallow-3d-back.png": "",
-        f"{swallow_designs}/kicad/swallow/exports/swallow-pcb.png": "",
         f"{swallow_assets2}/20251112_085331.jpg": "",
         f"{swallow_assets2}/20251112_181047.jpg": "",
         f"{swallow_assets2}/20251112_181053.jpg": "",
@@ -35,19 +31,14 @@ items = ImageItems(
 )
 
 
-docs = [
-    {
-        "path": "../docs/swallow/digital/design/shield",
-        "items": items,
-    },
-    {
-        "path": "../docs/swallow/digital/design/shield/testing.md",
-        "items": ImageItems(
-            {
-                f"{swallow_assets2}/20251113_205142.jpg": "",
-                f"{swallow_assets2}/20251113_210730.jpg": "",
-                f"{swallow_assets2}/20251113_210706.jpg": "",
-            },
-        ),
-    },
-]
+docs = (
+    [
+        {
+            "path": "../docs/swallow/digital/design/shield",
+            "items": items,
+        },
+    ]
+    + pcb.docs
+    + schematics.docs
+    + testing.docs
+)
