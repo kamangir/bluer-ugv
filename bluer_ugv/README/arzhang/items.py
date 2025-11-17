@@ -25,5 +25,11 @@ items = ImageItems(
         f"{arzhang_assets2}/20251005_112332.jpg": "",
         f"{arzhang_assets2}/20251005_112530.jpg": "",
         f"{arzhang_assets2}/20251018_213230.jpg": "",
+        f"{arzhang_assets2}/20251117_112301.jpg": "",
+        f"{arzhang_assets2}/20251117_120134.jpg": "",
+        f"{arzhang_assets2}/20251117_125503.jpg": "",
+        f"{arzhang_assets2}/20251117_125515.jpg": "",
+        f"{arzhang_assets2}/20251117_125544.jpg": "",
+        f"{arzhang_assets2}/20251117_160851.jpg": "",
     }
 )
