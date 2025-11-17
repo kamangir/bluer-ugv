@@ -9,10 +9,7 @@ from bluer_ugv.README.swallow.consts import (
 items = ImageItems(
     {
         f"{swallow_electrical_designs}/digital.png": f"{swallow_electrical_designs}/digital.svg",
-        f"{swallow_assets2}/20250609_164433.jpg": "",
         f"{swallow_assets2}/20250614_102301.jpg": "",
-        f"{swallow_assets2}/20250614_114954.jpg": "",
-        f"{swallow_assets2}/20250615_192339.jpg": "",
         f"{swallow_assets2}/20250703_153834.jpg": "",
         f"{swallow_assets2}/design/v2/01.jpg": "",
         f"{swallow_assets2}/design/v3/01.jpg": "",
@@ -36,7 +33,6 @@ items = ImageItems(
         f"{swallow_designs}/kicad/swallow/exports/swallow-3d.png": "",
         f"{swallow_designs}/kicad/swallow/exports/swallow-3d-back.png": "",
         f"{swallow_designs}/kicad/swallow/exports/swallow-pcb.png": "",
-        f"{swallow_assets2}/20250609_164433.jpg": "",
         f"{swallow_assets2}/20251112_085331.jpg": "",
         f"{swallow_assets2}/20251112_181047.jpg": "",
         f"{swallow_assets2}/20251112_181053.jpg": "",
