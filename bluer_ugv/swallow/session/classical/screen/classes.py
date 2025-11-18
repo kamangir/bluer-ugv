@@ -1,9 +1,9 @@
 from bluer_options.host.functions import is_headless
 
-from bluer_ugv.logger import logger
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.screen.video_player import VideoPlayer
 from bluer_ugv.swallow.session.classical.screen.video_list import VideoList
+from bluer_ugv.logger import logger
 
 
 class ClassicalScreen:
@@ -11,7 +11,6 @@ class ClassicalScreen:
         self.video_player = None if is_headless() else VideoPlayer()
 
         self.video_list = VideoList(env.RANGIN_VIDEO_LIST_OBJECT)
-        self.video_list_index = -1
 
         logger.info(f"{self.__class__.__name__} created.")
 
@@ -28,18 +27,9 @@ class ClassicalScreen:
         if self.video_player.process:
             return True
 
-        self.video_list_index += 1
-        if self.video_list_index >= len(self.video_list.play_list):
-            self.video_list_index = 0
-
-        logger.info(
-            "{}: video #{}".format(
-                self.__class__.__name__,
-                self.video_list_index,
-            )
-        )
+        self.video_list.next()
 
         return self.video_player.play(
-            self.video_list.get(self.video_list_index),
+            self.video_list.get(self.video_list.index),
             loop=False,
         )
