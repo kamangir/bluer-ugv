@@ -31,6 +31,7 @@ class VideoPlayer:
         if not self.dryrun:
             if self.process and self.process.poll() is None:
                 try:
+                    # mpv understands "p" as toggle-pause.
                     self.process.stdin.write(b"p")
                     self.process.stdin.flush()
                 except Exception as e:
@@ -56,9 +57,8 @@ class VideoPlayer:
             return False
 
         if not self.dryrun:
-            # start omxplayer fullscreen.
             loop_flag = "--loop" if loop else ""
-            cmd = f"omxplayer -b {loop_flag} {shlex.quote(filename)}"
+            cmd = f"mpv --fs {loop_flag} --no-audio {shlex.quote(filename)}"
             logger.info(f"running: {cmd}")
 
             # Kill previous playback if running
@@ -73,7 +73,7 @@ class VideoPlayer:
                     stderr=subprocess.DEVNULL,
                 )
             except Exception as e:
-                logger.error(f"failed to run omxplayer: {e}")
+                logger.error(f"failed to run mpv: {e}")
                 self.process = None
                 return False
 
@@ -112,6 +112,7 @@ class VideoPlayer:
         if not self.dryrun:
             if self.process and self.process.poll() is None:
                 try:
+                    # mpv: quit = "q"
                     self.process.stdin.write(b"q")
                     self.process.stdin.flush()
                 except Exception as e:
