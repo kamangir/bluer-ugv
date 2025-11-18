@@ -35,7 +35,7 @@ class VideoList:
             max_length=-1,
         )
 
-        self.play_list: List[str] = get_from_object(
+        self.play_list: List[Dict[str, str]] = get_from_object(
             self.object_name,
             "play_list",
             default=[],
@@ -64,27 +64,25 @@ class VideoList:
         filename = f"{keyword.__class__.__name__}-not-supported"
 
         if isinstance(keyword, int):
-            filename = (
-                self.play_list[keyword].get(
-                    what,
-                    f"{what}-not-found",
-                )
-                if keyword >= 0 and keyword < len(self.play_list)
-                else "bad-index-{}-from-{}".format(
-                    keyword,
-                    len(self.play_list),
-                )
+            filename = "bad-index-{}-from-{}".format(
+                keyword,
+                len(self.play_list),
             )
 
-        if isinstance(keyword, str):
-            filename = (
-                self.messages[keyword].get(
+            if keyword >= 0 and keyword < len(self.play_list):
+                filename = self.play_list[keyword].get(
                     what,
                     f"{what}-not-found",
                 )
-                if keyword in self.messages
-                else f"{keyword}-not-found"
-            )
+
+        if isinstance(keyword, str):
+            filename = f"{keyword}-not-found"
+
+            if keyword in self.messages:
+                filename = self.messages[keyword].get(
+                    what,
+                    f"{what}-not-found",
+                )
 
         return objects.path_of(
             filename=filename,

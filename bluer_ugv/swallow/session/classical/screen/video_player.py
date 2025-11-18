@@ -53,7 +53,7 @@ class VideoPlayer:
     ) -> bool:
         if not file.exists(filename):
             logger.error(f"file not found: {filename}")
-            return
+            return False
 
         if not self.dryrun:
             # start omxplayer fullscreen.
@@ -65,6 +65,7 @@ class VideoPlayer:
             self.stop()
 
             try:
+                # pylint: disable=consider-using-with
                 self.process = subprocess.Popen(
                     shlex.split(cmd),
                     stdin=subprocess.PIPE,
@@ -115,7 +116,6 @@ class VideoPlayer:
                     self.process.stdin.flush()
                 except Exception as e:
                     logger.warning(e)
-                    pass
 
                 time.sleep(0.3)
                 self.process.kill()
