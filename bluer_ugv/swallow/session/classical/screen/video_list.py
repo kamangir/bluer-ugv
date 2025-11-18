@@ -69,7 +69,7 @@ class VideoList:
                 len(self.play_list),
             )
 
-            if keyword >= 0 and keyword < len(self.play_list):
+            if 0 <= keyword < len(self.play_list):
                 filename = self.play_list[keyword].get(
                     what,
                     f"{what}-not-found",
