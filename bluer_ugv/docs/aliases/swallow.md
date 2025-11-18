@@ -34,6 +34,18 @@
  . upload the swallow dataset.
 ```
 
+## debug
+
+```bash
+@swallow \
+	debug \
+	[~upload] \
+	[-|<object-name>] \
+	[--generate_gif 0] \
+	[--save_images 0]
+ . debug swallow.
+```
+
 ## env
 
 ```bash
@@ -68,6 +80,16 @@
  . test keyboard.
 ```
 
+## select-target
+
+```bash
+@swallow \
+	select_target \
+	[--host <hostname>] \
+	[--loop 0]
+ . select swallow target.
+```
+
 ## ultrasonic-sensor
 
 ```bash
@@ -92,4 +114,45 @@
 	[--max_m 0.80] \
 	[--rm_blank 0]
  . test ultrasonic sensors.
+```
+
+## video
+
+```bash
+@swallow \
+	video_player \
+	pause
+ . pause video player.
+@swallow \
+	video_player \
+	play \
+	[download,video=<loading|1>] \
+	[rangin-video-list-1|<object-name>]
+ . play <object-name>.
+@swallow \
+	video \
+	playlist \
+	cat \
+	[download]
+ . cat swallow playlist.
+@swallow \
+	video \
+	playlist \
+	download
+ . download swallow playlist.
+@swallow \
+	video \
+	playlist \
+	edit \
+	[download]
+ . edit swallow playlist.
+@swallow \
+	video \
+	playlist \
+	upload
+ . upload swallow playlist.
+@swallow \
+	video_player \
+	stop
+ . stop video player.
 ```

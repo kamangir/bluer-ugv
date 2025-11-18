@@ -12,6 +12,7 @@ setup(
         NAME,
         f"{NAME}.help",
         f"{NAME}.help.swallow",
+        f"{NAME}.help.swallow.video",
         f"{NAME}.README",
         f"{NAME}.README.arzhang",
         f"{NAME}.README.eagle",

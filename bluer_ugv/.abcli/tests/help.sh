@@ -29,6 +29,16 @@ function test_bluer_ugv_help() {
         "@swallow ultrasonic review" \
         "@swallow ultrasonic test" \
         \
+        "@swallow video" \
+        "@swallow video pause" \
+        "@swallow video play" \
+        "@swallow video playlist" \
+        "@swallow video playlist cat" \
+        "@swallow video playlist download" \
+        "@swallow video playlist edit" \
+        "@swallow video playlist upload" \
+        "@swallow video stop" \
+        \
         "@ugv" \
         \
         "@ugv git" \
