@@ -18,12 +18,18 @@ class ClassicalScreen:
         self.video_player.stop()
 
     def initialize(self) -> bool:
+        if self.video_player is None:
+            return True
+
         return self.video_player.play(
             self.video_list.get("loading"),
             loop=True,
         )
 
     def update(self) -> bool:
+        if self.video_player is None:
+            return True
+
         if self.video_player.process:
             return True
 
