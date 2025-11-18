@@ -12,16 +12,19 @@ from bluer_objects.graphics.signature import add_signature
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection_list import (
+    DetectionList,
+)
 from bluer_ugv.host import signature
 from bluer_ugv.logger import logger
 
 
 class UltrasonicSensorDetectionLog:
     def __init__(self):
-        self.log: List[List[Detection]] = []
+        self.log: List[DetectionList] = []
 
-    def append(self, detection: List[Detection]):
-        self.log.append(detection)
+    def append(self, detection_list: DetectionList):
+        self.log.append(detection_list)
 
     def export(
         self,
@@ -72,12 +75,12 @@ class UltrasonicSensorDetectionLog:
                 )
 
             plt.plot(
-                [func(list_of_detections[0]) for list_of_detections in self.log],
+                [func(detection_list[0]) for detection_list in self.log],
                 color="green",
                 label="left sensor",
             )
             plt.plot(
-                [func(list_of_detections[1]) for list_of_detections in self.log],
+                [func(detection_list[1]) for detection_list in self.log],
                 color="blue",
                 label="right sensor",
             )
@@ -150,8 +153,8 @@ class UltrasonicSensorDetectionLog:
     ) -> bool:
         image = np.zeros((len(self.log[0]), len(self.log), 3), dtype=np.uint8)
 
-        for detection_index, list_of_detections in enumerate(self.log):
-            for sensor_index, detection in enumerate(list_of_detections):
+        for detection_index, detection_list in enumerate(self.log):
+            for sensor_index, detection in enumerate(detection_list):
                 assert isinstance(detection, Detection)
 
                 for channel in range(3):
@@ -213,12 +216,12 @@ class UltrasonicSensorDetectionLog:
         if not path.create(temp_folder):
             return False
 
-        for index, detections in tqdm(enumerate(self.log)):
+        for index, detection_list in tqdm(enumerate(self.log)):
             if frame_count != -1 and len(image_list) >= frame_count:
                 rm_blank_count += 1
                 break
 
-            if rm_blank and all(detection.is_blank for detection in detections):
+            if rm_blank and all(detection.is_blank for detection in detection_list):
                 continue
 
             filename = objects.path_of(
@@ -230,12 +233,12 @@ class UltrasonicSensorDetectionLog:
                 [
                     detection.as_image(
                         height=height,
-                        width=int(width / len(detections)),
+                        width=int(width / len(detection_list)),
                         max_m=max_m,
-                        line_width=int(line_width / len(detections)),
+                        line_width=int(line_width / len(detection_list)),
                         sign=False,
                     )
-                    for detection in detections
+                    for detection in detection_list
                 ],
                 axis=1,
             )
@@ -254,14 +257,14 @@ class UltrasonicSensorDetectionLog:
                                 env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD
                             ),
                         ]
-                        + [detection.as_str(short=True) for detection in detections]
+                        + detection_list.as_str(short=True)
                         + objects.signature(
                             "frame #{:04d}/{}".format(
                                 index,
                                 len(self.log),
                             ),
                             object_name,
-                        )
+                        ),
                     )
                 ],
                 footer=[" | ".join(signature())],
@@ -316,8 +319,8 @@ class UltrasonicSensorDetectionLog:
             ),
             {
                 "detections": [
-                    [detection.as_dict() for detection in list_of_detections]
-                    for list_of_detections in self.log
+                    [detection.as_dict() for detection in detection_list]
+                    for detection_list in self.log
                 ]
             },
             log=log,

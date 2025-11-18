@@ -32,12 +32,12 @@ def test(
     success = True
     try:
         while True:
-            success, detection = ultrasonic_sensor_pack.detect(log=log)
+            success, detection_list = ultrasonic_sensor_pack.detect(log=log)
             if not success:
                 break
 
             if export:
-                detection_log.append(detection)
+                detection_log.append(detection_list)
     except KeyboardInterrupt:
         logger.info("^C detected.")
     finally:
