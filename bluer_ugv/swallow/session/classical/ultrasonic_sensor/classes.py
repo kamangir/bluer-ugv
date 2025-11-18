@@ -10,6 +10,9 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.pack import (
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
     DetectionState,
 )
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection_list import (
+    DetectionList,
+)
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
 )
@@ -41,6 +44,8 @@ class ClassicalUltrasonicSensor:
 
         self.setpoint = setpoint
         self.keyboard = keyboard
+
+        self.detection_list = DetectionList()
 
         self.pack = None
         self.log = None
@@ -85,30 +90,22 @@ class ClassicalUltrasonicSensor:
                 time.sleep(0.01)
                 continue
 
-            success, detections = self.pack.detect(
-                log=env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1
+            success, self.detection_list = self.pack.detect(
+                log=env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1,
             )
             if not success:
                 raise NameError("failed to detect ultrasonic sensor.")
 
             if self.log is not None:
-                self.log.append(detections)
+                self.log.append(self.detection_list)
 
             log_detections: bool = False
             speed = self.setpoint.get(what="speed")
-            if any(
-                detection.state == DetectionState.DANGER for detection in detections
-            ):
+            if self.detection_list.state == DetectionState.DANGER:
                 self.setpoint.stop()
                 log_detections = True
                 logger.info("⛔️ danger detected, stopping.")
-            elif (
-                any(
-                    detection.state == DetectionState.WARNING
-                    for detection in detections
-                )
-                and speed > 0
-            ):
+            elif self.detection_list.state == DetectionState.WARNING and speed > 0:
                 self.setpoint.put(
                     what="speed",
                     value=speed // 2,
@@ -123,8 +120,6 @@ class ClassicalUltrasonicSensor:
                 logger.info(
                     "{}: {}".format(
                         self.__class__.__name__,
-                        ", ".join(
-                            [detection.as_str(short=True) for detection in detections]
-                        ),
+                        ", ".join(self.detection_list.as_str(short=True)),
                     )
                 )

@@ -4,7 +4,9 @@ from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.sensor import (
     lUltrasonicSensor,
 )
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection_list import (
+    DetectionList,
+)
 from bluer_ugv.logger import logger
 
 
@@ -30,7 +32,7 @@ class UltrasonicSensorPack:
     def detect(
         self,
         log: bool = True,
-    ) -> Tuple[bool, List[Detection]]:
+    ) -> Tuple[bool, DetectionList]:
         success_left, detection_left = self.left.detect(log=False)
         success_right, detection_right = self.right.detect(log=False)
 
@@ -45,6 +47,16 @@ class UltrasonicSensorPack:
             )
 
         return (
-            success_left and success_right,
-            [detection_left, detection_right],
+            all(
+                [
+                    success_left,
+                    success_right,
+                ]
+            ),
+            DetectionList(
+                [
+                    detection_left,
+                    detection_right,
+                ],
+            ),
         )
