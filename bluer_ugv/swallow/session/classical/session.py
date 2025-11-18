@@ -114,6 +114,8 @@ class ClassicalSession:
             object_name=self.object_name,
         )
 
+        self.screen = ClassicalScreen()
+
         logger.info(
             "{}: created for {}".format(
                 self.__class__.__name__,
@@ -127,12 +129,10 @@ class ClassicalSession:
         self.ultrasonic_sensor.stop()
         self.camera.stop()
 
-        for thing in [
-            self.motor1,
-            self.motor2,
-            self.camera,
-        ]:
-            thing.cleanup()
+        self.motor1.cleanup()
+        self.motor2.cleanup()
+
+        self.camera.cleanup()
 
         GPIO.cleanup()
 
@@ -156,12 +156,15 @@ class ClassicalSession:
             loop_frequency,
         )
 
+        self.screen.cleanup()
+
         logger.info(f"{self.__class__.__name__}.cleanup")
 
     def initialize(self) -> bool:
         return all(
             thing.initialize()
             for thing in [
+                self.screen,
                 self.push_button,
                 self.leds,
                 self.motor1,
