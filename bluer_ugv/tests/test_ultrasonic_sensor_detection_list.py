@@ -62,7 +62,7 @@ def test_ultrasonic_sensor_detection_list(
 
     assert isinstance(len(detection_list), int)
 
-    for index in range(len(detection_list)):
+    for index in range(len(detection_list)):  # pylint: disable=consider-using-enumerate
         assert isinstance(detection_list[index], Detection)
 
     detection_list.append(ultrasonic_sensor_detection_clear())
