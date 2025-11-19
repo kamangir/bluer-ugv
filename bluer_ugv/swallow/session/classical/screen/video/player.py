@@ -73,6 +73,7 @@ class VideoPlayer:
 
         if not self.dryrun:
             try:
+                # pylint: disable=consider-using-with
                 self.process = subprocess.Popen(
                     shlex.split(command),
                     stdin=subprocess.PIPE if self.engine == VideoEngine.MPV else None,

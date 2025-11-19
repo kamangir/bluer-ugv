@@ -37,6 +37,9 @@ class VideoEngine(Enum):
                 logger.error(f"vlc pause failed: {e}")
                 return False
 
+        logger.error(f"{self}: unknown video engine.")
+        return False
+
     def play_command(
         self,
         filename: str,
