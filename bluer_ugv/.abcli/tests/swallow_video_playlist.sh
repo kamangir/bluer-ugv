@@ -1,22 +1,23 @@
 #! /usr/bin/env bash
 
-function swallow_video_playlist_cat() {
+function test_swallow_video_playlist_cat() {
     local options=$1
 
     bluer_ai_eval ,$options \
         bluer_ugv \
         swallow \
+        video \
         playlist \
-        cat \
-        download
+        cat
 }
 
-function swallow_video_playlist_download_upload() {
+function test_swallow_video_playlist_download_upload() {
     local options=$1
 
     bluer_ai_eval ,$options \
         bluer_ugv \
         swallow \
+        video \
         playlist \
         download \
         policy=doesnt_exist
@@ -25,17 +26,19 @@ function swallow_video_playlist_download_upload() {
     bluer_ai_eval ,$options \
         bluer_ugv \
         swallow \
+        video \
         playlist \
         upload \
         filename=metadata.yaml
 }
 
-function swallow_video_playlist_edit() {
+function test_swallow_video_playlist_edit() {
     local options=$1
 
     bluer_ai_eval ,$options \
         bluer_ugv \
         swallow \
+        video \
         playlist \
         edit \
         download
