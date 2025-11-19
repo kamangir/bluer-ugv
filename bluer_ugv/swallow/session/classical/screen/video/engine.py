@@ -91,14 +91,15 @@ class VideoEngine(Enum):
     def stop(
         self,
         process: subprocess.Popen,
-    ):
+    ) -> bool:
         if self == VideoEngine.MPV:
             try:
                 if process.stdin:
                     process.stdin.write(b"q")
                     process.stdin.flush()
             except Exception as e:
-                logger.warning(f"mpv quit failed: {e}")
+                logger.error(f"mpv quit failed: {e}")
+                return False
 
         if self == VideoEngine.VLC:
             try:
@@ -107,7 +108,8 @@ class VideoEngine(Enum):
                 s.close()
                 logger.info("vlc: sent 'quit' via TCP RC.")
             except Exception as e:
-                logger.warning(f"vlc rc quit failed: {e}")
+                logger.error(f"vlc rc quit failed: {e}")
+                return False
 
         time.sleep(0.3)
 
@@ -115,3 +117,6 @@ class VideoEngine(Enum):
             process.kill()
         except Exception as e:
             logger.warning(f"process.kill failed: {e}")
+            return False
+
+        return True

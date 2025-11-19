@@ -106,32 +106,10 @@ class VideoPlayer:
 
         return True
 
-    def play_list(
-        self,
-        playlist: List[str],
-        **kw_args,
-    ):
-        log_list(
-            logger,
-            "play list",
-            playlist,
-            "filename(s)",
-        )
-
-        while True:
-            for filename in playlist:
-                self.play(
-                    filename,
-                    loop=False,
-                    **kw_args,
-                )
-
-                if self.process:
-                    self.process.wait()
-
     def stop(self) -> bool:
         if not self.dryrun and self.process and self.process.poll() is None:
-            self.engine.stop(self.process)
+            if not self.engine.stop(self.process):
+                return False
 
         self.process = None
         logger.info(f"{self.__class__.__name__}.stop")
