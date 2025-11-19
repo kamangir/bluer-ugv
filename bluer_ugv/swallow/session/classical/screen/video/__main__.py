@@ -43,6 +43,7 @@ parser.add_argument(
 parser.add_argument(
     "--video",
     type=str,
+    default="loading",
 )
 args = parser.parse_args()
 
