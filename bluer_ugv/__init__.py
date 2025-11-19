@@ -4,7 +4,7 @@ ICON = "🐬"
 
 DESCRIPTION = f"{ICON} AI x UGV."
 
-VERSION = "7.423.1"
+VERSION = "7.424.1"
 
 REPO_NAME = "bluer-ugv"
 
