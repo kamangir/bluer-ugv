@@ -115,9 +115,8 @@ class VideoPlayer:
                 self.process = subprocess.Popen(
                     shlex.split(cmd),
                     stdin=subprocess.PIPE,
-                    stdout=subprocess.PIPE if verbose else subprocess.DEVNULL,
-                    stderr=subprocess.PIPE if verbose else subprocess.DEVNULL,
-                    text=verbose,
+                    stdout=None if verbose else subprocess.DEVNULL,
+                    stderr=None if verbose else subprocess.DEVNULL,
                 )
 
                 logger.debug(
