@@ -4,7 +4,7 @@ function bluer_ugv_swallow_video_playlist_download() {
     local options=${1:-policy=doesnt_exist}
 
     [[ "$abcli_is_rpi" == true ]] &&
-        sudo chown pi \
+        sudo chown pi:pi \
             $ABCLI_OBJECT_ROOT/$RANGIN_VIDEO_LIST_OBJECT/metadata.yaml
 
     bluer_objects_download \
