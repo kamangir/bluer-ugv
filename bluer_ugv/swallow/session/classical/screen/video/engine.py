@@ -16,12 +16,11 @@ class VideoEngine(Enum):
         # MPV: use stdin
         if self == VideoEngine.MPV:
             try:
-                if process.stdin:
-                    process.stdin.write(b"p")
-                    process.stdin.flush()
-                else:
+                if not process.stdin:
                     logger.error("mpv pause failed: no stdin")
                     return False
+                process.stdin.write(b"p")
+                process.stdin.flush()
             except Exception as e:
                 logger.error(f"mpv pause exception: {e}")
                 return False
@@ -114,7 +113,8 @@ class VideoEngine(Enum):
         time.sleep(0.3)
 
         try:
-            process.kill()
+            if process.poll() is None:
+                process.kill()
         except Exception as e:
             logger.warning(f"process.kill failed: {e}")
             return False

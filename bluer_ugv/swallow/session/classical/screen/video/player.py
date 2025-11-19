@@ -63,18 +63,18 @@ class VideoPlayer:
 
         self.stop()
 
-        comand = self.engine.play_command(
+        command = self.engine.play_command(
             filename=filename,
             fullscreen=fullscreen,
             loop=loop,
             audio=audio,
         )
-        logger.info(f"running on {self.engine.name.lower()}: {comand}")
+        logger.info(f"running on {self.engine.name.lower()}: {command}")
 
         if not self.dryrun:
             try:
                 self.process = subprocess.Popen(
-                    shlex.split(comand),
+                    shlex.split(command),
                     stdin=subprocess.PIPE if self.engine == VideoEngine.MPV else None,
                     stdout=None if verbose else subprocess.DEVNULL,
                     stderr=None if verbose else subprocess.DEVNULL,
