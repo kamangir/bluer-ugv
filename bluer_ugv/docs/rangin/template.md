@@ -6,7 +6,6 @@ title:::
 - [parts](./parts.md)
 - [electrical](./electrical.md)
 - [mechanical](./mechanical.md)
-- [screen](./screen.md)
 
 # obsolete
 

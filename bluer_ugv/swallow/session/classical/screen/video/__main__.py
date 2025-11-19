@@ -2,8 +2,9 @@ import argparse
 
 from blueness import module
 from blueness.argparse.generic import sys_exit
+from bluer_options.host import is_rpi, is_headless
 
-from bluer_ugv import NAME
+from bluer_ugv import NAME, env
 from bluer_ugv.swallow.session.classical.screen.video.playlist import PlayList
 from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayer
 from bluer_ugv.logger import logger
@@ -25,7 +26,7 @@ parser.add_argument(
 parser.add_argument(
     "--dryrun",
     type=int,
-    default=0,
+    default=int(not is_rpi() or is_headless()),
     help="0|1",
 )
 parser.add_argument(
@@ -37,10 +38,11 @@ parser.add_argument(
 parser.add_argument(
     "--object_name",
     type=str,
+    default=env.RANGIN_VIDEO_LIST_OBJECT,
 )
 parser.add_argument(
     "--video",
-    type=int,
+    type=str,
 )
 args = parser.parse_args()
 

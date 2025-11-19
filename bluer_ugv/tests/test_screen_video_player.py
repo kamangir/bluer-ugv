@@ -14,6 +14,10 @@ def test_screen_video_player():
 
     assert video_player.stop()
 
+    assert video_player.play(playlist.get("loading"))
+
     assert video_player.play(playlist.get(1))
+
+    assert video_player.play(playlist.get("1"))
 
     assert video_player.stop()

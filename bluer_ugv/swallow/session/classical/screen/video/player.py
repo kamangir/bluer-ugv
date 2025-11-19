@@ -23,7 +23,7 @@ class VideoPlayer:
         logger.info(
             "{} created{}.".format(
                 self.__class__.__name__,
-                "dryrun mode" if dryrun else "",
+                " [dryrun]" if dryrun else "",
             )
         )
 

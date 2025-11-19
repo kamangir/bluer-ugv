@@ -32,7 +32,7 @@ class PlayList:
         )
         log_dict(
             logger,
-            "messages",
+            "loaded",
             self.messages,
             "message(s)",
             max_count=-1,
@@ -46,7 +46,7 @@ class PlayList:
         )
         log_list(
             logger,
-            "messages",
+            "loaded",
             self.playlist,
             "playlist item(s)",
             max_count=-1,
@@ -81,6 +81,9 @@ class PlayList:
 
         if isinstance(keyword, str):
             filename = f"{keyword}-not-found"
+
+            if keyword.isnumeric():
+                return self.get(int(keyword), what=what)
 
             if keyword in self.messages:
                 filename = self.messages[keyword].get(
