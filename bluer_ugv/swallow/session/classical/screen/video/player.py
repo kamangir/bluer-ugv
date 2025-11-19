@@ -66,7 +66,8 @@ class VideoPlayer:
                 [
                     "mpv",
                     "--no-border",
-                    f"--geometry=0:0 --autofit={screen_width}x{screen_height}",
+                    "--geometry=0:0",
+                    f"--autofit={screen_width}x{screen_height}",
                     "--keepaspect=yes",
                     "--no-keepaspect-window",
                     "--loop" if loop else "",
