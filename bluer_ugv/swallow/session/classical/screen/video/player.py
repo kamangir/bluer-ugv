@@ -63,7 +63,8 @@ class VideoPlayer:
                 [
                     "mpv",
                     "--fs" if fullscreen else "",
-                    "--keepaspect=yes",  # preserve aspect ratio
+                    "--geometry=0:0",  # ensure window starts at 0,0
+                    "--autofit-larger=100%x100%",  # force window to fill the entire screen                    "--keepaspect=yes",  # preserve aspect ratio
                     "--no-keepaspect-window",  # add black bars instead of stretching
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
