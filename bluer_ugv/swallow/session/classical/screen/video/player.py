@@ -95,6 +95,7 @@ class VideoPlayer:
                         "--no-osd",  # remove VLC overlays
                         "--loop" if loop else "",
                         "--no-audio" if not audio else "",
+                        "--extraintf rc",  # remote control, to enable "quit"
                         shlex.quote(filename),
                     ]
                 )
@@ -119,6 +120,11 @@ class VideoPlayer:
                 logger.error(f"failed to run mpv: {e}")
                 self.process = None
                 return False
+
+        if self.engine == "mpv":
+            logger.info("press 'q' to quit mpv.")
+        elif self.engine == "vlc":
+            logger.info('type "quit" to quit vlc.')
 
         self.current_file = filename
 
