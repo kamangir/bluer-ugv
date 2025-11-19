@@ -134,7 +134,7 @@ class VideoPlayer:
         elif self.engine == "vlc":
             logger.info('press "Enter" to quit vlc.')
 
-        if not self.process:
+        if not self.dryrun and not self.process:
             logger.error("process is None.")
             return False
 
