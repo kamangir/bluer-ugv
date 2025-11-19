@@ -27,3 +27,7 @@ help::: bluer_ugv swallow ultrasonic
 ## video
 
 help::: bluer_ugv swallow video
+
+`env:::RANGIN_VIDEO_LIST_OBJECT/metadata.yaml`
+
+metadata:::env:::RANGIN_VIDEO_LIST_OBJECT

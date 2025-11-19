@@ -155,3 +155,21 @@
 	[filename=<filename>,public,zip]
  . upload swallow playlist.
 ```
+
+`
+
+```yaml
+messages:
+  loading:
+    filename: loading_circle_bars.mp4
+    source: https://www.videezy.com/backgrounds/14052-loading-circle-bars
+  warning:
+    filename: vecteezy_flashing-neon-warning-text-video-good-for-danger-sign_6299554.mp4
+    source: https://www.vecteezy.com/video/6299554-flashing-neon-warning-text-video-good-for-danger-sign-illustrations
+playlist:
+- filename: 731d19dc3ec2f52c626eb575d61bf19b51289493-1080p.mp4
+  source: https://www.aparat.com/v/d14c1r8
+- filename: d166d435a33dfd7e77b29ceaa96d2cb312692024-480p.mp4
+  source: https://www.aparat.com/v/a79o81f
+
+```
