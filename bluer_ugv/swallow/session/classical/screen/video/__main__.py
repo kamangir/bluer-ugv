@@ -91,7 +91,7 @@ if args.task == "play":
         time.sleep(args.timeout)
         success = video_player.stop()
 
-        logger.info('type in "reset" if the prompt is invisible.')
+        logger.info('💡 type in "reset" if the prompt is invisible.')
 
 else:
     success = None
