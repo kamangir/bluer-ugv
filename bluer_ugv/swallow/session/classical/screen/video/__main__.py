@@ -19,13 +19,19 @@ parser.add_argument(
 parser.add_argument(
     "--download",
     type=int,
-    default=0,
+    default=1,
     help="0|1",
 )
 parser.add_argument(
     "--dryrun",
     type=int,
     default=0,
+    help="0|1",
+)
+parser.add_argument(
+    "--loop",
+    type=int,
+    default=1,
     help="0|1",
 )
 parser.add_argument(
@@ -44,11 +50,15 @@ success = False
 if args.task == "pause":
     success = video_player.pause()
 elif args.task == "play":
-    playlist = PlayList(args.object_name)
+    playlist = PlayList(
+        args.object_name,
+        download=args.download == 1,
+    )
 
-    success = video_player.pause()
-
-    success = func(args.arg)
+    success = video_player.play(
+        filename=playlist.get(args.video),
+        loop=args.loop == 1,
+    )
 elif args.task == "stop":
     success = video_player.stop()
 else:

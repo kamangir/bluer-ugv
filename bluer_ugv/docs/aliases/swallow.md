@@ -122,14 +122,17 @@
 @swallow \
 	video \
 	pause \
-	[dryrun]
+	[--dryrun 1]
  . pause video player.
 @swallow \
 	video \
 	play \
-	[download,dryrun,video=<loading|1>] \
-	[rangin-video-list-1|<object-name>]
- . play <object-name>.
+	[--dryrun 1] \
+	[--download 0] \
+	[--loop 0] \
+	[--object_name <rangin-video-list-1>] \
+	[--video <loading|1>]
+ . play <object-name>/<video>.
 @swallow \
 	video \
 	playlist \
@@ -157,6 +160,6 @@
 @swallow \
 	video \
 	stop \
-	[dryrun]
+	[--dryrun 1]
  . stop video player.
 ```

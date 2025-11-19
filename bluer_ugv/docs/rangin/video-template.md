@@ -2,8 +2,6 @@ title:::
 
 # playlist
 
-🚧
-
 ```bash
 @swallow video playlist download
 ```

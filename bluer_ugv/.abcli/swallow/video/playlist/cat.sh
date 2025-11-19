@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-function bluer_ugv_swallow_video_node_cat() {
+function bluer_ugv_swallow_video_playlist_cat() {
     local options=$1
     local do_download=$(bluer_ai_option_int "$options" download 0)
 

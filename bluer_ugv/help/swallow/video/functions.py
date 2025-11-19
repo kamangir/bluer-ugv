@@ -10,15 +10,17 @@ def help_pause(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("dryrun", mono=mono)
+    args = [
+        "[--dryrun 1]",
+    ]
 
     return show_usage(
         [
             "@swallow",
             "video",
             "pause",
-            f"[{options}]",
-        ],
+        ]
+        + args,
         "pause video player.",
         mono=mono,
     )
@@ -28,25 +30,22 @@ def help_play(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = "".join(
-        [
-            "download",
-            xtra(",dryrun,", mono=mono),
-            "video=<loading|1>",
-        ]
-    )
-
-    "download,dryrun,video=<loading|1>"
+    args = [
+        "[--dryrun 1]",
+        "[--download 0]",
+        "[--loop 0]",
+        f"[--object_name <{env.RANGIN_VIDEO_LIST_OBJECT}>]",
+        "[--video <loading|1>]",
+    ]
 
     return show_usage(
         [
             "@swallow",
             "video",
             "play",
-            f"[{options}]",
-            "[{}|<object-name>]".format(env.RANGIN_VIDEO_LIST_OBJECT),
-        ],
-        "play <object-name>.",
+        ]
+        + args,
+        "play <object-name>/<video>.",
         mono=mono,
     )
 
@@ -55,15 +54,17 @@ def help_stop(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("dryrun", mono=mono)
+    args = [
+        "[--dryrun 1]",
+    ]
 
     return show_usage(
         [
             "@swallow",
             "video",
             "stop",
-            f"[{options}]",
-        ],
+        ]
+        + args,
         "stop video player.",
         mono=mono,
     )

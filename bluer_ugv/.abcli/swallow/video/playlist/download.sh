@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-function bluer_ugv_swallow_video_node_download() {
+function bluer_ugv_swallow_video_playlist_download() {
     local options=${1:-policy=doesnt_exist}
 
     bluer_objects_download \
