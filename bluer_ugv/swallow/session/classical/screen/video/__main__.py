@@ -7,6 +7,7 @@ from bluer_options.host import is_rpi, is_headless
 from bluer_ugv import NAME, env
 from bluer_ugv.swallow.session.classical.screen.video.playlist import PlayList
 from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayer
+from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayerEngine
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
@@ -32,8 +33,8 @@ parser.add_argument(
 parser.add_argument(
     "--engine",
     type=str,
-    default="vlc",
-    help="mpv | vlc",
+    default=VideoPlayerEngine.VLC.name.lower(),
+    help=" | ".join(sorted([engine.name.lower() for engine in VideoPlayerEngine])),
 )
 parser.add_argument(
     "--loop",
@@ -63,7 +64,7 @@ if args.task == "play":
 
     video_player = VideoPlayer(
         args.dryrun == 1,
-        engine=args.engine,
+        engine=VideoPlayerEngine[args.engine.upper()],
     )
 
     success = video_player.play(

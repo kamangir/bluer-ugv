@@ -124,7 +124,7 @@
 	play \
 	[--dryrun 1] \
 	[--download 0] \
-	[--engine vlc | mpv] \
+	[--engine mpv | vlc] \
 	[--loop 0] \
 	[--object_name <rangin-video-list-1>] \
 	[--video <loading|1>]

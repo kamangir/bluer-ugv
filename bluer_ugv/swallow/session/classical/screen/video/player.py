@@ -2,6 +2,7 @@ from typing import List, Optional
 import subprocess
 import shlex
 import time
+from enum import Enum, auto
 
 from bluer_options.logger import crash_report
 from bluer_options.logger.config import log_list
@@ -11,11 +12,69 @@ from bluer_objects import file
 from bluer_ugv.logger import logger
 
 
+class VideoPlayerEngine(Enum):
+    MPV = auto()
+    VLC = auto()
+
+    def play_command(
+        self,
+        filename: str,
+        fullscreen: bool = True,
+        loop: bool = False,
+        audio: bool = False,
+    ) -> str:
+        screen_height, screen_width = get_size()
+        logger.info(
+            "screen size: {}x{}".format(
+                screen_height,
+                screen_width,
+            )
+        )
+
+        if self == VideoPlayerEngine.MPV:
+            logger.info('press "q" to quit mpv.')
+
+            return " ".join(
+                [
+                    "mpv",
+                    "--no-border",
+                    "--background=color",  # fill empty areas with black
+                    "--keepaspect=yes",
+                    "--no-keepaspect-window",
+                    "--geometry=0:0",
+                    (f"--autofit={screen_width}x{screen_height}" if fullscreen else ""),
+                    "--loop" if loop else "",
+                    "--no-audio" if not audio else "",
+                    shlex.quote(filename),
+                ]
+            )
+
+        if self == VideoPlayerEngine.VLC:
+            logger.info('press "Enter" to quit vlc.')
+
+            return " ".join(
+                [
+                    "sudo -u pi",
+                    "cvlc",
+                    "--fullscreen",  # true fullscreen
+                    "--no-video-title-show",  # remove the title overlay
+                    "--video-on-top",  # stay above desktop
+                    "--no-osd",  # remove VLC overlays
+                    "--loop" if loop else "",
+                    "--no-audio" if not audio else "",
+                    "--extraintf rc",  # remote control, to enable "quit"
+                    shlex.quote(filename),
+                ]
+            )
+
+        return "this-should-not-happen"
+
+
 class VideoPlayer:
     def __init__(
         self,
         dryrun: bool = False,
-        engine: str = "vlc",
+        engine: VideoPlayerEngine = VideoPlayerEngine.VLC,
     ):
         self.process: Optional[subprocess.Popen] = None
         self.current_file: Optional[str] = None
@@ -23,12 +82,13 @@ class VideoPlayer:
         self.paused = False
         self.dryrun = dryrun
 
-        self.engine = engine
+        assert engine in VideoPlayerEngine, f"{engine}: engine not found"
+        self.engine: VideoPlayerEngine = engine
 
         logger.info(
             "{} created on {}{}.".format(
                 self.__class__.__name__,
-                self.engine,
+                self.engine.name.lower(),
                 " [dryrun]" if dryrun else "",
             )
         )
@@ -68,47 +128,14 @@ class VideoPlayer:
         # Kill previous playback if running
         self.stop()
 
-        screen_height, screen_width = get_size()
-
         if not self.dryrun:
-            if self.engine == "mpv":
-                cmd = " ".join(
-                    [
-                        "mpv",
-                        "--no-border",
-                        "--background=color",  # fill empty areas with black
-                        "--keepaspect=yes",
-                        "--no-keepaspect-window",
-                        "--geometry=0:0",
-                        (
-                            f"--autofit={screen_width}x{screen_height}"
-                            if fullscreen
-                            else ""
-                        ),
-                        "--loop" if loop else "",
-                        "--no-audio" if not audio else "",
-                        shlex.quote(filename),
-                    ]
-                )
-            elif self.engine == "vlc":
-                cmd = " ".join(
-                    [
-                        "cvlc",
-                        "--fullscreen",  # true fullscreen
-                        "--no-video-title-show",  # remove the title overlay
-                        "--video-on-top",  # stay above desktop
-                        "--no-osd",  # remove VLC overlays
-                        "--loop" if loop else "",
-                        "--no-audio" if not audio else "",
-                        "--extraintf rc",  # remote control, to enable "quit"
-                        shlex.quote(filename),
-                    ]
-                )
-            else:
-                logger.error(f"{self.engine}: engine not found.")
-                return False
-
-            logger.info(f"running on {self.engine}: {cmd}")
+            cmd = self.engine.play_command(
+                filename=filename,
+                fullscreen=fullscreen,
+                loop=loop,
+                audio=audio,
+            )
+            logger.info(f"running on {self.engine.name.lower()}: {cmd}")
 
             try:
                 # pylint: disable=consider-using-with
@@ -129,11 +156,6 @@ class VideoPlayer:
                 self.process = None
                 return False
 
-        if self.engine == "mpv":
-            logger.info('press "q" to quit mpv.')
-        elif self.engine == "vlc":
-            logger.info('press "Enter" to quit vlc.')
-
         if not self.dryrun and not self.process:
             logger.error("process is None.")
             return False
@@ -141,12 +163,10 @@ class VideoPlayer:
         self.current_file = filename
 
         logger.info(
-            "{}.play({}{}): {}x{}".format(
+            "{}.play({}{})".format(
                 self.__class__.__name__,
                 "loop: " if loop else "",
                 filename,
-                screen_height,
-                screen_width,
             )
         )
 
