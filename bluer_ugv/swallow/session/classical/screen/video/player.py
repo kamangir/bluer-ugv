@@ -14,6 +14,7 @@ class VideoPlayer:
     def __init__(
         self,
         dryrun: bool = False,
+        engine: str = "vlc",
     ):
         self.process: Optional[subprocess.Popen] = None
         self.current_file: Optional[str] = None
@@ -21,9 +22,12 @@ class VideoPlayer:
         self.paused = False
         self.dryrun = dryrun
 
+        self.engine = engine
+
         logger.info(
-            "{} created{}.".format(
+            "{} created on {}{}.".format(
                 self.__class__.__name__,
+                self.engine,
                 " [dryrun]" if dryrun else "",
             )
         )
@@ -62,21 +66,43 @@ class VideoPlayer:
         screen_height, screen_width = get_size()
 
         if not self.dryrun:
-            cmd = " ".join(
-                [
-                    "mpv",
-                    "--no-border",
-                    "--background=color",  # fill empty areas with black
-                    "--keepaspect=yes",
-                    "--no-keepaspect-window",
-                    "--geometry=0:0",
-                    f"--autofit={screen_width}x{screen_height}",
-                    "--loop" if loop else "",
-                    "--no-audio" if not audio else "",
-                    shlex.quote(filename),
-                ]
-            )
-            logger.info(f"running: {cmd}")
+            if self.engine == "mpv":
+                cmd = " ".join(
+                    [
+                        "mpv",
+                        "--no-border",
+                        "--background=color",  # fill empty areas with black
+                        "--keepaspect=yes",
+                        "--no-keepaspect-window",
+                        "--geometry=0:0",
+                        (
+                            f"--autofit={screen_width}x{screen_height}"
+                            if fullscreen
+                            else ""
+                        ),
+                        "--loop" if loop else "",
+                        "--no-audio" if not audio else "",
+                        shlex.quote(filename),
+                    ]
+                )
+            elif self.engine == "vlc":
+                cmd = " ".join(
+                    [
+                        "cvlc",
+                        "--fullscreen",  # true fullscreen
+                        "--no-video-title-show",  # remove the title overlay
+                        "--video-on-top",  # stay above desktop
+                        "--no-osd",  # remove VLC overlays
+                        "--loop" if loop else "",
+                        "--no-audio" if not audio else "",
+                        shlex.quote(filename),
+                    ]
+                )
+            else:
+                logger.error(f"{self.engine}: engine not found.")
+                return False
+
+            logger.info(f"running on {self.engine}: {cmd}")
 
             # Kill previous playback if running
             self.stop()

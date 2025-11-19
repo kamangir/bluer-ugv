@@ -56,7 +56,7 @@ class PlayList:
         logger.info(
             "{} created from {}.".format(
                 self.__class__.__name__,
-                object_name,
+                self.object_name,
             )
         )
 

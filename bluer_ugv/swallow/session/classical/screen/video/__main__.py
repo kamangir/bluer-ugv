@@ -30,6 +30,12 @@ parser.add_argument(
     help="0|1",
 )
 parser.add_argument(
+    "--engine",
+    type=str,
+    default="vlc",
+    help="mpv | vlc",
+)
+parser.add_argument(
     "--loop",
     type=int,
     default=1,
@@ -53,6 +59,7 @@ if args.task == "play":
     playlist = PlayList(
         args.object_name,
         download=args.download == 1,
+        engine=args.engine,
     )
 
     video_player = VideoPlayer(
