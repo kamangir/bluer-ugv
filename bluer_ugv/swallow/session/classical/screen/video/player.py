@@ -4,6 +4,7 @@ import shlex
 import time
 
 from bluer_options.logger.config import log_list
+from bluer_objects.graphics.screen import get_size
 from bluer_objects import file
 
 from bluer_ugv.logger import logger
@@ -58,17 +59,16 @@ class VideoPlayer:
             logger.error(f"file not found: {filename}")
             return False
 
+        screen_height, screen_width = get_size()
+
         if not self.dryrun:
             cmd = " ".join(
                 [
                     "mpv",
-                    "--fs",  # request fullscreen
-                    "--x11-bypass-compositor=yes",  # CRITICAL for LXDE on Pi
-                    "--no-border",  # remove decorations
-                    "--geometry=0:0",  # position at 0,0
-                    "--ontop",  # stay above desktop panels
-                    "--keepaspect=yes",  # preserve aspect ratio
-                    "--no-keepaspect-window",  # add black bars if needed
+                    "--no-border",
+                    f"--geometry=0:0 --autofit={screen_width}x{screen_height}",
+                    "--keepaspect=yes",
+                    "--no-keepaspect-window",
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
                     shlex.quote(filename),
@@ -95,10 +95,12 @@ class VideoPlayer:
         self.current_file = filename
 
         logger.info(
-            "{}.play({}{})".format(
+            "{}.play({}{}): {}x{}".format(
                 self.__class__.__name__,
                 "loop: " if loop else "",
                 filename,
+                screen_height,
+                screen_width,
             )
         )
 
