@@ -9,7 +9,7 @@ function bluer_ugv_swallow_dataset() {
         return
     fi
 
-    python3 - bluer_ugv.swallow.dataset "$@"
+    python3 -m bluer_ugv.swallow.dataset "$@"
 }
 
 bluer_ai_source_caller_suffix_path /dataset
