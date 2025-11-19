@@ -6,6 +6,7 @@ from bluer_ugv.help.swallow.select_target import help_select_target
 from bluer_ugv.help.swallow.ultrasonic_sensor import (
     help_functions as help_ultrasonic_sensor,
 )
+from bluer_ugv.help.swallow.video.functions import help_functions as help_video
 
 help_functions = {
     "dataset": help_dataset,
@@ -14,4 +15,5 @@ help_functions = {
     "keyboard": help_keyboard,
     "select_target": help_select_target,
     "ultrasonic": help_ultrasonic_sensor,
+    "video": help_video,
 }

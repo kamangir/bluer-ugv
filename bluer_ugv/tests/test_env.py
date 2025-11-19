@@ -31,6 +31,7 @@ def test_bluer_ugv_env():
         env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
         env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
         env.BLUER_UGV_SWALLOW_YOLO_MODEL,
+        env.RANGIN_VIDEO_LIST_OBJECT,
     ]:
         assert isinstance(object_name, str)
         assert object_name

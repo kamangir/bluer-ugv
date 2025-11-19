@@ -6,7 +6,7 @@ title:::
 
 > ⚠️ on 32-bit, opencv, torch, and other modules install with challenges, and likely at lower versions.
 
-1. follow [RPi](https://github.com/kamangir/bluer-ai/blob/main/bluer_ai/docs/install/RPi.md) (use 64-bit + headless).
+1. follow [RPi](https://github.com/kamangir/bluer-ai/blob/main/bluer_ai/docs/install/RPi.md) (use 64-bit + headless or not).
 
 2. run in another terminal and paste the seed 🌱 into the ssh window.
 ```bash

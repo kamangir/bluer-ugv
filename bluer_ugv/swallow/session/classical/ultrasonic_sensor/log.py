@@ -1,4 +1,7 @@
 from typing import List
+import matplotlib
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 import numpy as np

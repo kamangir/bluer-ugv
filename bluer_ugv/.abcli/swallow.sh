@@ -9,7 +9,7 @@ function bluer_ugv_swallow() {
         return
     fi
 
-    python3 - bluer_ugv.swallow "$@"
+    python3 -m bluer_ugv.swallow "$@"
 }
 
 bluer_ai_source_caller_suffix_path /swallow

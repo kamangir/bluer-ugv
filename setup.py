@@ -12,6 +12,8 @@ setup(
         NAME,
         f"{NAME}.help",
         f"{NAME}.help.swallow",
+        f"{NAME}.help.swallow.video",
+        #
         f"{NAME}.README",
         f"{NAME}.README.arzhang",
         f"{NAME}.README.eagle",
@@ -36,6 +38,7 @@ setup(
         f"{NAME}.designs.ravin",
         f"{NAME}.designs.ravin.ravin3",
         f"{NAME}.designs.ravin.ravin4",
+        #
         f"{NAME}.swallow",
         f"{NAME}.swallow.dataset",
         f"{NAME}.swallow.session",
@@ -43,6 +46,8 @@ setup(
         f"{NAME}.swallow.session.classical.camera",
         f"{NAME}.swallow.session.classical.keyboard",
         f"{NAME}.swallow.session.classical.motor",
+        f"{NAME}.swallow.session.classical.screen",
+        f"{NAME}.swallow.session.classical.screen.video",
         f"{NAME}.swallow.session.classical.setpoint",
         f"{NAME}.swallow.session.classical.ultrasonic_sensor",
     ],
