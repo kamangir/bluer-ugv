@@ -109,6 +109,7 @@ class VideoPlayer:
     def play_list(
         self,
         playlist: List[str],
+        **kw_args,
     ):
         log_list(
             logger,
@@ -119,7 +120,11 @@ class VideoPlayer:
 
         while True:
             for filename in playlist:
-                self.play(filename, loop=False)
+                self.play(
+                    filename,
+                    loop=False,
+                    **kw_args,
+                )
 
                 if self.process:
                     self.process.wait()
