@@ -4,6 +4,7 @@ title:::
 - Raspberry Pi 4B (CPU/GPU busy, Wi-Fi + BLE on): ~ 1.3–1.5 A -> ~ 6.6–7.7 W
 - Raspberry Pi Camera (capturing video): ~ 200–250 mA -> ~ 1.0–1.3 W
 - 4 × HC-SR04 (all active): ~ 15 mA each → ~ 60 mA -> ~ 0.3 W
+- HDMI connection: ~ 50 mA -> 0.25 W
 
 total: ~ 10 W ~= ~1.8 A @ 5.1 V DC ~= 1 A @ 12 V DC (90% efficiency)
 
