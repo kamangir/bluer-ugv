@@ -128,19 +128,19 @@ class VideoPlayer:
         # Kill previous playback if running
         self.stop()
 
-        if not self.dryrun:
-            cmd = self.engine.play_command(
-                filename=filename,
-                fullscreen=fullscreen,
-                loop=loop,
-                audio=audio,
-            )
-            logger.info(f"running on {self.engine.name.lower()}: {cmd}")
+        comand = self.engine.play_command(
+            filename=filename,
+            fullscreen=fullscreen,
+            loop=loop,
+            audio=audio,
+        )
+        logger.info(f"running on {self.engine.name.lower()}: {comand}")
 
+        if not self.dryrun:
             try:
                 # pylint: disable=consider-using-with
                 self.process = subprocess.Popen(
-                    shlex.split(cmd),
+                    shlex.split(comand),
                     stdin=None,
                     stdout=None if verbose else subprocess.DEVNULL,
                     stderr=None if verbose else subprocess.DEVNULL,
@@ -156,9 +156,9 @@ class VideoPlayer:
                 self.process = None
                 return False
 
-        if not self.dryrun and not self.process:
-            logger.error("process is None.")
-            return False
+            if not self.process:
+                logger.error("process is None.")
+                return False
 
         self.current_file = filename
 
