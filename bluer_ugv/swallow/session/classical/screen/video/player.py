@@ -63,7 +63,7 @@ class VideoPlayerEngine(Enum):
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
                     "--extraintf rc",  # remote control, to enable "quit"
-                    f"--rc-host=127.0.0.1:41940",
+                    "--rc-host=127.0.0.1:41940",
                     shlex.quote(filename),
                 ]
             )
