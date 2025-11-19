@@ -46,7 +46,4 @@ docs = [
         "path": "../docs/swallow/digital/design/shield/v2.md",
         "items": v2_items,
     },
-    {
-        "path": "../docs/swallow/digital/design/shield/power.md",
-    },
 ]

@@ -1,4 +1,4 @@
-from bluer_ugv.README.shield import box, pcb, schematics, testing
+from bluer_ugv.README.shield import box, pcb, power, schematics, testing
 
 
 docs = (
@@ -12,6 +12,7 @@ docs = (
     ]
     + box.docs
     + pcb.docs
+    + power.docs
     + schematics.docs
     + testing.docs
 )
