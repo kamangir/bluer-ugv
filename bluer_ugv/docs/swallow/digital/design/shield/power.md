@@ -8,7 +8,7 @@
 total: ~ 10 W ~= ~1.8 A @ 5.1 V DC ~= 1 A @ 12 V DC (90% efficiency)
 
 [swallow](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/swallow): 
-- 4 x BTS7960 logic side: ~ 10–20 mA -> 0.1 W (will include ⬆️)
+- 4 x BTS7960 logic side: ~ 10–20 mA -> 0.1 W (will consider included in ⬆️)
 - 4 x DC motors: 1 A (freely-rotating) - 4 A (stalled) ~= 8 A -> ~ 100 W
 
 total: 110 W - max current: 15 A @ 12 V DC
