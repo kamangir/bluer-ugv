@@ -66,9 +66,9 @@ class VideoPlayer:
                 [
                     "mpv",
                     "--no-border",
-                    "--background=black",  # fill empty areas with black
+                    "--background=color",  # fill empty areas with black
                     "--keepaspect=yes",
-                    "--no-keepaspect-window=yes",
+                    "--no-keepaspect-window",
                     "--geometry=0:0",
                     f"--autofit={screen_width}x{screen_height}",
                     "--loop" if loop else "",
