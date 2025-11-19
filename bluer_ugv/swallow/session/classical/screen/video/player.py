@@ -22,8 +22,7 @@ class VideoPlayer:
 
         self.paused = False
         self.dryrun = dryrun
-
-        assert engine in VideoEngine, f"{engine}: engine not found"
+        assert isinstance(engine, VideoEngine)
         self.engine: VideoEngine = engine
 
         logger.info(
@@ -62,7 +61,6 @@ class VideoPlayer:
             logger.error(f"file not found: {filename}")
             return False
 
-        # Kill previous playback if running
         self.stop()
 
         comand = self.engine.play_command(
@@ -75,10 +73,9 @@ class VideoPlayer:
 
         if not self.dryrun:
             try:
-                # pylint: disable=consider-using-with
                 self.process = subprocess.Popen(
                     shlex.split(comand),
-                    stdin=None,
+                    stdin=subprocess.PIPE if self.engine == VideoEngine.MPV else None,
                     stdout=None if verbose else subprocess.DEVNULL,
                     stderr=None if verbose else subprocess.DEVNULL,
                 )
@@ -89,7 +86,7 @@ class VideoPlayer:
                 )
 
             except Exception as e:
-                crash_report(f"failed to run mpv: {e}")
+                crash_report(f"failed to run: {e}")
                 self.process = None
                 return False
 
@@ -124,7 +121,6 @@ class VideoPlayer:
             for filename in playlist:
                 self.play(filename, loop=False)
 
-                # Wait until video finishes
                 if self.process:
                     self.process.wait()
 
