@@ -196,8 +196,8 @@ class VideoPlayer:
         if not self.dryrun:
             if self.process and self.process.poll() is None:
 
-                # MPV: try clean quit via stdin
                 if self.engine == VideoPlayerEngine.MPV:
+                    # MPV clean quit via stdin (if stdin was PIPE)
                     try:
                         if self.process.stdin:
                             self.process.stdin.write(b"q")
@@ -207,22 +207,22 @@ class VideoPlayer:
                     except Exception as e:
                         logger.warning(f"mpv quit failed: {e}")
 
-                # VLC: quit through RC Unix socket
                 elif self.engine == VideoPlayerEngine.VLC:
+                    # VLC clean quit via TCP RC
                     try:
                         import socket
 
                         s = socket.create_connection(("127.0.0.1", 41940), timeout=0.5)
                         s.sendall(b"quit\n")
                         s.close()
-                        logger.info("vlc: sent 'quit' via RC socket.")
+                        logger.info("vlc: sent 'quit' via TCP RC.")
                     except Exception as e:
                         logger.warning(f"vlc rc quit failed: {e}")
 
-                # short wait for graceful shutdown
+                # Wait briefly for process to exit
                 time.sleep(0.3)
 
-                # ensure process is gone
+                # Make sure it's gone
                 try:
                     self.process.kill()
                 except Exception:
