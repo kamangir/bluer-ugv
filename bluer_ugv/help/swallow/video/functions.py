@@ -13,7 +13,8 @@ def help_play(
     args = [
         "[--dryrun 1]",
         "[--download 0]",
-        "[--engine vlc | mpv]" "[--loop 0]",
+        "[--engine vlc | mpv]",
+        "[--loop 0]",
         f"[--object_name <{env.RANGIN_VIDEO_LIST_OBJECT}>]",
         "[--video <loading|1>]",
     ]

@@ -59,11 +59,11 @@ if args.task == "play":
     playlist = PlayList(
         args.object_name,
         download=args.download == 1,
-        engine=args.engine,
     )
 
     video_player = VideoPlayer(
         args.dryrun == 1,
+        engine=args.engine,
     )
 
     success = video_player.play(
