@@ -62,8 +62,13 @@ class VideoPlayer:
             cmd = " ".join(
                 [
                     "mpv",
-                    "--fs" if fullscreen else "",
-                    "--window-maximized" if fullscreen else "",
+                    "--fs",  # request fullscreen
+                    "--x11-bypass-compositor=yes",  # CRITICAL for LXDE on Pi
+                    "--no-border",  # remove decorations
+                    "--geometry=0:0",  # position at 0,0
+                    "--ontop",  # stay above desktop panels
+                    "--keepaspect=yes",  # preserve aspect ratio
+                    "--no-keepaspect-window",  # add black bars if needed
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
                     shlex.quote(filename),
