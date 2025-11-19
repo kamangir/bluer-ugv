@@ -51,14 +51,25 @@ class VideoPlayer:
         self,
         filename: str,
         loop: bool = False,
+        audio: bool = False,
+        fullscreen: bool = True,
     ) -> bool:
         if not file.exists(filename):
             logger.error(f"file not found: {filename}")
             return False
 
         if not self.dryrun:
-            loop_flag = "--loop" if loop else ""
-            cmd = f"mpv --fs {loop_flag} --no-audio {shlex.quote(filename)}"
+            cmd = " ".join(
+                [
+                    "mpv",
+                    "--fs" if fullscreen else "",
+                    "--keepaspect=yes",  # preserve aspect ratio
+                    "--no-keepaspect-window",  # add black bars instead of stretching
+                    "--loop" if loop else "",
+                    "--no-audio" if not audio else "",
+                    shlex.quote(filename),
+                ]
+            )
             logger.info(f"running: {cmd}")
 
             # Kill previous playback if running
