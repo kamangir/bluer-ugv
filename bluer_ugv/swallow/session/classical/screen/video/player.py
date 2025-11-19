@@ -3,6 +3,7 @@ import subprocess
 import shlex
 import time
 
+from bluer_options.logger import crash_report
 from bluer_options.logger.config import log_list
 from bluer_objects.graphics.screen import get_size
 from bluer_objects import file
@@ -58,10 +59,14 @@ class VideoPlayer:
         loop: bool = False,
         audio: bool = False,
         fullscreen: bool = True,
+        verbose: bool = True,
     ) -> bool:
         if not file.exists(filename):
             logger.error(f"file not found: {filename}")
             return False
+
+        # Kill previous playback if running
+        self.stop()
 
         screen_height, screen_width = get_size()
 
@@ -105,19 +110,23 @@ class VideoPlayer:
 
             logger.info(f"running on {self.engine}: {cmd}")
 
-            # Kill previous playback if running
-            self.stop()
-
             try:
                 # pylint: disable=consider-using-with
                 self.process = subprocess.Popen(
                     shlex.split(cmd),
                     stdin=subprocess.PIPE,
-                    stdout=subprocess.DEVNULL,
-                    stderr=subprocess.DEVNULL,
+                    stdout=subprocess.PIPE if verbose else subprocess.DEVNULL,
+                    stderr=subprocess.PIPE if verbose else subprocess.DEVNULL,
+                    text=verbose,
                 )
+
+                logger.debug(
+                    f"pid={self.process.pid}, "
+                    f"stdin={self.process.stdin}, returncode={self.process.returncode}"
+                )
+
             except Exception as e:
-                logger.error(f"failed to run mpv: {e}")
+                crash_report(f"failed to run mpv: {e}")
                 self.process = None
                 return False
 
@@ -125,6 +134,10 @@ class VideoPlayer:
             logger.info("press 'q' to quit mpv.")
         elif self.engine == "vlc":
             logger.info('type "quit" to quit vlc.')
+
+        if not self.process:
+            logger.error("process is None.")
+            return False
 
         self.current_file = filename
 
