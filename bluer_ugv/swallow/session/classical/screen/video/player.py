@@ -66,10 +66,11 @@ class VideoPlayer:
                 [
                     "mpv",
                     "--no-border",
+                    "--background=black",  # fill empty areas with black
+                    "--keepaspect=yes",
+                    "--no-keepaspect-window=yes",
                     "--geometry=0:0",
                     f"--autofit={screen_width}x{screen_height}",
-                    "--keepaspect=yes",
-                    "--no-keepaspect-window",
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
                     shlex.quote(filename),
