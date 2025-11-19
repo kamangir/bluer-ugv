@@ -19,6 +19,7 @@ def help_play(
         ),
         "[--loop 0]",
         f"[--object_name <{env.RANGIN_VIDEO_LIST_OBJECT}>]",
+        "[--timeout <-1 | 10>]",
         "[--video <loading|1>]",
     ]
 

@@ -1,8 +1,10 @@
 import argparse
+import time
 
 from blueness import module
 from blueness.argparse.generic import sys_exit
 from bluer_options.host import is_rpi, is_headless
+from bluer_options import string
 
 from bluer_ugv import NAME, env
 from bluer_ugv.swallow.session.classical.screen.video.playlist import PlayList
@@ -48,6 +50,12 @@ parser.add_argument(
     default=env.RANGIN_VIDEO_LIST_OBJECT,
 )
 parser.add_argument(
+    "--timeout",
+    type=int,
+    default=-1,
+    help="in seconds, -1: never",
+)
+parser.add_argument(
     "--video",
     type=str,
     default="loading",
@@ -71,6 +79,18 @@ if args.task == "play":
         filename=playlist.get(args.video),
         loop=args.loop == 1,
     )
+
+    if success and args.timeout > 0:
+        logger.info(
+            "waiting for {}".format(
+                string.pretty_duration(
+                    args.timeout,
+                )
+            )
+        )
+        time.sleep(args.timeout)
+        success = video_player.stop()
+
 else:
     success = None
 

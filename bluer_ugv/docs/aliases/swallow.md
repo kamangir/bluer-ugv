@@ -127,6 +127,7 @@
 	[--engine mpv | vlc] \
 	[--loop 0] \
 	[--object_name <rangin-video-list-1>] \
+	[--timeout <-1 | 10>] \
 	[--video <loading|1>]
  . play <object-name>/<video>.
 @swallow \
