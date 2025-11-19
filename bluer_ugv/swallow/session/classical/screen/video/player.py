@@ -2,80 +2,20 @@ from typing import List, Optional
 import subprocess
 import shlex
 import time
-from enum import Enum, auto
 
 from bluer_options.logger import crash_report
 from bluer_options.logger.config import log_list
-from bluer_objects.graphics.screen import get_size
 from bluer_objects import file
 
+from bluer_ugv.swallow.session.classical.screen.video.engine import VideoEngine
 from bluer_ugv.logger import logger
-
-
-class VideoPlayerEngine(Enum):
-    MPV = auto()
-    VLC = auto()
-
-    def play_command(
-        self,
-        filename: str,
-        fullscreen: bool = True,
-        loop: bool = False,
-        audio: bool = False,
-    ) -> str:
-        screen_height, screen_width = get_size()
-        logger.info(
-            "screen size: {}x{}".format(
-                screen_height,
-                screen_width,
-            )
-        )
-
-        if self == VideoPlayerEngine.MPV:
-            logger.info('press "q" to quit mpv.')
-
-            return " ".join(
-                [
-                    "mpv",
-                    "--no-border",
-                    "--background=color",  # fill empty areas with black
-                    "--keepaspect=yes",
-                    "--no-keepaspect-window",
-                    "--geometry=0:0",
-                    (f"--autofit={screen_width}x{screen_height}" if fullscreen else ""),
-                    "--loop" if loop else "",
-                    "--no-audio" if not audio else "",
-                    shlex.quote(filename),
-                ]
-            )
-
-        if self == VideoPlayerEngine.VLC:
-            logger.info('press "Enter" to quit vlc.')
-
-            return " ".join(
-                [
-                    "sudo -u pi",
-                    "cvlc",
-                    "--fullscreen",  # true fullscreen
-                    "--no-video-title-show",  # remove the title overlay
-                    "--video-on-top",  # stay above desktop
-                    "--no-osd",  # remove VLC overlays
-                    "--loop" if loop else "",
-                    "--no-audio" if not audio else "",
-                    "--extraintf rc",  # remote control, to enable "quit"
-                    "--rc-host=127.0.0.1:41940",
-                    shlex.quote(filename),
-                ]
-            )
-
-        return "this-should-not-happen"
 
 
 class VideoPlayer:
     def __init__(
         self,
         dryrun: bool = False,
-        engine: VideoPlayerEngine = VideoPlayerEngine.VLC,
+        engine: VideoEngine = VideoEngine.VLC,
     ):
         self.process: Optional[subprocess.Popen] = None
         self.current_file: Optional[str] = None
@@ -83,8 +23,8 @@ class VideoPlayer:
         self.paused = False
         self.dryrun = dryrun
 
-        assert engine in VideoPlayerEngine, f"{engine}: engine not found"
-        self.engine: VideoPlayerEngine = engine
+        assert engine in VideoEngine, f"{engine}: engine not found"
+        self.engine: VideoEngine = engine
 
         logger.info(
             "{} created on {}{}.".format(
@@ -97,17 +37,13 @@ class VideoPlayer:
     def pause(self) -> bool:
         if not self.dryrun:
             if self.process and self.process.poll() is None:
-                try:
-                    # mpv understands "p" as toggle-pause.
-                    self.process.stdin.write(b"p")
-                    self.process.stdin.flush()
-                except Exception as e:
-                    logger.error(f"failed to send pause command: {e}")
+                if not self.engine.pause(self.process):
                     return False
 
         logger.info(
             "{}.{}".format(
-                self.__class__.__name__, "resume" if self.paused else "pause"
+                self.__class__.__name__,
+                "resume" if self.paused else "pause",
             )
         )
         self.paused = not self.paused
@@ -195,38 +131,7 @@ class VideoPlayer:
     def stop(self) -> bool:
         if not self.dryrun:
             if self.process and self.process.poll() is None:
-
-                if self.engine == VideoPlayerEngine.MPV:
-                    # MPV clean quit via stdin (if stdin was PIPE)
-                    try:
-                        if self.process.stdin:
-                            self.process.stdin.write(b"q")
-                            self.process.stdin.flush()
-                        else:
-                            logger.info("mpv: no stdin; skipping quit.")
-                    except Exception as e:
-                        logger.warning(f"mpv quit failed: {e}")
-
-                elif self.engine == VideoPlayerEngine.VLC:
-                    # VLC clean quit via TCP RC
-                    try:
-                        import socket
-
-                        s = socket.create_connection(("127.0.0.1", 41940), timeout=0.5)
-                        s.sendall(b"quit\n")
-                        s.close()
-                        logger.info("vlc: sent 'quit' via TCP RC.")
-                    except Exception as e:
-                        logger.warning(f"vlc rc quit failed: {e}")
-
-                # Wait briefly for process to exit
-                time.sleep(0.3)
-
-                # Make sure it's gone
-                try:
-                    self.process.kill()
-                except Exception:
-                    pass
+                self.engine.stop(self.process)
 
         self.process = None
         logger.info(f"{self.__class__.__name__}.stop")

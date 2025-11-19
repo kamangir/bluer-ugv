@@ -9,7 +9,7 @@ from bluer_options import string
 from bluer_ugv import NAME, env
 from bluer_ugv.swallow.session.classical.screen.video.playlist import PlayList
 from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayer
-from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayerEngine
+from bluer_ugv.swallow.session.classical.screen.video.engine import VideoEngine
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
@@ -35,8 +35,8 @@ parser.add_argument(
 parser.add_argument(
     "--engine",
     type=str,
-    default=VideoPlayerEngine.VLC.name.lower(),
-    help=" | ".join(sorted([engine.name.lower() for engine in VideoPlayerEngine])),
+    default=VideoEngine.VLC.name.lower(),
+    help=" | ".join(sorted([engine.name.lower() for engine in VideoEngine])),
 )
 parser.add_argument(
     "--loop",
@@ -72,7 +72,7 @@ if args.task == "play":
 
     video_player = VideoPlayer(
         args.dryrun == 1,
-        engine=VideoPlayerEngine[args.engine.upper()],
+        engine=VideoEngine[args.engine.upper()],
     )
 
     success = video_player.play(

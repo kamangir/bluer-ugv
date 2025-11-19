@@ -4,7 +4,7 @@ from bluer_options.terminal import show_usage, xtra
 
 from bluer_ugv import env
 from bluer_ugv.help.swallow.video.playlist import help_functions as help_playlist
-from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayerEngine
+from bluer_ugv.swallow.session.classical.screen.video.engine import VideoEngine
 
 
 def help_play(
@@ -15,7 +15,7 @@ def help_play(
         "[--dryrun 1]",
         "[--download 0]",
         "[--engine {}]".format(
-            " | ".join(sorted([engine.name.lower() for engine in VideoPlayerEngine]))
+            " | ".join(sorted([engine.name.lower() for engine in VideoEngine]))
         ),
         "[--loop 0]",
         f"[--object_name <{env.RANGIN_VIDEO_LIST_OBJECT}>]",

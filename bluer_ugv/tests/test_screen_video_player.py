@@ -3,7 +3,7 @@ import pytest
 from bluer_ugv.swallow.session.classical.screen.video.playlist import PlayList
 from bluer_ugv.swallow.session.classical.screen.video.player import (
     VideoPlayer,
-    VideoPlayerEngine,
+    VideoEngine,
 )
 from bluer_ugv import env
 
@@ -12,7 +12,7 @@ from bluer_ugv import env
     [
         "engine",
     ],
-    [[engine] for engine in VideoPlayerEngine],
+    [[engine] for engine in VideoEngine],
 )
 @pytest.mark.parametrize(
     [
@@ -33,7 +33,7 @@ from bluer_ugv import env
     [[True], [False]],
 )
 def test_screen_video_player_engine(
-    engine: VideoPlayerEngine,
+    engine: VideoEngine,
     fullscreen: bool,
     loop: bool,
     audio: bool,
