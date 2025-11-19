@@ -11,6 +11,8 @@ from bluer_objects import file
 
 from bluer_ugv.logger import logger
 
+VLC_RC_SOCKET = "/home/pi/.local/share/vlc/rc"
+
 
 class VideoPlayerEngine(Enum):
     MPV = auto()
@@ -63,7 +65,7 @@ class VideoPlayerEngine(Enum):
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
                     "--extraintf rc",  # remote control, to enable "quit"
-                    "--rc-unix=/tmp/vlc.sock",
+                    f"--rc-unix={VLC_RC_SOCKET}",
                     shlex.quote(filename),
                 ]
             )
@@ -213,7 +215,7 @@ class VideoPlayer:
                         import socket
 
                         s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-                        s.connect("/tmp/vlc.sock")
+                        s.connect(VLC_RC_SOCKET)
                         s.sendall(b"quit\n")
                         s.close()
                         logger.info("vlc: sent 'quit' via RC socket.")
