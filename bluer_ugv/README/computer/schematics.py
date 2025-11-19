@@ -11,7 +11,7 @@ items = ImageItems(
 
 docs = [
     {
-        "path": "../docs/swallow/digital/design/shield/schematics.md",
+        "path": "../docs/swallow/digital/design/computer/schematics.md",
         "items": items,
     },
 ]

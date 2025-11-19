@@ -78,7 +78,4 @@ docs = [
             ]
         ),
     },
-    {
-        "path": "../docs/rangin/computers.md",
-    },
 ]

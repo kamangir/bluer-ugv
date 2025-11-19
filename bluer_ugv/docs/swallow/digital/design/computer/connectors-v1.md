@@ -1,4 +1,4 @@
-# swallow: digital: design: shield: connectors-v1
+# swallow: digital: design: computer: connectors-v1
 
 - socket: power
 - pin: motor one (steering, left)

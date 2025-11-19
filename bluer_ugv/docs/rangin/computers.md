@@ -1,5 +1,0 @@
-# rangin: computers
-
-- [swallow design](../swallow/digital/design/computers.md) computers.
-- `<ugv-name>-top`: a [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head) that watches the top and feeds the displays.
- 

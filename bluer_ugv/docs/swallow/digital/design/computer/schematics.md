@@ -1,4 +1,4 @@
-# swallow: digital: design: shield: schematics
+# swallow: digital: design: computer: schematics
 
 - [design files](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/)
 

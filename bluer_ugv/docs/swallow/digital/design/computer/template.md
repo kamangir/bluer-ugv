@@ -6,6 +6,9 @@ title:::
 - [pcb](./pcb.md)
 - [box](./box.md)
 - [testing](./testing.md)
-- connectors: all socket ([v1](./connectors-v1.md))
+- [power](./power.md)
+- [naming](./naming.md)
+
+> connectors: all socket ([v1](./connectors-v1.md))
 
 items:::
