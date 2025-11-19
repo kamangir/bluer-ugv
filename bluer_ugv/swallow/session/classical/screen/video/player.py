@@ -130,9 +130,9 @@ class VideoPlayer:
                 return False
 
         if self.engine == "mpv":
-            logger.info("press 'q' to quit mpv.")
+            logger.info('press "q" to quit mpv.')
         elif self.engine == "vlc":
-            logger.info('type "quit" to quit vlc.')
+            logger.info('press "Enter" to quit vlc.')
 
         if not self.process:
             logger.error("process is None.")
