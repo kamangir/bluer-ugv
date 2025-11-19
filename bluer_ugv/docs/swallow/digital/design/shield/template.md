@@ -7,6 +7,6 @@ title:::
 - [box](./box.md)
 - [testing](./testing.md)
 - connectors: all socket ([v1](./connectors-v1.md))
-- [power consumption](./power.md)
+- [power](./power.md)
 
 items:::
