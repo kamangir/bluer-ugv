@@ -5,7 +5,7 @@ function bluer_ugv_swallow_video_playlist_download() {
 
     [[ "$abcli_is_rpi" == true ]] &&
         sudo chown pi:pi \
-            $ABCLI_OBJECT_ROOT/$RANGIN_VIDEO_LIST_OBJECT/metadata.yaml
+            $ABCLI_OBJECT_ROOT/$RANGIN_VIDEO_LIST_OBJECT
 
     bluer_objects_download \
         filename=metadata.yaml \
