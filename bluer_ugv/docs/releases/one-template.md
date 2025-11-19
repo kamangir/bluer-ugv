@@ -13,7 +13,7 @@ swallow/digital/design/parts.md,\
 aliases/swallow.md,\
 swallow/digital/design/parts.md,\
 swallow/digital/design/terraform.md,\
-swallow/digital/design/shield,\
+swallow/digital/design/computer,\
 $abcli_path_git/bluer-designs/swallow/electrical/digital.png,\
 $abcli_path_git/bluer-designs/swallow/kicad/swallow/exports/swallow.pdf,\
 $abcli_path_git/bluer-designs/swallow/kicad/swallow/exports/swallow-3d.png,\

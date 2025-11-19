@@ -7,7 +7,10 @@ from bluer_ugv.README.swallow.consts import (
     swallow_electrical_designs,
 )
 from bluer_ugv.designs.swallow.parts import dict_of_parts
-from bluer_ugv.README.swallow.digital.design import mechanical, ultrasonic_sensor
+from bluer_ugv.README.swallow.digital.design import (
+    mechanical,
+    ultrasonic_sensor,
+)
 from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
 
 
@@ -15,9 +18,6 @@ docs = (
     [
         {
             "path": "../docs/swallow/digital/design",
-        },
-        {
-            "path": "../docs/swallow/digital/design/computers.md",
         },
         {
             "path": "../docs/swallow/digital/design/operation.md",

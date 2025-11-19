@@ -17,7 +17,7 @@ from bluer_ugv.README import (
     releases,
     swallow,
 )
-from bluer_ugv.README.shield import docs as shield
+from bluer_ugv.README.computer import docs as computer
 from bluer_ugv.README.ugvs import docs as ugvs
 from bluer_ugv.README.ugvs.comparison.build import build as build_comparison
 
@@ -49,7 +49,7 @@ def build() -> bool:
             + rangin.docs
             + ravin.docs
             + releases.docs
-            + shield.docs
+            + computer.docs
             + ugvs.docs
             + swallow.docs
         )

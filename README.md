@@ -18,7 +18,7 @@ pip install bluer_ugv
 
 |   |   |
 | --- | --- |
-| [`shield`](./bluer_ugv/docs/swallow/digital/design/shield) [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/electrical/digital.png?raw=true)](./bluer_ugv/docs/swallow/digital/design/shield)  | [`UGVs`](./bluer_ugv/docs/UGVs) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250912_211652.jpg?raw=true)](./bluer_ugv/docs/UGVs)  |
+| [`computer`](./bluer_ugv/docs/swallow/digital/design/computer) [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/electrical/digital.png?raw=true)](./bluer_ugv/docs/swallow/digital/design/computer)  | [`UGVs`](./bluer_ugv/docs/UGVs) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250912_211652.jpg?raw=true)](./bluer_ugv/docs/UGVs)  |
 | [`terraform`](./bluer_ugv/docs/swallow/digital/design/terraform.md) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250611_100917.jpg?raw=true)](./bluer_ugv/docs/swallow/digital/design/terraform.md)  | [`validations`](./bluer_ugv/docs/validations) [![image](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/swallow-debug-2025-09-25-13-16-59-rnm7jd.gif)](./bluer_ugv/docs/validations)  |
 
 ## aliases
@@ -35,5 +35,5 @@ pip install bluer_ugv
 
 [![pylint](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/bluer-ugv/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/bluer-ugv.svg)](https://pypi.org/project/bluer-ugv/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/bluer-ugv)](https://pypistats.org/packages/bluer-ugv)
 
-built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-7.430.1`](https://github.com/kamangir/bluer-ugv).
+built by 🌀 [`bluer README`](https://github.com/kamangir/bluer-objects/tree/main/bluer_objects/README), based on 🐬 [`bluer_ugv-7.431.1`](https://github.com/kamangir/bluer-ugv).
 

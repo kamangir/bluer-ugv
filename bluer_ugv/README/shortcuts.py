@@ -11,8 +11,8 @@ items = markdown.generate_table(
     Items(
         [
             {
-                "name": "shield",
-                "url": "./bluer_ugv/docs/swallow/digital/design/shield",
+                "name": "computer",
+                "url": "./bluer_ugv/docs/swallow/digital/design/computer",
                 "marquee": f"{swallow_electrical_designs}/digital.png?raw=true",
             },
             {

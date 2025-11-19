@@ -1,4 +1,4 @@
-# swallow: digital: design: shield
+title:::
 
 
 - [parts](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow)
@@ -6,6 +6,9 @@
 - [pcb](./pcb.md)
 - [box](./box.md)
 - [testing](./testing.md)
-- connectors: all socket ([v1](./connectors-v1.md))
 - [power](./power.md)
+- [naming](./naming.md)
 
+> connectors: all socket ([v1](./connectors-v1.md))
+
+items:::

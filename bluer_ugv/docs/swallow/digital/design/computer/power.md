@@ -1,4 +1,4 @@
-# swallow: digital: design: shield: power
+# swallow: digital: design: computer: power
 
 [swallow head](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/swallow-head):
 - Raspberry Pi 4B (CPU/GPU busy, Wi-Fi + BLE on): ~ 1.3–1.5 A -> ~ 6.6–7.7 W

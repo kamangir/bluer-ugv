@@ -35,15 +35,15 @@ v2_items = ImageItems(
 
 docs = [
     {
-        "path": "../docs/swallow/digital/design/shield/pcb.md",
+        "path": "../docs/swallow/digital/design/computer/pcb.md",
         "items": items,
     },
     {
-        "path": "../docs/swallow/digital/design/shield/v1.md",
+        "path": "../docs/swallow/digital/design/computer/v1.md",
         "items": v1_items,
     },
     {
-        "path": "../docs/swallow/digital/design/shield/v2.md",
+        "path": "../docs/swallow/digital/design/computer/v2.md",
         "items": v2_items,
     },
 ]

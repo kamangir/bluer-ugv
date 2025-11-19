@@ -13,7 +13,7 @@ items = ImageItems(
 
 docs = [
     {
-        "path": "../docs/swallow/digital/design/shield/power.md",
+        "path": "../docs/swallow/digital/design/computer/power.md",
         "items": items,
     },
 ]

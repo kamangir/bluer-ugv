@@ -1,4 +1,4 @@
-# swallow: digital: design: shield: testing
+# swallow: digital: design: computer: testing
 
 connect [adapter-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/adapter-bus.md) and [regulated-bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/regulated-bus.md) and the additional connections (see figure).
 
