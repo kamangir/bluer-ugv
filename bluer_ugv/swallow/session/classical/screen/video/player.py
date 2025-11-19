@@ -130,9 +130,8 @@ class VideoPlayer:
                     self.process.wait()
 
     def stop(self) -> bool:
-        if not self.dryrun:
-            if self.process and self.process.poll() is None:
-                self.engine.stop(self.process)
+        if not self.dryrun and self.process and self.process.poll() is None:
+            self.engine.stop(self.process)
 
         self.process = None
         logger.info(f"{self.__class__.__name__}.stop")
