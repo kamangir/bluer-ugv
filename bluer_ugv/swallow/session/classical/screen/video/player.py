@@ -62,13 +62,8 @@ class VideoPlayer:
             cmd = " ".join(
                 [
                     "mpv",
-                    "--fs=yes" if fullscreen else "",  # enforce true fullscreen
-                    "--fs-screen=0",  # choose screen 0
-                    "--no-border",  # remove window border decorations
-                    "--ontop",  # stay above desktop
-                    "--geometry=0:0",  # no offset
-                    "--keepaspect=yes",  # preserve aspect
-                    "--no-keepaspect-window",  # add black bars
+                    "--fs" if fullscreen else "",
+                    "--window-maximized" if fullscreen else "",
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
                     shlex.quote(filename),
