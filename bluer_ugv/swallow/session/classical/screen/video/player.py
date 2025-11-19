@@ -114,7 +114,7 @@ class VideoPlayer:
                 # pylint: disable=consider-using-with
                 self.process = subprocess.Popen(
                     shlex.split(cmd),
-                    stdin=subprocess.PIPE,
+                    stdin=None,
                     stdout=None if verbose else subprocess.DEVNULL,
                     stderr=None if verbose else subprocess.DEVNULL,
                 )
