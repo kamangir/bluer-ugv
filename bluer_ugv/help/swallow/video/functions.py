@@ -6,26 +6,6 @@ from bluer_ugv import env
 from bluer_ugv.help.swallow.video.playlist import help_functions as help_playlist
 
 
-def help_pause(
-    tokens: List[str],
-    mono: bool,
-) -> str:
-    args = [
-        "[--dryrun 1]",
-    ]
-
-    return show_usage(
-        [
-            "@swallow",
-            "video",
-            "pause",
-        ]
-        + args,
-        "pause video player.",
-        mono=mono,
-    )
-
-
 def help_play(
     tokens: List[str],
     mono: bool,
@@ -50,29 +30,7 @@ def help_play(
     )
 
 
-def help_stop(
-    tokens: List[str],
-    mono: bool,
-) -> str:
-    args = [
-        "[--dryrun 1]",
-    ]
-
-    return show_usage(
-        [
-            "@swallow",
-            "video",
-            "stop",
-        ]
-        + args,
-        "stop video player.",
-        mono=mono,
-    )
-
-
 help_functions = {
-    "pause": help_pause,
     "play": help_play,
     "playlist": help_playlist,
-    "stop": help_stop,
 }

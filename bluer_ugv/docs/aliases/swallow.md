@@ -121,11 +121,6 @@
 ```bash
 @swallow \
 	video \
-	pause \
-	[--dryrun 1]
- . pause video player.
-@swallow \
-	video \
 	play \
 	[--dryrun 1] \
 	[--download 0] \
@@ -157,9 +152,4 @@
 	upload \
 	[filename=<filename>,public,zip]
  . upload swallow playlist.
-@swallow \
-	video \
-	stop \
-	[--dryrun 1]
- . stop video player.
 ```

@@ -15,7 +15,7 @@ parser = argparse.ArgumentParser(NAME)
 parser.add_argument(
     "task",
     type=str,
-    help="pause|play|stop",
+    help="play",
 )
 parser.add_argument(
     "--download",
@@ -47,23 +47,22 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-video_player = VideoPlayer(args.dryrun == 1)
 
 success = False
-if args.task == "pause":
-    success = video_player.pause()
-elif args.task == "play":
+if args.task == "play":
     playlist = PlayList(
         args.object_name,
         download=args.download == 1,
+    )
+
+    video_player = VideoPlayer(
+        args.dryrun == 1,
     )
 
     success = video_player.play(
         filename=playlist.get(args.video),
         loop=args.loop == 1,
     )
-elif args.task == "stop":
-    success = video_player.stop()
 else:
     success = None
 
