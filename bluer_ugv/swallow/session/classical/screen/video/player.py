@@ -63,6 +63,7 @@ class VideoPlayerEngine(Enum):
                     "--loop" if loop else "",
                     "--no-audio" if not audio else "",
                     "--extraintf rc",  # remote control, to enable "quit"
+                    "--rc-unix=/tmp/vlc.sock",
                     shlex.quote(filename),
                 ]
             )
@@ -146,7 +147,7 @@ class VideoPlayer:
                     stderr=None if verbose else subprocess.DEVNULL,
                 )
 
-                logger.debug(
+                logger.info(
                     f"pid={self.process.pid}, "
                     f"stdin={self.process.stdin}, returncode={self.process.returncode}"
                 )
@@ -194,17 +195,40 @@ class VideoPlayer:
     def stop(self) -> bool:
         if not self.dryrun:
             if self.process and self.process.poll() is None:
-                try:
-                    # mpv: quit = "q"
-                    self.process.stdin.write(b"q")
-                    self.process.stdin.flush()
-                except Exception as e:
-                    logger.warning(e)
 
+                # MPV: try clean quit via stdin
+                if self.engine == VideoPlayerEngine.MPV:
+                    try:
+                        if self.process.stdin:
+                            self.process.stdin.write(b"q")
+                            self.process.stdin.flush()
+                        else:
+                            logger.info("mpv: no stdin; skipping quit.")
+                    except Exception as e:
+                        logger.warning(f"mpv quit failed: {e}")
+
+                # VLC: quit through RC Unix socket
+                elif self.engine == VideoPlayerEngine.VLC:
+                    try:
+                        import socket
+
+                        s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+                        s.connect("/tmp/vlc.sock")
+                        s.sendall(b"quit\n")
+                        s.close()
+                        logger.info("vlc: sent 'quit' via RC socket.")
+                    except Exception as e:
+                        logger.warning(f"vlc rc quit failed: {e}")
+
+                # short wait for graceful shutdown
                 time.sleep(0.3)
-                self.process.kill()
+
+                # ensure process is gone
+                try:
+                    self.process.kill()
+                except Exception:
+                    pass
 
         self.process = None
-
         logger.info(f"{self.__class__.__name__}.stop")
         return True
