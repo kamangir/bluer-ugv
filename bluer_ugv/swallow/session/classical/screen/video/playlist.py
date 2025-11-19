@@ -8,18 +8,22 @@ from bluer_objects.storage.policies import DownloadPolicy
 from bluer_ugv.logger import logger
 
 
-class VideoList:
+class PlayList:
     def __init__(
         self,
         object_name: str,
+        download: bool = True,
     ):
         self.index: int = -1
 
         self.object_name = object_name
-        storage.download(
-            self.object_name,
-            policy=DownloadPolicy.DOESNT_EXIST,
-        )
+        self.download = download
+
+        if self.download:
+            storage.download(
+                self.object_name,
+                filename="metadata.yaml",
+            )
 
         self.messages: Dict[str, str] = get_from_object(
             self.object_name,
@@ -35,15 +39,15 @@ class VideoList:
             max_length=-1,
         )
 
-        self.play_list: List[Dict[str, str]] = get_from_object(
+        self.playlist: List[Dict[str, str]] = get_from_object(
             self.object_name,
-            "play_list",
+            "playlist",
             default=[],
         )
         log_list(
             logger,
             "messages",
-            self.play_list,
+            self.playlist,
             "playlist item(s)",
             max_count=-1,
             max_length=-1,
@@ -58,7 +62,7 @@ class VideoList:
 
     def get(
         self,
-        keyword: int | str,
+        keyword: int | str = "loading",
         what: str = "filename",
     ) -> str:
         filename = f"{keyword.__class__.__name__}-not-supported"
@@ -66,11 +70,11 @@ class VideoList:
         if isinstance(keyword, int):
             filename = "bad-index-{}-from-{}".format(
                 keyword,
-                len(self.play_list),
+                len(self.playlist),
             )
 
-            if 0 <= keyword < len(self.play_list):
-                filename = self.play_list[keyword].get(
+            if 0 <= keyword < len(self.playlist):
+                filename = self.playlist[keyword].get(
                     what,
                     f"{what}-not-found",
                 )
@@ -84,6 +88,13 @@ class VideoList:
                     f"{what}-not-found",
                 )
 
+        if self.download:
+            storage.download(
+                self.object_name,
+                filename=filename,
+                policy=DownloadPolicy.DOESNT_EXIST,
+            )
+
         return objects.path_of(
             filename=filename,
             object_name=self.object_name,
@@ -91,7 +102,7 @@ class VideoList:
 
     def next(self):
         self.index += 1
-        if self.index >= len(self.play_list):
+        if self.index >= len(self.playlist):
             self.index = 0
 
         logger.info(

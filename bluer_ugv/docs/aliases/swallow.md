@@ -120,13 +120,14 @@
 
 ```bash
 @swallow \
-	video_player \
-	pause
+	video \
+	pause \
+	[dryrun]
  . pause video player.
 @swallow \
-	video_player \
+	video \
 	play \
-	[download,video=<loading|1>] \
+	[download,dryrun,video=<loading|1>] \
 	[rangin-video-list-1|<object-name>]
  . play <object-name>.
 @swallow \
@@ -138,7 +139,8 @@
 @swallow \
 	video \
 	playlist \
-	download
+	download \
+	[filename=<filename>,policy=different|doesnt_exist|none]
  . download swallow playlist.
 @swallow \
 	video \
@@ -149,10 +151,12 @@
 @swallow \
 	video \
 	playlist \
-	upload
+	upload \
+	[filename=<filename>,public,zip]
  . upload swallow playlist.
 @swallow \
-	video_player \
-	stop
+	video \
+	stop \
+	[dryrun]
  . stop video player.
 ```

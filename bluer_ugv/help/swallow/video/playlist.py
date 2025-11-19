@@ -1,6 +1,8 @@
 from typing import List
 
 from bluer_options.terminal import show_usage, xtra
+from bluer_objects.help.download import options as download_options
+from bluer_objects.help.upload import options as upload_options
 
 
 def help_cat(
@@ -26,12 +28,15 @@ def help_download(
     tokens: List[str],
     mono: bool,
 ) -> str:
+    options = download_options(mono=mono)
+
     return show_usage(
         [
             "@swallow",
             "video",
             "playlist",
             "download",
+            f"[{options}]",
         ],
         "download swallow playlist.",
         mono=mono,
@@ -61,12 +66,15 @@ def help_upload(
     tokens: List[str],
     mono: bool,
 ) -> str:
+    options = upload_options(mono=mono)
+
     return show_usage(
         [
             "@swallow",
             "video",
             "playlist",
             "upload",
+            f"[{options}]",
         ],
         "upload swallow playlist.",
         mono=mono,

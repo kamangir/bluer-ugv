@@ -1,6 +1,6 @@
 from typing import List
 
-from bluer_options.terminal import show_usage
+from bluer_options.terminal import show_usage, xtra
 
 from bluer_ugv import env
 from bluer_ugv.help.swallow.video.playlist import help_functions as help_playlist
@@ -10,11 +10,14 @@ def help_pause(
     tokens: List[str],
     mono: bool,
 ) -> str:
+    options = xtra("dryrun", mono=mono)
+
     return show_usage(
         [
             "@swallow",
-            "video_player",
+            "video",
             "pause",
+            f"[{options}]",
         ],
         "pause video player.",
         mono=mono,
@@ -25,12 +28,20 @@ def help_play(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = "download,video=<loading|1>"
+    options = "".join(
+        [
+            "download",
+            xtra(",dryrun,", mono=mono),
+            "video=<loading|1>",
+        ]
+    )
+
+    "download,dryrun,video=<loading|1>"
 
     return show_usage(
         [
             "@swallow",
-            "video_player",
+            "video",
             "play",
             f"[{options}]",
             "[{}|<object-name>]".format(env.RANGIN_VIDEO_LIST_OBJECT),
@@ -44,11 +55,14 @@ def help_stop(
     tokens: List[str],
     mono: bool,
 ) -> str:
+    options = xtra("dryrun", mono=mono)
+
     return show_usage(
         [
             "@swallow",
-            "video_player",
+            "video",
             "stop",
+            f"[{options}]",
         ],
         "stop video player.",
         mono=mono,

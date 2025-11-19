@@ -1,8 +1,8 @@
 from bluer_options.host.functions import is_headless
 
 from bluer_ugv import env
-from bluer_ugv.swallow.session.classical.screen.video_player import VideoPlayer
-from bluer_ugv.swallow.session.classical.screen.video_list import VideoList
+from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayer
+from bluer_ugv.swallow.session.classical.screen.video.playlist import PlayList
 from bluer_ugv.logger import logger
 
 
@@ -10,7 +10,7 @@ class ClassicalScreen:
     def __init__(self):
         self.video_player = None if is_headless() else VideoPlayer()
 
-        self.video_list = VideoList(env.RANGIN_VIDEO_LIST_OBJECT)
+        self.playlist = PlayList(env.RANGIN_VIDEO_LIST_OBJECT)
 
         logger.info(f"{self.__class__.__name__} created.")
 
@@ -22,7 +22,7 @@ class ClassicalScreen:
             return True
 
         return self.video_player.play(
-            self.video_list.get("loading"),
+            self.playlist.get("loading"),
             loop=True,
         )
 
@@ -33,9 +33,9 @@ class ClassicalScreen:
         if self.video_player.process:
             return True
 
-        self.video_list.next()
+        self.playlist.next()
 
         return self.video_player.play(
-            self.video_list.get(self.video_list.index),
+            self.playlist.get(self.playlist.index),
             loop=False,
         )

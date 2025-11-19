@@ -81,4 +81,7 @@ docs = [
     {
         "path": "../docs/rangin/computers.md",
     },
+    {
+        "path": "../docs/rangin/video.md",
+    },
 ]
