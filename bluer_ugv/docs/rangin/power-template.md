@@ -7,6 +7,7 @@ title:::
 - total: 300 W ~= 25 A @ 12 V DC
 
 | runtime | energy needed | ideal capacity @12 V | SLA nominal Ah | LiPo nominal Ah |
+|-|-|-|-|-|
 | 1 h | 300 Wh | 25 Ah | 30 Ah | 30 Ah |
 | 2 h | 600 Wh | 50 Ah | 60 Ah | 60 Ah |
 | 3 h | 900 Wh | 75 Ah | 90 Ah | 85–90 Ah |
