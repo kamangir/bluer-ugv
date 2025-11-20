@@ -10,4 +10,5 @@ dict_of_parts = {
     "ac-volt-meter": "220 V, 5 A",
     "emergency-stop": "100 A DC or relay-controlled",
     "safety-fuse": "30 mA trip",
+    "relay": "12 V DC, 25 A",
 }
