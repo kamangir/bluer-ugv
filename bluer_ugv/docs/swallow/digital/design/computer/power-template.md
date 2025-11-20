@@ -34,9 +34,16 @@ total: ~ 10 W ~= ~1.8 A @ 5.1 V DC ~= 1 A @ 12 V DC (90% efficiency)
 
 > LiPo: 3S, 11.1 V nominal, 85% usable capacity.
 
-
-
-
-
-
 items:::
+
+# SLA vs. LiPo
+
+- Weight: LiPO ≈ ⅓ the weight of SLA for the same Ah.
+- Cost in Iran: LiPO ≈ 2–3× more expensive than SLA per Ah.
+- Lifetime: LiPO lasts 5–10× more cycles (much cheaper per cycle).
+- Safety:
+   - SLA: very stable, heavy, low fire risk.
+   - LiPO: safe if BMS is good; RC LiPo is riskier.
+- Complexity:
+   - SLA: simple, just charge and use.
+   - LiPO: needs proper charger + BMS awareness, but gives better performance.
