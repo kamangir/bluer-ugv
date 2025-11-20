@@ -8,8 +8,8 @@ title:::
 - [power](./power.md)
 - [mechanical](./mechanical.md)
 
+items:::
+
 # obsolete
 
 - [flag](./flag.md)
-
-items:::
