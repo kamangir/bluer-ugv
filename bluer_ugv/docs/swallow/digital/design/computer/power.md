@@ -16,13 +16,28 @@ total: 110 W - max current: 15 A @ 12 V DC
 
 | option | battery | rated Wh | usable Wh | aggressive Driving | cruising driving | mostly idling |
 |-|-|-|-|-|-|-|
-|   | 12 V |  |  | ~107 W == ~9 A | ~59 W == ~ 5A | 12 W == ~ 1 A |
-|   | SLA |  | real: TBA% |  |  |  |
+| | | | | ~107 W == ~9 A | ~59 W == ~ 5A | 12 W == ~ 1 A |
+| | SLA | | real: TBA% | | | |
 | 1 | 7.2 Ah ⭐️ | 86 Wh | 50–65 Wh | 28–37 min | 50–70 min | 4–5.5 h |
 | 2 | 12 Ah | 144 Wh | 85–110 Wh | 48–62 min | 1.4–1.8 h | 7–9 h |
 | 3 | 18 Ah | 216 Wh | 130–165 Wh | 73–92 min | 2.2–2.8 h | 11–14 h |
 | 4 | 20 Ah | 240 Wh | 145–180 Wh | 81–100 min | 2.5–3.0 h | 12–15 h |
 | 5 | 30 Ah | 360 Wh | 215–270 Wh | 2.0–2.5 h | 3.6–4.6 h | 18–22 h |
+| | LiPo | | real: 85% | | | |
+| 6 | 3S 7 Ah | 78 Wh | 66 Wh | 0.62 h | 1.12 h | 33.0 h |
+| 7 | 3S 10 Ah | 111 Wh | 94 Wh | 0.88 h | 1.60 h | 47.2 h |
+| 8 | 3S 15 Ah | 166 Wh | 142 Wh | 1.32 h | 2.40 h | 70.8 h |
+| 9 | 3S 20 Ah | 222 Wh | 189 Wh | 1.76 h | 3.20 h | 94.3 h |
+| 10 | 3S 25 Ah | 278 Wh | 236 Wh | 2.20 h | 4.00 h | 117.9 h |
+| 11 | 3S 30 Ah | 333 Wh | 283 Wh | 2.65 h | 4.80 h | 141.5 h |
+
+
+> SLA: 12 V, 60–75% usable capacity.
+> LiPo: 3S, 11.1 V nominal, 85% usable capacity.
+
+
+
+
 
 
 |   |   |
