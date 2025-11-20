@@ -38,16 +38,14 @@ docs = [
         },
     },
     {
-        "path": "../docs/rangin/electrical.md",
-        "cols": 2,
-        "items": Items(
-            [
-                {
-                    "name": "electrical",
-                    "marquee": f"{rangin_electrical_design}/electrical.png?raw=true",
-                    "url": f"{rangin_electrical_design}/electrical.svg",
-                },
-            ]
+        "path": "../docs/rangin/power.md",
+    },
+    {
+        "path": "../docs/rangin/schematics.md",
+        "items": ImageItems(
+            {
+                f"{rangin_electrical_design}/electrical.png?raw=true": f"{rangin_electrical_design}/electrical.svg",
+            },
         ),
     },
     {

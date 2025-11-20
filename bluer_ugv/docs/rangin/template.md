@@ -4,11 +4,12 @@ title:::
 
 - [specs](./specs.md)
 - [parts](./parts.md)
-- [electrical](./electrical.md)
+- [schematics](./schematics.md)
+- [power](./power.md)
 - [mechanical](./mechanical.md)
+
+items:::
 
 # obsolete
 
 - [flag](./flag.md)
-
-items:::
