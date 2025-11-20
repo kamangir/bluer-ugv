@@ -14,7 +14,7 @@ total: ~ 10 W ~= ~1.8 A @ 5.1 V DC ~= 1 A @ 12 V DC (90% efficiency)
 
 total: 110 W - max current: 15 A @ 12 V DC
 
-| Battery (12 V SLA) | Rated Wh | Usable Wh (real) | Aggressive Driving (~107 W) | Cruising Driving (~59 W) | Mostly Idling (12 W) |
+| Battery (12 V SLA) | Rated Wh | Usable Wh (real) | Aggressive Driving (~107 W == ~9 A) | Cruising Driving (~59 W == ~ 5A) | Mostly Idling (12 W == ~ 1 A) |
 |-|-|-|-|-|-|
 | 7.2 Ah ⭐️ | 86 Wh | 50–65 Wh | 28–37 min | 50–70 min | 4–5.5 h |
 | 12 Ah | 144 Wh | 85–110 Wh | 48–62 min | 1.4–1.8 h | 7–9 h |
