@@ -39,7 +39,9 @@ docs = [
     },
     {
         "path": "../docs/rangin/power.md",
-        "cols": 2,
+    },
+    {
+        "path": "../docs/rangin/schematics.md",
         "items": ImageItems(
             {
                 f"{rangin_electrical_design}/electrical.png?raw=true": f"{rangin_electrical_design}/electrical.svg",

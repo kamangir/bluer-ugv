@@ -4,6 +4,7 @@
 
 - [specs](./specs.md)
 - [parts](./parts.md)
+- [schematics](./schematics.md)
 - [power](./power.md)
 - [mechanical](./mechanical.md)
 
