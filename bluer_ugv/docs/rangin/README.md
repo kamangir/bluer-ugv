@@ -4,7 +4,7 @@
 
 - [specs](./specs.md)
 - [parts](./parts.md)
-- [electrical](./electrical.md)
+- [power](./power.md)
 - [mechanical](./mechanical.md)
 
 # obsolete
