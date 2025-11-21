@@ -4,11 +4,11 @@ an ad robot.
 
 - computer(s):
     - `rangin-front`
-        - build is ongoing 🔥
+        - terraform is ongoing. 
     - `rangin-top`.
-        - build is ongoing 🔥
-- body is ongoing 🔥
-- cover is ongoing 🔥
+- mechanical design is ongoing. 🔥
+- body is pending 🚧
+- cover is pending 🚧
 
 validations:::
 

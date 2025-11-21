@@ -4,10 +4,9 @@ the first one with two motherboards.
 
 - computer(s):
     - `arzhang3-front`
-        - build is pending. 🚧
+        - electrical build is ongoing 🔥
     - `sparrow3-back`.
-        - camera is validated. ✅
-        - ultrasonic is validated. ✅
+- mechanical design is pending. 🚧
 - body is pending. 🚧
 - cover is pending. 🚧
 
