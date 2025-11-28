@@ -1,8 +1,8 @@
 # arzhang: design: power
 
 - uses [swallow computer power](../../swallow/digital/design/computer/power.md).
-    - swallow: 60 W
-    - swallow-head: 10 W
+    - [swallow](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/swallow): 60 W
+    - [swallow-head](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/swallow-head): 10 W
 - total: 70 W ~= 6 A @ 12 V DC
 
 | runtime | energy needed | ideal capacity @ 12 V | LiPo Ah (practical) | SLA Ah (practical) |
