@@ -1,8 +1,6 @@
 from bluer_objects.README.items import ImageItems
-from bluer_sbc.parts.db import db_of_parts
-from bluer_sbc.parts.consts import parts_url_prefix
 
-from bluer_ugv.README.arzhang.consts import arzhang_mechanical_design
+from bluer_ugv.README.arzhang.consts import arzhang_mechanical_design, arzhang_assets2
 
 docs = [
     {
@@ -20,6 +18,7 @@ docs = [
                 f"{arzhang_mechanical_design}/robot.png": f"{arzhang_mechanical_design}/robot.stl",
                 f"{arzhang_mechanical_design}/cage.png": f"{arzhang_mechanical_design}/cage.stl",
                 f"{arzhang_mechanical_design}/measurements.png": "",
+                f"{arzhang_assets2}/20251128_122828.jpg": "",
             }
         ),
     },
