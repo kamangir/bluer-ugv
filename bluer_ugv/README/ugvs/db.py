@@ -1,6 +1,6 @@
 from bluer_ugv.README.swallow.consts import swallow_assets2
 from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
-from bluer_ugv.README.rangin.consts import rangin_assets2
+from bluer_ugv.README.rangin.consts import rangin_mechanical_design
 
 dict_of_ugvs = {
     "swallow": {
@@ -22,11 +22,12 @@ dict_of_ugvs = {
     "arzhang3": {
         "items": [
             f"{arzhang_assets}/20251107_175506.jpg",
+            f"{arzhang_assets2}/20251128_175614.jpg",
         ],
     },
     "rangin": {
         "items": [
-            f"{rangin_assets2}/rangin.png",
+            f"{rangin_mechanical_design}/robot.png",
         ]
     },
 }

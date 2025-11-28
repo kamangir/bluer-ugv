@@ -16,8 +16,8 @@ title:::
     - 2 x 120 mm x 600 mm
     - 260 mm x 120 mm (if one-headed)
 
-items:::
+⏰ mechanical build takes ~4 hours.
 
-![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251128_122828-2.jpg?raw=true)
+items:::
 
 - [v1](./v1.md)

@@ -10,11 +10,18 @@ total: ~ 10 W ~= ~1.8 A @ 5.1 V DC ~= 1 A @ 12 V DC (90% efficiency)
 
 [swallow](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/swallow): 
 - 4 x BTS7960 logic side: ~ 10–20 mA -> 0.1 W (will consider included in ⬆️)
-- 4 x DC motors: 1 A (freely-rotating) - 4 A (stalled) ~= 8 A -> ~ 100 W
+- 4 x DC motors: 1 A (freely-rotating) - 4 A (stalled) per motor == 
+
+
+4A  ~= 8 A -> ~ 100 W
+
+total: 
+- mostly idling: 1 A == 12 W
+- cruising driving: 1 A + 4 x 1 A = 5 A == 60 W
+- aggressive driving: 1 A + 4 x 2 A = 9 A == 108 W
 
 | option | battery | rated Wh | usable Wh | aggressive Driving | cruising driving | mostly idling |
 |-|-|-|-|-|-|-|
-| | | | | ~107 W == ~9 A | ~59 W == ~ 5A | 12 W == ~ 1 A |
 | SLA | | | | | | |
 | 1 | 7.2 Ah ⭐️ | 86 Wh | 50–65 Wh | 28–37 min | 50–70 min | 4–5.5 h |
 | 2 | 12 Ah | 144 Wh | 85–110 Wh | 48–62 min | 1.4–1.8 h | 7–9 h |
@@ -28,7 +35,6 @@ total: ~ 10 W ~= ~1.8 A @ 5.1 V DC ~= 1 A @ 12 V DC (90% efficiency)
 | 9 | 20 Ah | 222 Wh | 189 Wh | 105 min | 3.20 h | 94.3 h ❓ |
 | 10 | 25 Ah | 278 Wh | 236 Wh | 2.20 h | 4.00 h | 117.9 h ❓ |
 | 11 | 30 Ah | 333 Wh | 283 Wh | 2.65 h | 4.80 h | 141.5 h ❓ |
-
 
 > SLA: 12 V, 60–75% usable capacity.
 

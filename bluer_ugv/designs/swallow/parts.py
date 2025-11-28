@@ -7,4 +7,5 @@ dict_of_parts = {
     "connector": "4 pairs",
     "power-adapter": "12V DC, 1 A",
     "DC-gearboxed-motor-12V-120RPM": "4 x, replacement gearboxes",
+    "heavy-duty-pipe-clamp": "4 x 350+ mm",
 }

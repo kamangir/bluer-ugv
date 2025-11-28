@@ -1,12 +1,9 @@
 title:::
 
-the first [Arzhang](../arzhang).
+the first [arzhang](../arzhang).
 
 - computer(s):
-    - `sparrow`
-        - camera is validated. ✅
-        - ultrasonic is validated. ✅
-- cover is complete. ✅
+    - `sparrow`.
 
 validations:::
 

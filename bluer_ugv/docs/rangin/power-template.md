@@ -14,9 +14,7 @@ title:::
 | 4 h | 1200 Wh | 100 Ah | 120 Ah | 120 Ah |
 | 5 h | 1500 Wh | 125 Ah | 150 Ah | 140–150 Ah |
 
-> SLA: 85%
-
-> LiPo: 90%
+> SLA: 85%, LiPo: 90%
 
 
 items:::
