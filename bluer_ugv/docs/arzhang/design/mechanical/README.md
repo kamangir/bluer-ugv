@@ -16,6 +16,8 @@
     - 2 x 120 mm x 600 mm
     - 260 mm x 120 mm (if one-headed)
 
+⏰ mechanical build takes ~4 hours.
+
 |   |   |
 | --- | --- |
 | [![image](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot-with-cover-v2.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot.stl) | [![image](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot.stl) |
