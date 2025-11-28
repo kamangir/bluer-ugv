@@ -18,7 +18,7 @@ docs = [
                 f"{arzhang_mechanical_design}/robot.png": f"{arzhang_mechanical_design}/robot.stl",
                 f"{arzhang_mechanical_design}/cage.png": f"{arzhang_mechanical_design}/cage.stl",
                 f"{arzhang_mechanical_design}/measurements.png": "",
-                f"{arzhang_assets2}/20251128_122828.jpg": "",
+                f"{arzhang_assets2}/20251128_122828-2.jpg": "",
             }
         ),
     },
