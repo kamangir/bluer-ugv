@@ -21,6 +21,7 @@
 | --- | --- |
 | [![image](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot-with-cover-v2.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot.stl) | [![image](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/arzhang/robot.stl) |
 | [![image](https://github.com/kamangir/bluer-designs//blob/main/arzhang/cage.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/arzhang/cage.stl) | [![image](https://github.com/kamangir/bluer-designs//blob/main/arzhang/measurements.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/arzhang/measurements.png?raw=true) |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251128_122828-2.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251128_122828-2.jpg?raw=true) |  |
+
+![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251128_122828-2.jpg?raw=true)
 
 - [v1](./v1.md)
