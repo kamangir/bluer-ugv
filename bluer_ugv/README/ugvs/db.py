@@ -22,7 +22,7 @@ dict_of_ugvs = {
     "arzhang3": {
         "items": [
             f"{arzhang_assets}/20251107_175506.jpg",
-            f"{arzhang_assets}/20251128_175614.jpg",
+            f"{arzhang_assets2}/20251128_175614.jpg",
         ],
     },
     "rangin": {
