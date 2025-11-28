@@ -15,7 +15,7 @@ title:::
     - 260 mm x 600 mm x 0.5 mm
 - fiberglass
     - 2 x 120 mm x 600 mm
-    - 260 mm x 120 mm
+    - 260 mm x 120 mm (if one-headed)
 
 items:::
 
