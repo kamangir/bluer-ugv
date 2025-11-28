@@ -4,10 +4,9 @@ the first one with two motherboards.
 
 - computer(s):
     - `arzhang3-front`
-        - electrical build is ongoing 🔥
+        - electrical validation and terraform is pending. 🚧
     - `sparrow3-back`.
-- mechanical design is pending. 🚧
-- body is pending. 🚧
+- body is ongoing. 🔥
 - cover is pending. 🚧
 
 validations:::
