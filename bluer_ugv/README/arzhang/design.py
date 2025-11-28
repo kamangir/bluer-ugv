@@ -10,6 +10,9 @@ docs = [
         "path": "../docs/arzhang/design/specs.md",
     },
     {
+        "path": "../docs/arzhang/design/power.md",
+    },
+    {
         "path": "../docs/arzhang/design/mechanical",
         "cols": 2,
         "items": ImageItems(
