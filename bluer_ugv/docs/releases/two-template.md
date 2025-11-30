@@ -7,9 +7,7 @@ title:::
 
 @metadata upload .
 
-@pdf convert combine,~compress,~upload .
-
-🔥
+@pdf convert combine,upload .
 
 @assets publish extensions=pdf,push .
 ```
