@@ -8,6 +8,8 @@
         - 12 x 80 mm
         - total: 5060 mm (5.06 m)
     - cut into 4 x (600 mm + 2 x 220 mm + 3 x 80 mm = 1280 mm) ~= 1500 mm
+- metal sheet:
+    - 2 x 220 mm x 120 mm x 2 mm (1, if one-headed)
 - plexiglass
     - 260 mm x 600 mm x 2 mm
 - thin metal sheet
@@ -15,6 +17,8 @@
 - fiberglass
     - 2 x 120 mm x 600 mm
     - 260 mm x 120 mm (if one-headed)
+- velcro
+    - 1720 mm x 20 mm
 
 ⏰ mechanical build takes ~4 hours.
 
