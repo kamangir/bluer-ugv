@@ -7,7 +7,7 @@
 
 @metadata upload .
 
-@pdf convert ~combine,~upload .
+@pdf convert combine,~compress,~upload .
 
 🔥
 
