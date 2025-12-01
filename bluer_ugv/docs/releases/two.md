@@ -33,6 +33,8 @@
 - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/testing.md
 - bluer-sbc/bluer_sbc/docs/adapter-bus.md
 - bluer-sbc/bluer_sbc/docs/regulated-bus.md
+- bluer-sbc/bluer_sbc/docs/battery-bus.md
+- bluer-sbc/bluer_sbc/docs/pwm-generator.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/power.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/naming.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/design/rpi-pinout.md
@@ -54,8 +56,6 @@
 - bluer-ugv/bluer_ugv/docs/arzhang/design/power.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/algo/driving.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/algo/navigation
-- bluer-ugv/bluer_ugv/docs/swallow/digital/algo/navigation/dataset
-- bluer-ugv/bluer_ugv/docs/swallow/digital/algo/navigation/dataset/collection
 - bluer-ugv/bluer_ugv/docs/swallow/digital/algo/navigation/dataset/collection/validation.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/algo/navigation/dataset/collection/one.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/algo/navigation/dataset/review.md
@@ -97,8 +97,9 @@
 - bluer-algo/bluer_algo/docs/bps/validations/live-2.md
 - bluer-algo/bluer_algo/docs/bps/validations/live-2b.md
 - bluer-algo/bluer_algo/docs/bps/validations/live-3.md
-- bluer-algo/bluer_algo/docs/bps/simulations
 - bluer-algo/bluer_algo/docs/bps/simulations/timing.md
+- bluer-algo/bluer_algo/docs/aliases/socket.md
+- bluer-algo/bluer_algo/docs/socket.md
 - bluer-ugv/bluer_ugv/docs/validations
 - bluer-ugv/bluer_ugv/docs/validations/timing-review.md
 - bluer-ugv/bluer_ugv/docs/validations/village-1.md
@@ -110,3 +111,41 @@
 - bluer-ugv/bluer_ugv/docs/validations/village-7.md
 
 ```
+
+
+<details>
+<summary>ignore-list</summary>
+
+```yaml
+- bluer-ai/bluer_ai/docs/aliases
+- bluer-ai/bluer_ai/docs/install
+- bluer-sbc/bluer_sbc/docs/aliases/camera.md
+- bluer-sbc/bluer_sbc/docs/aliases/hardware.md
+- bluer-sbc/bluer_sbc/docs/aliases/rpi.md
+- bluer-sbc/bluer_sbc/docs/aliases/rpi.md
+- bluer-sbc/bluer_sbc/docs/aliases/sbc.md
+- bluer-sbc/bluer_sbc/docs/bryce.md
+- bluer-sbc/bluer_sbc/docs/cheshmak.md
+- bluer-sbc/bluer_sbc/docs/nafha
+- bluer-sbc/bluer_sbc/docs/parts
+- bluer-sbc/bluer_sbc/docs/shelter
+- bluer-sbc/bluer_sbc/docs/ultrasonic-sensor-tester.md
+- bluer-ugv/bluer_ugv/docs/aliases/ugv.md
+- bluer-ugv/bluer_ugv/docs/eagle
+- bluer-ugv/bluer_ugv/docs/fire
+- bluer-ugv/bluer_ugv/docs/rangin
+- bluer-ugv/bluer_ugv/docs/ravin/ravin3
+- bluer-ugv/bluer_ugv/docs/ravin/ravin4
+- bluer-ugv/bluer_ugv/docs/releases
+- bluer-ugv/bluer_ugv/docs/swallow/analog
+- bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/pcb.md
+- bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/schematics.md
+- bluer-ugv/bluer_ugv/docs/swallow/digital/design/steering-over-current-detection
+- bluer-ugv/bluer_ugv/docs/swallow/digital/design/ultrasonic-sensor/shield.md
+- bluer-ugv/bluer_ugv/docs/swallow/digital/design/ultrasonic-sensor/tester.md
+- bluer-ugv/bluer_ugv/docs/UGVs
+
+```
+
+</details>
+
