@@ -130,18 +130,13 @@ pdf:
 
 ignore:
 ```yaml
-- bluer-ai/bluer_ai/docs/aliases
-- bluer-ai/bluer_ai/docs/install
+- bluer-ai
 - bluer-flow
 - bluer-geo
 - bluer-objects
 - bluer-plugin
 - bluer-sandbox
-- bluer-sbc/bluer_sbc/docs/aliases/camera.md
-- bluer-sbc/bluer_sbc/docs/aliases/hardware.md
-- bluer-sbc/bluer_sbc/docs/aliases/rpi.md
-- bluer-sbc/bluer_sbc/docs/aliases/rpi.md
-- bluer-sbc/bluer_sbc/docs/aliases/sbc.md
+- bluer-sbc/bluer_sbc/docs/aliases
 - bluer-sbc/bluer_sbc/docs/bryce.md
 - bluer-sbc/bluer_sbc/docs/cheshmak.md
 - bluer-sbc/bluer_sbc/docs/nafha
