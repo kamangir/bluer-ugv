@@ -2,22 +2,22 @@ title:::
 
 
 ```bash
-@select release-$(@timestamp)
-@metadata edit - .
-
-@metadata upload .
+@select release-two-$(@timestamp)
+cp -v $(python3 -m bluer_ugv locate)/docs/releases/two.yaml ./metadata.yaml
 
 @pdf convert combine,upload .
 
 @assets publish extensions=pdf,push .
 ```
 
-set:::object_name release-2025-11-30-22-48-03-uw8wwl
+set:::object_name env:::BLUER_UGV_RELEASE_2
 
 assets:::get:::object_name/release.pdf
 
+details:::metadata
+pdf:
 metadata:::get:::object_name:::pdf
 
-details:::ignore-list
+ignore:
 metadata:::get:::object_name:::ignore
 details:::

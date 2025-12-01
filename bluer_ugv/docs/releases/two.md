@@ -2,10 +2,8 @@
 
 
 ```bash
-@select release-$(@timestamp)
-@metadata edit - .
-
-@metadata upload .
+@select release-two-$(@timestamp)
+cp -v $(python3 -m bluer_ugv locate)/docs/releases/two.yaml ./metadata.yaml
 
 @pdf convert combine,upload .
 
@@ -13,13 +11,22 @@
 ```
 
 
-[release.pdf](https://github.com/kamangir/assets/blob/main/release-2025-11-30-22-48-03-uw8wwl/release.pdf)
+[release.pdf](https://github.com/kamangir/assets/blob/main/release-two-2025-12-01-12-50-03-1hyrts/release.pdf)
 
+
+<details>
+<summary>metadata</summary>
+
+pdf:
 ```yaml
-- bluer-ugv/bluer_ugv/docs/swallow
+- bluer-ugv
+- bluer-algo
+- bluer-sbc
+- bluer-ai
 - bluer-designs/swallow/terminology.png
 - bluer-sbc/bluer_sbc/docs/swallow
 - bluer-sbc/bluer_sbc/docs/swallow-head
+- bluer-ugv/bluer_ugv/docs/swallow
 - bluer-ugv/bluer_ugv/docs/aliases/swallow.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/design/parts.md
 - bluer-ugv/bluer_ugv/docs/swallow/digital/design/terraform.md
@@ -109,21 +116,27 @@
 - bluer-ugv/bluer_ugv/docs/validations/village-5.md
 - bluer-ugv/bluer_ugv/docs/validations/village-6.md
 - bluer-ugv/bluer_ugv/docs/validations/village-7.md
+- bluer-objects
+- bluer-options
+- bluer-south
+- bluer-sandbox
+- bluer-geo
+- bluer-flow
+- bluer-plugin
+- giza
+- giza/pdf/giza.pdf
 
 ```
 
-
-<details>
-<summary>ignore-list</summary>
-
+ignore:
 ```yaml
-- bluer-ai/bluer_ai/docs/aliases
-- bluer-ai/bluer_ai/docs/install
-- bluer-sbc/bluer_sbc/docs/aliases/camera.md
-- bluer-sbc/bluer_sbc/docs/aliases/hardware.md
-- bluer-sbc/bluer_sbc/docs/aliases/rpi.md
-- bluer-sbc/bluer_sbc/docs/aliases/rpi.md
-- bluer-sbc/bluer_sbc/docs/aliases/sbc.md
+- bluer-ai
+- bluer-flow
+- bluer-geo
+- bluer-objects
+- bluer-plugin
+- bluer-sandbox
+- bluer-sbc/bluer_sbc/docs/aliases
 - bluer-sbc/bluer_sbc/docs/bryce.md
 - bluer-sbc/bluer_sbc/docs/cheshmak.md
 - bluer-sbc/bluer_sbc/docs/nafha

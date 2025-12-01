@@ -46,3 +46,5 @@ def test_bluer_ugv_env():
     assert env.BLUER_UGV_ULTRASONIC_SENSOR_KEEP_LOG in (0, 1)
 
     assert env.BLUER_UGV_ULTRASONIC_SENSOR_LOG in (0, 1)
+
+    assert env.BLUER_UGV_RELEASE_2

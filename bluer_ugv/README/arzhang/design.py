@@ -23,6 +23,9 @@ docs = [
                 f"{arzhang_mechanical_design}/measurements.png": "",
                 f"{arzhang_assets2}/20251128_122828-2.jpg": "",
                 f"{arzhang_assets2}/20251128_155615.jpg": "",
+                f"{arzhang_assets2}/20251130_134005.jpg": "",
+                f"{arzhang_assets2}/20251130_140054.jpg": "",
+                f"{arzhang_assets2}/20251201_132846.jpg": "",
             }
         ),
     },
