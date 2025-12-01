@@ -19,6 +19,8 @@ title:::
     - 260 mm x 120 mm (if one-headed)
 - velcro
     - 1720 mm x 20 mm
+- foam
+    - 2 x 260 mm x 120 mm x 1.5 mm (1, if one-headed)
 
 ⏰ mechanical build takes ~4 hours.
 
