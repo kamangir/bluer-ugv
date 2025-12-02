@@ -1,4 +1,4 @@
-from bluer_objects.README.items import ImageItems
+from bluer_objects.README.items import ImageItems, Items
 
 from bluer_ugv.README.ugvs.db import dict_of_ugvs
 from bluer_ugv.README.validations.db import dict_of_validations
@@ -31,6 +31,16 @@ docs = [
 ] + [
     {
         "path": f"../docs/UGVs",
+        "items": Items(
+            [
+                {
+                    "name": ugv_name,
+                    "marquee": info["items"][-1],
+                    "url": f"./{ugv_name}.md",
+                }
+                for ugv_name, info in dict_of_ugvs.items()
+            ]
+        ),
         "macros": {
             "list": [
                 f"- [{ugv_name}](./{ugv_name}.md)"
