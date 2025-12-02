@@ -2,6 +2,7 @@ title:::
 
 the first one with two computers.
 
+- class: [arzhang](../arzhang)
 - computer(s):
     - `arzhang3-front`
         - electrical validation and terraform is ongoing. 🔥
