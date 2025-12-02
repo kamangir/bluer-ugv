@@ -24,7 +24,7 @@ title:::
 @swallow env set full_keyboard 1
 @init; @select; @session start
 ```
-now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then press `i`. an dataset should be uploaded that contains a few frames from the camera.
+now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then press `zi`. an dataset should be uploaded that contains a few frames from the camera.
 
 assets:::bluer-ugv/terraform-validation.png
 
