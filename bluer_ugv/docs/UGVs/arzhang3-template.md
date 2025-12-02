@@ -1,13 +1,14 @@
 title:::
 
-the first one with two motherboards.
+the first one with two computers.
 
+- class: [arzhang](../arzhang)
 - computer(s):
     - `arzhang3-front`
-        - electrical validation and terraform is pending. 🚧
+        - electrical validation and terraform is ongoing. 🔥
     - `sparrow3-back`.
-- body is ongoing. 🔥
-- cover is pending. 🚧
+- electrical build is ongoing. 🔥
+- cover is ongoing. 🔥
 
 validations:::
 

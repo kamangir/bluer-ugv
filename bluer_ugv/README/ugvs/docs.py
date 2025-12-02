@@ -1,4 +1,4 @@
-from bluer_objects.README.items import ImageItems
+from bluer_objects.README.items import ImageItems, Items
 
 from bluer_ugv.README.ugvs.db import dict_of_ugvs
 from bluer_ugv.README.validations.db import dict_of_validations
@@ -6,6 +6,7 @@ from bluer_ugv.README.validations.db import dict_of_validations
 docs = [
     {
         "path": f"../docs/UGVs/{ugv_name}.md",
+        "cols": info.get("cols", 3),
         "items": ImageItems({item: "" for item in info.get("items", [])}),
         "macros": {
             "validations:::": [
@@ -27,4 +28,31 @@ docs = [
         },
     }
     for ugv_name, info in dict_of_ugvs.items()
+] + [
+    {
+        "path": "../docs/UGVs",
+        "items": Items(
+            [
+                {
+                    "name": ugv_name,
+                    "marquee": (
+                        lambda url: (
+                            url if url.endswith("?raw=true") else f"{url}/?raw=true"
+                        )
+                    )(info["items"][-1]),
+                    "url": f"./{ugv_name}.md",
+                }
+                for ugv_name, info in dict_of_ugvs.items()
+            ]
+        ),
+        "macros": {
+            "list": [
+                f"- [{ugv_name}](./{ugv_name}.md)"
+                for ugv_name in sorted(
+                    dict_of_ugvs.keys(),
+                    key=lambda ugv_name: dict_of_ugvs[ugv_name]["order"],
+                )
+            ],
+        },
+    }
 ]
