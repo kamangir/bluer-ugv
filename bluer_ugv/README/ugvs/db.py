@@ -20,7 +20,6 @@ dict_of_ugvs = {
         ],
     },
     "arzhang3": {
-        "cols": 2,
         "items": sorted(
             [
                 f"{arzhang_assets}/20251107_175506.jpg",
