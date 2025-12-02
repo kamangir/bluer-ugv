@@ -6,6 +6,7 @@ from bluer_ugv.README.validations.db import dict_of_validations
 docs = [
     {
         "path": f"../docs/UGVs/{ugv_name}.md",
+        "cols": info.get("cols", 3),
         "items": ImageItems({item: "" for item in info.get("items", [])}),
         "macros": {
             "validations:::": [
