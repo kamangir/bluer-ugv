@@ -21,12 +21,18 @@ dict_of_ugvs = {
     },
     "arzhang3": {
         "cols": 2,
-        "items": [
-            f"{arzhang_assets}/20251107_175506.jpg",
-            f"{arzhang_assets2}/20251128_175614.jpg",
-            f"{arzhang_assets2}/20251202_100317.jpg",
-            f"{arzhang_assets2}/20251202_101031.jpg",
-        ],
+        "items": sorted(
+            [
+                f"{arzhang_assets}/20251107_175506.jpg",
+                f"{arzhang_assets2}/20251128_175614.jpg",
+                f"{arzhang_assets2}/20251202_100317.jpg",
+                f"{arzhang_assets2}/20251202_101031.jpg",
+                f"{arzhang_assets2}/20251128_113314.jpg",
+                f"{arzhang_assets2}/20251128_151952.jpg",
+                f"{arzhang_assets2}/20251128_155616.jpg",
+                f"{arzhang_assets2}/20251130_140103.jpg",
+            ]
+        ),
     },
     "rangin": {
         "items": [

@@ -1,6 +1,6 @@
 title:::
 
-the first one with two motherboards.
+the first one with two computers.
 
 - computer(s):
     - `arzhang3-front`
