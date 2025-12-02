@@ -1,7 +1,3 @@
-- [swallow](./swallow.md)
-- [arzhang](./arzhang.md)
-- [arzhang2](./arzhang2.md)
-- [arzhang3](./arzhang3.md)
-- [rangin](./rangin.md)
+title:::
 
-xxx
+list:::

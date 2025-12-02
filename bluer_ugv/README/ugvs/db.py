@@ -4,22 +4,26 @@ from bluer_ugv.README.rangin.consts import rangin_mechanical_design
 
 dict_of_ugvs = {
     "swallow": {
+        "order": 1,
         "items": [
             f"{swallow_assets2}/20250701_2206342_1.gif",
             f"{swallow_assets2}/20250913_203635~2_1.gif",
-        ]
+        ],
     },
     "arzhang": {
+        "order": 2,
         "items": [
             f"{arzhang_assets2}/20251106_111750.jpg",
         ],
     },
     "arzhang2": {
+        "order": 3,
         "items": [
             f"{arzhang_assets2}/20251106_111750.jpg",
         ],
     },
     "arzhang3": {
+        "order": 4,
         "items": sorted(
             [
                 f"{arzhang_assets}/20251107_175506.jpg",
@@ -34,8 +38,9 @@ dict_of_ugvs = {
         ),
     },
     "rangin": {
+        "order": 5,
         "items": [
             f"{rangin_mechanical_design}/robot.png",
-        ]
+        ],
     },
 }

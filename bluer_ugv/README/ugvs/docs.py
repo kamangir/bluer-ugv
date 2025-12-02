@@ -28,4 +28,17 @@ docs = [
         },
     }
     for ugv_name, info in dict_of_ugvs.items()
+] + [
+    {
+        "path": f"../docs/UGVs",
+        "macros": {
+            "list": [
+                f"[{ugv_name}](./{ugv_name}.md)"
+                for ugv_name in sorted(
+                    dict_of_ugvs.keys(),
+                    key=lambda ugv_name: dict_of_ugvs[ugv_name]["order"],
+                )
+            ],
+        },
+    }
 ]
