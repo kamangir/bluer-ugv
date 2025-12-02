@@ -16,7 +16,8 @@ class ClassicalScreen:
 
     def cleanup(self):
         logger.info(f"{self.__class__.__name__}.cleanup")
-        self.video_player.stop()
+        if self.video_player is not None:
+            self.video_player.stop()
 
     def initialize(self) -> bool:
         if self.video_player is None:

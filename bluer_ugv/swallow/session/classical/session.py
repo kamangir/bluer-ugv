@@ -138,7 +138,7 @@ class ClassicalSession:
 
         self.timing.calculate()
         loop_frequency = round(
-            1 / self.timing.stats["session.update"]["average"],
+            1 / self.timing.stats["session.update"].get("average", -1),
             2,
         )
         self.timing.log()
