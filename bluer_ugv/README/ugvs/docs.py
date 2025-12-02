@@ -35,7 +35,11 @@ docs = [
             [
                 {
                     "name": ugv_name,
-                    "marquee": info["items"][-1],
+                    "marquee": (
+                        lambda url: (
+                            url if url.endswith("?raw=true") else f"{url}/?raw=true"
+                        )
+                    )(info["items"][-1]),
                     "url": f"./{ugv_name}.md",
                 }
                 for ugv_name, info in dict_of_ugvs.items()
