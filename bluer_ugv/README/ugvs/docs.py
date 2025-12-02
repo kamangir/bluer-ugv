@@ -30,7 +30,7 @@ docs = [
     for ugv_name, info in dict_of_ugvs.items()
 ] + [
     {
-        "path": f"../docs/UGVs",
+        "path": "../docs/UGVs",
         "items": Items(
             [
                 {
