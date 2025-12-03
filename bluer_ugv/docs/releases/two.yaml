@@ -6,8 +6,7 @@ ignore:
   - bluer-plugin
   - bluer-sandbox
   - bluer-sbc/bluer_sbc/docs/aliases
-  - bluer-sbc/bluer_sbc/docs/bryce.md
-  - bluer-sbc/bluer_sbc/docs/cheshmak.md
+  - bluer-sbc/bluer_sbc/docs/cheshmak
   - bluer-sbc/bluer_sbc/docs/nafha
   - bluer-sbc/bluer_sbc/docs/parts
   - bluer-sbc/bluer_sbc/docs/shelter
