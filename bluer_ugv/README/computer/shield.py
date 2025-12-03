@@ -33,17 +33,29 @@ v2_items = ImageItems(
     }
 )
 
+testing_items = ImageItems(
+    {
+        f"{swallow_assets2}/20251113_205142.jpg": "",
+        f"{swallow_assets2}/20251113_210730.jpg": "",
+        f"{swallow_assets2}/20251113_210706.jpg": "",
+    },
+)
+
 docs = [
     {
-        "path": "../docs/swallow/digital/design/computer/pcb.md",
+        "path": "../docs/swallow/digital/design/computer/shield",
         "items": items,
     },
     {
-        "path": "../docs/swallow/digital/design/computer/v1.md",
+        "path": "../docs/swallow/digital/design/computer/shield/v1.md",
         "items": v1_items,
     },
     {
-        "path": "../docs/swallow/digital/design/computer/v2.md",
+        "path": "../docs/swallow/digital/design/computer/shield/v2.md",
         "items": v2_items,
+    },
+    {
+        "path": "../docs/swallow/digital/design/computer/shield/testing.md",
+        "items": testing_items,
     },
 ]

@@ -20,7 +20,8 @@ ignore:
   - bluer-ugv/bluer_ugv/docs/ravin/ravin4
   - bluer-ugv/bluer_ugv/docs/releases
   - bluer-ugv/bluer_ugv/docs/swallow/analog
-  - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/pcb.md
+  - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/pcb
+  - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/pcb/testing.md
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/schematics.md
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/steering-over-current-detection
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/ultrasonic-sensor/shield.md

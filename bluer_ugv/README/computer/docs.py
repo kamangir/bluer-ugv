@@ -1,7 +1,7 @@
 from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.swallow.consts import swallow_assets2
-from bluer_ugv.README.computer import box, pcb, power, schematics, testing
+from bluer_ugv.README.computer import box, power, schematics, shield, testing
 
 
 docs = (
@@ -22,7 +22,7 @@ docs = (
         },
     ]
     + box.docs
-    + pcb.docs
+    + shield.docs
     + power.docs
     + schematics.docs
     + testing.docs

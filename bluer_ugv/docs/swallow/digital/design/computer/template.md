@@ -3,7 +3,7 @@ title:::
 
 - [parts](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow)
 - [schematics](./schematics.md)
-- [pcb](./pcb.md)
+- [pcb](./pcb)
 - [box](./box.md)
 - [testing](./testing.md)
 - [power](./power.md)
