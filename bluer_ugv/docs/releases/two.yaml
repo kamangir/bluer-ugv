@@ -20,7 +20,7 @@ ignore:
   - bluer-ugv/bluer_ugv/docs/ravin/ravin4
   - bluer-ugv/bluer_ugv/docs/releases
   - bluer-ugv/bluer_ugv/docs/swallow/analog
-  - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/pcb.md
+  - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/shield
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/schematics.md
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/steering-over-current-detection
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/ultrasonic-sensor/shield.md
@@ -52,6 +52,7 @@ pdf:
   - bluer-designs/swallow/kicad/swallow/exports/swallow-3d.png
   - bluer-designs/swallow/kicad/swallow/exports/swallow-3d-back.png
   - bluer-designs/swallow/kicad/swallow/exports/swallow-pcb.png
+  - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/shield/testing.md
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/box.md
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/testing.md
   - bluer-sbc/bluer_sbc/docs/adapter-bus.md

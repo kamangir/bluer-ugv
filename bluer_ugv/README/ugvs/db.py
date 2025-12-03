@@ -34,6 +34,7 @@ dict_of_ugvs = {
                 f"{arzhang_assets2}/20251128_151952.jpg",
                 f"{arzhang_assets2}/20251128_155616.jpg",
                 f"{arzhang_assets2}/20251130_140103.jpg",
+                f"{arzhang_assets2}/20251203_112602.jpg",
             ]
         ),
     },

@@ -4,10 +4,12 @@ from bluer_ugv.README.swallow.consts import swallow_assets2
 
 items = ImageItems(
     {
-        f"{swallow_assets2}/20251113_205142.jpg": "",
-        f"{swallow_assets2}/20251113_210730.jpg": "",
-        f"{swallow_assets2}/20251113_210706.jpg": "",
-    },
+        f"{swallow_assets2}/20251116_145939.jpg": "",
+        f"{swallow_assets2}/20251116_150940.jpg": "",
+        f"{swallow_assets2}/20251116_151611.jpg": "",
+        f"{swallow_assets2}/20251116_152801.jpg": "",
+        f"{swallow_assets2}/20251116_152832_1.gif": "",
+    }
 )
 
 docs = [
