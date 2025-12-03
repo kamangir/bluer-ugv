@@ -69,7 +69,12 @@ docs = (
         },
         {
             "path": "../docs/swallow/digital/design/testing.md",
-            "items": [],
+            "items": ImageItems(
+                {
+                    f"{swallow_assets2}/20251203_112604.jpg": "",
+                    f"{swallow_assets2}/20251201_172535~2_1.gif": "",
+                }
+            ),
         },
     ]
     + mechanical.docs
