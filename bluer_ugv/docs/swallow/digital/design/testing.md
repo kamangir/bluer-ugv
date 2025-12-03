@@ -1,5 +1,5 @@
 # swallow: digital: design: testing
 
-- [test the computers](./computer/testing.md).
+- [test the computer(s)](./computer/testing.md).
 - 🔥
 
