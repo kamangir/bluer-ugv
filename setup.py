@@ -21,6 +21,7 @@ setup(
         f"{NAME}.README.rangin",
         f"{NAME}.README.ravin",
         f"{NAME}.README.computer",
+        f"{NAME}.README.computer.shield",
         f"{NAME}.README.swallow",
         f"{NAME}.README.swallow.digital",
         f"{NAME}.README.swallow.digital.algo",
