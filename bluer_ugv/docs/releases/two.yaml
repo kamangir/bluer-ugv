@@ -56,7 +56,9 @@ pdf:
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/testing.md
   - bluer-sbc/bluer_sbc/docs/adapter-bus.md
   - bluer-sbc/bluer_sbc/docs/regulated-bus.md
-  - bluer-sbc/bluer_sbc/docs/battery-bus.md
+  - bluer-sbc/bluer_sbc/docs/battery_bus
+  - bluer-sbc/bluer_sbc/docs/battery_bus/parts
+  - bluer-sbc/bluer_sbc/docs/battery_bus/body
   - bluer-sbc/bluer_sbc/docs/pwm-generator.md
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/power.md
   - bluer-ugv/bluer_ugv/docs/swallow/digital/design/computer/naming.md
@@ -80,6 +82,11 @@ pdf:
   - bluer-designs/arzhang/robot-with-cover.png
   - bluer-designs/arzhang/measurements.png
   - bluer-ugv/bluer_ugv/docs/arzhang/design/power.md
+
+  # anchor
+  - bluer-sbc/bluer_sbc/docs/anchor
+  - bluer-sbc/bluer_sbc/docs/anchor/parts
+  - bluer-sbc/bluer_sbc/docs/anchor/body
 
   # algo
   - bluer-ugv/bluer_ugv/docs/swallow/digital/algo/driving.md
