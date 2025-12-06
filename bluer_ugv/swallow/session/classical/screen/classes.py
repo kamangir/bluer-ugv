@@ -1,5 +1,7 @@
 from bluer_options.host.functions import is_headless
 
+from bluer_sbc.env import BLUER_SBC_SWALLOW_HAS_SCREEN
+
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.screen.video.player import VideoPlayer
 from bluer_ugv.swallow.session.classical.screen.video.playlist import PlayList
@@ -8,7 +10,11 @@ from bluer_ugv.logger import logger
 
 class ClassicalScreen:
     def __init__(self):
-        self.video_player = None if is_headless() else VideoPlayer()
+        self.video_player = (
+            None
+            if (is_headless() or BLUER_SBC_SWALLOW_HAS_SCREEN == 0)
+            else VideoPlayer()
+        )
 
         self.playlist = PlayList(env.RANGIN_VIDEO_LIST_OBJECT)
 
