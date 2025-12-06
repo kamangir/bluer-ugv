@@ -1,7 +1,8 @@
 from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.swallow.consts import swallow_assets2
-from bluer_ugv.README.computer import box, power, schematics, shield, testing
+from bluer_ugv.README.computer import box, power, schematics, testing
+from bluer_ugv.README.computer.shield import docs as shield
 
 
 docs = (
