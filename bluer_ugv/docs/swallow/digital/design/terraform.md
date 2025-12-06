@@ -4,8 +4,7 @@
 
 2. run,
 ```bash
-@swallow env cp yolo
-@swallow env set full_keyboard 1
-@swallow env set bps 1
-@init; @select; @session start
+@swallow env cp swallow[-head]
+
+@select; @session start
 ```

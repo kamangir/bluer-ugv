@@ -15,7 +15,7 @@ def help_cp(
             "cp",
             "[<env-name>]",
         ],
-        "cp swallow swallow-raspbian-<env-name>.env.",
+        "cp swallow-raspbian-<env-name>.env.",
         mono=mono,
     )
 
@@ -44,13 +44,15 @@ def help_set(
             "@swallow",
             "env",
             "set",
-            "bps | full_keyboard | steering",
+            "bps | camera | full_keyboard | screen | steering",
             "0 | 1",
         ],
         "set env.",
         {
             f"bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: {env.BLUER_SBC_SWALLOW_HAS_BPS})": "",
+            f"camera: BLUER_SBC_SWALLOW_HAS_CAMERA (currently: {env.BLUER_SBC_SWALLOW_HAS_CAMERA})": "",
             f"full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: {env.BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD})": "",
+            f" screen: BLUER_SBC_ENABLE_SCREEN (currently: {env.BLUER_SBC_ENABLE_SCREEN})"
             f"steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: {env.BLUER_SBC_SWALLOW_HAS_STEERING})": "",
         },
         mono=mono,
