@@ -6,4 +6,4 @@ class ClassicalVoidCamera(ClassicalCamera):
         return True
 
     def cleanup(self):
-        True
+        pass
