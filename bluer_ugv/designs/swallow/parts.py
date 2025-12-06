@@ -10,4 +10,6 @@ dict_of_parts = {
     "li-ion-charger": "",
     "DC-gearboxed-motor-12V-120RPM": "4 x, replacement gearboxes",
     "heavy-duty-pipe-clamp": "4 x 350+ mm",
+    "ethernet-cable": "one per computer, if more than one computer",
+    "5v-unmanaged-10-100-switch": "if more than two computers",
 }
