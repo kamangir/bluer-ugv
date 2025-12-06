@@ -6,5 +6,5 @@ title:::
 ```bash
 @swallow env cp swallow[-head]
 
-@init; @select; @session start
+@select; @session start
 ```
