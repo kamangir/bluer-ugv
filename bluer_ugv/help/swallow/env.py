@@ -50,6 +50,7 @@ def help_set(
         "set env.",
         {
             f"bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: {env.BLUER_SBC_SWALLOW_HAS_BPS})": "",
+            f"camera: BLUER_SBC_SWALLOW_HAS_CAMERA (currently: {env.BLUER_SBC_SWALLOW_HAS_CAMERA})": "",
             f"full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: {env.BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD})": "",
             f"steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: {env.BLUER_SBC_SWALLOW_HAS_STEERING})": "",
         },

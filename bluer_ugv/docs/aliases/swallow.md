@@ -65,6 +65,7 @@
 	0 | 1
  . set env.
    bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: 0)
+   camera: BLUER_SBC_SWALLOW_HAS_CAMERA (currently: 1)
    full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: 0)
    steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: 1)
 ```
