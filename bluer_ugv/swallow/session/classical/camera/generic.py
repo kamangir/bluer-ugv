@@ -2,12 +2,10 @@ from typing import Any
 
 from bluer_algo.socket.connection import SocketConnection, DEV_HOST
 from bluer_sbc.imager.camera import instance as camera
-from bluer_sbc.env import BLUER_SBC_ENV
 
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
-from bluer_ugv.logger import logger
 
 
 class ClassicalCamera:
@@ -18,7 +16,6 @@ class ClassicalCamera:
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-        logger.info(f"sbc.env: {BLUER_SBC_ENV}")
 
         self.keyboard = keyboard
         self.leds = leds

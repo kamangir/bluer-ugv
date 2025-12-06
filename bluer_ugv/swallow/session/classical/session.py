@@ -4,12 +4,13 @@ from bluer_options import string
 from bluer_options.timing.classes import Timing
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
-from bluer_sbc.env import BLUER_SBC_ENV, BLUER_SBC_SWALLOW_HAS_STEERING
+from bluer_sbc.env import BLUER_SBC_CAMERA_KIND, BLUER_SBC_SWALLOW_HAS_STEERING
 
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
     ClassicalNavigationCamera,
     ClassicalTrackingCamera,
+    ClassicalVoidCamera,
     ClassicalYoloCamera,
 )
 from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
@@ -94,19 +95,28 @@ class ClassicalSession:
         )
 
         camera_class = (
-            ClassicalYoloCamera
-            if BLUER_SBC_ENV == "yolo"
+            ClassicalVoidCamera
+            if BLUER_SBC_CAMERA_KIND == "void"
             else (
-                ClassicalTrackingCamera
-                if BLUER_SBC_ENV == "tracking"
+                ClassicalYoloCamera
+                if BLUER_SBC_CAMERA_KIND == "yolo"
                 else (
-                    ClassicalNavigationCamera
-                    if BLUER_SBC_ENV == "navigation"
-                    else ClassicalCamera
+                    ClassicalTrackingCamera
+                    if BLUER_SBC_CAMERA_KIND == "tracking"
+                    else (
+                        ClassicalNavigationCamera
+                        if BLUER_SBC_CAMERA_KIND == "navigation"
+                        else ClassicalCamera
+                    )
                 )
             )
         )
-        logger.info(f"camera: {camera_class.__name__}")
+        logger.info(
+            "camera: {} [{}]".format(
+                camera_class.__name__,
+                BLUER_SBC_CAMERA_KIND,
+            )
+        )
         self.camera = camera_class(
             keyboard=self.keyboard,
             leds=self.leds,
