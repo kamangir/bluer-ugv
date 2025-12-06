@@ -19,6 +19,9 @@ docs = (
             "path": "../docs/swallow/digital/design/computer/naming.md",
         },
         {
+            "path": "../docs/swallow/digital/design/computer/terraform.md",
+        },
+        {
             "path": "../docs/swallow/digital/design/computer/connectors-v1.md",
         },
     ]
