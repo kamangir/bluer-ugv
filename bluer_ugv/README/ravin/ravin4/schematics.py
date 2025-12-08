@@ -4,7 +4,7 @@ from bluer_ugv.README.ravin.ravin4.consts import designs
 
 docs = [
     {
-        "path": "../docs/ravin/ravin4/parts.md",
+        "path": "../docs/ravin/ravin4/schematics.md",
         "items": ImageItems(
             {
                 f"{designs}/wiring.png": f"{designs}/wiring.svg",
