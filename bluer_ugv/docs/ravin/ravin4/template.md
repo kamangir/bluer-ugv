@@ -4,6 +4,8 @@ description:::
 
 - [parts](./parts.md)
 - [schematics](./schematics.md)
-- [build](./parts.md)
+- [build](./build.md)
+- [body](./body.md)
+- [packaging](./packaging.md)
 
 items:::
