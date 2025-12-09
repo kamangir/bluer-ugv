@@ -6,7 +6,7 @@ docs = (
         {
             "items": items,
             "path": "../docs/swallow",
-        }
+        },
     ]
     + analog.docs
     + digital.docs
