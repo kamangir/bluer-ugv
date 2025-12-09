@@ -16,5 +16,5 @@ or,
 ssh pi@<rpi-name>.local
 ```
 - use the [keyboard](./design/operation.md) to operate the ugv, including shutting it down. 
-- to confirm that a computer is shut down either check the log (see ⬆️) or watch the activity led of the computer and validate ten seconds of no green flashes.
-- to charge the ugv connect the adapter to the ugv through the [adapter bus](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/battery_bus). stop charging when the intake current is less than 100 mA.
+- to confirm that a computer is shut down, either check the log (see ⬆️) or watch the activity led of the computer and validate ten seconds of no green flashes.
+- to charge the ugv, connect the adapter to the ugv, through the [adapter bus](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/battery_bus). stop charging when the intake current is less than 100 mA or the led 
