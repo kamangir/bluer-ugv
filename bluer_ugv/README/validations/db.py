@@ -192,7 +192,10 @@ dict_of_validations = {
                             ),
                             "marquee": f"{assets}/{object_name}/{object_name}.gif",
                         }
-                        for object_name in storage.List()
+                        for object_name in storage.ls_objects(
+                            prefix="2025-12-09",
+                            where="cloud",
+                        )
                     ]
                 ),
                 cols=3,
