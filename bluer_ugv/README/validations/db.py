@@ -3,7 +3,7 @@ from bluer_objects.README.consts import assets, assets_url
 from bluer_objects import markdown
 from bluer_objects import env
 
-from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
 
 dict_of_validations = {
     "village-1": {
@@ -171,7 +171,7 @@ dict_of_validations = {
         "ugv_name": [
             "arzhang:ugv",
         ],
-        "marquee": f"{arzhang_assets2}/20251209_143603.jpg",
+        "marquee": f"{arzhang_assets}/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true",
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20251209_143603.jpg": "",

@@ -40,7 +40,7 @@ objects:::
 
 ## debug object
 
-details:::finding debug objects
+details:::code
 ```bash
 @ls cloud,objects --prefix swallow-debug-2025-12-09
 ```
