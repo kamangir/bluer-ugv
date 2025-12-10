@@ -195,7 +195,7 @@ dict_of_validations = {
                         for object_name in storage.ls_objects(
                             prefix="2025-12-09",
                             where="cloud",
-                        )
+                        )[1]
                     ]
                 ),
                 cols=3,
