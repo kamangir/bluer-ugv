@@ -2,9 +2,9 @@ from bluer_objects.README.items import ImageItems, Items
 from bluer_objects.README.consts import assets, assets_url
 from bluer_objects import markdown
 from bluer_objects import env
-from bluer_objects import storage
 
 from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.validations import city_1
 
 dict_of_validations = {
     "village-1": {
@@ -180,27 +180,7 @@ dict_of_validations = {
             }
         ),
         "macros": {
-            "objects:::": markdown.generate_table(
-                Items(
-                    [
-                        {
-                            "name": object_name,
-                            "url": "https://{}.{}/{}".format(
-                                env.S3_PUBLIC_STORAGE_BUCKET,
-                                env.S3_STORAGE_ENDPOINT_URL.split("https://", 1)[1],
-                                f"{object_name}.tar.gz",
-                            ),
-                            "marquee": f"{assets}/{object_name}/{object_name}.gif",
-                        }
-                        for object_name in storage.ls_objects(
-                            prefix="2025-12-09",
-                            where="cloud",
-                        )[1]
-                    ]
-                ),
-                cols=3,
-                log=False,
-            ),
+            "objects:::": city_1.objects(),
         },
     },
     "template": {
