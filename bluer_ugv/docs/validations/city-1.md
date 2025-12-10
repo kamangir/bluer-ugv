@@ -6,7 +6,7 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
 
 <details>
-<summary>finding objects</summary>
+<summary>code</summary>
 
 ```bash
 @ls cloud,objects --prefix 2025-12-09
@@ -19,12 +19,29 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 🌀  #   3 - 2025-12-09-10-51-24-2dfnau
 🌀  #   4 - 2025-12-09-14-36-28-3o4zvv
 🌀  #   5 - 2025-12-09-16-42-23-h1awiz
-🌀  #   6 - 2025-12-09-18-52-03-7jo931```
+🌀  #   6 - 2025-12-09-18-52-03-7jo931
+```
+
+```bash
+runme() {
+    local object_name
+    for object_name in $(@ls \
+        cloud,objects \
+        --log 0 \
+        --delim space \
+        --prefix 2025-12-09); do
+        @select $object_name
+        @download policy=doesnt_exist        
+    done
+}
+
+runme
+```
 
 </details>
 
 
-🔥
+objects:::
 
 ## debug object
 
@@ -40,8 +57,28 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 🌀  #   0 - swallow-debug-2025-12-09-15-43-31-o6gh5k
 ```
 
+```bash
+runme() {
+    local object_name=$(@list resize $(@ls cloud,objects \
+    --prefix swallow-debug-2025-12-09 \
+    --log 0 \
+    --delim ,) \
+    1 \
+    --delim space)
+    @select 
+    @assets publish \
+        download,extensions=gif,push \
+        $object_name
+}
+
+runme
+```
+
 </details>
 
+
+
+![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true)
 
 
 ## observations
