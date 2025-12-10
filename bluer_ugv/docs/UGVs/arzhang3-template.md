@@ -6,7 +6,6 @@ the first one with two computers.
 - computer(s):
     - `arzhang3-front`
     - `sparrow3-back`.
-- cover is ongoing. 🔥
 
 validations:::
 

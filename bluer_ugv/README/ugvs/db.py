@@ -13,13 +13,13 @@ dict_of_ugvs = {
     "arzhang": {
         "order": 2,
         "items": [
-            f"{arzhang_assets2}/20251106_111750.jpg",
+            f"{arzhang_assets2}/20251209_111322.jpg",
         ],
     },
     "arzhang2": {
         "order": 3,
         "items": [
-            f"{arzhang_assets2}/20251106_111750.jpg",
+            f"{arzhang_assets2}/20251210_154513.jpg",
         ],
     },
     "arzhang3": {
@@ -35,6 +35,7 @@ dict_of_ugvs = {
                 f"{arzhang_assets2}/20251128_155616.jpg",
                 f"{arzhang_assets2}/20251130_140103.jpg",
                 f"{arzhang_assets2}/20251203_112602.jpg",
+                f"{arzhang_assets2}/20251210_154654.jpg",
             ]
         ),
     },
