@@ -40,7 +40,8 @@ runme() {
             @upload public,zip
 
         [[ "$publish" == 1 ]] &&
-            @assets publish extensions=png,push
+            @assets publish extensions=png,push . \
+            --prefix ultrasonic
     done
 }
 
