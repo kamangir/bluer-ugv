@@ -21,18 +21,30 @@ details:::code
 
 ```bash
 runme() {
+    local options=$1
+    local publish=$(@option::int "$options" publish 1)
+    local upload=$(@option::int "$options" upload 1)
+
     local object_name
     for object_name in $(@ls \
         cloud,objects \
         --log 0 \
         --delim space \
         --prefix 2025-12-09); do
+
         @select $object_name
-        @download policy=doesnt_exist        
+
+        @download policy=doesnt_exist    
+
+        [[ "$upload" == 1 ]] &&
+            @upload public,zip
+
+        [[ "$publish" == 1 ]] &&
+            @assets publish extensions=gif,push
     done
 }
 
-runme
+runme ~upload
 ```
 
 ```bash

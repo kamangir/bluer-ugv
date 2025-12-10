@@ -180,7 +180,7 @@ dict_of_validations = {
             }
         ),
         "macros": {
-            "debug_objects": markdown.generate_table(
+            "objects": markdown.generate_table(
                 Items(
                     [
                         {

@@ -2,17 +2,23 @@
 
 UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
-## objects
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
 
 
 <details>
 <summary>code</summary>
 
 ```bash
-@ls cloud,objects --prefix 2025-12-09
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
 ```
 ```text
-🌀   7 objects(s)
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
 🌀  #   0 - 2025-12-09-08-16-53-a4rfg2
 🌀  #   1 - 2025-12-09-08-52-54-jre3xs
 🌀  #   2 - 2025-12-09-09-09-43-ljsjbb
@@ -24,18 +30,32 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
 ```bash
 runme() {
+    local options=$1
+    local publish=$(@option::int "$options" publish 1)
+    local upload=$(@option::int "$options" upload 1)
+
     local object_name
     for object_name in $(@ls \
-        cloud,objects \
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
         --log 0 \
         --delim space \
         --prefix 2025-12-09); do
+
         @select $object_name
-        @download policy=doesnt_exist        
+
+        @download policy=doesnt_exist    
+
+        [[ "$upload" == 1 ]] &&
+            @upload public,zip
+
+        [[ "$publish" == 1 ]] &&
+            @assets publish extensions=gif,push
     done
 }
 
-runme
+runme ~upload
 ```
 
 ```bash
@@ -48,7 +68,9 @@ runme
 </details>
 
 
-objects:::
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
 
 ## debug object
 
@@ -57,16 +79,22 @@ objects:::
 <summary>code</summary>
 
 ```bash
-@ls cloud,objects --prefix swallow-debug-2025-12-09
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
 ```
 ```text
-🌀   1 objects(s)
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
 🌀  #   0 - swallow-debug-2025-12-09-15-43-31-o6gh5k
 ```
 
 ```bash
 runme() {
-    local object_name=$(@list resize $(@ls cloud,objects \
+|   |   |
+| --- | --- |
+| [`True`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/True/True.gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/True.tar.gz)  | [`['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz) [![image](https://github.com/kamangir/assets/raw/main/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931']/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].gif)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/['2025-12-09-08-16-53-a4rfg2', '2025-12-09-08-52-54-jre3xs', '2025-12-09-09-09-43-ljsjbb', '2025-12-09-10-51-24-2dfnau', '2025-12-09-14-36-28-3o4zvv', '2025-12-09-16-42-23-h1awiz', '2025-12-09-18-52-03-7jo931'].tar.gz)  |
     --prefix swallow-debug-2025-12-09 \
     --log 0 \
     --delim ,) \
