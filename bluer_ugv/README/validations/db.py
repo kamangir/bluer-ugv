@@ -179,6 +179,7 @@ dict_of_validations = {
                 f"{arzhang_assets2}/city-1-path.png": "",
             }
         ),
+        "cols": 1,
         "macros": {
             "objects:::": city_1.objects(),
         },

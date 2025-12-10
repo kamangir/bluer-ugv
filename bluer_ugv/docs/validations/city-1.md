@@ -115,6 +115,7 @@ runme
 1. 1.8 km drive, battery lasted with ~20 minutes of recharge at the middle.
 2. ugv steers right when driving forward, likely because of wheel shaft misalignments.
 
-|   |   |
-| --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_143603.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_143603.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/city-1-path.png?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/city-1-path.png?raw=true) |
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_143603.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_143603.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/city-1-path.png?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/city-1-path.png?raw=true) |
