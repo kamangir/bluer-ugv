@@ -178,6 +178,33 @@ dict_of_validations = {
                 f"{arzhang_assets2}/city-1-path.png": "",
             }
         ),
+        "macros": {
+            "debug_objects": markdown.generate_table(
+                Items(
+                    [
+                        {
+                            "name": object_name,
+                            "url": "https://{}.{}/{}".format(
+                                env.S3_PUBLIC_STORAGE_BUCKET,
+                                env.S3_STORAGE_ENDPOINT_URL.split("https://", 1)[1],
+                                f"{object_name}.tar.gz",
+                            ),
+                            "marquee": f"{assets}/{object_name}/{object_name}.gif",
+                        }
+                        for object_name in [
+                            "swallow-debug-2025-09-22-09-47-32-85hag3",
+                            "swallow-debug-2025-09-22-09-59-29-emj29v",
+                            "swallow-debug-2025-09-22-10-01-01-uzray6",
+                            "swallow-debug-2025-09-22-10-06-19-hcyl1v",
+                            "swallow-debug-2025-09-22-10-09-44-z6q9kn",
+                            "swallow-debug-2025-09-22-10-19-35-mobajm",
+                        ]
+                    ]
+                ),
+                cols=3,
+                log=False,
+            ),
+        },
     },
     "template": {
         "ugv_name": "template",
