@@ -29,6 +29,6 @@ def objects() -> List[str]:
                 for object_name in list_of_objects
             ]
         ),
-        cols=len(list_of_objects),
+        cols=3,
         log=False,
     )
