@@ -171,7 +171,7 @@ dict_of_validations = {
         "ugv_name": [
             "arzhang:ugv",
         ],
-        "marquee": f"{arzhang_assets}/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true",
+        "marquee": f"{assets}/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true",
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20251209_143603.jpg": "",
