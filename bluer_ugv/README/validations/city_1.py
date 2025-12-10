@@ -24,7 +24,7 @@ def objects() -> List[str]:
                         env.S3_STORAGE_ENDPOINT_URL.split("https://", 1)[1],
                         f"{object_name}.tar.gz",
                     ),
-                    "marquee": f"{assets}/{object_name}/ultrasonic-sensor-pulse-ms.png",
+                    "marquee": f"{assets}/{object_name}/ultrasonic-sensor-state.png",
                 }
                 for object_name in list_of_objects
             ]
