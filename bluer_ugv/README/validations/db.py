@@ -4,6 +4,7 @@ from bluer_objects import markdown
 from bluer_objects import env
 
 from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.validations import city_1
 
 dict_of_validations = {
     "village-1": {
@@ -165,6 +166,23 @@ dict_of_validations = {
                 f"{arzhang_assets2}/20251106_175643.jpg": "",
             },
         ),
+    },
+    "city-1": {
+        "order": 9,
+        "ugv_name": [
+            "arzhang:ugv",
+        ],
+        "marquee": f"{assets}/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true",
+        "items": ImageItems(
+            {
+                f"{arzhang_assets2}/20251209_143603.jpg": "",
+                f"{arzhang_assets2}/city-1-path.png": "",
+            }
+        ),
+        "cols": 1,
+        "macros": {
+            "objects:::": city_1.objects(),
+        },
     },
     "template": {
         "ugv_name": "template",

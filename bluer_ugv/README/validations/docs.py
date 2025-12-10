@@ -10,7 +10,7 @@ docs = [
         "macros": {
             "list:::": list_of_dict(dict_of_validations),
         },
-        "cols": 2,
+        "cols": 4,
     }
 ] + [
     {
