@@ -40,7 +40,7 @@ runme() {
             @upload public,zip
 
         [[ "$publish" == 1 ]] &&
-            @assets publish extensions=gif,push
+            @assets publish extensions=png,push
     done
 }
 
