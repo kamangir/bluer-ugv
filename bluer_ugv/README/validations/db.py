@@ -2,8 +2,9 @@ from bluer_objects.README.items import ImageItems, Items
 from bluer_objects.README.consts import assets, assets_url
 from bluer_objects import markdown
 from bluer_objects import env
+from bluer_objects import storage
 
-from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
+from bluer_ugv.README.arzhang.consts import arzhang_assets2
 
 dict_of_validations = {
     "village-1": {
@@ -191,14 +192,7 @@ dict_of_validations = {
                             ),
                             "marquee": f"{assets}/{object_name}/{object_name}.gif",
                         }
-                        for object_name in [
-                            "swallow-debug-2025-09-22-09-47-32-85hag3",
-                            "swallow-debug-2025-09-22-09-59-29-emj29v",
-                            "swallow-debug-2025-09-22-10-01-01-uzray6",
-                            "swallow-debug-2025-09-22-10-06-19-hcyl1v",
-                            "swallow-debug-2025-09-22-10-09-44-z6q9kn",
-                            "swallow-debug-2025-09-22-10-19-35-mobajm",
-                        ]
+                        for object_name in storage.List()
                     ]
                 ),
                 cols=3,

@@ -74,12 +74,20 @@ runme() {
 runme
 ```
 
+```bash
+@select 2025-12-09-18-52-03-7jo931
+@gif ~download,~upload . --frame_count=200 --output_filename 200.gif
+@upload filename=200.gif
+@assets publish extensions=gif,push
+```
+
 </details>
 
 
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true)
-
+| | |
+|-|-|
+| ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-12-09-18-52-03-7jo931/200.gif?raw=true) |
 
 ## observations
 
