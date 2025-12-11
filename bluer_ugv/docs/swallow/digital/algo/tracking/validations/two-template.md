@@ -13,7 +13,7 @@ items:::
 @.
 ```
 
-press `action` and then `fwd`.
+press `action`, `debug`, `fwd`.
 
 
 🔥
