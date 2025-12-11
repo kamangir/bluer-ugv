@@ -92,10 +92,6 @@ class ClassicalTrackingCamera(ClassicalCamera):
 
         self.leds.flash("red")
 
-        import ipdb
-
-        ipdb.set_trace()
-
         success, image = camera.capture(
             close_after=False,
             open_before=False,
