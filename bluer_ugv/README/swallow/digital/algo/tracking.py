@@ -18,4 +18,8 @@ docs = [
             }
         ),
     },
+    {
+        "path": "../docs/swallow/digital/algo/tracking/validations/two.md",
+        "items": ImageItems({}),
+    },
 ]
