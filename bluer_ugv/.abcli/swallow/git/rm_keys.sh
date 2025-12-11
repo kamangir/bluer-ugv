@@ -22,10 +22,5 @@ function bluer_ugv_swallow_git_rm_keys() {
             $repo_name \
             dryrun=$do_dryrun,https
         [[ $? -ne 0 ]] && return 1
-
-        bluer_ai_git pull \
-            $repo_name \
-            ~all
-        [[ $? -ne 0 ]] && return 1
     done
 }
