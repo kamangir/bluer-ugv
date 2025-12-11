@@ -8,6 +8,7 @@ title:::
 
 @mac
 @swallow select_target --host sparrow.local
+@swallow debug
 @.
 ```
 
