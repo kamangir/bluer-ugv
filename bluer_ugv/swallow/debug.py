@@ -38,7 +38,7 @@ def debug(
 
     socket = SocketConnection.listen_on(port=port)
 
-    title = "debug..."
+    title = f"debug port:{port} -> {object_name} ..."
 
     cv2.namedWindow(title)
     logger.info("Ctrl+C to exit...")
