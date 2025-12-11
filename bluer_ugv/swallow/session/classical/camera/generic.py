@@ -1,6 +1,6 @@
 from typing import Any
 
-from bluer_algo.socket.connection import SocketConnection, DEV_HOST
+from bluer_algo.socket.connection import SocketConnection, DEV_HOST, DEFAULT_PORT
 from bluer_sbc.imager.camera import instance as camera
 
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
@@ -29,8 +29,15 @@ class ClassicalCamera:
     def cleanup(self):
         camera.close(log=True)
 
-    def send_debug_data(self, data: Any) -> bool:
-        socket = SocketConnection.connect_to(DEV_HOST)
+    def send_debug_data(
+        self,
+        data: Any,
+        port: int = DEFAULT_PORT,
+    ) -> bool:
+        socket = SocketConnection.connect_to(
+            target_host=DEV_HOST,
+            port=port,
+        )
         return socket.send_data(data)
 
     # multi-threaded support

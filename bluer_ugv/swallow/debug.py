@@ -8,7 +8,7 @@ from bluer_objects import file
 from bluer_objects import objects
 from bluer_objects.logger.stitch import stitch_images
 from bluer_objects.graphics.gif import generate_animated_gif
-from bluer_algo.socket.connection import SocketConnection
+from bluer_algo.socket.connection import SocketConnection, DEFAULT_PORT
 from bluer_algo.socket.message import SocketMessage
 
 from bluer_ugv import NAME
@@ -17,24 +17,28 @@ from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
 
+DEFAULT_DEBUG_PORT = DEFAULT_PORT
+
 
 def debug(
     object_name: str,
     generate_gif: bool = True,
     save_images: bool = True,
+    port: int = DEFAULT_DEBUG_PORT,
 ) -> bool:
     logger.info(
-        "{}.debug -{}{}> {}".format(
+        "{}.debug -{}{}{}> {}".format(
             NAME,
+            f"port={port}-",
             "images-" if save_images else "",
             "gif-" if generate_gif else "",
             object_name,
         )
     )
 
-    socket = SocketConnection.listen_on()
+    socket = SocketConnection.listen_on(port=port)
 
-    title = "debug..."
+    title = f"debug: port={port} -> {object_name} ..."
 
     cv2.namedWindow(title)
     logger.info("Ctrl+C to exit...")

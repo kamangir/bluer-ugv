@@ -9,21 +9,19 @@ function bluer_ugv_swallow_git_rm_keys() {
         return 1
     fi
 
-    bluer_ai_eval dryrun=$do_dryrun \
-        sudo rm -v ~/.ssh/$BLUER_AI_GIT_SSH_KEY_NAME
+    sudo rm -v ~/.ssh/$BLUER_AI_GIT_SSH_KEY_NAME
 
-    bluer_ai_eval dryrun=$do_dryrun \
-        sudo rm -v ~/.ssh/$BLUER_AI_GIT_SSH_KEY_NAME.pub
+    sudo rm -v ~/.ssh/$BLUER_AI_GIT_SSH_KEY_NAME.pub
 
-    local repo
-    for repo in $(bluer_ai_plugins list_of_external --delim space --log 0 --repo_names 1); do
-        bluer_ai_eval dryrun=$do_dryrun \
-            bluer_ai_git_set_remote \
+    local repo_name
+    for repo_name in bluer-ai $(bluer_ai_plugins list_of_external \
+        --delim space \
+        --log 0 \
+        --repo_names 1); do
+        bluer_ai_git \
             $repo_name \
+            set_remote \
             dryrun=$do_dryrun,https
-        [[ $? -ne 0 ]] && return 1
-
-        git pull
         [[ $? -ne 0 ]] && return 1
     done
 }
