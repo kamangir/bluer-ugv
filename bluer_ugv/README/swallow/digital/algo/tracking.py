@@ -29,7 +29,7 @@ docs = [
         "path": "../docs/swallow/digital/algo/tracking/validations/two.md",
         "items": ImageItems(
             {
-                f"{tracker_assets2}/validation/two/socket-3.png": f"{algo_docs}/socket.md",
+                f"{tracker_assets2}/validations/two/socket-3.png": f"{algo_docs}/socket.md",
                 "{}/{}/{}.gif".format(
                     assets,
                     "swallow-debug-2025-12-11-17-23-59-6bhm5n",
