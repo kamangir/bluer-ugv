@@ -37,7 +37,7 @@ def select_target(
 
             success, track_window = Target.select(
                 image,
-                title=f"select target on {host} ...",
+                title=f"🎯 select the target for {host} port={port}...",
             )
             if not success:
                 return success
