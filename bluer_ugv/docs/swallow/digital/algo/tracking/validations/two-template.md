@@ -13,8 +13,10 @@ items:::
 @.
 ```
 
+press `action` and then `fwd`.
+
+
 🔥
 
-- [ ] command to run at the start to set the target? 🚧
 - [ ] how to redo targeting? 🚧
 - [ ] results 🚧
