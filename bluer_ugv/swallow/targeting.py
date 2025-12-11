@@ -11,22 +11,26 @@ from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
 
+DEFAULT_TARGETING_PORT = 8002
+
 
 def select_target(
     host: str,
     loop: bool = True,
+    port: int = DEFAULT_TARGETING_PORT,
 ) -> bool:
     logger.info(
-        "{}.select_target on {}{}".format(
+        "{}.select_target on {} port:{}{}".format(
             NAME,
             host,
+            port,
             " on a loop." if loop else "",
         )
     )
 
     try:
         while loop:
-            socket = SocketConnection.listen_on()
+            socket = SocketConnection.listen_on(port=port)
             success, image = socket.receive_data(np.ndarray)
             if not success:
                 return success
@@ -38,7 +42,10 @@ def select_target(
             if not success:
                 return success
 
-            socket = SocketConnection.connect_to(host)
+            socket = SocketConnection.connect_to(
+                host,
+                port=port,
+            )
             if not socket.send_data(track_window):
                 return False
 
