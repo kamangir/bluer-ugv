@@ -20,7 +20,7 @@ def select_target(
     port: int = DEFAULT_TARGETING_PORT,
 ) -> bool:
     logger.info(
-        "{}.select_target on {} port:{}{}".format(
+        "{}.select_target on {} port={}{}".format(
             NAME,
             host,
             port,

@@ -29,7 +29,7 @@ def debug(
     logger.info(
         "{}.debug -{}{}{}> {}".format(
             NAME,
-            f"port:{port}-",
+            f"port={port}-",
             "images-" if save_images else "",
             "gif-" if generate_gif else "",
             object_name,
@@ -38,7 +38,7 @@ def debug(
 
     socket = SocketConnection.listen_on(port=port)
 
-    title = f"debug port:{port} -> {object_name} ..."
+    title = f"debug: port={port} -> {object_name} ..."
 
     cv2.namedWindow(title)
     logger.info("Ctrl+C to exit...")
