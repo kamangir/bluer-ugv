@@ -104,6 +104,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
             frame=image,
             track_window=self.track_window,
         )
+        logger.info(f"🎯 {self.track_window}")
 
         x, _, w, _ = self.track_window
         if x + w // 2 > image.shape[1] * 2 / 3:
