@@ -18,8 +18,9 @@ function bluer_ugv_swallow_git_rm_keys() {
         --delim space \
         --log 0 \
         --repo_names 1); do
-        bluer_ai_git set_remote \
+        bluer_ai_git \
             $repo_name \
+            set_remote \
             dryrun=$do_dryrun,https
         [[ $? -ne 0 ]] && return 1
     done
