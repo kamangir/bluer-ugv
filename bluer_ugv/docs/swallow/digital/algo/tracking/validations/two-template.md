@@ -1,7 +1,5 @@
 title:::
 
-items:::
-
 ```bash
 @rpi
 @swallow env cp tracking
@@ -15,8 +13,14 @@ items:::
 
 press `action`, `debug`, `fwd`.
 
+to reselect the target press `train`.
 
-🔥
+details:::code
+```bash
+@select swallow-debug-2025-12-11-17-23-59-6bhm5n
+@assets publish extensions=gif,push
+```
+details:::
 
-- [ ] how to redo targeting? 🚧
-- [ ] results 🚧
+items:::
+

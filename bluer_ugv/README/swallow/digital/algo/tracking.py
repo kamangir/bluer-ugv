@@ -1,4 +1,5 @@
 from bluer_objects.README.items import ImageItems
+from bluer_objects.README.consts import assets
 
 from bluer_ugv.README.consts import algo_docs
 from bluer_ugv.README.swallow.consts import swallow_assets2
@@ -20,6 +21,15 @@ docs = [
     },
     {
         "path": "../docs/swallow/digital/algo/tracking/validations/two.md",
-        "items": ImageItems({}),
+        "items": ImageItems(
+            {
+                f"{swallow_assets2}/validation/two/socket-3.png": f"{algo_docs}/socket.md",
+                "{}/{}{}.gif".format(
+                    assets,
+                    "swallow-debug-2025-12-11-17-23-59-6bhm5n",
+                    "swallow-debug-2025-12-11-17-23-59-6bhm5n",
+                ): "",
+            }
+        ),
     },
 ]
