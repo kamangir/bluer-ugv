@@ -13,8 +13,11 @@ function bluer_ugv_swallow_git_rm_keys() {
 
     sudo rm -v ~/.ssh/$BLUER_AI_GIT_SSH_KEY_NAME.pub
 
-    local repo
-    for repo in $(bluer_ai_plugins list_of_external --delim space --log 0 --repo_names 1); do
+    local repo_name
+    for repo_name in $(bluer_ai_plugins list_of_external \
+        --delim space \
+        --log 0 \
+        --repo_names 1); do
         bluer_ai_git set_remote \
             $repo_name \
             dryrun=$do_dryrun,https
