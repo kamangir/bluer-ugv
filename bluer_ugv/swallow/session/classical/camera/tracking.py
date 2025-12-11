@@ -14,6 +14,7 @@ from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboa
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.swallow.targeting import DEFAULT_TARGETING_PORT
 from bluer_ugv.logger import logger
 
 
@@ -56,6 +57,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         success, self.track_window = Target.select(
             np.flip(image, axis=2),
             local=False,
+            port=DEFAULT_TARGETING_PORT,
         )
         self.leds.set_all(False)
         if not success:
