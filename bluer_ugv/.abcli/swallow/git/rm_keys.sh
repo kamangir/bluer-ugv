@@ -15,13 +15,14 @@ function bluer_ugv_swallow_git_rm_keys() {
 
     local repo
     for repo in $(bluer_ai_plugins list_of_external --delim space --log 0 --repo_names 1); do
-        bluer_ai_eval dryrun=$do_dryrun \
-            bluer_ai_git_set_remote \
+        bluer_ai_git set_remote \
             $repo_name \
             dryrun=$do_dryrun,https
         [[ $? -ne 0 ]] && return 1
 
-        git pull
+        bluer_ai_git pull \
+            $repo_name \
+            ~all
         [[ $? -ne 0 ]] && return 1
     done
 }
