@@ -285,7 +285,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="black_knight",
     name="Black Knight",
-    image="black_knight.jpg",
+    image="black_knight.jpeg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
