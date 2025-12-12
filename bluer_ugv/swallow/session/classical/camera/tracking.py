@@ -2,8 +2,9 @@ from typing import Tuple
 import numpy as np
 
 from bluer_options.timer import Timer
+from bluer_algo.env import BLUER_ALGO_TRACKER_DEFAULT_ALGO
 from bluer_algo.tracker.classes.target import Target
-from bluer_algo.tracker.classes.camshift import CamShiftTracker
+from bluer_algo.tracker.factory import get_tracker_class
 from bluer_algo.socket.message import SocketMessage
 from bluer_sbc.imager.camera import instance as camera
 
@@ -36,7 +37,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
             log=True,
         )
 
-        self.tracker = CamShiftTracker()
+        self.tracker = get_tracker_class(BLUER_ALGO_TRACKER_DEFAULT_ALGO)[1]()
 
     def initialize(self) -> bool:
         if not super().initialize():
@@ -119,6 +120,11 @@ class ClassicalTrackingCamera(ClassicalCamera):
                 )
             ):
                 logger.warning("failed to send debug data.")
+
+        if not self.tracker.tracking:
+            logger.warning("🎯 lost target")
+            self.leds.flash_all()
+            return True
 
         x, _, w, _ = self.track_window
         if x + w // 2 > image.shape[1] * 2 / 3:

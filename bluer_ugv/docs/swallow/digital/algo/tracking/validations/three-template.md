@@ -1,15 +1,15 @@
 title:::
 
-> algo: [camshift](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/tracker/camshift.md)
+> algo: [kcf](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/tracker/kcf.md)
 
 ```bash
 @rpi
-@swallow env cp tracking
 @select; @session start
 @.
 
 @mac
 @swallow select_target --host sparrow.local
+
 @swallow debug
 @.
 ```
@@ -20,11 +20,11 @@ to reselect the target press `train`.
 
 details:::code
 ```bash
-@select swallow-debug-2025-12-11-17-23-59-6bhm5n
+@select swallow-debug-2025-12-12-14-46-34-m8ahlp
 @assets publish extensions=gif,push
 ```
 details:::
 
 items:::
 
-> ⚠️ 🤦🏽
+> promising. ✅
