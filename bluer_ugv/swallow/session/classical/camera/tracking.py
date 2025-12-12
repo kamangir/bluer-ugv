@@ -37,7 +37,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
             log=True,
         )
 
-        _, self.tracker = get_tracker_class(BLUER_ALGO_TRACKER_DEFAULT_ALGO)
+        self.tracker = get_tracker_class(BLUER_ALGO_TRACKER_DEFAULT_ALGO)[1]()
 
     def initialize(self) -> bool:
         if not super().initialize():
