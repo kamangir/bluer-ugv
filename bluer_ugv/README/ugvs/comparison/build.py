@@ -3,7 +3,8 @@ from typing import List, Union
 from functools import reduce
 
 from blueness import module
-from bluer_objects import file
+from bluer_objects import file, objects
+from bluer_objects.README.consts import assets_url
 
 from bluer_ugv import NAME
 from bluer_ugv.README.ugvs.comparison.ugvs.db import list_of_ugvs
@@ -12,6 +13,8 @@ from bluer_ugv.logger import logger
 
 
 NAME = module.name(__file__, NAME)
+
+OBJECT_NAME = "bluer-ugv-comparison-v1"
 
 
 def build(
@@ -45,9 +48,10 @@ def build(
         contents[:content_index]
         + row_of(
             [
+                "تصویر",
                 "رديف",
                 "نام محصول مشابه",
-                "مشابهت و تفاوت ها محصول شما با آنها ",
+                "مشابهت و تفاوت های محصول ما با آنها ",
             ],
             header=True,
         )
@@ -56,6 +60,17 @@ def build(
             [
                 row_of(
                     [
+                        (
+                            '<img src="{}" alt="{}" style="width: 200pt;"/>'.format(
+                                assets_url(
+                                    suffix=f"{OBJECT_NAME}/{ugv.image}",
+                                    volume=2,
+                                ),
+                                ugv.name,
+                            )
+                            if ugv.image
+                            else ""
+                        ),
                         str(index + 1),
                         ugv.description,
                         reference_ugv.compare(ugv),
@@ -97,9 +112,9 @@ def build(
     )
 
     return file.save_text(
-        file.absolute(
-            "../../../docs/UGVs/comparison.html",
-            reference_path=file.path(__file__),
+        objects.path_of(
+            filename="comparison.html",
+            object_name=OBJECT_NAME,
         ),
         contents,
         log=log,
