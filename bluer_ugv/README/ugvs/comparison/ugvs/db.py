@@ -107,6 +107,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="raad1",
     name="متلاشی‌کننده بمب و تله انفجاری رعد ۱",
+    image="raad1.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.MEDIUM,
