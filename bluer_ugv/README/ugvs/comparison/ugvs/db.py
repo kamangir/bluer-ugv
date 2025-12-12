@@ -131,6 +131,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="uran_9",
     name="Uran-9",
+    image="Uran-9.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -144,6 +145,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="uran_14",
     name="Uran-14",
+    image="Uran-14.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -201,6 +203,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="xm1219",
     name="XM1219",
+    image="XM1219.jpeg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
