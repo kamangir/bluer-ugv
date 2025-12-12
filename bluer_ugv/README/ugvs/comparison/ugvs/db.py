@@ -174,6 +174,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="type_x",
     name="Type-X",
+    image="Type-X.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -238,6 +239,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="ukap",
     name="UKAP",
+    image="UKAP.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
