@@ -191,6 +191,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="centaur",
     name="Centaur",
+    image="Centaur.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
@@ -218,6 +219,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="talon",
     name="Foster-Miller TALON",
+    image="talon.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
@@ -282,6 +284,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="black_knight",
     name="Black Knight",
+    image="black_knight.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -349,6 +352,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="avantguard",
     name="AvantGuard UGCV",
+    image="avantguard.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
