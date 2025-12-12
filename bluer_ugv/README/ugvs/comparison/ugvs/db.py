@@ -26,6 +26,7 @@ list_of_ugvs.add(
 
 list_of_ugvs.add(
     nickname="nazir",
+    image="nazir.jpg",
     name="ربات موشک‌انداز نذیر",
     features={
         "control": UGV_Control.RC,
@@ -39,6 +40,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="heydar",
     name="ربات حیدر",
+    image="heydar.jpg",
     features={
         "concealment": True,
         "control": UGV_Control.AI,
@@ -58,6 +60,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="karakal",
     name="ربات جنگجوی هوشمند کاراکال",
+    image="karakal.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.MEDIUM,
@@ -70,6 +73,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="qasem",
     name="ربات قاسم",
+    image="qasem.jpg",
     features={
         "cost": UGV_Cost.MEDIUM,
         "size": UGV_Size.MEDIUM,
@@ -81,6 +85,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="arya",
     name="ربات آریا",
+    image="arya.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.MEDIUM,

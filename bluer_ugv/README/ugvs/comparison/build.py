@@ -4,6 +4,7 @@ from functools import reduce
 
 from blueness import module
 from bluer_objects import file, objects
+from bluer_objects.README.consts import assets_url
 
 from bluer_ugv import NAME
 from bluer_ugv.README.ugvs.comparison.ugvs.db import list_of_ugvs
@@ -47,6 +48,7 @@ def build(
         contents[:content_index]
         + row_of(
             [
+                "تصویر",
                 "رديف",
                 "نام محصول مشابه",
                 "مشابهت و تفاوت های محصول ما با آنها ",
@@ -58,6 +60,17 @@ def build(
             [
                 row_of(
                     [
+                        (
+                            '<img  src="{}" alt="{}" />'.format(
+                                ugv.name,
+                                assets_url(
+                                    suffix=f"{OBJECT_NAME}/{ugv.image}",
+                                    volume=2,
+                                ),
+                            )
+                            if ugv.image
+                            else ""
+                        ),
                         str(index + 1),
                         ugv.description,
                         reference_ugv.compare(ugv),

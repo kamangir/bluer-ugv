@@ -15,6 +15,7 @@ class UGV:
         name: str,
         features: Dict[str, Any],
         deficiencies: List[str] = [],
+        image: str = "",
     ):
         self.nickname = nickname
         self.name = name
@@ -33,6 +34,8 @@ class UGV:
             )
 
         self.deficiencies = deficiencies
+
+        self.image = image
 
     def compare(
         self,
