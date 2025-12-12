@@ -259,6 +259,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="teodor",
     name="tEODor",
+    image="tEODor.png",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,

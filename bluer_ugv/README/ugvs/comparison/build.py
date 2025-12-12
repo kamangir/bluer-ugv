@@ -61,12 +61,12 @@ def build(
                 row_of(
                     [
                         (
-                            '<img  src="{}" alt="{}" />'.format(
-                                ugv.name,
+                            '<img src="{}" alt="{}" />'.format(
                                 assets_url(
                                     suffix=f"{OBJECT_NAME}/{ugv.image}",
                                     volume=2,
                                 ),
+                                ugv.name,
                             )
                             if ugv.image
                             else ""
