@@ -1,6 +1,6 @@
 # swallow: digital: algo: tracking: validations: three
 
-> algo: [klt](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/tracker/klt.md)
+> algo: [kcf](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/tracker/kcf.md)
 
 ```bash
 @rpi
@@ -9,6 +9,7 @@
 
 @mac
 @swallow select_target --host sparrow.local
+
 @swallow debug
 @.
 ```

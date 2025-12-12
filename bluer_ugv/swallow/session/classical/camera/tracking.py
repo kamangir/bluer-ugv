@@ -121,6 +121,11 @@ class ClassicalTrackingCamera(ClassicalCamera):
             ):
                 logger.warning("failed to send debug data.")
 
+        if not self.tracker.tracking:
+            logger.warning("🎯 lost target")
+            self.leds.flash_all()
+            return True
+
         x, _, w, _ = self.track_window
         if x + w // 2 > image.shape[1] * 2 / 3:
             self.setpoint.put(
