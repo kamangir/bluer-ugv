@@ -61,7 +61,7 @@ def build(
                 row_of(
                     [
                         (
-                            '<img src="{}" alt="{}" style="width: 100pt;"/>'.format(
+                            '<img src="{}" alt="{}" style="width: 200pt;"/>'.format(
                                 assets_url(
                                     suffix=f"{OBJECT_NAME}/{ugv.image}",
                                     volume=2,

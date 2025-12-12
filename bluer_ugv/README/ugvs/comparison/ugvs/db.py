@@ -118,6 +118,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="uran_6",
     name="Uran-6",
+    image="Uran-6.jpeg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -160,6 +161,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="themis_9",
     name="THeMIS-9",
+    image="THeMIS-9.jpeg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -228,6 +230,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="gladiator",
     name="Gladiator TUGV",
+    image="Gladiator.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
@@ -251,6 +254,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="ripsaw",
     name="Ripsaw",
+    image="Ripsaw.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -290,6 +294,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="guardium",
     name="Guardium",
+    image="Guardium.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -301,6 +306,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="milica",
     name="Milos & Milica",
+    image="Milos.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.MEDIUM,
@@ -315,6 +321,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="taifun_m",
     name="Taifun-M",
+    image="Taifun-M.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
@@ -328,6 +335,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="jackal",
     name="Jackal",
+    image="Jackal.jpeg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -354,6 +362,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="sr-lambda",
     name="SIM-RACAR-Lambda",
+    image="SIM-RACAR-Lambda.jpg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
@@ -367,6 +376,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="sharp_claw_1",
     name="Sharp Claw 1",
+    image="Sharp-Claw-1.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
@@ -381,6 +391,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="sharp_claw_2",
     name="Sharp Claw 2",
+    image="Sharp-Claw-2.jpg",
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
@@ -396,6 +407,7 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="robattle",
     name="Robattle",
+    image="Robattle.jpeg",
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.HIGH,
