@@ -23,12 +23,15 @@ to reselect the target press `train`.
 <summary>code</summary>
 
 ```bash
-@select TBA
+@select swallow-debug-2025-12-12-14-46-34-m8ahlp
 @assets publish extensions=gif,push
 ```
 
 </details>
 
 
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true)](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true) |
 
-> 🔥
+> promising. ✅

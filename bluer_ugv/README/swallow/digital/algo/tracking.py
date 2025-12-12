@@ -40,6 +40,14 @@ docs = [
     },
     {
         "path": "../docs/swallow/digital/algo/tracking/validations/three.md",
-        "items": ImageItems({}),
+        "items": ImageItems(
+            {
+                "{}/{}/{}.gif".format(
+                    assets,
+                    "swallow-debug-2025-12-12-14-46-34-m8ahlp",
+                    "swallow-debug-2025-12-12-14-46-34-m8ahlp",
+                ): "",
+            }
+        ),
     },
 ]

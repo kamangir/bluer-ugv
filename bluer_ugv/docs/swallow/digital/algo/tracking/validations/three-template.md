@@ -20,11 +20,11 @@ to reselect the target press `train`.
 
 details:::code
 ```bash
-@select TBA
+@select swallow-debug-2025-12-12-14-46-34-m8ahlp
 @assets publish extensions=gif,push
 ```
 details:::
 
 items:::
 
-> 🔥
+> promising. ✅
