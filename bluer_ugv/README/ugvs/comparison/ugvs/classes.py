@@ -66,9 +66,10 @@ class UGV:
                 pass
             else:
                 differences.append(
-                    f'<p style="color:blue;">{message}</p>'
-                    if comparison == Feature_Comparison.HIGHER
-                    else message
+                    '<p style="color:{};">{}</p>'.format(
+                        "green" if comparison == Feature_Comparison.HIGHER else "red",
+                        message,
+                    )
                 )
 
         return (

@@ -80,6 +80,7 @@ list_of_ugvs.add(
     name="ربات قاسم",
     image="qasem.jpg",
     features={
+        "concealment": True,
         "cost": UGV_Cost.MEDIUM,
         "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
