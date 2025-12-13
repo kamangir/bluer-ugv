@@ -80,7 +80,7 @@ class UGV:
                 f'<li dir="rtl" style="text-align:right;">{line}</li>'
                 for line in differences
             ]
-            + [f"<p>⭐️ {line}</p>" for line in ugv.comments]
+            + [f"<p><b> {line}</b></p>" for line in ugv.comments]
             + [
                 "</ol>",
             ]
