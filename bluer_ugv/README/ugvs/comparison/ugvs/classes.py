@@ -23,14 +23,19 @@ class UGV:
 
         self.feature_list: FeatureList = FeatureList()
 
-        for feature_name, feature_score in features.items():
-            if feature_name not in dict_of_feature_classes:
-                logger.error(f"{feature_name}: feature not found.")
-                assert False
+        if any(
+            feature_name not in dict_of_feature_classes for feature_name in features
+        ):
+            logger.error(f"{feature_name}: feature not found.")
+            assert False
+
+        for feature_name in dict_of_feature_classes:
+            if feature_name not in features:
+                continue
 
             self.feature_list.add(
                 dict_of_feature_classes[feature_name](
-                    score=feature_score,
+                    score=features[feature_name],
                 )
             )
 
