@@ -23,11 +23,10 @@ class UGV:
 
         self.feature_list: FeatureList = FeatureList()
 
-        if any(
-            feature_name not in dict_of_feature_classes for feature_name in features
-        ):
-            logger.error(f"{feature_name}: feature not found.")
-            assert False
+        for feature_name in features:
+            if feature_name not in dict_of_feature_classes:
+                logger.error(f"{feature_name}: feature not found.")
+                assert False
 
         for feature_name in dict_of_feature_classes:
             if feature_name not in features:
