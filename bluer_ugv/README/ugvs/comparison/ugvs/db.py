@@ -284,10 +284,12 @@ list_of_ugvs.add(
     name="tEODor",
     image="tEODor.png",
     features={
+        "concealment": True,
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
         "payload": 100,
         "size": UGV_Size.MEDIUM,
+        "uv_delivery": True,
     },
     deficiencies=[],
 )
