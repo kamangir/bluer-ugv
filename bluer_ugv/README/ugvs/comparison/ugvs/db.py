@@ -32,6 +32,7 @@ list_of_ugvs.add(
         "cost": UGV_Cost.MEDIUM,
         "payload": 700,
         "range": 4,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
     },
 )
@@ -46,6 +47,7 @@ list_of_ugvs.add(
         "cost": UGV_Cost.LOW,
         "payload": 40,
         "range": 10,
+        "sanction_proof": True,
         "size": UGV_Size.SMALL,
         "speed": 60,
         "swarm": True,
@@ -66,6 +68,7 @@ list_of_ugvs.add(
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
         "speed": 30,
         "range": 0.5,
@@ -78,6 +81,7 @@ list_of_ugvs.add(
     image="qasem.jpg",
     features={
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
         "uv_delivery": True,
     },
@@ -91,6 +95,7 @@ list_of_ugvs.add(
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
         "speed": 50,
         "uv_delivery": True,
@@ -101,7 +106,9 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="sepah",
     name="ربات جنگ میدانی سپاه",
-    features={},
+    features={
+        "sanction_proof": True,
+    },
     deficiencies=[],
 )
 
@@ -113,6 +120,7 @@ list_of_ugvs.add(
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.SMALL,
     },
     deficiencies=[],
