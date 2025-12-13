@@ -48,8 +48,8 @@ def build(
         contents[:content_index]
         + row_of(
             [
-                "تصویر",
                 "رديف",
+                "تصویر",
                 "نام محصول مشابه",
                 "مشابهت و تفاوت های محصول ما با آنها ",
             ],
@@ -60,6 +60,7 @@ def build(
             [
                 row_of(
                     [
+                        str(index + 1),
                         (
                             '<img src="{}" alt="{}" style="width: 200pt;"/>'.format(
                                 assets_url(
@@ -70,8 +71,13 @@ def build(
                             )
                             if ugv.image
                             else ""
+                        )
+                        + " ".join(
+                            [
+                                f'<p style="color:blue;">🔹 {line}</p>'
+                                for line in ugv.comments
+                            ]
                         ),
-                        str(index + 1),
                         ugv.description,
                         reference_ugv.compare(ugv),
                     ]

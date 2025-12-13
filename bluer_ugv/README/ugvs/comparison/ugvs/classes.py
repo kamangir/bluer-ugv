@@ -16,26 +16,33 @@ class UGV:
         features: Dict[str, Any],
         deficiencies: List[str] = [],
         image: str = "",
+        comments: List[str] = [],
     ):
         self.nickname = nickname
         self.name = name
 
         self.feature_list: FeatureList = FeatureList()
 
-        for feature_name, feature_score in features.items():
+        for feature_name in features:
             if feature_name not in dict_of_feature_classes:
                 logger.error(f"{feature_name}: feature not found.")
                 assert False
 
+        for feature_name in dict_of_feature_classes:
+            if feature_name not in features:
+                continue
+
             self.feature_list.add(
                 dict_of_feature_classes[feature_name](
-                    score=feature_score,
+                    score=features[feature_name],
                 )
             )
 
         self.deficiencies = deficiencies
 
         self.image = image
+
+        self.comments = comments
 
     def compare(
         self,
@@ -57,7 +64,12 @@ class UGV:
             elif comparison == Feature_Comparison.UNKNOWN:
                 pass
             else:
-                differences.append(message)
+                differences.append(
+                    '<p style="color:{};">{}</p>'.format(
+                        "green" if comparison == Feature_Comparison.HIGHER else "red",
+                        message,
+                    )
+                )
 
         return (
             [
@@ -86,7 +98,9 @@ class UGV:
     def description(self) -> List[str]:
         return (
             [
-                '<p dir="rtl" style="text-align:right;">{}</p>'.format(self.name),
+                '<b><p dir="rtl" style="text-align:right;">{}</p></b>'.format(
+                    self.name
+                ),
                 "<ol>",
             ]
             + [

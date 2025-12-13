@@ -2,7 +2,6 @@ from bluer_ugv.README.ugvs.comparison.features.control import UGV_Control
 from bluer_ugv.README.ugvs.comparison.features.cost import UGV_Cost
 from bluer_ugv.README.ugvs.comparison.features.size import UGV_Size
 from bluer_ugv.README.ugvs.comparison.ugvs.classes import List_of_UGVs
-from bluer_ugv.README.ugvs.comparison.features.range import unlimited_range
 
 list_of_ugvs = List_of_UGVs()
 
@@ -14,7 +13,7 @@ list_of_ugvs.add(
         "control": UGV_Control.AI,
         "cost": UGV_Cost.LOW,
         "payload": 40,
-        "range": unlimited_range,
+        "range": 100,
         "ps": True,
         "sanction_proof": True,
         "size": UGV_Size.SMALL,
@@ -33,6 +32,7 @@ list_of_ugvs.add(
         "cost": UGV_Cost.MEDIUM,
         "payload": 700,
         "range": 4,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
     },
 )
@@ -47,12 +47,16 @@ list_of_ugvs.add(
         "cost": UGV_Cost.LOW,
         "payload": 40,
         "range": 10,
+        "sanction_proof": True,
         "size": UGV_Size.SMALL,
         "speed": 60,
         "swarm": True,
     },
     deficiencies=[
         "انتقال قدرت: زنجیر",
+    ],
+    comments=[
+        "بیشترین تشابه",
     ],
 )
 
@@ -64,6 +68,7 @@ list_of_ugvs.add(
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
         "speed": 30,
         "range": 0.5,
@@ -75,7 +80,9 @@ list_of_ugvs.add(
     name="ربات قاسم",
     image="qasem.jpg",
     features={
+        "concealment": True,
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
         "uv_delivery": True,
     },
@@ -89,6 +96,7 @@ list_of_ugvs.add(
     features={
         "control": UGV_Control.AI,
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.MEDIUM,
         "speed": 50,
         "uv_delivery": True,
@@ -99,7 +107,9 @@ list_of_ugvs.add(
 list_of_ugvs.add(
     nickname="sepah",
     name="ربات جنگ میدانی سپاه",
-    features={},
+    features={
+        "sanction_proof": True,
+    },
     deficiencies=[],
 )
 
@@ -111,6 +121,7 @@ list_of_ugvs.add(
     features={
         "control": UGV_Control.RC,
         "cost": UGV_Cost.MEDIUM,
+        "sanction_proof": True,
         "size": UGV_Size.SMALL,
     },
     deficiencies=[],
@@ -273,10 +284,12 @@ list_of_ugvs.add(
     name="tEODor",
     image="tEODor.png",
     features={
+        "concealment": True,
         "control": UGV_Control.RC,
         "cost": UGV_Cost.HIGH,
         "payload": 100,
         "size": UGV_Size.MEDIUM,
+        "uv_delivery": True,
     },
     deficiencies=[],
 )

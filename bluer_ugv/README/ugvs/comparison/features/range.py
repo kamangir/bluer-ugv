@@ -2,8 +2,6 @@ from typing import Any
 
 from bluer_ugv.README.ugvs.comparison.features.classes import Feature
 
-unlimited_range: int = 999
-
 
 class RangeFeature(Feature):
     nickname = "range"
@@ -11,4 +9,4 @@ class RangeFeature(Feature):
 
     @property
     def score_as_str_(self) -> str:
-        return f"{self.score} کیلومتر" if self.score != unlimited_range else "نامحدود"
+        return f"{self.score} کیلومتر"

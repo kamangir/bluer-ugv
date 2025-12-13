@@ -17,18 +17,18 @@ from bluer_ugv.README.ugvs.comparison.features.swarm import SwarmFeature
 from bluer_ugv.README.ugvs.comparison.features.uv_delivery import UVDeliveryFeature
 
 list_of_feature_classes: List[Type[Feature]] = [
-    ConcealmentFeature,
-    ControlFeature,
-    CostFeature,
-    DYIFeature,
     PayloadFeature,
-    PSFeature,
-    RangeFeature,
-    SanctionProofFeature,
-    SizeFeature,
     SpeedFeature,
-    SwarmFeature,
+    SizeFeature,
+    CostFeature,
+    ControlFeature,
+    RangeFeature,
+    DYIFeature,
+    SanctionProofFeature,
     UVDeliveryFeature,
+    ConcealmentFeature,
+    PSFeature,
+    SwarmFeature,
 ]
 
 dict_of_feature_classes: Dict[str, Type[Feature]] = {
