@@ -71,7 +71,8 @@ def build(
                             )
                             if ugv.image
                             else ""
-                        ),
+                        )
+                        + " ".join([f"<p>🔹 {line}</p>" for line in ugv.comments]),
                         ugv.description,
                         reference_ugv.compare(ugv),
                     ]
