@@ -98,7 +98,9 @@ class UGV:
     def description(self) -> List[str]:
         return (
             [
-                '<p dir="rtl" style="text-align:right;">{}</p>'.format(self.name),
+                '<b><p dir="rtl" style="text-align:right;">{}</p></b>'.format(
+                    self.name
+                ),
                 "<ol>",
             ]
             + [
