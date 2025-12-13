@@ -53,6 +53,9 @@ list_of_ugvs.add(
     deficiencies=[
         "انتقال قدرت: زنجیر",
     ],
+    comments=[
+        "بیشترین تشابه",
+    ],
 )
 
 

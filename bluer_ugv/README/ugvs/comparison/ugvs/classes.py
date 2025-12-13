@@ -16,6 +16,7 @@ class UGV:
         features: Dict[str, Any],
         deficiencies: List[str] = [],
         image: str = "",
+        comments: List[str] = [],
     ):
         self.nickname = nickname
         self.name = name
@@ -36,6 +37,8 @@ class UGV:
         self.deficiencies = deficiencies
 
         self.image = image
+
+        self.comments = comments
 
     def compare(
         self,
@@ -76,6 +79,10 @@ class UGV:
             + [
                 f'<li dir="rtl" style="text-align:right;">{line}</li>'
                 for line in differences
+            ]
+            + [
+                f'<li dir="rtl" style="text-align:right;">⭐️ {line}</li>'
+                for line in ugv.comments
             ]
             + [
                 "</ol>",
