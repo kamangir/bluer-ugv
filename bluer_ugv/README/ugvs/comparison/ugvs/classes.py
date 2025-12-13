@@ -65,7 +65,11 @@ class UGV:
             elif comparison == Feature_Comparison.UNKNOWN:
                 pass
             else:
-                differences.append(message)
+                differences.append(
+                    f"<b>{message}</b>"
+                    if comparison == Feature_Comparison.HIGHER
+                    else message
+                )
 
         return (
             [
