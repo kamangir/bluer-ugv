@@ -2,7 +2,6 @@ from bluer_ugv.README.ugvs.comparison.features.control import UGV_Control
 from bluer_ugv.README.ugvs.comparison.features.cost import UGV_Cost
 from bluer_ugv.README.ugvs.comparison.features.size import UGV_Size
 from bluer_ugv.README.ugvs.comparison.ugvs.classes import List_of_UGVs
-from bluer_ugv.README.ugvs.comparison.features.range import unlimited_range
 
 list_of_ugvs = List_of_UGVs()
 
@@ -14,7 +13,7 @@ list_of_ugvs.add(
         "control": UGV_Control.AI,
         "cost": UGV_Cost.LOW,
         "payload": 40,
-        "range": unlimited_range,
+        "range": 100,
         "ps": True,
         "sanction_proof": True,
         "size": UGV_Size.SMALL,
