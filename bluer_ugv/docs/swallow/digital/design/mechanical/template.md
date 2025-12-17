@@ -11,7 +11,7 @@ title:::
 - metal sheet:
     - 2 x 360 mm x 120 mm x 2 mm (1, if one-headed)
 - plexiglass
-    - 2 x 340 mm x 400 mm x 2 mm
+    - 340 mm x 400 mm x 3.5 mm
 - thin metal sheet
     - 1000 mm x 400 mm x 0.5 mm
     - 2 x 400 mm x 120 mm
