@@ -12,7 +12,7 @@
 - metal sheet:
     - 2 x 220 mm x 120 mm x 2 mm (1, if one-headed)
 - plexiglass
-    - 260 mm x 600 mm x 2 mm
+    - 260 mm x 600 mm x 3.5 mm
 - thin metal sheet
     - 260 mm x 600 mm x 0.5 mm
 - fiberglass

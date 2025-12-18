@@ -13,7 +13,7 @@ list_of_ugvs.add(
         "control": UGV_Control.AI,
         "cost": UGV_Cost.LOW,
         "payload": 40,
-        "range": 100,
+        "range": 10,
         "ps": True,
         "sanction_proof": True,
         "size": UGV_Size.SMALL,
