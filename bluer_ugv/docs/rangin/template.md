@@ -7,6 +7,7 @@ title:::
 - [schematics](./schematics.md)
 - [power](./power.md)
 - [mechanical](./mechanical.md)
+- [terraform](./terraform.md)
 
 items:::
 

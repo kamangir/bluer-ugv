@@ -4,7 +4,7 @@
 
 2. run,
 ```bash
-@swallow env cp swallow[-head]
+@swallow env cp swallow | swallow-head
 
 @select; @session start
 ```

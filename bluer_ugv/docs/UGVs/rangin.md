@@ -4,13 +4,13 @@ an ad robot.
 
 - class: [rangin](../rangin)
 - computer(s):
-    - `rangin-front`
-        - terraform is pending. 🚧
-    - `rangin-top`.
+    - `arzhang3-front`
+    - `rangin-top2`.
+        - build is ongoing. 🔥
 - mechanical design is ongoing. 🔥
 
-validations: 
 
-|   |
-| --- |
-| [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true) |
+
+|   |   |
+| --- | --- |
+| [![image](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/rangin/robot.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/rangin/20251221_125120.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/rangin/20251221_125120.jpg?raw=true) |
