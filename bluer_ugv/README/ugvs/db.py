@@ -5,7 +5,7 @@ from bluer_ugv.README.rangin.consts import rangin_assets2, rangin_mechanical_des
 dict_of_ugvs = {
     "swallow": {
         "order": 1,
-        "cols": 2,
+        "cols": 1,
         "items": [
             f"{swallow_assets2}/20250701_2206342_1.gif",
             f"{swallow_assets2}/20250913_203635~2_1.gif",
