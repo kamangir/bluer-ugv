@@ -7,6 +7,8 @@ the first one with two computers.
     - `arzhang3-front`
     - `sparrow3-back`.
 
+-> [rangin](./rangin.md)
+
 validations: [`village-7`](../validations/village-7.md)
 
 |   |   |   |
