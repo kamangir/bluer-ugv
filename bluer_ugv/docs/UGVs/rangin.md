@@ -9,7 +9,7 @@ an ad robot.
         - build is ongoing. 🔥
 - mechanical design is ongoing. 🔥
 
-validations: 
+
 
 |   |   |
 | --- | --- |

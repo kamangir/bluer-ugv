@@ -10,7 +10,7 @@ docs = [
         "items": ImageItems({item: "" for item in info.get("items", [])}),
         "macros": {
             "validations:::": [
-                "validations: {}".format(
+                (lambda thing: f"validations: {thing}" if thing else "")(
                     ", ".join(
                         sorted(
                             [
