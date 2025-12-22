@@ -9,4 +9,4 @@
 |   |   |   |
 | --- | --- | --- |
 | [`swallow`](./swallow.md) [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251216_205015.jpg/?raw=true)](./swallow.md)  | [`arzhang`](./arzhang.md) [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_111322.jpg/?raw=true)](./arzhang.md)  | [`arzhang2`](./arzhang2.md) [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251210_154513.jpg/?raw=true)](./arzhang2.md)  |
-| [`arzhang3`](./arzhang3.md) [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251210_154654.jpg/?raw=true)](./arzhang3.md)  | [`rangin`](./rangin.md) [![image](https://github.com/kamangir/assets2/raw/main/rangin/20251222_110634.jpg/?raw=true)](./rangin.md)  |  |
+| [`arzhang3`](./arzhang3.md) [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251210_154654.jpg/?raw=true)](./arzhang3.md)  | [`rangin`](./rangin.md) [![image](https://github.com/kamangir/assets2/raw/main/rangin/20251222_173509.jpg/?raw=true)](./rangin.md)  |  |
