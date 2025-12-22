@@ -46,6 +46,8 @@ dict_of_ugvs = {
         "items": [
             f"{rangin_mechanical_design}/robot.png",
             f"{rangin_assets2}/20251221_125120.jpg",
+            f"{rangin_assets2}/20251222_104404.jpg",
+            f"{rangin_assets2}/20251222_110634.jpg",
         ],
     },
 }
