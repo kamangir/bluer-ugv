@@ -5,10 +5,10 @@ function bluer_ugv_rangin_init() {
     local do_install=$(bluer_ai_option_int "$options" install 0)
 
     if [[ "$do_install" == 1 ]]; then
-        [[ "$abcli_is_rpi" == 1 ]] &&
+        [[ "$abcli_is_rpi" == true ]] &&
             sudo apt install -y alsa-utils wlr-randr
     fi
 
-    [[ "$abcli_is_rpi" == 1 ]] &&
+    [[ "$abcli_is_rpi" == true ]] &&
         wlr-randr --output HDMI-A-1 --transform 90
 }
