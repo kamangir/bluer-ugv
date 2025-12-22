@@ -16,6 +16,7 @@ shortcuts:::
 
 ## aliases
 
+[@rangin](./bluer_ugv/docs/aliases/rangin.md), 
 [@swallow](./bluer_ugv/docs/aliases/swallow.md), 
 [@ugv](./bluer_ugv/docs/aliases/ugv.md).
 

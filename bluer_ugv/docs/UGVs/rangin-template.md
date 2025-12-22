@@ -6,8 +6,6 @@ an ad robot.
 - computer(s):
     - `arzhang3-front`
     - `rangin-top2`.
-        - build is ongoing. 🔥
-- mechanical design is ongoing. 🔥
 
 validations:::
 

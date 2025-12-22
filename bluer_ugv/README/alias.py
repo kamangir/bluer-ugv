@@ -1,11 +1,11 @@
 docs = [
     {
-        "path": "../docs/aliases",
-    },
-    {
-        "path": "../docs/aliases/swallow.md",
-    },
-    {
-        "path": "../docs/aliases/ugv.md",
-    },
+        "path": f"../docs/aliases/{alias}",
+    }
+    for alias in [
+        "",
+        "rangin.md",
+        "swallow.md",
+        "ugv.md",
+    ]
 ]

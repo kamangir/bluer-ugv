@@ -4,6 +4,11 @@
 
 2. run,
 ```bash
+@rangin init install
+```
+
+3. run,
+```bash
 @swallow env cp swallow | swallow-head | rangin-top
 
 @select; @session start
