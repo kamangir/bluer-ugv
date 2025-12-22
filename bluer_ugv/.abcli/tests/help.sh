@@ -5,9 +5,6 @@ function test_bluer_ugv_help() {
 
     local module
     for module in \
-        "@rangin" \
-        "@rangin init" \
-        \
         "@swallow" \
         "@swallow dataset" \
         "@swallow dataset combine" \

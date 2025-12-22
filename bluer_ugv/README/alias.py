@@ -4,7 +4,6 @@ docs = [
     }
     for alias in [
         "",
-        "rangin.md",
         "swallow.md",
         "ugv.md",
     ]
