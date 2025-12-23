@@ -29,7 +29,7 @@ from bluer_ugv.swallow.session.classical.screen.classes import ClassicalScreen
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
     ClassicalUltrasonicSensor,
 )
-from bluer_ugv.swallow.session.classical.audio import ClassicalAudio
+from bluer_ugv.swallow.session.classical.audio.classes import ClassicalAudio
 from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 
