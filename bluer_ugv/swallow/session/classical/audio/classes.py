@@ -1,6 +1,6 @@
 import threading
 import time
-from typing import Dict
+from typing import Dict, List
 
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
@@ -33,7 +33,7 @@ class ClassicalAudio:
 
         self.running = False
 
-        self.log: Dict[str, Dict] = {}
+        self.log: List[Dict[str, Dict]] = []
 
         if not self.enabled:
             return
