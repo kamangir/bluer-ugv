@@ -77,6 +77,7 @@ class VideoEngine(Enum):
                     "cvlc",
                     "--fullscreen",
                     "--no-video-title-show",
+                    "--no-audio-capture",
                     "--video-on-top",
                     "--no-osd",
                     "--loop" if loop else "",
