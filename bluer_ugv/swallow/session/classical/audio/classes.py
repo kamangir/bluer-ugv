@@ -1,9 +1,15 @@
 import threading
 import time
+from typing import Dict
 
+from bluer_objects.env import abcli_object_name
+from bluer_objects.metadata import post_to_object
 
+from bluer_agent.audio.properties import AudioProperties
+from bluer_agent.transcription.functions import transcribe
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
+from bluer_ugv import env
 from bluer_ugv.logger import logger
 
 
@@ -19,7 +25,15 @@ class ClassicalAudio:
             )
         )
 
+        self.audio_properties = AudioProperties(
+            rate=env.BLUER_UGV_AUDIO_RATE,
+            channels=env.BLUER_UGV_AUDIO_CHANNELS,
+            length=env.BLUER_UGV_AUDIO_LENGTH,
+        )
+
         self.running = False
+
+        self.log: Dict[str, Dict] = {}
 
         if not self.enabled:
             return
@@ -37,9 +51,25 @@ class ClassicalAudio:
 
         logger.info(f"{self.__class__.__name__}.stopped.")
 
+        post_to_object(
+            abcli_object_name,
+            "audio",
+            self.log,
+        )
+
     def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            time.sleep(5)
-            logger.info("audio loop 🪄")
+            success, text = transcribe(
+                object_name=abcli_object_name,
+                language=env.BLUER_UGV_AUDIO_LANGUAGE,
+                record=True,
+                properties=self.audio_properties,
+            )
+            if success:
+                self.log += [
+                    {"user": text},
+                ]
+
+            time.sleep(1)
