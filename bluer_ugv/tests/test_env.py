@@ -10,41 +10,44 @@ def test_required_env():
 
 
 def test_bluer_ugv_env():
-    assert env.BLUER_UGV_BEAST_MODEL
+    for var in [
+        env.BLUER_UGV_CAMERA_ACTION_PERIOD,
+        env.BLUER_UGV_CAMERA_TRAINING_PERIOD,
+        env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY,
+        env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD,
+        env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD,
+    ]:
+        assert isinstance(var, float)
+        assert var > 0
 
-    assert isinstance(env.BLUER_UGV_CAMERA_TRAINING_PERIOD, float)
-    assert env.BLUER_UGV_CAMERA_TRAINING_PERIOD > 0
+    for var in [
+        env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
+        env.BLUER_UGV_AUDIO_CHANNELS,
+        env.BLUER_UGV_AUDIO_LENGTH,
+        env.BLUER_UGV_AUDIO_RATE,
+    ]:
+        assert isinstance(var, int)
+        assert var > 0
 
-    assert isinstance(env.BLUER_UGV_CAMERA_ACTION_PERIOD, float)
-    assert env.BLUER_UGV_CAMERA_ACTION_PERIOD > 0
-
-    assert isinstance(env.BLUER_UGV_SWALLOW_STEERING_SETPOINT, int)
-    assert env.BLUER_UGV_SWALLOW_STEERING_SETPOINT > 0
-
-    assert isinstance(env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY, float)
-    assert env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY > 0
-
-    assert isinstance(env.BLUER_UGV_MOUSEPAD_ENABLED, int)
-
-    for object_name in [
+    for var in [
+        env.BLUER_UGV_AUDIO_LANGUAGE,
+        env.BLUER_UGV_BEAST_MODEL,
         env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
         env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
         env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
         env.BLUER_UGV_SWALLOW_YOLO_MODEL,
+        env.BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT,
         env.RANGIN_VIDEO_LIST_OBJECT,
+        env.BLUER_UGV_RELEASE_2,
     ]:
-        assert isinstance(object_name, str)
-        assert object_name
+        assert isinstance(var, str)
+        assert var
 
-    assert isinstance(env.BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT, str)
-
-    assert isinstance(env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD, float)
-    assert isinstance(env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD, float)
-
-    assert env.BLUER_UGV_ULTRASONIC_SENSOR_ENABLED in (0, 1)
-
-    assert env.BLUER_UGV_ULTRASONIC_SENSOR_KEEP_LOG in (0, 1)
-
-    assert env.BLUER_UGV_ULTRASONIC_SENSOR_LOG in (0, 1)
-
-    assert env.BLUER_UGV_RELEASE_2
+    for var in [
+        env.BLUER_UGV_MOUSEPAD_ENABLED,
+        env.BLUER_UGV_ULTRASONIC_SENSOR_ENABLED,
+        env.BLUER_UGV_ULTRASONIC_SENSOR_ENABLED,
+        env.BLUER_UGV_ULTRASONIC_SENSOR_KEEP_LOG,
+        env.BLUER_UGV_ULTRASONIC_SENSOR_LOG,
+    ]:
+        assert var in (0, 1)
