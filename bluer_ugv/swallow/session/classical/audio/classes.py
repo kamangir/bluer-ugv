@@ -10,12 +10,14 @@ from bluer_agent.transcription.functions import transcribe
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
 from bluer_ugv import env
+from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.logger import logger
 
 
 class ClassicalAudio:
     def __init__(
         self,
+        leds: ClassicalLeds,
     ):
         self.enabled = BLUER_SBC_AUDIO_ENABLED == 1
         logger.info(
@@ -30,6 +32,8 @@ class ClassicalAudio:
             channels=env.BLUER_UGV_AUDIO_CHANNELS,
             length=env.BLUER_UGV_AUDIO_LENGTH,
         )
+
+        self.leds = leds
 
         self.running = False
 
@@ -68,6 +72,7 @@ class ClassicalAudio:
                 properties=self.audio_properties,
             )
             if success:
+                self.leds.flash("red")
                 self.log += [
                     {"user": text},
                 ]

@@ -45,7 +45,9 @@ class ClassicalSession:
 
         self.leds = ClassicalLeds()
 
-        self.audio = ClassicalAudio()
+        self.audio = ClassicalAudio(
+            leds=self.leds,
+        )
 
         self.setpoint = ClassicalSetPoint(
             leds=self.leds,
