@@ -12,6 +12,10 @@ help::: bluer_ugv swallow debug
 
 help::: bluer_ugv swallow env
 
+## git
+
+help::: bluer_ugv swallow git
+
 ## keyboard
 
 help::: bluer_ugv swallow keyboard
