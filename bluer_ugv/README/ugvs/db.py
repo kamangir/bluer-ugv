@@ -54,6 +54,10 @@ dict_of_ugvs = {
             f"{rangin_assets2}/IMG-20251223-WA0001.jpg",
             f"{rangin_assets2}/IMG-20251223-WA0009.jpg",
             f"{rangin_assets2}/IMG-20251223-WA0010.jpg",
+            f"{rangin_assets2}/20251224_180302.jpg",
+            f"{rangin_assets2}/20251224_180308.jpg",
+            f"{rangin_assets2}/20251224_180319.jpg",
+            f"{rangin_assets2}/20251224_182306~3_1.gif",
         ],
     },
 }
