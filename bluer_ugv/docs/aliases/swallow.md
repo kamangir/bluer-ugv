@@ -70,6 +70,16 @@
     screen: BLUER_SBC_ENABLE_SCREEN (currently: 1)steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: 1)
 ```
 
+## git
+
+```bash
+@swallow \
+	git \
+	rm_keys \
+	[~dryrun,undo]
+ . (undo) rm github keys.
+```
+
 ## keyboard
 
 ```bash

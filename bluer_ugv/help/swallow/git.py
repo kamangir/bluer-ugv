@@ -7,7 +7,7 @@ def help_rm_keys(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = "~dryrun"
+    options = "~dryrun,undo"
 
     return show_usage(
         [
@@ -16,7 +16,7 @@ def help_rm_keys(
             "rm_keys",
             f"[{options}]",
         ],
-        "rm github keys.",
+        "(undo) rm github keys.",
         mono=mono,
     )
 
