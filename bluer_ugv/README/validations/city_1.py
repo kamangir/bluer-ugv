@@ -7,12 +7,25 @@ from bluer_objects import markdown
 from bluer_objects import env
 
 
-def objects() -> List[str]:
-    success, list_of_objects = storage.ls_objects(
-        prefix="2025-12-09",
-        where="cloud",
-    )
-    assert success
+def objects(
+    use_cache: bool = True,
+) -> List[str]:
+    if use_cache:
+        list_of_objects = [
+            "2025-12-09-08-16-53-a4rfg2",
+            "2025-12-09-08-52-54-jre3xs",
+            "2025-12-09-09-09-43-ljsjbb",
+            "2025-12-09-10-51-24-2dfnau",
+            "2025-12-09-14-36-28-3o4zvv",
+            "2025-12-09-16-42-23-h1awiz",
+            "2025-12-09-18-52-03-7jo931",
+        ]
+    else:
+        success, list_of_objects = storage.ls_objects(
+            prefix="2025-12-09",
+            where="cloud",
+        )
+        assert success
 
     return markdown.generate_table(
         Items(
