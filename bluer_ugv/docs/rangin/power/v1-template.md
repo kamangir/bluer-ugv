@@ -1,6 +1,6 @@
-# rangin: power
+title:::
 
-- uses [swallow computer power](./../swallow/digital/design/computer/power.md).
+- uses [swallow computer power](../../swallow/digital/design/computer/power.md).
    - swallow: 60 W
    - 3 x swallow-head: 3 x 10 W = 30 W @ 12 V DC
 - 2 x [40 inch TVs](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/TV.md): 2 x 0.2-0.5 A @ 220 V AC = 88 - 220 W @ 220 V AC -80%-90% efficiency of power inverter-> 100 - 260 W @ 12 V DC ~= 9 - 22 A
@@ -15,5 +15,3 @@
 | 5 h | 1500 Wh | 125 Ah | 150 Ah | 140–150 Ah |
 
 > SLA: 85%, LiPo: 90%
-
-
