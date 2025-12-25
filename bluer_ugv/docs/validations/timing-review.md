@@ -86,38 +86,7 @@ loop frequency (Hz): 570.76
 <summary>yaml</summary>
 
 ```yaml
-ClassicalKeyboard:
-  average: 0.000980741563002365
-  count: 5881
-  total: 5.7677411320169085
-ClassicalLeds:
-  average: 0.00019095355415421297
-  count: 5881
-  total: 1.1229978519809265
-ClassicalLeftMotor:
-  average: 0.00015103849719449376
-  count: 5881
-  total: 0.8882574020008178
-ClassicalPushButton:
-  average: 7.08729685428869e-05
-  count: 5881
-  total: 0.41680392800071786
-ClassicalRightMotor:
-  average: 0.0002535338092136507
-  count: 5881
-  total: 1.4910323319854797
-ClassicalSetPoint:
-  average: 1.0343385477002432e-05
-  count: 5881
-  total: 0.060829449990251305
-ClassicalYoloCamera:
-  average: 5.568318821771838e-06
-  count: 5881
-  total: 0.032747282990840176
-session.update:
-  average: 0.0017520639202520283
-  count: 5881
-  total: 10.303887915002178
+{}
 
 ```
 

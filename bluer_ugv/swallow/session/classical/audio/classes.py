@@ -38,7 +38,10 @@ class ClassicalAudio:
 
         self.leds = leds
 
-        self.context = Context(BLUER_AGENT_RAG_CORPUS_TEST_OBJECT)
+        self.context = Context(
+            BLUER_AGENT_RAG_CORPUS_TEST_OBJECT,
+            download=True,
+        )
 
         self.running = False
 
