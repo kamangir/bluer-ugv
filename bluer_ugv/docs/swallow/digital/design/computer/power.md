@@ -18,7 +18,9 @@ total: ~ 10 W ~= ~1.8 A @ 5.1 V DC ~= 1 A @ 12 V DC (90% efficiency)
 total: 
 - mostly idling: 1 A == 12 W
 - cruising driving: 1 A + 4 x 1 A = 5 A == 60 W
-- aggressive driving: 1 A + 4 x 2 A = 9 A == 108 W
+- aggressive driving: 1 A + 4 x 2 A = 9 A == 108 W 
+
+> ℹ️ 9-10 A on the battery bus was measured on a [rangin](../../../../rangin) with one TV while turning (heavy load).
 
 | option | battery | rated Wh | usable Wh | aggressive Driving | cruising driving | mostly idling |
 |-|-|-|-|-|-|-|
