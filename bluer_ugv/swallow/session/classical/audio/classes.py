@@ -79,29 +79,36 @@ class ClassicalAudio:
                 record=True,
                 properties=self.audio_properties,
             )
-            if text and success:
-                self.leds.flash("yellow")
+            if not success or not text:
+                time.sleep(1)
+                continue
 
-                success, query_context = self.context.generate(
+            self.leds.flash("yellow")
+
+            success, query_context = self.context.generate(
+                query=text,
+            )
+            if not success:
+                time.sleep(1)
+                continue
+
+            success, reply = chat(
+                messages=build_prompt(
                     query=text,
+                    context=query_context["chunks"],
                 )
+            )
+            if not success:
+                time.sleep(1)
+                continue
 
-            if success:
-                success, reply = chat(
-                    messages=build_prompt(
-                        query=text,
-                        context=query_context["chunks"],
-                    )
-                )
+            self.leds.flash("red")
 
-            if success:
-                self.leds.flash("red")
-
-                self.log += [
-                    {
-                        "user": text,
-                        "assistant": reply,
-                    },
-                ]
+            self.log += [
+                {
+                    "user": text,
+                    "assistant": reply,
+                },
+            ]
 
             time.sleep(1)
