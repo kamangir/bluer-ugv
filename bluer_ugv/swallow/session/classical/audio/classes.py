@@ -4,11 +4,13 @@ from typing import Dict, List
 
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
+from bluer_agent.audio.play import play
 from bluer_agent.audio.properties import AudioProperties
 from bluer_agent.chat.functions import chat
 from bluer_agent.rag.corpus.context import Context
 from bluer_agent.rag.prompt import build_prompt
 from bluer_agent.transcription.functions import transcribe
+from bluer_agent.voice.functions import generate_voice
 from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_TEST_OBJECT
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
@@ -73,20 +75,20 @@ class ClassicalAudio:
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            success, text = transcribe(
+            success, query = transcribe(
                 object_name=abcli_object_name,
                 language=env.BLUER_UGV_AUDIO_LANGUAGE,
                 record=True,
                 properties=self.audio_properties,
             )
-            if not success or not text:
+            if not success or not query:
                 time.sleep(1)
                 continue
 
             self.leds.flash("yellow")
 
             success, query_context = self.context.generate(
-                query=text,
+                query=query,
             )
             if not success:
                 time.sleep(1)
@@ -94,7 +96,7 @@ class ClassicalAudio:
 
             success, reply = chat(
                 messages=build_prompt(
-                    query=text,
+                    query=query,
                     context=query_context["chunks"],
                 )
             )
@@ -102,13 +104,34 @@ class ClassicalAudio:
                 time.sleep(1)
                 continue
 
-            self.leds.flash("red")
+            self.leds.flash("yellow")
+
+            success, reply_sentence = self.context.understand_reply(reply)
+            if not success:
+                time.sleep(1)
+                continue
 
             self.log += [
                 {
-                    "user": text,
-                    "assistant": reply,
+                    "user": query,
+                    "assistant": reply_sentence,
                 },
             ]
 
+            success, filename = generate_voice(
+                object_name=abcli_object_name,
+                sentence=reply_sentence,
+            )
+            if not success:
+                time.sleep(1)
+                continue
+
+            self.leds.flash("yellow")
+
+            play(
+                object_name=abcli_object_name,
+                filename=filename,
+            )
+
+            self.leds.flash("red")
             time.sleep(1)
