@@ -79,7 +79,7 @@ class ClassicalAudio:
                 record=True,
                 properties=self.audio_properties,
             )
-            if success:
+            if text and success:
                 self.leds.flash("yellow")
 
                 success, query_context = self.context.generate(
