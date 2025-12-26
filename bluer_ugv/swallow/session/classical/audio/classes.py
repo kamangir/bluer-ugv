@@ -4,9 +4,12 @@ from typing import Dict, List
 
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
-
 from bluer_agent.audio.properties import AudioProperties
+from bluer_agent.chat.functions import chat
+from bluer_agent.rag.corpus.context import Context
+from bluer_agent.rag.prompt import build_prompt
 from bluer_agent.transcription.functions import transcribe
+from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_TEST_OBJECT
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
 from bluer_ugv import env
@@ -34,6 +37,11 @@ class ClassicalAudio:
         )
 
         self.leds = leds
+
+        self.context = Context(
+            BLUER_AGENT_RAG_CORPUS_TEST_OBJECT,
+            download=True,
+        )
 
         self.running = False
 
@@ -71,10 +79,36 @@ class ClassicalAudio:
                 record=True,
                 properties=self.audio_properties,
             )
-            if success:
-                self.leds.flash("red")
-                self.log += [
-                    {"user": text},
-                ]
+            if not success or not text:
+                time.sleep(1)
+                continue
+
+            self.leds.flash("yellow")
+
+            success, query_context = self.context.generate(
+                query=text,
+            )
+            if not success:
+                time.sleep(1)
+                continue
+
+            success, reply = chat(
+                messages=build_prompt(
+                    query=text,
+                    context=query_context["chunks"],
+                )
+            )
+            if not success:
+                time.sleep(1)
+                continue
+
+            self.leds.flash("red")
+
+            self.log += [
+                {
+                    "user": text,
+                    "assistant": reply,
+                },
+            ]
 
             time.sleep(1)
