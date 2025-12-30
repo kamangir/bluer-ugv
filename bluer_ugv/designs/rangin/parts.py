@@ -5,7 +5,7 @@ dict_of_parts = {
     "power-inverter": "continuous output ≥ 400-500 W, surge output ≥ 800 W",
     "power-adapter": "12V DC, 10 A",
     "TV-bracket": "2 x",
-    "dc-volt-meter": "0 - 50 V, 0 - 50 A",
+    "dsn-vc288": "with shunt",
     "mcb": "2 - 3 A @ 220 V AC",
     "ac-volt-meter": "220 V, 5 A",
     "safety-fuse": "30 mA trip",
