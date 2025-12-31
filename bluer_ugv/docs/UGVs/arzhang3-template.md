@@ -1,6 +1,6 @@
 title:::
 
-the first one with two computers.
+the first [arzhang](../arzhang) with two computers.
 
 - class: [arzhang](../arzhang)
 - computer(s):

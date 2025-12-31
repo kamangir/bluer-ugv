@@ -1,3 +1,4 @@
+from bluer_ugv.README.consts import assets_url
 from bluer_ugv.README.swallow.consts import swallow_assets2
 from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
 from bluer_ugv.README.rangin.consts import rangin_assets2, rangin_mechanical_design
@@ -67,6 +68,15 @@ dict_of_ugvs = {
             f"{rangin_assets2}/20251231_111815.jpg",
             f"{rangin_assets2}/20251231_111923.jpg",
             f"{rangin_assets2}/20251231_112447.jpg",
+        ],
+    },
+    "arzhang4": {
+        "order": 6,
+        "items": [
+            assets_url(
+                suffix="bluer-sbc/parts/GM6558/01.jpg",
+                volume=2,
+            ),
         ],
     },
 }
