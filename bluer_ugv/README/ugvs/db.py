@@ -69,4 +69,8 @@ dict_of_ugvs = {
             f"{rangin_assets2}/20251231_112447.jpg",
         ],
     },
+    "arzhang4": {
+        "order": 6,
+        "items": [],
+    },
 }
