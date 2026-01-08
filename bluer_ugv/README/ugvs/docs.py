@@ -23,7 +23,6 @@ docs = [
             "computers:::": (
                 (
                     [
-                        "",
                         "- computer(s):",
                     ]
                     + [

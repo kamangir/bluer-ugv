@@ -3,7 +3,6 @@
 the first one.
 
 - class: [swallow](../swallow)
-
 - computer(s):
     - `swallow2`
 
