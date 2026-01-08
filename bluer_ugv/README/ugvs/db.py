@@ -1,6 +1,10 @@
 from bluer_ugv.README.consts import assets_url
 from bluer_ugv.README.swallow.consts import swallow_assets2
-from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
+from bluer_ugv.README.arzhang.consts import (
+    arzhang_assets,
+    arzhang_assets2,
+    arzhang2_assets2,
+)
 from bluer_ugv.README.rangin.consts import rangin_assets2, rangin_mechanical_design
 
 dict_of_ugvs = {
@@ -36,6 +40,7 @@ dict_of_ugvs = {
         "order": 3,
         "items": [
             f"{arzhang_assets2}/20251210_154513.jpg",
+            f"{arzhang2_assets2}/20260108_175635.jpg",
         ],
         "tagline": "an [arzhang](../arzhang) with updated body design.",
         "class": "arzhang",
