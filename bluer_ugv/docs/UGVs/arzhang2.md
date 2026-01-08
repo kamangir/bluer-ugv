@@ -1,7 +1,7 @@
 # UGVs: arzhang2
 
 
-- class: [swallow](../swallow)
+- class: [arzhang](../arzhang)
 - computer(s):
 
 validations: [`timing-review`](../validations/timing-review.md), [`village-4`](../validations/village-4.md), [`village-5`](../validations/village-5.md), [`village-6`](../validations/village-6.md), [`village-7`](../validations/village-7.md)

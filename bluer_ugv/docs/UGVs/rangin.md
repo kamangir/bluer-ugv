@@ -1,7 +1,7 @@
 # UGVs: rangin
 
 
-- class: [swallow](../swallow)
+- class: [rangin](../rangin)
 - computer(s):
 
 

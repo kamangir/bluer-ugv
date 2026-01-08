@@ -10,7 +10,7 @@ docs = [
         "items": ImageItems({item: "" for item in info.get("items", [])}),
         "macros": {
             "class:::": "[{class_name}](../{class_name})".format(
-                class_name=info.get("class_name", "swallow"),
+                class_name=info.get("class", "swallow"),
             ),
             "computers:::": [],
             "comments:::": [],

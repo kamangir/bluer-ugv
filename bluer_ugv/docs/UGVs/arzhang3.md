@@ -1,7 +1,7 @@
 # UGVs: arzhang3
 
 
-- class: [swallow](../swallow)
+- class: [arzhang](../arzhang)
 - computer(s):
 
 validations: [`village-7`](../validations/village-7.md)

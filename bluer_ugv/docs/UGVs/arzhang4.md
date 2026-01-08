@@ -1,7 +1,7 @@
 # UGVs: arzhang4
 
 
-- class: [swallow](../swallow)
+- class: [['arzhang', 'with external motors.']](../['arzhang', 'with external motors.'])
 - computer(s):
 
 
