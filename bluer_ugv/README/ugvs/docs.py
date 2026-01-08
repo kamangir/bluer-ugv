@@ -16,19 +16,17 @@ docs = [
                 (
                     [
                         "",
-                        "computer(s):",
+                        "- computer(s):",
                     ]
                     + [
-                        "- `{}`".format(computer_name)
+                        "    - `{}`".format(computer_name)
                         for computer_name in info["computers"]
                     ]
                 )
                 if "computers" in info
                 else []
             ),
-            "comments:::": [
-                "- `{}`".format(comment) for comment in info.get("comments", [])
-            ],
+            "comments:::": [f"- {comment}" for comment in info.get("comments", [])],
             "tagline:::": info.get("tagline", ""),
             "validations:::": [
                 (lambda thing: f"validations: {thing}" if thing else "")(

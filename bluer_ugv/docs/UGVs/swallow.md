@@ -4,8 +4,8 @@ the first one.
 
 - class: [swallow](../swallow)
 
-computer(s):
-- `swallow2`
+- computer(s):
+    - `swallow2`
 
 
 
