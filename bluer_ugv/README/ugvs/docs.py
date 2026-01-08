@@ -14,7 +14,10 @@ docs = [
             ),
             "computers:::": (
                 (
-                    ["computer(s):"]
+                    [
+                        "",
+                        "computer(s):",
+                    ]
                     + [
                         "- `{}`".format(computer_name)
                         for computer_name in info["computers"]
@@ -23,7 +26,9 @@ docs = [
                 if "computers" in info
                 else []
             ),
-            "comments:::": [],
+            "comments:::": [
+                "- `{}`".format(comment) for comment in info.get("comments", [])
+            ],
             "tagline:::": info.get("tagline", ""),
             "validations:::": [
                 (lambda thing: f"validations: {thing}" if thing else "")(
