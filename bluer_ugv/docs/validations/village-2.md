@@ -1,6 +1,6 @@
 # validations: village-2
 
-UGV(s): UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
+UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
 |   |   |   |
 | --- | --- | --- |

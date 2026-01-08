@@ -1,6 +1,6 @@
 title:::
 
-UGV(s): ugv_name:::
+ugv_name:::
 
 ## objects
 
