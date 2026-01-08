@@ -26,8 +26,11 @@ docs = [
                         "- computer(s):",
                     ]
                     + [
-                        "    - `{}`".format(computer_name)
-                        for computer_name in info["computers"]
+                        "    - `{}`{}".format(
+                            computer_name,
+                            f" ({description})" if description else "",
+                        )
+                        for computer_name, description in info["computers"].items()
                     ]
                 )
                 if "computers" in info
