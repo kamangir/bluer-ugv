@@ -1,11 +1,8 @@
 # UGVs: rangin
 
-an ad robot.
 
-- class: [rangin](../rangin)
+- class: [swallow](../swallow)
 - computer(s):
-    - `arzhang3-front`
-    - `rangin-top2`.
 
 
 

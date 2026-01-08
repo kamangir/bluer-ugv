@@ -1,11 +1,11 @@
 title:::
 
-an ad robot.
+tagline:::
 
-- class: [rangin](../rangin)
+- class: class:::
 - computer(s):
-    - `arzhang3-front`
-    - `rangin-top2`.
+computers:::
+comments:::
 
 validations:::
 

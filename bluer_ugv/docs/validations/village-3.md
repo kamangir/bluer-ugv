@@ -1,6 +1,6 @@
 # validations: village-3
 
-UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
+UGV(s): UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
 |   |   |
 | --- | --- |
@@ -45,7 +45,7 @@ runme publish swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 
 
-[swallow-debug-2025-09-25-13-16-59-rnm7jd](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-debug-2025-09-25-13-16-59-rnm7jd.tar.gz)
+[swallow-debug-2025-09-25-13-16-59-rnm7jd.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-debug-2025-09-25-13-16-59-rnm7jd.tar.gz)
 
 ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/swallow-debug-2025-09-25-13-16-59-rnm7jd.gif?raw=true)
 

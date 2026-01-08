@@ -1,13 +1,11 @@
 title:::
 
-the first [arzhang](../arzhang) with two computers.
+tagline:::
 
-- class: [arzhang](../arzhang)
+- class: class:::
 - computer(s):
-    - `arzhang3-front`
-    - `sparrow3-back`.
-
--> [rangin](./rangin.md)
+computers:::
+comments:::
 
 validations:::
 

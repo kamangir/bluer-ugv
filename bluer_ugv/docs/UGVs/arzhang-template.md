@@ -1,11 +1,11 @@
 title:::
 
-the first [arzhang](../arzhang).
+tagline:::
 
-- class: [arzhang](../arzhang)
+- class: class:::
 - computer(s):
-    - `sparrow`.
-    - 🔥
+computers:::
+comments:::
 
 validations:::
 

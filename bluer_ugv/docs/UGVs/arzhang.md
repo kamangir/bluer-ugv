@@ -1,11 +1,8 @@
 # UGVs: arzhang
 
-the first [arzhang](../arzhang).
 
-- class: [arzhang](../arzhang)
+- class: [swallow](../swallow)
 - computer(s):
-    - `sparrow`.
-    - 🔥
 
 validations: [`city-1`](../validations/city-1.md), [`village-1`](../validations/village-1.md), [`village-2`](../validations/village-2.md), [`village-3`](../validations/village-3.md), [`village-5`](../validations/village-5.md), [`village-6`](../validations/village-6.md), [`village-7`](../validations/village-7.md)
 

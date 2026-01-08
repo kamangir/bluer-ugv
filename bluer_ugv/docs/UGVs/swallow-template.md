@@ -1,10 +1,11 @@
 title:::
 
-the first one.
+tagline:::
 
-- class: [swallow](../swallow)
+- class: class:::
 - computer(s):
-    - `swallow2` (`swallow` was used for Ubuntu experiments).
+computers:::
+comments:::
 
 validations:::
 

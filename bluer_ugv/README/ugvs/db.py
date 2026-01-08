@@ -12,17 +12,39 @@ dict_of_ugvs = {
             f"{swallow_assets2}/20250913_203635~2_1.gif",
             f"{swallow_assets2}/20251216_205015.jpg",
         ],
+        "tagline": "the first one.",
+        "class": "swallow",
+        "computers": {
+            "swallow2": "`swallow` was used for Ubuntu experiments",
+        },
     },
     "arzhang": {
         "order": 2,
         "items": [
             f"{arzhang_assets2}/20251209_111322.jpg",
         ],
+        "tagline": "the first [arzhang](../arzhang).",
+        "class": "arzhang",
+        "computers": {
+            "sparrow": "",
+        },
+        "comments": [
+            "disassembled 🛑",
+        ],
     },
     "arzhang2": {
         "order": 3,
         "items": [
             f"{arzhang_assets2}/20251210_154513.jpg",
+        ],
+        "tagline": "an [arzhang](../arzhang) with updated body design.",
+        "class": "arzhang",
+        "computers": {
+            "sparrow2": "",
+            "arzhang3-back": "",
+        },
+        "comments": [
+            "build is ongoing. 🔥",
         ],
     },
     "arzhang3": {
@@ -41,6 +63,15 @@ dict_of_ugvs = {
                 f"{arzhang_assets2}/20251210_154654.jpg",
             ]
         ),
+        "tagline": "the first [arzhang](../arzhang) with two computers.",
+        "class": "arzhang",
+        "computers": {
+            "arzhang3-front": "",
+            "sparrow3-back": "",
+        },
+        "comments": [
+            "-> [rangin](./rangin.md) 🛑",
+        ],
     },
     "rangin": {
         "order": 5,
@@ -69,6 +100,15 @@ dict_of_ugvs = {
             f"{rangin_assets2}/20251231_111923.jpg",
             f"{rangin_assets2}/20251231_112447.jpg",
         ],
+        "tagline": "an ad robot.",
+        "class": "rangin",
+        "computers": {
+            "arzhang3-front": "",
+            "rangin-top2": "",
+        },
+        "comments": [
+            "built on [arzhang3](./arzhang3.md).",
+        ],
     },
     "arzhang4": {
         "order": 6,
@@ -78,5 +118,11 @@ dict_of_ugvs = {
                 volume=2,
             ),
         ],
+        "tagline": "the first [arzhang](../arzhang) with [external motors](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/DC-gearboxed-motor-12V-120RPM.md).",
+        "class": [
+            "arzhang",
+            "with external motors.",
+        ],
+        "comments": "build is ongoing. 🔥",
     },
 }

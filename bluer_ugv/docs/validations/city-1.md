@@ -1,6 +1,6 @@
 # validations: city-1
 
-UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
+UGV(s): UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
 ## objects
 

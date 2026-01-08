@@ -9,6 +9,12 @@ docs = [
         "cols": info.get("cols", 3),
         "items": ImageItems({item: "" for item in info.get("items", [])}),
         "macros": {
+            "class:::": "[{class_name}](../{class_name})".format(
+                class_name=info.get("class_name", "swallow"),
+            ),
+            "computers:::": [],
+            "comments:::": [],
+            "tagline:::": [],
             "validations:::": [
                 (lambda thing: f"validations: {thing}" if thing else "")(
                     ", ".join(
@@ -24,7 +30,7 @@ docs = [
                         )
                     )
                 ),
-            ]
+            ],
         },
     }
     for ugv_name, info in dict_of_ugvs.items()
