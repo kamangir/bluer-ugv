@@ -56,7 +56,7 @@ docs = [
             ]
         ),
         "macros": {
-            "list": [
+            "list:::": [
                 f"- [{ugv_name}](./{ugv_name}.md)"
                 for ugv_name in sorted(
                     dict_of_ugvs.keys(),

@@ -1,6 +1,11 @@
 # UGVs
 
-- [swallow](./swallow.md) - [arzhang](./arzhang.md) - [arzhang2](./arzhang2.md) - [arzhang3](./arzhang3.md) - [rangin](./rangin.md) - [arzhang4](./arzhang4.md):::
+- [swallow](./swallow.md)
+- [arzhang](./arzhang.md)
+- [arzhang2](./arzhang2.md)
+- [arzhang3](./arzhang3.md)
+- [rangin](./rangin.md)
+- [arzhang4](./arzhang4.md)
 
 |   |   |   |
 | --- | --- | --- |
