@@ -1,8 +1,8 @@
 # UGVs: arzhang4
 
+the first [arzhang](../arzhang) with [external motors](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/DC-gearboxed-motor-12V-120RPM.md).
 
 - class: [['arzhang', 'with external motors.']](../['arzhang', 'with external motors.'])
-- computer(s):
 
 
 

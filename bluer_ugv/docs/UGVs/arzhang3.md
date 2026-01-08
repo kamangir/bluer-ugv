@@ -1,8 +1,11 @@
 # UGVs: arzhang3
 
+the first [arzhang](../arzhang) with two computers.
 
 - class: [arzhang](../arzhang)
-- computer(s):
+computer(s):
+- `arzhang3-front`
+- `sparrow3-back`
 
 validations: [`village-7`](../validations/village-7.md)
 

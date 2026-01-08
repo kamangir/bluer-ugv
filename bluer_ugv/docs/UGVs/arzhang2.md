@@ -1,8 +1,11 @@
 # UGVs: arzhang2
 
+an [arzhang](../arzhang) with updated body design.
 
 - class: [arzhang](../arzhang)
-- computer(s):
+computer(s):
+- `sparrow2`
+- `arzhang3-back`
 
 validations: [`timing-review`](../validations/timing-review.md), [`village-4`](../validations/village-4.md), [`village-5`](../validations/village-5.md), [`village-6`](../validations/village-6.md), [`village-7`](../validations/village-7.md)
 

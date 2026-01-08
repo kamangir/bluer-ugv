@@ -1,8 +1,10 @@
 # UGVs: swallow
 
+the first one.
 
 - class: [swallow](../swallow)
-- computer(s):
+computer(s):
+- `swallow2`
 
 
 

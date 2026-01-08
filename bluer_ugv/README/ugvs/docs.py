@@ -12,9 +12,19 @@ docs = [
             "class:::": "[{class_name}](../{class_name})".format(
                 class_name=info.get("class", "swallow"),
             ),
-            "computers:::": [],
+            "computers:::": (
+                (
+                    ["computer(s):"]
+                    + [
+                        "- `{}`".format(computer_name)
+                        for computer_name in info["computers"]
+                    ]
+                )
+                if "computers" in info
+                else []
+            ),
             "comments:::": [],
-            "tagline:::": [],
+            "tagline:::": info.get("tagline", ""),
             "validations:::": [
                 (lambda thing: f"validations: {thing}" if thing else "")(
                     ", ".join(
