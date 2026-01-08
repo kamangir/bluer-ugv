@@ -7,7 +7,15 @@ docs = [
     {
         "path": f"../docs/UGVs/{ugv_name}.md",
         "cols": info.get("cols", 3),
-        "items": ImageItems({item: "" for item in info.get("items", [])}),
+        "items": ImageItems(
+            {
+                item: ""
+                for item in info.get(
+                    "items",
+                    [],
+                )
+            }
+        ),
         "macros": {
             "class:::": "[{class_name}](../{class_name})".format(
                 class_name=info.get("class", "swallow"),
@@ -26,7 +34,13 @@ docs = [
                 if "computers" in info
                 else []
             ),
-            "comments:::": [f"- {comment}" for comment in info.get("comments", [])],
+            "comments:::": [
+                f"- {comment}"
+                for comment in info.get(
+                    "comments",
+                    [],
+                )
+            ],
             "tagline:::": info.get("tagline", ""),
             "validations:::": [
                 (lambda thing: f"validations: {thing}" if thing else "")(
