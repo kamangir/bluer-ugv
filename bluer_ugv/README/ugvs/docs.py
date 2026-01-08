@@ -17,8 +17,17 @@ docs = [
             }
         ),
         "macros": {
-            "class:::": "[{class_name}](../{class_name})".format(
-                class_name=info.get("class", "swallow"),
+            "class:::": "[{class_name}](../{class_name}){info}".format(
+                class_name=(
+                    info["class"][0]
+                    if isinstance(info["class"], list)
+                    else info["class"]
+                ),
+                info=(
+                    " ".join(info["class"][1:])
+                    if isinstance(info["class"], list)
+                    else ""
+                ),
             ),
             "computers:::": (
                 (
