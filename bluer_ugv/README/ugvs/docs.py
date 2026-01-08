@@ -24,7 +24,7 @@ docs = [
                     else info["class"]
                 ),
                 info=(
-                    " ".join([" "] + info["class"][1:])
+                    " ".join([""] + info["class"][1:])
                     if isinstance(info["class"], list)
                     else ""
                 ),
