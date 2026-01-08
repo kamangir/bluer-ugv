@@ -3,25 +3,7 @@
 the first [arzhang](../arzhang) with [external motors](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/DC-gearboxed-motor-12V-120RPM.md).
 
 - class: [['arzhang', 'with external motors.']](../['arzhang', 'with external motors.'])
-- b
-- u
-- i
-- l
-- d
--  
-- i
-- s
--  
-- o
-- n
-- g
-- o
-- i
-- n
-- g
-- .
--  
-- 🔥
+- build is ongoing. 🔥
 
 
 

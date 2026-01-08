@@ -128,6 +128,8 @@ dict_of_ugvs = {
             "arzhang",
             "with external motors.",
         ],
-        "comments": "build is ongoing. 🔥",
+        "comments": [
+            "build is ongoing. 🔥",
+        ],
     },
 }
