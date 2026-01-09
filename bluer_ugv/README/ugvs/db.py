@@ -46,7 +46,7 @@ dict_of_ugvs = {
         "class": "arzhang",
         "computers": {
             "sparrow2": "",
-            "arzhang3-back": "",
+            "sparrow3-back": "",
         },
         "comments": [
             "build is ongoing. 🔥",
