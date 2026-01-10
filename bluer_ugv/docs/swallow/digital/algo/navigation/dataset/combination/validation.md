@@ -24,6 +24,23 @@ uses [collection/validation](../collection/validation.md).
 [swallow-dataset-2025-07-11-13-03-58-aoadib.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-dataset-2025-07-11-13-03-58-aoadib.tar.gz)
 
 ```yaml
-{}
+dataset:
+  class_count: 3
+  classes:
+    0: no_action
+    1: left
+    2: right
+  contains:
+  - 2025-07-09-11-16-52-4zo4zc
+  - 2025-07-09-11-34-19-bcoh75
+  count: 1801
+  shape:
+  - 100
+  - 100
+  - 3
+  subsets:
+    eval: 182
+    test: 178
+    train: 1441
 
 ```
