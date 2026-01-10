@@ -31,11 +31,11 @@ runme 2025-10-19-14-16-07-75yxbw
 
 ### arzhang
 
-loop frequency (Hz): 321.78
+loop frequency (Hz): {}
 
 ### arzhang2
 
-loop frequency (Hz): 242.58
+loop frequency (Hz): {}
 
 ---
 

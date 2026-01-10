@@ -34,7 +34,7 @@ runme \
 ```
 
 
-loop frequency (Hz): 310.87
+loop frequency (Hz): {}
 
 ### arzhang2
 
@@ -45,7 +45,7 @@ runme \
 ```    
 
 
-loop frequency (Hz): 408.95
+loop frequency (Hz): {}
 
 ---
 

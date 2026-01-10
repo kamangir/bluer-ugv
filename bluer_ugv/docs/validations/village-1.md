@@ -23,22 +23,7 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 ![image](https://github.com/kamangir/assets/blob/main/2025-09-05-11-48-27-d56azo/grid-timeline.png?raw=true)
 
 ```yaml
-dataset:
-  class_count: 3
-  classes:
-    0: no_action
-    1: left
-    2: right
-  count: 560
-  shape:
-  - 100
-  - 100
-  - 3
-  source: 000000000953c665
-  subsets:
-    eval: 0
-    test: 0
-    train: 560
+{}
 
 ```
 

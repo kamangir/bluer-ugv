@@ -53,13 +53,7 @@ runme publish swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 
 ```yaml
-dataset:
-  count: 0
-names:
-  0: target
-source: 000000000953c665
-train: images/train
-val: images/val
+{}
 
 ```
 

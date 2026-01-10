@@ -48,9 +48,6 @@ dict_of_ugvs = {
             "sparrow2": "",
             "sparrow3-back": "",
         },
-        "comments": [
-            "build is ongoing. 🔥",
-        ],
     },
     "arzhang3": {
         "order": 4,
