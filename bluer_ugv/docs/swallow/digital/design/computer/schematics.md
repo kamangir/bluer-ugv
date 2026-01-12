@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/electrical/digital.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/electrical/digital.svg) |
+| [![image](../../../../../../../bluer-designsswallow/electrical/digital.png?raw=true)](../../../../../../../bluer-designsswallow/electrical/digital.svg) |

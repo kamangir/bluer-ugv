@@ -8,4 +8,4 @@
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/electrical/analog.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/electrical/analog.svg) |
+| [![image](../../../../../bluer-designsswallow/electrical/analog.png?raw=true)](../../../../../bluer-designsswallow/electrical/analog.svg) |

@@ -23,6 +23,6 @@
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/robot.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/robot.stl) | [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/cage.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/cage.stl) | [![image](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/measurements.png?raw=true)](https://github.com/kamangir/bluer-designs//blob/main/swallow/mechanical/measurements.png?raw=true) |
+| [![image](../../../../../../../bluer-designsswallow/mechanical/robot.png?raw=true)](../../../../../../../bluer-designsswallow/mechanical/robot.stl) | [![image](../../../../../../../bluer-designsswallow/mechanical/cage.png?raw=true)](../../../../../../../bluer-designsswallow/mechanical/cage.stl) | [![image](../../../../../../../bluer-designsswallow/mechanical/measurements.png?raw=true)](../../../../../../../bluer-designsswallow/mechanical/measurements.png?raw=true) |
 
 - [v1](./v1.md)
