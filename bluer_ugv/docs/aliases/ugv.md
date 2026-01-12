@@ -1,6 +1,5 @@
 # aliases: ugv
 
-## get
 
 ```bash
 @ugv \
@@ -11,11 +10,25 @@
  . get ugv info.
 ```
 
-## git
-
 ```bash
 @ugv \
 	git \
 	[designs]
  . @git @ugv.
+```
+
+```bash
+@ugv \
+	ssh \
+	<ugv-name> \
+	back | front | top
+ . ssh to <ugv-name>
+```
+
+```bash
+@ugv \
+	watch \
+	<ugv-name> \
+	back | front | top
+ . watch <ugv-name>.
 ```
