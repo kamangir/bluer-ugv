@@ -3,7 +3,7 @@ from bluer_objects.README.consts import assets, assets_url
 from bluer_objects import markdown
 from bluer_objects import env
 
-from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.arzhang.consts import arzhang_assets2, arzhang2_assets2
 from bluer_ugv.README.validations import city_1
 
 dict_of_validations = {
@@ -191,7 +191,7 @@ dict_of_validations = {
         ],
         "items": ImageItems(
             {
-                f"{arzhang_assets2}/2026-01-12.png": "",
+                f"{arzhang2_assets2}/2026-01-12.png": "",
             }
         ),
     },

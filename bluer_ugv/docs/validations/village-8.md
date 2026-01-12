@@ -128,4 +128,4 @@ runme
 
 |   |
 | --- |
-| [![image](../../../../assets2/arzhang/2026-01-12.png?raw=true)](../../../../assets2/arzhang/2026-01-12.png?raw=true) |
+| [![image](../../../../assets2/arzhang2/2026-01-12.png?raw=true)](../../../../assets2/arzhang2/2026-01-12.png?raw=true) |
