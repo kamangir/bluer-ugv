@@ -8,4 +8,4 @@
 
 |   |
 | --- |
-| [![image](../../../../../bluer-designsswallow/electrical/analog.png?raw=true)](../../../../../bluer-designsswallow/electrical/analog.svg) |
+| [![image](../../../../../bluer-designs/swallow/electrical/analog.png?raw=true)](../../../../../bluer-designs/swallow/electrical/analog.svg) |

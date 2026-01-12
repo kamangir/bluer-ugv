@@ -23,6 +23,6 @@
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](../../../../../../../bluer-designsswallow/mechanical/robot.png?raw=true)](../../../../../../../bluer-designsswallow/mechanical/robot.stl) | [![image](../../../../../../../bluer-designsswallow/mechanical/cage.png?raw=true)](../../../../../../../bluer-designsswallow/mechanical/cage.stl) | [![image](../../../../../../../bluer-designsswallow/mechanical/measurements.png?raw=true)](../../../../../../../bluer-designsswallow/mechanical/measurements.png?raw=true) |
+| [![image](../../../../../../../bluer-designs/swallow/mechanical/robot.png?raw=true)](../../../../../../../bluer-designs/swallow/mechanical/robot.stl) | [![image](../../../../../../../bluer-designs/swallow/mechanical/cage.png?raw=true)](../../../../../../../bluer-designs/swallow/mechanical/cage.stl) | [![image](../../../../../../../bluer-designs/swallow/mechanical/measurements.png?raw=true)](../../../../../../../bluer-designs/swallow/mechanical/measurements.png?raw=true) |
 
 - [v1](./v1.md)

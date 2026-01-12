@@ -4,4 +4,4 @@
 
 |   |
 | --- |
-| [![image](../../../../../bluer-designsravin4/wiring.png?raw=true)](../../../../../bluer-designsravin4/wiring.svg) |
+| [![image](../../../../../bluer-designs/ravin4/wiring.png?raw=true)](../../../../../bluer-designs/ravin4/wiring.svg) |
