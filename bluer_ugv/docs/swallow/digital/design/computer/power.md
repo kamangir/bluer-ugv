@@ -44,7 +44,7 @@ total:
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251119_193930.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251119_193930.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251119_193954.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251119_193954.jpg?raw=true) |
+| [![image](../../../../../../../assets2/swallow/20251119_193930.jpg?raw=true)](../../../../../../../assets2/swallow/20251119_193930.jpg?raw=true) | [![image](../../../../../../../assets2/swallow/20251119_193954.jpg?raw=true)](../../../../../../../assets2/swallow/20251119_193954.jpg?raw=true) |
 
 # SLA vs. LiPo
 

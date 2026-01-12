@@ -32,6 +32,6 @@ to reselect the target press `train`.
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/tracker/validations/two/socket-3.png?raw=true)](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/socket.md) | [![image](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-11-17-23-59-6bhm5n/swallow-debug-2025-12-11-17-23-59-6bhm5n.gif?raw=true)](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-11-17-23-59-6bhm5n/swallow-debug-2025-12-11-17-23-59-6bhm5n.gif?raw=true) |
+| [![image](../../../../../../../../assets2/tracker/validations/two/socket-3.png?raw=true)](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/socket.md) | [![image](../../../../../../../../assets/swallow-debug-2025-12-11-17-23-59-6bhm5n/swallow-debug-2025-12-11-17-23-59-6bhm5n.gif?raw=true)](../../../../../../../../assets/swallow-debug-2025-12-11-17-23-59-6bhm5n/swallow-debug-2025-12-11-17-23-59-6bhm5n.gif?raw=true) |
 
 > ⚠️ 🤦🏽

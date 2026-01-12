@@ -7,4 +7,4 @@
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251201_172535~2_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251201_172535~2_1.gif?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251203_112604.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251203_112604.jpg?raw=true) |
+| [![image](../../../../../../assets2/swallow/20251201_172535~2_1.gif?raw=true)](../../../../../../assets2/swallow/20251201_172535~2_1.gif?raw=true) | [![image](../../../../../../assets2/swallow/20251203_112604.jpg?raw=true)](../../../../../../assets2/swallow/20251203_112604.jpg?raw=true) |

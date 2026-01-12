@@ -32,6 +32,6 @@ to reselect the target press `train`.
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true)](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true) |
+| [![image](../../../../../../../../assets/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true)](../../../../../../../../assets/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true) |
 
 > promising. ✅
