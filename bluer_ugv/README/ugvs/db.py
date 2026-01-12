@@ -19,7 +19,7 @@ dict_of_ugvs = {
         "tagline": "the first one.",
         "class": "swallow",
         "computers": {
-            "swallow2": "`swallow` was used for Ubuntu experiments",
+            "front": "swallow2 (`swallow` was used for Ubuntu experiments)",
         },
     },
     "arzhang": {
@@ -30,7 +30,7 @@ dict_of_ugvs = {
         "tagline": "the first [arzhang](../arzhang).",
         "class": "arzhang",
         "computers": {
-            "sparrow": "",
+            "front": "sparrow",
         },
         "comments": [
             "disassembled 🛑",
@@ -45,8 +45,8 @@ dict_of_ugvs = {
         "tagline": "an [arzhang](../arzhang) with updated body design.",
         "class": "arzhang",
         "computers": {
-            "sparrow2": "",
-            "sparrow3-back": "",
+            "front": "sparrow2",
+            "back": "sparrow3-back",
         },
     },
     "arzhang3": {
@@ -68,8 +68,8 @@ dict_of_ugvs = {
         "tagline": "the first [arzhang](../arzhang) with two computers.",
         "class": "arzhang",
         "computers": {
-            "arzhang3-front": "",
-            "sparrow3-back": "",
+            "front": "arzhang3-front",
+            "back": "sparrow3-back",
         },
         "comments": [
             "-> [rangin](./rangin.md) 🛑",
@@ -105,8 +105,8 @@ dict_of_ugvs = {
         "tagline": "an ad robot.",
         "class": "rangin",
         "computers": {
-            "arzhang3-front": "",
-            "rangin-top2": "",
+            "front": "arzhang3-front",
+            "top": "rangin-top2",
         },
         "comments": [
             "built on [arzhang3](./arzhang3.md).",

@@ -35,11 +35,11 @@ docs = [
                         "- computer(s):",
                     ]
                     + [
-                        "    - `{}`{}".format(
+                        "    - {}: `{}`".format(
+                            location,
                             computer_name,
-                            f" ({description})" if description else "",
                         )
-                        for computer_name, description in info["computers"].items()
+                        for location, computer_name in info["computers"].items()
                     ]
                 )
                 if "computers" in info
