@@ -19,6 +19,6 @@ def help_get(
             "computers.back | computers.front | computers.top | <what>",
         ]
         + args,
-        "git @ugv info.",
+        "get ugv info.",
         mono=mono,
     )

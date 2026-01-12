@@ -8,7 +8,7 @@
 	<ugv-name> \
 	computers.back | computers.front | computers.top | <what> \
 	[--include_comments 1]
- . git @ugv info.
+ . get ugv info.
 ```
 
 ## git
