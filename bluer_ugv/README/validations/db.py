@@ -189,6 +189,11 @@ dict_of_validations = {
         "ugv_name": [
             "arzhang2",
         ],
+        "items": ImageItems(
+            {
+                f"{arzhang_assets2}/2026-01-12.png": "",
+            }
+        ),
     },
     "template": {
         "ugv_name": [

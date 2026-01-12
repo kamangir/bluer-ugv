@@ -4,8 +4,6 @@ ugv_name:::
 
 validation of connection and code update during offline.
 
-🔥
-
 on separate terminals,
 
 ```bash
