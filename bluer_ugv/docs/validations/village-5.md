@@ -65,4 +65,4 @@ loop frequency (Hz): 408.95
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085451.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085451.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085508.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_085508.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_090203.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251010_090203.jpg?raw=true) |
+| [![image](../../../../assets2/arzhang/20251010_085451.jpg?raw=true)](../../../../assets2/arzhang/20251010_085451.jpg?raw=true) | [![image](../../../../assets2/arzhang/20251010_085508.jpg?raw=true)](../../../../assets2/arzhang/20251010_085508.jpg?raw=true) | [![image](../../../../assets2/arzhang/20251010_090203.jpg?raw=true)](../../../../assets2/arzhang/20251010_090203.jpg?raw=true) |

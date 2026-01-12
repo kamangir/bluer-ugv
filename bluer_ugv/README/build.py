@@ -20,6 +20,7 @@ from bluer_ugv.README import (
 from bluer_ugv.README.computer import docs as computer
 from bluer_ugv.README.ugvs import docs as ugvs
 from bluer_ugv.README.ugvs.comparison.build import build as build_comparison
+from bluer_ugv.README.validations import docs as validations
 
 
 def build() -> bool:
@@ -52,6 +53,7 @@ def build() -> bool:
             + computer.docs
             + ugvs.docs
             + swallow.docs
+            + validations.docs
         )
         and build_comparison()
     )

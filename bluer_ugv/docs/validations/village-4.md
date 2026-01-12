@@ -34,4 +34,4 @@ runme swallow-debug-2025-09-27-19-15-31-6iq5vz
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250927_192024.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250927_192024.jpg?raw=true) |
+| [![image](../../../../assets2/arzhang/20250927_192024.jpg?raw=true)](../../../../assets2/arzhang/20250927_192024.jpg?raw=true) |
