@@ -12,8 +12,8 @@ def help_ssh(
             "@ugv",
             "ssh",
             "<ugv-name>",
-            "back | front | top",
+            "[back | front | top | <node>]",
         ],
-        "ssh to <ugv-name>",
+        "ssh to <ugv-name>.<node>",
         mono=mono,
     )

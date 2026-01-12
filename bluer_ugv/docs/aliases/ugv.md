@@ -21,14 +21,14 @@
 @ugv \
 	ssh \
 	<ugv-name> \
-	back | front | top
- . ssh to <ugv-name>
+	[back | front | top | <node>]
+ . ssh to <ugv-name>.<node>
 ```
 
 ```bash
 @ugv \
 	watch \
 	<ugv-name> \
-	back | front | top
- . watch <ugv-name>.
+	[back | front | top | <node>]
+ . watch <ugv-name>.<node>.
 ```

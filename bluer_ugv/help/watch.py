@@ -12,8 +12,8 @@ def help_watch(
             "@ugv",
             "watch",
             "<ugv-name>",
-            "back | front | top",
+            "[back | front | top | <node>]",
         ],
-        "watch <ugv-name>.",
+        "watch <ugv-name>.<node>.",
         mono=mono,
     )

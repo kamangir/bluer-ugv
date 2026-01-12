@@ -184,8 +184,16 @@ dict_of_validations = {
             "objects:::": city_1.objects(),
         },
     },
+    "village-8": {
+        "order": 10,
+        "ugv_name": [
+            "arzhang2",
+        ],
+    },
     "template": {
-        "ugv_name": "template",
+        "ugv_name": [
+            "template",
+        ],
         "marquee": "template.jpg",
     },
 }
