@@ -18,9 +18,9 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
 [2025-09-05-11-48-27-d56azo.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-09-05-11-48-27-d56azo.tar.gz)
 
-![image](https://github.com/kamangir/assets/blob/main/2025-09-05-11-48-27-d56azo/grid.png?raw=true)
+![image](../../../../assets/2025-09-05-11-48-27-d56azo/grid.png?raw=true)
 
-![image](https://github.com/kamangir/assets/blob/main/2025-09-05-11-48-27-d56azo/grid-timeline.png?raw=true)
+![image](../../../../assets/2025-09-05-11-48-27-d56azo/grid-timeline.png?raw=true)
 
 ```yaml
 dataset:
@@ -42,7 +42,7 @@ dataset:
 
 ```
 
-![image](https://github.com/kamangir/assets/blob/main/2025-09-05-11-48-27-d56azo/VID-20250905-WA0014_1.gif?raw=true)
+![image](../../../../assets/2025-09-05-11-48-27-d56azo/VID-20250905-WA0014_1.gif?raw=true)
 
 ## observations
 

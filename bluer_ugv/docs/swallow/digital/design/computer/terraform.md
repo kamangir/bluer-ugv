@@ -22,7 +22,7 @@
 ```
 now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then press `zi`. an dataset should be uploaded that contains a few frames from the camera.
 
-![image](https://github.com/kamangir/assets/blob/main/bluer-ugv/terraform-validation.png?raw=true)
+![image](../../../../../../../assets/bluer-ugv/terraform-validation.png?raw=true)
 
 5. the terraform is complete, shut down the machine,
 ```bash

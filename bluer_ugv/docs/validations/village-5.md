@@ -51,10 +51,10 @@ loop frequency (Hz): 408.95
 
 | [arzhang](../../UGVs/arzhang.md) | [arzhang2](../../UGVs/arzhang2.md) |
 |-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/2025-10-10-08-52-35-6jjnzn/ultrasonic-sensor-detections.gif?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-10-10-08-42-42-ee6oln/ultrasonic-sensor-detections.gif?raw=true) |
-| ![image](https://github.com/kamangir/assets/blob/main/2025-10-10-08-52-35-6jjnzn/ultrasonic-sensor-state.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-10-10-08-42-42-ee6oln/ultrasonic-sensor-state.png?raw=true) |
-| ![image](https://github.com/kamangir/assets/blob/main/2025-10-10-08-52-35-6jjnzn/ultrasonic-sensor-distance-mm.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-10-10-08-42-42-ee6oln/ultrasonic-sensor-distance-mm.png?raw=true) |
-| ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-10-10-08-49-45-yk18ei/swallow-debug-2025-10-10-08-49-45-yk18ei.gif?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-10-10-08-40-38-k8oc2p/swallow-debug-2025-10-10-08-40-38-k8oc2p.gif?raw=true) |
+| ![image](../../../../assets/2025-10-10-08-52-35-6jjnzn/ultrasonic-sensor-detections.gif?raw=true) | ![image](../../../../assets/2025-10-10-08-42-42-ee6oln/ultrasonic-sensor-detections.gif?raw=true) |
+| ![image](../../../../assets/2025-10-10-08-52-35-6jjnzn/ultrasonic-sensor-state.png?raw=true) | ![image](../../../../assets/2025-10-10-08-42-42-ee6oln/ultrasonic-sensor-state.png?raw=true) |
+| ![image](../../../../assets/2025-10-10-08-52-35-6jjnzn/ultrasonic-sensor-distance-mm.png?raw=true) | ![image](../../../../assets/2025-10-10-08-42-42-ee6oln/ultrasonic-sensor-distance-mm.png?raw=true) |
+| ![image](../../../../assets/swallow-debug-2025-10-10-08-49-45-yk18ei/swallow-debug-2025-10-10-08-49-45-yk18ei.gif?raw=true) | ![image](../../../../assets/swallow-debug-2025-10-10-08-40-38-k8oc2p/swallow-debug-2025-10-10-08-40-38-k8oc2p.gif?raw=true) |
 
 ## observations
 

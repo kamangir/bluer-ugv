@@ -66,4 +66,4 @@ runme gif
 
 ---
 
-![image](https://github.com/kamangir/assets/blob/main/arzhang/20250922_101202_1.gif?raw=true)
+![image](../../../../assets/arzhang/20250922_101202_1.gif?raw=true)

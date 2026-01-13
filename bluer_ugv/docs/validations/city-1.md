@@ -108,7 +108,7 @@ runme
 
 | | |
 |-|-|
-| ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-12-09-18-52-03-7jo931/200.gif?raw=true) |
+| ![image](../../../../assets/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true) | ![image](../../../../assets/2025-12-09-18-52-03-7jo931/200.gif?raw=true) |
 
 ## observations
 

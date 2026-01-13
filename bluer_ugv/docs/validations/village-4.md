@@ -30,7 +30,7 @@ runme swallow-debug-2025-09-27-19-15-31-6iq5vz
 | | |
 |-|-|
 | [swallow-debug-2025-09-26-17-44-51-6pb87y.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-debug-2025-09-26-17-44-51-6pb87y.tar.gz) | [swallow-debug-2025-09-27-19-15-31-6iq5vz.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-debug-2025-09-27-19-15-31-6iq5vz.tar.gz) |
-| ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-26-17-44-51-6pb87y/swallow-debug-2025-09-26-17-44-51-6pb87y.gif?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-27-19-15-31-6iq5vz/swallow-debug-2025-09-27-19-15-31-6iq5vz.gif?raw=true) |
+| ![image](../../../../assets/swallow-debug-2025-09-26-17-44-51-6pb87y/swallow-debug-2025-09-26-17-44-51-6pb87y.gif?raw=true) | ![image](../../../../assets/swallow-debug-2025-09-27-19-15-31-6iq5vz/swallow-debug-2025-09-27-19-15-31-6iq5vz.gif?raw=true) |
 
 |   |
 | --- |
