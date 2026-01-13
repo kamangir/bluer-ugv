@@ -2,7 +2,7 @@
 
 
 - [naming](./naming.md)
-- [parts](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow)
+- [parts](../../../../../../../bluer-sbc/bluer_sbc/docs/swallow)
 - [schematics](./schematics.md)
 - [power](./power.md)
 - [shield](./shield)

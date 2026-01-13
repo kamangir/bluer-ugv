@@ -1,6 +1,6 @@
 # swallow: digital: design: ultrasonic-sensor: tester
 
-- [parts and more views](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/ultrasonic-sensor-tester.md)
+- [parts and more views](../../../../../../../bluer-sbc/bluer_sbc/docs/ultrasonic-sensor-tester.md)
 
 |   |   |
 | --- | --- |

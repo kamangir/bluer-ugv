@@ -1,6 +1,6 @@
 # swallow: digital: design: parts
 
-a [swallow computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow) + an optional [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head) at the back  + 2 optional [swallow-head computer](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow-head)s at the top + ⬇️
+a [swallow computer](../../../../../../bluer-sbc/bluer_sbc/docs/swallow) + an optional [swallow-head computer](../../../../../../bluer-sbc/bluer_sbc/docs/swallow-head) at the back  + 2 optional [swallow-head computer](../../../../../../bluer-sbc/bluer_sbc/docs/swallow-head)s at the top + ⬇️
 
 1. [12 VDC motor, 20-45 W](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/dc-motor-12-VDC-45W.md): type 2, 2 x right + 2 x left.
 1. [5V unmanaged 10/100 switch](https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts/5v-unmanaged-10-100-switch.md): if more than two computers.

@@ -1,6 +1,6 @@
 # swallow: digital: algo: tracking: validations: three
 
-> algo: [kcf](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/tracker/kcf.md)
+> algo: [kcf](../../../../../../../../bluer-algo/bluer_algo/docs/tracker/kcf.md)
 
 ```bash
 @rpi
