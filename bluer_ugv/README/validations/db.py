@@ -192,6 +192,7 @@ dict_of_validations = {
         "items": ImageItems(
             {
                 f"{arzhang2_assets2}/2026-01-12.png": "",
+                f"{arzhang2_assets2}/2026-01-13.png": "",
             }
         ),
     },
