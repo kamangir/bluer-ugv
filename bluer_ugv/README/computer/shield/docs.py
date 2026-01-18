@@ -1,7 +1,7 @@
 from bluer_objects.README.items import ImageItems
 
 from bluer_ugv.README.swallow.consts import swallow_assets2, swallow_designs
-from bluer_ugv.README.computer.shield import testing, v1, v2
+from bluer_ugv.README.computer.shield import parts, testing, v1, v2
 
 items = ImageItems(
     {
@@ -24,6 +24,7 @@ docs = (
             "items": items,
         },
     ]
+    + parts.docs
     + testing.docs
     + v1.docs
     + v2.docs
