@@ -8,8 +8,8 @@ def get(
 ) -> str:
     list_of_what = what.split(".")
     info = dict_of_ugvs.get(ugv_name, {})
-    for what in list_of_what:
-        info = info.get(what, {})
+    for what_ in list_of_what:
+        info = info.get(what_, {})
 
     if isinstance(info, dict) and not info:
         info = ""
