@@ -2,7 +2,7 @@
 
 - uses [swallow computer power](../../swallow/digital/design/computer/power.md).
    - swallow + swallow-top: 120 W
-- [40 inch TVs](../../../../../bluer-sbc/bluer_sbc/docs/parts/TV.md): 0.2-0.5 A @ 220 V AC = 44 - 110 W @ 220 V AC -80%-90% efficiency of power inverter-> 50 - 130 W @ 12 V DC ~= 4.5 - 11 A
+- [40 inch TVs](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/TV.md): 0.2-0.5 A @ 220 V AC = 44 - 110 W @ 220 V AC -80%-90% efficiency of power inverter-> 50 - 130 W @ 12 V DC ~= 4.5 - 11 A
 - total: 250 W ~= 20 A @ 12 V DC
 
 | runtime | energy needed | ideal capacity @12 V | SLA nominal Ah | LiPo nominal Ah |

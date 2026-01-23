@@ -16,7 +16,7 @@ docs = [
         "path": "../docs/swallow/digital/design/computer/shield/parts.md",
         "macros": design_doc_parts(
             dict_of_parts=parts,
-            parts_reference="../parts",  # TBC
+            parts_reference="https://github.com/kamangir/bluer-sbc/tree/main/bluer_sbc/docs/parts",
         ),
     }
 ]

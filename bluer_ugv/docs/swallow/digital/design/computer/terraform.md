@@ -2,7 +2,7 @@
 
 ## Raspbian 64-bit
 
-1. follow [RPi](../../../../../../../bluer-ai/bluer_ai/docs/install/RPi.md) (use 64-bit + headless or not).
+1. follow [RPi](https://github.com/kamangir/bluer-ai/blob/main/bluer_ai/docs/install/RPi.md) (use 64-bit + headless or not).
 
 2. run in another terminal and paste the seed 🌱 into the ssh window.
 ```bash
@@ -22,7 +22,7 @@
 ```
 now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then press `zi`. an dataset should be uploaded that contains a few frames from the camera.
 
-![image](../../../../../../../assets/bluer-ugv/terraform-validation.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/bluer-ugv/terraform-validation.png?raw=true)
 
 5. the terraform is complete, shut down the machine,
 ```bash
@@ -40,7 +40,7 @@ now press `t`, then `w`, and wait for ~20 seconds (or press `a`, `d`), then pres
 
 > ⚠️ camera needs work.
 
-1. follow [RPi-ROS](../../../../../../../bluer-ai/bluer_ai/docs/install/RPi-ROS.md).
+1. follow [RPi-ROS](https://github.com/kamangir/bluer-ai/blob/main/bluer_ai/docs/install/RPi-ROS.md).
 
 2. run,
 ```bash
