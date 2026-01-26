@@ -11,4 +11,4 @@ validations: [`timing-review`](../validations/timing-review.md), [`village-4`](.
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251210_154513.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251210_154513.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang2/20260108_175635.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang2/20260108_175635.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang2/20260109_133216.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang2/20260109_133216.jpg?raw=true) |
+| [![image](../../../../assets2/arzhang/20251210_154513.jpg?raw=true)](../../../../assets2/arzhang/20251210_154513.jpg?raw=true) | [![image](../../../../assets2/arzhang2/20260108_175635.jpg?raw=true)](../../../../assets2/arzhang2/20260108_175635.jpg?raw=true) | [![image](../../../../assets2/arzhang2/20260109_133216.jpg?raw=true)](../../../../assets2/arzhang2/20260109_133216.jpg?raw=true) |
