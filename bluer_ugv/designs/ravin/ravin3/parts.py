@@ -6,7 +6,7 @@ dict_of_parts = {
     "yellow-wheels": "x 2",
     "L-1x2": "x 4",
     "shaft-10cm": "",
-    "M3": "",
+    "nuts-bolts-spacers": "M3 x 🔥",
     "front-connector": "",
     "front-wheels": "x 2",
 }
