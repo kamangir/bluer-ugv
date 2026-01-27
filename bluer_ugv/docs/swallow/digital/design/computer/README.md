@@ -2,7 +2,7 @@
 
 
 - [naming](./naming.md)
-- [parts](../../../../../../../bluer-sbc/bluer_sbc/docs/swallow)
+- [parts](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/swallow)
 - [schematics](./schematics.md)
 - [power](./power.md)
 - [shield](./shield)
@@ -14,4 +14,4 @@
 
 |   |
 | --- |
-| [![image](../../../../../../../assets2/swallow/20251121_124335.jpg?raw=true)](../../../../../../../assets2/swallow/20251121_124335.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251121_124335.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251121_124335.jpg?raw=true) |
