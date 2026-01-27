@@ -38,7 +38,7 @@ docs = [
                                     if ":" in ugv_name
                                     else ICON
                                 ),
-                                ugv_name=ugv_name.split(":")[0],
+                                ugv_name=ugv_name.split(":", 1)[0],
                             )
                             for ugv_name in info["ugv_name"]
                         ]

@@ -25,7 +25,7 @@ uses [combination/validation](../dataset/combination/validation.md).
 
 ![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-11-13-05-02-u4z1ea/grid.png?raw=true)
 
-[swallow-dataset-2025-07-11-13-05-02-u4z1ea](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-dataset-2025-07-11-13-05-02-u4z1ea.tar.gz)
+[swallow-dataset-2025-07-11-13-05-02-u4z1ea.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-dataset-2025-07-11-13-05-02-u4z1ea.tar.gz)
 
 ```yaml
 dataset:
@@ -58,7 +58,7 @@ dataset:
 
 ![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-11-15-04-03-2glcch/confusion_matrix.png?raw=true)
 
-[swallow-model-2025-07-11-15-04-03-2glcch](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-11-15-04-03-2glcch.tar.gz)
+[swallow-model-2025-07-11-15-04-03-2glcch.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-11-15-04-03-2glcch.tar.gz)
 
 ```yaml
 model:

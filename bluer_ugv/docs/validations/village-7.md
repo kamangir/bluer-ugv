@@ -34,19 +34,19 @@ runme
 
 loop frequency (Hz): 185.88
 
-[2025-11-06-10-50-35-myadvn](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-11-06-10-50-35-myadvn.tar.gz)
+[2025-11-06-10-50-35-myadvn.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-11-06-10-50-35-myadvn.tar.gz)
 
 ### arzhang2
 
 loop frequency (Hz): 190.13
 
-[2025-11-06-10-49-58-denev4](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-11-06-10-49-58-denev4.tar.gz)
+[2025-11-06-10-49-58-denev4.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-11-06-10-49-58-denev4.tar.gz)
 
 ### arzhang3
 
 loop frequency (Hz): 183.64
 
-[2025-11-06-10-49-36-koxzf3](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-11-06-10-49-36-koxzf3.tar.gz)
+[2025-11-06-10-49-36-koxzf3.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-11-06-10-49-36-koxzf3.tar.gz)
 
 ---
 

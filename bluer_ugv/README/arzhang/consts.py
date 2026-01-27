@@ -9,4 +9,9 @@ arzhang_assets2 = assets_url(
     volume=2,
 )
 
+arzhang2_assets2 = assets_url(
+    suffix="arzhang2",
+    volume=2,
+)
+
 arzhang_mechanical_design = designs_url("arzhang")

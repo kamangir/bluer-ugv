@@ -42,7 +42,7 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 |-|-|
 | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-pulse-ms.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-distance-mm.png?raw=true) |
 
-[ultrasonic-test-2025-11-18-12-38-22-j4t7wl](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz)
+[ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz)
 
 ## review
 
@@ -60,7 +60,7 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 
 ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-detections.gif?raw=true)
 
-[ultrasonic-test-2025-11-18-12-38-22-j4t7wl](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz)
+[ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz)
 
 ## in session
 

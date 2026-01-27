@@ -41,8 +41,10 @@ function test_bluer_ugv_help() {
         "@swallow video playlist upload" \
         \
         "@ugv" \
-        \
+        "@ugv get" \
         "@ugv git" \
+        "@ugv ssh" \
+        "@ugv watch" \
         \
         "@ugv pypi" \
         "@ugv pypi browse" \

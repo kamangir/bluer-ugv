@@ -1,6 +1,6 @@
 title:::
 
-UGV(s): ugv_name:::
+ugv_name:::
 
 set:::arzhang1_object 2025-11-06-10-50-35-myadvn
 set:::arzhang2_object 2025-11-06-10-49-58-denev4

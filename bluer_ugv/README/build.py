@@ -5,21 +5,8 @@ from bluer_objects import file, README
 
 from bluer_ugv import NAME, VERSION, ICON, REPO_NAME
 from bluer_ugv.help.functions import help_functions
-from bluer_ugv.README import (
-    alias,
-    beast,
-    eagle,
-    fire,
-    ravin,
-    root,
-    arzhang,
-    rangin,
-    releases,
-    swallow,
-)
-from bluer_ugv.README.computer import docs as computer
-from bluer_ugv.README.ugvs import docs as ugvs
 from bluer_ugv.README.ugvs.comparison.build import build as build_comparison
+from bluer_ugv.README.docs import docs
 
 
 def build() -> bool:
@@ -40,18 +27,7 @@ def build() -> bool:
                 ),
                 macros=readme.get("macros", {}),
             )
-            for readme in root.docs
-            + alias.docs
-            + arzhang.docs
-            + beast.docs
-            + eagle.docs
-            + fire.docs
-            + rangin.docs
-            + ravin.docs
-            + releases.docs
-            + computer.docs
-            + ugvs.docs
-            + swallow.docs
+            for readme in docs
         )
         and build_comparison()
     )

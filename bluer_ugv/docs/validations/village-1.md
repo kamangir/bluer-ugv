@@ -16,7 +16,7 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 ```
 
 
-[2025-09-05-11-48-27-d56azo](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-09-05-11-48-27-d56azo.tar.gz)
+[2025-09-05-11-48-27-d56azo.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-09-05-11-48-27-d56azo.tar.gz)
 
 ![image](https://github.com/kamangir/assets/blob/main/2025-09-05-11-48-27-d56azo/grid.png?raw=true)
 

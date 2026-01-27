@@ -1,11 +1,10 @@
 title:::
 
-an [arzhang](../arzhang) with updated body design.
+tagline:::
 
-- class: [arzhang](../arzhang)
-- computer(s):
-    - `sparrow2`.
-    - 🔥
+- class: class:::
+computers:::
+comments:::
 
 validations:::
 

@@ -20,7 +20,7 @@ training a `256 x 256` model.
 ```
 
 
-[coco128-2025-09-16-ko2aq9](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/coco128-2025-09-16-ko2aq9.tar.gz)
+[coco128-2025-09-16-ko2aq9.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/coco128-2025-09-16-ko2aq9.tar.gz)
 
 ![image](https://github.com/kamangir/assets/blob/main/coco128-2025-09-16-ko2aq9/review.png?raw=true)
 
@@ -57,7 +57,7 @@ val: coco128/images/train2017
 ```
 
 
-[coco128-model-2025-09-16-meb4if](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/coco128-model-2025-09-16-meb4if.tar.gz)
+[coco128-model-2025-09-16-meb4if.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/coco128-model-2025-09-16-meb4if.tar.gz)
 
 | | |
 |-|-|

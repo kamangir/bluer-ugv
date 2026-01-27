@@ -1,6 +1,10 @@
 from bluer_ugv.README.consts import assets_url
 from bluer_ugv.README.swallow.consts import swallow_assets2
-from bluer_ugv.README.arzhang.consts import arzhang_assets, arzhang_assets2
+from bluer_ugv.README.arzhang.consts import (
+    arzhang_assets,
+    arzhang_assets2,
+    arzhang2_assets2,
+)
 from bluer_ugv.README.rangin.consts import rangin_assets2, rangin_mechanical_design
 
 dict_of_ugvs = {
@@ -12,18 +16,39 @@ dict_of_ugvs = {
             f"{swallow_assets2}/20250913_203635~2_1.gif",
             f"{swallow_assets2}/20251216_205015.jpg",
         ],
+        "tagline": "the first one.",
+        "class": "swallow",
+        "computers": {
+            "front": "swallow2 (`swallow` was used for Ubuntu experiments)",
+        },
     },
     "arzhang": {
         "order": 2,
         "items": [
             f"{arzhang_assets2}/20251209_111322.jpg",
         ],
+        "tagline": "the first [arzhang](../arzhang).",
+        "class": "arzhang",
+        "computers": {
+            "front": "sparrow",
+        },
+        "comments": [
+            "disassembled 🛑",
+        ],
     },
     "arzhang2": {
         "order": 3,
         "items": [
             f"{arzhang_assets2}/20251210_154513.jpg",
+            f"{arzhang2_assets2}/20260108_175635.jpg",
+            f"{arzhang2_assets2}/20260109_133216.jpg",
         ],
+        "tagline": "an [arzhang](../arzhang) with updated body design.",
+        "class": "arzhang",
+        "computers": {
+            "front": "sparrow2",
+            "back": "sparrow3-back",
+        },
     },
     "arzhang3": {
         "order": 4,
@@ -41,6 +66,15 @@ dict_of_ugvs = {
                 f"{arzhang_assets2}/20251210_154654.jpg",
             ]
         ),
+        "tagline": "the first [arzhang](../arzhang) with two computers.",
+        "class": "arzhang",
+        "computers": {
+            "front": "arzhang3-front",
+            "back": "sparrow3-back",
+        },
+        "comments": [
+            "-> [rangin](./rangin.md) 🛑",
+        ],
     },
     "rangin": {
         "order": 5,
@@ -68,6 +102,18 @@ dict_of_ugvs = {
             f"{rangin_assets2}/20251231_111815.jpg",
             f"{rangin_assets2}/20251231_111923.jpg",
             f"{rangin_assets2}/20251231_112447.jpg",
+            f"{rangin_assets2}/2026-01-26-d1.jpg",
+            f"{rangin_assets2}/2026-01-26-d2.jpg",
+            f"{rangin_assets2}/2026-01-26-d3.jpg",
+        ],
+        "tagline": "an ad robot.",
+        "class": "rangin",
+        "computers": {
+            "front": "arzhang3-front",
+            "top": "rangin-top2",
+        },
+        "comments": [
+            "built on [arzhang3](./arzhang3.md).",
         ],
     },
     "arzhang4": {
@@ -77,6 +123,14 @@ dict_of_ugvs = {
                 suffix="bluer-sbc/parts/GM6558/01.jpg",
                 volume=2,
             ),
+        ],
+        "tagline": "the first [arzhang](../arzhang) with [external motors](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/DC-gearboxed-motor-12V-120RPM.md).",
+        "class": [
+            "arzhang",
+            "with external motors.",
+        ],
+        "comments": [
+            "build is ongoing. 🔥",
         ],
     },
 }
