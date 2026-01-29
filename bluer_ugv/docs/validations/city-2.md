@@ -1,5 +1,7 @@
 # validations: city-2
 
+UGV(s): 🐬 [`arzhang2`](../UGVs/arzhang2.md)
+
 continues [village-8](./village-8.md).
 
 on separate terminals,
