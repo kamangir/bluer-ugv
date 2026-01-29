@@ -1,6 +1,6 @@
 title:::
 
-continues [village-8](./village-8.md)
+continues [village-8](./village-8.md).
 
 🔥
 
@@ -16,7 +16,11 @@ on separate terminals,
 @ugv watch arzhang2 front
 ```
 
-🔥 👦🏽
+🔥 
+
+on mac
+
+code up! 😁 🔥
 
 ```bash
 runme() {
@@ -33,3 +37,5 @@ runme
 ```
 
 🔥
+
+items:::

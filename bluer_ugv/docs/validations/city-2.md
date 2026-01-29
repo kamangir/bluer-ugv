@@ -1,6 +1,6 @@
 # validations: city-2
 
-continues [village-8](./village-8.md)
+continues [village-8](./village-8.md).
 
 🔥
 
@@ -16,7 +16,11 @@ on separate terminals,
 @ugv watch arzhang2 front
 ```
 
-🔥 👦🏽
+🔥 
+
+on mac
+
+code up! 😁 🔥
 
 ```bash
 runme() {
@@ -33,3 +37,7 @@ runme
 ```
 
 🔥
+
+|   |   |
+| --- | --- |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-12.png?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-12.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-13.png?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-13.png?raw=true) |
