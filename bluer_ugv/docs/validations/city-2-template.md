@@ -2,8 +2,6 @@ title:::
 
 continues [village-8](./village-8.md).
 
-🔥
-
 on separate terminals,
 
 ```bash
@@ -16,26 +14,6 @@ on separate terminals,
 @ugv watch arzhang2 front
 ```
 
-🔥 
-
-on mac
-
-code up! 😁 🔥
-
-```bash
-runme() {
-    local repo_name
-    local machine_name
-    for repo_name in @ai @objects @options; do
-        for machine_name in sparrow2 sparrow3-back; do
-            @git $repo_name push update scp,rpi=$machine_name
-        done
-    done
-}
-
-runme
-```
-
-🔥
+> observation: back numpad did not function, likely because it was turned on after the session started. will investigate in the next validations, if occurred. 
 
 items:::
