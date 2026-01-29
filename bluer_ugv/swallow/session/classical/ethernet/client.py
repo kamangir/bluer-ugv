@@ -1,6 +1,6 @@
 import json
+from queue import Empty, SimpleQueue
 import socket
-from queue import SimpleQueue
 from typing import Tuple, Dict, Optional
 import struct
 import threading
@@ -24,8 +24,7 @@ class EthernetClient:
         self.is_server = is_server
         self.reconnect_sec = reconnect_sec
 
-        self._send_q: SimpleQueue[EthernetCommand] = SimpleQueue()
-        self._recv_q: SimpleQueue[EthernetCommand] = SimpleQueue()
+        self._send_queue: SimpleQueue[EthernetCommand] = SimpleQueue()
 
         self._lock = threading.Lock()
         self._sock: Optional[socket.socket] = None
@@ -58,18 +57,17 @@ class EthernetClient:
                     logger.warning(e)
                 self._listener = None
 
-    def _drain_send_queue(self):
+    def _drain_send_queue(self) -> bool:
         with self._lock:
             sock = self._sock
         if sock is None:
-            return
+            return False
 
         while True:
             try:
-                cmd = self._send_q.get_nowait()
-            except Exception as e:
-                logger.warning(e)
-                return
+                cmd = self._send_queue.get_nowait()
+            except Empty:
+                return True
 
             try:
                 payload = cmd.to_dict()
@@ -86,9 +84,12 @@ class EthernetClient:
                 logger.warning(f"{self.__class__.__name__}: send error: {e}")
                 self._close_sockets()
                 # put back? your choice; here we drop to avoid infinite resend
-                return
+                return False
             except Exception as e:
                 logger.error(e)
+                return False
+
+            return True
 
     def _ensure_connection(self) -> bool:
         """
@@ -177,7 +178,7 @@ class EthernetClient:
         header = struct.pack("!I", len(raw))
         sock.sendall(header + raw)
 
-    def _try_recv_one(self) -> Optional[EthernetCommand]:
+    def _try_recv_one(self) -> Tuple[bool, EthernetCommand]:
         """
         Non-blocking receive of exactly one command.
         Uses a small state machine via MSG_PEEK not needed: instead we temporarily
@@ -186,17 +187,17 @@ class EthernetClient:
         with self._lock:
             sock = self._sock
         if sock is None:
-            return None
+            return False, EthernetCommand()
 
         try:
             # Peek header availability (4 bytes)
             try:
                 hdr = sock.recv(4, socket.MSG_PEEK)
             except BlockingIOError:
-                return None
+                return False, EthernetCommand()
 
             if len(hdr) < 4:
-                return None
+                return False, EthernetCommand()
 
             msg_len = struct.unpack("!I", hdr)[0]
             total = 4 + msg_len
@@ -204,10 +205,10 @@ class EthernetClient:
             try:
                 blob = sock.recv(total, socket.MSG_PEEK)
             except BlockingIOError:
-                return None
+                return False, EthernetCommand()
 
             if len(blob) < total:
-                return None
+                return False, EthernetCommand()
 
             # Now actually read for real (blocking reads are safe because we already peeked)
             sock.setblocking(True)
@@ -216,38 +217,21 @@ class EthernetClient:
             finally:
                 sock.setblocking(False)
 
-            return EthernetCommand.from_dict(d)
+            return True, EthernetCommand.from_dict(d)
 
         except (ConnectionError, OSError) as e:
             logger.warning(f"{self.__class__.__name__}: recv error: {e}")
             self._close_sockets()
-            return None
+            return False, EthernetCommand()
         except Exception as e:
             logger.warning(f"{self.__class__.__name__}: recv parse error: {e}")
-            return None
-
-    def receive(
-        self,
-    ) -> Tuple[bool, EthernetCommand]:
-        try:
-            command = self._recv_q.get_nowait()
-        except Exception as e:
-            logger.error(e)
             return False, EthernetCommand()
-
-        logger.info(
-            "{}.receive({})".format(
-                self.__class__.__name__,
-                command,
-            )
-        )
-        return True, command
 
     def send(
         self,
         command: EthernetCommand,
     ):
-        self._send_q.put(command)
+        self._send_queue.put(command)
 
         logger.info(
             "{}.send: queue += {}".format(

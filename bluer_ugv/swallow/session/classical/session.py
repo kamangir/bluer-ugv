@@ -44,6 +44,8 @@ class ClassicalSession:
 
         GPIO.setmode(GPIO.BCM)
 
+        self.ethernet = ClassicalEthernet()
+
         self.leds = ClassicalLeds()
 
         self.audio = ClassicalAudio(
@@ -61,12 +63,9 @@ class ClassicalSession:
             )
 
         self.keyboard = ClassicalKeyboard(
+            ethernet=self.ethernet,
             leds=self.leds,
             setpoint=self.setpoint,
-        )
-
-        self.ethernet = ClassicalEthernet(
-            keyboard=self.keyboard,
         )
 
         self.ultrasonic_sensor = ClassicalUltrasonicSensor(
@@ -200,6 +199,7 @@ class ClassicalSession:
         self.timing.start("session.update")
 
         for thing in [
+            self.ethernet,
             self.keyboard,
             self.push_button,
             self.camera,

@@ -2,9 +2,12 @@ import keyboard
 import threading
 from typing import Any, Dict
 
+from bluer_options.env import abcli_hostname
 from bluer_sbc.session.functions import reply_to_bash
 from bluer_algo.socket.connection import DEV_HOST
 
+from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
+from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mode import OperationMode
@@ -16,12 +19,15 @@ from bluer_ugv.logger import logger
 class ClassicalKeyboard:
     def __init__(
         self,
+        ethernet: ClassicalEthernet,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
     ):
         logger.info(self.__class__.__name__)
 
         self.keys = ControlKeys()
+
+        self.ethernet = ethernet
 
         self.leds = leds
 
@@ -53,6 +59,18 @@ class ClassicalKeyboard:
         if self.special_key:
             for key, event in self.keys.special_keys.items():
                 if keyboard.is_pressed(key):
+                    if self.ethernet.enabled and self.ethernet.client.is_server:
+                        self.ethernet.client.send(
+                            EthernetCommand(
+                                action="keyboard",
+                                data={
+                                    "sender": abcli_hostname,
+                                    "key": key,
+                                    "event": event,
+                                },
+                            )
+                        )
+
                     reply_to_bash(event)
                     return False
 

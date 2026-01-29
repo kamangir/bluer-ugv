@@ -2,9 +2,9 @@ import threading
 import time
 
 from bluer_options.env import abcli_hostname
+from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv import env
-from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.ethernet.client import EthernetClient
 from bluer_ugv.README.ugvs.ethernet import find_server
 from bluer_ugv.logger import logger
@@ -13,13 +13,10 @@ from bluer_ugv.logger import logger
 class ClassicalEthernet:
     def __init__(
         self,
-        keyboard: ClassicalKeyboard,
     ):
         self.enabled: bool = True
 
         logger.info(f"creating {self.__class__.__name__}...")
-
-        self.keyboard = keyboard
 
         self.running = False
 
@@ -32,6 +29,8 @@ class ClassicalEthernet:
             port=env.BLUER_UGV_ETHERNET_PORT,
             is_server=is_server,
         )
+
+        self.stop_received: bool = False
 
         self.running = True
         self.thread = threading.Thread(target=self.loop, daemon=True)
@@ -57,11 +56,23 @@ class ClassicalEthernet:
                 continue
 
             # 1) receive at most one per tick (cheap + predictable)
-            cmd = self.client._try_recv_one()
-            if cmd is not None:
-                self.client._recv_q.put(cmd)
+            received, command = self.client._try_recv_one()
+            if received:
+                logger.info(
+                    "{} received {}".format(
+                        self.__class__.__name__,
+                        command.as_str(),
+                    )
+                )
+
+                if command.action == "keyboard":
+                    reply_to_bash(command.data.get("event", "unknown"))
+                    self.stop_received = True
 
             # 2) drain outbound queue
             self.client._drain_send_queue()
 
             time.sleep(0.1)
+
+    def update(self):
+        return not self.stop_received
