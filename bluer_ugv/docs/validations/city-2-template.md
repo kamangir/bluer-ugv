@@ -1,5 +1,7 @@
 title:::
 
+ugv_name:::
+
 continues [village-8](./village-8.md).
 
 on separate terminals,

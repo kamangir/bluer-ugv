@@ -208,6 +208,17 @@ dict_of_validations = {
             }
         ),
     },
+    "city-3": {
+        "order": 12,
+        "ugv_name": [
+            "rangin",
+        ],
+        "items": ImageItems(
+            {
+                #
+            }
+        ),
+    },
     "template": {
         "ugv_name": [
             "template",
