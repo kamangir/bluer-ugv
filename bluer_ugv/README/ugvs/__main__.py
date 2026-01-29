@@ -23,12 +23,6 @@ parser.add_argument(
     "--what",
     type=str,
 )
-parser.add_argument(
-    "--include_comments",
-    type=int,
-    default=0,
-    help="0 | 1",
-)
 args = parser.parse_args()
 
 success = False
@@ -38,7 +32,6 @@ if args.task == "get":
         get(
             ugv_name=args.ugv_name,
             what=args.what,
-            include_comments=args.include_comments == 1,
         )
     )
 else:

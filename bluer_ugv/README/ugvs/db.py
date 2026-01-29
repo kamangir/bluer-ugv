@@ -19,7 +19,7 @@ dict_of_ugvs = {
         "tagline": "the first one.",
         "class": "swallow",
         "computers": {
-            "front": "swallow2 (`swallow` was used for Ubuntu experiments)",
+            "front": "swallow2",  #  `swallow` was used for Ubuntu experiments
         },
     },
     "arzhang": {

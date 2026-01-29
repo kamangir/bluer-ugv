@@ -1,11 +1,12 @@
-from typing import Tuple
 import threading
 import time
 
+from bluer_options.env import abcli_hostname
+
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
-from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.swallow.session.classical.ethernet.client import EthernetClient
+from bluer_ugv.README.ugvs.ethernet import find_server
 from bluer_ugv.logger import logger
 
 
@@ -14,22 +15,20 @@ class ClassicalEthernet:
         self,
         keyboard: ClassicalKeyboard,
     ):
-        is_server: bool = ...
-        server_name: str = ""
-        ...
+        self.enabled: bool = True
 
-        logger.info(
-            "creating {}{}...".format(
-                self.__class__.__name__,
-                " [server]" if is_server else "",
-            )
-        )
+        logger.info(f"creating {self.__class__.__name__}...")
+
         self.keyboard = keyboard
 
         self.running = False
 
+        self.enabled, is_server, server_name = find_server(hostname=abcli_hostname)
+        if not self.enabled:
+            return
+
         self.client = EthernetClient(
-            host="0.0.0.0" if is_server else f"{server_name}.local",
+            host=server_name,
             port=env.BLUER_UGV_ETHERNET_PORT,
             is_server=is_server,
         )
@@ -39,12 +38,14 @@ class ClassicalEthernet:
         self.thread.start()
 
     def stop(self):
+        if not self.enabled:
+            return
+
         self.running = False
         self.thread.join()
 
+        self.client._close_sockets()
         logger.info(f"{self.__class__.__name__}.stopped.")
-
-        # TODO
 
     def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")

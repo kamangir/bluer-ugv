@@ -4,7 +4,7 @@ the first one.
 
 - class: [swallow](../swallow)
 - computer(s):
-    - front: `swallow2 (`swallow` was used for Ubuntu experiments)`
+    - front: `swallow2`
 
 
 
