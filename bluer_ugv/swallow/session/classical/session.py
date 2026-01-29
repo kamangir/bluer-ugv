@@ -6,6 +6,7 @@ from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
 from bluer_sbc.env import BLUER_SBC_CAMERA_KIND, BLUER_SBC_SWALLOW_HAS_STEERING
 
+from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
     ClassicalNavigationCamera,
@@ -62,6 +63,10 @@ class ClassicalSession:
         self.keyboard = ClassicalKeyboard(
             leds=self.leds,
             setpoint=self.setpoint,
+        )
+
+        self.ethernet = ClassicalEthernet(
+            keyboard=self.keyboard,
         )
 
         self.ultrasonic_sensor = ClassicalUltrasonicSensor(
@@ -142,6 +147,7 @@ class ClassicalSession:
 
     def cleanup(self):
         self.audio.stop()
+        self.ethernet.stop()
         self.ultrasonic_sensor.stop()
         self.camera.stop()
 
