@@ -1,8 +1,20 @@
-# validations: village-8
+# validations: city-2
 
-UGV(s): 🐬 [`arzhang2`](../UGVs/arzhang2.md)
+continues [village-8](./village-8.md).
 
-validation of connection and code update during offline, continued in [city-2](./city-2.md).
+on separate terminals,
+
+```bash
+@ugv ssh arzhang2 back
+
+@ugv ssh arzhang2 front
+
+@ugv watch arzhang2 back
+
+@ugv watch arzhang2 front
+```
+
+> observation: back numpad did not function, likely because it was turned on after the session started. will investigate in the next validations, if occurred. 
 
 |   |   |
 | --- | --- |

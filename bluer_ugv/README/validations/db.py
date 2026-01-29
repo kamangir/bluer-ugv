@@ -196,6 +196,18 @@ dict_of_validations = {
             }
         ),
     },
+    "city-2": {
+        "order": 11,
+        "ugv_name": [
+            "arzhang2",
+        ],
+        "items": ImageItems(
+            {
+                f"{arzhang2_assets2}/2026-01-12.png": "",
+                f"{arzhang2_assets2}/2026-01-13.png": "",
+            }
+        ),
+    },
     "template": {
         "ugv_name": [
             "template",
