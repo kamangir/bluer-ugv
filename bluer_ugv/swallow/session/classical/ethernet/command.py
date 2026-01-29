@@ -1,14 +1,22 @@
+from __future__ import annotations
+from dataclasses import dataclass, field
 from typing import Dict
 
 
+@dataclass
 class EthernetCommand:
-    def __init__(self):
-        self.action: str = ""
-        self.data: Dict = {}
+    action: str = ""
+    data: Dict = field(default_factory=dict)
 
     def as_str(self) -> str:
-        return "{}({})[{}]".format(
-            self.__class__.__name__,
-            self.action,
-            self.data,
+        return f"{self.__class__.__name__}({self.action})[{self.data}]"
+
+    def to_dict(self) -> Dict:
+        return {"action": self.action, "data": self.data}
+
+    @staticmethod
+    def from_dict(d: Dict) -> "EthernetCommand":
+        return EthernetCommand(
+            action=str(d.get("action", "")),
+            data=dict(d.get("data", {}) or {}),
         )
