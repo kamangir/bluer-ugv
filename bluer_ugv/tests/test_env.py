@@ -33,6 +33,7 @@ def test_bluer_ugv_env():
             env.BLUER_UGV_AUDIO_RATE,
             env.BLUER_UGV_ETHERNET_PORT,
             env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
+            env.BLUER_UGV_SWALLOW_YOLO_SPEED_SETPOINT,
         ]
     )
 

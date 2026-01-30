@@ -156,6 +156,7 @@ class ClassicalYoloCamera(ClassicalCamera):
                 logger.warning("failed to send debug data.")
 
         if not metadata["detections"]:
+            self.setpoint.stop()
             logger.info("no detections.")
             return True
 
@@ -176,6 +177,12 @@ class ClassicalYoloCamera(ClassicalCamera):
                 log=True,
                 steering_expires_in=env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY,
             )
+
+        self.setpoint.put(
+            what="speed",
+            value=env.BLUER_UGV_SWALLOW_YOLO_SPEED_SETPOINT,
+            log=True,
+        )
 
         return True
 
