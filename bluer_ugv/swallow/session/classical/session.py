@@ -242,7 +242,7 @@ class ClassicalSession:
 
         while True:
             try:
-                command = self.ethernet.client._send_queue.get_nowait()
+                command = self.ethernet.client._receive_queue.get_nowait()
             except Empty:
                 break
 
