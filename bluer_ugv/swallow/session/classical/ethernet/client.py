@@ -4,9 +4,11 @@ import socket
 from typing import Tuple, Dict, Optional
 import struct
 import threading
+import time
+
+from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.logger import logger
-
 from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.logger import logger
 
@@ -226,6 +228,34 @@ class EthernetClient:
         except Exception as e:
             logger.warning(f"{self.__class__.__name__}: recv parse error: {e}")
             return False, EthernetCommand()
+
+    def close(self):
+        self._close_sockets()
+
+    def process(self):
+        connected = self._ensure_connection()
+        if not connected:
+            time.sleep(self.reconnect_sec)
+            return
+
+        # 1) receive at most one per tick (cheap + predictable)
+        received, command = self._try_recv_one()
+        if received:
+            logger.info(
+                "{} received {}".format(
+                    self.__class__.__name__,
+                    command.as_str(),
+                )
+            )
+
+            if command.action == "keyboard":
+                reply_to_bash(command.data.get("event", "unknown"))
+                self.stop_received = True
+
+        # 2) drain outbound queue
+        self._drain_send_queue()
+
+        time.sleep(0.1)
 
     def send(
         self,
