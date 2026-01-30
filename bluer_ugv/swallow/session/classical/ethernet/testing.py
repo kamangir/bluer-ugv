@@ -1,8 +1,11 @@
+import keyboard
+
 from blueness import module
 
 from bluer_ugv import NAME
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.ethernet.client import EthernetClient
+from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.logger import logger
 
 
@@ -31,9 +34,13 @@ def test(
         is_server=is_server,
     )
 
+    logger.info("press <space> to send a message.")
     try:
         while True:
             client.process()
+
+            if keyboard.is_pressed(" "):
+                client.send(EthernetCommand(action="hello"))
     except KeyboardInterrupt:
         logger.info("Ctrl+C, stopping.")
     except Exception as e:
