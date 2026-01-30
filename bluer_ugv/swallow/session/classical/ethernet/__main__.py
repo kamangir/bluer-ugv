@@ -32,6 +32,7 @@ args = parser.parse_args()
 
 success = False
 if args.task == "test":
+    success = True
     client = EthernetClient(
         host=args.server_name,
         port=env.BLUER_UGV_ETHERNET_PORT,
