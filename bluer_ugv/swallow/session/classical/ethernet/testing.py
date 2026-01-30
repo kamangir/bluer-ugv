@@ -34,12 +34,12 @@ def test(
         is_server=is_server,
     )
 
-    logger.info("press <space> to send a message.")
+    logger.info("press 5 to send a message.")
     try:
         while True:
             client.process()
 
-            if keyboard.is_pressed(" "):
+            if keyboard.is_pressed("5"):
                 client.send(EthernetCommand(action="hello"))
     except KeyboardInterrupt:
         logger.info("Ctrl+C, stopping.")
