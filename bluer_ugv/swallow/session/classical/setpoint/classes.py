@@ -89,12 +89,19 @@ class ClassicalSetPoint:
 
     def put(
         self,
-        value: Union[int, bool],
-        what: str,
+        value: Union[int, bool, Dict[str, Union[int, bool]]],
+        what: str = "all",
         log: bool = True,
         steering_expires_in: float = 0,
     ):
         with self._lock:
+            if what == "all":
+                self.speed = min(100, max(-100, int(value["speed"])))
+                self.started = bool(value["started"])
+                self.steering = min(100, max(-100, int(value["steering"])))
+                self.steering_expiry = time.time() + steering_expires_in
+                return
+
             if what == "speed":
                 self.speed = min(100, max(-100, int(value)))
                 if log:
