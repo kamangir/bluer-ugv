@@ -4,7 +4,7 @@ from bluer_ugv.README.fire import docs as fire_docs
 from bluer_ugv.README.rangin import docs as rangin_docs
 from bluer_ugv.README.ravin import docs as ravin_docs
 from bluer_ugv.README import (
-    alias,
+    aliases,
     beast,
     root,
     releases,
@@ -16,7 +16,7 @@ from bluer_ugv.README.validations import docs as validations
 
 docs = (
     root.docs
-    + alias.docs
+    + aliases.docs
     + arzhang_docs.docs
     + beast.docs
     + eagle_docs.docs
