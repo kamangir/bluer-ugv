@@ -213,7 +213,6 @@ dict_of_validations = {
         "ugv_name": [
             "rangin",
         ],
-        "items": ImageItems({}),
     },
     "city-4": {
         "order": 14,
