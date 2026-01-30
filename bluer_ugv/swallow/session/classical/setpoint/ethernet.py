@@ -1,6 +1,5 @@
 from typing import Union, Dict
 
-from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 

@@ -6,8 +6,6 @@ import struct
 import threading
 import time
 
-from bluer_sbc.session.functions import reply_to_bash
-
 from bluer_ugv.logger import logger
 from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.logger import logger
@@ -21,14 +19,13 @@ class EthernetClient:
         is_server: bool = False,
         reconnect_sec: float = 1.0,
     ):
-        self.stop_received: bool = False
-
         self.host = host
         self.port = port
         self.is_server = is_server
         self.reconnect_sec = reconnect_sec
 
         self._send_queue: SimpleQueue[EthernetCommand] = SimpleQueue()
+        self._receive_queue: SimpleQueue[EthernetCommand] = SimpleQueue()
 
         self._lock = threading.Lock()
         self._sock: Optional[socket.socket] = None
@@ -250,10 +247,7 @@ class EthernetClient:
                 )
             )
 
-            if command.action == "keyboard":
-                reply_to_bash(command.data.get("event", "unknown"))
-                self.stop_received = True
-                logger.info("stop received.")
+            self._receive_queue.put(command)
 
         # 2) drain outbound queue
         self._drain_send_queue()
