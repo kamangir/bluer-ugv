@@ -242,7 +242,9 @@ class ClassicalSession:
 
         while True:
             try:
-                command = self.ethernet.client._receive_queue.get_nowait()
+                command = (
+                    self.ethernet.client._receive_queue.get_nowait()
+                )  # pylint: disable=protected-access
             except Empty:
                 break
 
