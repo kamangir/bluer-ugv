@@ -28,6 +28,9 @@ from bluer_ugv.swallow.session.classical.motor import (
     ClassicalVoidMotor,
 )
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.setpoint.ethernet import (
+    ClassicalEthernetSetPoint,
+)
 from bluer_ugv.swallow.session.classical.position import ClassicalPosition
 from bluer_ugv.swallow.session.classical.screen.classes import ClassicalScreen
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
@@ -45,6 +48,8 @@ class ClassicalSession:
     ):
         self.object_name = object_name
 
+        _, location = get_location(abcli_hostname)
+
         GPIO.setmode(GPIO.BCM)
 
         self.ethernet = ClassicalEthernet()
@@ -55,7 +60,10 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        self.setpoint = ClassicalSetPoint(
+        self.setpoint = (
+            ClassicalSetPoint if location == "front" else ClassicalEthernetSetPoint
+        )(
+            ethernet=self.ethernet,
             leds=self.leds,
         )
 
@@ -82,8 +90,6 @@ class ClassicalSession:
 
         self.has_steering = BLUER_SBC_SWALLOW_HAS_STEERING == 1
         logger.info("has_steering: {}".format(self.has_steering))
-
-        _, location = get_location(abcli_hostname)
 
         self.motor1 = (
             ClassicalVoidMotor

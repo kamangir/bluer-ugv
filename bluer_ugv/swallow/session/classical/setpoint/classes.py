@@ -5,6 +5,7 @@ import time
 from bluer_options import string
 
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
+from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.setpoint.steering import (
     generate_left_and_right,
 )
@@ -14,6 +15,7 @@ from bluer_ugv.logger import logger
 class ClassicalSetPoint:
     def __init__(
         self,
+        ethernet: ClassicalEthernet,
         leds: ClassicalLeds,
     ):
         self.speed = 0
@@ -23,6 +25,7 @@ class ClassicalSetPoint:
 
         self.started = False
 
+        self.ethernet = ethernet
         self.leds = leds
 
         self._lock = threading.Lock()
