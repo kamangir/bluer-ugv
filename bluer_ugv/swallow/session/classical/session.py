@@ -1,11 +1,13 @@
 from RPi import GPIO  # type: ignore
 
 from bluer_options import string
+from bluer_options.env import abcli_hostname
 from bluer_options.timing.classes import Timing
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
 from bluer_sbc.env import BLUER_SBC_CAMERA_KIND, BLUER_SBC_SWALLOW_HAS_STEERING
 
+from bluer_ugv.README.ugvs.location import get_location
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
@@ -23,6 +25,7 @@ from bluer_ugv.swallow.session.classical.motor import (
     ClassicalRightMotor,
     ClassicalRearMotors,
     ClassicalSteeringMotor,
+    ClassicalVoidMotor,
 )
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.position import ClassicalPosition
@@ -80,28 +83,35 @@ class ClassicalSession:
         self.has_steering = BLUER_SBC_SWALLOW_HAS_STEERING == 1
         logger.info("has_steering: {}".format(self.has_steering))
 
+        _, location = get_location(abcli_hostname)
+
         self.motor1 = (
-            ClassicalSteeringMotor if self.has_steering else ClassicalRightMotor
+            ClassicalVoidMotor
+            if location != "front"
+            else ClassicalSteeringMotor if self.has_steering else ClassicalRightMotor
         )(
             setpoint=self.setpoint,
             leds=self.leds,
         )
 
         self.motor2 = (
-            ClassicalRearMotors if self.has_steering else ClassicalLeftMotor
+            ClassicalVoidMotor
+            if location != "front"
+            else ClassicalRearMotors if self.has_steering else ClassicalLeftMotor
         )(
             setpoint=self.setpoint,
             leds=self.leds,
         )
 
-        self.position = ClassicalPosition(object_name)
-
-        logger.info(
-            "wheel arrangement: {} + {}".format(
-                self.motor1.role,
-                self.motor2.role,
+        if location != "front":
+            logger.info(
+                "wheel arrangement: {} + {}".format(
+                    self.motor1.role,
+                    self.motor2.role,
+                )
             )
-        )
+
+        self.position = ClassicalPosition(object_name)
 
         camera_class = (
             ClassicalVoidCamera
