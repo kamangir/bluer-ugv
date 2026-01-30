@@ -103,13 +103,15 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        if location != "front":
+        if location == "front":
             logger.info(
                 "wheel arrangement: {} + {}".format(
                     self.motor1.role,
                     self.motor2.role,
                 )
             )
+        else:
+            logger.info("no wheels.")
 
         self.position = ClassicalPosition(object_name)
 
