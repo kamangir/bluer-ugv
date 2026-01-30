@@ -213,9 +213,19 @@ dict_of_validations = {
         "ugv_name": [
             "rangin",
         ],
+    },
+    "city-4": {
+        "order": 14,
+        "ugv_name": [
+            "rangin",
+        ],
         "items": ImageItems(
             {
-                #
+                assets_url(
+                    suffix="{object_name}/{object_name}.gif".format(
+                        object_name="swallow-debug-2026-01-30-15-14-29-26okr6"
+                    )
+                ): "",
             }
         ),
     },
