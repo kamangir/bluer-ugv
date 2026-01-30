@@ -5,9 +5,6 @@ from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoi
 class ClassicalVoidMotor:
     def __init__(
         self,
-        role: str,
-        lpwm_pin: int,
-        rpwm_pin: int,
         setpoint: ClassicalSetPoint,
         leds: ClassicalLeds,
     ):
