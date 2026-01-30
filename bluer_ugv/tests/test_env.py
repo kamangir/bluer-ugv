@@ -28,10 +28,11 @@ def test_bluer_ugv_env():
 
     assert are_positive_ints(
         [
-            env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             env.BLUER_UGV_AUDIO_CHANNELS,
             env.BLUER_UGV_AUDIO_LENGTH,
             env.BLUER_UGV_AUDIO_RATE,
+            env.BLUER_UGV_ETHERNET_PORT,
+            env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
         ]
     )
 
@@ -39,13 +40,13 @@ def test_bluer_ugv_env():
         [
             env.BLUER_UGV_AUDIO_LANGUAGE,
             env.BLUER_UGV_BEAST_MODEL,
+            env.BLUER_UGV_RELEASE_2,
             env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
             env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
             env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
             env.BLUER_UGV_SWALLOW_YOLO_MODEL,
             env.BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT,
             env.RANGIN_VIDEO_LIST_OBJECT,
-            env.BLUER_UGV_RELEASE_2,
         ]
     )
 

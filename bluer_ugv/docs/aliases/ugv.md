@@ -1,12 +1,10 @@
 # aliases: ugv
 
-
 ```bash
 @ugv \
 	get \
 	<ugv-name> \
-	computers.back | computers.front | computers.top | <what> \
-	[--include_comments 1]
+	computers.back | computers.front | computers.top | <what>
  . get ugv info.
 ```
 

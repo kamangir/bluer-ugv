@@ -1,7 +1,5 @@
 # aliases: swallow
 
-## dataset
-
 ```bash
 @swallow \
 	dataset \
@@ -32,11 +30,6 @@
 	upload \
 	[~metadata,navigation|yolo]
  . upload the swallow dataset.
-```
-
-## debug
-
-```bash
 @swallow \
 	debug \
 	[~upload] \
@@ -44,11 +37,6 @@
 	[--generate_gif 0] \
 	[--save_images 0]
  . debug swallow.
-```
-
-## env
-
-```bash
 @swallow \
 	env \
 	cp \
@@ -68,42 +56,29 @@
    camera: BLUER_SBC_SWALLOW_HAS_CAMERA (currently: 1)
    full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: 0)
     screen: BLUER_SBC_ENABLE_SCREEN (currently: 1)steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: 1)
-```
-
-## git
-
-```bash
+@swallow \
+	ethernet \
+	test \
+	[dryrun] \
+	[--is_server 0 | 1] \
+	[--server_name 0.0.0.0 | <server_name>.local]
+ . test ethernet.
 @swallow \
 	git \
 	rm_keys \
 	[~dryrun,undo]
  . (undo) rm github keys.
-```
-
-## keyboard
-
-```bash
 @swallow \
 	keyboard \
 	test \
 	[dryrun] \
 	[--keys 1234567890-+/.]
  . test keyboard.
-```
-
-## select-target
-
-```bash
 @swallow \
 	select_target \
 	[--host <hostname>] \
 	[--loop 0]
  . select swallow target.
-```
-
-## ultrasonic-sensor
-
-```bash
 @swallow \
 	ultrasonic \
 	review \
@@ -125,11 +100,6 @@
 	[--max_m 0.80] \
 	[--rm_blank 0]
  . test ultrasonic sensors.
-```
-
-## video
-
-```bash
 @swallow \
 	video \
 	play \
@@ -165,22 +135,4 @@
 	upload \
 	[filename=<filename>,public,zip]
  . upload swallow playlist.
-```
-
-rangin-video-list-1
-
-```yaml
-messages:
-  loading:
-    filename: loading_circle_bars.mp4
-    source: https://www.videezy.com/backgrounds/14052-loading-circle-bars
-  warning:
-    filename: vecteezy_flashing-neon-warning-text-video-good-for-danger-sign_6299554.mp4
-    source: https://www.vecteezy.com/video/6299554-flashing-neon-warning-text-video-good-for-danger-sign-illustrations
-playlist:
-- filename: 731d19dc3ec2f52c626eb575d61bf19b51289493-1080p.mp4
-  source: https://www.aparat.com/v/d14c1r8
-- filename: d166d435a33dfd7e77b29ceaa96d2cb312692024-480p.mp4
-  source: https://www.aparat.com/v/a79o81f
-
 ```

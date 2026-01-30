@@ -6,6 +6,7 @@
 - [rpi-pinout](./rpi-pinout.md)
 - [operation](./operation.md)
 - [mechanical](./mechanical)
+- [ethernet](./ethernet.md)
 - [testing](./testing.md)
 
 ## sub-systems
