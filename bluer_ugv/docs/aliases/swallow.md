@@ -39,6 +39,15 @@
  . debug swallow.
 @swallow \
 	env \
+	cat \
+	[<env-name>]
+ . cat swallow-raspbian-<env-name>.env.
+@swallow \
+	env \
+	cd
+ . cd env folder.
+@swallow \
+	env \
 	cp \
 	[<env-name>]
  . cp swallow-raspbian-<env-name>.env.
@@ -55,7 +64,8 @@
    bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: 0)
    camera: BLUER_SBC_SWALLOW_HAS_CAMERA (currently: 1)
    full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: 0)
-    screen: BLUER_SBC_ENABLE_SCREEN (currently: 1)steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: 1)
+    screen: BLUER_SBC_ENABLE_SCREEN (currently: 1)
+   steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: 1)
 @swallow \
 	ethernet \
 	test \
