@@ -68,7 +68,8 @@ class ClassicalKeyboard:
                                     "key": key,
                                     "event": event,
                                 },
-                            )
+                            ),
+                            drain=True,
                         )
 
                     reply_to_bash(event)

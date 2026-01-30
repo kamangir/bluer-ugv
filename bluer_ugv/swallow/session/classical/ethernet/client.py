@@ -263,6 +263,7 @@ class EthernetClient:
     def send(
         self,
         command: EthernetCommand,
+        drain: bool = False,
     ):
         self._send_queue.put(command)
 
@@ -272,3 +273,6 @@ class EthernetClient:
                 command.as_str(),
             )
         )
+
+        if drain:
+            self._drain_send_queue()
