@@ -2,11 +2,9 @@ import argparse
 
 from blueness import module
 from blueness.argparse.generic import sys_exit
-from bluer_options.env import abcli_hostname
 
 from bluer_ugv import env
 from bluer_ugv import NAME
-from bluer_ugv.README.ugvs.ethernet import find_server
 from bluer_ugv.swallow.session.classical.ethernet.client import EthernetClient
 from bluer_ugv.logger import logger
 
@@ -19,33 +17,37 @@ parser.add_argument(
     help="test",
 )
 parser.add_argument(
-    "--arg",
+    "--is_server",
     type=int,
-    default=0,
-    help="0|1",
+    default=1,
+    help="0 | 1",
+)
+parser.add_argument(
+    "--server_name",
+    type=str,
+    default="0.0.0.0",
+    help="0.0.0.0 | <server_name>.local",
 )
 args = parser.parse_args()
 
 success = False
 if args.task == "test":
-    success, is_server, server_name = find_server(hostname=abcli_hostname)
-    if success:
-        client = EthernetClient(
-            host=server_name,
-            port=env.BLUER_UGV_ETHERNET_PORT,
-            is_server=is_server,
-        )
+    client = EthernetClient(
+        host=args.server_name,
+        port=env.BLUER_UGV_ETHERNET_PORT,
+        is_server=args.is_server == 1,
+    )
 
-        try:
-            while True:
-                client.process()
-        except KeyboardInterrupt:
-            logger.info("Ctrl+C, stopping.")
-        except Exception as e:
-            logger.error(e)
-            success = False
+    try:
+        while True:
+            client.process()
+    except KeyboardInterrupt:
+        logger.info("Ctrl+C, stopping.")
+    except Exception as e:
+        logger.error(e)
+        success = False
 
-        client.close()
+    client.close()
 else:
     success = None
 

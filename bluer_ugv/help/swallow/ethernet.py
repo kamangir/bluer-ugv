@@ -11,13 +11,19 @@ def help_test(
 ) -> str:
     options = xtra("dryrun", mono=mono)
 
+    args = [
+        "[--is_server 0 | 1]",
+        "[--server_name 0.0.0.0 | <server_name>.local]",
+    ]
+
     return show_usage(
         [
             "@swallow",
             "ethernet",
             "test",
             f"[{options}]",
-        ],
+        ]
+        + args,
         "test ethernet.",
         mono=mono,
     )
