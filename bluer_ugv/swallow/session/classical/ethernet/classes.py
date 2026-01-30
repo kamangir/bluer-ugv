@@ -28,8 +28,6 @@ class ClassicalEthernet:
             is_server=is_server,
         )
 
-        self.stop_received: bool = False
-
         self.running = True
         self.thread = threading.Thread(target=self.loop, daemon=True)
         self.thread.start()
@@ -51,4 +49,4 @@ class ClassicalEthernet:
             self.client.process()
 
     def update(self):
-        return not self.stop_received
+        return not self.client.stop_received

@@ -21,6 +21,8 @@ class EthernetClient:
         is_server: bool = False,
         reconnect_sec: float = 1.0,
     ):
+        self.stop_received: bool = False
+
         self.host = host
         self.port = port
         self.is_server = is_server
@@ -251,6 +253,7 @@ class EthernetClient:
             if command.action == "keyboard":
                 reply_to_bash(command.data.get("event", "unknown"))
                 self.stop_received = True
+                logger.info("stop received.")
 
         # 2) drain outbound queue
         self._drain_send_queue()
