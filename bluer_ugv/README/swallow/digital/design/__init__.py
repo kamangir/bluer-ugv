@@ -5,6 +5,7 @@ from bluer_ugv.README.swallow.consts import (
     swallow_electrical_designs,
 )
 from bluer_ugv.README.swallow.digital.design import (
+    ethernet,
     mechanical,
     parts,
     ultrasonic_sensor,
@@ -61,6 +62,7 @@ docs = (
             ),
         },
     ]
+    + ethernet.docs
     + mechanical.docs
     + parts.docs
     + ultrasonic_sensor.docs
