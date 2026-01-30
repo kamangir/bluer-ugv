@@ -30,6 +30,8 @@ class ClassicalSetPoint:
 
         self._lock = threading.Lock()
 
+        logger.info(f"{self.__class__.__name__} created.")
+
     def get(
         self,
         what: str = "all",
