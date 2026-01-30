@@ -255,8 +255,8 @@ class ClassicalSession:
                 self.setpoint.put(
                     value=command.data.get("value", 0),
                     what=command.data.get("what", "void"),
-                    what=command.data.get("steering_expires_in", 0),
                     log=True,
+                    steering_expires_in=command.data.get("steering_expires_in", 0),
                 )
             else:
                 logger.warning(f"unknown command: {command.as_str()}")
