@@ -47,6 +47,3 @@ class ClassicalEthernet:
 
         while self.running:
             self.client.process()
-
-    def update(self):
-        return not self.client.stop_received

@@ -1,11 +1,15 @@
 from RPi import GPIO  # type: ignore
+from queue import Empty
 
 from bluer_options import string
+from bluer_options.env import abcli_hostname
 from bluer_options.timing.classes import Timing
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
 from bluer_sbc.env import BLUER_SBC_CAMERA_KIND, BLUER_SBC_SWALLOW_HAS_STEERING
+from bluer_sbc.session.functions import reply_to_bash
 
+from bluer_ugv.README.ugvs.location import get_location
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
@@ -23,8 +27,12 @@ from bluer_ugv.swallow.session.classical.motor import (
     ClassicalRightMotor,
     ClassicalRearMotors,
     ClassicalSteeringMotor,
+    ClassicalVoidMotor,
 )
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.setpoint.ethernet import (
+    ClassicalEthernetSetPoint,
+)
 from bluer_ugv.swallow.session.classical.position import ClassicalPosition
 from bluer_ugv.swallow.session.classical.screen.classes import ClassicalScreen
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
@@ -42,6 +50,8 @@ class ClassicalSession:
     ):
         self.object_name = object_name
 
+        _, self.location = get_location(abcli_hostname)
+
         GPIO.setmode(GPIO.BCM)
 
         self.ethernet = ClassicalEthernet()
@@ -52,7 +62,10 @@ class ClassicalSession:
             leds=self.leds,
         )
 
-        self.setpoint = ClassicalSetPoint(
+        self.setpoint = (
+            ClassicalSetPoint if self.location == "front" else ClassicalEthernetSetPoint
+        )(
+            ethernet=self.ethernet,
             leds=self.leds,
         )
 
@@ -81,27 +94,34 @@ class ClassicalSession:
         logger.info("has_steering: {}".format(self.has_steering))
 
         self.motor1 = (
-            ClassicalSteeringMotor if self.has_steering else ClassicalRightMotor
+            ClassicalVoidMotor
+            if self.location != "front"
+            else ClassicalSteeringMotor if self.has_steering else ClassicalRightMotor
         )(
             setpoint=self.setpoint,
             leds=self.leds,
         )
 
         self.motor2 = (
-            ClassicalRearMotors if self.has_steering else ClassicalLeftMotor
+            ClassicalVoidMotor
+            if self.location != "front"
+            else ClassicalRearMotors if self.has_steering else ClassicalLeftMotor
         )(
             setpoint=self.setpoint,
             leds=self.leds,
         )
 
-        self.position = ClassicalPosition(object_name)
-
-        logger.info(
-            "wheel arrangement: {} + {}".format(
-                self.motor1.role,
-                self.motor2.role,
+        if self.location == "front":
+            logger.info(
+                "wheel arrangement: {} + {}".format(
+                    self.motor1.role,
+                    self.motor2.role,
+                )
             )
-        )
+        else:
+            logger.info("no wheels.")
+
+        self.position = ClassicalPosition(object_name)
 
         camera_class = (
             ClassicalVoidCamera
@@ -199,7 +219,6 @@ class ClassicalSession:
         self.timing.start("session.update")
 
         for thing in [
-            self.ethernet,
             self.keyboard,
             self.push_button,
             self.camera,
@@ -218,4 +237,28 @@ class ClassicalSession:
             self.timing.stop(thing.__class__.__name__)
 
         self.timing.stop("session.update")
+        if self.location != "front":
+            return True
+
+        while True:
+            try:
+                command = self.ethernet.client._receive_queue.get_nowait()
+            except Empty:
+                break
+
+            if command.action == "keyboard":
+                reply_to_bash(command.data.get("event", "unknown"))
+                logger.info("stop received.")
+                return False
+
+            if command.action == "setpoint.put":
+                self.setpoint.put(
+                    value=command.data.get("value", 0),
+                    what=command.data.get("what", "void"),
+                    log=True,
+                    steering_expires_in=command.data.get("steering_expires_in", 0),
+                )
+            else:
+                logger.warning(f"unknown command: {command.as_str()}")
+
         return True
