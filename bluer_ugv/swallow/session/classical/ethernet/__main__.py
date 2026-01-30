@@ -5,7 +5,7 @@ from blueness.argparse.generic import sys_exit
 
 from bluer_ugv import env
 from bluer_ugv import NAME
-from bluer_ugv.swallow.session.classical.ethernet.client import EthernetClient
+from bluer_ugv.swallow.session.classical.ethernet.testing import test
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)
@@ -32,23 +32,10 @@ args = parser.parse_args()
 
 success = False
 if args.task == "test":
-    success = True
-    client = EthernetClient(
-        host=args.server_name,
-        port=env.BLUER_UGV_ETHERNET_PORT,
+    success = test(
+        server_name=args.server_name,
         is_server=args.is_server == 1,
     )
-
-    try:
-        while True:
-            client.process()
-    except KeyboardInterrupt:
-        logger.info("Ctrl+C, stopping.")
-    except Exception as e:
-        logger.error(e)
-        success = False
-
-    client.close()
 else:
     success = None
 
