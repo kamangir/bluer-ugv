@@ -215,31 +215,7 @@ class ClassicalSession:
             ]
         )
 
-    def update(self) -> bool:
-        self.timing.start("session.update")
-
-        for thing in [
-            self.keyboard,
-            self.push_button,
-            self.camera,
-            self.position,
-            self.setpoint,
-            self.motor1,
-            self.motor2,
-            self.leds,
-            self.screen,
-        ]:
-            self.timing.start(thing.__class__.__name__)
-
-            if not thing.update():
-                return False
-
-            self.timing.stop(thing.__class__.__name__)
-
-        self.timing.stop("session.update")
-        if self.location != "front":
-            return True
-
+    def process_ethernet_messages(self) -> bool:
         while True:
             try:
                 # pylint: disable=protected-access
@@ -263,3 +239,28 @@ class ClassicalSession:
                 logger.warning(f"unknown command: {command.as_str()}")
 
         return True
+
+    def update(self) -> bool:
+        self.timing.start("session.update")
+
+        for thing in [
+            self.keyboard,
+            self.push_button,
+            self.camera,
+            self.position,
+            self.setpoint,
+            self.motor1,
+            self.motor2,
+            self.leds,
+            self.screen,
+        ]:
+            self.timing.start(thing.__class__.__name__)
+
+            if not thing.update():
+                return False
+
+            self.timing.stop(thing.__class__.__name__)
+
+        self.timing.stop("session.update")
+
+        return self.process_ethernet_messages()

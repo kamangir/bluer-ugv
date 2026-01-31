@@ -8,6 +8,7 @@ title:::
 - [power](./power)
 - [mechanical](./mechanical.md)
 - [terraform](./terraform.md)
+- [operation](./operation.md)
 
 items:::
 

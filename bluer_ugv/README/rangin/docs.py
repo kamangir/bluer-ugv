@@ -1,5 +1,6 @@
 from bluer_ugv.README.rangin import (
     mechanical,
+    operation,
     parts,
     power,
     root,
@@ -10,6 +11,7 @@ from bluer_ugv.README.rangin import (
 
 docs = (
     mechanical.docs
+    + operation.docs
     + parts.docs
     + power.docs
     + root.docs
