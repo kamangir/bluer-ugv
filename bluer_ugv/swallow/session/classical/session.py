@@ -237,8 +237,6 @@ class ClassicalSession:
             self.timing.stop(thing.__class__.__name__)
 
         self.timing.stop("session.update")
-        if self.location != "front":
-            return True
 
         while True:
             try:
