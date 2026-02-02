@@ -39,6 +39,7 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
     ClassicalUltrasonicSensor,
 )
 from bluer_ugv.swallow.session.classical.audio.classes import ClassicalAudio
+from bluer_ugv.swallow.session.classical.scenario.classes import ClassicalScenario
 from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 
@@ -153,6 +154,8 @@ class ClassicalSession:
 
         self.screen = ClassicalScreen()
 
+        self.scenario = ClassicalScenario()
+
         logger.info(
             "{}: created for {}".format(
                 self.__class__.__name__,
@@ -251,6 +254,7 @@ class ClassicalSession:
             self.motor2,
             self.leds,
             self.screen,
+            self.scenario,
         ]:
             self.timing.start(thing.__class__.__name__)
 
