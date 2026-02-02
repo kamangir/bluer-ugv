@@ -11,7 +11,7 @@ class ClassicalEthernetSetPoint(ClassicalSetPoint):
         value: Union[int, bool, Dict[str, Union[int, bool]]],
         what: str = "all",
         log: bool = True,
-        steering_expires_in: float = env.BLUER_UGV_SWALLOW_STEERING_EXPIRY,
+        steering_expires_in: float = env.BLUER_UGV_SWALLOW_STEERING_EXPIRY_ETHERNET,
     ):
         super().put(
             value=value,
