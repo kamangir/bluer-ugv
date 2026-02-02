@@ -71,8 +71,8 @@ class ClassicalKeyboard:
                         drain=True,
                     )
 
-                reply_to_bash(event)
-                return False
+                    reply_to_bash(event)
+                    return False
 
         # other keys
         for key, func in {
