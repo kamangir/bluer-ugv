@@ -44,6 +44,8 @@ class ClassicalKeyboard:
             "ultrasound_enabled": True,
         }
 
+        self.is_used_for_steering: bool = False
+
     def get(self, what: str, default: Any) -> Any:
         with self._lock:
             return self.config.get(what, default)
@@ -104,6 +106,8 @@ class ClassicalKeyboard:
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
+
+            self.is_used_for_steering = True
         elif keyboard.is_pressed(self.keys.get("steer right")):
             logger.info('"steer right" is pressed.')
             self.special_key = False
@@ -112,8 +116,11 @@ class ClassicalKeyboard:
                 what="steering",
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
-        else:
-            self.setpoint.check_steering_expiry()
+
+            self.is_used_for_steering = True
+        elif self.is_used_for_steering:
+            if self.setpoint.check_steering_expiry():
+                self.is_used_for_steering = False
 
         # debug mode
         if keyboard.is_pressed(self.keys.get("debug on")):
