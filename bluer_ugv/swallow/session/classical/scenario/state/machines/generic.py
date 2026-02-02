@@ -14,7 +14,12 @@ class GenericStateMachine:
         self.load()
 
     def load(self) -> bool:
-        logger.info(f"loading {self.__class__.__name__}...")
+        logger.info(
+            "loaded {}: {}...".format(
+                self.__class__.__name__,
+                ", ".join([state.name for state in self.list_of_states]),
+            )
+        )
         return True
 
     def process(self) -> bool:
@@ -54,7 +59,7 @@ class GenericStateMachine:
             next_state_name
         )
         logger.info(
-            '{}.process: switching from state #{} "{}" to state #{} "{}"'.format(
+            '{}.process: state #{} "{}" -> state #{} "{}"'.format(
                 self.__class__.__name__,
                 old_index,
                 self.list_of_states[old_index].name,

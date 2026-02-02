@@ -13,16 +13,12 @@ from bluer_ugv.swallow.session.classical.scenario.state.listening import (
 from bluer_ugv.swallow.session.classical.scenario.state.responding import (
     RespondingState,
 )
-from bluer_ugv.logger import logger
 
 
 class RanginStateMachine(GenericStateMachine):
     name = "rangin"
 
     def load(self) -> bool:
-        if not super().load():
-            return False
-
         self.list_of_states = [
             ApproachingState,
             GreetingState,
@@ -31,4 +27,4 @@ class RanginStateMachine(GenericStateMachine):
         ]
         self.index: int = 0
 
-        return True
+        return super().load()
