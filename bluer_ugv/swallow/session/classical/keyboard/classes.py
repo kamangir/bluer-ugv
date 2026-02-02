@@ -58,22 +58,21 @@ class ClassicalKeyboard:
         # bash keys
         if self.special_key:
             for key, event in self.keys.special_keys.items():
-                if keyboard.is_pressed(key):
-                    if self.ethernet.enabled and self.ethernet.client.is_server:
-                        self.ethernet.client.send(
-                            EthernetCommand(
-                                action="keyboard",
-                                data={
-                                    "sender": abcli_hostname,
-                                    "key": key,
-                                    "event": event,
-                                },
-                            ),
-                            drain=True,
-                        )
+                if keyboard.is_pressed(key) and self.ethernet.enabled:
+                    self.ethernet.client.send(
+                        EthernetCommand(
+                            action="keyboard",
+                            data={
+                                "sender": abcli_hostname,
+                                "key": key,
+                                "event": event,
+                            },
+                        ),
+                        drain=True,
+                    )
 
-                    reply_to_bash(event)
-                    return False
+                reply_to_bash(event)
+                return False
 
         # other keys
         for key, func in {

@@ -118,8 +118,6 @@ class ClassicalSession:
                     self.motor2.role,
                 )
             )
-        else:
-            logger.info("no wheels.")
 
         self.position = ClassicalPosition(object_name)
 
