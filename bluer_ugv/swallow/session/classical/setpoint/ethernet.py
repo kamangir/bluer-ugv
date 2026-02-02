@@ -1,5 +1,6 @@
 from typing import Union, Dict
 
+from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 
@@ -10,7 +11,7 @@ class ClassicalEthernetSetPoint(ClassicalSetPoint):
         value: Union[int, bool, Dict[str, Union[int, bool]]],
         what: str = "all",
         log: bool = True,
-        steering_expires_in: float = 0,
+        steering_expires_in: float = env.BLUER_UGV_SWALLOW_STEERING_EXPIRY,
     ):
         super().put(
             value=value,
