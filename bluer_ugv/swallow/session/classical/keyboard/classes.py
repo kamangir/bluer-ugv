@@ -59,6 +59,8 @@ class ClassicalKeyboard:
         if self.special_key:
             for key, event in self.keys.special_keys.items():
                 if keyboard.is_pressed(key):
+                    logger.info(f'*"{key}" is pressed.')
+
                     if self.ethernet.enabled:
                         self.ethernet.client.send(
                             EthernetCommand(
@@ -89,11 +91,13 @@ class ClassicalKeyboard:
             ),
         }.items():
             if keyboard.is_pressed(key):
+                logger.info(f'"{key}" is pressed.')
                 self.special_key = False
                 func()
 
         # steering
         if keyboard.is_pressed(self.keys.get("steer left")):
+            logger.info('"steer left" is pressed.')
             self.special_key = False
             self.last_key = "a"
             self.setpoint.put(
@@ -101,6 +105,7 @@ class ClassicalKeyboard:
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
             )
         elif keyboard.is_pressed(self.keys.get("steer right")):
+            logger.info('"steer right" is pressed.')
             self.special_key = False
             self.last_key = "d"
             self.setpoint.put(
