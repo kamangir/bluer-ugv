@@ -168,14 +168,14 @@ class ClassicalYoloCamera(ClassicalCamera):
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
                 log=True,
-                steering_expires_in=env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY,
+                steering_expires_in=env.BLUER_UGV_SWALLOW_STEERING_EXPIRY_YOLO,
             )
         else:
             self.setpoint.put(
                 what="steering",
                 value=-env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
                 log=True,
-                steering_expires_in=env.BLUER_UGV_SWALLOW_STEERING_YOLO_EXPIRY,
+                steering_expires_in=env.BLUER_UGV_SWALLOW_STEERING_EXPIRY_YOLO,
             )
 
         self.setpoint.put(

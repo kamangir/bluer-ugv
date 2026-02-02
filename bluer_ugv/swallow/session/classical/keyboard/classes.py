@@ -59,7 +59,7 @@ class ClassicalKeyboard:
         if self.special_key:
             for key, event in self.keys.special_keys.items():
                 if keyboard.is_pressed(key):
-                    if self.ethernet.enabled and self.ethernet.client.is_server:
+                    if self.ethernet.enabled:
                         self.ethernet.client.send(
                             EthernetCommand(
                                 action="keyboard",

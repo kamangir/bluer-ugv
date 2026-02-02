@@ -14,6 +14,7 @@ def get_location(
 
         for location, hostname_ in dict_of_computers.items():
             if hostname == hostname_:
+
                 if log:
                     logger.info(f"{hostname}.location={location}")
                 return True, location

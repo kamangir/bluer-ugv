@@ -3,7 +3,7 @@ import pytest
 from bluer_ugv.README.ugvs.location import get_location
 
 
-# ../../notebooks/ugvs_ethernet_is_server.ipynb
+# ../../notebooks/ugvs_get_location.ipynb
 @pytest.mark.parametrize(
     [
         "hostname",
@@ -22,10 +22,10 @@ from bluer_ugv.README.ugvs.location import get_location
         ["rangin-top2", True, "top"],
     ],
 )
-def test_ugvs_ethernet_find_server(
+def test_ugvs_get_location(
     hostname: str,
     expected_success: bool,
-    expected_location: bool,
+    expected_location: str,
 ):
     success, location = get_location(hostname)
     assert success == expected_success

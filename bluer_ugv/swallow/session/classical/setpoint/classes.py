@@ -5,6 +5,7 @@ import time
 
 from bluer_options import string
 
+from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.setpoint.steering import (
@@ -98,7 +99,7 @@ class ClassicalSetPoint:
         value: Union[int, bool, Dict[str, Union[int, bool]]],
         what: str = "all",
         log: bool = True,
-        steering_expires_in: float = 0,
+        steering_expires_in: float = env.BLUER_UGV_SWALLOW_STEERING_EXPIRY,
     ):
         with self._lock:
             if what == "all":
