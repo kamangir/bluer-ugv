@@ -39,6 +39,7 @@ class ClassicalKeyboard:
 
         self._lock = threading.Lock()
         self.config: Dict[str, Any] = {
+            "audio_enabled": False,
             "debug_mode": False,
             "mode": OperationMode.NONE,
             "ultrasound_enabled": True,
@@ -46,11 +47,21 @@ class ClassicalKeyboard:
 
         self.is_used_for_steering: bool = False
 
-    def get(self, what: str, default: Any) -> Any:
+    def get(
+        self,
+        what: str,
+        default: Any = None,
+    ) -> Any:
         with self._lock:
             return self.config.get(what, default)
 
-    def set(self, what: str, value: Any):
+    def set(
+        self,
+        what: str,
+        value: Any,
+    ):
+        logger.info(f"config[{what}]={value}")
+
         with self._lock:
             self.config[what] = value
 

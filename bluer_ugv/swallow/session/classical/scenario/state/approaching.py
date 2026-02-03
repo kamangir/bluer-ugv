@@ -1,4 +1,4 @@
-from typing import Dict, Union, Tuple
+from typing import Tuple
 
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.mode import OperationMode
@@ -10,6 +10,7 @@ class ApproachingState(GenericState):
     area_threshold = 0.2
 
     def close(self) -> bool:
+        self.keyboard.set("mode", OperationMode.NONE)
         return super().close()
 
     def decide_state_change(self) -> Tuple[bool, str]:
@@ -20,14 +21,10 @@ class ApproachingState(GenericState):
                     self.area_threshold,
                 )
             )
-            return True, "greeting"
+            return True, "speaking"
 
         return super().decide_state_change()
 
     def open(self) -> bool:
-        logger.info("setting keyboard mode to action.")
         self.keyboard.set("mode", OperationMode.ACTION)
         return super().open()
-
-    def process(self) -> bool:
-        return super().process()

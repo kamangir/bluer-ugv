@@ -5,14 +5,8 @@ from bluer_ugv.swallow.session.classical.scenario.state.machines.generic import 
 from bluer_ugv.swallow.session.classical.scenario.state.approaching import (
     ApproachingState,
 )
-from bluer_ugv.swallow.session.classical.scenario.state.greeting import (
-    GreetingState,
-)
-from bluer_ugv.swallow.session.classical.scenario.state.listening import (
-    ListeningState,
-)
-from bluer_ugv.swallow.session.classical.scenario.state.responding import (
-    RespondingState,
+from bluer_ugv.swallow.session.classical.scenario.state.speaking import (
+    SpeakingState,
 )
 
 
@@ -27,9 +21,7 @@ class RanginStateMachine(GenericStateMachine):
             )
             for cls in [
                 ApproachingState,
-                GreetingState,
-                ListeningState,
-                RespondingState,
+                SpeakingState,
             ]
         ]
 

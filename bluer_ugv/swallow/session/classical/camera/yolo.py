@@ -110,7 +110,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            mode = self.keyboard.get("mode", OperationMode.NONE)
+            mode = self.keyboard.get("mode")
 
             success = True
             if mode == OperationMode.ACTION:
@@ -136,7 +136,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         if not success:
             return success
 
-        debug_mode = self.keyboard.get("debug_mode", False)
+        debug_mode = self.keyboard.get("debug_mode")
         success, metadata = self.predictor.predict(
             image=image,
             return_annotated_image=debug_mode,

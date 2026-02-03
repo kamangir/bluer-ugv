@@ -87,7 +87,7 @@ class ClassicalUltrasonicSensor:
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            if not self.keyboard.get("ultrasound_enabled", True):
+            if not self.keyboard.get("ultrasound_enabled"):
                 time.sleep(0.01)
                 continue
 

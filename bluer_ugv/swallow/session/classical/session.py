@@ -59,10 +59,6 @@ class ClassicalSession:
 
         self.leds = ClassicalLeds()
 
-        self.audio = ClassicalAudio(
-            leds=self.leds,
-        )
-
         self.setpoint = (
             ClassicalSetPoint if self.location == "front" else ClassicalEthernetSetPoint
         )(
@@ -80,6 +76,11 @@ class ClassicalSession:
             ethernet=self.ethernet,
             leds=self.leds,
             setpoint=self.setpoint,
+        )
+
+        self.audio = ClassicalAudio(
+            leds=self.leds,
+            keyboard=self.keyboard,
         )
 
         self.ultrasonic_sensor = ClassicalUltrasonicSensor(

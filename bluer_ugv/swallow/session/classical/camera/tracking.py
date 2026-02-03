@@ -77,7 +77,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not super().update():
             return False
 
-        mode = self.keyboard.get("mode", OperationMode.NONE)
+        mode = self.keyboard.get("mode")
         if mode == OperationMode.TRAINING:
             return self.update_training()
 
@@ -103,7 +103,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not success:
             return success
 
-        debug_mode = self.keyboard.get("debug_mode", False)
+        debug_mode = self.keyboard.get("debug_mode")
         _, self.track_window, output_image = self.tracker.track(
             frame=image,
             track_window=self.track_window,
