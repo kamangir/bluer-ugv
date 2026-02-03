@@ -1,11 +1,12 @@
 from typing import List
+import time
 
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.scenario.state.starting import StartingState
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
-from bluer_ugv.logger import logger
+from bluer_ugv.swallow.session.classical.scenario.state.logger import logger
 
 
 class GenericStateMachine:
@@ -61,6 +62,8 @@ class GenericStateMachine:
         if not self.state.process():
             return False
 
+        time.sleep(1)
+
         try:
             change, next_state_name = self.list_of_states[
                 self.index
@@ -85,6 +88,8 @@ class GenericStateMachine:
         if not self.state.close():
             return False
 
+        time.sleep(1)
+
         old_index = self.index
         self.index = [state.name for state in self.list_of_states].index(
             next_state_name
@@ -92,6 +97,8 @@ class GenericStateMachine:
 
         if not self.state.open():
             return False
+
+        time.sleep(1)
 
         logger.info(
             '{}.process: state #{} "{}" -> state #{} "{}"'.format(

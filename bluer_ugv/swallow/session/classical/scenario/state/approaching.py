@@ -2,7 +2,7 @@ from typing import Tuple
 
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.mode import OperationMode
-from bluer_ugv.logger import logger
+from bluer_ugv.swallow.session.classical.scenario.state.logger import logger
 
 
 class ApproachingState(GenericState):

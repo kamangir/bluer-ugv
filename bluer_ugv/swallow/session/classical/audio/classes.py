@@ -77,32 +77,29 @@ class ClassicalAudio:
     def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
-        audio_is_enabled = False
+        audio_prompt: str = "سلام، من رنگین هستم. چطور می‌تونم کمک‌تون کنم؟"
         while self.running:
             if not self.keyboard.get("audio_enabled"):
                 time.sleep(0.01)
                 continue
 
-            if not audio_is_enabled:
-                success, filename = generate_voice(
-                    object_name=abcli_object_name,
-                    sentence="سلام، من رنگین هستم. چطور می‌تونم کمک‌تون کنم؟",
-                )
-                if not success:
-                    time.sleep(1)
-                    continue
-
-                self.leds.flash("yellow")
-
-                play(
-                    object_name=abcli_object_name,
-                    filename=filename,
-                )
-
-                self.leds.flash("red")
+            success, filename = generate_voice(
+                object_name=abcli_object_name,
+                sentence=audio_prompt,
+            )
+            if not success:
                 time.sleep(1)
+                continue
 
-            audio_is_enabled = True
+            self.leds.flash("yellow")
+
+            play(
+                object_name=abcli_object_name,
+                filename=filename,
+            )
+
+            self.leds.flash("red")
+            time.sleep(1)
 
             success, query = transcribe(
                 object_name=abcli_object_name,
@@ -113,7 +110,6 @@ class ClassicalAudio:
             if not success or not query:
                 if not query:
                     self.keyboard.set("audio_enabled", False)
-                    audio_is_enabled = False
 
                 time.sleep(1)
                 continue
@@ -151,20 +147,4 @@ class ClassicalAudio:
                 },
             ]
 
-            success, filename = generate_voice(
-                object_name=abcli_object_name,
-                sentence=reply_sentence,
-            )
-            if not success:
-                time.sleep(1)
-                continue
-
-            self.leds.flash("yellow")
-
-            play(
-                object_name=abcli_object_name,
-                filename=filename,
-            )
-
-            self.leds.flash("red")
-            time.sleep(1)
+            audio_prompt = reply_sentence
