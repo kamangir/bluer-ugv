@@ -7,9 +7,7 @@ function bluer_ugv_swallow_session() {
 
     local do_dryrun=$(bluer_ai_option_int "$options" dryrun 0)
 
-    local do_upload=1
-    [[ "$BLUER_UGV_SWALLOW_UPLOAD_DISABLED" == 1 ]] &&
-        do_upload=0
+    local do_upload=$(bluer_ai_not $BLUER_SBC_SWALLOW_DEV_MODE)
     do_upload=$(bluer_ai_option_int "$options" upload $do_upload)
 
     bluer_ai_log "@ugv: swallow: session @ $abcli_object_name started ..."

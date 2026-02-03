@@ -1,22 +1,14 @@
 #! /usr/bin/env bash
 
 function bluer_ugv_swallow_env_set() {
-    local var_name=${1:-void}
+    local keyword=${1:-void}
 
-    if [[ "$var_name" == "bps" ]]; then
-        var_name=BLUER_SBC_SWALLOW_HAS_BPS
-    elif [[ "$var_name" == "camera" ]]; then
-        var_name=BLUER_SBC_SWALLOW_HAS_CAMERA
-    elif [[ "$var_name" == "disable_upload" ]]; then
-        var_name=BLUER_UGV_SWALLOW_UPLOAD_DISABLED
-    elif [[ "$var_name" == "full_keyboard" ]]; then
-        var_name=BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD
-    elif [[ "$var_name" == "screen" ]]; then
-        var_name=BLUER_SBC_ENABLE_SCREEN
-    elif [[ "$var_name" == "steering" ]]; then
-        var_name=BLUER_SBC_SWALLOW_HAS_STEERING
-    else
-        bluer_ai_log_error "$var_name: var not found."
+    local var_name=$(python3 -m bluer_ugv.swallow.env \
+        get_var_name \
+        --keyword "$keyword")
+
+    if [[ -z "$var_name" ]]; then
+        bluer_ai_log_error "$keyword: var not found."
         return 1
     fi
 
