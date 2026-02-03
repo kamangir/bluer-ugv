@@ -15,9 +15,10 @@ class GenericStateMachine:
 
     def load(self) -> bool:
         logger.info(
-            "loaded {}: {}...".format(
+            "loaded {}: {} - state: {}".format(
                 self.__class__.__name__,
                 ", ".join([state.name for state in self.list_of_states]),
+                self.list_of_states[self.index].name,
             )
         )
         return True
