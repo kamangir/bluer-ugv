@@ -4,6 +4,7 @@ from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboa
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.scenario.state.starting import StartingState
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 
@@ -14,14 +15,17 @@ class GenericStateMachine:
         self,
         keyboard: ClassicalKeyboard,
         camera: ClassicalCamera,
+        setpoint: ClassicalSetPoint,
     ):
         self.keyboard = keyboard
         self.camera = camera
+        self.setpoint = setpoint
 
         self.list_of_states: List[GenericState] = [
             StartingState(
                 keyboard=self.keyboard,
                 camera=self.camera,
+                setpoint=self.setpoint,
             ),
         ]
         self.index: int = 0

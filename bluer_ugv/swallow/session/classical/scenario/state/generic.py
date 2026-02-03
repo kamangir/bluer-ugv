@@ -3,6 +3,7 @@ from typing import Tuple
 
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 
@@ -13,9 +14,11 @@ class GenericState:
         self,
         keyboard: ClassicalKeyboard,
         camera: ClassicalCamera,
+        setpoint: ClassicalSetPoint,
     ):
         self.keyboard = keyboard
         self.camera = camera
+        self.setpoint = setpoint
 
         logger.info(f"created {self.__class__.__name__}")
 

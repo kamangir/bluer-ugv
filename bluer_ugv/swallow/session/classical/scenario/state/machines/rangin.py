@@ -18,6 +18,7 @@ class RanginStateMachine(GenericStateMachine):
             cls(
                 keyboard=self.keyboard,
                 camera=self.camera,
+                setpoint=self.setpoint,
             )
             for cls in [
                 ApproachingState,

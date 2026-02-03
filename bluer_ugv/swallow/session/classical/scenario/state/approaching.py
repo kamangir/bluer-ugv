@@ -11,6 +11,7 @@ class ApproachingState(GenericState):
 
     def close(self) -> bool:
         self.keyboard.set("mode", OperationMode.NONE)
+        self.setpoint.stop()
         return super().close()
 
     def decide_state_change(self) -> Tuple[bool, str]:
