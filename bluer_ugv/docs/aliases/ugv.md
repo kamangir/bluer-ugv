@@ -108,13 +108,14 @@
 @swallow \
 	env \
 	set \
-	bps | camera | full_keyboard | screen | steering \
+	bps | camera | disable_upload | full_keyboard | screen | steering \
 	0 | 1
  . set env.
    bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: 0)
    camera: BLUER_SBC_SWALLOW_HAS_CAMERA (currently: 1)
+   disable_upload: BLUER_UGV_SWALLOW_UPLOAD_DISABLED (currently: 0)
    full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: 0)
-    screen: BLUER_SBC_ENABLE_SCREEN (currently: 1)
+   screen: BLUER_SBC_ENABLE_SCREEN (currently: 1)
    steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: 1)
 @swallow \
 	ethernet \

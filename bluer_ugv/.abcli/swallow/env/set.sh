@@ -7,6 +7,8 @@ function bluer_ugv_swallow_env_set() {
         var_name=BLUER_SBC_SWALLOW_HAS_BPS
     elif [[ "$var_name" == "camera" ]]; then
         var_name=BLUER_SBC_SWALLOW_HAS_CAMERA
+    elif [[ "$var_name" == "disable_upload" ]]; then
+        var_name=BLUER_UGV_SWALLOW_UPLOAD_DISABLED
     elif [[ "$var_name" == "full_keyboard" ]]; then
         var_name=BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD
     elif [[ "$var_name" == "screen" ]]; then
