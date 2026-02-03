@@ -9,13 +9,15 @@ class GenericStateMachine:
 
     def __init__(self):
         self.list_of_states: List[GenericState] = []
-        self.index: int = -1
+        self.index: int = 0
 
         self.load()
 
     def load(self) -> bool:
+        self.list_of_states[self.index].open()
+
         logger.info(
-            "loaded {}: {} - state: {}".format(
+            "loaded {}: [{}] - state: {}".format(
                 self.__class__.__name__,
                 ", ".join([state.name for state in self.list_of_states]),
                 self.list_of_states[self.index].name,
@@ -35,6 +37,9 @@ class GenericStateMachine:
             )
             return False
 
+        if not self.list_of_states[self.index].process():
+            return False
+
         try:
             change, next_state_name = self.list_of_states[
                 self.index
@@ -42,6 +47,7 @@ class GenericStateMachine:
         except Exception as e:
             logger.error(e)
             return False
+
         if not change:
             return True
 
@@ -55,10 +61,17 @@ class GenericStateMachine:
             )
             return False
 
+        if not self.list_of_states[self.index].close():
+            return False
+
         old_index = self.index
         self.index = [state.name for state in self.list_of_states].index(
             next_state_name
         )
+
+        if not self.list_of_states[self.index].open():
+            return False
+
         logger.info(
             '{}.process: state #{} "{}" -> state #{} "{}"'.format(
                 self.__class__.__name__,
@@ -69,3 +82,7 @@ class GenericStateMachine:
             )
         )
         return True
+
+    def stop(self):
+        self.list_of_states[self.index].close()
+        logger.info(f"{self.__class__.__name__}.stop")

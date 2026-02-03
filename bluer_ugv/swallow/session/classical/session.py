@@ -166,6 +166,8 @@ class ClassicalSession:
         self.timing = Timing()
 
     def cleanup(self):
+        self.scenario.stop()
+
         self.audio.stop()
         self.ethernet.stop()
         self.ultrasonic_sensor.stop()

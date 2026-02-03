@@ -28,6 +28,5 @@ class RanginStateMachine(GenericStateMachine):
                 RespondingState,
             ]
         ]
-        self.index: int = 0
 
         return super().load()

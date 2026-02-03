@@ -25,3 +25,7 @@ class ClassicalScenario:
     def update(self) -> bool:
         with self._lock:
             return self.state_machine.process()
+
+    def stop(self):
+        with self._lock:
+            self.state_machine.stop()
