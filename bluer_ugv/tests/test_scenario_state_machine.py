@@ -25,3 +25,5 @@ def test_scenario_state_machine(name: str):
 
     for state in state_machine.list_of_states:
         assert isinstance(state, GenericState)
+
+    assert isinstance(state_machine.state, GenericState)

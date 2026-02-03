@@ -16,17 +16,19 @@ class GenericStateMachine:
 
         self.load()
 
-    def load(self) -> bool:
-        self.list_of_states[self.index].open()
+    @property
+    def state(self) -> GenericState:
+        return self.list_of_states[self.index]
 
+    def load(self) -> bool:
         logger.info(
             "loaded {}: [{}] - state: {}".format(
                 self.__class__.__name__,
                 ", ".join([state.name for state in self.list_of_states]),
-                self.list_of_states[self.index].name,
+                self.state.name,
             )
         )
-        return True
+        return self.state.open()
 
     def process(self) -> bool:
         if self.index > 0 or self.index > len(self.list_of_states) - 1:
@@ -40,7 +42,7 @@ class GenericStateMachine:
             )
             return False
 
-        if not self.list_of_states[self.index].process():
+        if not self.state.process():
             return False
 
         try:
@@ -64,7 +66,7 @@ class GenericStateMachine:
             )
             return False
 
-        if not self.list_of_states[self.index].close():
+        if not self.state.close():
             return False
 
         old_index = self.index
@@ -72,7 +74,7 @@ class GenericStateMachine:
             next_state_name
         )
 
-        if not self.list_of_states[self.index].open():
+        if not self.state.open():
             return False
 
         logger.info(
@@ -81,11 +83,11 @@ class GenericStateMachine:
                 old_index,
                 self.list_of_states[old_index].name,
                 self.index,
-                self.list_of_states[self.index].name,
+                self.state.name,
             )
         )
         return True
 
     def stop(self):
-        self.list_of_states[self.index].close()
+        self.state.close()
         logger.info(f"{self.__class__.__name__}.stop")

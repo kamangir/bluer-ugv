@@ -12,7 +12,7 @@ class ClassicalScenario:
     def __init__(
         self,
     ):
-        logger.info(self.__class__.__name__)
+        logger.info(f"created {self.__class__.__name__}")
 
         self._lock = threading.Lock()
 
