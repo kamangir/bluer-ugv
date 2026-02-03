@@ -16,7 +16,7 @@ from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericSt
         for name in dict_of_state_machines.keys()
     ],
 )
-def test_scenario_state(name: str):
+def test_scenario_state_machine(name: str):
     cls = dict_of_state_machines[name]
     assert cls.name == name
 
