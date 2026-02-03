@@ -27,7 +27,10 @@ class ClassicalScenario:
             self.state_machine = dict_of_state_machines.get(
                 env.BLUER_UGV_SWALLOW_SCENARIO,
                 GenericStateMachine,
-            )(keyboard=self.keyboard)
+            )(
+                keyboard=self.keyboard,
+                camera=self.camera,
+            )
 
     def update(self) -> bool:
         with self._lock:
