@@ -43,7 +43,7 @@ class GenericStateMachine:
         return self.state.open()
 
     def process(self) -> bool:
-        if self.index > 0 or self.index > len(self.list_of_states) - 1:
+        if self.index < 0 or self.index > len(self.list_of_states) - 1:
             logger.error(
                 "{}.process: bad state: {}, expected [{},{}]".format(
                     self.__class__.__name__,
