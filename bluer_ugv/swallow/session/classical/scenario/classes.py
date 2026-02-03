@@ -7,6 +7,7 @@ from bluer_ugv.swallow.session.classical.scenario.state.machines.factory import 
 )
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
+from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
 
@@ -15,9 +16,11 @@ class ClassicalScenario:
         self,
         keyboard: ClassicalKeyboard,
         camera: ClassicalCamera,
+        setpoint: ClassicalSetPoint,
     ):
         self.keyboard = keyboard
         self.camera = camera
+        self.setpoint = setpoint
 
         logger.info(f"created {self.__class__.__name__}")
 
@@ -30,6 +33,7 @@ class ClassicalScenario:
             )(
                 keyboard=self.keyboard,
                 camera=self.camera,
+                setpoint=self.setpoint,
             )
 
     def update(self) -> bool:
