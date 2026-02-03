@@ -2,6 +2,7 @@ import threading
 import time
 
 from bluer_objects.env import abcli_object_name
+from bluer_sbc.env import BLUER_SBC_SWALLOW_DEV_MODE
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.pack import (
@@ -78,7 +79,7 @@ class ClassicalUltrasonicSensor:
 
         logger.info(f"{self.__class__.__name__}.stopped.")
 
-        if self.log is not None:
+        if self.log is not None and BLUER_SBC_SWALLOW_DEV_MODE == 0:
             self.log.save(object_name=abcli_object_name)
             self.log.export(object_name=abcli_object_name)
 
