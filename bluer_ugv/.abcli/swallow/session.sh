@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 
 function bluer_ugv_swallow_session() {
+    [[ "$BLUER_SBC_SWALLOW_DEV_MODE" == 1 ]] &&
+        bluer_ai_log "🚀 dev mode!"
+
     local task=${1:-start}
 
     local options=$2
