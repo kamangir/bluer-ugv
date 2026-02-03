@@ -20,10 +20,13 @@ class RanginStateMachine(GenericStateMachine):
 
     def load(self) -> bool:
         self.list_of_states = [
-            ApproachingState,
-            GreetingState,
-            ListeningState,
-            RespondingState,
+            cls()
+            for cls in [
+                ApproachingState,
+                GreetingState,
+                ListeningState,
+                RespondingState,
+            ]
         ]
         self.index: int = 0
 
