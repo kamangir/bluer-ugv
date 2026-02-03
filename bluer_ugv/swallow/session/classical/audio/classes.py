@@ -113,6 +113,7 @@ class ClassicalAudio:
             if not success or not query:
                 if not query:
                     self.keyboard.set("audio_enabled", False)
+                    audio_is_enabled = False
 
                 time.sleep(1)
                 continue
