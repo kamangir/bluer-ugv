@@ -156,6 +156,7 @@ class ClassicalSession:
 
         self.scenario = ClassicalScenario(
             keyboard=self.keyboard,
+            camera=self.camera,
         )
 
         logger.info(

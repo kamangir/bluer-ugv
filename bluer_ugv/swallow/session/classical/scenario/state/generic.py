@@ -1,6 +1,7 @@
 import copy
-from typing import Dict, Union, Tuple
+from typing import Tuple
 
+from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.logger import logger
 
@@ -11,8 +12,10 @@ class GenericState:
     def __init__(
         self,
         keyboard: ClassicalKeyboard,
+        camera: ClassicalCamera,
     ):
         self.keyboard = keyboard
+        self.camera = camera
 
         logger.info(f"created {self.__class__.__name__}")
 

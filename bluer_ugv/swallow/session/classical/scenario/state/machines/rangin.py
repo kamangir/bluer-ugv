@@ -21,7 +21,10 @@ class RanginStateMachine(GenericStateMachine):
 
     def load(self) -> bool:
         self.list_of_states = [
-            cls(keyboard=self.keyboard)
+            cls(
+                keyboard=self.keyboard,
+                camera=self.camera,
+            )
             for cls in [
                 ApproachingState,
                 GreetingState,

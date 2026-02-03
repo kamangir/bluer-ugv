@@ -161,9 +161,21 @@ class ClassicalYoloCamera(ClassicalCamera):
             return True
 
         detection = metadata["detections"][0]
-        logger.info("confidence: {:.2f}".format(detection["confidence"]))
-        detection_x_center = (detection["bbox_xyxy"][0] + detection["bbox_xyxy"][2]) / 2
-        if detection_x_center < image.shape[1] / 2:
+
+        self.detection.x = (lambda vec: (vec[0] + vec[2]) / 2)(detection["bbox_xyxy"])
+        self.detection.y = (lambda vec: (vec[1] + vec[3]) / 2)(detection["bbox_xyxy"])
+
+        self.detection.area = (
+            (lambda vec: (vec[2] - vec[0]) * (vec[3] - vec[1]))(detection["bbox_xyxy"])
+            / image.shape[0]
+            / image.shape[1]
+        )
+
+        self.detection.confidence = detection["confidence"]
+
+        logger.info(self.detection.as_str())
+
+        if self.detection.x < image.shape[1] / 2:
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,
