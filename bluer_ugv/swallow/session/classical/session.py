@@ -154,7 +154,9 @@ class ClassicalSession:
 
         self.screen = ClassicalScreen()
 
-        self.scenario = ClassicalScenario()
+        self.scenario = ClassicalScenario(
+            keyboard=self.keyboard,
+        )
 
         logger.info(
             "{}: created for {}".format(

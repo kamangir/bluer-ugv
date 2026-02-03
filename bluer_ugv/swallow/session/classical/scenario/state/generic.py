@@ -1,6 +1,7 @@
 import copy
 from typing import Dict, Union, Tuple
 
+from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.logger import logger
 
 
@@ -9,9 +10,9 @@ class GenericState:
 
     def __init__(
         self,
-        params: Union[Dict, None] = None,
+        keyboard: ClassicalKeyboard,
     ):
-        self.params = copy.deepcopy(params) if params is not None else {}
+        self.keyboard = keyboard
 
         logger.info(f"created {self.__class__.__name__}")
 

@@ -1,5 +1,6 @@
 from typing import List
 
+from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.scenario.state.starting import StartingState
 from bluer_ugv.logger import logger
@@ -8,9 +9,14 @@ from bluer_ugv.logger import logger
 class GenericStateMachine:
     name = "generic"
 
-    def __init__(self):
+    def __init__(
+        self,
+        keyboard: ClassicalKeyboard,
+    ):
+        self.keyboard = keyboard
+
         self.list_of_states: List[GenericState] = [
-            StartingState(),
+            StartingState(keyboard=self.keyboard),
         ]
         self.index: int = 0
 

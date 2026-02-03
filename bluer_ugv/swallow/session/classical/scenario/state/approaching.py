@@ -1,16 +1,12 @@
 from typing import Dict, Union, Tuple
 
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
+from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.logger import logger
 
 
 class ApproachingState(GenericState):
     name: str = "approaching"
-
-    def __init__(
-        self,
-        params: Union[Dict, None] = None,
-    ):
-        super().__init__(params)
 
     def close(self) -> bool:
         return super().close()
@@ -19,6 +15,8 @@ class ApproachingState(GenericState):
         return super().decide_state_change()
 
     def open(self) -> bool:
+        logger.info("setting keyboard mode to action.")
+        self.keyboard.set("mode", OperationMode.ACTION)
         return super().open()
 
     def process(self) -> bool:

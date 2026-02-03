@@ -1,3 +1,4 @@
+from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.scenario.state.machines.generic import (
     GenericStateMachine,
 )
@@ -20,7 +21,7 @@ class RanginStateMachine(GenericStateMachine):
 
     def load(self) -> bool:
         self.list_of_states = [
-            cls()
+            cls(keyboard=self.keyboard)
             for cls in [
                 ApproachingState,
                 GreetingState,

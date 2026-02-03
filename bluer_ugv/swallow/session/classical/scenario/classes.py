@@ -5,13 +5,17 @@ from bluer_ugv.swallow.session.classical.scenario.state.machines.factory import 
     dict_of_state_machines,
     GenericStateMachine,
 )
+from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.logger import logger
 
 
 class ClassicalScenario:
     def __init__(
         self,
+        keyboard: ClassicalKeyboard,
     ):
+        self.keyboard = keyboard
+
         logger.info(f"created {self.__class__.__name__}")
 
         self._lock = threading.Lock()
