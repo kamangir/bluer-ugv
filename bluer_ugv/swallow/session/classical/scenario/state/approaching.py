@@ -10,9 +10,12 @@ class ApproachingState(GenericState):
     area_threshold = 0.2
 
     def close(self) -> bool:
+        super().close()
+
         self.config.set("mode", OperationMode.NONE)
         self.setpoint.stop()
-        return super().close()
+
+        return True
 
     def decide_state_change(self) -> Tuple[bool, str]:
         if self.camera.detection.area >= self.area_threshold:
@@ -27,5 +30,8 @@ class ApproachingState(GenericState):
         return super().decide_state_change()
 
     def open(self) -> bool:
+        super().open()
+
         self.config.set("mode", OperationMode.ACTION)
-        return super().open()
+
+        return True

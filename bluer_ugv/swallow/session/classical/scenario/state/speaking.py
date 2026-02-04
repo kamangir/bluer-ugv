@@ -6,10 +6,6 @@ from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericSt
 class SpeakingState(GenericState):
     name: str = "speaking"
 
-    def close(self) -> bool:
-        self.config.set("audio_enabled", False)
-        return super().close()
-
     def decide_state_change(self) -> Tuple[bool, str]:
         if not self.config.get("audio_enabled"):
             return True, "approaching"

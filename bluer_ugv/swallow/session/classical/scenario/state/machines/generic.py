@@ -95,11 +95,6 @@ class GenericStateMachine:
             next_state_name
         )
 
-        if not self.state.open():
-            return False
-
-        time.sleep(1)
-
         logger.info(
             '{}.process: state #{} "{}" -> state #{} "{}"'.format(
                 self.__class__.__name__,
@@ -109,6 +104,12 @@ class GenericStateMachine:
                 self.state.name,
             )
         )
+
+        if not self.state.open():
+            return False
+
+        time.sleep(1)
+
         return True
 
     def stop(self):
