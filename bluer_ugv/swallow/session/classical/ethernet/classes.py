@@ -3,6 +3,7 @@ import threading
 from bluer_options.env import abcli_hostname
 
 from bluer_ugv import env
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.ethernet.client import EthernetClient
 from bluer_ugv.README.ugvs.ethernet import find_server
 from bluer_ugv.logger import logger
@@ -11,7 +12,10 @@ from bluer_ugv.logger import logger
 class ClassicalEthernet:
     def __init__(
         self,
+        config: ClassicalConfig,
     ):
+        self.config = config
+
         self.enabled: bool = True
 
         logger.info(f"creating {self.__class__.__name__}...")
@@ -26,6 +30,7 @@ class ClassicalEthernet:
             host=server_name,
             port=env.BLUER_UGV_ETHERNET_PORT,
             is_server=is_server,
+            verbose=self.config.get("ethernet_verbose"),
         )
 
         self.running = True

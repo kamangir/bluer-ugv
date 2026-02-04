@@ -10,6 +10,7 @@ from bluer_sbc.env import BLUER_SBC_CAMERA_KIND, BLUER_SBC_SWALLOW_HAS_STEERING
 from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.README.ugvs.location import get_location
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
@@ -39,6 +40,7 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
     ClassicalUltrasonicSensor,
 )
 from bluer_ugv.swallow.session.classical.audio.classes import ClassicalAudio
+from bluer_ugv.swallow.session.classical.scenario.classes import ClassicalScenario
 from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 
@@ -54,13 +56,13 @@ class ClassicalSession:
 
         GPIO.setmode(GPIO.BCM)
 
-        self.ethernet = ClassicalEthernet()
+        self.config = ClassicalConfig()
+
+        self.ethernet = ClassicalEthernet(
+            config=self.config,
+        )
 
         self.leds = ClassicalLeds()
-
-        self.audio = ClassicalAudio(
-            leds=self.leds,
-        )
 
         self.setpoint = (
             ClassicalSetPoint if self.location == "front" else ClassicalEthernetSetPoint
@@ -76,14 +78,20 @@ class ClassicalSession:
             )
 
         self.keyboard = ClassicalKeyboard(
+            config=self.config,
             ethernet=self.ethernet,
             leds=self.leds,
             setpoint=self.setpoint,
         )
 
+        self.audio = ClassicalAudio(
+            config=self.config,
+            leds=self.leds,
+        )
+
         self.ultrasonic_sensor = ClassicalUltrasonicSensor(
+            config=self.config,
             setpoint=self.setpoint,
-            keyboard=self.keyboard,
         )
 
         self.push_button = ClassicalPushButton(
@@ -145,6 +153,7 @@ class ClassicalSession:
             )
         )
         self.camera = camera_class(
+            config=self.config,
             keyboard=self.keyboard,
             leds=self.leds,
             setpoint=self.setpoint,
@@ -152,6 +161,12 @@ class ClassicalSession:
         )
 
         self.screen = ClassicalScreen()
+
+        self.scenario = ClassicalScenario(
+            config=self.config,
+            camera=self.camera,
+            setpoint=self.setpoint,
+        )
 
         logger.info(
             "{}: created for {}".format(
@@ -163,6 +178,8 @@ class ClassicalSession:
         self.timing = Timing()
 
     def cleanup(self):
+        self.scenario.stop()
+
         self.audio.stop()
         self.ethernet.stop()
         self.ultrasonic_sensor.stop()
@@ -251,6 +268,7 @@ class ClassicalSession:
             self.motor2,
             self.leds,
             self.screen,
+            self.scenario,
         ]:
             self.timing.start(thing.__class__.__name__)
 

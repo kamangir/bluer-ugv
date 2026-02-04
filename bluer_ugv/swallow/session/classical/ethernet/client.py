@@ -18,11 +18,13 @@ class EthernetClient:
         port: int,
         is_server: bool = False,
         reconnect_sec: float = 1.0,
+        verbose: bool = True,
     ):
         self.host = host
         self.port = port
         self.is_server = is_server
         self.reconnect_sec = reconnect_sec
+        self.verbose = verbose
 
         self._send_queue: SimpleQueue[EthernetCommand] = SimpleQueue()
         self._receive_queue: SimpleQueue[EthernetCommand] = SimpleQueue()
@@ -32,11 +34,12 @@ class EthernetClient:
         self._listener: Optional[socket.socket] = None
 
         logger.info(
-            "{} created: host={}, port={}{}.".format(
+            "{} created: host={}, port={}{}{}".format(
                 self.__class__.__name__,
                 self.host,
                 self.port,
                 ", server" if is_server else "",
+                ", verbose" if verbose else "",
             )
         )
 
@@ -79,7 +82,8 @@ class EthernetClient:
                 finally:
                     sock.setblocking(False)
 
-                logger.info(f"{self.__class__.__name__}: sent {cmd.as_str()}")
+                if self.verbose:
+                    logger.info(f"{self.__class__.__name__}: sent {cmd.as_str()}")
 
             except (ConnectionError, OSError) as e:
                 logger.warning(f"{self.__class__.__name__}: send error: {e}")
@@ -240,12 +244,13 @@ class EthernetClient:
         # 1) receive at most one per tick (cheap + predictable)
         received, command = self._try_recv_one()
         if received:
-            logger.info(
-                "{} received {}".format(
-                    self.__class__.__name__,
-                    command.as_str(),
+            if self.verbose:
+                logger.info(
+                    "{} received {}".format(
+                        self.__class__.__name__,
+                        command.as_str(),
+                    )
                 )
-            )
 
             self._receive_queue.put(command)
 
@@ -261,12 +266,13 @@ class EthernetClient:
     ):
         self._send_queue.put(command)
 
-        logger.info(
-            "{}.send: queue += {}".format(
-                self.__class__.__name__,
-                command.as_str(),
+        if self.verbose:
+            logger.info(
+                "{}.send: queue += {}".format(
+                    self.__class__.__name__,
+                    command.as_str(),
+                )
             )
-        )
 
         if drain:
             self._drain_send_queue()

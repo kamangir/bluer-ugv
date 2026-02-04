@@ -15,6 +15,7 @@ from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_TEST_OBJECT
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
 from bluer_ugv import env
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.logger import logger
 
@@ -22,8 +23,12 @@ from bluer_ugv.logger import logger
 class ClassicalAudio:
     def __init__(
         self,
+        config: ClassicalConfig,
         leds: ClassicalLeds,
     ):
+        self.config = config
+        self.leds = leds
+
         self.enabled = BLUER_SBC_AUDIO_ENABLED == 1
         logger.info(
             "{}: {}".format(
@@ -37,8 +42,6 @@ class ClassicalAudio:
             channels=env.BLUER_UGV_AUDIO_CHANNELS,
             length=env.BLUER_UGV_AUDIO_LENGTH,
         )
-
-        self.leds = leds
 
         self.context = Context(
             BLUER_AGENT_RAG_CORPUS_TEST_OBJECT,
@@ -74,7 +77,32 @@ class ClassicalAudio:
     def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
+        greeting: str = "سلام، من رنگین هستم. چطور می‌تونم کمک‌تون کنم؟"
+        audio_prompt: str = greeting
         while self.running:
+            if not self.config.get("audio_enabled"):
+                audio_prompt = greeting
+                time.sleep(0.01)
+                continue
+
+            success, filename = generate_voice(
+                object_name=abcli_object_name,
+                sentence=audio_prompt,
+            )
+            if not success:
+                time.sleep(1)
+                continue
+
+            self.leds.flash("yellow")
+
+            play(
+                object_name=abcli_object_name,
+                filename=filename,
+            )
+
+            self.leds.flash("red")
+            time.sleep(1)
+
             success, query = transcribe(
                 object_name=abcli_object_name,
                 language=env.BLUER_UGV_AUDIO_LANGUAGE,
@@ -82,6 +110,9 @@ class ClassicalAudio:
                 properties=self.audio_properties,
             )
             if not success or not query:
+                if not query:
+                    self.config.set("audio_enabled", False)
+
                 time.sleep(1)
                 continue
 
@@ -118,20 +149,4 @@ class ClassicalAudio:
                 },
             ]
 
-            success, filename = generate_voice(
-                object_name=abcli_object_name,
-                sentence=reply_sentence,
-            )
-            if not success:
-                time.sleep(1)
-                continue
-
-            self.leds.flash("yellow")
-
-            play(
-                object_name=abcli_object_name,
-                filename=filename,
-            )
-
-            self.leds.flash("red")
-            time.sleep(1)
+            audio_prompt = reply_sentence

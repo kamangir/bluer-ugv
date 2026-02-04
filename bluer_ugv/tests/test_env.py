@@ -46,6 +46,7 @@ def test_bluer_ugv_env():
             env.BLUER_UGV_RELEASE_2,
             env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
             env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
+            env.BLUER_UGV_SWALLOW_SCENARIO,
             env.BLUER_UGV_SWALLOW_YOLO_DATASET_LIST,
             env.BLUER_UGV_SWALLOW_YOLO_MODEL,
             env.BLUER_UGV_ULTRASONIC_SENSOR_TEST_OBJECT,

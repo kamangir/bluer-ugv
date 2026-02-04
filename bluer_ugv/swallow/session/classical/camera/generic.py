@@ -3,23 +3,28 @@ from typing import Any
 from bluer_algo.socket.connection import SocketConnection, DEV_HOST, DEFAULT_PORT
 from bluer_sbc.imager.camera import instance as camera
 
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
+from bluer_ugv.swallow.session.classical.camera.detection import Detection
 
 
 class ClassicalCamera:
     def __init__(
         self,
+        config: ClassicalConfig,
         keyboard: ClassicalKeyboard,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-
+        self.config = config
         self.keyboard = keyboard
         self.leds = leds
         self.setpoint = setpoint
+
+        self.detection = Detection()
 
         self.object_name = object_name
 

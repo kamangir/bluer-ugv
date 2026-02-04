@@ -1,7 +1,34 @@
-from typing import List
+from typing import List, Dict
 
 from bluer_options.terminal import show_usage
 from bluer_sbc import env
+
+dict_of_variables: Dict[str, Dict] = {
+    "bps": {
+        "name": "BLUER_SBC_SWALLOW_HAS_BPS",
+        "value": env.BLUER_SBC_SWALLOW_HAS_BPS,
+    },
+    "camera": {
+        "name": "BLUER_SBC_SWALLOW_HAS_CAMERA",
+        "value": env.BLUER_SBC_SWALLOW_HAS_CAMERA,
+    },
+    "dev_mode": {
+        "name": "BLUER_SBC_SWALLOW_DEV_MODE",
+        "value": env.BLUER_SBC_SWALLOW_DEV_MODE,
+    },
+    "full_keyboard": {
+        "name": "BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD",
+        "value": env.BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD,
+    },
+    "screen": {
+        "name": "BLUER_SBC_ENABLE_SCREEN",
+        "value": env.BLUER_SBC_ENABLE_SCREEN,
+    },
+    "steering": {
+        "name": "BLUER_SBC_SWALLOW_HAS_STEERING",
+        "value": env.BLUER_SBC_SWALLOW_HAS_STEERING,
+    },
+}
 
 
 def help_cat(
@@ -75,16 +102,17 @@ def help_set(
             "@swallow",
             "env",
             "set",
-            "bps | camera | full_keyboard | screen | steering",
+            " | ".join(sorted(dict_of_variables.keys())),
             "0 | 1",
         ],
         "set env.",
         {
-            f"bps: BLUER_SBC_SWALLOW_HAS_BPS (currently: {env.BLUER_SBC_SWALLOW_HAS_BPS})": "",
-            f"camera: BLUER_SBC_SWALLOW_HAS_CAMERA (currently: {env.BLUER_SBC_SWALLOW_HAS_CAMERA})": "",
-            f"full_keyboard: BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD (currently: {env.BLUER_SBC_SWALLOW_HAS_FULL_KEYBOARD})": "",
-            f" screen: BLUER_SBC_ENABLE_SCREEN (currently: {env.BLUER_SBC_ENABLE_SCREEN})": "",
-            f"steering: BLUER_SBC_SWALLOW_HAS_STEERING (currently: {env.BLUER_SBC_SWALLOW_HAS_STEERING})": "",
+            "{}: {} (currently: {})".format(
+                keyword,
+                info["name"],
+                info["value"],
+            ): ""
+            for keyword, info in dict_of_variables.items()
         },
         mono=mono,
     )

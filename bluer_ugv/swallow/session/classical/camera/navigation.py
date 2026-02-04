@@ -13,6 +13,7 @@ from bluer_algo.image_classifier.model.predictor import ImageClassifierPredictor
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
@@ -23,12 +24,13 @@ from bluer_ugv.logger import logger
 class ClassicalNavigationCamera(ClassicalCamera):
     def __init__(
         self,
+        config: ClassicalConfig,
         keyboard: ClassicalKeyboard,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-        super().__init__(keyboard, leds, setpoint, object_name)
+        super().__init__(config, keyboard, leds, setpoint, object_name)
 
         self.prediction_timer = Timer(
             period=env.BLUER_UGV_CAMERA_ACTION_PERIOD,
@@ -132,7 +134,7 @@ class ClassicalNavigationCamera(ClassicalCamera):
             self.buffer = []
             return True
 
-        mode = self.keyboard.get("mode", OperationMode.NONE)
+        mode = self.config.get("mode")
         if mode == OperationMode.ACTION:
             return self.update_action()
 

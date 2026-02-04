@@ -13,7 +13,9 @@ from bluer_algo.yolo.model.predictor import YoloPredictor
 from bluer_algo.socket.message import SocketMessage
 
 from bluer_ugv import env
+from bluer_ugv.swallow.session.classical.camera.detection import Detection
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
@@ -24,12 +26,13 @@ from bluer_ugv.logger import logger
 class ClassicalYoloCamera(ClassicalCamera):
     def __init__(
         self,
+        config: ClassicalConfig,
         keyboard: ClassicalKeyboard,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-        super().__init__(keyboard, leds, setpoint, object_name)
+        super().__init__(config, keyboard, leds, setpoint, object_name)
 
         self.prediction_timer = Timer(
             period=env.BLUER_UGV_CAMERA_ACTION_PERIOD,
@@ -110,7 +113,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            mode = self.keyboard.get("mode", OperationMode.NONE)
+            mode = self.config.get("mode")
 
             success = True
             if mode == OperationMode.ACTION:
@@ -136,7 +139,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         if not success:
             return success
 
-        debug_mode = self.keyboard.get("debug_mode", False)
+        debug_mode = self.config.get("debug_mode")
         success, metadata = self.predictor.predict(
             image=image,
             return_annotated_image=debug_mode,
@@ -157,13 +160,26 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         if not metadata["detections"]:
             self.setpoint.stop()
+            self.detection = Detection()
             logger.info("no detections.")
             return True
 
         detection = metadata["detections"][0]
-        logger.info("confidence: {:.2f}".format(detection["confidence"]))
-        detection_x_center = (detection["bbox_xyxy"][0] + detection["bbox_xyxy"][2]) / 2
-        if detection_x_center < image.shape[1] / 2:
+
+        self.detection.x = (lambda vec: (vec[0] + vec[2]) / 2)(detection["bbox_xyxy"])
+        self.detection.y = (lambda vec: (vec[1] + vec[3]) / 2)(detection["bbox_xyxy"])
+
+        self.detection.area = (
+            (lambda vec: (vec[2] - vec[0]) * (vec[3] - vec[1]))(detection["bbox_xyxy"])
+            / image.shape[0]
+            / image.shape[1]
+        )
+
+        self.detection.confidence = detection["confidence"]
+
+        logger.info(self.detection.as_str())
+
+        if self.detection.x < image.shape[1] / 2:
             self.setpoint.put(
                 what="steering",
                 value=env.BLUER_UGV_SWALLOW_STEERING_SETPOINT,

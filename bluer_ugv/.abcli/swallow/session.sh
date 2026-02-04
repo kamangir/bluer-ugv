@@ -1,11 +1,17 @@
 #! /usr/bin/env bash
 
 function bluer_ugv_swallow_session() {
+    [[ "$BLUER_SBC_SWALLOW_DEV_MODE" == 1 ]] &&
+        bluer_ai_log "🚀 dev mode!"
+
     local task=${1:-start}
 
     local options=$2
+
     local do_dryrun=$(bluer_ai_option_int "$options" dryrun 0)
-    local do_upload=$(bluer_ai_option_int "$options" upload 1)
+
+    local do_upload=$(bluer_ai_not $BLUER_SBC_SWALLOW_DEV_MODE)
+    do_upload=$(bluer_ai_option_int "$options" upload $do_upload)
 
     bluer_ai_log "@ugv: swallow: session @ $abcli_object_name started ..."
 
