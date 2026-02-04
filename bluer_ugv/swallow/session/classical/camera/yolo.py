@@ -13,6 +13,7 @@ from bluer_algo.yolo.model.predictor import YoloPredictor
 from bluer_algo.socket.message import SocketMessage
 
 from bluer_ugv import env
+from bluer_ugv.swallow.session.classical.camera.detection import Detection
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
@@ -159,6 +160,7 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         if not metadata["detections"]:
             self.setpoint.stop()
+            self.detection = Detection()
             logger.info("no detections.")
             return True
 
