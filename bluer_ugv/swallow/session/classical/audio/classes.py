@@ -77,9 +77,11 @@ class ClassicalAudio:
     def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
-        audio_prompt: str = "سلام، من رنگین هستم. چطور می‌تونم کمک‌تون کنم؟"
+        greeting: str = "سلام، من رنگین هستم. چطور می‌تونم کمک‌تون کنم؟"
+        audio_prompt: str = greeting
         while self.running:
             if not self.config.get("audio_enabled"):
+                audio_prompt = greeting
                 time.sleep(0.01)
                 continue
 
