@@ -153,6 +153,7 @@ class ClassicalSession:
             )
         )
         self.camera = camera_class(
+            config=self.config,
             keyboard=self.keyboard,
             leds=self.leds,
             setpoint=self.setpoint,
