@@ -17,7 +17,7 @@ from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection_list import
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
 )
-from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
@@ -25,8 +25,8 @@ from bluer_ugv.logger import logger
 class ClassicalUltrasonicSensor:
     def __init__(
         self,
+        config: ClassicalConfig,
         setpoint: ClassicalSetPoint,
-        keyboard: ClassicalKeyboard,
     ):
         self.enabled = env.BLUER_UGV_ULTRASONIC_SENSOR_ENABLED == 1
         logger.info(
@@ -43,8 +43,8 @@ class ClassicalUltrasonicSensor:
             )
         )
 
+        self.config = config
         self.setpoint = setpoint
-        self.keyboard = keyboard
 
         self.detection_list = DetectionList()
 
@@ -87,7 +87,7 @@ class ClassicalUltrasonicSensor:
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            if not self.keyboard.get("ultrasound_enabled"):
+            if not self.config.get("ultrasound_enabled"):
                 time.sleep(0.01)
                 continue
 

@@ -1,7 +1,7 @@
 from typing import List
 import time
 
-from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.scenario.state.starting import StartingState
@@ -14,17 +14,17 @@ class GenericStateMachine:
 
     def __init__(
         self,
-        keyboard: ClassicalKeyboard,
+        config: ClassicalConfig,
         camera: ClassicalCamera,
         setpoint: ClassicalSetPoint,
     ):
-        self.keyboard = keyboard
+        self.config = config
         self.camera = camera
         self.setpoint = setpoint
 
         self.list_of_states: List[GenericState] = [
             StartingState(
-                keyboard=self.keyboard,
+                config=self.config,
                 camera=self.camera,
                 setpoint=self.setpoint,
             ),

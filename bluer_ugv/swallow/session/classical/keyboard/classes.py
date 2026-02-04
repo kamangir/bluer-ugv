@@ -1,11 +1,10 @@
 import keyboard
-import threading
-from typing import Any, Dict
 
 from bluer_options.env import abcli_hostname
 from bluer_sbc.session.functions import reply_to_bash
 from bluer_algo.socket.connection import DEV_HOST
 
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
@@ -19,17 +18,16 @@ from bluer_ugv.logger import logger
 class ClassicalKeyboard:
     def __init__(
         self,
+        config: ClassicalConfig,
         ethernet: ClassicalEthernet,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
     ):
-        logger.info(self.__class__.__name__)
+        self.config = config
+        self.ethernet = ethernet
+        self.leds = leds
 
         self.keys = ControlKeys()
-
-        self.ethernet = ethernet
-
-        self.leds = leds
 
         self.last_key: str = ""
 
@@ -37,33 +35,9 @@ class ClassicalKeyboard:
 
         self.special_key: bool = False
 
-        self._lock = threading.Lock()
-        self.config: Dict[str, Any] = {
-            "audio_enabled": False,
-            "debug_mode": False,
-            "mode": OperationMode.NONE,
-            "ultrasound_enabled": True,
-        }
-
         self.is_used_for_steering: bool = False
 
-    def get(
-        self,
-        what: str,
-        default: Any = None,
-    ) -> Any:
-        with self._lock:
-            return self.config.get(what, default)
-
-    def set(
-        self,
-        what: str,
-        value: Any,
-    ):
-        logger.info(f"config[{what}]={value}")
-
-        with self._lock:
-            self.config[what] = value
+        logger.info(f"created {self.__class__.__name__}")
 
     def update(self) -> bool:
         self.last_key = ""
@@ -136,16 +110,15 @@ class ClassicalKeyboard:
         # debug mode
         if keyboard.is_pressed(self.keys.get("debug on")):
             self.special_key = False
-            self.set("debug_mode", True)
+            self.config.set("debug_mode", True)
             logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
 
         if keyboard.is_pressed(self.keys.get("debug off")):
             self.special_key = False
-            self.set("debug_mode", False)
-            logger.info("debug disabled.")
+            self.config.set("debug_mode", False)
 
         # mode
-        mode = self.get("mode", OperationMode.NONE)
+        mode = self.config.get("mode")
         updated_mode = mode
         if keyboard.is_pressed(self.keys.get("mode = none")):
             updated_mode = OperationMode.NONE
@@ -157,19 +130,16 @@ class ClassicalKeyboard:
             updated_mode = OperationMode.TRAINING
 
         if mode != updated_mode:
-            self.set("mode", updated_mode)
-            logger.info("mode: {}.".format(updated_mode.name.lower()))
+            self.config.set("mode", updated_mode)
             self.special_key = False
 
         # ultrasound
         if keyboard.is_pressed(self.keys.get("ultrasonic off")):
-            self.set("ultrasound_enabled", False)
-            logger.info("ultrasound: off")
+            self.config.set("ultrasound_enabled", False)
             self.special_key = False
 
         if keyboard.is_pressed(self.keys.get("ultrasonic on")):
-            self.set("ultrasound_enabled", True)
-            logger.info("ultrasound: on")
+            self.config.set("ultrasound_enabled", True)
             self.special_key = False
 
         # special key

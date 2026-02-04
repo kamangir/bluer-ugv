@@ -15,7 +15,7 @@ from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_TEST_OBJECT
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
 from bluer_ugv import env
-from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.logger import logger
 
@@ -23,11 +23,11 @@ from bluer_ugv.logger import logger
 class ClassicalAudio:
     def __init__(
         self,
+        config: ClassicalConfig,
         leds: ClassicalLeds,
-        keyboard: ClassicalKeyboard,
     ):
+        self.config = config
         self.leds = leds
-        self.keyboard = keyboard
 
         self.enabled = BLUER_SBC_AUDIO_ENABLED == 1
         logger.info(
@@ -79,7 +79,7 @@ class ClassicalAudio:
 
         audio_prompt: str = "سلام، من رنگین هستم. چطور می‌تونم کمک‌تون کنم؟"
         while self.running:
-            if not self.keyboard.get("audio_enabled"):
+            if not self.config.get("audio_enabled"):
                 time.sleep(0.01)
                 continue
 
@@ -109,7 +109,7 @@ class ClassicalAudio:
             )
             if not success or not query:
                 if not query:
-                    self.keyboard.set("audio_enabled", False)
+                    self.config.set("audio_enabled", False)
 
                 time.sleep(1)
                 continue

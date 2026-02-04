@@ -5,7 +5,7 @@ from bluer_ugv.swallow.session.classical.scenario.state.machines.factory import 
     dict_of_state_machines,
     GenericStateMachine,
 )
-from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
@@ -14,11 +14,11 @@ from bluer_ugv.logger import logger
 class ClassicalScenario:
     def __init__(
         self,
-        keyboard: ClassicalKeyboard,
+        config: ClassicalConfig,
         camera: ClassicalCamera,
         setpoint: ClassicalSetPoint,
     ):
-        self.keyboard = keyboard
+        self.config = config
         self.camera = camera
         self.setpoint = setpoint
 
@@ -31,7 +31,7 @@ class ClassicalScenario:
                 env.BLUER_UGV_SWALLOW_SCENARIO,
                 GenericStateMachine,
             )(
-                keyboard=self.keyboard,
+                config=self.config,
                 camera=self.camera,
                 setpoint=self.setpoint,
             )

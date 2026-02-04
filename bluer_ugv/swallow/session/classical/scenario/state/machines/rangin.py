@@ -16,7 +16,7 @@ class RanginStateMachine(GenericStateMachine):
     def load(self) -> bool:
         self.list_of_states = [
             cls(
-                keyboard=self.keyboard,
+                config=self.config,
                 camera=self.camera,
                 setpoint=self.setpoint,
             )

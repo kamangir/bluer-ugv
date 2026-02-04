@@ -14,6 +14,7 @@ from bluer_algo.socket.message import SocketMessage
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
@@ -24,12 +25,13 @@ from bluer_ugv.logger import logger
 class ClassicalYoloCamera(ClassicalCamera):
     def __init__(
         self,
+        config: ClassicalConfig,
         keyboard: ClassicalKeyboard,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-        super().__init__(keyboard, leds, setpoint, object_name)
+        super().__init__(config, keyboard, leds, setpoint, object_name)
 
         self.prediction_timer = Timer(
             period=env.BLUER_UGV_CAMERA_ACTION_PERIOD,
@@ -110,7 +112,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            mode = self.keyboard.get("mode")
+            mode = self.config.get("mode")
 
             success = True
             if mode == OperationMode.ACTION:
@@ -136,7 +138,7 @@ class ClassicalYoloCamera(ClassicalCamera):
         if not success:
             return success
 
-        debug_mode = self.keyboard.get("debug_mode")
+        debug_mode = self.config.get("debug_mode")
         success, metadata = self.predictor.predict(
             image=image,
             return_annotated_image=debug_mode,

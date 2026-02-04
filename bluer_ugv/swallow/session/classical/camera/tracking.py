@@ -10,7 +10,7 @@ from bluer_sbc.imager.camera import instance as camera
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
-from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
@@ -22,12 +22,13 @@ from bluer_ugv.logger import logger
 class ClassicalTrackingCamera(ClassicalCamera):
     def __init__(
         self,
+        config: ClassicalConfig,
         keyboard: ClassicalKeyboard,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
         object_name: str,
     ):
-        super().__init__(keyboard, leds, setpoint, object_name)
+        super().__init__(config, keyboard, leds, setpoint, object_name)
 
         self.track_window: Tuple[int, int, int, int] = None
 
@@ -77,7 +78,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not super().update():
             return False
 
-        mode = self.keyboard.get("mode")
+        mode = self.config.get("mode")
         if mode == OperationMode.TRAINING:
             return self.update_training()
 
@@ -103,7 +104,7 @@ class ClassicalTrackingCamera(ClassicalCamera):
         if not success:
             return success
 
-        debug_mode = self.keyboard.get("debug_mode")
+        debug_mode = self.config.get("debug_mode")
         _, self.track_window, output_image = self.tracker.track(
             frame=image,
             track_window=self.track_window,
@@ -143,5 +144,5 @@ class ClassicalTrackingCamera(ClassicalCamera):
         return True
 
     def update_training(self) -> bool:
-        self.keyboard.set("mode", OperationMode.NONE)
+        self.config.set("mode", OperationMode.NONE)
         return self.select_target()

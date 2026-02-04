@@ -10,6 +10,7 @@ from bluer_sbc.env import BLUER_SBC_CAMERA_KIND, BLUER_SBC_SWALLOW_HAS_STEERING
 from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.README.ugvs.location import get_location
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
@@ -55,7 +56,11 @@ class ClassicalSession:
 
         GPIO.setmode(GPIO.BCM)
 
-        self.ethernet = ClassicalEthernet()
+        self.config = ClassicalConfig()
+
+        self.ethernet = ClassicalEthernet(
+            config=self.config,
+        )
 
         self.leds = ClassicalLeds()
 
@@ -73,19 +78,20 @@ class ClassicalSession:
             )
 
         self.keyboard = ClassicalKeyboard(
+            config=self.config,
             ethernet=self.ethernet,
             leds=self.leds,
             setpoint=self.setpoint,
         )
 
         self.audio = ClassicalAudio(
+            config=self.config,
             leds=self.leds,
-            keyboard=self.keyboard,
         )
 
         self.ultrasonic_sensor = ClassicalUltrasonicSensor(
+            config=self.config,
             setpoint=self.setpoint,
-            keyboard=self.keyboard,
         )
 
         self.push_button = ClassicalPushButton(
@@ -156,7 +162,7 @@ class ClassicalSession:
         self.screen = ClassicalScreen()
 
         self.scenario = ClassicalScenario(
-            keyboard=self.keyboard,
+            config=self.config,
             camera=self.camera,
             setpoint=self.setpoint,
         )

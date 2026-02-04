@@ -10,7 +10,7 @@ class ApproachingState(GenericState):
     area_threshold = 0.2
 
     def close(self) -> bool:
-        self.keyboard.set("mode", OperationMode.NONE)
+        self.config.set("mode", OperationMode.NONE)
         self.setpoint.stop()
         return super().close()
 
@@ -27,5 +27,5 @@ class ApproachingState(GenericState):
         return super().decide_state_change()
 
     def open(self) -> bool:
-        self.keyboard.set("mode", OperationMode.ACTION)
+        self.config.set("mode", OperationMode.ACTION)
         return super().open()
