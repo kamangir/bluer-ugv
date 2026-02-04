@@ -1,4 +1,5 @@
 from typing import Tuple
+import time
 
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.mode import OperationMode
@@ -13,6 +14,8 @@ class ApproachingState(GenericState):
         super().close()
 
         self.config.set("mode", OperationMode.NONE)
+        time.sleep(1)
+
         self.setpoint.stop()
 
         return True
