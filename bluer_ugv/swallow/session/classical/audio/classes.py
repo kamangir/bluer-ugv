@@ -3,6 +3,8 @@ import time
 from typing import Dict, List
 
 from bluer_objects.env import abcli_object_name
+from bluer_objects import file
+from bluer_objects.html_report import HTMLReport
 from bluer_objects.metadata import post_to_object
 from bluer_agent.audio.play import play
 from bluer_agent.audio.properties import AudioProperties
@@ -28,6 +30,8 @@ class ClassicalAudio:
     ):
         self.config = config
         self.leds = leds
+
+        self.top_k: int = 5
 
         self.enabled = BLUER_SBC_AUDIO_ENABLED == 1
         logger.info(
@@ -118,8 +122,17 @@ class ClassicalAudio:
 
             self.leds.flash("yellow")
 
+            html_report = HTMLReport(
+                template=file.absolute(
+                    "../../../assets/query.html",
+                    file.path(__file__),
+                )
+            )
+
             success, query_context = self.context.generate(
                 query=query,
+                top_k=self.top_k,
+                html_report=html_report,
             )
             if not success:
                 time.sleep(1)
@@ -129,7 +142,8 @@ class ClassicalAudio:
                 messages=build_prompt(
                     query=query,
                     context=query_context["chunks"],
-                )
+                ),
+                html_report=html_report,
             )
             if not success:
                 time.sleep(1)
@@ -150,3 +164,8 @@ class ClassicalAudio:
             ]
 
             audio_prompt = reply_sentence
+
+            html_report.save(
+                object_name=abcli_object_name,
+                filename=file.add_extension(filename, "html"),
+            )
