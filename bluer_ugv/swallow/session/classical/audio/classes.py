@@ -8,7 +8,7 @@ from bluer_agent.audio.play import play
 from bluer_agent.audio.properties import AudioProperties
 from bluer_agent.chat.functions import chat
 from bluer_agent.rag.corpus.context import Context
-from bluer_agent.rag.prompt import build_prompt
+from bluer_agent.rag.prompt.multi_root import build_prompt
 from bluer_agent.transcription.functions import transcribe
 from bluer_agent.voice.functions import generate_voice
 from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_TEST_OBJECT
