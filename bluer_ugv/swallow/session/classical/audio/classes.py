@@ -3,16 +3,10 @@ import time
 from typing import Dict, List
 
 from bluer_objects.env import abcli_object_name
-from bluer_objects import file
-from bluer_objects.html_report import HTMLReport
 from bluer_objects.metadata import post_to_object
-from bluer_agent.audio.play import play
 from bluer_agent.audio.properties import AudioProperties
-from bluer_agent.chat.functions import chat
+from bluer_agent.audio.conversation import converse, greeting
 from bluer_agent.rag.corpus.context import Context
-from bluer_agent.rag.prompt.single_root import build_prompt
-from bluer_agent.transcription.functions import transcribe
-from bluer_agent.voice.functions import generate_voice
 from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_SINGLE_ROOT_TEST_OBJECT
 from bluer_agent.assets.path import get_path
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
@@ -31,8 +25,6 @@ class ClassicalAudio:
     ):
         self.config = config
         self.leds = leds
-
-        self.top_k: int = 5
 
         self.enabled = BLUER_SBC_AUDIO_ENABLED == 1
         logger.info(
@@ -82,7 +74,6 @@ class ClassicalAudio:
     def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
-        greeting: str = "سلام، من رنگین هستم. چطور می‌تونم کمک‌تون کنم؟"
         audio_prompt: str = greeting
         while self.running:
             if not self.config.get("audio_enabled"):
@@ -90,29 +81,13 @@ class ClassicalAudio:
                 time.sleep(0.01)
                 continue
 
-            success, filename = generate_voice(
-                object_name=abcli_object_name,
-                sentence=audio_prompt,
-            )
-            if not success:
-                time.sleep(1)
-                continue
-
-            self.leds.flash("yellow")
-
-            play(
-                object_name=abcli_object_name,
-                filename=filename,
-            )
-
-            self.leds.flash("red")
-            time.sleep(1)
-
-            success, query = transcribe(
+            success, query, reply = converse(
+                audio_prompt=audio_prompt,
+                context=self.context,
                 object_name=abcli_object_name,
                 language=env.BLUER_UGV_AUDIO_LANGUAGE,
-                record=True,
-                properties=self.audio_properties,
+                audio_properties=self.audio_properties,
+                template=get_path("./query.html"),
             )
             if not success or not query:
                 if not query:
@@ -121,47 +96,11 @@ class ClassicalAudio:
                 time.sleep(1)
                 continue
 
-            self.leds.flash("yellow")
-
-            html_report = HTMLReport(template=get_path("./query.html"))
-
-            success, query_context = self.context.generate(
-                query=query,
-                top_k=self.top_k,
-                html_report=html_report,
-            )
-            if not success:
-                time.sleep(1)
-                continue
-
-            success, reply = chat(
-                messages=build_prompt(
-                    query=query,
-                    context=query_context["chunks"],
-                ),
-                html_report=html_report,
-            )
-            if not success:
-                time.sleep(1)
-                continue
-
-            self.leds.flash("yellow")
-
-            success, reply_sentence = self.context.understand_reply(reply)
-            if not success:
-                time.sleep(1)
-                continue
-
             self.log += [
                 {
                     "user": query,
-                    "assistant": reply_sentence,
+                    "assistant": reply,
                 },
             ]
 
-            audio_prompt = reply_sentence
-
-            html_report.save(
-                object_name=abcli_object_name,
-                filename=file.add_extension(filename, "html"),
-            )
+            audio_prompt = reply
