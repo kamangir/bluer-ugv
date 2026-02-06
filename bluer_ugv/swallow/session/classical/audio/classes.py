@@ -14,6 +14,7 @@ from bluer_agent.rag.prompt.single_root import build_prompt
 from bluer_agent.transcription.functions import transcribe
 from bluer_agent.voice.functions import generate_voice
 from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_SINGLE_ROOT_TEST_OBJECT
+from bluer_agent.assets.path import get_path
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
 from bluer_ugv import env
@@ -122,12 +123,7 @@ class ClassicalAudio:
 
             self.leds.flash("yellow")
 
-            html_report = HTMLReport(
-                template=file.absolute(
-                    "../../../assets/query.html",
-                    file.path(__file__),
-                )
-            )
+            html_report = HTMLReport(template=get_path("./query.html"))
 
             success, query_context = self.context.generate(
                 query=query,
