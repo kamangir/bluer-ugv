@@ -1,7 +1,7 @@
 # swallow: digital: design: computer: testing
 
 - [test the shield](./shield/testing.md).
-- disconnect the shield from the [XL4015](../../../../../../../bluer-sbc/bluer_sbc/docs/parts/XL4015.md) and connect the computer to the [battery bus](../../../../../../../bluer-sbc/bluer_sbc/docs/battery_bus) or [adapter bus](../../../../../../../bluer-sbc/bluer_sbc/docs/adapter_bus.md). validate that the red LED on the XL4015 turns on.
+- disconnect the shield from the [XL4015](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/XL4015.md) and connect the computer to the [battery bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/battery_bus) or [adapter bus](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/adapter_bus.md). validate that the red LED on the XL4015 turns on.
 - adjust XL4015 at 5.1 VDC.
 - separate the shield from the rpi, connect power to the shield, turn the power on, validate no 💥, validate that the output of XL-4015 is ~5.1 VDC, turn the power off.
 - attach a 5 Ω resistor to the outputs of XL4015 and validate that output stays ~5.1 VDC.
@@ -10,6 +10,6 @@
 
 |   |   |   |
 | --- | --- | --- |
-| [![image](../../../../../../../assets2/swallow/20251116_145939.jpg?raw=true)](../../../../../../../assets2/swallow/20251116_145939.jpg?raw=true) | [![image](../../../../../../../assets2/swallow/20251116_150940.jpg?raw=true)](../../../../../../../assets2/swallow/20251116_150940.jpg?raw=true) | [![image](../../../../../../../assets2/swallow/20251116_151611.jpg?raw=true)](../../../../../../../assets2/swallow/20251116_151611.jpg?raw=true) |
-| [![image](../../../../../../../assets2/swallow/20251116_152801.jpg?raw=true)](../../../../../../../assets2/swallow/20251116_152801.jpg?raw=true) | [![image](../../../../../../../assets2/swallow/20251116_152832_1.gif?raw=true)](../../../../../../../assets2/swallow/20251116_152832_1.gif?raw=true) | [![image](../../../../../../../assets2/swallow/2026-01-25-12-21.jpg?raw=true)](../../../../../../../assets2/swallow/2026-01-25-12-21.jpg?raw=true) |
-| [![image](../../../../../../../assets2/swallow/2026-01-25-12-16.jpg?raw=true)](../../../../../../../assets2/swallow/2026-01-25-12-16.jpg?raw=true) |  |  |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_145939.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_145939.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_150940.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_150940.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_151611.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_151611.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152801.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152801.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152832_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251116_152832_1.gif?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/2026-01-25-12-21.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/2026-01-25-12-21.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/2026-01-25-12-16.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/2026-01-25-12-16.jpg?raw=true) |  |  |

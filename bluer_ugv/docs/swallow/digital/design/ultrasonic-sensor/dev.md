@@ -40,7 +40,7 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 
 | | |
 |-|-|
-| ![image](../../../../../../../assets/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-pulse-ms.png?raw=true) | ![image](../../../../../../../assets/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-distance-mm.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-pulse-ms.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-distance-mm.png?raw=true) |
 
 [ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz)
 
@@ -58,7 +58,7 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 ```
 
 
-![image](../../../../../../../assets/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-detections.gif?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/ultrasonic-test-2025-11-18-12-38-22-j4t7wl/ultrasonic-sensor-detections.gif?raw=true)
 
 [ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/ultrasonic-test-2025-11-18-12-38-22-j4t7wl.tar.gz)
 
@@ -66,5 +66,5 @@ using [ultrasonic_sensor-v9.py](../../../../../../sandbox/ultrasonic_sensor-v9.p
 
 |   |
 | --- |
-| [![image](../../../../../../../assets2/swallow/20251001_203056_1.gif?raw=true)](../../../../../../../assets2/swallow/20251001_203056_1.gif?raw=true) |
-| [![image](../../../../../../../assets2/swallow/20251001_185852.jpg?raw=true)](../../../../../../../assets2/swallow/20251001_185852.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251001_203056_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251001_203056_1.gif?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251001_185852.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251001_185852.jpg?raw=true) |
