@@ -1,5 +1,6 @@
 from bluer_options.host.functions import is_headless
 
+from bluer_options.env import BLUER_AI_STORAGE_IS_ACCESSIBLE
 from bluer_sbc.env import BLUER_SBC_ENABLE_SCREEN
 
 from bluer_ugv import env
@@ -14,7 +15,10 @@ class ClassicalScreen:
             None if (is_headless() or BLUER_SBC_ENABLE_SCREEN == 0) else VideoPlayer()
         )
 
-        self.playlist = PlayList(env.RANGIN_VIDEO_LIST_OBJECT)
+        self.playlist = PlayList(
+            env.RANGIN_VIDEO_LIST_OBJECT,
+            download=BLUER_AI_STORAGE_IS_ACCESSIBLE == 1,
+        )
 
         logger.info(f"{self.__class__.__name__} created.")
 

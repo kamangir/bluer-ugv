@@ -18,6 +18,8 @@ class ClassicalScenario:
         camera: ClassicalCamera,
         setpoint: ClassicalSetPoint,
     ):
+        self.running = False
+
         self.config = config
         self.camera = camera
         self.setpoint = setpoint
@@ -36,10 +38,22 @@ class ClassicalScenario:
                 setpoint=self.setpoint,
             )
 
-    def update(self) -> bool:
-        with self._lock:
-            return self.state_machine.process()
+        self.running = True
+        self.thread = threading.Thread(target=self.loop, daemon=True)
+        self.thread.start()
+
+    def loop(self):
+        logger.info(f"{self.__class__.__name__}.loop started.")
+
+        while self.running:
+            with self._lock:
+                self.state_machine.process()
 
     def stop(self):
+        self.running = False
+        self.thread.join()
+
+        logger.info(f"{self.__class__.__name__}.stopped.")
+
         with self._lock:
             self.state_machine.stop()
