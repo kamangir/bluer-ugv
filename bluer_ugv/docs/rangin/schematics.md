@@ -1,7 +1,7 @@
 # rangin: schematics
 
-- [design files](https://github.com/kamangir/bluer-designs/tree/main/rangin/electrical)
+- [design files](../../../../bluer-designs/rangin/electrical)
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/bluer-designs/blob/main/rangin/electrical/electrical.png?raw=true)](https://github.com/kamangir/bluer-designs/blob/main/rangin/electrical/electrical.svg) |
+| [![image](../../../../bluer-designs/rangin/electrical/electrical.png?raw=true)](../../../../bluer-designs/rangin/electrical/electrical.svg) |

@@ -20,4 +20,4 @@ on separate terminals,
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-12.png?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-12.png?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-13.png?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang2/2026-01-13.png?raw=true) |
+| [![image](../../../../assets2/arzhang2/2026-01-12.png?raw=true)](../../../../assets2/arzhang2/2026-01-12.png?raw=true) | [![image](../../../../assets2/arzhang2/2026-01-13.png?raw=true)](../../../../assets2/arzhang2/2026-01-13.png?raw=true) |

@@ -35,7 +35,7 @@ the range of numpad is ~10-20 m range, noticeably lower than that of the full ke
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121811.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121811.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121842.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20251019_121842.jpg?raw=true) |
+| [![image](../../../../../../assets2/swallow/20251019_121811.jpg?raw=true)](../../../../../../assets2/swallow/20251019_121811.jpg?raw=true) | [![image](../../../../../../assets2/swallow/20251019_121842.jpg?raw=true)](../../../../../../assets2/swallow/20251019_121842.jpg?raw=true) |
 
 ## leds
     - green: control loop.

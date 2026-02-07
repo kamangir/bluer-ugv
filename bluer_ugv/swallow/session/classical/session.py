@@ -179,7 +179,6 @@ class ClassicalSession:
 
     def cleanup(self):
         self.scenario.stop()
-
         self.audio.stop()
         self.ethernet.stop()
         self.ultrasonic_sensor.stop()
@@ -268,7 +267,6 @@ class ClassicalSession:
             self.motor2,
             self.leds,
             self.screen,
-            self.scenario,
         ]:
             self.timing.start(thing.__class__.__name__)
 

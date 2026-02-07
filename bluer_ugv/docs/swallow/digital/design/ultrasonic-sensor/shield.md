@@ -6,4 +6,4 @@
 
 |   |   |
 | --- | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250923_142200.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250923_142200.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/swallow/20250923_145111.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/swallow/20250923_145111.jpg?raw=true) |
+| [![image](../../../../../../../assets2/swallow/20250923_142200.jpg?raw=true)](../../../../../../../assets2/swallow/20250923_142200.jpg?raw=true) | [![image](../../../../../../../assets2/swallow/20250923_145111.jpg?raw=true)](../../../../../../../assets2/swallow/20250923_145111.jpg?raw=true) |
