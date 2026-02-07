@@ -35,18 +35,18 @@ runme
 
 | | |
 |-|-|
-| ![image](../../../../../../../../../assets/2025-07-13-10-15-29-46j4oy/grid.png?raw=true) | ![image](../../../../../../../../../assets/2025-07-13-10-15-29-46j4oy/grid-timeline.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-15-29-46j4oy/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-15-29-46j4oy/grid-timeline.png?raw=true) |
 
 
 [2025-07-13-10-37-12-d4iwpm.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-07-13-10-37-12-d4iwpm.tar.gz)
 
 | | |
 |-|-|
-| ![image](../../../../../../../../../assets/2025-07-13-10-37-12-d4iwpm/grid.png?raw=true) | ![image](../../../../../../../../../assets/2025-07-13-10-37-12-d4iwpm/grid-timeline.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-37-12-d4iwpm/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-10-37-12-d4iwpm/grid-timeline.png?raw=true) |
 
 
 [2025-07-13-12-55-54-cx5mhk.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-07-13-12-55-54-cx5mhk.tar.gz)
 
 | | |
 |-|-|
-| ![image](../../../../../../../../../assets/2025-07-13-12-55-54-cx5mhk/grid.png?raw=true) | ![image](../../../../../../../../../assets/2025-07-13-12-55-54-cx5mhk/grid-timeline.png?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-55-54-cx5mhk/grid.png?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-07-13-12-55-54-cx5mhk/grid-timeline.png?raw=true) |

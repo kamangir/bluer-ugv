@@ -63,13 +63,13 @@ runme ~upload
 
 |   |
 | --- |
-| [`2025-12-09-08-16-53-a4rfg2`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-16-53-a4rfg2.tar.gz) [![image](../../../../assets/2025-12-09-08-16-53-a4rfg2/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-16-53-a4rfg2.tar.gz)  |
-| [`2025-12-09-08-52-54-jre3xs`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-52-54-jre3xs.tar.gz) [![image](../../../../assets/2025-12-09-08-52-54-jre3xs/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-52-54-jre3xs.tar.gz)  |
-| [`2025-12-09-09-09-43-ljsjbb`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-09-09-43-ljsjbb.tar.gz) [![image](../../../../assets/2025-12-09-09-09-43-ljsjbb/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-09-09-43-ljsjbb.tar.gz)  |
-| [`2025-12-09-10-51-24-2dfnau`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-10-51-24-2dfnau.tar.gz) [![image](../../../../assets/2025-12-09-10-51-24-2dfnau/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-10-51-24-2dfnau.tar.gz)  |
-| [`2025-12-09-14-36-28-3o4zvv`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-14-36-28-3o4zvv.tar.gz) [![image](../../../../assets/2025-12-09-14-36-28-3o4zvv/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-14-36-28-3o4zvv.tar.gz)  |
-| [`2025-12-09-16-42-23-h1awiz`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-16-42-23-h1awiz.tar.gz) [![image](../../../../assets/2025-12-09-16-42-23-h1awiz/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-16-42-23-h1awiz.tar.gz)  |
-| [`2025-12-09-18-52-03-7jo931`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-18-52-03-7jo931.tar.gz) [![image](../../../../assets/2025-12-09-18-52-03-7jo931/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-18-52-03-7jo931.tar.gz)  |
+| [`2025-12-09-08-16-53-a4rfg2`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-16-53-a4rfg2.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/2025-12-09-08-16-53-a4rfg2/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-16-53-a4rfg2.tar.gz)  |
+| [`2025-12-09-08-52-54-jre3xs`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-52-54-jre3xs.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/2025-12-09-08-52-54-jre3xs/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-08-52-54-jre3xs.tar.gz)  |
+| [`2025-12-09-09-09-43-ljsjbb`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-09-09-43-ljsjbb.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/2025-12-09-09-09-43-ljsjbb/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-09-09-43-ljsjbb.tar.gz)  |
+| [`2025-12-09-10-51-24-2dfnau`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-10-51-24-2dfnau.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/2025-12-09-10-51-24-2dfnau/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-10-51-24-2dfnau.tar.gz)  |
+| [`2025-12-09-14-36-28-3o4zvv`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-14-36-28-3o4zvv.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/2025-12-09-14-36-28-3o4zvv/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-14-36-28-3o4zvv.tar.gz)  |
+| [`2025-12-09-16-42-23-h1awiz`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-16-42-23-h1awiz.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/2025-12-09-16-42-23-h1awiz/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-16-42-23-h1awiz.tar.gz)  |
+| [`2025-12-09-18-52-03-7jo931`](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-18-52-03-7jo931.tar.gz) [![image](https://github.com/kamangir/assets/raw/main/2025-12-09-18-52-03-7jo931/ultrasonic-sensor-state.png)](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-12-09-18-52-03-7jo931.tar.gz)  |
 
 ## debug object
 
@@ -108,7 +108,7 @@ runme
 
 | | |
 |-|-|
-| ![image](../../../../assets/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true) | ![image](../../../../assets/2025-12-09-18-52-03-7jo931/200.gif?raw=true) |
+| ![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true) | ![image](https://github.com/kamangir/assets/blob/main/2025-12-09-18-52-03-7jo931/200.gif?raw=true) |
 
 ## observations
 
@@ -117,5 +117,5 @@ runme
 
 |   |
 | --- |
-| [![image](../../../../assets2/arzhang/20251209_143603.jpg?raw=true)](../../../../assets2/arzhang/20251209_143603.jpg?raw=true) |
-| [![image](../../../../assets2/arzhang/city-1-path.png?raw=true)](../../../../assets2/arzhang/city-1-path.png?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_143603.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_143603.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/city-1-path.png?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/city-1-path.png?raw=true) |

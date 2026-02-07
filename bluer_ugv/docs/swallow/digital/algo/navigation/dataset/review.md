@@ -12,9 +12,9 @@
 ```
 
 
-![image](../../../../../../../../assets/2025-07-09-10-26-30-itpbmu/grid.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/2025-07-09-10-26-30-itpbmu/grid.png?raw=true)
 
-![image](../../../../../../../../assets/2025-07-09-10-26-30-itpbmu/grid-timeline.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/2025-07-09-10-26-30-itpbmu/grid-timeline.png?raw=true)
 
 [2025-07-09-10-26-30-itpbmu.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/2025-07-09-10-26-30-itpbmu.tar.gz)
 
