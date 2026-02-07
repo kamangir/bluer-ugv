@@ -20,7 +20,7 @@ class ClassicalConfig:
 
     def as_str(self) -> str:
         with self._lock:
-            return "{}[ {} ]".format(
+            return "{}[{}]".format(
                 self.__class__.__name__,
                 ", ".join(
                     [f"{keyword}={value}" for keyword, value in self.config.items()]
