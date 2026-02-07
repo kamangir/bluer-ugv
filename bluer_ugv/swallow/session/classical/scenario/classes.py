@@ -42,12 +42,12 @@ class ClassicalScenario:
         self.thread = threading.Thread(target=self.loop, daemon=True)
         self.thread.start()
 
-    def loop(self) -> bool:
+    def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
             with self._lock:
-                return self.state_machine.process()
+                self.state_machine.process()
 
     def stop(self):
         self.running = False
