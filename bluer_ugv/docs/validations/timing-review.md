@@ -125,4 +125,4 @@ session.update:
 
 
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-10-09-17-04-47-vm23uf/swallow-debug-2025-10-09-17-04-47-vm23uf.gif?raw=true)
+![image](../../../../assets/swallow-debug-2025-10-09-17-04-47-vm23uf/swallow-debug-2025-10-09-17-04-47-vm23uf.gif?raw=true)

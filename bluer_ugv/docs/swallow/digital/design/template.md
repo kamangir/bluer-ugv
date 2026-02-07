@@ -4,6 +4,7 @@ title:::
 - [terraform](./terraform.md)
 - [computer](./computer)
 - [rpi-pinout](./rpi-pinout.md)
+- [joystick](./joystick.md)
 - [operation](./operation.md)
 - [mechanical](./mechanical)
 - [ethernet](./ethernet.md)
