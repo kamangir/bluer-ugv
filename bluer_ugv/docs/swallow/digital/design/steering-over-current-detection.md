@@ -8,4 +8,4 @@
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/steering-over-current.png?raw=true)](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/steering-over-current.svg) |
+| [![image](../../../../../../bluer-designs/swallow/electrical/steering-over-current.png?raw=true)](../../../../../../bluer-designs/swallow/electrical/steering-over-current.svg) |
