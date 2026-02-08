@@ -2,7 +2,7 @@ import threading
 import time
 from typing import Dict, List
 
-from bluer_options.env import BLUER_AI_STORAGE_IS_ACCESSIBLE
+from bluer_options.env import BLUER_AI_CLOUD_IS_ACCESSIBLE
 from bluer_objects.env import abcli_object_name
 from bluer_objects.metadata import post_to_object
 from bluer_agent.audio.properties import AudioProperties
@@ -43,7 +43,7 @@ class ClassicalAudio:
 
         self.context = Context(
             BLUER_AGENT_RAG_CORPUS_SINGLE_ROOT_TEST_OBJECT,
-            download=BLUER_AI_STORAGE_IS_ACCESSIBLE == 1,
+            download=BLUER_AI_CLOUD_IS_ACCESSIBLE == 1,
         )
 
         self.running = False
