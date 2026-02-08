@@ -4,8 +4,8 @@ UGV(s): 🐬 [`arzhang`](../UGVs/arzhang.md)
 
 |   |   |
 | --- | --- |
-| [![image](../../../../assets2/arzhang/20250925_133136.jpg?raw=true)](../../../../assets2/arzhang/20250925_133136.jpg?raw=true) | [![image](../../../../assets2/arzhang/20250925_133628.jpg?raw=true)](../../../../assets2/arzhang/20250925_133628.jpg?raw=true) |
-| [![image](../../../../assets2/arzhang/20250925_133637.jpg?raw=true)](../../../../assets2/arzhang/20250925_133637.jpg?raw=true) | [![image](../../../../assets2/arzhang/20250925_132521~2_1.gif?raw=true)](../../../../assets2/arzhang/20250925_132521~2_1.gif?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133136.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133136.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133628.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133628.jpg?raw=true) |
+| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133637.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_133637.jpg?raw=true) | [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_132521~2_1.gif?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20250925_132521~2_1.gif?raw=true) |
 
 ## debug object
 
@@ -47,7 +47,7 @@ runme publish swallow-debug-2025-09-25-13-16-59-rnm7jd
 
 [swallow-debug-2025-09-25-13-16-59-rnm7jd.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-debug-2025-09-25-13-16-59-rnm7jd.tar.gz)
 
-![image](../../../../assets/swallow-debug-2025-09-25-13-16-59-rnm7jd/swallow-debug-2025-09-25-13-16-59-rnm7jd.gif?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-debug-2025-09-25-13-16-59-rnm7jd/swallow-debug-2025-09-25-13-16-59-rnm7jd.gif?raw=true)
 
 ## session object
 
