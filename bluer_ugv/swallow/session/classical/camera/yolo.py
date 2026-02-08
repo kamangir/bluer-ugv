@@ -2,7 +2,7 @@ from typing import List
 import threading
 
 from bluer_options.timer import Timer
-from bluer_options.env import BLUER_AI_STORAGE_IS_ACCESSIBLE
+from bluer_options.env import BLUER_AI_CLOUD_IS_ACCESSIBLE
 from bluer_options import string
 from bluer_objects.storage.policies import DownloadPolicy
 from bluer_objects import storage
@@ -53,7 +53,7 @@ class ClassicalYoloCamera(ClassicalCamera):
 
         assert super().initialize()
 
-        if BLUER_AI_STORAGE_IS_ACCESSIBLE == 1:
+        if BLUER_AI_CLOUD_IS_ACCESSIBLE == 1:
             if not storage.download(
                 env.BLUER_UGV_SWALLOW_YOLO_MODEL,
                 policy=DownloadPolicy.DOESNT_EXIST,

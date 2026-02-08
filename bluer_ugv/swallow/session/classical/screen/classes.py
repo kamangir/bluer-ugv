@@ -1,6 +1,6 @@
 from bluer_options.host.functions import is_headless
 
-from bluer_options.env import BLUER_AI_STORAGE_IS_ACCESSIBLE
+from bluer_options.env import BLUER_AI_CLOUD_IS_ACCESSIBLE
 from bluer_sbc.env import BLUER_SBC_ENABLE_SCREEN
 
 from bluer_ugv import env
@@ -17,7 +17,7 @@ class ClassicalScreen:
 
         self.playlist = PlayList(
             env.RANGIN_VIDEO_LIST_OBJECT,
-            download=BLUER_AI_STORAGE_IS_ACCESSIBLE == 1,
+            download=BLUER_AI_CLOUD_IS_ACCESSIBLE == 1,
         )
 
         logger.info(f"{self.__class__.__name__} created.")
