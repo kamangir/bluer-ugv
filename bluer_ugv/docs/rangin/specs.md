@@ -5,4 +5,4 @@
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/rangin/20251116_124842.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/rangin/20251116_124842.jpg?raw=true) |
+| [![image](../../../../assets2/rangin/20251116_124842.jpg?raw=true)](../../../../assets2/rangin/20251116_124842.jpg?raw=true) |

@@ -122,4 +122,4 @@ bps/simulations/timing.md .
 ```
 
 
-[release.pdf](https://github.com/kamangir/assets/blob/main/release-2025-11-09-02-50-43-vkhs2k/release.pdf)
+[release.pdf](../../../../assets/release-2025-11-09-02-50-43-vkhs2k/release.pdf)

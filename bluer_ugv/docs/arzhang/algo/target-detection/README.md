@@ -1,3 +1,3 @@
 # arzhang: algo: target-detection
 
-- [@algo/yolo](https://github.com/kamangir/bluer-algo/tree/main/bluer_algo/docs/yolo)
+- [@algo/yolo](../../../../../../bluer-algo/bluer_algo/docs/yolo)
