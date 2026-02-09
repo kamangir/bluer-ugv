@@ -1,5 +1,5 @@
 from bluer_objects.README.items import ImageItems, Items
-from bluer_objects.README.consts import assets, assets_url
+from bluer_objects.README.consts import assets, object_gif_url
 from bluer_objects import markdown
 from bluer_objects import env
 
@@ -76,11 +76,7 @@ dict_of_validations = {
             },
         ),
         "cols": 2,
-        "marquee": assets_url(
-            suffix="{object_name}/{object_name}.gif".format(
-                object_name="swallow-debug-2025-09-25-13-16-59-rnm7jd"
-            )
-        ),
+        "marquee": object_gif_url("swallow-debug-2025-09-25-13-16-59-rnm7jd"),
     },
     "village-4": {
         "order": 4,
@@ -90,20 +86,12 @@ dict_of_validations = {
                 f"{arzhang_assets2}/20250927_192024.jpg": "",
             },
         ),
-        "marquee": assets_url(
-            suffix="{object_name}/{object_name}.gif".format(
-                object_name="swallow-debug-2025-09-27-19-15-31-6iq5vz"
-            )
-        ),
+        "marquee": object_gif_url("swallow-debug-2025-09-27-19-15-31-6iq5vz"),
     },
     "timing-review": {
         "order": 5,
         "ugv_name": ["arzhang2:ugv"],
-        "marquee": assets_url(
-            suffix="{object_name}/{object_name}.gif".format(
-                object_name="swallow-debug-2025-10-09-17-04-47-vm23uf"
-            )
-        ),
+        "marquee": object_gif_url("swallow-debug-2025-10-09-17-04-47-vm23uf"),
     },
     "village-5": {
         "order": 6,
@@ -111,11 +99,7 @@ dict_of_validations = {
             "arzhang:ugv",
             "arzhang2:ugv",
         ],
-        "marquee": assets_url(
-            suffix="{object_name}/{object_name}.gif".format(
-                object_name="swallow-debug-2025-10-10-08-49-45-yk18ei"
-            )
-        ),
+        "marquee": object_gif_url("swallow-debug-2025-10-10-08-49-45-yk18ei"),
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20251010_085451.jpg": "",
@@ -130,11 +114,7 @@ dict_of_validations = {
             "arzhang:ugv",
             "arzhang2:ugv",
         ],
-        "marquee": assets_url(
-            suffix="{object_name}/{object_name}.gif".format(
-                object_name="swallow-debug-2025-10-19-14-14-23-ectn97"
-            )
-        ),
+        "marquee": object_gif_url("swallow-debug-2025-10-19-14-14-23-ectn97"),
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20251019_141351.jpg": "",
@@ -172,7 +152,7 @@ dict_of_validations = {
         "ugv_name": [
             "arzhang:ugv",
         ],
-        "marquee": f"{assets}/swallow-debug-2025-12-09-15-43-31-o6gh5k/swallow-debug-2025-12-09-15-43-31-o6gh5k.gif?raw=true",
+        "marquee": object_gif_url("swallow-debug-2025-12-09-15-43-31-o6gh5k"),
         "items": ImageItems(
             {
                 f"{arzhang_assets2}/20251209_143603.jpg": "",
@@ -221,15 +201,24 @@ dict_of_validations = {
         ],
         "items": ImageItems(
             {
-                assets_url(
-                    suffix="{object_name}/{object_name}.gif".format(
-                        object_name="swallow-debug-2026-01-30-15-14-29-26okr6"
-                    )
-                ): "",
+                object_gif_url("swallow-debug-2026-01-30-15-14-29-26okr6"): "",
             }
         ),
     },
+    "village-9": {
+        "order": 15,
+        "ugv_name": [
+            "arzhang2",
+        ],
+        "items": ImageItems(
+            {
+                object_gif_url("swallow-debug-2026-02-08-15-29-19-tmggnk"): "",
+            }
+        ),
+        "marquee": object_gif_url("swallow-debug-2026-02-08-15-29-19-tmggnk"),
+    },
     "template": {
+        "order": 16,
         "ugv_name": [
             "template",
         ],
