@@ -1,7 +1,7 @@
 # swallow: digital: design: computer: schematics
 
-- [design files](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/)
+- [design files](../../../../../../../bluer-designs/swallow/electrical/)
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/digital.png?raw=true)](https://github.com/kamangir/bluer-designs/blob/main/swallow/electrical/digital.svg) |
+| [![image](../../../../../../../bluer-designs/swallow/electrical/digital.png?raw=true)](../../../../../../../bluer-designs/swallow/electrical/digital.svg) |

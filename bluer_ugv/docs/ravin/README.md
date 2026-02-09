@@ -7,4 +7,4 @@
 
 |   |   |
 | --- | --- |
-| [`ravin3`](./ravin3) [![image](https://github.com/kamangir/assets2/raw/main/ravin/20250723_095155~2_1.gif)](./ravin3) 3 motors, with steering. | [`ravin4`](./ravin4) [![image](https://github.com/kamangir/assets2/raw/main/ravin4/20251014_164022.jpg)](./ravin4) 4 motors, differential drive. |
+| [`ravin3`](./ravin3) [![image](../../../../assets2/ravin/20250723_095155~2_1.gif)](./ravin3) 3 motors, with steering. | [`ravin4`](./ravin4) [![image](../../../../assets2/ravin4/20251014_164022.jpg)](./ravin4) 4 motors, differential drive. |

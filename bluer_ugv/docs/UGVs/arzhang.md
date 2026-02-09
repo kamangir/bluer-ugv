@@ -11,4 +11,4 @@ validations: [`city-1`](../validations/city-1.md), [`village-1`](../validations/
 
 |   |
 | --- |
-| [![image](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_111322.jpg?raw=true)](https://github.com/kamangir/assets2/raw/main/arzhang/20251209_111322.jpg?raw=true) |
+| [![image](../../../../assets2/arzhang/20251209_111322.jpg?raw=true)](../../../../assets2/arzhang/20251209_111322.jpg?raw=true) |
