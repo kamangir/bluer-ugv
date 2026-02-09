@@ -193,6 +193,15 @@ dict_of_validations = {
         "ugv_name": [
             "rangin",
         ],
+        "items": ImageItems(
+            {
+                object_gif_url("swallow-debug-2026-01-30-14-21-50-crrspo"): "",
+                object_gif_url("swallow-debug-2026-01-31-18-05-01-qftcyz"): "",
+                object_gif_url("swallow-debug-2026-01-31-18-19-47-a3344t"): "",
+                object_gif_url("swallow-debug-2026-02-01-21-46-56-3z38uc"): "",
+            }
+        ),
+        "marquee": object_gif_url("swallow-debug-2026-01-30-14-21-50-crrspo"),
     },
     "city-4": {
         "order": 14,
