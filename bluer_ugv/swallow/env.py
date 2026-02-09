@@ -24,7 +24,12 @@ args = parser.parse_args()
 success = False
 if args.task == "get_var_name":
     success = True
-    print(dict_of_variables.get(args.keyword, {}).get("name", ""))
+    print(
+        dict_of_variables.get(args.keyword, {}).get(
+            "name",
+            "",
+        )
+    )
 else:
     success = None
 
