@@ -204,6 +204,7 @@ dict_of_validations = {
                 object_gif_url("swallow-debug-2026-01-30-15-14-29-26okr6"): "",
             }
         ),
+        "marquee": object_gif_url("swallow-debug-2026-01-30-15-14-29-26okr6"),
     },
     "village-9": {
         "order": 15,
