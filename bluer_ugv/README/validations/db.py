@@ -190,6 +190,7 @@ dict_of_validations = {
     },
     "city-3": {
         "order": 12,
+        "cols": 2,
         "ugv_name": [
             "rangin",
         ],
