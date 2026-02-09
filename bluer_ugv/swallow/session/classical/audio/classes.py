@@ -9,7 +9,6 @@ from bluer_agent.audio.properties import AudioProperties
 from bluer_agent.audio.conversation import converse, greeting
 from bluer_agent.rag.corpus.context import Context
 from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_SINGLE_ROOT_TEST_OBJECT
-from bluer_agent.assets.path import get_path
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
 from bluer_ugv import env
@@ -83,12 +82,11 @@ class ClassicalAudio:
                 continue
 
             success, query, reply = converse(
-                audio_prompt=audio_prompt,
                 context=self.context,
                 object_name=abcli_object_name,
+                greeting=audio_prompt,
                 language=env.BLUER_UGV_AUDIO_LANGUAGE,
                 audio_properties=self.audio_properties,
-                template=get_path("./query.html"),
             )
             if not success or not query:
                 if not query:
