@@ -12,14 +12,13 @@ function bluer_ugv_swallow_env_set() {
         return 1
     fi
 
-    pushd $abcli_path_git/bluer-sbc >/dev/null
+    local value=${2:-1}
 
-    dotenv set \
+    bluer_ai_eval path=$abcli_path_git/bluer-sbc \
+        dotenv set \
         $var_name \
-        "${@:2}"
+        "$value"
     [[ $? -ne 0 ]] && return 1
-
-    popd >/dev/null
 
     bluer_sbc init
 }
