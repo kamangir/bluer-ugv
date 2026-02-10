@@ -1,6 +1,6 @@
 # swallow: digital: algo: tracking: validations: three
 
-> algo: [kcf](../../../../../../../../bluer-algo/bluer_algo/docs/tracker/kcf.md)
+> algo: [kcf](https://github.com/kamangir/bluer-algo/blob/main/bluer_algo/docs/tracker/kcf.md)
 
 ```bash
 @rpi
@@ -32,6 +32,6 @@ to reselect the target press `train`.
 
 |   |
 | --- |
-| [![image](../../../../../../../../assets/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true)](../../../../../../../../assets/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true) |
+| [![image](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true)](https://github.com/kamangir/assets/raw/main/swallow-debug-2025-12-12-14-46-34-m8ahlp/swallow-debug-2025-12-12-14-46-34-m8ahlp.gif?raw=true) |
 
 > promising. ✅

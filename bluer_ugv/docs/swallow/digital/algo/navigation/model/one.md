@@ -46,7 +46,7 @@ uses [combination/one](../dataset/combination/one.md).
 
 ---
 
-![image](../../../../../../../../assets/swallow-dataset-2025-07-14-13-16-51-ajhuvd/grid.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-14-13-16-51-ajhuvd/grid.png?raw=true)
 
 
 <details>
@@ -80,11 +80,11 @@ dataset:
 
 ---
 
-![image](../../../../../../../../assets/swallow-model-2025-07-14-13-18-10-kx0qrw/loss.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-13-18-10-kx0qrw/loss.png?raw=true)
 
-![image](../../../../../../../../assets/swallow-model-2025-07-14-13-18-10-kx0qrw/evaluation.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-13-18-10-kx0qrw/evaluation.png?raw=true)
 
-![image](../../../../../../../../assets/swallow-model-2025-07-14-13-18-10-kx0qrw/confusion_matrix.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-model-2025-07-14-13-18-10-kx0qrw/confusion_matrix.png?raw=true)
 
 [swallow-model-2025-07-14-13-18-10-kx0qrw.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/swallow-model-2025-07-14-13-18-10-kx0qrw.tar.gz)
 
@@ -225,7 +225,7 @@ model:
 
 ---
 
-![image](../../../../../../../../assets/swallow-prediction-test-2025-07-14-14-13-57-ngywj1/prediction.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-prediction-test-2025-07-14-14-13-57-ngywj1/prediction.png?raw=true)
 
 
 <details>
