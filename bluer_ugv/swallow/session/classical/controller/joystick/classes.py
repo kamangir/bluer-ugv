@@ -33,7 +33,7 @@ class ClassicalJoystick(ClassicalController):
 
         self.joystick = Joystick()
 
-        self.controls = Controls()
+        self.controls = Controls
 
         logger.info(f"created {self.__class__.__name__}")
 
