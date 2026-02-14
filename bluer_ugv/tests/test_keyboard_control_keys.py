@@ -1,6 +1,6 @@
 import pytest
 
-from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
+from bluer_ugv.swallow.session.classical.controller.keyboard.keys import ControlKeys
 
 
 @pytest.mark.parametrize(
