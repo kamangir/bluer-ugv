@@ -2,7 +2,7 @@ title:::
 
 ugv_name:::
 
-- validation.
-- integration with [joystick](../swallow/digital/design/joystick.md).
+- validation of remote operation. 🔥
+- integration with [joystick](../swallow/digital/design/joystick.md). 🔥
 
 items:::

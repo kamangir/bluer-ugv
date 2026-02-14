@@ -2,8 +2,8 @@
 
 UGV(s): 🐬 [`arzhang2`](../UGVs/arzhang2.md)
 
-- validation.
-- integration with [joystick](../swallow/digital/design/joystick.md).
+- validation of remote operation. 🔥
+- integration with [joystick](../swallow/digital/design/joystick.md). 🔥
 
 |   |
 | --- |
