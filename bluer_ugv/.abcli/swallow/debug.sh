@@ -6,12 +6,16 @@ function bluer_ugv_swallow_debug() {
 
     local object_name=$(bluer_ai_clarify_object $2 swallow-debug-$(bluer_ai_string_timestamp))
 
+    bluer_ai_badge - "🖼️"
+
     bluer_ai_eval dryrun=$do_dryrun \
         python3 -m bluer_ugv.swallow \
         debug \
         --object_name $object_name \
         "${@:3}"
     local status="$?"
+
+    bluer_ai_badge - reset
 
     [[ "$do_upload" == 1 ]] &&
         bluer_objects_upload \

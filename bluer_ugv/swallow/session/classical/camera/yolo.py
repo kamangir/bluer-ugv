@@ -217,7 +217,7 @@ class ClassicalYoloCamera(ClassicalCamera):
             )
         )
 
-        success, _ = camera.capture(
+        success, image = camera.capture(
             close_after=False,
             open_before=False,
             object_name=self.object_name,
@@ -228,6 +228,16 @@ class ClassicalYoloCamera(ClassicalCamera):
             return success
 
         # TODO: dataset +=
+
+        if self.config.get("debug_mode"):
+            if not self.send_debug_data(
+                SocketMessage(
+                    {
+                        "image": image,
+                    }
+                )
+            ):
+                logger.warning("failed to send debug data.")
 
         self.training_timer.reset()
 
