@@ -2,8 +2,8 @@ from typing import Dict
 
 Controls: Dict[str, Dict] = {
     "axes": {
-        "speed": 3,
-        "steering": 2,
+        3: "speed",
+        2: "steering",
     },
     "buttons": {
         9: "ultrasonic off",
