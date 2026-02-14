@@ -1,5 +1,7 @@
 title:::
 
+- also see [joystick operation](./joystick/operation.md).
+
 ## keyboard
 
 keys:::

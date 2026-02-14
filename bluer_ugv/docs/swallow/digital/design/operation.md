@@ -1,5 +1,7 @@
 # swallow: digital: design: operation
 
+- also see [joystick operation](./joystick/operation.md).
+
 ## keyboard
 
 | event | full keyboard | numpad |
