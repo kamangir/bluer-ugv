@@ -228,6 +228,18 @@ dict_of_validations = {
         ),
         "marquee": object_gif_url("swallow-debug-2026-02-08-15-29-19-tmggnk"),
     },
+    "village-10": {
+        "order": 16,
+        "ugv_name": [
+            "arzhang2",
+        ],
+        "items": ImageItems(
+            {
+                object_gif_url("TBA"): "",
+            }
+        ),
+        "marquee": object_gif_url("TBA"),
+    },
     "template": {
         "order": 16,
         "ugv_name": [
