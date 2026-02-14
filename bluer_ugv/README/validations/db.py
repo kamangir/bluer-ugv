@@ -235,6 +235,24 @@ dict_of_validations = {
         ],
         "items": ImageItems(
             {
+                object_gif_url(
+                    "swallow-debug-2026-02-14-14-22-06-ojg1vt",
+                    volume=3,
+                ): "",
+            }
+        ),
+        "marquee": object_gif_url(
+            "swallow-debug-2026-02-14-14-22-06-ojg1vt",
+            volume=3,
+        ),
+    },
+    "village-11": {
+        "order": 17,
+        "ugv_name": [
+            "arzhang2",
+        ],
+        "items": ImageItems(
+            {
                 object_gif_url("TBA"): "",
             }
         ),
