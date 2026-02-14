@@ -65,27 +65,27 @@ class ClassicalJoystick(ClassicalController):
             event = self.controls["buttons"][button]
 
             # ultrasonic
-            if "event" == "ultrasonic off":
+            if event == "ultrasonic off":
                 self.set_ultrasonic(False)
-            if "event" == "ultrasonic on":
+            if event == "ultrasonic on":
                 self.set_ultrasonic(True)
 
             # debug
-            if "event" == "debug on":
+            if event == "debug on":
                 self.set_debug(True)
-            if "event" == "debug off":
+            if event == "debug off":
                 self.set_debug(False)
 
             # mode
             mode = self.config.get("mode")
             updated_mode = mode
-            if "event" == "mode = none":
+            if event == "mode = none":
                 updated_mode = OperationMode.NONE
 
-            if "event" == "mode = action":
+            if event == "mode = action":
                 updated_mode = OperationMode.ACTION
 
-            if "event" == "mode = training":
+            if event == "mode = training":
                 updated_mode = OperationMode.TRAINING
 
             if mode != updated_mode:
@@ -93,12 +93,12 @@ class ClassicalJoystick(ClassicalController):
                 self.special_key = False
 
             # stop
-            if "event" == "stop":
+            if event == "stop":
                 self.setpoint.stop()
                 self.special_key = False
 
             # special key
-            if "event" == "special key":
+            if event == "special key":
                 self.set_special_key()
 
         return True
