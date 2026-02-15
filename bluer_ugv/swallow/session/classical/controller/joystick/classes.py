@@ -38,7 +38,7 @@ class ClassicalJoystick(ClassicalController):
         self.running: bool = False
 
         if not self.joystick.enabled:
-            return True
+            return
 
         self.running = True
         self.thread = threading.Thread(target=self.loop, daemon=True)
