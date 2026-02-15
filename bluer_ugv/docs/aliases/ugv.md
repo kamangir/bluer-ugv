@@ -3,7 +3,7 @@
 ```bash
 @ugv \
 	build_README \
-	[push,root=<root>]
+	[ai,push,root=<root>]
  . build @ugv/README.md.
 @ugv \
 	pypi \
