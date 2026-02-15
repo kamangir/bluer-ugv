@@ -243,11 +243,17 @@ class ClassicalSession:
         )
 
     def process_ethernet_messages(self) -> bool:
+        if not self.ethernet.client:
+            return True
+
         while True:
             try:
                 # pylint: disable=protected-access
                 command = self.ethernet.client._receive_queue.get_nowait()
             except Empty:
+                break
+            except Exception as e:
+                logger.warning(e)
                 break
 
             if command.action == "keyboard":

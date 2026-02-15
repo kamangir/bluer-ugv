@@ -22,6 +22,8 @@ class ClassicalEthernet:
 
         self.running = False
 
+        self.client = None
+
         self.enabled, is_server, server_name = find_server(hostname=abcli_hostname)
         if not self.enabled:
             return
