@@ -14,7 +14,7 @@ from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv import ICON
 
-logger = get_logger(f"{ICON} 🕹️ ")
+logger = get_logger(f"{ICON}  🕹️")
 
 
 class ClassicalJoystick(ClassicalController):
