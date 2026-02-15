@@ -1,6 +1,5 @@
 import threading
 import pygame
-from pygame import JOYAXISMOTION, JOYBUTTONDOWN, JOYBUTTONUP, QUIT
 
 from bluer_options.logger import get_logger
 from bluer_algo.socket.connection import DEV_HOST
@@ -111,32 +110,16 @@ class ClassicalJoystick(ClassicalController):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
-            counter: int = 0
-            for event in pygame.event.get():
-                counter += 1
-                if event.type == QUIT:
-                    logger.info("QUIT received, and ignored")
-                elif event.type == JOYBUTTONDOWN:
-                    logger.info(f"button {event.button} pressed.")
+            self.joystick.read_events()
+
+            for event in self.joystick.buttons.values():
+                if event.type == pygame.JOYBUTTONDOWN:
                     self.handle_button(event.button)
-                elif event.type == JOYBUTTONUP:
-                    logger.info(f"button {event.button} released.")
-                elif event.type == JOYAXISMOTION:
-                    axis = event.axis
-                    value = event.value
 
-                    logger.info(f"axis {axis} moved to {value}.")
-
-                    self.handle_axis(
-                        axis=axis,
-                        value=value,
-                    )
-            if counter:
-                logger.info(
-                    "{}.loop: responded to {} event(s).".format(
-                        self.__class__.__name__,
-                        counter,
-                    )
+            for event in self.joystick.axes.values():
+                self.handle_axis(
+                    axis=event.axis,
+                    value=event.value,
                 )
 
             if self.special_key:
