@@ -46,9 +46,11 @@ class ClassicalJoystick(ClassicalController):
     ):
         if axis in self.controls["axes"]:
             self.special_key = False
+
+            axis_name, axis_direction = self.controls["axes"][axis]
             self.setpoint.put(
-                what=self.controls["axes"][axis],
-                value=int(100 * value),
+                what=axis_name,
+                value=axis_direction * int(100 * value),
             )
 
     def handle_button(self, button: int) -> bool:
