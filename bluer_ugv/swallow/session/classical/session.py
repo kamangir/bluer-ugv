@@ -295,4 +295,7 @@ class ClassicalSession:
 
         self.timing.stop("session.update")
 
+        if self.config.get("stop-requested", False):
+            return False
+
         return self.process_ethernet_messages()

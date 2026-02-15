@@ -58,14 +58,14 @@ class ClassicalJoystick(ClassicalController):
                 value=axis_direction * int(100 * value),
             )
 
-    def handle_button(self, button: int) -> bool:
+    def handle_button(self, button: int):
         # bash keys
         if self.special_key:
             if button in self.controls["special-buttons"]:
                 event = self.controls["special-buttons"][button]
                 logger.info(f'*"{event}" is selected.')
                 reply_to_bash(event)
-                return False
+                self.config.set("stop-requested", True)
 
         if button in self.controls["buttons"]:
             event = self.controls["buttons"][button]
@@ -107,9 +107,7 @@ class ClassicalJoystick(ClassicalController):
             if event == "special key":
                 self.set_special_key()
 
-        return True
-
-    def loop(self) -> bool:
+    def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
@@ -118,8 +116,7 @@ class ClassicalJoystick(ClassicalController):
                     logger.info("QUIT received, and ignored")
                 elif event.type == JOYBUTTONDOWN:
                     logger.info(f"button {event.button} pressed.")
-                    if not self.handle_button(event.button):
-                        return False
+                    self.handle_button(event.button)
                 elif event.type == JOYBUTTONUP:
                     logger.info(f"button {event.button} released.")
                 elif event.type == JOYAXISMOTION:
