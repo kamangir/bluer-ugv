@@ -4,7 +4,7 @@ from blueness import module
 from blueness.argparse.generic import sys_exit
 
 from bluer_ugv import NAME
-from bluer_ugv.swallow.session.classical.keyboard.testing import test
+from bluer_ugv.swallow.session.classical.controller.keyboard.testing import test
 from bluer_ugv.logger import logger
 
 NAME = module.name(__file__, NAME)

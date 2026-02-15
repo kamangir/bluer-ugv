@@ -9,10 +9,11 @@ from bluer_ugv.README.ugvs.comparison.build import build as build_comparison
 from bluer_ugv.README.docs import docs
 
 
-def build() -> bool:
+def build(args) -> bool:
     return (
         all(
             README.build(
+                args=args,
                 items=readme.get("items", []),
                 path=os.path.join(file.path(__file__), readme["path"]),
                 cols=readme.get("cols", 3),

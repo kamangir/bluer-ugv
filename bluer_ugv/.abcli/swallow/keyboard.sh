@@ -10,7 +10,7 @@ function bluer_ugv_swallow_keyboard() {
     fi
 
     sudo -E $(which python3) \
-        -m bluer_ugv.swallow.session.classical.keyboard \
+        -m bluer_ugv.swallow.session.classical.controller.keyboard \
         "$@"
 }
 

@@ -2,12 +2,12 @@ import keyboard
 
 from bluer_options.env import abcli_hostname
 from bluer_sbc.session.functions import reply_to_bash
-from bluer_algo.socket.connection import DEV_HOST
 
 from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.controller.classes import ClassicalController
+from bluer_ugv.swallow.session.classical.controller.keyboard.keys import ControlKeys
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
-from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
@@ -15,7 +15,7 @@ from bluer_ugv import env
 from bluer_ugv.logger import logger
 
 
-class ClassicalKeyboard:
+class ClassicalKeyboard(ClassicalController):
     def __init__(
         self,
         config: ClassicalConfig,
@@ -23,17 +23,17 @@ class ClassicalKeyboard:
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
     ):
-        self.config = config
+        super().__init__(
+            config=config,
+            leds=leds,
+            setpoint=setpoint,
+        )
+
         self.ethernet = ethernet
-        self.leds = leds
 
         self.keys = ControlKeys()
 
         self.last_key: str = ""
-
-        self.setpoint = setpoint
-
-        self.special_key: bool = False
 
         self.is_used_for_steering: bool = False
 
@@ -109,13 +109,9 @@ class ClassicalKeyboard:
 
         # debug mode
         if keyboard.is_pressed(self.keys.get("debug on")):
-            self.special_key = False
-            self.config.set("debug_mode", True)
-            logger.info(f'debug enabled, run "@swallow debug" on {DEV_HOST}.')
-
+            self.set_debug(True)
         if keyboard.is_pressed(self.keys.get("debug off")):
-            self.special_key = False
-            self.config.set("debug_mode", False)
+            self.set_debug(False)
 
         # mode
         mode = self.config.get("mode")
@@ -133,21 +129,14 @@ class ClassicalKeyboard:
             self.config.set("mode", updated_mode)
             self.special_key = False
 
-        # ultrasound
+        # ultrasonic
         if keyboard.is_pressed(self.keys.get("ultrasonic off")):
-            self.config.set("ultrasound_enabled", False)
-            self.special_key = False
-
+            self.set_ultrasonic(False)
         if keyboard.is_pressed(self.keys.get("ultrasonic on")):
-            self.config.set("ultrasound_enabled", True)
-            self.special_key = False
+            self.set_ultrasonic(True)
 
         # special key
         if keyboard.is_pressed(self.keys.get("special key")) and not self.special_key:
-            self.special_key = True
-            logger.info("🪄 special key enabled.")
+            self.set_special_key()
 
-        if self.special_key:
-            self.leds.flash_all()
-
-        return True
+        return super().update()

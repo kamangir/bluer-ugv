@@ -11,7 +11,7 @@ from bluer_ugv.README.swallow.digital.design import (
     parts,
     ultrasonic_sensor,
 )
-from bluer_ugv.swallow.session.classical.keyboard.keys import ControlKeys
+from bluer_ugv.swallow.session.classical.controller.keyboard.keys import ControlKeys
 
 
 docs = (

@@ -10,8 +10,7 @@ from bluer_sbc.env import BLUER_SBC_CAMERA_KIND, BLUER_SBC_SWALLOW_HAS_STEERING
 from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.README.ugvs.location import get_location
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
-from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
+from bluer_ugv.swallow.session.classical.audio.classes import ClassicalAudio
 from bluer_ugv.swallow.session.classical.camera import (
     ClassicalCamera,
     ClassicalNavigationCamera,
@@ -19,10 +18,15 @@ from bluer_ugv.swallow.session.classical.camera import (
     ClassicalVoidCamera,
     ClassicalYoloCamera,
 )
-from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
-from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
+from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
+from bluer_ugv.swallow.session.classical.controller.joystick.classes import (
+    ClassicalJoystick,
+)
+from bluer_ugv.swallow.session.classical.controller.keyboard.classes import (
+    ClassicalKeyboard,
+)
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
-from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
 from bluer_ugv.swallow.session.classical.motor import (
     ClassicalLeftMotor,
     ClassicalRightMotor,
@@ -30,17 +34,18 @@ from bluer_ugv.swallow.session.classical.motor import (
     ClassicalSteeringMotor,
     ClassicalVoidMotor,
 )
+from bluer_ugv.swallow.session.classical.mousepad import ClassicalMousePad
+from bluer_ugv.swallow.session.classical.position import ClassicalPosition
+from bluer_ugv.swallow.session.classical.push_button import ClassicalPushButton
+from bluer_ugv.swallow.session.classical.scenario.classes import ClassicalScenario
+from bluer_ugv.swallow.session.classical.screen.classes import ClassicalScreen
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.setpoint.ethernet import (
     ClassicalEthernetSetPoint,
 )
-from bluer_ugv.swallow.session.classical.position import ClassicalPosition
-from bluer_ugv.swallow.session.classical.screen.classes import ClassicalScreen
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.classes import (
     ClassicalUltrasonicSensor,
 )
-from bluer_ugv.swallow.session.classical.audio.classes import ClassicalAudio
-from bluer_ugv.swallow.session.classical.scenario.classes import ClassicalScenario
 from bluer_ugv.env import BLUER_UGV_MOUSEPAD_ENABLED
 from bluer_ugv.logger import logger
 
@@ -76,6 +81,12 @@ class ClassicalSession:
                 leds=self.leds,
                 setpoint=self.setpoint,
             )
+
+        self.joystick = ClassicalJoystick(
+            config=self.config,
+            leds=self.leds,
+            setpoint=self.setpoint,
+        )
 
         self.keyboard = ClassicalKeyboard(
             config=self.config,
@@ -189,6 +200,8 @@ class ClassicalSession:
 
         self.camera.cleanup()
 
+        self.joystick.cleanup()
+
         GPIO.cleanup()
 
         self.timing.calculate()
@@ -230,11 +243,17 @@ class ClassicalSession:
         )
 
     def process_ethernet_messages(self) -> bool:
+        if not self.ethernet.client:
+            return True
+
         while True:
             try:
                 # pylint: disable=protected-access
                 command = self.ethernet.client._receive_queue.get_nowait()
             except Empty:
+                break
+            except Exception as e:
+                logger.warning(e)
                 break
 
             if command.action == "keyboard":
@@ -259,6 +278,7 @@ class ClassicalSession:
 
         for thing in [
             self.keyboard,
+            self.joystick,
             self.push_button,
             self.camera,
             self.position,

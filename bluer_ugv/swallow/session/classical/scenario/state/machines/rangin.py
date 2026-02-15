@@ -1,4 +1,3 @@
-from bluer_ugv.swallow.session.classical.keyboard.classes import ClassicalKeyboard
 from bluer_ugv.swallow.session.classical.scenario.state.machines.generic import (
     GenericStateMachine,
 )
