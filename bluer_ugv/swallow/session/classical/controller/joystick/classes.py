@@ -111,7 +111,9 @@ class ClassicalJoystick(ClassicalController):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
         while self.running:
+            counter: int = 0
             for event in pygame.event.get():
+                counter += 1
                 if event.type == QUIT:
                     logger.info("QUIT received, and ignored")
                 elif event.type == JOYBUTTONDOWN:
@@ -129,6 +131,13 @@ class ClassicalJoystick(ClassicalController):
                         axis=axis,
                         value=value,
                     )
+            if counter:
+                logger.info(
+                    "{}.loop: responded to {} event(s).".format(
+                        self.__class__.__name__,
+                        counter,
+                    )
+                )
 
             if self.special_key:
                 self.leds.flash_all()
