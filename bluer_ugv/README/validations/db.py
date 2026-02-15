@@ -251,12 +251,6 @@ dict_of_validations = {
         "ugv_name": [
             "arzhang2",
         ],
-        "items": ImageItems(
-            {
-                object_gif_url("TBA"): "",
-            }
-        ),
-        "marquee": object_gif_url("TBA"),
     },
     "template": {
         "order": 16,

@@ -18,7 +18,7 @@ def start_session(object_name: str) -> bool:
     if not session.initialize():
         return False
 
-    logger.info("✅ session is initialized.")
+    logger.info("✅  session is initialized.")
 
     try:
         while session.update():
