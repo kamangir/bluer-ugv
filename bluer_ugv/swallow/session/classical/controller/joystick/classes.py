@@ -114,9 +114,23 @@ class ClassicalJoystick(ClassicalController):
 
             for event in self.joystick.buttons.values():
                 if event.type == pygame.JOYBUTTONDOWN:
+                    logger.info(
+                        "{}: button {} pressed.".format(
+                            self.__class__.__name__,
+                            event.button,
+                        )
+                    )
                     self.handle_button(event.button)
 
             for event in self.joystick.axes.values():
+                logger.info(
+                    "{}: axis {} moved to {}.".format(
+                        self.__class__.__name__,
+                        event.axis,
+                        event.value,
+                    )
+                )
+
                 self.handle_axis(
                     axis=event.axis,
                     value=event.value,
