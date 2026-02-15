@@ -189,18 +189,17 @@ class ClassicalSession:
         self.timing = Timing()
 
     def cleanup(self):
-        self.scenario.stop()
         self.audio.stop()
-        self.ethernet.stop()
-        self.ultrasonic_sensor.stop()
         self.camera.stop()
+        self.ethernet.stop()
+        self.joystick.stop()
+        self.scenario.stop()
+        self.ultrasonic_sensor.stop()
 
         self.motor1.cleanup()
         self.motor2.cleanup()
 
         self.camera.cleanup()
-
-        self.joystick.cleanup()
 
         GPIO.cleanup()
 
@@ -278,7 +277,6 @@ class ClassicalSession:
 
         for thing in [
             self.keyboard,
-            self.joystick,
             self.push_button,
             self.camera,
             self.position,
@@ -296,5 +294,8 @@ class ClassicalSession:
             self.timing.stop(thing.__class__.__name__)
 
         self.timing.stop("session.update")
+
+        if self.config.get("stop-requested", False):
+            return False
 
         return self.process_ethernet_messages()

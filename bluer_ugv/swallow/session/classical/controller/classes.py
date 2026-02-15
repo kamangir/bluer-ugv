@@ -35,7 +35,7 @@ class ClassicalController:
     def set_special_key(self):
         self.special_key = True
 
-        logger.info("🪄 special key enabled.")
+        logger.info("🛠️ special key enabled.")
 
     def set_ultrasonic(self, value):
         self.special_key = False

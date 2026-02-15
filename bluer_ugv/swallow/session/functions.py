@@ -18,6 +18,8 @@ def start_session(object_name: str) -> bool:
     if not session.initialize():
         return False
 
+    logger.info("✅  session is initialized.")
+
     try:
         while session.update():
             time.sleep(0.05)

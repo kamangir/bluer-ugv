@@ -1,5 +1,5 @@
+import threading
 import pygame
-from pygame import JOYAXISMOTION, JOYBUTTONDOWN, JOYBUTTONUP, QUIT
 
 from bluer_options.logger import get_logger
 from bluer_algo.socket.connection import DEV_HOST
@@ -34,10 +34,14 @@ class ClassicalJoystick(ClassicalController):
 
         self.controls = Controls
 
-        logger.info(f"created {self.__class__.__name__}")
+        self.running: bool = False
 
-    def cleanup(self):
-        Joystick.cleanup()
+        if not self.joystick.enabled:
+            return
+
+        self.running = True
+        self.thread = threading.Thread(target=self.loop, daemon=True)
+        self.thread.start()
 
     def handle_axis(
         self,
@@ -53,14 +57,14 @@ class ClassicalJoystick(ClassicalController):
                 value=axis_direction * int(100 * value),
             )
 
-    def handle_button(self, button: int) -> bool:
+    def handle_button(self, button: int):
         # bash keys
         if self.special_key:
             if button in self.controls["special-buttons"]:
                 event = self.controls["special-buttons"][button]
                 logger.info(f'*"{event}" is selected.')
                 reply_to_bash(event)
-                return False
+                self.config.set("stop-requested", True)
 
         if button in self.controls["buttons"]:
             event = self.controls["buttons"][button]
@@ -102,32 +106,48 @@ class ClassicalJoystick(ClassicalController):
             if event == "special key":
                 self.set_special_key()
 
-        return True
+    def loop(self):
+        logger.info(f"{self.__class__.__name__}.loop started.")
 
-    def update(self) -> bool:
-        if not self.joystick.enabled:
-            return True
+        while self.running:
+            self.joystick.read_events()
 
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                logger.info("QUIT received, and ignored")
-            elif event.type == JOYBUTTONDOWN:
-                logger.info(f"button {event.button} pressed.")
-                if not self.handle_button(event.button):
-                    return False
-            elif event.type == JOYBUTTONUP:
-                logger.info(f"button {event.button} released.")
-            elif event.type == JOYAXISMOTION:
-                axis = event.axis
-                value = event.value
+            for event in self.joystick.buttons.values():
+                if event.type == pygame.JOYBUTTONDOWN:
+                    logger.info(
+                        "{}: button {} pressed.".format(
+                            self.__class__.__name__,
+                            event.button,
+                        )
+                    )
+                    self.handle_button(event.button)
 
-                logger.info(f"axis {axis} moved to {value}.")
-
-                self.handle_axis(
-                    axis=axis,
-                    value=value,
+            for event in self.joystick.axes.values():
+                logger.info(
+                    "{}: axis {} moved to {}.".format(
+                        self.__class__.__name__,
+                        event.axis,
+                        event.value,
+                    )
                 )
 
-        # self.joystick.clock.tick(60)
+                self.handle_axis(
+                    axis=event.axis,
+                    value=event.value,
+                )
 
-        return super().update()
+            if self.special_key:
+                self.leds.flash_all()
+
+            self.joystick.clock.tick(60)
+
+    def stop(self):
+        if not self.joystick.enabled:
+            return
+
+        self.running = False
+        self.thread.join()
+
+        logger.info(f"{self.__class__.__name__} stopped.")
+
+        Joystick.cleanup()

@@ -6,7 +6,7 @@ title:::
 ```bash
 @log watch rpi <rpi-name>
 ```
-use the password: `abcli2025`.
+use the password: `password:::`.
 - to `ssh` into a computer, run,
 ```bash
 @ssh rpi rpi <rpi-name>
