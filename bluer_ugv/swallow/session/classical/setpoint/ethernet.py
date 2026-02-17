@@ -26,6 +26,7 @@ class ClassicalEthernetSetPoint(ClassicalSetPoint):
                 data={
                     "value": value,
                     "what": what,
+                    "log": log,
                     "steering_expires_in": steering_expires_in,
                 },
             )
