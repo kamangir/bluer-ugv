@@ -114,7 +114,7 @@ class ClassicalUltrasonicSensor:
                     log=True,
                 )
                 log_detections = True
-                logger.info("⚠️ warning detected, lowering max speed.")
+                logger.info("⚠️ warning detected, lowering speed.")
             elif hard_stopped:
                 hard_stopped = False
                 self.setpoint.put(
