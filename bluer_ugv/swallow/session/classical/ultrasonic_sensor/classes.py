@@ -114,6 +114,9 @@ class ClassicalUltrasonicSensor:
                 log_detections = True
                 logger.info("⚠️ warning detected, lowering max speed.")
             elif self.detection_list.state == State.CLEAR:
+                import ipdb
+
+                ipdb.set_trace()
                 self.setpoint.put(
                     what="max_speed",
                     value=100,
