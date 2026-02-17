@@ -1,13 +1,9 @@
 import keyboard
 
-from bluer_options.env import abcli_hostname
-from bluer_sbc.session.functions import reply_to_bash
-
 from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.controller.classes import ClassicalController
 from bluer_ugv.swallow.session.classical.controller.keyboard.keys import ControlKeys
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
-from bluer_ugv.swallow.session.classical.ethernet.command import EthernetCommand
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mode import OperationMode
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
@@ -25,11 +21,10 @@ class ClassicalKeyboard(ClassicalController):
     ):
         super().__init__(
             config=config,
+            ethernet=ethernet,
             leds=leds,
             setpoint=setpoint,
         )
-
-        self.ethernet = ethernet
 
         self.keys = ControlKeys()
 
@@ -47,21 +42,7 @@ class ClassicalKeyboard(ClassicalController):
             for key, event in self.keys.special_keys.items():
                 if keyboard.is_pressed(key):
                     logger.info(f'*"{key}" is pressed.')
-
-                    if self.ethernet.enabled:
-                        self.ethernet.client.send(
-                            EthernetCommand(
-                                action="keyboard",
-                                data={
-                                    "sender": abcli_hostname,
-                                    "key": key,
-                                    "event": event,
-                                },
-                            ),
-                            drain=True,
-                        )
-
-                    reply_to_bash(event)
+                    self.reply_to_bash(event)
                     return False
 
         # other keys
