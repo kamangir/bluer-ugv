@@ -120,6 +120,9 @@ class ClassicalSetPoint:
                 return
 
             if what == "max_speed":
+                import ipdb
+
+                ipdb.set_trace()
                 self.max_speed = value
                 if log:
                     logger.info(
