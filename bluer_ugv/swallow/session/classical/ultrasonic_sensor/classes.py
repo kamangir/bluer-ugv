@@ -105,18 +105,19 @@ class ClassicalUltrasonicSensor:
                 self.setpoint.stop(hard=True)
                 log_detections = True
                 logger.info("⛔️ danger detected, stopping.")
-            elif self.detection_list.state == State.WARNING and speed > 0:
+            elif self.detection_list.state == State.WARNING:
                 self.setpoint.put(
                     what="max_speed",
                     value=speed // 2,
                     log=True,
                 )
                 log_detections = True
-                logger.info("⚠️ warning detected, lowering speed.")
+                logger.info("⚠️ warning detected, lowering max speed.")
             elif self.detection_list.state == State.CLEAR:
                 self.setpoint.put(
                     what="max_speed",
                     value=100,
+                    log=False,
                 )
 
             # because they are already logged.
