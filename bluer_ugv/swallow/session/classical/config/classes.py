@@ -11,9 +11,9 @@ class ClassicalConfig:
         self.config: Dict[str, Any] = {
             "audio_enabled": False,
             "debug_mode": False,
+            "ethernet_verbose": False,
             "mode": OperationMode.NONE,
             "ultrasound_enabled": True,
-            "ethernet_verbose": False,
         }
 
         logger.info(f"🎛️ created {self.as_str()}")

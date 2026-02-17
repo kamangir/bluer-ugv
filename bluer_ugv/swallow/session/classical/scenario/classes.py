@@ -5,7 +5,7 @@ from bluer_ugv.swallow.session.classical.scenario.state.machines.factory import 
     dict_of_state_machines,
     GenericStateMachine,
 )
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger

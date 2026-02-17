@@ -1,8 +1,7 @@
 from typing import List, Iterable, Iterator
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    Detection,
-    DetectionState,
-)
+
+from bluer_ugv.swallow.session.classical.config.state import State
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
 
 
 class DetectionList:
@@ -33,13 +32,11 @@ class DetectionList:
         return [detection.as_str(short=short) for detection in self._content]
 
     @property
-    def state(self) -> DetectionState:
-        if any(detection.state == DetectionState.DANGER for detection in self._content):
-            return DetectionState.DANGER
+    def state(self) -> State:
+        if any(detection.state == State.DANGER for detection in self._content):
+            return State.DANGER
 
-        if any(
-            detection.state == DetectionState.WARNING for detection in self._content
-        ):
-            return DetectionState.WARNING
+        if any(detection.state == State.WARNING for detection in self._content):
+            return State.WARNING
 
-        return DetectionState.CLEAR
+        return State.CLEAR

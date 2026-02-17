@@ -5,19 +5,18 @@ from bluer_objects.env import abcli_object_name
 from bluer_sbc.env import BLUER_SBC_SWALLOW_DEV_MODE
 
 from bluer_ugv import env
+from bluer_ugv.swallow.session.classical.config.state import State
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.pack import (
     UltrasonicSensorPack,
 )
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    DetectionState,
-)
+
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection_list import (
     DetectionList,
 )
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.log import (
     UltrasonicSensorDetectionLog,
 )
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.logger import logger
 
@@ -102,18 +101,25 @@ class ClassicalUltrasonicSensor:
 
             log_detections: bool = False
             speed = self.setpoint.get(what="speed")
-            if self.detection_list.state == DetectionState.DANGER:
-                self.setpoint.stop()
+            if self.detection_list.state == State.DANGER:
+                self.setpoint.stop(hard=True)
                 log_detections = True
                 logger.info("⛔️ danger detected, stopping.")
-            elif self.detection_list.state == DetectionState.WARNING and speed > 0:
+            elif self.detection_list.state == State.WARNING and speed > 0:
                 self.setpoint.put(
-                    what="speed",
+                    what="max_speed",
                     value=speed // 2,
+                    log=True,
                 )
                 log_detections = True
                 logger.info("⚠️ warning detected, lowering speed.")
+            elif self.detection_list.state == State.CLEAR:
+                self.setpoint.put(
+                    what="max_speed",
+                    value=100,
+                )
 
+            # because they are already logged.
             if env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1:
                 log_detections = False
 

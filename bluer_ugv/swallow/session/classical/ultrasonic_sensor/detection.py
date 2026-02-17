@@ -1,25 +1,11 @@
-from typing import Dict, Tuple
+from typing import Dict
 import numpy as np
 import time
-from enum import Enum, auto
 
 from bluer_objects.graphics.signature import add_signature
 
+from bluer_ugv.swallow.session.classical.config.state import State
 from bluer_ugv import env
-
-
-class DetectionState(Enum):
-    CLEAR = auto()
-    WARNING = auto()
-    DANGER = auto()
-
-    @property
-    def color_code(self) -> Tuple[int, int, int]:
-        return (
-            [0, 255, 0]
-            if self == DetectionState.CLEAR
-            else ([255, 255, 0] if self == DetectionState.WARNING else [255, 0, 0])
-        )
 
 
 class Detection:
@@ -122,14 +108,14 @@ class Detection:
         return not self.detection or not self.echo_detected
 
     @property
-    def state(self) -> DetectionState:
+    def state(self) -> State:
         if not self.echo_detected or not self.detection:
-            return DetectionState.CLEAR
+            return State.CLEAR
 
         if self.distance_mm < env.BLUER_UGV_ULTRASONIC_SENSOR_DANGER_THRESHOLD:
-            return DetectionState.DANGER
+            return State.DANGER
 
         if self.distance_mm < env.BLUER_UGV_ULTRASONIC_SENSOR_WARNING_THRESHOLD:
-            return DetectionState.WARNING
+            return State.WARNING
 
-        return DetectionState.CLEAR
+        return State.CLEAR

@@ -10,7 +10,7 @@ from bluer_sbc.imager.camera import instance as camera
 
 from bluer_ugv import env
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.controller.keyboard.classes import (
     ClassicalKeyboard,
 )

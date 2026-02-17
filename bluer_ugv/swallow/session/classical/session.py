@@ -18,7 +18,7 @@ from bluer_ugv.swallow.session.classical.camera import (
     ClassicalVoidCamera,
     ClassicalYoloCamera,
 )
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.controller.joystick.classes import (
     ClassicalJoystick,
