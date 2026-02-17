@@ -4,6 +4,7 @@ from bluer_ugv.README.arzhang.consts import (
     arzhang_assets,
     arzhang_assets2,
     arzhang2_assets2,
+    arzhang2_assets3,
 )
 from bluer_ugv.README.rangin.consts import rangin_assets2, rangin_mechanical_design
 
@@ -44,6 +45,9 @@ dict_of_ugvs = {
             f"{arzhang2_assets2}/20260109_133216.jpg",
             f"{arzhang_assets2}/IMG_0112.JPG",
             f"{arzhang_assets2}/IMG_0118.JPG",
+            f"{arzhang2_assets3}/IMG_0120.JPG",
+            f"{arzhang2_assets3}/IMG_0134.JPG",
+            f"{arzhang2_assets3}/IMG_0136.JPG",
         ],
         "tagline": "an [arzhang](../arzhang) with updated body design.",
         "class": "arzhang",
