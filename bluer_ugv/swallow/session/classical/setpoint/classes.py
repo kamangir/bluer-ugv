@@ -126,7 +126,7 @@ class ClassicalSetPoint:
                 return
 
             if what == "max_speed":
-                self.speed = min(100, max(-100, int(value)))
+                self.max_speed = min(100, max(-100, int(value)))
                 if log:
                     logger.info(
                         "{}.put: max_speed={}".format(
