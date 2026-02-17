@@ -264,7 +264,7 @@ class ClassicalSession:
                 self.setpoint.put(
                     value=command.data.get("value", 0),
                     what=command.data.get("what", "void"),
-                    log=True,
+                    log=command.data.get("log", True),
                     steering_expires_in=command.data.get("steering_expires_in", 0),
                 )
             else:
