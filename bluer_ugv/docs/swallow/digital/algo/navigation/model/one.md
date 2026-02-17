@@ -43,10 +43,11 @@ uses [combination/one](../dataset/combination/one.md).
 
 
 
+set:::dataset_object_name swallow-dataset-2025-07-14-13-16-51-ajhuvd
 
 ---
 
-![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-14-13-16-51-ajhuvd/grid.png?raw=true)
+![image](https://github.com/kamangir/assets/blob/main/swallow-dataset-2025-07-11-13-05-02-u4z1ea/grid.png?raw=true)
 
 
 <details>
@@ -60,18 +61,17 @@ dataset:
     1: left
     2: right
   contains:
-  - 2025-07-13-10-15-29-46j4oy
-  - 2025-07-13-10-37-12-d4iwpm
-  - 2025-07-13-12-55-54-cx5mhk
-  count: 1749
+  - 2025-07-09-11-16-52-4zo4zc
+  - 2025-07-09-11-34-19-bcoh75
+  count: 1801
   shape:
   - 100
-  - 300
+  - 100
   - 3
   subsets:
-    eval: 184
-    test: 185
-    train: 1380
+    eval: 153
+    test: 166
+    train: 1482
 
 ```
 
