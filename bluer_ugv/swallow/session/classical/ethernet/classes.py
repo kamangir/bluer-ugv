@@ -3,7 +3,7 @@ import threading
 from bluer_options.env import abcli_hostname
 
 from bluer_ugv import env
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.ethernet.client import EthernetClient
 from bluer_ugv.README.ugvs.ethernet import find_server
 from bluer_ugv.logger import logger

@@ -2,7 +2,7 @@ import copy
 from typing import Tuple
 
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.setpoint.classes import ClassicalSetPoint
 from bluer_ugv.swallow.session.classical.scenario.state.logger import logger
 

@@ -1,7 +1,7 @@
 from typing import List
 import time
 
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.camera.generic import ClassicalCamera
 from bluer_ugv.swallow.session.classical.scenario.state.generic import GenericState
 from bluer_ugv.swallow.session.classical.scenario.state.starting import StartingState

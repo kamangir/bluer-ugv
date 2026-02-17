@@ -1,13 +1,11 @@
 import pytest
 from typing import Iterable
 
+from bluer_ugv.swallow.session.classical.config.state import State
 from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection_list import (
     DetectionList,
 )
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    Detection,
-    DetectionState,
-)
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
 from bluer_ugv.tests.test_ultrasonic_sensor_detection import (
     ultrasonic_sensor_detection_clear,
     ultrasonic_sensor_detection_danger,
@@ -23,7 +21,7 @@ from bluer_ugv.tests.test_ultrasonic_sensor_detection import (
     [
         [
             None,
-            DetectionState.CLEAR,
+            State.CLEAR,
         ],
         [
             [
@@ -31,7 +29,7 @@ from bluer_ugv.tests.test_ultrasonic_sensor_detection import (
                 ultrasonic_sensor_detection_danger(),
                 ultrasonic_sensor_detection_warning(),
             ],
-            DetectionState.DANGER,
+            State.DANGER,
         ],
         [
             [
@@ -39,7 +37,7 @@ from bluer_ugv.tests.test_ultrasonic_sensor_detection import (
                 ultrasonic_sensor_detection_warning(),
                 ultrasonic_sensor_detection_warning(),
             ],
-            DetectionState.WARNING,
+            State.WARNING,
         ],
         [
             [
@@ -47,13 +45,13 @@ from bluer_ugv.tests.test_ultrasonic_sensor_detection import (
                 ultrasonic_sensor_detection_clear(),
                 ultrasonic_sensor_detection_clear(),
             ],
-            DetectionState.CLEAR,
+            State.CLEAR,
         ],
     ],
 )
 def test_ultrasonic_sensor_detection_list(
     list_of_detections: Iterable[Detection] | None,
-    expected_detection_state: DetectionState,
+    expected_detection_state: State,
 ):
     detection_list = DetectionList(list_of_detections)
 
@@ -68,7 +66,7 @@ def test_ultrasonic_sensor_detection_list(
     detection_list.append(ultrasonic_sensor_detection_clear())
 
     detection_state = detection_list.state
-    assert isinstance(detection_state, DetectionState)
+    assert isinstance(detection_state, State)
     assert detection_state == expected_detection_state
 
     for short in [True, False]:

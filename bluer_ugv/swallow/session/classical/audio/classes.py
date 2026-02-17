@@ -12,7 +12,7 @@ from bluer_agent.env import BLUER_AGENT_RAG_CORPUS_SINGLE_ROOT_TEST_OBJECT
 from bluer_sbc.env import BLUER_SBC_AUDIO_ENABLED
 
 from bluer_ugv import env
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.logger import logger
 

@@ -6,7 +6,7 @@ from bluer_algo.socket.connection import DEV_HOST
 from bluer_sbc.joystick import Joystick
 from bluer_sbc.session.functions import reply_to_bash
 
-from bluer_ugv.swallow.session.classical.config import ClassicalConfig
+from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.controller.classes import ClassicalController
 from bluer_ugv.swallow.session.classical.controller.joystick.controls import Controls
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds

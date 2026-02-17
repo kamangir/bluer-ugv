@@ -2,6 +2,7 @@ import threading
 from typing import Any, Dict
 
 from bluer_ugv.swallow.session.classical.mode import OperationMode
+from bluer_ugv.swallow.session.classical.config.state import State
 from bluer_ugv.logger import logger
 
 
@@ -11,9 +12,10 @@ class ClassicalConfig:
         self.config: Dict[str, Any] = {
             "audio_enabled": False,
             "debug_mode": False,
-            "mode": OperationMode.NONE,
-            "ultrasound_enabled": True,
             "ethernet_verbose": False,
+            "mode": OperationMode.NONE,
+            "state": State.CLEAR,
+            "ultrasound_enabled": True,
         }
 
         logger.info(f"🎛️ created {self.as_str()}")

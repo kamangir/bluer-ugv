@@ -1,9 +1,7 @@
 import numpy as np
 
-from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import (
-    Detection,
-    DetectionState,
-)
+from bluer_ugv.swallow.session.classical.config.state import State
+from bluer_ugv.swallow.session.classical.ultrasonic_sensor.detection import Detection
 from bluer_ugv import env
 
 
@@ -19,8 +17,8 @@ def test_ultrasonic_sensor_detection():
     assert isinstance(detection.as_str(), str)
     assert isinstance(detection.as_str(short=True), str)
 
-    assert isinstance(detection.state, DetectionState)
-    assert detection.state == DetectionState.CLEAR
+    assert isinstance(detection.state, State)
+    assert detection.state == State.CLEAR
 
     as_dict = detection.as_dict()
     assert isinstance(as_dict, dict)
@@ -55,7 +53,7 @@ def test_ultrasonic_sensor_detection_pulse_timeout():
 
     assert isinstance(detection.as_str(), str)
 
-    assert detection.state == DetectionState.CLEAR
+    assert detection.state == State.CLEAR
 
     assert detection.is_blank is True
 
@@ -76,7 +74,7 @@ def test_ultrasonic_sensor_detection_no_echo_high():
 
     assert isinstance(detection.as_str(), str)
 
-    assert detection.state == DetectionState.CLEAR
+    assert detection.state == State.CLEAR
 
     assert detection.is_blank is True
 
@@ -99,7 +97,7 @@ def test_ultrasonic_sensor_detection_no_echo_detected():
 
     assert isinstance(detection.as_str(), str)
 
-    assert detection.state == DetectionState.CLEAR
+    assert detection.state == State.CLEAR
 
     assert detection.is_blank is True
 
@@ -122,7 +120,7 @@ def test_ultrasonic_sensor_detection_clear():
 
     assert isinstance(detection.as_str(), str)
 
-    assert detection.state == DetectionState.CLEAR
+    assert detection.state == State.CLEAR
 
     assert detection.is_blank is False
 
@@ -149,7 +147,7 @@ def test_ultrasonic_sensor_detection_warning():
 
     assert isinstance(detection.as_str(), str)
 
-    assert detection.state == DetectionState.WARNING
+    assert detection.state == State.WARNING
 
     assert detection.is_blank is False
 
@@ -172,6 +170,6 @@ def test_ultrasonic_sensor_detection_danger():
 
     assert isinstance(detection.as_str(), str)
 
-    assert detection.state == DetectionState.DANGER
+    assert detection.state == State.DANGER
 
     assert detection.is_blank is False
