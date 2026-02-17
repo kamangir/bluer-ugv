@@ -123,7 +123,7 @@ class ClassicalSetPoint:
                 self.max_speed = value
                 if log:
                     logger.info(
-                        "{}.putzzzz: max_speed={}".format(
+                        "{}.put: max_speed={}".format(
                             self.__class__.__name__,
                             self.max_speed,
                         )
