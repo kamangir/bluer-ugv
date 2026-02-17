@@ -2,12 +2,11 @@ import threading
 import pygame
 
 from bluer_options.logger import get_logger
-from bluer_algo.socket.connection import DEV_HOST
 from bluer_sbc.joystick import Joystick
-from bluer_sbc.session.functions import reply_to_bash
 
 from bluer_ugv.swallow.session.classical.config.classes import ClassicalConfig
 from bluer_ugv.swallow.session.classical.controller.classes import ClassicalController
+from bluer_ugv.swallow.session.classical.ethernet.classes import ClassicalEthernet
 from bluer_ugv.swallow.session.classical.controller.joystick.controls import Controls
 from bluer_ugv.swallow.session.classical.leds import ClassicalLeds
 from bluer_ugv.swallow.session.classical.mode import OperationMode
@@ -21,11 +20,13 @@ class ClassicalJoystick(ClassicalController):
     def __init__(
         self,
         config: ClassicalConfig,
+        ethernet: ClassicalEthernet,
         leds: ClassicalLeds,
         setpoint: ClassicalSetPoint,
     ):
         super().__init__(
             config=config,
+            ethernet=ethernet,
             leds=leds,
             setpoint=setpoint,
         )
@@ -62,8 +63,7 @@ class ClassicalJoystick(ClassicalController):
         if self.special_key:
             if button in self.controls["special-buttons"]:
                 event = self.controls["special-buttons"][button]
-                logger.info(f'*"{event}" is selected.')
-                reply_to_bash(event)
+                self.reply_to_bash(event)
                 self.config.set("stop-requested", True)
 
         if button in self.controls["buttons"]:
