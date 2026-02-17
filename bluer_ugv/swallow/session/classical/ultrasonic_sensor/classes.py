@@ -47,6 +47,8 @@ class ClassicalUltrasonicSensor:
 
         self.detection_list = DetectionList()
 
+        self.hard_stopped: bool = False
+
         self.pack = None
         self.log = None
         self.running = False
@@ -102,7 +104,8 @@ class ClassicalUltrasonicSensor:
             log_detections: bool = False
             speed = self.setpoint.get(what="speed")
             if self.detection_list.state == State.DANGER:
-                self.setpoint.stop()
+                self.setpoint.stop(hard=True)
+                self.hard_stopped = True
                 log_detections = True
                 logger.info("⛔️ danger detected, stopping.")
             elif self.detection_list.state == State.WARNING and speed > 0:
@@ -113,6 +116,13 @@ class ClassicalUltrasonicSensor:
                 )
                 log_detections = True
                 logger.info("⚠️ warning detected, lowering max speed.")
+            elif self.hard_stopped:
+                self.hard_stopped = False
+                self.setpoint.put(
+                    what="max_speed",
+                    value=100,
+                    log=True,
+                )
 
             # because they are already logged.
             if env.BLUER_UGV_ULTRASONIC_SENSOR_LOG == 1:

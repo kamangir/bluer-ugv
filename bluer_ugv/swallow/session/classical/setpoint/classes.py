@@ -20,12 +20,13 @@ class ClassicalSetPoint:
         ethernet: ClassicalEthernet,
         leds: ClassicalLeds,
     ):
-        self.speed = 0
-        self.steering = 0
+        self.speed: int = 0
+        self.max_speed: int = 100
+        self.steering: int = 0
 
-        self.steering_expiry = time.time()
+        self.steering_expiry: float = time.time()
 
-        self.started = False
+        self.started: bool = False
 
         self.ethernet = ethernet
         self.leds = leds
@@ -39,11 +40,18 @@ class ClassicalSetPoint:
         what: str = "all",
     ) -> Union[int, bool, Dict[str, Union[int, bool]]]:
         with self._lock:
-            self.speed = max(-100, min(100, self.speed))
+            self.speed = max(
+                -self.max_speed,
+                min(
+                    self.max_speed,
+                    self.speed,
+                ),
+            )
 
             if what == "all":
                 return {
                     "speed": self.speed,
+                    "max_speed": self.max_speed,
                     "started": self.started,
                     "steering": self.steering,
                 }
@@ -53,6 +61,9 @@ class ClassicalSetPoint:
 
             if what == "right":
                 return generate_left_and_right(self.speed, self.steering)[1]
+
+            if what == "max_speed":
+                return self.max_speed
 
             if what == "speed":
                 return self.speed
@@ -108,9 +119,21 @@ class ClassicalSetPoint:
         with self._lock:
             if what == "all":
                 self.speed = min(100, max(-100, int(value["speed"])))
+                self.max_speed = value.get("max_speed", 100)
                 self.started = bool(value["started"])
                 self.steering = min(100, max(-100, int(value["steering"])))
                 self.steering_expiry = time.time() + steering_expires_in
+                return
+
+            if what == "max_speed":
+                self.speed = min(100, max(-100, int(value)))
+                if log:
+                    logger.info(
+                        "{}.put: max_speed={}".format(
+                            self.__class__.__name__,
+                            self.max_speed,
+                        )
+                    )
                 return
 
             if what == "speed":
@@ -166,16 +189,25 @@ class ClassicalSetPoint:
 
         logger.info(f"{self.__class__.__name__}.start")
 
-    def stop(self):
-        self.put(
-            {
-                "speed": 0,
-                "started": False,
-                "steering": 0,
-            }
-        )
+    def stop(
+        self,
+        hard: bool = False,
+    ):
+        instructions = {
+            "speed": 0,
+            "started": False,
+            "steering": 0,
+        }
+        if hard:
+            instructions["max_speed"] = 0
+        self.put(instructions)
 
-        logger.info(f"{self.__class__.__name__}.stop")
+        logger.info(
+            "{}.stop({})".format(
+                self.__class__.__name__,
+                "hard" if hard else "",
+            )
+        )
 
         self.leds.set("red", False)
         self.leds.set("yellow", False)
