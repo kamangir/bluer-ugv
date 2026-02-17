@@ -40,27 +40,27 @@ class ClassicalSetPoint:
         what: str = "all",
     ) -> Union[int, bool, Dict[str, Union[int, bool]]]:
         with self._lock:
-            speed = max(-self.max_speed, min(self.max_speed, self.speed))
+            self.speed = max(-self.max_speed, min(self.max_speed, self.speed))
 
             if what == "all":
                 return {
-                    "speed": speed,
+                    "speed": self.speed,
                     "self.max_speed": self.max_speed,
                     "started": self.started,
                     "steering": self.steering,
                 }
 
             if what == "left":
-                return generate_left_and_right(speed, self.steering)[0]
+                return generate_left_and_right(self.speed, self.steering)[0]
 
             if what == "right":
-                return generate_left_and_right(speed, self.steering)[1]
+                return generate_left_and_right(self.speed, self.steering)[1]
 
             if what == "max_speed":
                 return self.max_speed
 
             if what == "speed":
-                return speed
+                return self.speed
 
             if what == "started":
                 return self.started

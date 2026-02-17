@@ -2,7 +2,6 @@ import threading
 from typing import Any, Dict
 
 from bluer_ugv.swallow.session.classical.mode import OperationMode
-from bluer_ugv.swallow.session.classical.config.state import State
 from bluer_ugv.logger import logger
 
 
