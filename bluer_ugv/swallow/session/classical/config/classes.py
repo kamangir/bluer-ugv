@@ -14,7 +14,6 @@ class ClassicalConfig:
             "debug_mode": False,
             "ethernet_verbose": False,
             "mode": OperationMode.NONE,
-            "state": State.CLEAR,
             "ultrasound_enabled": True,
         }
 
