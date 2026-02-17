@@ -84,6 +84,7 @@ class ClassicalSession:
 
         self.joystick = ClassicalJoystick(
             config=self.config,
+            ethernet=self.ethernet,
             leds=self.leds,
             setpoint=self.setpoint,
         )
