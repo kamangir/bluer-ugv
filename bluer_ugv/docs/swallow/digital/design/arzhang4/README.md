@@ -17,8 +17,8 @@
 	ai,root=swallow/digital/design/arzhang4/
 
 @select arzhang4-design-v1
-@upload - .
-@upload public,zip .
+@upload
+@upload public,zip
 ```
 
 [arzhang4-design-v1.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/arzhang4-design-v1.tar.gz)

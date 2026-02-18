@@ -21,8 +21,8 @@ ai:::ignore
 	ai,root=swallow/digital/design/arzhang4/
 
 @select get:::object_name
-@upload - .
-@upload public,zip .
+@upload
+@upload public,zip
 ```
 
 object:::get:::object_name
