@@ -1,6 +1,6 @@
 # UGVs: arzhang4
 
-the first [arzhang4](TBA)
+the first `arzhang4`.
 
 - class: [arzhang4](../swallow/digital/design/arzhang4)
 - build is ongoing. 🔥

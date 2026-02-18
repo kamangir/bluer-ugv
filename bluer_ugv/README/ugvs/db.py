@@ -132,7 +132,7 @@ dict_of_ugvs = {
         "items": [
             assets_url("bluer-ugv/bluer-light.png"),
         ],
-        "tagline": "the first [arzhang4](TBA)",
+        "tagline": "the first `arzhang4`.",
         "class": "arzhang4",
         "class_url": "../swallow/digital/design/arzhang4",
         "comments": [
