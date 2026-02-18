@@ -1,30 +1,35 @@
-ai:::ignore
 title:::
 
 tagline:::
-
-- [v1](./v1.md)
 
 set:::object_name arzhang4-design-v1
 
 ai:::object get:::object_name
 
 ## design
-ai:::ignore
 
-🔥
+Objective: To build an unmanned ground vehicle (UGV) with scooter or electric bike motorized wheels.
 
-## build
+> Do these wheels, and their drivers, support going backward?
 
-```bash
-@ugv build_README \
-	ai,root=swallow/digital/design/arzhang4/
+- Motor: almost always physically capable of reverse.
+- Driver/controller: sometimes supports reverse, sometimes needs enabling, sometimes doesn’t exist.
 
-@select get:::object_name
-@upload
-@upload public,zip
-```
+> Key factors in motor + driver:
 
-object:::get:::object_name
+- Reverse input
+- Brake input
+- Current limiting
+- optional: encoder feedback
 
-ai:::signature
+## parts
+
+parts_images:::
+
+parts_list:::
+
+> 650 rpm @ 10 inch radius wheel == 650 / 60 * 25.4 * 3.14 / 100 = 8.64 m /s == 31.1 km / h ⭐️
+
+---
+
+- [v1](./v1.md)

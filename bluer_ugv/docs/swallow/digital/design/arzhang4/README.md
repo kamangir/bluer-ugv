@@ -2,27 +2,32 @@
 
 [arzhang](../../../../arzhang) with external motors.
 
-- [v1](./v1.md)
-
 
 
 ## design
 
-🔥
+Objective: To build an unmanned ground vehicle (UGV) with scooter or electric bike motorized wheels.
 
-## build
+> Do these wheels, and their drivers, support going backward?
 
-```bash
-@ugv build_README \
-	ai,root=swallow/digital/design/arzhang4/
+- Motor: almost always physically capable of reverse.
+- Driver/controller: sometimes supports reverse, sometimes needs enabling, sometimes doesn’t exist.
 
-@select arzhang4-design-v1
-@upload
-@upload public,zip
-```
+> Key factors in motor + driver:
 
-[arzhang4-design-v1.tar.gz](https://kamangir-public.s3.ir-thr-at1.arvanstorage.ir/arzhang4-design-v1.tar.gz)
+- Reverse input
+- Brake input
+- Current limiting
+- optional: encoder feedback
 
+## parts
+
+parts_images:::
+
+parts_list:::
+
+> 650 rpm @ 10 inch radius wheel == 650 / 60 * 25.4 * 3.14 / 100 = 8.64 m /s == 31.1 km / h ⭐️
 
 ---
-👾 Xerxes-1 | bluer_agent-5.457.1 | bluer_ai-12.627.1-main | bluer_objects-6.579.1 | bluer_options-5.343.1 | blueness-3.122.1 | torch-2.2.1 | numpy-1.26.4 | Python 3.12.9 | Darwin 23.6.0 | dev.local | kamangir | Sion | access: cloud, web, pypi
+
+- [v1](./v1.md)
