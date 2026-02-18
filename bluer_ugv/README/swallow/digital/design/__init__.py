@@ -1,5 +1,5 @@
+from bluer_ugv.README.swallow.digital.design.arzhang4 import docs as arzhang4
 from bluer_ugv.README.swallow.digital.design import (
-    arzhang4,
     ethernet,
     joystick,
     mechanical,

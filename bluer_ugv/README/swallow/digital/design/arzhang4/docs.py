@@ -1,4 +1,4 @@
-tagline = "[arzhang](../../../../arzhang) with external motors."
+from bluer_ugv.README.swallow.digital.design.arzhang4 import tagline, v1
 
 docs = [
     {
@@ -7,4 +7,4 @@ docs = [
             "tagline:::": tagline,
         },
     },
-]
+] + v1.docs
