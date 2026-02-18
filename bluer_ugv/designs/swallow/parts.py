@@ -1,5 +1,6 @@
 dict_of_parts = {
     "dc-motor-12-VDC-45W": "type 2, 2 x right + 2 x left",
+    "dsn-vc288": "",
     "SLA-Battery": "12 V, 7.2 Ah",
     "li-ion-battery": "3 x 26650, 5000 mAh 5C, 3.7 V/4.2V",
     "wheel": "4 x ",

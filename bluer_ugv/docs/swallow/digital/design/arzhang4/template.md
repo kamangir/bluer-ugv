@@ -1,30 +1,9 @@
-ai:::ignore
 title:::
 
 tagline:::
 
-- [v1](./v1.md)
+> 650 rpm @ 10 inch radius wheel == 30 km / h ⭐️
 
-set:::object_name arzhang4-design-v1
-
-ai:::object get:::object_name
-
-## design
-ai:::ignore
-
-🔥
-
-## build
-
-```bash
-@ugv build_README \
-	ai,root=swallow/digital/design/arzhang4/
-
-@select get:::object_name
-@upload
-@upload public,zip
-```
-
-object:::get:::object_name
-
-ai:::signature
+- previous design: [v1](./v1.md)
+- [part selection](./part-selection.md)
+- [parts](./parts.md)
