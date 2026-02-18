@@ -20,6 +20,11 @@ ai:::ignore
 @ugv build_README \
 	ai,root=swallow/digital/design/arzhang4/
 
-@upload - get:::object_name
-@upload public,zip get:::object_name
+@select get:::object_name
+@upload - .
+@upload public,zip .
 ```
+
+object:::get:::object_name
+
+ai:::signature
