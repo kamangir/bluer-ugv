@@ -9,7 +9,7 @@ docs = [
         "path": "../docs/swallow/digital/design/arzhang4/v1.md",
         "macros": design_doc_parts(
             dict_of_parts=parts,
-            parts_reference="../parts",
+            parts_reference="repo",
         ),
     },
 ]
