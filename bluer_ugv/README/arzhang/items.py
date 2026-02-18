@@ -1,6 +1,6 @@
 from bluer_objects.README.items import ImageItems
 
-from bluer_ugv.README.arzhang.consts import arzhang_assets2
+from bluer_ugv.README.arzhang.consts import arzhang_assets2, arzhang2_assets2
 from bluer_ugv.README.swallow.consts import swallow_assets2
 
 items = ImageItems(
@@ -33,5 +33,6 @@ items = ImageItems(
         f"{swallow_assets2}/20251117_160851.jpg": "",
         f"{arzhang_assets2}/20251209_110810.jpg": "",
         f"{arzhang_assets2}/20251209_111034.jpg": "",
+        f"{arzhang2_assets2}/20260109_133216.jpg": "",
     }
 )
