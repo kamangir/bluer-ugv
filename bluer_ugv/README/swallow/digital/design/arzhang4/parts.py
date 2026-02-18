@@ -14,12 +14,12 @@ docs = [
     },
     {
         "path": "../docs/swallow/digital/design/arzhang4/parts.md",
+        "items": db_of_parts.as_images(
+            dict_of_parts,
+            reference="repo",
+        ),
         "macros": {
-            "parts_images:::": db_of_parts.as_images(
-                dict_of_parts,
-                reference="repo",
-            ),
-            "parts_list:::": db_of_parts.as_list(
+            "parts:::": db_of_parts.as_list(
                 dict_of_parts,
                 reference="repo",
                 log=False,

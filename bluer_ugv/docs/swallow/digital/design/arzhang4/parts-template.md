@@ -1,5 +1,5 @@
 title:::
 
-parts_images:::
+items:::
 
-parts_list:::
+parts:::
