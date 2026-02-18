@@ -130,16 +130,11 @@ dict_of_ugvs = {
     "arzhang4": {
         "order": 6,
         "items": [
-            assets_url(
-                suffix="bluer-sbc/parts/GM6558/01.jpg",
-                volume=2,
-            ),
+            assets_url("bluer-ugv/bluer-light.png"),
         ],
-        "tagline": "the first [arzhang](../arzhang) with [external motors](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/DC-gearboxed-motor-12V-120RPM.md).",
-        "class": [
-            "arzhang",
-            "with external motors.",
-        ],
+        "tagline": "the first `arzhang4`.",
+        "class": "arzhang4",
+        "class_url": "../swallow/digital/design/arzhang4",
         "comments": [
             "build is ongoing. 🔥",
         ],

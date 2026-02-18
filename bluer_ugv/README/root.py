@@ -9,6 +9,7 @@ docs = [
     {
         "path": "../..",
         "items": items,
+        "cols": 4,
         "macros": {
             "shortcuts:::": shortcuts_items,
             "aliases:::": list_of_aliases(NAME),
