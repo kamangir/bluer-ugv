@@ -30,6 +30,8 @@ parts_list:::
 
 > 650 rpm @ 10 inch radius wheel == 650 / 60 * 25.4 * 3.14 / 100 = 8.64 m /s == 31.1 km / h ⭐️
 
+🔋 total power: 1200 W ~= 100 A at 12 V -> 42 AH battery.
+
 ---
 
 - [v1](./v1.md)
