@@ -134,6 +134,7 @@ dict_of_ugvs = {
         ],
         "tagline": "the first [arzhang4](TBA)",
         "class": "arzhang4",
+        "class_url": "../swallow/digital/design/arzhang4",
         "comments": [
             "build is ongoing. 🔥",
         ],

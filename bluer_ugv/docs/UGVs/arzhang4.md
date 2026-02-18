@@ -2,7 +2,7 @@
 
 the first [arzhang4](TBA)
 
-- class: [arzhang4](../arzhang4)
+- class: [arzhang4](../swallow/digital/design/arzhang4)
 - build is ongoing. 🔥
 
 

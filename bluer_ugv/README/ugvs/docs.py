@@ -17,16 +17,11 @@ docs = [
             }
         ),
         "macros": {
-            "class:::": "[{class_name}](../{class_name}){info}".format(
-                class_name=(
-                    info["class"][0]
-                    if isinstance(info["class"], list)
-                    else info["class"]
-                ),
-                info=(
-                    " ".join([""] + info["class"][1:])
-                    if isinstance(info["class"], list)
-                    else ""
+            "class:::": "[{}]({})".format(
+                info["class"],
+                info.get(
+                    "class_url",
+                    "../{}".format(info["class"]),
                 ),
             ),
             "computers:::": (
