@@ -17,8 +17,8 @@ ai:::ignore
 ## build
 
 ```bash
-@sbc build_README \
-	ai,root=TBA
+@ugv build_README \
+	ai,root=swallow/digital/design/arzhang4/
 
 @upload - get:::object_name
 @upload public,zip get:::object_name
