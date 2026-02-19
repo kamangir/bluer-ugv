@@ -12,9 +12,10 @@ function runme() {
     source /root/venv/bluer_ai/bin/activate
     [[ $? -ne 0 ]] && return 1
 
+    pip install blueness
+
     local repo_name
     for repo_name in \
-        blueness \
         bluer-options \
         bluer-objects \
         bluer-ai \
