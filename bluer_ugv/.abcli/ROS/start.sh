@@ -12,7 +12,7 @@ function bluer_ugv_ROS_start() {
         extra_args="$extra_args --no-cache"
 
     bluer_ai_eval \
-        path=$(python3 -m bluer_ugv locate)/ROS,$options \
+        path=$(python3 -m bluer_ugv locate)/assets/ROS/rpi,$options \
         sudo docker compose up -d \
         $extra_args
 }

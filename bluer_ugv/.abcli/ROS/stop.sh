@@ -4,6 +4,6 @@ function bluer_ugv_ROS_stop() {
     local options=$1
 
     bluer_ai_eval \
-        path=$(python3 -m bluer_ugv locate)/ROS,$options \
+        path=$(python3 -m bluer_ugv locate)/assets/ROS/rpi,$options \
         sudo docker compose down
 }
