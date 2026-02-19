@@ -30,7 +30,7 @@ function install_bluer_ugv_ROS() {
     done
 }
 
-function entrypoint() {
+function open_bluer_ugv_ROS() {
     local check_filename=/root/git/entry-completed
     if [[ ! -f "$check_filename" ]]; then
         install_bluer_ugv_ROS
@@ -40,4 +40,4 @@ function entrypoint() {
     source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh
 }
 
-entrypoint
+open_bluer_ugv_ROS
