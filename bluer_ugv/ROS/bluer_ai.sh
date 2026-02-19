@@ -5,8 +5,10 @@ function bluer_ugv_ROS_container_install() {
     source /root/venv/bluer_ai/bin/activate
 
     pip install --upgrade pip
+    [[ $? -ne 0 ]] && return 1
 
     pip install blueness
+    [[ $? -ne 0 ]] && return 1
 
     local repo_name
     for repo_name in \
@@ -20,7 +22,10 @@ function bluer_ugv_ROS_container_install() {
 
         cd /root/git/$repo_name
         pip install -e .
+        [[ $? -ne 0 ]] && return 1
     done
+
+    return 0
 }
 
 function bluer_ugv_ROS_container_open() {
@@ -29,6 +34,7 @@ function bluer_ugv_ROS_container_open() {
         echo "🐬 installing bluer-ugv/ROS container requirements..."
 
         bluer_ugv_ROS_container_install
+        [[ $? -ne 0 ]] && return 1
 
         touch $check_filename
     fi
