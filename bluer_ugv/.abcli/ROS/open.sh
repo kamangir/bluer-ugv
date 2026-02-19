@@ -3,7 +3,7 @@
 function bluer_ugv_ROS_open() {
     local options=$1
 
-    bluer_ai_badge - 🦾
+    bluer_ai_badge - "🦾"
 
     local init_file="/root/git/bluer-ugv/bluer_ugv/assets/ROS/rpi/bluer_ai.sh"
 
