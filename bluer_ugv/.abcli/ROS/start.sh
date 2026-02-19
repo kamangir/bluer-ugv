@@ -2,7 +2,7 @@
 
 function bluer_ugv_ROS_start() {
     local options=$1
-    local do_build=$(bluer_ai_option_int "$options" build 0)
+    local do_build=$(bluer_ai_option_int "$options" build 1)
     local use_cache=$(bluer_ai_option_int "$options" cache 1)
 
     local extra_args=""

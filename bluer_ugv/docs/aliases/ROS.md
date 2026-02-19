@@ -11,7 +11,7 @@
  . open ROS.
 @ROS \
 	start \
-	[build,~cache,dryrun]
+	[~build,~cache,dryrun]
  . start ROS.
 @ROS \
 	stop \
