@@ -3,6 +3,10 @@
 function runme() {
     if [[ ! -d "/root/venv/bluer_ai" ]]; then
         echo "venv not found, creating..."
+
+        sudo apt update
+        sudo apt install -y python3-venv python3-pip
+
         python3 -m venv /root/venv/bluer_ai
     fi
     source /root/venv/bluer_ai/bin/activate
