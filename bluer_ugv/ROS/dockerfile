@@ -1,30 +1,12 @@
 FROM ros:jazzy
 
-# Install system dependencies once
-RUN apt update && apt install -y \
-    python3-venv \
-    python3-pip \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
-
-# Create persistent venv location
 RUN python3 -m venv /root/venv/bluer_ai
 
-# Upgrade pip inside venv
-RUN /root/venv/bluer_ai/bin/pip install --upgrade pip
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-RUN /root/venv/bluer_ai/bin/pip install blueness
+ENTRYPOINT ["/entrypoint.sh"]
 
-RUN cd /root/git/bluer-options; /root/venv/bluer_ai/bin/pip install -e .
-#RUN cd /root/git/bluer-objects; /root/venv/bluer_ai/bin/pip install -e .
-#RUN cd /root/git/bluer-ai; /root/venv/bluer_ai/bin/pip install -e .
-#RUN cd /root/git/bluer-algo; /root/venv/bluer_ai/bin/pip install -e .
-#RUN cd /root/git/bluer-agent; /root/venv/bluer_ai/bin/pip install -e .
-#RUN cd /root/git/bluer-sbc; /root/venv/bluer_ai/bin/pip install -e .
-#RUN cd /root/git/bluer-ugv; /root/venv/bluer_ai/bin/pip install -e .
-
-# Set working directory
 WORKDIR /root
 
-# Default shell
 CMD ["bash"]
