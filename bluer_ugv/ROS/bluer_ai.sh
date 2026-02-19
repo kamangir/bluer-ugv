@@ -26,7 +26,10 @@ function bluer_ugv_ROS_container_install() {
 function bluer_ugv_ROS_container_open() {
     local check_filename=/root/git/entry-completed
     if [[ ! -f "$check_filename" ]]; then
+        echo "🐬 installing bluer-ugv/ROS container requirements..."
+
         bluer_ugv_ROS_container_install
+
         touch $check_filename
     fi
 
