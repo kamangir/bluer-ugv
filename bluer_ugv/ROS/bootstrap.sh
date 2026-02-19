@@ -12,6 +12,8 @@ function runme() {
     source /root/venv/bluer_ai/bin/activate
     [[ $? -ne 0 ]] && return 1
 
+    pip install -U pip setuptools wheel
+
     pip install blueness
 
     local repo_name
