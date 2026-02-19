@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir blueness
 # ---- Helper entrypoint: sources ROS + activates venv ----
 RUN cat >/usr/local/bin/bluer_ugv_ros_mac_install <<'EOF' && chmod +x /usr/local/bin/bluer_ugv_ros_mac_install
 #!/usr/bin/env bash
-set -euo pipefail
+# set -euo pipefail
 
 # ROS environment
 source /opt/ros/jazzy/setup.bash
