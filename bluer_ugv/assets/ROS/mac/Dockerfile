@@ -5,18 +5,18 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # ---- System deps ----
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3-venv \
-    python3-pip \
-    build-essential \
-    git \
-    curl \
-    ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+  python3-venv \
+  python3-pip \
+  build-essential \
+  git \
+  curl \
+  ca-certificates \
+  && rm -rf /var/lib/apt/lists/*
 
 # ---- Persistent venv location (will be backed by docker volume) ----
 RUN mkdir -p /root/venv && \
-    python3 -m venv /root/venv/bluer_ai && \
-    /root/venv/bluer_ai/bin/pip install --upgrade pip setuptools wheel
+  python3 -m venv /root/venv/bluer_ai && \
+  /root/venv/bluer_ai/bin/pip install --upgrade pip setuptools wheel
 
 # ---- Always use venv pip/python ----
 ENV VIRTUAL_ENV=/root/venv/bluer_ai
