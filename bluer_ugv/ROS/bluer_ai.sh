@@ -1,10 +1,17 @@
 #! /usr/bin/env bash
 
 function install_bluer_ugv_ROS() {
-    pip install --upgrade pip
+    sudo apt update
+    sudo apt install -y \
+        python3-venv \
+        python3-pip \
+        build-essential &&
+        rm -rf /var/lib/apt/lists/*
 
     python3 -m venv /root/venv/bluer_ai
     source /root/venv/bluer_ai/bin/activate
+
+    pip install --upgrade pip
 
     pip install blueness
 
