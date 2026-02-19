@@ -1,5 +1,11 @@
 FROM ros:jazzy
 
+RUN apt update && apt install -y \
+    python3-venv \
+    python3-pip \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN python3 -m venv /root/venv/bluer_ai
 
 COPY entrypoint.sh /entrypoint.sh

@@ -7,12 +7,6 @@ function entrypoint() {
         return 0
     fi
 
-    sudo apt update
-    sudo apt install -y \
-        python3-venv \
-        python3-pip \
-        build-essential
-
     pip install --upgrade pip
 
     python3 -m venv /root/venv/bluer_ai
