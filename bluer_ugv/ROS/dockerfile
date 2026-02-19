@@ -10,20 +10,18 @@ RUN apt update && apt install -y \
 # Create persistent venv location
 RUN python3 -m venv /root/venv/bluer_ai
 
-RUN source /root/venv/bluer_ai/bin/activate
-
 # Upgrade pip inside venv
 RUN /root/venv/bluer_ai/bin/pip install --upgrade pip
 
 RUN pip install blueness
 
-RUN cd /root/git/bluer-options; pip install -e .
-RUN cd /root/git/bluer-objects; pip install -e .
-RUN cd /root/git/bluer-ai; pip install -e .
-RUN cd /root/git/bluer-algo; pip install -e .
-RUN cd /root/git/bluer-agent; pip install -e .
-RUN cd /root/git/bluer-sbc; pip install -e .
-RUN cd /root/git/bluer-ugv; pip install -e .
+RUN cd /root/git/bluer-options; /root/venv/bluer_ai/bin/pip install -e .
+RUN cd /root/git/bluer-objects; /root/venv/bluer_ai/bin/pip install -e .
+RUN cd /root/git/bluer-ai; /root/venv/bluer_ai/bin/pip install -e .
+RUN cd /root/git/bluer-algo; /root/venv/bluer_ai/bin/pip install -e .
+RUN cd /root/git/bluer-agent; /root/venv/bluer_ai/bin/pip install -e .
+RUN cd /root/git/bluer-sbc; /root/venv/bluer_ai/bin/pip install -e .
+RUN cd /root/git/bluer-ugv; /root/venv/bluer_ai/bin/pip install -e .
 
 # Set working directory
 WORKDIR /root
