@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  ros:
+    image: ros:jazzy
+    container_name: ros_jazzy
+    network_mode: host
+    privileged: true
+    stdin_open: true
+    tty: true
+    volumes:
+      - ${HOME}/git:/root/git

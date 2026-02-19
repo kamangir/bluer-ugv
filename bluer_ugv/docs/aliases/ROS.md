@@ -3,10 +3,10 @@
 ```bash
 @ROS \
 	install \
-	[dryrun,]
+	[dryrun]
  . install ROS.
 @ROS \
 	start \
-	[dryrun,]
+	[dryrun]
  . start ROS.
 ```
