@@ -5,7 +5,8 @@ function bluer_ugv_ROS_install() {
 
     if [[ "$abcli_is_rpi" == true ]]; then
         pushd $abcli_path_temp >/dev/null
-        curl \
+        bluer_ai_eval ,$options \
+            curl \
             --fail \
             --show-error \
             --location \
