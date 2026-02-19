@@ -9,13 +9,13 @@ function bluer_ugv_ROS_open() {
     [[ "$abcli_is_rpi" == true ]] &&
         machine_type="rpi"
     if [[ -z "$machine_type" ]]; then
-        bluer_ai_log_error "@ROS: start: machine type not found."
+        bluer_ai_log_error "@ROS: open: machine type not found."
         return 1
     fi
 
     bluer_ai_badge - "🦾"
 
-    local init_file="/root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh"
+    local init_file="/root/git/bluer-ugv/bluer_ugv/assets/ROS/bluer_ai.sh"
 
     bluer_ai_eval \
         ,$options \

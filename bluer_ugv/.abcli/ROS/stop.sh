@@ -9,7 +9,7 @@ function bluer_ugv_ROS_stop() {
     [[ "$abcli_is_rpi" == true ]] &&
         machine_type="rpi"
     if [[ -z "$machine_type" ]]; then
-        bluer_ai_log_error "@ROS: start: machine type not found."
+        bluer_ai_log_error "@ROS: stop: machine type not found."
         return 1
     fi
 

@@ -20,7 +20,7 @@ services:
       - ROS_DOMAIN_ID=0
 
     volumes:
-      # Your request: ~/git on Mac -> /root/git in container
+      # ~/git on Mac -> /root/git in container
       - ${HOME}/git:/root/git:cached
 
       # Optional: persist venv & pip cache across rebuilds (faster)
