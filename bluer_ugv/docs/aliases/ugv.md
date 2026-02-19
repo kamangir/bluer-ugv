@@ -54,6 +54,10 @@
 	start \
 	[dryrun]
  . start ROS.
+@ROS \
+	stop \
+	[dryrun]
+ . stop ROS.
 @ugv \
 	ssh \
 	<ugv-name> \

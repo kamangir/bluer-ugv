@@ -8,6 +8,7 @@ function test_bluer_ugv_help() {
         "@ROS" \
         "@ROS install" \
         "@ROS start" \
+        "@ROS stop" \
         \
         "@swallow" \
         "@swallow dataset" \
