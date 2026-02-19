@@ -15,9 +15,7 @@ function bluer_ugv_ROS_install() {
             https://get.docker.com
         [[ $? -ne 0 ]] && return 1
 
-        head -n 40 get-docker.sh
         chmod +x get-docker.sh
-
         sudo ./get-docker.sh
         [[ $? -ne 0 ]] && return 1
 
