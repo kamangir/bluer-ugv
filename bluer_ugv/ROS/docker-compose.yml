@@ -9,4 +9,4 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ${HOME}/git:/root/git
+      - /home/pi/git:/root/git
