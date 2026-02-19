@@ -5,11 +5,20 @@ function bluer_ugv_ROS_install() {
 
     if [[ "$abcli_is_rpi" == true ]]; then
         pushd $abcli_path_temp >/dev/null
-        curl -sSL https://get.docker.com | sh
-        if [[ $? -ne 0 ]]; then
-            return 1
-            popd >/dev/null
-        fi
+        curl \
+            --fail \
+            --show-error \
+            --location \
+            --progress-bar \
+            --output get-docker.sh \
+            https://get.docker.com
+        [[ $? -ne 0 ]] && return 1
+
+        head -n 40 get-docker.sh
+        chmod +x get-docker.sh
+
+        sudo ./get-docker.sh
+        [[ $? -ne 0 ]] && return 1
 
         sudo usermod -aG docker $USER
         popd >/dev/null
