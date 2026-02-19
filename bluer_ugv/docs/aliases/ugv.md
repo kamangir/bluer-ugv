@@ -56,7 +56,7 @@
  . open ROS.
 @ROS \
 	start \
-	[dryrun]
+	[build,~cache,dryrun]
  . start ROS.
 @ROS \
 	stop \
