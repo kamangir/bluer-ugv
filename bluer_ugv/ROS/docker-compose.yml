@@ -3,7 +3,7 @@ version: "3.9"
 services:
   ros:
     image: ros:jazzy
-    container_name: ros_jazzy
+    container_name: bluer_ugv_ROS
     network_mode: host
     privileged: true
     stdin_open: true

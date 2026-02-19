@@ -7,6 +7,7 @@ function test_bluer_ugv_help() {
     for module in \
         "@ROS" \
         "@ROS install" \
+        "@ROS open" \
         "@ROS start" \
         "@ROS stop" \
         \
