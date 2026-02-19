@@ -1,13 +1,6 @@
 #! /usr/bin/env bash
 
-function install_bluer_ugv_ROS() {
-    sudo apt update
-    sudo apt install -y \
-        python3-venv \
-        python3-pip \
-        build-essential &&
-        rm -rf /var/lib/apt/lists/*
-
+function bluer_ugv_ROS_container_install() {
     python3 -m venv /root/venv/bluer_ai
     source /root/venv/bluer_ai/bin/activate
 
@@ -30,14 +23,14 @@ function install_bluer_ugv_ROS() {
     done
 }
 
-function open_bluer_ugv_ROS() {
+function bluer_ugv_ROS_container_open() {
     local check_filename=/root/git/entry-completed
     if [[ ! -f "$check_filename" ]]; then
-        install_bluer_ugv_ROS
+        bluer_ugv_ROS_container_install
         touch $check_filename
     fi
 
     source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh
 }
 
-open_bluer_ugv_ROS
+bluer_ugv_ROS_container_open
