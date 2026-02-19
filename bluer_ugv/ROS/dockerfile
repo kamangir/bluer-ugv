@@ -15,7 +15,7 @@ RUN /root/venv/bluer_ai/bin/pip install --upgrade pip
 
 RUN /root/venv/bluer_ai/bin/pip install blueness
 
-#RUN cd /root/git/bluer-options; /root/venv/bluer_ai/bin/pip install -e .
+RUN cd /root/git/bluer-options; /root/venv/bluer_ai/bin/pip install -e .
 #RUN cd /root/git/bluer-objects; /root/venv/bluer_ai/bin/pip install -e .
 #RUN cd /root/git/bluer-ai; /root/venv/bluer_ai/bin/pip install -e .
 #RUN cd /root/git/bluer-algo; /root/venv/bluer_ai/bin/pip install -e .
