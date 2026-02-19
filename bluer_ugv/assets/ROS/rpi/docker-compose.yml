@@ -3,7 +3,7 @@ version: "3.9"
 services:
   ros:
     build: .
-    container_name: bluer_ugv_ROS
+    container_name: bluer_ugv_ros_rpi
     network_mode: host
     privileged: true
     stdin_open: true

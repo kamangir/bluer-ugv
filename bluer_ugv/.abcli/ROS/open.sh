@@ -7,7 +7,7 @@ function bluer_ugv_ROS_open() {
 
     bluer_ai_eval \
         ,$options \
-        sudo docker exec -it bluer_ugv_ROS \
+        sudo docker exec -it bluer_ugv_ros_rpi \
         bash --init-file /root/git/bluer-ugv/bluer_ugv/assets/ROS/rpi/bluer_ai.sh
 
     bluer_ai_badge reset
