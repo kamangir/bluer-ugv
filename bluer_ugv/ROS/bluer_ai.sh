@@ -1,12 +1,6 @@
 #! /usr/bin/env bash
 
-function entrypoint() {
-    local check_filename=/root/git/entry-completed
-    if [[ -f "$check_filename" ]]; then
-        echo "✅ entrypoint."
-        return 0
-    fi
-
+function install_bluer_ugv_ROS() {
     pip install --upgrade pip
 
     python3 -m venv /root/venv/bluer_ai
@@ -27,8 +21,16 @@ function entrypoint() {
         cd /root/git/$repo_name
         pip install -e .
     done
+}
 
-    touch $check_filename
+function entrypoint() {
+    local check_filename=/root/git/entry-completed
+    if [[ ! -f "$check_filename" ]]; then
+        install_bluer_ugv_ROS
+        touch $check_filename
+    fi
+
+    source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh
 }
 
 entrypoint
