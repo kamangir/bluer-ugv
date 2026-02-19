@@ -7,16 +7,37 @@ def help_install(
     tokens: List[str],
     mono: bool,
 ) -> str:
+    options = xtra("dryrun,", mono=mono)
+
     return show_usage(
         [
             "@ROS",
             "install",
+            f"[{options}]",
         ],
         "install ROS.",
         mono=mono,
     )
 
 
+def help_start(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    options = xtra("dryrun,", mono=mono)
+
+    return show_usage(
+        [
+            "@ROS",
+            "start",
+            f"[{options}]",
+        ],
+        "start ROS.",
+        mono=mono,
+    )
+
+
 help_functions = {
     "install": help_install,
+    "start": help_start,
 }

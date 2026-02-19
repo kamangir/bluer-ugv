@@ -47,8 +47,13 @@
 	[designs]
  . @git @ugv.
 @ROS \
-	install
+	install \
+	[dryrun,]
  . install ROS.
+@ROS \
+	start \
+	[dryrun,]
+ . start ROS.
 @ugv \
 	ssh \
 	<ugv-name> \

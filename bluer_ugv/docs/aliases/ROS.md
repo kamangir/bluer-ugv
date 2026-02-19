@@ -2,6 +2,11 @@
 
 ```bash
 @ROS \
-	install
+	install \
+	[dryrun,]
  . install ROS.
+@ROS \
+	start \
+	[dryrun,]
+ . start ROS.
 ```
