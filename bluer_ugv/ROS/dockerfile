@@ -10,6 +10,8 @@ RUN apt update && apt install -y \
 # Create persistent venv location
 RUN python3 -m venv /root/venv/bluer_ai
 
+RUN source /root/venv/bluer_ai/bin/activate
+
 # Upgrade pip inside venv
 RUN /root/venv/bluer_ai/bin/pip install --upgrade pip
 
