@@ -1,0 +1,30 @@
+FROM ros:jazzy
+
+# Install system dependencies once
+RUN apt update && apt install -y \
+    python3-venv \
+    python3-pip \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create persistent venv location
+RUN python3 -m venv /root/venv/bluer_ai
+
+# Upgrade pip inside venv
+RUN /root/venv/bluer_ai/bin/pip install --upgrade pip
+
+RUN pip install blueness
+
+RUN cd /root/git/bluer-options; pip install -e .
+RUN cd /root/git/bluer-objects; pip install -e .
+RUN cd /root/git/bluer-ai; pip install -e .
+RUN cd /root/git/bluer-algo; pip install -e .
+RUN cd /root/git/bluer-agent; pip install -e .
+RUN cd /root/git/bluer-sbc; pip install -e .
+RUN cd /root/git/bluer-ugv; pip install -e .
+
+# Set working directory
+WORKDIR /root
+
+# Default shell
+CMD ["bash"]
