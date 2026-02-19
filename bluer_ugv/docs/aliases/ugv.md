@@ -46,6 +46,9 @@
 	git \
 	[designs]
  . @git @ugv.
+@ROS \
+	install
+ . install ROS.
 @ugv \
 	ssh \
 	<ugv-name> \
