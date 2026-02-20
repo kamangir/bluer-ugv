@@ -20,15 +20,9 @@ function bluer_ugv_ROS_container_init() {
         pip install --upgrade pip setuptools wheel
         [[ $? -ne 0 ]] && return 1
 
-        # Install editable repos if present (mount provides /root/git)
-        for repo in \
-            bluer-options \
-            bluer-objects \
-            bluer-ai \
-            bluer-algo \
-            bluer-agent \
-            bluer-sbc \
-            bluer-ugv; do
+        local list_of_repos="bluer-options"
+        # bluer-objects bluer-ai bluer-algo bluer-agent bluer-sbc bluer-ugv
+        for repo in $list_of_repos; do
             if [[ ! -d "/root/git/$repo" ]]; then
                 echo "⚠️ /root/git/$repo not found"
                 return 1
