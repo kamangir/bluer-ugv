@@ -36,10 +36,14 @@ function bluer_ugv_ROS_container_init() {
         done
 
         if [[ "$abcli_is_mac" == true ]]; then
-            sudo apt-get update
-            sudo apt-get install -y --no-install-recommends \
+            apt-get update
+            apt-get install -y --no-install-recommends \
                 libgl1 \
-                libglib2.0-0
+                libglib2.0-0t64
+            [[ $? -ne 0 ]] && return 1
+
+            python3 -c "import cv2; print('✅ opencv', cv2.__version__)"
+            [[ $? -ne 0 ]] && return 1
         fi
 
         touch $filename
