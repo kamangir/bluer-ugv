@@ -8,6 +8,11 @@ function bluer_ugv_ROS_gazebo() {
     local options=$1
     local do_server=$(bluer_ai_option_int "$options" serve 0)
 
+    if [[ "$abcli_is_mac" == false ]]; then
+        bluer_ai_log_error "run this command in a mac terminal."
+        return 1
+    fi
+
     if [[ "$do_server" == 1 ]]; then
         bluer_ai_badge - "gazebo server 🦾"
 
