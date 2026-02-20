@@ -8,7 +8,7 @@
 @ROS test ~doctor,role=talker
 ```
 
-```test
+```text
 ⚙️ ros2 topic list
 /chatter
 /parameter_events

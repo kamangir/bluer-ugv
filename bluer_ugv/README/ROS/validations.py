@@ -4,6 +4,7 @@ docs = [
     }
     for suffix in [
         "",
+        "gazebo.md",
         "mac.md",
         "rpi.md",
     ]

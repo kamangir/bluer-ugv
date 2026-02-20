@@ -8,7 +8,7 @@
 @ROS test role=talker
 ```
 
-```test
+```text
 ⚙️ ros2 doctor
 All 5 checks passed
 ⚙️ ros2 topic list

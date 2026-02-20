@@ -6,6 +6,7 @@ function test_bluer_ugv_help() {
     local module
     for module in \
         "@ROS" \
+        "@ROS gazebo" \
         "@ROS install" \
         "@ROS open" \
         "@ROS start" \
