@@ -36,6 +36,7 @@ function bluer_ugv_ROS_container_init() {
         done
 
         if [[ "$abcli_is_mac" == true ]]; then
+            echo "🐬 @ROS: fixing opencv..."
             apt-get update
             apt-get install -y --no-install-recommends \
                 libgl1 \
