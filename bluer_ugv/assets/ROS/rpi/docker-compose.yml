@@ -8,3 +8,7 @@ services:
     tty: true
     volumes:
       - /home/pi/git:/root/git
+
+      # Optional: persist venv & pip cache across rebuilds (faster)
+      - bluer_venv:/root/venv
+      - bluer_pip_cache:/root/.cache/pip
