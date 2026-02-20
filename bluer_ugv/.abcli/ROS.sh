@@ -9,7 +9,7 @@ function bluer_ugv_ROS() {
         return
     fi
 
-    python3 bluer_ugv.ROS "$@"
+    python3 -m bluer_ugv.ROS "$@"
 }
 
 bluer_ai_source_caller_suffix_path /ROS
