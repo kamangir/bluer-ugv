@@ -17,4 +17,8 @@
 	stop \
 	[dryrun]
  . stop ROS.
+@ROS \
+	test \
+	[dryrun]
+ . test ROS.
 ```
