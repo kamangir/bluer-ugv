@@ -50,8 +50,9 @@ function bluer_ugv_ROS_container_init() {
         touch $filename
     fi
 
-    export BLUER_AI_IGNORED_EXTERNAL_PLUGINS="abadpour,bluer-academy,bluer-flow,bluer-geo,bluer-journal,bluer-plugin,bluer-resistance,bluer-sandbox,bluer-south,btc-prediction-bash,giza"
+    source /opt/ros/jazzy/setup.bash
 
+    export BLUER_AI_IGNORED_EXTERNAL_PLUGINS="abadpour,bluer-academy,bluer-flow,bluer-geo,bluer-journal,bluer-plugin,bluer-resistance,bluer-sandbox,bluer-south,btc-prediction-bash,giza"
     source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh ~verbose
 }
 
