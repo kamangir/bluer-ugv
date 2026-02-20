@@ -52,7 +52,7 @@
  . install ROS.
 @ROS \
 	open \
-	[dryrun,verbose]
+	[dryrun]
  . open ROS.
 @ROS \
 	start \

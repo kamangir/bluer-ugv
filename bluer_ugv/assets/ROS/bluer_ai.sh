@@ -23,8 +23,7 @@ function bluer_ugv_ROS_container_init() {
         pip install --no-cache-dir blueness
         [[ $? -ne 0 ]] && return 1
 
-        local list_of_repos="bluer-options"
-        # bluer-objects bluer-ai bluer-algo bluer-agent bluer-sbc bluer-ugv
+        local list_of_repos="bluer-options bluer-objects bluer-ai bluer-algo bluer-agent bluer-sbc bluer-ugv"
         for repo in $list_of_repos; do
             if [[ ! -d "/root/git/$repo" ]]; then
                 echo "⚠️ /root/git/$repo not found"
@@ -39,7 +38,9 @@ function bluer_ugv_ROS_container_init() {
         touch $filename
     fi
 
-    source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh "$@"
+    export BLUER_AI_IGNORED_EXTERNAL_PLUGINS="abadpour,bluer-academy,bluer-flow,bluer-geo,bluer-journal,bluer-plugin,bluer-resistance,bluer-south,btc-prediction-bash"
+
+    source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh ~verbose
 
     exec bash -i
 }
