@@ -12,3 +12,7 @@ services:
       # Optional: persist venv & pip cache across rebuilds (faster)
       - bluer_venv:/root/venv
       - bluer_pip_cache:/root/.cache/pip
+
+volumes:
+  bluer_venv:
+  bluer_pip_cache:
