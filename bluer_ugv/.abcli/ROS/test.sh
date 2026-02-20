@@ -24,6 +24,10 @@ function bluer_ugv_ROS_test() {
     bluer_ai_log "packages:"
     ros2 pkg list | grep demo_nodes
 
+    bluer_ai_log "gazebo:"
+    gz sim --version
+    ros2 pkg list | grep ros_gz
+
     bluer_ai_log "role: $role"
     bluer_ai_eval ,$options \
         ros2 run demo_nodes_cpp $role

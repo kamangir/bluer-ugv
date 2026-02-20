@@ -51,6 +51,15 @@ function bluer_ugv_ROS_container_init() {
             ros-jazzy-demo-nodes-py
         [[ $? -ne 0 ]] && return 1
 
+        echo "🐬 @ROS: getting gazebo..."
+        sudo apt update
+        sudo apt install -y \
+            ros-jazzy-ros-gz \
+            ros-jazzy-xacro \
+            ros-jazzy-robot-state-publisher \
+            ros-jazzy-joint-state-publisher \
+            ros-jazzy-joint-state-publisher-gui
+
         touch $filename
     fi
 
