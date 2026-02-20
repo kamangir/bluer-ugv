@@ -58,7 +58,12 @@ def help_start(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("~build,~cache,dryrun", mono=mono)
+    options = "".join(
+        [
+            "build",
+            xtra(",~cache,dryrun", mono=mono),
+        ]
+    )
 
     return show_usage(
         [
