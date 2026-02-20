@@ -47,6 +47,10 @@
 	[designs]
  . @git @ugv.
 @ROS \
+	gazebo \
+	[dryrun]
+ . start gazebo.
+@ROS \
 	install \
 	[dryrun]
  . install ROS.

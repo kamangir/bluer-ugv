@@ -112,7 +112,7 @@ def help_test(
 
 
 help_functions = {
-    "install": help_gazebo,
+    "gazebo": help_gazebo,
     "install": help_install,
     "open": help_open,
     "start": help_start,
