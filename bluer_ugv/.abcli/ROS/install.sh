@@ -26,5 +26,9 @@ function bluer_ugv_ROS_install() {
     if [[ "$abcli_is_mac" == true ]]; then
         bluer_ai_eval ,$options \
             brew install gz-sim8
+        [[ $? -ne 0 ]] && return 1
+
+        bluer_ai_eval ,$options \
+            brew install gz-transport13
     fi
 }

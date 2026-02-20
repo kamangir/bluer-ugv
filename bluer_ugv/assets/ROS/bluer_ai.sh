@@ -35,9 +35,8 @@ function bluer_ugv_ROS_container_init() {
             [[ $? -ne 0 ]] && return 1
         done
 
-        apt-get update
-
         echo "🐬 @ROS: fixing opencv..."
+        apt-get update
         apt-get install -y --no-install-recommends \
             libgl1 \
             libglib2.0-0t64
@@ -46,6 +45,7 @@ function bluer_ugv_ROS_container_init() {
         [[ $? -ne 0 ]] && return 1
 
         echo "🐬 @ROS: getting demos..."
+        apt-get update
         apt-get install -y \
             ros-jazzy-demo-nodes-cpp \
             ros-jazzy-demo-nodes-py

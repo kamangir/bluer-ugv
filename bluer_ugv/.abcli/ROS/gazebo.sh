@@ -4,7 +4,7 @@ function bluer_ugv_ROS_gazebo() {
     local options=$1
 
     if [[ "$abcli_is_docker" == true ]]; then
-        bluer_ai_badge - "🦾🔍"
+        bluer_ai_badge - "🦾 gazebo server"
 
         bluer_ai_eval ,$options \
             gz sim -s -v 4 empty.sdf
