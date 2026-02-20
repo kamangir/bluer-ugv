@@ -22,6 +22,6 @@ function bluer_ugv_ROS_test() {
     ros2 pkg list | grep demo_nodes
 
     bluer_ai_log "role: $role"
-    bluer_ai_log ,$options \
+    bluer_ai_eval ,$options \
         ros2 run demo_nodes_cpp $role
 }
