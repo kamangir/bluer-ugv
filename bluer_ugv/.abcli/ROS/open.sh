@@ -11,17 +11,13 @@ function bluer_ugv_ROS_open() {
         return 1
     fi
 
-    bluer_ai_badge - "🦾"
-
     local init_file="/root/git/bluer-ugv/bluer_ugv/assets/ROS/bluer_ai.sh"
 
     bluer_ai_eval \
         ,$options \
         sudo docker exec -it bluer_ugv_ros_$machine_type \
-        bash --init-file $init_file
+        bash --init-file $init_file -i
     local status="$?"
-
-    bluer_ai_badge reset
 
     rm -v $abcli_path_git/verbose
 
