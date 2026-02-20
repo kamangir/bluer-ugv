@@ -7,7 +7,12 @@ def help_gazebo(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("dryrun", mono=mono)
+    options = "".join(
+        [
+            xtra("dryrun,", mono=mono),
+            "server",
+        ]
+    )
 
     return show_usage(
         [

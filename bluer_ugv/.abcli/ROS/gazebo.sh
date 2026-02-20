@@ -1,10 +1,15 @@
 #! /usr/bin/env bash
 
+export GZ_IP=127.0.0.1
+export GZ_PARTITION=arzhang
+export GZ_VERBOSE=4
+
 function bluer_ugv_ROS_gazebo() {
     local options=$1
+    local do_server=$(bluer_ai_option_int "$options" serve 0)
 
-    if [[ "$abcli_is_docker" == true ]]; then
-        bluer_ai_badge - "🦾 gazebo server"
+    if [[ "$do_server" == 1 ]]; then
+        bluer_ai_badge - "gazebo server 🦾"
 
         bluer_ai_eval ,$options \
             gz sim -s -v 4 empty.sdf
@@ -13,11 +18,10 @@ function bluer_ugv_ROS_gazebo() {
         return
     fi
 
-    if [[ "$abcli_is_mac" == true ]]; then
-        :
-        return
-    fi
+    bluer_ai_badge - "gazebo gui 🦾"
 
-    bluer_ai_log_warning "@ROS: gazebo: only works inside the ROS container and on a mac."
-    return 1
+    bluer_ai_eval ,$options \
+        gz sim -g -v 4
+
+    bluer_ai_badge reset
 }

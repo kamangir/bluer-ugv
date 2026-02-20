@@ -3,7 +3,7 @@
 ```bash
 @ROS \
 	gazebo \
-	[dryrun]
+	[dryrun,server]
  . start gazebo.
 @ROS \
 	install \

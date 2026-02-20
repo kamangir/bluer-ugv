@@ -1,15 +1,17 @@
 # ROS: validations: gazebo
 
+on separate terminals on the mac,
+
 ```bash
-@ROS start
-@ROS open
+@ROS gazebo serve
 ```
+
 ```bash
 @ROS gazebo
 ```
 
-```text
-🔥
-```
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets3/raw/main/ROS/gazebo.png?raw=true)](https://github.com/kamangir/assets3/raw/main/ROS/gazebo.png?raw=true) |
 
 

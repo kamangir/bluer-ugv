@@ -1,15 +1,15 @@
 title:::
 
+on separate terminals on the mac,
+
 ```bash
-@ROS start
-@ROS open
+@ROS gazebo serve
 ```
+
 ```bash
 @ROS gazebo
 ```
 
-```text
-🔥
-```
+items:::
 
 

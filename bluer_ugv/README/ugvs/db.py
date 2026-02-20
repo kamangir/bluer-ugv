@@ -47,6 +47,8 @@ dict_of_ugvs = {
             f"{arzhang_assets2}/IMG_0118.JPG",
             f"{arzhang2_assets3}/IMG_0120.JPG",
             f"{arzhang2_assets3}/IMG_0134.JPG",
+            f"{arzhang2_assets3}/2026-02-14-11.30.13.png",
+            f"{arzhang2_assets3}/2026-02-14-14.27.28.png",
             f"{arzhang2_assets3}/IMG_0136.JPG",
         ],
         "tagline": "an [arzhang](../arzhang) with updated body design.",
