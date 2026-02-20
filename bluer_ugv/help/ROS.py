@@ -75,7 +75,12 @@ def help_test(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("dryrun", mono=mono)
+    options = "".join(
+        [
+            xtra("dryrun,", mono=mono),
+            "talker|listener",
+        ]
+    )
 
     return show_usage(
         [

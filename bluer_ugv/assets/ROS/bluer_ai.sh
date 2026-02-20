@@ -35,17 +35,21 @@ function bluer_ugv_ROS_container_init() {
             [[ $? -ne 0 ]] && return 1
         done
 
-        if [[ "$abcli_is_mac" == true ]]; then
-            echo "🐬 @ROS: fixing opencv..."
-            apt-get update
-            apt-get install -y --no-install-recommends \
-                libgl1 \
-                libglib2.0-0t64
-            [[ $? -ne 0 ]] && return 1
+        apt-get update
 
-            python3 -c "import cv2; print('✅ opencv', cv2.__version__)"
-            [[ $? -ne 0 ]] && return 1
-        fi
+        echo "🐬 @ROS: fixing opencv..."
+        apt-get install -y --no-install-recommends \
+            libgl1 \
+            libglib2.0-0t64
+        [[ $? -ne 0 ]] && return 1
+        python3 -c "import cv2; print('✅ opencv', cv2.__version__)"
+        [[ $? -ne 0 ]] && return 1
+
+        echo "🐬 @ROS: getting demos..."
+        apt-get install -y \
+            ros-jazzy-demo-nodes-cpp \
+            ros-jazzy-demo-nodes-py
+        [[ $? -ne 0 ]] && return 1
 
         touch $filename
     fi

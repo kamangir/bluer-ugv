@@ -64,7 +64,7 @@
  . stop ROS.
 @ROS \
 	test \
-	[dryrun]
+	[dryrun,talker|listener]
  . test ROS.
 @ugv \
 	ssh \
