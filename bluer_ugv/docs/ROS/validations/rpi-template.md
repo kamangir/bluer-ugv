@@ -5,7 +5,7 @@ title:::
 @ROS open
 ```
 ```bash
-@ROS test talker,~doctor
+@ROS test ~doctor,role=talker
 ```
 
 ```test
@@ -39,7 +39,7 @@ in another terminal,
 @ROS open
 ```
 ```bash
-@ROS test listener,~doctor
+@ROS test ~doctor,role=listener
 ```
 
 ```text
