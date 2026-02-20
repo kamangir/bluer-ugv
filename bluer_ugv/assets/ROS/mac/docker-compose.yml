@@ -17,6 +17,12 @@ services:
       # Optional: keep DDS traffic in a predictable domain
       - ROS_DOMAIN_ID=0
 
+      # VNC
+      - QT_QPA_PLATFORM=vnc
+      - QT_VNC_PORT=5900
+      # optional: set a size so it’s not tiny
+      - QT_VNC_SIZE=1600x900
+
     volumes:
       # ~/git on Mac -> /root/git in container
       - ${HOME}/git:/root/git:cached
@@ -27,6 +33,10 @@ services:
 
     # Optional: if you ever need direct access to /dev (usually not on mac)
     # privileged: true
+
+    # VNC
+    ports:
+      - "5900:5900"
 
 volumes:
   bluer_venv:
