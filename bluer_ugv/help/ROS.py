@@ -77,7 +77,7 @@ def help_test(
 ) -> str:
     options = "".join(
         [
-            xtra("dryrun,", mono=mono),
+            xtra("~doctor,dryrun,", mono=mono),
             "talker|listener",
         ]
     )

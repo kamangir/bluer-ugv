@@ -2,11 +2,14 @@
 
 function bluer_ugv_ROS_test() {
     local options=$1
+    local do_doctor=$(bluer_ai_option_int "$options" doctor 1)
     local role=$(bluer_ai_option_choice "$options" talker,listener talker)
 
-    bluer_ai_eval ,$options \
-        ros2 doctor
-    [[ $? -ne 0 ]] && return 1
+    if [[ "$do_doctor" == 1 ]]; then
+        bluer_ai_eval ,$options \
+            ros2 doctor
+        [[ $? -ne 0 ]] && return 1
+    fi
 
     bluer_ai_eval ,$options \
         ros2 topic list
