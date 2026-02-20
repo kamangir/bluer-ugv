@@ -1,6 +1,11 @@
 #! /usr/bin/env bash
 
 function bluer_ugv_ROS_open() {
+    if [[ "$abcli_is_docker" == true ]]; then
+        bluer_ai_log_warning "cannot open a ROS container inside another container."
+        return
+    fi
+
     local machine_type=""
     [[ "$abcli_is_mac" == true ]] &&
         machine_type="mac"
