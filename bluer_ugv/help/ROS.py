@@ -71,9 +71,32 @@ def help_stop(
     )
 
 
+def help_test(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    options = "".join(
+        [
+            xtra("~doctor,dryrun,", mono=mono),
+            "talker|listener",
+        ]
+    )
+
+    return show_usage(
+        [
+            "@ROS",
+            "test",
+            f"[{options}]",
+        ],
+        "test ROS.",
+        mono=mono,
+    )
+
+
 help_functions = {
     "install": help_install,
     "open": help_open,
     "start": help_start,
     "stop": help_stop,
+    "test": help_test,
 }

@@ -17,4 +17,8 @@
 	stop \
 	[dryrun]
  . stop ROS.
+@ROS \
+	test \
+	[~doctor,dryrun,talker|listener]
+ . test ROS.
 ```
