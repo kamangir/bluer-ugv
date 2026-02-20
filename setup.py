@@ -59,10 +59,11 @@ setup(
     include_package_data=True,
     package_data={
         NAME: [
-            "config.env",
-            "sample.env",
             ".abcli/**/*.sh",
             "assets/**/*",
+            "config.env",
+            "ROS/*.yml",
+            "sample.env",
         ],
     },
 )

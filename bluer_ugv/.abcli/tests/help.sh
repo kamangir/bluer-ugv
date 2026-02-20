@@ -5,6 +5,12 @@ function test_bluer_ugv_help() {
 
     local module
     for module in \
+        "@ROS" \
+        "@ROS install" \
+        "@ROS open" \
+        "@ROS start" \
+        "@ROS stop" \
+        \
         "@swallow" \
         "@swallow dataset" \
         "@swallow dataset combine" \
