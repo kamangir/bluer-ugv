@@ -35,12 +35,19 @@ function bluer_ugv_ROS_container_init() {
             [[ $? -ne 0 ]] && return 1
         done
 
+        if [[ "$abcli_is_mac" == true ]]; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends \
+                libgl1 \
+                libglib2.0-0
+        fi
+
         touch $filename
     fi
 
-    export BLUER_AI_IGNORED_EXTERNAL_PLUGINS="abadpour,bluer-academy,bluer-flow,bluer-geo,bluer-journal,bluer-plugin,bluer-resistance,bluer-sandbox,bluer-south,btc-prediction-bash,gizai"
+    export BLUER_AI_IGNORED_EXTERNAL_PLUGINS="abadpour,bluer-academy,bluer-flow,bluer-geo,bluer-journal,bluer-plugin,bluer-resistance,bluer-sandbox,bluer-south,btc-prediction-bash,giza"
 
-    source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh ~verbose
+    source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh verbose
 
     exec bash -i
 }
