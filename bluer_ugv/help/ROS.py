@@ -24,7 +24,7 @@ def help_open(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("dryrun", mono=mono)
+    options = xtra("dryrun,verbose", mono=mono)
 
     return show_usage(
         [

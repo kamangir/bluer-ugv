@@ -20,6 +20,9 @@ function bluer_ugv_ROS_container_init() {
         pip install --upgrade pip setuptools wheel
         [[ $? -ne 0 ]] && return 1
 
+        pip install --no-cache-dir blueness
+        [[ $? -ne 0 ]] && return 1
+
         local list_of_repos="bluer-options"
         # bluer-objects bluer-ai bluer-algo bluer-agent bluer-sbc bluer-ugv
         for repo in $list_of_repos; do
@@ -28,7 +31,7 @@ function bluer_ugv_ROS_container_init() {
                 return 1
             fi
 
-            echo "🐬 @ROS: pip installing $repo..."
+            echo "🐬 @ROS: installing $repo..."
             pip install -e "/root/git/$repo"
             [[ $? -ne 0 ]] && return 1
         done
@@ -36,7 +39,9 @@ function bluer_ugv_ROS_container_init() {
         touch $filename
     fi
 
-    source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh
+    source /root/git/bluer-ai/bluer_ai/.abcli/bluer_ai.sh "$@"
+
+    exec bash -i
 }
 
 bluer_ugv_ROS_container_init
