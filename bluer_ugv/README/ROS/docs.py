@@ -1,3 +1,7 @@
 from bluer_ugv.README.ROS import validations
 
-docs = validations.docs
+docs = [
+    {
+        "path": f"../docs/ROS",
+    }
+] + validations.docs

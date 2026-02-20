@@ -11,6 +11,14 @@ items = markdown.generate_table(
     Items(
         [
             {
+                "name": "ROS",
+                "url": "./bluer_ugv/docs/ROS",
+                "marquee": assets_url(
+                    "ROS/logo.png",
+                    volume=3,
+                ),
+            },
+            {
                 "name": "computer",
                 "url": "./bluer_ugv/docs/swallow/digital/design/computer",
                 "marquee": f"{swallow_electrical_designs}/digital.png?raw=true",
@@ -36,6 +44,6 @@ items = markdown.generate_table(
             },
         ]
     ),
-    cols=4,
+    cols=3,
     log=False,
 )
