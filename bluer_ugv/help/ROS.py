@@ -3,6 +3,28 @@ from typing import List
 from bluer_options.terminal import show_usage, xtra
 
 
+def help_gazebo(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    options = "".join(
+        [
+            xtra("dryrun,", mono=mono),
+            "server",
+        ]
+    )
+
+    return show_usage(
+        [
+            "@ROS",
+            "gazebo",
+            f"[{options}]",
+        ],
+        "start gazebo.",
+        mono=mono,
+    )
+
+
 def help_install(
     tokens: List[str],
     mono: bool,
@@ -41,7 +63,12 @@ def help_start(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("~build,~cache,dryrun", mono=mono)
+    options = "".join(
+        [
+            "build",
+            xtra(",~cache,dryrun", mono=mono),
+        ]
+    )
 
     return show_usage(
         [
@@ -77,8 +104,9 @@ def help_test(
 ) -> str:
     options = "".join(
         [
-            xtra("~doctor,dryrun,", mono=mono),
-            "talker|listener",
+            "doctor",
+            xtra(",dryrun,", mono=mono),
+            "role=talker|listener",
         ]
     )
 
@@ -94,6 +122,7 @@ def help_test(
 
 
 help_functions = {
+    "gazebo": help_gazebo,
     "install": help_install,
     "open": help_open,
     "start": help_start,

@@ -47,6 +47,10 @@
 	[designs]
  . @git @ugv.
 @ROS \
+	gazebo \
+	[dryrun,server]
+ . start gazebo.
+@ROS \
 	install \
 	[dryrun]
  . install ROS.
@@ -56,7 +60,7 @@
  . open ROS.
 @ROS \
 	start \
-	[~build,~cache,dryrun]
+	[build,~cache,dryrun]
  . start ROS.
 @ROS \
 	stop \
@@ -64,7 +68,7 @@
  . stop ROS.
 @ROS \
 	test \
-	[~doctor,dryrun,talker|listener]
+	[doctor,dryrun,role=talker|listener]
  . test ROS.
 @ugv \
 	ssh \

@@ -5,10 +5,10 @@ title:::
 @ROS open
 ```
 ```bash
-@ROS test talker,~doctor
+@ROS test ~doctor,role=talker
 ```
 
-```test
+```text
 ⚙️ ros2 topic list
 /chatter
 /parameter_events
@@ -39,7 +39,7 @@ in another terminal,
 @ROS open
 ```
 ```bash
-@ROS test listener,~doctor
+@ROS test ~doctor,role=listener
 ```
 
 ```text

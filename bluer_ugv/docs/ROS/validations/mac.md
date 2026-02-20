@@ -5,10 +5,10 @@
 @ROS open
 ```
 ```bash
-@ROS test talker
+@ROS test role=talker
 ```
 
-```test
+```text
 ⚙️ ros2 doctor
 All 5 checks passed
 ⚙️ ros2 topic list
@@ -40,7 +40,7 @@ in another terminal,
 @ROS open
 ```
 ```bash
-@ROS test listener
+@ROS test role=listener
 ```
 
 ```text

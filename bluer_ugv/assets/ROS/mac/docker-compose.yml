@@ -6,27 +6,17 @@ services:
     container_name: bluer_ugv_ros_mac
     stdin_open: true
     tty: true
-
-    # macOS: host networking is not supported the same way; use bridge + ports.
-    # Add ports as needed (examples commented below).
-    # ports:
-    #   - "5100:5100"   # Flask, etc.
+    init: true
 
     environment:
       - DEBIAN_FRONTEND=noninteractive
-      # Optional: keep DDS traffic in a predictable domain
       - ROS_DOMAIN_ID=0
+      - GZ_PARTITION=arzhang
 
     volumes:
-      # ~/git on Mac -> /root/git in container
       - ${HOME}/git:/root/git:cached
-
-      # Optional: persist venv & pip cache across rebuilds (faster)
       - bluer_venv:/root/venv
       - bluer_pip_cache:/root/.cache/pip
-
-    # Optional: if you ever need direct access to /dev (usually not on mac)
-    # privileged: true
 
 volumes:
   bluer_venv:
