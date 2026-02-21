@@ -1,4 +1,4 @@
-# ROS: validations: rpi
+# ROS: validations: basic: rpi
 
 ```bash
 @ROS start

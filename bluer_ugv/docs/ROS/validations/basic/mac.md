@@ -1,4 +1,4 @@
-# ROS: validations: mac
+# ROS: validations: basic: mac
 
 ```bash
 @ROS start

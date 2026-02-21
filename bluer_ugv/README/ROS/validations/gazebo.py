@@ -7,7 +7,7 @@ docs = [
         "items": items,
     }
     for suffix, items in {
-        "gazebo/": "",
+        "gazebo/": [],
         "gazebo/arzhang4.md": ImageItems(
             {
                 assets_url(

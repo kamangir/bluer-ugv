@@ -23,6 +23,10 @@ def help_control(
             f"[{options}]",
         ],
         "control the robot.",
+        {
+            "angular": ["rotational velocity (rad/s)"],
+            "linear": ["forward/backward velocity (m/s)"],
+        },
         mono=mono,
     )
 
