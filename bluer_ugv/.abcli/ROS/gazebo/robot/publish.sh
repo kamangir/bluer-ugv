@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-function bluer_ugv_ROS_gazebo_publish_robot_description() {
+function bluer_ugv_ROS_gazebo_robot_publish() {
     local options=$1
 
     if [[ "$abcli_is_docker" == false ]]; then
@@ -10,7 +10,7 @@ function bluer_ugv_ROS_gazebo_publish_robot_description() {
 
     bluer_ugv_ROS_gazebo_log
 
-    bluer_ai_badge - "gazebo/robot-description 🦾"
+    bluer_ai_badge - "gazebo/robot 🦾"
 
     local path=$(python3 -m bluer_ugv locate)/assets/${GZ_PARTITION}_description/urdf/
 

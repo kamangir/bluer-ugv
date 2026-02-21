@@ -64,9 +64,21 @@
  . serve gazebo gui.
 @ROS \
 	gazebo \
-	publish_robot_description \
+	control \
+	[angular=<0.0>,dryrun,linear=<0.0>]
+ . control the robot.
+@ROS \
+	gazebo \
+	robot \
+	publish \
 	[dryrun]
  . publish robot description.
+@ROS \
+	gazebo \
+	robot \
+	spawn \
+	[dryrun]
+ . spawn robot.
 @ROS \
 	install \
 	[dryrun]
