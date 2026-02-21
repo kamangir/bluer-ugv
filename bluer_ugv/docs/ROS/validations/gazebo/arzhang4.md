@@ -25,14 +25,8 @@ on a terminal on the same mac,
 @ROS gazebo robot spawn
 ```
 
-🔥
-
 ```bash
 @ROS gazebo robot control linear=2.4,angular=10
-```
-
-```bash
-gz topic -t /cmd_vel -m gz.msgs.Twist -p "linear: {x: 2.4} angular: {z: 10.0}"
 ```
 
 |   |
