@@ -1,8 +1,13 @@
 #! /usr/bin/env bash
 
-export GZ_IP=127.0.0.1
 export GZ_PARTITION=arzhang4
 export GZ_VERBOSE=4
+
+[[ "$abcli_is_mac" == true ]] &&
+    export GZ_IP=$(ipconfig getifaddr en0)
+
+[[ "$abcli_is_rpi" == true ]] &&
+    export GZ_RELAY=host.docker.internal
 
 function bluer_ugv_ROS_gazebo() {
     local task=$1

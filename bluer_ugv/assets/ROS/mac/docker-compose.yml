@@ -11,7 +11,7 @@ services:
     environment:
       - DEBIAN_FRONTEND=noninteractive
       - ROS_DOMAIN_ID=0
-      - GZ_PARTITION=arzhang
+      - GZ_PARTITION=arzhang4
 
     volumes:
       - ${HOME}/git:/root/git:cached
