@@ -1,5 +1,8 @@
 # ROS: validations: gazebo: arzhang4
 
+- uses [arzhang/design/mechanical](../../../arzhang/design/mechanical)
+- uses [bluer-sbc/parts/wheel.md](https://github.com/kamangir/bluer-sbc/blob/main/bluer_sbc/docs/parts/wheel.md)
+
 on separate terminals on a mac,
 
 ```bash
