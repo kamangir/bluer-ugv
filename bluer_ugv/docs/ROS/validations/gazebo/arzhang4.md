@@ -13,14 +13,13 @@ on separate terminals on a mac,
 @ROS gazebo gui open
 ```
 
-on a terminal on the same mac,
+on a terminal in the ROS container on the same mac,
 
 ```bash
 @ROS gazebo publish_robot_description
 ```
 
 on a terminal on the same mac,
-
 
 ```bash
 @ROS gazebo spawn
