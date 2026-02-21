@@ -17,6 +17,7 @@ services:
       - ${HOME}/git:/root/git:cached
       - bluer_venv:/root/venv
       - bluer_pip_cache:/root/.cache/pip
+    privileged: true
 
 volumes:
   bluer_venv:

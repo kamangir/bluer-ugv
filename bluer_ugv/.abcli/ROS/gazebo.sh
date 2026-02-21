@@ -6,7 +6,7 @@ export GZ_VERBOSE=4
 [[ "$abcli_is_mac" == true ]] &&
     export GZ_IP=$(ipconfig getifaddr en0)
 
-[[ "$abcli_is_rpi" == true ]] &&
+[[ "$abcli_is_docker" == true ]] &&
     export GZ_RELAY=host.docker.internal
 
 function bluer_ugv_ROS_gazebo() {
