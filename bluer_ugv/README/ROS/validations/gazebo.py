@@ -10,7 +10,10 @@ docs = [
         "gazebo/": "",
         "gazebo/arzhang4.md": ImageItems(
             {
-                #
+                assets_url(
+                    "ROS/arzhang4.gif",
+                    volume=3,
+                ): "",
             }
         ),
         "gazebo/gui.md": ImageItems(

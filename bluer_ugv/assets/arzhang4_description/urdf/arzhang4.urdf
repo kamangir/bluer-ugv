@@ -53,7 +53,7 @@
   <joint name="wheel_fl_joint" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_fl"/>
-    <origin rpy="0 0 0" xyz="0.2 0.15 0.13"/>
+    <origin rpy="0 0 0" xyz="0.2 0.15 0.06"/>
     <!-- Axle along Y -->
     <axis xyz="0 1 0"/>
   </joint>
@@ -83,7 +83,7 @@
   <joint name="wheel_fr_joint" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_fr"/>
-    <origin rpy="0 0 0" xyz="0.2 -0.15 0.13"/>
+    <origin rpy="0 0 0" xyz="0.2 -0.15 0.06"/>
     <!-- Axle along Y -->
     <axis xyz="0 1 0"/>
   </joint>
@@ -113,7 +113,7 @@
   <joint name="wheel_rl_joint" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_rl"/>
-    <origin rpy="0 0 0" xyz="-0.2 0.15 0.13"/>
+    <origin rpy="0 0 0" xyz="-0.2 0.15 0.06"/>
     <!-- Axle along Y -->
     <axis xyz="0 1 0"/>
   </joint>
@@ -143,7 +143,7 @@
   <joint name="wheel_rr_joint" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_rr"/>
-    <origin rpy="0 0 0" xyz="-0.2 -0.15 0.13"/>
+    <origin rpy="0 0 0" xyz="-0.2 -0.15 0.06"/>
     <!-- Axle along Y -->
     <axis xyz="0 1 0"/>
   </joint>

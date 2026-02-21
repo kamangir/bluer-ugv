@@ -35,7 +35,7 @@
       </visual>
     </link>
     <joint name='wheel_fl_joint' type='revolute'>
-      <pose relative_to='base_link'>0.20000000000000001 0.14999999999999999 0.13 0 0 0</pose>
+      <pose relative_to='base_link'>0.20000000000000001 0.14999999999999999 0.059999999999999998 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_fl</child>
       <axis>
@@ -88,7 +88,7 @@
       </visual>
     </link>
     <joint name='wheel_fr_joint' type='revolute'>
-      <pose relative_to='base_link'>0.20000000000000001 -0.14999999999999999 0.13 0 0 0</pose>
+      <pose relative_to='base_link'>0.20000000000000001 -0.14999999999999999 0.059999999999999998 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_fr</child>
       <axis>
@@ -141,7 +141,7 @@
       </visual>
     </link>
     <joint name='wheel_rl_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.20000000000000001 0.14999999999999999 0.13 0 0 0</pose>
+      <pose relative_to='base_link'>-0.20000000000000001 0.14999999999999999 0.059999999999999998 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_rl</child>
       <axis>
@@ -194,7 +194,7 @@
       </visual>
     </link>
     <joint name='wheel_rr_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.20000000000000001 -0.14999999999999999 0.13 0 0 0</pose>
+      <pose relative_to='base_link'>-0.20000000000000001 -0.14999999999999999 0.059999999999999998 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_rr</child>
       <axis>

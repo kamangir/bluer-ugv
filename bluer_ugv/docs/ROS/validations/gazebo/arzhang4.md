@@ -23,7 +23,12 @@ on a terminal on the same mac,
 @ROS gazebo spawn
 ```
 
-🔥
+```bash
+gz topic -t /cmd_vel -m gz.msgs.Twist -p "linear: {x: 2.4} angular: {z: 10.0}"
+```
 
+|   |
+| --- |
+| [![image](https://github.com/kamangir/assets3/raw/main/ROS/arzhang4.gif?raw=true)](https://github.com/kamangir/assets3/raw/main/ROS/arzhang4.gif?raw=true) |
 
 
