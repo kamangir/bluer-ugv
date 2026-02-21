@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 export GZ_IP=127.0.0.1
-export GZ_PARTITION=arzhang
+export GZ_PARTITION=arzhang4
 export GZ_VERBOSE=4
 
 function bluer_ugv_ROS_gazebo() {
