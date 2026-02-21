@@ -67,6 +67,10 @@
 	control \
 	[angular=<0.0>,dryrun,linear=<0.0>]
  . control the robot.
+   angular
+      rotational velocity (rad/s)
+   linear
+      forward/backward velocity (m/s)
 @ROS \
 	gazebo \
 	robot \
