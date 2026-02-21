@@ -2,27 +2,7 @@ from typing import List
 
 from bluer_options.terminal import show_usage, xtra
 
-
-def help_gazebo(
-    tokens: List[str],
-    mono: bool,
-) -> str:
-    options = "".join(
-        [
-            xtra("dryrun,", mono=mono),
-            "server",
-        ]
-    )
-
-    return show_usage(
-        [
-            "@ROS",
-            "gazebo",
-            f"[{options}]",
-        ],
-        "start gazebo.",
-        mono=mono,
-    )
+from bluer_ugv.help.ROS.gazebo import help_functions as help_gazebo
 
 
 def help_install(

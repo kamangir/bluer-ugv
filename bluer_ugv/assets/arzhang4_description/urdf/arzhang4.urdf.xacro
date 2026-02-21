@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<robot name="arzhang4" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- ================= PARAMETERS ================= -->
+  <xacro:property name="base_length" value="0.6" />
+  <xacro:property name="base_width" value="0.26" />
+  <xacro:property name="base_height" value="0.12" />
+
+  <xacro:property name="wheel_radius" value="0.13" />
+  <xacro:property name="wheel_width" value="0.1" />
+
+  <xacro:property name="wheel_x" value="0.2" />
+  <xacro:property name="wheel_y" value="0.15" />
+  <xacro:property name="wheel_z" value="0.06" />
+
+  <!-- ================= BASE LINK ================= -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0" />
+      <mass value="12.0" />
+      <inertia ixx="0.20" ixy="0.0" ixz="0.0"
+        iyy="0.35" iyz="0.0"
+        izz="0.45" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0" />
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}" />
+      </geometry>
+      <material name="gray">
+        <color rgba="0.6 0.6 0.6 1.0" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0" />
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ================= WHEEL MACRO ================= -->
+  <xacro:macro name="wheel" params="name x y">
+
+    <link name="${name}">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="1.0" />
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0"
+          iyy="0.001" iyz="0.0"
+          izz="0.001" />
+      </inertial>
+
+      <!-- IMPORTANT: rotate cylinder so its Z-axis becomes Y (wheel axle) -->
+      <visual>
+        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.1 0.1 0.1 1.0" />
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link" />
+      <child link="${name}" />
+      <origin xyz="${x} ${y} ${wheel_z}" rpy="0 0 0" />
+      <!-- Axle along Y -->
+      <axis xyz="0 1 0" />
+    </joint>
+
+  </xacro:macro>
+
+  <!-- ================= FOUR WHEELS ================= -->
+  <xacro:wheel name="wheel_fl" x="${ wheel_x}" y="${ wheel_y}" />
+  <xacro:wheel name="wheel_fr" x="${ wheel_x}" y="${-wheel_y}" />
+  <xacro:wheel name="wheel_rl" x="${-wheel_x}" y="${ wheel_y}" />
+  <xacro:wheel name="wheel_rr" x="${-wheel_x}" y="${-wheel_y}" />
+
+  <!-- ================= GAZEBO DIFF DRIVE ================= -->
+  <gazebo>
+    <plugin filename="gz-sim-diff-drive-system"
+      name="gz::sim::systems::DiffDrive">
+
+      <left_joint>wheel_fl_joint</left_joint>
+      <left_joint>wheel_rl_joint</left_joint>
+
+      <right_joint>wheel_fr_joint</right_joint>
+      <right_joint>wheel_rr_joint</right_joint>
+
+      <wheel_separation>0.3</wheel_separation>
+      <wheel_radius>0.1</wheel_radius>
+
+      <topic>cmd_vel</topic>
+      <odom_topic>odom</odom_topic>
+
+      <odom_frame>odom</odom_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+
+      <publish_tf>true</publish_tf>
+
+    </plugin>
+  </gazebo>
+
+</robot>

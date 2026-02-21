@@ -1,4 +1,4 @@
-from bluer_ugv.README.ROS import validations
+from bluer_ugv.README.ROS.validations import docs as validations
 
 docs = [
     {

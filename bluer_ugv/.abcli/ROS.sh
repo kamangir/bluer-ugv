@@ -9,7 +9,8 @@ function bluer_ugv_ROS() {
         return
     fi
 
-    python3 -m bluer_ugv.ROS "$@"
+    bluer_ai_log_error "@ROS: $task: command not found."
+    return 1
 }
 
 bluer_ai_source_caller_suffix_path /ROS
