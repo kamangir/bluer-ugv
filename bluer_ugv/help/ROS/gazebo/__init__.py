@@ -5,6 +5,21 @@ from bluer_options.terminal import show_usage, xtra
 from bluer_ugv.help.ROS.gazebo.gui import help_functions as help_gui
 
 
+def help_log(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    return show_usage(
+        [
+            "@ROS",
+            "gazebo",
+            "log",
+        ],
+        "log the state.",
+        mono=mono,
+    )
+
+
 def help_publish_robot_description(
     tokens: List[str],
     mono: bool,
@@ -24,6 +39,7 @@ def help_publish_robot_description(
 
 
 help_functions = {
+    "log": help_log,
     "gui": help_gui,
     "publish_robot_description": help_publish_robot_description,
 }

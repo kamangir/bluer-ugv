@@ -48,6 +48,10 @@
  . @git @ugv.
 @ROS \
 	gazebo \
+	log
+ . log the state.
+@ROS \
+	gazebo \
 	gui \
 	open \
 	[dryrun]

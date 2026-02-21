@@ -3,6 +3,10 @@
 ```bash
 @ROS \
 	gazebo \
+	log
+ . log the state.
+@ROS \
+	gazebo \
 	gui \
 	open \
 	[dryrun]

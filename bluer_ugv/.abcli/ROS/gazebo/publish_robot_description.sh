@@ -8,6 +8,8 @@ function bluer_ugv_ROS_gazebo_publish_robot_description() {
         return 1
     fi
 
+    bluer_ugv_ROS_gazebo_log
+
     bluer_ai_badge - "gazebo/robot-description 🦾"
 
     xacro /root/git/bluer-ugv/bluer_ugv/assets/arzhang4_description/urdf/arzhang4.urdf.xacro >/tmp/arzhang4.urdf
