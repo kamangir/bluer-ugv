@@ -11,7 +11,10 @@ function test_bluer_ugv_help() {
         "@ROS gazebo gui open" \
         "@ROS gazebo gui serve" \
         "@ROS gazebo log" \
-        "@ROS gazebo publish_robot_description" \
+        "@ROS gazebo robot" \
+        "@ROS gazebo robot control" \
+        "@ROS gazebo robot publish" \
+        "@ROS gazebo robot spawn" \
         "@ROS install" \
         "@ROS open" \
         "@ROS start" \

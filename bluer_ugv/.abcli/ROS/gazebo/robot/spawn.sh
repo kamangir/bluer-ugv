@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-function bluer_ugv_ROS_gazebo_spawn() {
+function bluer_ugv_ROS_gazebo_robot_spawn() {
     local options=$1
 
     if [[ "$abcli_is_mac" == false ]]; then

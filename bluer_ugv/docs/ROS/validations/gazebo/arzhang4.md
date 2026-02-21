@@ -16,13 +16,19 @@ on separate terminals on a mac,
 on a terminal in the ROS container on the same mac,
 
 ```bash
-@ROS gazebo publish_robot_description
+@ROS gazebo robot publish
 ```
 
 on a terminal on the same mac,
 
 ```bash
-@ROS gazebo spawn
+@ROS gazebo robot spawn
+```
+
+🔥
+
+```bash
+@ROS gazebo robot control linear=2.4,angular=10
 ```
 
 ```bash
