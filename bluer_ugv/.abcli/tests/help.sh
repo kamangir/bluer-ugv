@@ -7,6 +7,9 @@ function test_bluer_ugv_help() {
     for module in \
         "@ROS" \
         "@ROS gazebo" \
+        "@ROS gazebo gui" \
+        "@ROS gazebo gui open" \
+        "@ROS gazebo gui serve" \
         "@ROS install" \
         "@ROS open" \
         "@ROS start" \

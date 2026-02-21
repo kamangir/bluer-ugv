@@ -3,8 +3,16 @@
 ```bash
 @ROS \
 	gazebo \
-	[dryrun,server]
- . start gazebo.
+	gui \
+	open \
+	[dryrun]
+ . open gazebo gui.
+@ROS \
+	gazebo \
+	gui \
+	serve \
+	[dryrun]
+ . serve gazebo gui.
 @ROS \
 	install \
 	[dryrun]

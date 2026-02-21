@@ -1,13 +1,13 @@
-# ROS: validations: gazebo
+# ROS: validations: gazebo: gui
 
-on separate terminals on the mac,
+on separate terminals on a mac,
 
 ```bash
-@ROS gazebo serve
+@ROS gazebo gui serve
 ```
 
 ```bash
-@ROS gazebo
+@ROS gazebo gui open
 ```
 
 |   |

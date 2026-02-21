@@ -11,6 +11,8 @@ setup(
     packages=[
         NAME,
         f"{NAME}.help",
+        f"{NAME}.help.ROS",
+        f"{NAME}.help.ROS.gazebo",
         f"{NAME}.help.swallow",
         f"{NAME}.help.swallow.video",
         #
@@ -22,6 +24,8 @@ setup(
         f"{NAME}.README.ravin",
         f"{NAME}.README.computer",
         f"{NAME}.README.computer.shield",
+        f"{NAME}.README.ROS",
+        f"{NAME}.README.ROS.validations",
         f"{NAME}.README.swallow",
         f"{NAME}.README.swallow.digital",
         f"{NAME}.README.swallow.digital.algo",
