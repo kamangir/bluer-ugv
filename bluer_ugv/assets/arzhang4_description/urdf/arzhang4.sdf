@@ -29,8 +29,8 @@
           </box>
         </geometry>
         <material>
-          <diffuse>0.625 0.625 0.625 1</diffuse>
-          <ambient>0.625 0.625 0.625 1</ambient>
+          <diffuse>0.75000006 0.75000006 0.75000006 1</diffuse>
+          <ambient>0.75000006 0.75000006 0.75000006 1</ambient>
         </material>
       </visual>
     </link>
@@ -65,7 +65,7 @@
         </inertia>
       </inertial>
       <collision name='wheel_fl_collision'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -74,7 +74,7 @@
         </geometry>
       </collision>
       <visual name='wheel_fl_visual'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -118,7 +118,7 @@
         </inertia>
       </inertial>
       <collision name='wheel_fr_collision'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -127,7 +127,7 @@
         </geometry>
       </collision>
       <visual name='wheel_fr_visual'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -171,7 +171,7 @@
         </inertia>
       </inertial>
       <collision name='wheel_rl_collision'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -180,7 +180,7 @@
         </geometry>
       </collision>
       <visual name='wheel_rl_visual'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -224,7 +224,7 @@
         </inertia>
       </inertial>
       <collision name='wheel_rr_collision'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -233,7 +233,7 @@
         </geometry>
       </collision>
       <visual name='wheel_rr_visual'>
-        <pose>0 0 0 0 1.5707963267948966 0</pose>
+        <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
             <length>0.050000000000000003</length>
@@ -251,7 +251,7 @@
       <left_joint>wheel_rl_joint</left_joint>
       <right_joint>wheel_fr_joint</right_joint>
       <right_joint>wheel_rr_joint</right_joint>
-      <wheel_separation>0.30000000000000004</wheel_separation>
+      <wheel_separation>0.3</wheel_separation>
       <wheel_radius>0.1</wheel_radius>
       <topic>cmd_vel</topic>
       <odom_topic>odom</odom_topic>

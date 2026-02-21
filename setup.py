@@ -44,6 +44,8 @@ setup(
         f"{NAME}.designs.ravin.ravin3",
         f"{NAME}.designs.ravin.ravin4",
         #
+        f"{NAME}.ROS",
+        #
         f"{NAME}.swallow",
         f"{NAME}.swallow.dataset",
         f"{NAME}.swallow.session",

@@ -15,9 +15,16 @@ function bluer_ugv_ROS_gazebo_publish_robot_description() {
     local path=$(python3 -m bluer_ugv locate)/assets/${GZ_PARTITION}_description/urdf/
 
     xacro $path/$GZ_PARTITION.urdf.xacro >$path/$GZ_PARTITION.urdf
+    [[ $? -ne 0 ]] && return 1
 
-    ros2 run robot_state_publisher robot_state_publisher \
-        --ros-args -p robot_description:="$(cat $path/$GZ_PARTITION.urdf)"
+    python3 -m bluer_ugv.ROS generate_rsp_yaml \
+        --urdf_path $path/$GZ_PARTITION.urdf
+    [[ $? -ne 0 ]] && return 1
+
+    bluer_ai_eval ,$options \
+        ros2 run robot_state_publisher robot_state_publisher \
+        --ros-args --params-file "$path/${GZ_PARTITION}_rsp.yaml"
+    [[ $? -ne 0 ]] && return 1
 
     bluer_ai_badge reset
 }
