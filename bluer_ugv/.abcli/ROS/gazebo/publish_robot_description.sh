@@ -12,10 +12,12 @@ function bluer_ugv_ROS_gazebo_publish_robot_description() {
 
     bluer_ai_badge - "gazebo/robot-description 🦾"
 
-    xacro /root/git/bluer-ugv/bluer_ugv/assets/arzhang4_description/urdf/arzhang4.urdf.xacro >/tmp/arzhang4.urdf
+    local path=$(python3 -m bluer_ugv locate)/assets/${GZ_PARTITION}_description/urdf/
+
+    xacro $path/$GZ_PARTITION.urdf.xacro >$path/$GZ_PARTITION.urdf
 
     ros2 run robot_state_publisher robot_state_publisher \
-        --ros-args -p robot_description:="$(cat /tmp/arzhang4.urdf)"
+        --ros-args -p robot_description:="$(cat $path/$GZ_PARTITION.urdf)"
 
     bluer_ai_badge reset
 }

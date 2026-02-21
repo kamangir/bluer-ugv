@@ -16,6 +16,10 @@ on separate ROS docker terminals on the same mac,
 @ROS gazebo publish_robot_description
 ```
 
+```bash
+@ROS gazebo spawn
+```
+
 🔥
 
 items:::
