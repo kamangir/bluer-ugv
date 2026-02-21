@@ -2,7 +2,7 @@
   <model name='arzhang4'>
     <link name='base_link'>
       <inertial>
-        <pose>0 0 0.089999999999999997 0 0 0</pose>
+        <pose>0 0 0.059999999999999998 0 0 0</pose>
         <mass>12</mass>
         <inertia>
           <ixx>0.20000000000000001</ixx>
@@ -14,18 +14,18 @@
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
-        <pose>0 0 0.089999999999999997 0 0 0</pose>
+        <pose>0 0 0.059999999999999998 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.59999999999999998 0.40000000000000002 0.17999999999999999</size>
+            <size>0.59999999999999998 0.26000000000000001 0.12</size>
           </box>
         </geometry>
       </collision>
       <visual name='base_link_visual'>
-        <pose>0 0 0.089999999999999997 0 0 0</pose>
+        <pose>0 0 0.059999999999999998 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.59999999999999998 0.40000000000000002 0.17999999999999999</size>
+            <size>0.59999999999999998 0.26000000000000001 0.12</size>
           </box>
         </geometry>
         <material>
@@ -35,7 +35,7 @@
       </visual>
     </link>
     <joint name='wheel_fl_joint' type='revolute'>
-      <pose relative_to='base_link'>0.20000000000000001 0.14999999999999999 0.10000000000000001 0 0 0</pose>
+      <pose relative_to='base_link'>0.20000000000000001 0.14999999999999999 0.13 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_fl</child>
       <axis>
@@ -68,8 +68,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -77,8 +77,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
         <material>
@@ -88,7 +88,7 @@
       </visual>
     </link>
     <joint name='wheel_fr_joint' type='revolute'>
-      <pose relative_to='base_link'>0.20000000000000001 -0.14999999999999999 0.10000000000000001 0 0 0</pose>
+      <pose relative_to='base_link'>0.20000000000000001 -0.14999999999999999 0.13 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_fr</child>
       <axis>
@@ -121,8 +121,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -130,8 +130,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
         <material>
@@ -141,7 +141,7 @@
       </visual>
     </link>
     <joint name='wheel_rl_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.20000000000000001 0.14999999999999999 0.10000000000000001 0 0 0</pose>
+      <pose relative_to='base_link'>-0.20000000000000001 0.14999999999999999 0.13 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_rl</child>
       <axis>
@@ -174,8 +174,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -183,8 +183,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
         <material>
@@ -194,7 +194,7 @@
       </visual>
     </link>
     <joint name='wheel_rr_joint' type='revolute'>
-      <pose relative_to='base_link'>-0.20000000000000001 -0.14999999999999999 0.10000000000000001 0 0 0</pose>
+      <pose relative_to='base_link'>-0.20000000000000001 -0.14999999999999999 0.13 0 0 0</pose>
       <parent>base_link</parent>
       <child>wheel_rr</child>
       <axis>
@@ -227,8 +227,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
       </collision>
@@ -236,8 +236,8 @@
         <pose>0 0 0 1.5708 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.050000000000000003</length>
-            <radius>0.10000000000000001</radius>
+            <length>0.10000000000000001</length>
+            <radius>0.13</radius>
           </cylinder>
         </geometry>
         <material>
