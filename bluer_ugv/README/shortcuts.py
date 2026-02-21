@@ -14,7 +14,7 @@ items = markdown.generate_table(
                 "name": "ROS",
                 "url": "./bluer_ugv/docs/ROS",
                 "marquee": assets_url(
-                    "ROS/logo.png",
+                    "ROS/arzhang4.gif",
                     volume=3,
                 ),
             },
