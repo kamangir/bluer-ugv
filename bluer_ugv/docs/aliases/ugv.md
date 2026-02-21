@@ -59,6 +59,11 @@
 	[dryrun]
  . serve gazebo gui.
 @ROS \
+	gazebo \
+	publish_robot_description \
+	[dryrun]
+ . publish robot description.
+@ROS \
 	install \
 	[dryrun]
  . install ROS.

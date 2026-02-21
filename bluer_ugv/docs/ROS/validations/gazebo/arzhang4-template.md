@@ -10,6 +10,12 @@ on separate terminals on a mac,
 @ROS gazebo gui open
 ```
 
+on separate ROS docker terminals on the same mac,
+
+```bash
+@ROS gazebo publish_robot_description
+```
+
 🔥
 
 items:::

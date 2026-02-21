@@ -10,6 +10,7 @@ function test_bluer_ugv_help() {
         "@ROS gazebo gui" \
         "@ROS gazebo gui open" \
         "@ROS gazebo gui serve" \
+        "@ROS gazebo publish_robot_description" \
         "@ROS install" \
         "@ROS open" \
         "@ROS start" \

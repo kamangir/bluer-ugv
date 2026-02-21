@@ -8,7 +8,7 @@ function bluer_ugv_ROS_gazebo_gui_open() {
         return 1
     fi
 
-    bluer_ai_badge - "gazebo gui 🦾"
+    bluer_ai_badge - "gazebo/gui 🦾"
 
     bluer_ai_eval ,$options \
         gz sim -g -v 4
