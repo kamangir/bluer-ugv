@@ -17,7 +17,7 @@ on rpi, inside the ROS container,
 @ROS package build arzhang4
 ```
 
-🔥
+🎰
 
 ```bash
 @ROS test gpio
