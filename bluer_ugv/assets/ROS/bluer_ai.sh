@@ -13,7 +13,7 @@ function bluer_ugv_ROS_container_init() {
         echo "❗️ machine type not found."
         return 1
     fi
-    echo "machine_type: $machine_type"
+    echo "🐬 @ROS: machine_type: $machine_type"
 
     local filename=/root/bluer_ugv_ROS_container_installed
     if [[ -f "$filename" ]]; then
