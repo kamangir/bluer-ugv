@@ -27,7 +27,8 @@ function bluer_ugv_ROS_open() {
         bash --init-file $init_file -i
     local status="$?"
 
-    rm -v $abcli_path_git/verbose
+    [[ -f "$abcli_path_git/verbose" ]] &&
+        rm -v $abcli_path_git/verbose
 
     return $status
 }
