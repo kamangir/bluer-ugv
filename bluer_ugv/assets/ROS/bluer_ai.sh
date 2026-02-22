@@ -11,7 +11,7 @@ function bluer_ugv_ROS_container_init() {
         source /opt/ros/jazzy/setup.bash
         [[ $? -ne 0 ]] && return 1
 
-        python3 -m venv /root/venv/bluer_ai
+        /usr/bin/python3 -m venv --system-site-packages /root/venv/bluer_ai
         [[ $? -ne 0 ]] && return 1
 
         source /root/venv/bluer_ai/bin/activate
@@ -59,6 +59,14 @@ function bluer_ugv_ROS_container_init() {
             ros-jazzy-robot-state-publisher \
             ros-jazzy-joint-state-publisher \
             ros-jazzy-joint-state-publisher-gui
+
+        echo "🐬 @ROS: getting gpio..."
+        apt update
+        apt install -y python3-rpi-lgpio python3-lgpio
+        [[ $? -ne 0 ]] && return 1
+
+        python3 -c "import RPi.GPIO as GPIO; print('✅ RPi.GPIO');"
+        [[ $? -ne 0 ]] && return 1
 
         touch $filename
     fi
