@@ -8,7 +8,7 @@ function bluer_ugv_ROS_gazebo_gui_open() {
         return 1
     fi
 
-    bluer_ugv_ROS_gazebo_log
+    bluer_ugv_ROS_log
 
     bluer_ai_badge - "gazebo/gui 🦾"
 

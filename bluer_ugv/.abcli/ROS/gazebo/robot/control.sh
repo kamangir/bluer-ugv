@@ -12,7 +12,7 @@ function bluer_ugv_ROS_gazebo_robot_control() {
     fi
 
     export GZ_PARTITION=$partition
-    bluer_ugv_ROS_gazebo_log
+    bluer_ugv_ROS_log
 
     bluer_ai_log "linear: $linear, angular: $angular"
 

@@ -23,6 +23,20 @@ def help_install(
     )
 
 
+def help_log(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    return show_usage(
+        [
+            "@ROS",
+            "log",
+        ],
+        "log the state.",
+        mono=mono,
+    )
+
+
 def help_open(
     tokens: List[str],
     mono: bool,
@@ -105,6 +119,7 @@ def help_test(
 help_functions = {
     "gazebo": help_gazebo,
     "install": help_install,
+    "log": help_log,
     "open": help_open,
     "package": help_package,
     "start": help_start,

@@ -10,7 +10,7 @@ function bluer_ugv_ROS_gazebo_robot_publish() {
     fi
 
     export GZ_PARTITION=$partition
-    bluer_ugv_ROS_gazebo_log
+    bluer_ugv_ROS_log
 
     bluer_ai_badge - "gazebo/robot 🦾"
 

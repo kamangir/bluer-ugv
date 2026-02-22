@@ -10,7 +10,7 @@ function bluer_ugv_ROS_gazebo_robot_spawn() {
     fi
 
     export GZ_PARTITION=$partition
-    bluer_ugv_ROS_gazebo_log
+    bluer_ugv_ROS_log
 
     local path=$(python3 -m bluer_ugv locate)/assets/${partition}_description/urdf/
 
