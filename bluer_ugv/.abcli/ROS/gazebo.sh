@@ -1,6 +1,5 @@
 #! /usr/bin/env bash
 
-export GZ_PARTITION=arzhang4
 export GZ_VERBOSE=4
 
 [[ "$abcli_is_mac" == true ]] &&

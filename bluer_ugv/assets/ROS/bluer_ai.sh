@@ -1,6 +1,20 @@
 #! /usr/bin/env bash
 
 function bluer_ugv_ROS_container_init() {
+    local machine_type=""
+    local machine_type_
+    for machine_type_ in mac rpi; do
+        if [[ -f /root/storage/temp/ROS-is-on-$machine_type_ ]]; then
+            machine_type=$machine_type_
+            break
+        fi
+    done
+    if [[ -z "$machine_type" ]]; then
+        echo "❗️ machine type not found."
+        return 1
+    fi
+    echo "🐬 @ROS: machine_type: $machine_type"
+
     local filename=/root/bluer_ugv_ROS_container_installed
     if [[ -f "$filename" ]]; then
         echo "🐬 @ROS: container ✅"
@@ -11,7 +25,7 @@ function bluer_ugv_ROS_container_init() {
         source /opt/ros/jazzy/setup.bash
         [[ $? -ne 0 ]] && return 1
 
-        python3 -m venv /root/venv/bluer_ai
+        /usr/bin/python3 -m venv --system-site-packages /root/venv/bluer_ai
         [[ $? -ne 0 ]] && return 1
 
         source /root/venv/bluer_ai/bin/activate
@@ -41,6 +55,7 @@ function bluer_ugv_ROS_container_init() {
             libgl1 \
             libglib2.0-0t64
         [[ $? -ne 0 ]] && return 1
+
         python3 -c "import cv2; print('✅ opencv', cv2.__version__)"
         [[ $? -ne 0 ]] && return 1
 
@@ -51,14 +66,27 @@ function bluer_ugv_ROS_container_init() {
             ros-jazzy-demo-nodes-py
         [[ $? -ne 0 ]] && return 1
 
-        echo "🐬 @ROS: getting gazebo..."
-        sudo apt update
-        sudo apt install -y \
-            ros-jazzy-ros-gz \
-            ros-jazzy-xacro \
-            ros-jazzy-robot-state-publisher \
-            ros-jazzy-joint-state-publisher \
-            ros-jazzy-joint-state-publisher-gui
+        if [[ "$machine_type" == mac ]]; then
+            echo "🐬 @ROS: getting gazebo..."
+            sudo apt update
+            sudo apt install -y \
+                ros-jazzy-ros-gz \
+                ros-jazzy-xacro \
+                ros-jazzy-robot-state-publisher \
+                ros-jazzy-joint-state-publisher \
+                ros-jazzy-joint-state-publisher-gui
+            [[ $? -ne 0 ]] && return 1
+        fi
+
+        if [[ "$machine_type" == rpi ]]; then
+            echo "🐬 @ROS: getting gpio..."
+            apt update
+            apt install -y python3-rpi-lgpio python3-lgpio
+            [[ $? -ne 0 ]] && return 1
+
+            python3 -c "import RPi.GPIO as GPIO; print('✅ RPi.GPIO');"
+            [[ $? -ne 0 ]] && return 1
+        fi
 
         touch $filename
     fi

@@ -3,6 +3,7 @@ from typing import List
 from bluer_options.terminal import show_usage, xtra
 
 from bluer_ugv.help.ROS.gazebo import help_functions as help_gazebo
+from bluer_ugv.help.ROS.package import help_functions as help_package
 
 
 def help_install(
@@ -18,6 +19,20 @@ def help_install(
             f"[{options}]",
         ],
         "install ROS.",
+        mono=mono,
+    )
+
+
+def help_log(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    return show_usage(
+        [
+            "@ROS",
+            "log",
+        ],
+        "log the state.",
         mono=mono,
     )
 
@@ -84,7 +99,7 @@ def help_test(
 ) -> str:
     options = "".join(
         [
-            "doctor",
+            "doctor,gazebo,gpio",
             xtra(",dryrun,", mono=mono),
             "role=talker|listener",
         ]
@@ -104,7 +119,9 @@ def help_test(
 help_functions = {
     "gazebo": help_gazebo,
     "install": help_install,
+    "log": help_log,
     "open": help_open,
+    "package": help_package,
     "start": help_start,
     "stop": help_stop,
     "test": help_test,

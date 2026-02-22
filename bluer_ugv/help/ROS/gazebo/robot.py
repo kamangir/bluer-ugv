@@ -2,6 +2,8 @@ from typing import List
 
 from bluer_options.terminal import show_usage, xtra
 
+from bluer_ugv import env
+
 
 def help_control(
     tokens: List[str],
@@ -9,9 +11,13 @@ def help_control(
 ) -> str:
     options = "".join(
         [
-            "angular=<0.0>",
-            xtra(",dryrun,", mono=mono),
-            "linear=<0.0>",
+            "angular=<0.0>,linear=<0.0>",
+            xtra(
+                ",partition={}".format(
+                    env.BLUER_UGV_ROS_DEFAULT_PARTITION,
+                ),
+                mono=mono,
+            ),
         ]
     )
 
@@ -24,8 +30,8 @@ def help_control(
         ],
         "control the robot.",
         {
-            "angular": ["rotational velocity (rad/s)"],
-            "linear": ["forward/backward velocity (m/s)"],
+            "angular: rotational velocity (rad/s)": [],
+            "linear: forward/backward velocity (m/s)": [],
         },
         mono=mono,
     )
@@ -35,7 +41,10 @@ def help_publish(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("dryrun", mono=mono)
+    options = xtra(
+        f"partition={env.BLUER_UGV_ROS_DEFAULT_PARTITION}",
+        mono=mono,
+    )
 
     return show_usage(
         [
@@ -54,7 +63,10 @@ def help_spawn(
     tokens: List[str],
     mono: bool,
 ) -> str:
-    options = xtra("dryrun", mono=mono)
+    options = xtra(
+        f"partition={env.BLUER_UGV_ROS_DEFAULT_PARTITION}",
+        mono=mono,
+    )
 
     return show_usage(
         [

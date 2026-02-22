@@ -3,10 +3,6 @@
 ```bash
 @ROS \
 	gazebo \
-	log
- . log the state.
-@ROS \
-	gazebo \
 	gui \
 	open \
 	[dryrun]
@@ -20,32 +16,51 @@
 @ROS \
 	gazebo \
 	control \
-	[angular=<0.0>,dryrun,linear=<0.0>]
+	[angular=<0.0>,linear=<0.0>,partition=arzhang4]
  . control the robot.
-   angular
-      rotational velocity (rad/s)
-   linear
-      forward/backward velocity (m/s)
+   angular: rotational velocity (rad/s)
+   linear: forward/backward velocity (m/s)
 @ROS \
 	gazebo \
 	robot \
 	publish \
-	[dryrun]
+	[partition=arzhang4]
  . publish robot description.
 @ROS \
 	gazebo \
 	robot \
 	spawn \
-	[dryrun]
+	[partition=arzhang4]
  . spawn robot.
 @ROS \
 	install \
 	[dryrun]
  . install ROS.
 @ROS \
+	log
+ . log the state.
+@ROS \
 	open \
 	[dryrun]
  . open ROS.
+@ROS \
+	package \
+	build \
+	<package-name> \
+	[dryrun]
+ . build package.
+@ROS \
+	package \
+	create \
+	<package-name> \
+	[dryrun]
+ . create package.
+@ROS \
+	package \
+	rm \
+	<package-name> \
+	[dryrun]
+ . rm package.
 @ROS \
 	start \
 	[build,~cache,dryrun]
@@ -56,6 +71,6 @@
  . stop ROS.
 @ROS \
 	test \
-	[doctor,dryrun,role=talker|listener]
+	[doctor,gazebo,gpio,dryrun,role=talker|listener]
  . test ROS.
 ```
