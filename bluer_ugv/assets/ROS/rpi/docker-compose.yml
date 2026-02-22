@@ -23,6 +23,7 @@ services:
     tty: true
     volumes:
       - /home/pi/git:/root/git
+      - ${HOME}/storage/:/root/storage
       - bluer_venv:/root/venv
       - bluer_pip_cache:/root/.cache/pip
       - /proc/device-tree:/proc/device-tree:ro

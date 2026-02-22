@@ -3,10 +3,6 @@
 function bluer_ugv_ROS_install() {
     local options=$1
 
-    if [[ "$abcli_is_docker" == true ]]; then
-        :
-    fi
-
     if [[ "$abcli_is_mac" == true ]]; then
         bluer_ai_eval ,$options \
             brew install gz-sim8

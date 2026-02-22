@@ -15,6 +15,7 @@ services:
 
     volumes:
       - ${HOME}/git:/root/git:cached
+      - ${HOME}/storage/:/root/storage
       - bluer_venv:/root/venv
       - bluer_pip_cache:/root/.cache/pip
       - /dev:/dev

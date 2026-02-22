@@ -16,6 +16,9 @@ function bluer_ugv_ROS_open() {
         return 1
     fi
 
+    rm -v $abcli_path_temp/ROS-is-on-*
+    touch $abcli_path_temp/ROS-is-on-$machine_type
+
     local init_file="/root/git/bluer-ugv/bluer_ugv/assets/ROS/bluer_ai.sh"
 
     bluer_ai_eval \
