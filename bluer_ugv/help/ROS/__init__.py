@@ -85,7 +85,7 @@ def help_test(
 ) -> str:
     options = "".join(
         [
-            "doctor",
+            "doctor,gazebo,gpio",
             xtra(",dryrun,", mono=mono),
             "role=talker|listener",
         ]

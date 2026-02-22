@@ -20,6 +20,12 @@ on rpi, inside the ROS container,
 🔥
 
 ```bash
+@ROS test gpio
+```
+
+🔥
+
+```bash
 ros2 run arzhang4 motor_driver
 ```
 
