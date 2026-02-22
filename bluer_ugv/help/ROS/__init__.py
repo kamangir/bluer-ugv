@@ -5,6 +5,24 @@ from bluer_options.terminal import show_usage, xtra
 from bluer_ugv.help.ROS.gazebo import help_functions as help_gazebo
 
 
+def help_create_package(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    options = xtra("dryrun", mono=mono)
+
+    return show_usage(
+        [
+            "@ROS",
+            "create_package",
+            "<package-name>",
+            f"[{options}]",
+        ],
+        "create package.",
+        mono=mono,
+    )
+
+
 def help_install(
     tokens: List[str],
     mono: bool,
@@ -102,6 +120,7 @@ def help_test(
 
 
 help_functions = {
+    "create_package": help_create_package,
     "gazebo": help_gazebo,
     "install": help_install,
     "open": help_open,

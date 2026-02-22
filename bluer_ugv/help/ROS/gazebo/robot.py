@@ -11,9 +11,7 @@ def help_control(
 ) -> str:
     options = "".join(
         [
-            "angular=<0.0>",
-            xtra(",dryrun,", mono=mono),
-            "linear=<0.0>",
+            "angular=<0.0>,linear=<0.0>",
             xtra(
                 ",partition={}".format(
                     env.BLUER_UGV_ROS_DEFAULT_PARTITION,
@@ -44,9 +42,7 @@ def help_publish(
     mono: bool,
 ) -> str:
     options = xtra(
-        "dryrun,partition={}".format(
-            env.BLUER_UGV_ROS_DEFAULT_PARTITION,
-        ),
+        f"partition={env.BLUER_UGV_ROS_DEFAULT_PARTITION}",
         mono=mono,
     )
 
@@ -68,9 +64,7 @@ def help_spawn(
     mono: bool,
 ) -> str:
     options = xtra(
-        "dryrun,partition={}".format(
-            env.BLUER_UGV_ROS_DEFAULT_PARTITION,
-        ),
+        f"partition={env.BLUER_UGV_ROS_DEFAULT_PARTITION}",
         mono=mono,
     )
 

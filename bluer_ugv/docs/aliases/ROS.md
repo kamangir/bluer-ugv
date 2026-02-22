@@ -2,6 +2,11 @@
 
 ```bash
 @ROS \
+	create_package \
+	<package-name> \
+	[dryrun]
+ . create package.
+@ROS \
 	gazebo \
 	log
  . log the state.
@@ -20,7 +25,7 @@
 @ROS \
 	gazebo \
 	control \
-	[angular=<0.0>,dryrun,linear=<0.0>,partition=arzhang4]
+	[angular=<0.0>,linear=<0.0>,partition=arzhang4]
  . control the robot.
    angular: rotational velocity (rad/s)
    linear: forward/backward velocity (m/s)
@@ -28,13 +33,13 @@
 	gazebo \
 	robot \
 	publish \
-	[dryrun,partition=arzhang4]
+	[partition=arzhang4]
  . publish robot description.
 @ROS \
 	gazebo \
 	robot \
 	spawn \
-	[dryrun,partition=arzhang4]
+	[partition=arzhang4]
  . spawn robot.
 @ROS \
 	install \

@@ -4,10 +4,8 @@ title:::
 - `service` quick request/response (calibrate, reset)
 - `action`: long-running task with feedback (navigate to goal)
 
-🔥
-
 ```bash
-@ROS create_package ...
+@ROS create_package arzhang4
 ```
 
 🔥
