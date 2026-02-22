@@ -4,11 +4,7 @@ function bluer_ugv_ROS_install() {
     local options=$1
 
     if [[ "$abcli_is_docker" == true ]]; then
-        pip install RPi.GPIO
-        [[ $? -ne 0 ]] && return 1
-
-        python -c "import RPi.GPIO; print('✅ RPi.GPIO')"
-        [[ $? -ne 0 ]] && return 1
+        :
     fi
 
     if [[ "$abcli_is_mac" == true ]]; then
