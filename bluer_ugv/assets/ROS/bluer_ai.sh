@@ -4,7 +4,7 @@ function bluer_ugv_ROS_container_init() {
     local machine_type=""
     local machine_type_
     for machine_type_ in mac rpi; do
-        if [[ -f $abcli_path_temp/ROS-is-on-$machine_type_ ]]; then
+        if [[ -f /root/storage/temp/ROS-is-on-$machine_type_ ]]; then
             machine_type=$machine_type_
             break
         fi
