@@ -22,7 +22,7 @@ class MotorPins:
     rev: int
 
 
-class Arzhang4MotorDriver(Node):
+class MotorDriver(Node):
     """
     Subscribes: /cmd_vel (geometry_msgs/Twist)
     Drives: 2x motors via H-bridge (two PWM pins per motor) using RPi.GPIO software PWM.
@@ -175,7 +175,7 @@ class Arzhang4MotorDriver(Node):
 
 def main() -> None:
     rclpy.init()
-    node = Arzhang4MotorDriver()
+    node = MotorDriver()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

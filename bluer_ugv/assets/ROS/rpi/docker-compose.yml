@@ -1,9 +1,12 @@
 services:
   ros:
     build: .
+
     container_name: bluer_ugv_ros_rpi
     network_mode: host
     privileged: true
+    devices:
+      - /dev/gpiomem
     stdin_open: true
     tty: true
     volumes:
