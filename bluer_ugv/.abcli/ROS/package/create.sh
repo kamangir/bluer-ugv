@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-function bluer_ugv_ROS_create() {
+function bluer_ugv_ROS_package_create() {
     if [[ "$abcli_is_docker" == false ]]; then
         bluer_ai_log_error "run this command inside the ROS docker container."
         return 1

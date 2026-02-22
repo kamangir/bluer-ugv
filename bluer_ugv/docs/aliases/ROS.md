@@ -57,6 +57,12 @@
 	[dryrun]
  . create package.
 @ROS \
+	package \
+	rm \
+	<package-name> \
+	[dryrun]
+ . rm package.
+@ROS \
 	start \
 	[build,~cache,dryrun]
  . start ROS.

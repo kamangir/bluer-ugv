@@ -41,7 +41,27 @@ def help_create(
     )
 
 
+def help_rm(
+    tokens: List[str],
+    mono: bool,
+) -> str:
+    options = xtra("dryrun", mono=mono)
+
+    return show_usage(
+        [
+            "@ROS",
+            "package",
+            "rm",
+            "<package-name>",
+            f"[{options}]",
+        ],
+        "rm package.",
+        mono=mono,
+    )
+
+
 help_functions = {
     "build": help_build,
     "create": help_create,
+    "rm": help_rm,
 }

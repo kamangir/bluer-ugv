@@ -20,6 +20,7 @@ function test_bluer_ugv_help() {
         "@ROS package" \
         "@ROS package build" \
         "@ROS package create" \
+        "@ROS package rm" \
         "@ROS start" \
         "@ROS stop" \
         "@ROS test" \
