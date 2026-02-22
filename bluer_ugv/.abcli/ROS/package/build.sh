@@ -2,7 +2,7 @@
 
 function bluer_ugv_ROS_package_build() {
     if [[ "$abcli_is_docker" == false ]]; then
-        bluer_ai_log_error "run this command inside the ROS docker container."
+        bluer_ai_log_warning "run this command inside the ROS docker container."
         return 1
     fi
 

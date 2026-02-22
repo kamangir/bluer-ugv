@@ -4,7 +4,7 @@ function bluer_ugv_ROS_gazebo_gui_open() {
     local options=$1
 
     if [[ "$abcli_is_mac" == false ]]; then
-        bluer_ai_log_error "run this command in a mac terminal."
+        bluer_ai_log_warning "run this command in a mac terminal."
         return 1
     fi
 
