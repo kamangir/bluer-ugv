@@ -11,6 +11,17 @@ from geometry_msgs.msg import Twist
 # GPIO: software PWM (will have some jitter under load)
 import RPi.GPIO as GPIO  # pylint: disable=R0402
 
+# ---- Silence rpi-lgpio PWM destructor bug on interpreter shutdown (Pi 5) ----
+# On RPi5, python3-rpi-lgpio provides the RPi.GPIO API via lgpio. During interpreter
+# teardown, module globals can become None before PWM objects are GC'd, causing noisy
+# "Exception ignored in PWM.__del__" traces. We explicitly stop PWM ourselves, so it
+# is safe to disable the buggy destructor.
+try:
+    if hasattr(GPIO, "PWM") and hasattr(GPIO.PWM, "__del__"):
+        GPIO.PWM.__del__ = lambda self: None  # type: ignore[attr-defined]
+except Exception:
+    pass
+
 
 def clamp(x: float, lo: float, hi: float) -> float:
     return lo if x < lo else hi if x > hi else x
@@ -60,6 +71,7 @@ class MotorDriver(Node):
         self._cleaned_up = False  # makes cleanup idempotent
 
         # ---- GPIO setup ----
+        # Use BCM numbering (GPIOxx) to match typical docs and your pin values above.
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
 
@@ -108,6 +120,7 @@ class MotorDriver(Node):
         u = clamp(u, -1.0, 1.0)
         mag = abs(u)
 
+        # apply min/max duty bounds (only when nonzero)
         if mag > 1e-4:
             mag = clamp(mag, 0.0, 1.0)
         else:
@@ -115,6 +128,7 @@ class MotorDriver(Node):
 
         pct = self.duty_to_percent(mag)
 
+        # Select PWM objects based on which motor
         if pins == self.left:
             fwd_pwm = self.left_fwd_pwm
             rev_pwm = self.left_rev_pwm
@@ -145,9 +159,11 @@ class MotorDriver(Node):
         v = float(msg.linear.x)
         w = float(msg.angular.z)
 
+        # For now: assume inputs are already normalized-ish in [-1, 1]
         v_n = clamp(v, -1.0, 1.0)
         w_n = clamp(w, -1.0, 1.0)
 
+        # differential mix
         u_l = clamp(v_n - w_n, -1.0, 1.0)
         u_r = clamp(v_n + w_n, -1.0, 1.0)
 
@@ -166,7 +182,7 @@ class MotorDriver(Node):
             return
         self._cleaned_up = True
 
-        # 1) Stop motors/PWM first (prevents PWM.__del__ explosions)
+        # 1) Stop motors/PWM first
         self.stop_all()
         for pwm in getattr(self, "pwms", []):
             try:
@@ -178,14 +194,22 @@ class MotorDriver(Node):
             except Exception:
                 pass
 
-        # 2) Drive pins low (belt + suspenders)
+        # 2) Remove references so PWM destructors won't run later during teardown
+        for name in ["left_fwd_pwm", "left_rev_pwm", "right_fwd_pwm", "right_rev_pwm"]:
+            try:
+                delattr(self, name)
+            except Exception:
+                pass
+        self.pwms = []
+
+        # 3) Drive pins low (belt + suspenders)
         for pin in [self.left.fwd, self.left.rev, self.right.fwd, self.right.rev]:
             try:
                 GPIO.output(pin, GPIO.LOW)
             except Exception:
                 pass
 
-        # 3) Cleanup last
+        # 4) Cleanup last
         try:
             GPIO.cleanup()
         except Exception:
