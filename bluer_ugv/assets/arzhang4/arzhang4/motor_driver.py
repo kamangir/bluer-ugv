@@ -86,7 +86,7 @@ class Arzhang4MotorDriver(Node):
         u = clamp(u, -1.0, 1.0)
         mag = abs(u)
 
-        duty = clamp(mag, 0.0, 1)
+        duty = clamp(mag, 0.0, 1.0)
         pwm = self.duty_to_u8(duty)
 
         if u >= 0.0:

@@ -4,10 +4,23 @@ title:::
 - uses [classical/motor/left](../../../../swallow/session/classical/motor/left.py)
 - uses [classical/motor/right](../../../../swallow/session/classical/motor/right.py)
 
+on mac,
+
 ```bash
 @ROS package create arzhang4
 # modifications
+```
+
+on rpi, inside the ROS container,
+
+```bash
 @ROS package build arzhang4
+```
+
+🔥
+
+```bash
+ros2 run arzhang4 motor_driver
 ```
 
 🔥
