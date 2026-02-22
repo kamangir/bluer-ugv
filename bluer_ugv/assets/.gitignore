@@ -1,1 +1,4 @@
 *.sh.env
+build
+install
+log
