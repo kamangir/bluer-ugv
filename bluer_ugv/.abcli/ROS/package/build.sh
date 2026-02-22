@@ -18,4 +18,7 @@ function bluer_ugv_ROS_package_build() {
 
     bluer_ai_eval path=$path,$options \
         source install/setup.bash
+    [[ $? -ne 0 ]] && return 1
+
+    bluer_ai_log "COLCON_PREFIX_PATH: $COLCON_PREFIX_PATH"
 }
