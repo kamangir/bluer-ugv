@@ -9,7 +9,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 
 # GPIO: software PWM (will have some jitter under load)
-import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO  # pylint: disable=R0402
 
 
 def clamp(x: float, lo: float, hi: float) -> float:
