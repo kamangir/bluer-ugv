@@ -43,7 +43,7 @@ function bluer_ugv_ROS_test() {
         ls -l /proc/device-tree/model || echo "no /proc/device-tree/model"
         ls -l /sys/firmware/devicetree/base/model || echo "no dt model"
         ls -l /dev/gpiomem || echo "no /dev/gpiomem"
-        python -c "import RPi.GPIO; print('✅ RPi.GPIO')"
+        python3 -c "import RPi.GPIO as GPIO; GPIO.setmode(GPIO.BCM); GPIO.setup(17, GPIO.OUT, initial=GPIO.LOW); print('✅ RPi.GPIO')"
         [[ $? -ne 0 ]] && return 1
     fi
 
