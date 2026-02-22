@@ -20,23 +20,21 @@
 @ROS \
 	gazebo \
 	control \
-	[angular=<0.0>,dryrun,linear=<0.0>]
+	[angular=<0.0>,dryrun,linear=<0.0>,partition=arzhang4]
  . control the robot.
-   angular
-      rotational velocity (rad/s)
-   linear
-      forward/backward velocity (m/s)
+   angular: rotational velocity (rad/s)
+   linear: forward/backward velocity (m/s)
 @ROS \
 	gazebo \
 	robot \
 	publish \
-	[dryrun]
+	[dryrun,partition=arzhang4]
  . publish robot description.
 @ROS \
 	gazebo \
 	robot \
 	spawn \
-	[dryrun]
+	[dryrun,partition=arzhang4]
  . spawn robot.
 @ROS \
 	install \

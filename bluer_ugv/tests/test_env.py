@@ -44,6 +44,7 @@ def test_bluer_ugv_env():
             env.BLUER_UGV_AUDIO_LANGUAGE,
             env.BLUER_UGV_BEAST_MODEL,
             env.BLUER_UGV_RELEASE_2,
+            env.BLUER_UGV_ROS_DEFAULT_PARTITION,
             env.BLUER_UGV_SWALLOW_NAVIGATION_DATASET_LIST,
             env.BLUER_UGV_SWALLOW_NAVIGATION_MODEL,
             env.BLUER_UGV_SWALLOW_SCENARIO,
