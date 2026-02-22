@@ -6,7 +6,8 @@ services:
     network_mode: host
     privileged: true
     devices:
-      - /dev/gpiomem
+      # ✅ Give GPIO access (preferred over /dev/mem)
+      - /dev/gpiomem:/dev/gpiomem
     stdin_open: true
     tty: true
     volumes:
@@ -15,6 +16,10 @@ services:
       # Optional: persist venv & pip cache across rebuilds (faster)
       - bluer_venv:/root/venv
       - bluer_pip_cache:/root/.cache/pip
+
+      # ✅ Let RPi.GPIO detect the platform:
+      - /proc/device-tree:/proc/device-tree:ro
+      - /sys/firmware/devicetree/base:/sys/firmware/devicetree/base:ro
 
 volumes:
   bluer_venv:
