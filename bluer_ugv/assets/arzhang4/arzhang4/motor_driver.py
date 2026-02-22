@@ -39,8 +39,7 @@ class MotorDriver(Node):
         self.declare_parameter("right_rev_pin", 18)
 
         # RPi.GPIO software PWM is happier at lower frequencies (e.g. 100-2000 Hz).
-        # Many motor drivers accept higher, but jitter/CPU load rises fast.
-        self.declare_parameter("pwm_hz", 800)
+        self.declare_parameter("pwm_hz", 800.0)
 
         self.declare_parameter("timeout_s", 0.35)  # deadman stop
 
@@ -56,8 +55,11 @@ class MotorDriver(Node):
         self.pwm_hz = float(self.get_parameter("pwm_hz").value)
         self.timeout_s = float(self.get_parameter("timeout_s").value)
 
+        # ---- Internal state ----
+        self.last_cmd_time = 0.0
+        self._cleaned_up = False  # makes cleanup idempotent
+
         # ---- GPIO setup ----
-        # Use BCM numbering (GPIOxx) to match typical docs and your pin values above.
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
 
@@ -70,15 +72,16 @@ class MotorDriver(Node):
         self.right_fwd_pwm = GPIO.PWM(self.right.fwd, self.pwm_hz)
         self.right_rev_pwm = GPIO.PWM(self.right.rev, self.pwm_hz)
 
-        for pwm in [
+        self.pwms = [
             self.left_fwd_pwm,
             self.left_rev_pwm,
             self.right_fwd_pwm,
             self.right_rev_pwm,
-        ]:
+        ]
+
+        for pwm in self.pwms:
             pwm.start(0.0)
 
-        self.last_cmd_time = 0.0
         self.stop_all()
 
         # ---- ROS interfaces ----
@@ -105,7 +108,6 @@ class MotorDriver(Node):
         u = clamp(u, -1.0, 1.0)
         mag = abs(u)
 
-        # apply min/max duty bounds (only when nonzero)
         if mag > 1e-4:
             mag = clamp(mag, 0.0, 1.0)
         else:
@@ -113,7 +115,6 @@ class MotorDriver(Node):
 
         pct = self.duty_to_percent(mag)
 
-        # Select PWM objects based on which motor
         if pins == self.left:
             fwd_pwm = self.left_fwd_pwm
             rev_pwm = self.left_rev_pwm
@@ -129,10 +130,14 @@ class MotorDriver(Node):
             rev_pwm.ChangeDutyCycle(pct)
 
     def stop_all(self) -> None:
-        self.left_fwd_pwm.ChangeDutyCycle(0.0)
-        self.left_rev_pwm.ChangeDutyCycle(0.0)
-        self.right_fwd_pwm.ChangeDutyCycle(0.0)
-        self.right_rev_pwm.ChangeDutyCycle(0.0)
+        # Always safe to call (best-effort)
+        try:
+            self.left_fwd_pwm.ChangeDutyCycle(0.0)
+            self.left_rev_pwm.ChangeDutyCycle(0.0)
+            self.right_fwd_pwm.ChangeDutyCycle(0.0)
+            self.right_rev_pwm.ChangeDutyCycle(0.0)
+        except Exception:
+            pass
 
     def on_cmd_vel(self, msg: Twist) -> None:
         self.last_cmd_time = time.time()
@@ -140,11 +145,9 @@ class MotorDriver(Node):
         v = float(msg.linear.x)
         w = float(msg.angular.z)
 
-        # For now: assume inputs are already normalized-ish in [-1, 1]
         v_n = clamp(v, -1.0, 1.0)
         w_n = clamp(w, -1.0, 1.0)
 
-        # differential mix
         u_l = clamp(v_n - w_n, -1.0, 1.0)
         u_r = clamp(v_n + w_n, -1.0, 1.0)
 
@@ -157,18 +160,40 @@ class MotorDriver(Node):
         if (time.time() - self.last_cmd_time) > self.timeout_s:
             self.stop_all()
 
+    def _cleanup_gpio(self) -> None:
+        """Safe, idempotent GPIO/PWM cleanup (can be called multiple times)."""
+        if self._cleaned_up:
+            return
+        self._cleaned_up = True
+
+        # 1) Stop motors/PWM first (prevents PWM.__del__ explosions)
+        self.stop_all()
+        for pwm in getattr(self, "pwms", []):
+            try:
+                pwm.ChangeDutyCycle(0.0)
+            except Exception:
+                pass
+            try:
+                pwm.stop()
+            except Exception:
+                pass
+
+        # 2) Drive pins low (belt + suspenders)
+        for pin in [self.left.fwd, self.left.rev, self.right.fwd, self.right.rev]:
+            try:
+                GPIO.output(pin, GPIO.LOW)
+            except Exception:
+                pass
+
+        # 3) Cleanup last
+        try:
+            GPIO.cleanup()
+        except Exception:
+            pass
+
     def destroy_node(self) -> None:
         try:
-            self.stop_all()
-            # Stop PWM cleanly
-            for pwm in [
-                self.left_fwd_pwm,
-                self.left_rev_pwm,
-                self.right_fwd_pwm,
-                self.right_rev_pwm,
-            ]:
-                pwm.stop()
-            GPIO.cleanup()
+            self._cleanup_gpio()
         finally:
             super().destroy_node()
 
@@ -181,8 +206,18 @@ def main() -> None:
     except KeyboardInterrupt:
         pass
     finally:
-        node.destroy_node()
-        rclpy.shutdown()
+        # Ensure motors are stopped even if something goes wrong
+        try:
+            node.destroy_node()
+        except Exception:
+            pass
+
+        # Avoid "rcl_shutdown already called" on Ctrl+C
+        try:
+            if rclpy.ok():
+                rclpy.shutdown()
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":
