@@ -10,10 +10,10 @@ function bluer_ugv_ROS_container_init() {
         fi
     done
     if [[ -z "$machine_type" ]]; then
-        bluer_ai_log_error "machine type not found."
+        echo "❗️ machine type not found."
         return 1
     fi
-    bluer_ai_log "machine_type: $machine_type"
+    echo "machine_type: $machine_type"
 
     local filename=/root/bluer_ugv_ROS_container_installed
     if [[ -f "$filename" ]]; then
