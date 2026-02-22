@@ -2,11 +2,6 @@
 
 ```bash
 @ROS \
-	create_package \
-	<package-name> \
-	[dryrun]
- . create package.
-@ROS \
 	gazebo \
 	log
  . log the state.
@@ -49,6 +44,18 @@
 	open \
 	[dryrun]
  . open ROS.
+@ROS \
+	package \
+	build \
+	<package-name> \
+	[dryrun]
+ . build package.
+@ROS \
+	package \
+	create \
+	<package-name> \
+	[dryrun]
+ . create package.
 @ROS \
 	start \
 	[build,~cache,dryrun]

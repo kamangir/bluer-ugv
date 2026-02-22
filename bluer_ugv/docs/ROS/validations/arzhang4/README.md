@@ -5,7 +5,9 @@
 - uses [classical/motor/right](../../../../swallow/session/classical/motor/right.py)
 
 ```bash
-@ROS create_package arzhang4
+@ROS package create arzhang4
+# modifications
+@ROS package build arzhang4
 ```
 
 🔥

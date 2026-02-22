@@ -6,7 +6,6 @@ function test_bluer_ugv_help() {
     local module
     for module in \
         "@ROS" \
-        "@ROS create_package" \
         "@ROS gazebo" \
         "@ROS gazebo gui" \
         "@ROS gazebo gui open" \
@@ -18,6 +17,9 @@ function test_bluer_ugv_help() {
         "@ROS gazebo robot spawn" \
         "@ROS install" \
         "@ROS open" \
+        "@ROS package" \
+        "@ROS package build" \
+        "@ROS package create" \
         "@ROS start" \
         "@ROS stop" \
         "@ROS test" \
