@@ -1,10 +1,8 @@
 import threading
 import time
-from typing import Dict, List
 
 from bluer_options.env import BLUER_AI_CLOUD_IS_ACCESSIBLE
 from bluer_objects.env import abcli_object_name
-from bluer_objects.metadata import post_to_object
 from bluer_agent.audio.properties import AudioProperties
 from bluer_agent.audio.conversation import converse, greeting
 from bluer_agent.rag.corpus.context import Context
@@ -47,8 +45,6 @@ class ClassicalAudio:
 
         self.running = False
 
-        self.log: List[Dict[str, Dict]] = []
-
         if not self.enabled:
             return
 
@@ -65,41 +61,21 @@ class ClassicalAudio:
 
         logger.info(f"{self.__class__.__name__}.stopped.")
 
-        post_to_object(
-            abcli_object_name,
-            "audio",
-            self.log,
-        )
-
     def loop(self):
         logger.info(f"{self.__class__.__name__}.loop started.")
 
-        audio_prompt: str = greeting
         while self.running:
             if not self.config.get("audio_enabled"):
-                audio_prompt = greeting
                 time.sleep(0.01)
                 continue
 
-            success, query, reply = converse(
+            converse(
                 context=self.context,
                 object_name=abcli_object_name,
-                greeting=audio_prompt,
+                greeting=greeting,
                 language=env.BLUER_UGV_AUDIO_LANGUAGE,
                 audio_properties=self.audio_properties,
             )
-            if not success or not query:
-                if not query:
-                    self.config.set("audio_enabled", False)
 
-                time.sleep(1)
-                continue
-
-            self.log += [
-                {
-                    "user": query,
-                    "assistant": reply,
-                },
-            ]
-
-            audio_prompt = reply
+            self.config.set("audio_enabled", False)
+            time.sleep(0.01)
