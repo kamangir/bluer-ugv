@@ -9,6 +9,7 @@
 - [mechanical](./mechanical.md)
 - [terraform](./terraform.md)
 - [operation](./operation.md)
+- [conversation](https://github.com/kamangir/bluer-agent/blob/main/bluer_agent/docs/audio/conversation.md)
 
 |   |   |   |
 | --- | --- | --- |
