@@ -120,6 +120,7 @@ class MotorDriver(Node):
             f"L(fwd:{self.left.fwd},rev:{self.left.rev}) R(fwd:{self.right.fwd},rev:{self.right.rev}), "
             f"pwm_hz={self.pwm_hz}, timeout_s={self.timeout_s}, "
             f"debug={self.debug}, log_period_s={self.log_period_s}"
+            "^C to quit"
         )
 
     def duty_to_percent(self, duty_0_1: float) -> float:

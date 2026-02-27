@@ -12,5 +12,5 @@
 	[~build,dryrun] \
 	<node-name>
  . test <node-name>.
-   node-name: motor_driver
+   node-name: teleop
 ```

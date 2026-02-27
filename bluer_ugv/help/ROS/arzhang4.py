@@ -39,7 +39,7 @@ def help_test(
         ],
         "test <node-name>.",
         {
-            "node-name: motor_driver": "",
+            "node-name: teleop": "",
         },
         mono=mono,
     )

@@ -6,7 +6,7 @@ function bluer_ugv_ROS_arzhang4_test() {
     local node_name=$2
 
     local command=""
-    [[ "$node_name" == "motor_driver" ]] &&
+    [[ "$node_name" == "teleop" ]] &&
         command="ros2 topic echo /cmd_vel"
 
     if [[ -z "$command" ]]; then
