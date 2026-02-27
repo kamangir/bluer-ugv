@@ -133,7 +133,7 @@ class Arzhang4KeyboardTeleop(Node):
             self.turn_dir = -1
             self.last_turn_key_t = now
             self._dbg("KEY d -> turn_dir=-1 (right)")
-        elif ch == " " or ch == "x":
+        elif ch in [" ", "x"]:
             self.speed_level = 0
             self.turn_dir = 0
             self.last_turn_key_t = 0.0
