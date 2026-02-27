@@ -14,7 +14,11 @@ function bluer_ugv_ROS_arzhang4_test() {
         return 1
     fi
 
+    bluer_ai_badge - "arzhang4 $node_name 🔍"
+
     bluer_ai_eval ,$options \
         $command \
         "${@:4}"
+
+    bluer_ai_badge reset
 }
