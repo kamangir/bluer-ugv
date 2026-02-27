@@ -36,22 +36,31 @@ def read_key_nonblocking(timeout_s: float = 0.0) -> str:
     return ch
 
 
-class KeyboardTeleop(Node):
+def fmt_char(ch: str) -> str:
+    """Human-friendly representation of a possibly-nonprintable character."""
+    if ch == "":
+        return "<EMPTY>"
+    o = ord(ch)
+    if 32 <= o <= 126:
+        return f"'{ch}' (ord={o})"
+    return f"<0x{o:02x}> (ord={o})"
+
+
+class Arzhang4KeyboardTeleop(Node):
     def __init__(self) -> None:
         super().__init__("arzhang4_keyboard_teleop")
 
-        # --- Params you may want to tune ---
+        # --- Params ---
         self.declare_parameter("topic", "/cmd_vel")
         self.declare_parameter("rate_hz", 20.0)
-
-        # Map speed level [-5..+5] to linear.x in [-max_linear..+max_linear]
         self.declare_parameter("max_linear", 1.0)
-
-        # Turning while pressed (via key-repeat). angular.z = +/- max_angular
         self.declare_parameter("max_angular", 1.0)
-
-        # If we don't see another a/d within this time, stop turning.
         self.declare_parameter("turn_hold_s", 0.18)
+
+        # Debug params
+        self.declare_parameter("debug", True)
+        self.declare_parameter("debug_heartbeat_s", 1.0)
+        self.declare_parameter("debug_log_all_keys", True)  # log even w/s/a/d
 
         self.topic = str(self.get_parameter("topic").value)
         self.rate_hz = float(self.get_parameter("rate_hz").value)
@@ -59,16 +68,24 @@ class KeyboardTeleop(Node):
         self.max_angular = float(self.get_parameter("max_angular").value)
         self.turn_hold_s = float(self.get_parameter("turn_hold_s").value)
 
+        self.debug = bool(self.get_parameter("debug").value)
+        self.debug_heartbeat_s = float(self.get_parameter("debug_heartbeat_s").value)
+        self.debug_log_all_keys = bool(self.get_parameter("debug_log_all_keys").value)
+
         self.pub = self.create_publisher(Twist, self.topic, 10)
 
-        # Speed “setpoint level” in [-5..+5]
-        self.speed_level = 0  # int
-
-        # Turning state (momentary)
+        # State
+        self.speed_level = 0  # int in [-5..5]
         self.turn_dir = 0  # -1 right, +1 left
         self.last_turn_key_t = 0.0
 
-        # Main loop timer (publishes Twist regularly)
+        # Debug state
+        self._last_heartbeat_t = 0.0
+        self._last_publish_t = 0.0
+        self._last_key_t = 0.0
+        self._keys_seen = 0
+
+        # Timer
         dt = 1.0 / max(1.0, self.rate_hz)
         self.timer = self.create_timer(dt, self.on_timer)
 
@@ -81,33 +98,60 @@ class KeyboardTeleop(Node):
             f"Publishing to {self.topic} @ {self.rate_hz} Hz"
         )
 
+        if self.debug:
+            self.get_logger().info(
+                "DEBUG ON\n"
+                f"stdin.isatty()={sys.stdin.isatty()}  "
+                f"fileno={sys.stdin.fileno()}  "
+                f"sys.stdin={type(sys.stdin)}"
+            )
+            try:
+                self.get_logger().info(
+                    f"stdout.isatty()={sys.stdout.isatty()}  fileno={sys.stdout.fileno()}"
+                )
+            except Exception:
+                pass
+
+    def _dbg(self, msg: str) -> None:
+        if self.debug:
+            self.get_logger().info(msg)
+
     def _apply_key(self, ch: str) -> None:
         now = time.time()
 
         if ch == "w":
             self.speed_level = min(5, self.speed_level + 1)
+            self._dbg(f"KEY w -> speed_level={self.speed_level}")
         elif ch == "s":
             self.speed_level = max(-5, self.speed_level - 1)
+            self._dbg(f"KEY s -> speed_level={self.speed_level}")
         elif ch == "a":
             self.turn_dir = +1
             self.last_turn_key_t = now
+            self._dbg("KEY a -> turn_dir=+1 (left)")
         elif ch == "d":
             self.turn_dir = -1
             self.last_turn_key_t = now
+            self._dbg("KEY d -> turn_dir=-1 (right)")
         elif ch == " " or ch == "x":
             self.speed_level = 0
             self.turn_dir = 0
             self.last_turn_key_t = 0.0
+            self._dbg("KEY stop -> speed_level=0, turn_dir=0")
         elif ch == "q":
+            self._dbg("KEY q -> quitting")
             raise KeyboardInterrupt
+        else:
+            # Unknown key: log it (important!)
+            self._dbg(f"KEY unknown: {fmt_char(ch)}")
 
     def _publish(self) -> None:
         # Stop turning if key-repeat isn't continuing
         if self.turn_dir != 0 and self.last_turn_key_t > 0.0:
             if (time.time() - self.last_turn_key_t) > self.turn_hold_s:
                 self.turn_dir = 0
+                self._dbg("turn hold expired -> turn_dir=0")
 
-        # Convert level -> linear speed
         linear = (self.speed_level / 5.0) * self.max_linear
         angular = float(self.turn_dir) * self.max_angular
 
@@ -116,33 +160,51 @@ class KeyboardTeleop(Node):
         msg.angular.z = float(angular)
         self.pub.publish(msg)
 
+        self._last_publish_t = time.time()
+
     def on_timer(self) -> None:
+        now = time.time()
+
+        # Heartbeat proves timer is firing even if keys don't show
+        if self.debug and (now - self._last_heartbeat_t) >= self.debug_heartbeat_s:
+            self._last_heartbeat_t = now
+            self._dbg(
+                f"heartbeat: keys_seen={self._keys_seen}, "
+                f"speed_level={self.speed_level}, turn_dir={self.turn_dir}, "
+                f"dt_since_last_key={now - self._last_key_t:.2f}s"
+            )
+
         # Read all available keys quickly (nonblocking)
         while True:
+            # We can also debug select() readiness by doing a tiny timeout
             ch = read_key_nonblocking(timeout_s=0.0)
             if not ch:
                 break
-            try:
-                self._apply_key(ch)
-            except KeyboardInterrupt:
-                raise
+
+            self._keys_seen += 1
+            self._last_key_t = now
+
+            # Log raw keys (even w/s/a/d) if requested
+            if self.debug and self.debug_log_all_keys:
+                self._dbg(f"raw read: {fmt_char(ch)}")
+
+            self._apply_key(ch)
 
         self._publish()
 
 
 def main() -> None:
     rclpy.init()
-
-    node = KeyboardTeleop()
+    node = Arzhang4KeyboardTeleop()
 
     try:
-        # Must run in a real terminal (not in some IDE consoles)
+        # Must run in a real terminal
         with RawTerminal():
             rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
-        # Send a final stop for safety
+        # final stop
         try:
             stop = Twist()
             node.pub.publish(stop)
