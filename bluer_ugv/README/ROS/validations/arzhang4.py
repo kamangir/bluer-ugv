@@ -7,5 +7,7 @@ docs = [
     }
     for suffix in [
         "",
+        "motor_driver.md",
+        "teleop.md",
     ]
 ]

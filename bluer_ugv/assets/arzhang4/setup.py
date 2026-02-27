@@ -24,6 +24,7 @@ setup(
     entry_points={
         "console_scripts": [
             "motor_driver = arzhang4.motor_driver:main",
+            "teleop = arzhang4.teleop:main",
         ],
     },
 )
