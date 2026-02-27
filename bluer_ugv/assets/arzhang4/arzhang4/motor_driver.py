@@ -75,8 +75,17 @@ class MotorDriver(Node):
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
 
-        for pin in [self.left.fwd, self.left.rev, self.right.fwd, self.right.rev]:
-            GPIO.setup(pin, GPIO.OUT, initial=GPIO.LOW)
+        for pin in [
+            self.left.fwd,
+            self.left.rev,
+            self.right.fwd,
+            self.right.rev,
+        ]:
+            GPIO.setup(
+                pin,
+                GPIO.OUT,
+                initial=GPIO.LOW,
+            )
 
         # Create PWM objects (duty in 0..100)
         self.left_fwd_pwm = GPIO.PWM(self.left.fwd, self.pwm_hz)
@@ -102,7 +111,7 @@ class MotorDriver(Node):
 
         self.get_logger().info(
             f"Motor driver up (RPi.GPIO). BCM pins "
-            f"L({self.left.fwd},{self.left.rev}) R({self.right.fwd},{self.right.rev}), "
+            f"L(fwd:{self.left.fwd},rev:{self.left.rev}) R(fwd:{self.right.fwd},rev:{self.right.rev}), "
             f"pwm_hz={self.pwm_hz}, timeout_s={self.timeout_s}"
         )
 
