@@ -2,6 +2,7 @@ from typing import List
 
 from bluer_options.terminal import show_usage, xtra
 
+from bluer_ugv.help.ROS.arzhang4 import help_functions as help_arzhang4
 from bluer_ugv.help.ROS.gazebo import help_functions as help_gazebo
 from bluer_ugv.help.ROS.package import help_functions as help_package
 
@@ -117,6 +118,7 @@ def help_test(
 
 
 help_functions = {
+    "arzhang4": help_arzhang4,
     "gazebo": help_gazebo,
     "install": help_install,
     "log": help_log,

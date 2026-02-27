@@ -5,13 +5,11 @@ on rpi, inside the ROS container, two separate terminals,
 🔥
 
 ```bash
-@ROS package build arzhang4
-
-ros2 run arzhang4 motor_driver
+@arzhang4 run - motor_driver
 ```
 
 ```bash
-@ROS package build arzhang4
+@arzhang4 test - motor_driver
 
-ros2 run arzhang4 teleop
+@arzhang4 run - teleop 
 ```

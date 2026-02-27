@@ -5,6 +5,10 @@ function test_bluer_ugv_help() {
 
     local module
     for module in \
+        "@arzhang4" \
+        "@arzhang4 run" \
+        "@arzhang4 test" \
+        \
         "@ROS" \
         "@ROS gazebo" \
         "@ROS gazebo gui" \
