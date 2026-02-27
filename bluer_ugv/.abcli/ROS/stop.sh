@@ -13,7 +13,7 @@ function bluer_ugv_ROS_stop() {
         return 1
     fi
 
-    bluer_ai_badge - "⚙️🦾"
+    bluer_ai_badge - "ROS: stopping 🦾"
 
     bluer_ai_eval \
         path=$(python3 -m bluer_ugv locate)/assets/ROS/$machine_type,$options \

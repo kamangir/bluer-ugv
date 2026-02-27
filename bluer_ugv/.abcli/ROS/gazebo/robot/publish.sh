@@ -12,7 +12,7 @@ function bluer_ugv_ROS_gazebo_robot_publish() {
     export GZ_PARTITION=$partition
     bluer_ugv_ROS_log
 
-    bluer_ai_badge - "gazebo/robot 🦾"
+    bluer_ai_badge - "gazebo robot 🦾"
 
     local path=$(python3 -m bluer_ugv locate)/assets/${partition}_description/urdf/
 

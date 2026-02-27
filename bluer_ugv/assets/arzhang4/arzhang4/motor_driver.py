@@ -27,7 +27,7 @@ def clamp(x: float, lo: float, hi: float) -> float:
     return lo if x < lo else hi if x > hi else x
 
 
-@dataclass
+@dataclass(frozen=True)
 class MotorPins:
     fwd: int
     rev: int
@@ -54,6 +54,12 @@ class MotorDriver(Node):
 
         self.declare_parameter("timeout_s", 0.35)  # deadman stop
 
+        # ---- Debug logging ----
+        # If debug is true, log received cmd_vel and derived motor commands.
+        # log_period_s throttles logs to avoid spam.
+        self.declare_parameter("debug", False)
+        self.declare_parameter("log_period_s", 0.5)
+
         self.left = MotorPins(
             fwd=int(self.get_parameter("left_fwd_pin").value),
             rev=int(self.get_parameter("left_rev_pin").value),
@@ -66,9 +72,18 @@ class MotorDriver(Node):
         self.pwm_hz = float(self.get_parameter("pwm_hz").value)
         self.timeout_s = float(self.get_parameter("timeout_s").value)
 
+        self.debug = bool(self.get_parameter("debug").value)
+        self.log_period_s = float(self.get_parameter("log_period_s").value)
+
         # ---- Internal state ----
         self.last_cmd_time = 0.0
         self._cleaned_up = False  # makes cleanup idempotent
+
+        self._last_log_t = 0.0
+        self._msg_count = 0
+        self._last_rx_t = 0.0
+        self._last_u_l = 0.0
+        self._last_u_r = 0.0
 
         # ---- GPIO setup ----
         # Use BCM numbering (GPIOxx) to match typical docs and your pin values above.
@@ -102,8 +117,10 @@ class MotorDriver(Node):
 
         self.get_logger().info(
             f"Motor driver up (RPi.GPIO). BCM pins "
-            f"L({self.left.fwd},{self.left.rev}) R({self.right.fwd},{self.right.rev}), "
-            f"pwm_hz={self.pwm_hz}, timeout_s={self.timeout_s}"
+            f"L(fwd:{self.left.fwd},rev:{self.left.rev}) R(fwd:{self.right.fwd},rev:{self.right.rev}), "
+            f"pwm_hz={self.pwm_hz}, timeout_s={self.timeout_s}, "
+            f"debug={self.debug}, log_period_s={self.log_period_s}"
+            "^C to quit"
         )
 
     def duty_to_percent(self, duty_0_1: float) -> float:
@@ -128,7 +145,7 @@ class MotorDriver(Node):
 
         pct = self.duty_to_percent(mag)
 
-        # Select PWM objects based on which motor
+        # Select PWM objects based on which motor (identity compare is safe with frozen dataclass)
         if pins == self.left:
             fwd_pwm = self.left_fwd_pwm
             rev_pwm = self.left_rev_pwm
@@ -153,13 +170,32 @@ class MotorDriver(Node):
         except Exception:
             pass
 
+    def _maybe_log_cmd(self, v_n: float, w_n: float, u_l: float, u_r: float) -> None:
+        if not self.debug:
+            return
+        now = time.time()
+        if (now - self._last_log_t) < self.log_period_s:
+            return
+        self._last_log_t = now
+
+        dl = abs(clamp(u_l, -1.0, 1.0)) * 100.0
+        dr = abs(clamp(u_r, -1.0, 1.0)) * 100.0
+
+        self.get_logger().info(
+            "cmd_vel: v={:.2f} w={:.2f} -> u_l={:.2f} ({:.0f}%) u_r={:.2f} ({:.0f}%) [rx_count={}]".format(
+                v_n, w_n, u_l, dl, u_r, dr, self._msg_count
+            )
+        )
+
     def on_cmd_vel(self, msg: Twist) -> None:
         self.last_cmd_time = time.time()
+        self._last_rx_t = self.last_cmd_time
+        self._msg_count += 1
 
         v = float(msg.linear.x)
         w = float(msg.angular.z)
 
-        # For now: assume inputs are already normalized-ish in [-1, 1]
+        # Normalize/clamp to expected input range
         v_n = clamp(v, -1.0, 1.0)
         w_n = clamp(w, -1.0, 1.0)
 
@@ -167,14 +203,35 @@ class MotorDriver(Node):
         u_l = clamp(v_n - w_n, -1.0, 1.0)
         u_r = clamp(v_n + w_n, -1.0, 1.0)
 
+        self._last_u_l = u_l
+        self._last_u_r = u_r
+
         self.apply_motor_u(self.left, u_l)
         self.apply_motor_u(self.right, u_r)
+
+        self._maybe_log_cmd(v_n, w_n, u_l, u_r)
 
     def on_timer(self) -> None:
         if self.last_cmd_time == 0.0:
             return
+
+        # Deadman stop
         if (time.time() - self.last_cmd_time) > self.timeout_s:
             self.stop_all()
+
+            # Optional: log that we timed out (throttled)
+            if self.debug:
+                now = time.time()
+                if (now - self._last_log_t) >= self.log_period_s:
+                    self._last_log_t = now
+                    self.get_logger().warn(
+                        "deadman: no cmd_vel for {:.2f}s -> STOP (last u_l={:.2f}, u_r={:.2f}, rx_count={})".format(
+                            now - self.last_cmd_time,
+                            self._last_u_l,
+                            self._last_u_r,
+                            self._msg_count,
+                        )
+                    )
 
     def _cleanup_gpio(self) -> None:
         """Safe, idempotent GPIO/PWM cleanup (can be called multiple times)."""

@@ -10,7 +10,7 @@ function bluer_ugv_ROS_gazebo_gui_serve() {
 
     bluer_ugv_ROS_log
 
-    bluer_ai_badge - "gazebo/gui/server 🦾"
+    bluer_ai_badge - "gazebo gui server 🦾"
 
     bluer_ai_eval ,$options \
         gz sim -s -v 4 empty.sdf
